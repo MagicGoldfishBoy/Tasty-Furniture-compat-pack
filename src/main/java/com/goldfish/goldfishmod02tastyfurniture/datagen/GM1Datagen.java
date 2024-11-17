@@ -33,32 +33,32 @@ public class GM1Datagen {
         }
 
         //Item Models
-        try {
-        DataGenerator generator = event.getGenerator();
-        PackOutput output = generator.getPackOutput();
-        ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
+        // try {
+        // DataGenerator generator = event.getGenerator();
+        // PackOutput output = generator.getPackOutput();
+        // ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
 
-        generator.addProvider(
-            event.includeClient(),
-            new GM1ItemModelProvider(output, "goldfishmod02tastyfurniture", existingFileHelper));
+        // generator.addProvider(
+        //     event.includeClient(),
+        //     new GM1ItemModelProvider(output, "goldfishmod02tastyfurniture", existingFileHelper));
             
-        } catch (Exception e) {
-            LOGGER.error("failed to generate item models");
-        }
+        // } catch (Exception e) {
+        //     LOGGER.error("failed to generate item models");
+        // }
 
-        //Recipes
-        try {
-            DataGenerator generator = event.getGenerator();
-            PackOutput output = generator.getPackOutput();
-            CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
+        // //Recipes
+        // try {
+        //     DataGenerator generator = event.getGenerator();
+        //     PackOutput output = generator.getPackOutput();
+        //     CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
             
-            generator.addProvider(
-                event.includeServer(),
-                new GM1RecipeProviderConcrete(output, lookupProvider));
+        //     generator.addProvider(
+        //         event.includeServer(),
+        //         new GM1RecipeProviderConcrete(output, lookupProvider));
           
-        } catch (Exception e) {
-            LOGGER.error("failed to generate recipes");
-        }         
+        // } catch (Exception e) {
+        //     LOGGER.error("failed to generate recipes");
+        // }         
  }
 }
 

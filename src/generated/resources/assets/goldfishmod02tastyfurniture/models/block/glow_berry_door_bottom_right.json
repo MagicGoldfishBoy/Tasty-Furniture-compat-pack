@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/door_bottom_right",
-  "render_type": "minecraft:cutout_mipped_all",
-  "textures": {
-    "bottom": "goldfishmod02tastyfurniture:block/glow_berry_door_bottom",
-    "top": "goldfishmod02tastyfurniture:block/glow_berry_door_top"
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/orientable",
-  "textures": {
-    "front": "goldfishmod02tastyfurniture:block/rabbit_tile_block",
-    "side": "goldfishmod02tastyfurniture:block/rabbit_tile_block",
-    "top": "goldfishmod02tastyfurniture:block/rabbit_tile_block"
-  }
-}

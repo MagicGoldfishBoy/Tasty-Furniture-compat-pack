@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/cube_bottom_top",
-  "textures": {
-    "bottom": "goldfishmod02tastyfurniture:block/glow_berry_block",
-    "side": "goldfishmod02tastyfurniture:block/salmon_lamp",
-    "top": "goldfishmod02tastyfurniture:block/salmon_block"
-  }
-}

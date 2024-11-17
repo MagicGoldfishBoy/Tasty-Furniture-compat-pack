@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/chain",
-  "render_type": "minecraft:cutout_mipped_all",
-  "textures": {
-    "all": "goldfishmod02tastyfurniture:block/cod_chain",
-    "particle": "goldfishmod02tastyfurniture:block/cod_chain"
-  }
-}

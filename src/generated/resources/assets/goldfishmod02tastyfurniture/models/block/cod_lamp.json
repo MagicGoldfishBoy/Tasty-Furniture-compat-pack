@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/orientable",
-  "textures": {
-    "front": "goldfishmod02tastyfurniture:block/cod_lamp",
-    "side": "goldfishmod02tastyfurniture:block/cod_lamp",
-    "top": "goldfishmod02tastyfurniture:block/cod_lamp_top"
-  }
-}

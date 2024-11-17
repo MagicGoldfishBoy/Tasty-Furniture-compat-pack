@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/fence_side",
-  "textures": {
-    "texture": "goldfishmod02tastyfurniture:block/beetroot_block"
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "goldfishmod02tastyfurniture:block/melon_bricks_block",
-    "side": "goldfishmod02tastyfurniture:block/melon_bricks_block",
-    "top": "goldfishmod02tastyfurniture:block/melon_bricks_block"
-  }
-}

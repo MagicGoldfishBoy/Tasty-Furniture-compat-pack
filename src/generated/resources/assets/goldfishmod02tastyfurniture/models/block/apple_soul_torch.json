@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/soul_torch",
-  "render_type": "minecraft:cutout_mipped_all",
-  "textures": {
-    "particle": "goldfishmod02tastyfurniture:block/apple_soul_torch",
-    "torch": "goldfishmod02tastyfurniture:block/apple_soul_torch"
-  }
-}

@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "goldfishmod02tastyfurniture:block/pork_bars"
-  }
-}

@@ -46,7 +46,6 @@ import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockitemregistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockregistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodmaterialtyperegistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodEntityRegistry;
-import com.goldfish.goldfishmod02tastyfurniture.registry.food_weapon_registry;
 import com.goldfish.goldfishmod02tastyfurniture.client.renderer.foodChairEntityRenderer;
 import com.goldfish.goldfishmod02tastyfurniture.datagen.GM1BlockLootTableProvider;
 import com.goldfish.goldfishmod02tastyfurniture.datagen.GM1Datagen;
@@ -86,7 +85,7 @@ public class TastyFurniture
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TASTY_FURNITURE_TAB = CREATIVE_MODE_TABS.register("tasty_furniture_tab", () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup.tastyfurniture"))
             .withTabsBefore(CreativeModeTabs.COMBAT)
-            .icon(() -> mushregistry.mushhammer.get().getDefaultInstance())
+            .icon(() -> mushregistry.ELDERBERRY_MUSH.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
                 output.acceptAll(mushregistry.MUSH.getEntries().stream().map(sup -> {
                     return sup.get().getDefaultInstance();
@@ -98,9 +97,6 @@ public class TastyFurniture
                     return sup.get().getDefaultInstance();
                 }).toList());
                 output.acceptAll(foodblockitemregistry.FOODBLOCKITEM.getEntries().stream().map(sup -> {
-                    return sup.get().getDefaultInstance();
-                }).toList());
-                output.acceptAll(food_weapon_registry.FOODWEAPON.getEntries().stream().map(sup -> {
                     return sup.get().getDefaultInstance();
                 }).toList());
             }).build());
@@ -129,8 +125,6 @@ public class TastyFurniture
         foodEntityRegistry.FOODENTITY.register(modEventBus);
 
         ITEMS.register(modEventBus);
-
-        food_weapon_registry.FOODWEAPON.register(modEventBus);
 
         mushregistry.MUSH.register(modEventBus);
 
@@ -179,29 +173,6 @@ public class TastyFurniture
 
         @SubscribeEvent(priority = EventPriority.LOWEST)
         public static void onRegisterRenderers(EntityRenderersEvent.RegisterRenderers event) {
-        event.registerBlockEntityRenderer(foodblockregistry.APPLE_SIGN_ENTITY.get(), SignRenderer::new);
-        event.registerBlockEntityRenderer(foodblockregistry.POTATO_SIGN_ENTITY.get(), SignRenderer::new);
-        event.registerBlockEntityRenderer(foodblockregistry.BEETROOT_SIGN_ENTITY.get(), SignRenderer::new);
-        event.registerBlockEntityRenderer(foodblockregistry.CARROT_SIGN_ENTITY.get(), SignRenderer::new);
-        event.registerBlockEntityRenderer(foodblockregistry.CHORUS_SIGN_ENTITY.get(), SignRenderer::new);
-        event.registerBlockEntityRenderer(foodblockregistry.GLOWBERRY_SIGN_ENTITY.get(), SignRenderer::new);
-        event.registerBlockEntityRenderer(foodblockregistry.MELON_SIGN_ENTITY.get(), SignRenderer::new);
-        event.registerBlockEntityRenderer(foodblockregistry.SWEETBERRY_SIGN_ENTITY.get(), SignRenderer::new);
-        event.registerBlockEntityRenderer(foodblockregistry.BROWNMUSHROOM_SIGN_ENTITY.get(), SignRenderer::new);
-        event.registerBlockEntityRenderer(foodblockregistry.REDMUSHROOM_SIGN_ENTITY.get(), SignRenderer::new);
-        event.registerBlockEntityRenderer(foodblockregistry.PUMPKIN_SIGN_ENTITY.get(), SignRenderer::new);
-        event.registerBlockEntityRenderer(foodblockregistry.CHICKEN_SIGN_ENTITY.get(), SignRenderer::new);
-        event.registerBlockEntityRenderer(foodblockregistry.COD_SIGN_ENTITY.get(), SignRenderer::new);
-        event.registerBlockEntityRenderer(foodblockregistry.SALMON_SIGN_ENTITY.get(), SignRenderer::new);
-        event.registerBlockEntityRenderer(foodblockregistry.TROPICALFISH_SIGN_ENTITY.get(), SignRenderer::new);
-        event.registerBlockEntityRenderer(foodblockregistry.MUTTON_SIGN_ENTITY.get(), SignRenderer::new);
-        event.registerBlockEntityRenderer(foodblockregistry.BEEF_SIGN_ENTITY.get(), SignRenderer::new);
-        event.registerBlockEntityRenderer(foodblockregistry.PORK_SIGN_ENTITY.get(), SignRenderer::new);
-        event.registerBlockEntityRenderer(foodblockregistry.RABBIT_SIGN_ENTITY.get(), SignRenderer::new);
-        event.registerBlockEntityRenderer(foodblockregistry.SUGAR_SIGN_ENTITY.get(), SignRenderer::new);
-        event.registerBlockEntityRenderer(foodblockregistry.HONEYCOMB_SIGN_ENTITY.get(), SignRenderer::new);
-
-        event.registerBlockEntityRenderer(foodblockregistry.APPLE_CHEST_ENTITY.get(), ChestRenderer::new);
 
         event.registerEntityRenderer(foodEntityRegistry.CHAIR_ENTITY.get(), foodChairEntityRenderer::new);
         }
