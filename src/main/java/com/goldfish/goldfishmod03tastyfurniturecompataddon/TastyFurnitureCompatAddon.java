@@ -52,8 +52,8 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 
-@Mod(TastyFurniture.MODID)
-public class TastyFurniture
+@Mod(TastyFurnitureCompatAddon.MODID)
+public class TastyFurnitureCompatAddon
 {
     public static final String MODID = "goldfishmod03tastyfurniturecompataddon";
 
@@ -105,7 +105,7 @@ public class TastyFurniture
               return TASTY_FURNITURE_TAB;
     }
 
-    public TastyFurniture(IEventBus modEventBus, ModContainer modContainer)
+    public TastyFurnitureCompatAddon(IEventBus modEventBus, ModContainer modContainer)
     {
 
         modEventBus.addListener(this::commonSetup);

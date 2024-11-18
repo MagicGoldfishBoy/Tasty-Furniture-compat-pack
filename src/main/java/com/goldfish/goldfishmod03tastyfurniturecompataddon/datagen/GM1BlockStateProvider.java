@@ -44,7 +44,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
      private final ExistingFileHelper existingFileHelper;
 
      public GM1BlockStateProvider(PackOutput output, String modid, ExistingFileHelper existingFileHelper) {
-         super(output, "goldfishmod02tastyfurniture", existingFileHelper);
+         super(output, "goldfishmod03tastyfurniturecompataddon", existingFileHelper);
          this.output = output;
          this.existingFileHelper = existingFileHelper;
      }

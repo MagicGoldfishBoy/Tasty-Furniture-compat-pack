@@ -1,6 +1,6 @@
 package com.goldfish.goldfishmod03tastyfurniturecompataddon.registry;
 
-import com.goldfish.goldfishmod03tastyfurniturecompataddon.TastyFurniture;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.TastyFurnitureCompatAddon;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.foodChairBlock;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.foodlamp;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.foodpathtypeminislab;
@@ -40,8 +40,8 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 
 public class foodblockregistry {
-    public static final DeferredRegister<Block> FOODBLOCK = DeferredRegister.create(BuiltInRegistries.BLOCK, TastyFurniture.MODID);
-    public static final DeferredRegister<BlockEntityType<?>> FOODBLOCKENTITY = DeferredRegister.create(BuiltInRegistries.BLOCK_ENTITY_TYPE, TastyFurniture.MODID);
+    public static final DeferredRegister<Block> FOODBLOCK = DeferredRegister.create(BuiltInRegistries.BLOCK, TastyFurnitureCompatAddon.MODID);
+    public static final DeferredRegister<BlockEntityType<?>> FOODBLOCKENTITY = DeferredRegister.create(BuiltInRegistries.BLOCK_ENTITY_TYPE, TastyFurnitureCompatAddon.MODID);
     
 //==============================================================================================================================================================================================
 //                                                                                          Blocks

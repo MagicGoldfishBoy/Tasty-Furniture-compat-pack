@@ -1,6 +1,6 @@
 package com.goldfish.goldfishmod03tastyfurniturecompataddon.registry;
 
-import com.goldfish.goldfishmod03tastyfurniturecompataddon.TastyFurniture;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.TastyFurnitureCompatAddon;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.foodblockregistry;
 
 import net.minecraft.core.Direction;
@@ -19,7 +19,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class foodblockitemregistry {
     
-    public static DeferredRegister<Item> FOODBLOCKITEM = DeferredRegister.create(BuiltInRegistries.ITEM, TastyFurniture.MODID);
+    public static DeferredRegister<Item> FOODBLOCKITEM = DeferredRegister.create(BuiltInRegistries.ITEM, TastyFurnitureCompatAddon.MODID);
 
 
 //==============================================================================================================================================================================================

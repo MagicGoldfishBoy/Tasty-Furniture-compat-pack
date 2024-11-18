@@ -9,7 +9,7 @@ import net.neoforged.neoforge.common.data.ExistingFileHelper;
 public class GM1ItemModelProvider extends ItemModelProvider {
 
         public GM1ItemModelProvider(PackOutput output, String modid, ExistingFileHelper existingFileHelper) {
-        super(output, "goldfishmod02tastyfurniture", existingFileHelper);
+        super(output, "goldfishmod03tastyfurniturecompataddon", existingFileHelper);
     }
 
         @Override
@@ -19,8 +19,7 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //block
         withExistingParent("elderberry_block_item", modLoc("block/elderberry_block"));
        //ingot
-        withExistingParent("elderberry_ingot", modLoc("item/elderberry_ingot"));
-
+        withExistingParent("elderberry_ingot", mcLoc("item/generated")).texture("layer0", "item/elderberry_ingot");
   }
 }
 

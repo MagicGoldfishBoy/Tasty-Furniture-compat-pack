@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "goldfishmod02tastyfurniture:block/elderberry_block"
+      "model": "goldfishmod03tastyfurniturecompataddon:block/elderberry_block"
     }
   }
 }

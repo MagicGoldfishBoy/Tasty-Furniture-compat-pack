@@ -53,7 +53,7 @@ import java.util.function.Supplier;
 
 public class mushregistry {
 
-    public static final DeferredRegister<Item> MUSH = DeferredRegister.create(BuiltInRegistries.ITEM, TastyFurniture.MODID);
+    public static final DeferredRegister<Item> MUSH = DeferredRegister.create(BuiltInRegistries.ITEM, TastyFurnitureCompatAddon.MODID);
 
         public static final DeferredHolder<Item, Item> ELDERBERRY_MUSH = MUSH.register("elderberry_mush",
                 () -> new Item(new Item.Properties().food(new FoodProperties.Builder()

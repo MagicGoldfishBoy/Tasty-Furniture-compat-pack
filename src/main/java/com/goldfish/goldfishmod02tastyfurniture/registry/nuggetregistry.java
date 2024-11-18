@@ -1,4 +1,4 @@
-package com.goldfish.goldfishmod03tastyfurniturecompataddon.registry;
+package com.goldfish.goldfishmod02tastyfurniture.registry;
 
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.TastyFurnitureCompatAddon;
 
@@ -7,9 +7,9 @@ import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-public class ingotregistry {
-    public static final DeferredRegister<Item> FOODINGOT = DeferredRegister.create(BuiltInRegistries.ITEM, TastyFurnitureCompatAddon.MODID);
+public class nuggetregistry {
+        public static final DeferredRegister<Item> FOODNUGGET = DeferredRegister.create(BuiltInRegistries.ITEM, TastyFurnitureCompatAddon.MODID);
     
-    public static final DeferredHolder<Item, Item> ELDERBERRY_INGOT = FOODINGOT.register("elderberry_ingot",
+    public static final DeferredHolder<Item, Item> ELDERBERRY_NUGGET = FOODNUGGET.register("elderberry_nugget",
     () -> new Item(new Item.Properties()));
 }

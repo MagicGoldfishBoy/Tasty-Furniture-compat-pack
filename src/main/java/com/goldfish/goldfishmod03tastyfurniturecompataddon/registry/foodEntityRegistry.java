@@ -9,12 +9,12 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
 
-import com.goldfish.goldfishmod03tastyfurniturecompataddon.TastyFurniture;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.TastyFurnitureCompatAddon;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.foodChairEntity;
 
 public class foodEntityRegistry {
 
-    public static final DeferredRegister<EntityType<?>> FOODENTITY = DeferredRegister.create(BuiltInRegistries.ENTITY_TYPE, TastyFurniture.MODID);
+    public static final DeferredRegister<EntityType<?>> FOODENTITY = DeferredRegister.create(BuiltInRegistries.ENTITY_TYPE, TastyFurnitureCompatAddon.MODID);
 
     public static final Supplier<EntityType<foodChairEntity>> CHAIR_ENTITY = FOODENTITY.register("chair_entity",
     () -> EntityType.Builder.of(foodChairEntity::new, MobCategory.MISC).sized(0.6F, 0.5F).clientTrackingRange(8).build("chair_entity"));
