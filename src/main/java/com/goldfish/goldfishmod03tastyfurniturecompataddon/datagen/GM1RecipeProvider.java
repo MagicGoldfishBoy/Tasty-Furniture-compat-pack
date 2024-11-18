@@ -39,33 +39,9 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
 
     public static class GM1RecipeProviderConcrete extends GM1RecipeProvider {
         //tags
-          public static final TagKey<Item> CHICKEN_TAG = TagKey.create(
+          public static final TagKey<Item> ELDERBERRY_TAG = TagKey.create(
             Registries.ITEM,
-            ResourceLocation.fromNamespaceAndPath(TastyFurnitureCompatAddon.MODID, "chicken")
-          );
-          public static final TagKey<Item> COD_TAG = TagKey.create(
-            Registries.ITEM,
-            ResourceLocation.fromNamespaceAndPath(TastyFurnitureCompatAddon.MODID, "cod")
-          );
-          public static final TagKey<Item> SALMON_TAG = TagKey.create(
-            Registries.ITEM,
-            ResourceLocation.fromNamespaceAndPath(TastyFurnitureCompatAddon.MODID, "salmon")
-          );
-          public static final TagKey<Item> MUTTON_TAG = TagKey.create(
-            Registries.ITEM,
-            ResourceLocation.fromNamespaceAndPath(TastyFurnitureCompatAddon.MODID, "mutton")
-          );
-          public static final TagKey<Item> BEEF_TAG = TagKey.create(
-            Registries.ITEM,
-            ResourceLocation.fromNamespaceAndPath(TastyFurnitureCompatAddon.MODID, "beef")
-          );
-          public static final TagKey<Item> PORK_TAG = TagKey.create(
-            Registries.ITEM,
-            ResourceLocation.fromNamespaceAndPath(TastyFurnitureCompatAddon.MODID, "pork")
-          );
-          public static final TagKey<Item> RABBIT_TAG = TagKey.create(
-            Registries.ITEM,
-            ResourceLocation.fromNamespaceAndPath(TastyFurnitureCompatAddon.MODID, "rabbit")
+            ResourceLocation.fromNamespaceAndPath("c", "elderberries")
           );
 
         public GM1RecipeProviderConcrete(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {
@@ -74,6 +50,11 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
 
         @Override
         protected void buildRecipes(RecipeOutput output) {
+          buildMushRecipes(output);
+        }
 
-    }
-}}
+        protected void buildMushRecipes(RecipeOutput output) {
+
+        }
+  }
+}

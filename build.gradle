@@ -101,7 +101,11 @@ dependencies {
     // For all intends and purposes: You can treat this dependency as if it is a normal library you would use.
     implementation "net.neoforged:neoforge:${neo_version}"
     api("curse.maven:tastyfurniture-1122227:5899973")
-  //  api("curse.maven:jei-238222:5437447")
+    //implementation "curse.maven:productivetrees-867074:5594932"
+    //implementation "curse.maven:croptopia-415438:5872434"
+    //api("curse.maven:pamcrops-361385:5581644")
+    //api("curse.maven:jei-238222:5437447") can't find compatible version
+
     // Example optional mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
     // compileOnly "mezz.jei:jei-${mc_version}-common-api:${jei_version}"
