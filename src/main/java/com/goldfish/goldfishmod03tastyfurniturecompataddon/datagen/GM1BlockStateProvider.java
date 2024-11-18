@@ -60,7 +60,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
     //----------------------------------------------------------------blocks------------------------------------------------------------------------------
      //___________________________________________________________regular_____________________________________________________________________
 
-      //.........apple
+      //.........elderberry
           net.minecraft.world.level.block.Block elderberry_block = foodblockregistry.ELDERBERRY_BLOCK.get();
           ResourceLocation elderberry_block_texture = modLoc("block/elderberry_block");
           simpleBlock(elderberry_block);

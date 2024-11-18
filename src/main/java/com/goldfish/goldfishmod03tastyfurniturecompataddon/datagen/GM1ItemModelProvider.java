@@ -16,10 +16,14 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         protected void registerModels() {
 
       //.........elderberry
-       //block
-        withExistingParent("elderberry_block_item", modLoc("block/elderberry_block"));
+       //mush
+        withExistingParent("elderberry_mush", mcLoc("item/generated")).texture("layer0", "item/elderberry_mush");
        //ingot
         withExistingParent("elderberry_ingot", mcLoc("item/generated")).texture("layer0", "item/elderberry_ingot");
+       //nugget
+        withExistingParent("elderberry_nugget", mcLoc("item/generated")).texture("layer0", "item/elderberry_nugget");
+       //block
+        withExistingParent("elderberry_block_item", modLoc("block/elderberry_block"));
   }
 }
 
