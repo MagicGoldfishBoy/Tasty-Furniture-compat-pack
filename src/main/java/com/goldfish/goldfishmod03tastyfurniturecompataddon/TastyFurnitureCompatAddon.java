@@ -18,9 +18,6 @@ import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.nuggetregist
 import com.mojang.logging.LogUtils;
 
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.blockentity.ChestRenderer;
-import net.minecraft.client.renderer.blockentity.SignRenderer;
-import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -82,8 +79,8 @@ public class TastyFurnitureCompatAddon
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
 
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TASTY_FURNITURE_TAB = CREATIVE_MODE_TABS.register("tasty_furniture_tab", () -> CreativeModeTab.builder()
-            .title(Component.translatable("itemGroup.tastyfurniture"))
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TASTY_FURNITURE_COMPAT_ADDON_TAB = CREATIVE_MODE_TABS.register("tasty_furniture_compat_addon_tab", () -> CreativeModeTab.builder()
+            .title(Component.translatable("itemGroup.tastyfurniturecompataddon"))
             .withTabsBefore(CreativeModeTabs.COMBAT)
             .icon(() -> mushregistry.ELDERBERRY_MUSH.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
@@ -102,7 +99,7 @@ public class TastyFurnitureCompatAddon
             }).build());
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> gettab(){
-              return TASTY_FURNITURE_TAB;
+              return TASTY_FURNITURE_COMPAT_ADDON_TAB;
     }
 
     public TastyFurnitureCompatAddon(IEventBus modEventBus, ModContainer modContainer)

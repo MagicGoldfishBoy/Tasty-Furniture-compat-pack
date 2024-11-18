@@ -1,6 +1,4 @@
-package com.goldfish.goldfishmod02tastyfurniture.registry;
-
-import com.goldfish.goldfishmod03tastyfurniturecompataddon.TastyFurnitureCompatAddon;
+package com.goldfish.goldfishmod03tastyfurniturecompataddon;
 
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.Item;
