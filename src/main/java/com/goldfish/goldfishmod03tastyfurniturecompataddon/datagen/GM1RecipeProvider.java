@@ -1,5 +1,7 @@
 package com.goldfish.goldfishmod03tastyfurniturecompataddon.datagen;
 
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.util.concurrent.CompletableFuture;
 
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.TastyFurnitureCompatAddon;
@@ -8,6 +10,7 @@ import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.ingotregistr
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.mushregistry;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.nuggetregistry;
 
+//import com.goldfish.goldfishmod02tastyfurniture;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.core.registries.Registries;
@@ -38,10 +41,18 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
     }
 
     public static class GM1RecipeProviderConcrete extends GM1RecipeProvider {
+
+        //items
+     //   Item mushhammer = goldfishmod02tastyfurniture.mushhammer.get();  
+
         //tags
           public static final TagKey<Item> ELDERBERRY_TAG = TagKey.create(
             Registries.ITEM,
             ResourceLocation.fromNamespaceAndPath("c", "elderberries")
+          );
+          public static final TagKey<Item> MUSHHAMMER_TAG = TagKey.create(
+            Registries.ITEM,
+            ResourceLocation.fromNamespaceAndPath("goldfishmod02tastyfurniture", "mushhammer")
           );
 
         public GM1RecipeProviderConcrete(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {
@@ -54,7 +65,17 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         }
 
         protected void buildMushRecipes(RecipeOutput output) {
-
-        }
+          LOGGER.info("building mush recipes");
+                  ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.ELDERBERRY_MUSH.get(), 1)
+                  .pattern("ABB")
+                  .pattern("BB ")
+                  .pattern("   ")
+                  .define('A', MUSHHAMMER_TAG)
+                  .define('B', ELDERBERRY_TAG)
+                  .unlockedBy("has_mush_hammer", has(MUSHHAMMER_TAG))
+                  .save(output);
+      }
+      
+        
   }
 }
