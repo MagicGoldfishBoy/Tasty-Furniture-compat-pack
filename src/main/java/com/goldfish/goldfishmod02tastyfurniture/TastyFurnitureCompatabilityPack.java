@@ -52,10 +52,10 @@ import com.goldfish.goldfishmod02tastyfurniture.datagen.GM1Datagen;
 import com.goldfish.goldfishmod02tastyfurniture.datagen.GM1LootTableProvider;
 
 
-@Mod(TastyFurniture.MODID)
-public class TastyFurniture
+@Mod(TastyFurnitureCompatabilityPack.MODID)
+public class TastyFurnitureCompatabilityPack
 {
-    public static final String MODID = "goldfishmod02tastyfurniture";
+    public static final String MODID = "goldfishmod03tastyfurniturecompatpack";
 
     private static final Logger LOGGER = LogUtils.getLogger();
 
@@ -105,7 +105,7 @@ public class TastyFurniture
               return TASTY_FURNITURE_TAB;
     }
 
-    public TastyFurniture(IEventBus modEventBus, ModContainer modContainer)
+    public TastyFurnitureCompatabilityPack(IEventBus modEventBus, ModContainer modContainer)
     {
 
         modEventBus.addListener(this::commonSetup);

@@ -6,7 +6,7 @@ import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockitemregistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.ingotregistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.mushregistry;
 import com.goldfish.goldfishmod02tastyfurniture.registry.nuggetregistry;
-import com.goldfish.goldfishmod02tastyfurniture.TastyFurniture;
+import com.goldfish.goldfishmod02tastyfurniture.TastyFurnitureCompatabilityPack;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.HolderLookup.Provider;
@@ -41,31 +41,31 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         //tags
           public static final TagKey<Item> CHICKEN_TAG = TagKey.create(
             Registries.ITEM,
-            ResourceLocation.fromNamespaceAndPath(TastyFurniture.MODID, "chicken")
+            ResourceLocation.fromNamespaceAndPath(TastyFurnitureCompatabilityPack.MODID, "chicken")
           );
           public static final TagKey<Item> COD_TAG = TagKey.create(
             Registries.ITEM,
-            ResourceLocation.fromNamespaceAndPath(TastyFurniture.MODID, "cod")
+            ResourceLocation.fromNamespaceAndPath(TastyFurnitureCompatabilityPack.MODID, "cod")
           );
           public static final TagKey<Item> SALMON_TAG = TagKey.create(
             Registries.ITEM,
-            ResourceLocation.fromNamespaceAndPath(TastyFurniture.MODID, "salmon")
+            ResourceLocation.fromNamespaceAndPath(TastyFurnitureCompatabilityPack.MODID, "salmon")
           );
           public static final TagKey<Item> MUTTON_TAG = TagKey.create(
             Registries.ITEM,
-            ResourceLocation.fromNamespaceAndPath(TastyFurniture.MODID, "mutton")
+            ResourceLocation.fromNamespaceAndPath(TastyFurnitureCompatabilityPack.MODID, "mutton")
           );
           public static final TagKey<Item> BEEF_TAG = TagKey.create(
             Registries.ITEM,
-            ResourceLocation.fromNamespaceAndPath(TastyFurniture.MODID, "beef")
+            ResourceLocation.fromNamespaceAndPath(TastyFurnitureCompatabilityPack.MODID, "beef")
           );
           public static final TagKey<Item> PORK_TAG = TagKey.create(
             Registries.ITEM,
-            ResourceLocation.fromNamespaceAndPath(TastyFurniture.MODID, "pork")
+            ResourceLocation.fromNamespaceAndPath(TastyFurnitureCompatabilityPack.MODID, "pork")
           );
           public static final TagKey<Item> RABBIT_TAG = TagKey.create(
             Registries.ITEM,
-            ResourceLocation.fromNamespaceAndPath(TastyFurniture.MODID, "rabbit")
+            ResourceLocation.fromNamespaceAndPath(TastyFurnitureCompatabilityPack.MODID, "rabbit")
           );
 
         public GM1RecipeProviderConcrete(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {

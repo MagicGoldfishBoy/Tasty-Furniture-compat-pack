@@ -1,6 +1,6 @@
 package com.goldfish.goldfishmod02tastyfurniture.registry;
 
-import com.goldfish.goldfishmod02tastyfurniture.TastyFurniture;
+import com.goldfish.goldfishmod02tastyfurniture.TastyFurnitureCompatabilityPack;
 
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.sounds.SoundEvents;
