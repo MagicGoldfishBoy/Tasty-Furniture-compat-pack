@@ -86,7 +86,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation elderberry_bricks_block_texture = modLoc("block/elderberry_bricks_block");
           slabBlock(elderberry_bricks_slab, elderberry_bricks_block_texture, elderberry_bricks_block_texture);
     //==============================================================================================================================================
-    //|                                                              Stairss                                                                        |
+    //|                                                              Stairs                                                                        |
     //==============================================================================================================================================
      //------------------------------------------------------------elderberry-----------------------------------------------------------------------
       //.........plain
@@ -95,6 +95,14 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........bricks
           StairBlock elderberry_bricks_stairs = foodblockregistry.ELDERBERRY_BRICKS_STAIRS.get();
           stairsBlock(elderberry_bricks_stairs, elderberry_bricks_block_texture);
+    //==============================================================================================================================================
+    //|                                                               Bars                                                                         |
+    //==============================================================================================================================================
+     //------------------------------------------------------------elderberry-----------------------------------------------------------------------
+          IronBarsBlock elderberry_bars = foodblockregistry.ELDERBERRY_BARS.get(); 
+          ResourceLocation elderberry_bars_texture = modLoc("block/elderberry_bars");
+          ResourceLocation elderberry_bars_rim_texture = modLoc("block/elderberry_block");
+          paneBlockWithRenderType(elderberry_bars, "elderberry_bars", elderberry_bars_texture, elderberry_bars_rim_texture, "cutout_mipped_all"); 
    };
 
 }

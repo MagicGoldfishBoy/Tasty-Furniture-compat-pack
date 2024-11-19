@@ -3,6 +3,7 @@ package com.goldfish.goldfishmod03tastyfurniturecompataddon.registry;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.TastyFurnitureCompatAddon;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.IronBarsBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.StairBlock;
@@ -62,7 +63,7 @@ public class foodblockregistry {
      .sound(SoundType.MUD_BRICKS)
      ));
 //==============================================================================================================================================================================================
-//                                                                                          Stairs
+//                                                                                         Stairs
 //==============================================================================================================================================================================================
  //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
   //.........plain
@@ -79,4 +80,12 @@ public class foodblockregistry {
      .explosionResistance(9.5f)
      .sound(SoundType.MUD_BRICKS)
      )); 
+//==============================================================================================================================================================================================
+//                                                                                          Bars
+//==============================================================================================================================================================================================
+ //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Block, IronBarsBlock> ELDERBERRY_BARS = FOODBLOCK.register("elderberry_bars", () -> new IronBarsBlock(BlockBehaviour.Properties.of()
+   .strength(0.25F, 0.25F)
+   .sound(SoundType.MUD_BRICKS)
+   .noOcclusion()));
 }
