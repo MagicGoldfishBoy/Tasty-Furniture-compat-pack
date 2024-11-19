@@ -71,6 +71,9 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........chiseled
           net.minecraft.world.level.block.Block elderberry_chiseled_block = foodblockregistry.ELDERBERRY_CHISELED_BLOCK.get();
           simpleBlock(elderberry_chiseled_block);
+      //.........tiles
+          net.minecraft.world.level.block.Block elderberry_tiles_block = foodblockregistry.ELDERBERRY_TILES_BLOCK.get();
+          simpleBlock(elderberry_tiles_block);
    };
 
 }

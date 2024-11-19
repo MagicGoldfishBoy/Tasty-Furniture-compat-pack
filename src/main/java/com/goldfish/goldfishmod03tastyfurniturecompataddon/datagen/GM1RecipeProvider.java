@@ -185,6 +185,11 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.ELDERBERRY_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockitemregistry.ELDERBERRY_CHISELED_BLOCK_ITEM.get())
           .unlockedBy("has_elderberry_block", has(foodblockitemregistry.ELDERBERRY_BLOCK_ITEM.get()))
           .save(output, "elderberry_chiseled_block_from_elderberry_block_stonecutting");
+        //tiles
+         //stonecutting     
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.ELDERBERRY_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockitemregistry.ELDERBERRY_TILES_BLOCK_ITEM.get())
+          .unlockedBy("has_elderberry_block", has(foodblockitemregistry.ELDERBERRY_BLOCK_ITEM.get()))
+          .save(output, "elderberry_tiles_block_from_elderberry_block_stonecutting");
       }
       
         
