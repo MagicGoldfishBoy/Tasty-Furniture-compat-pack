@@ -55,7 +55,6 @@ public class GM1BlockStateProvider extends BlockStateProvider
 
      @Override
      public void registerStatesAndModels() {
-       // ModelFile apple_button_model = models().withExistingParent("door_bottom_left", "minecraft:block/door_bottom_left");
 
     //==============================================================================================================================================
     //|                                                              Blocks                                                                        |
@@ -103,6 +102,14 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation elderberry_bars_texture = modLoc("block/elderberry_bars");
           ResourceLocation elderberry_bars_rim_texture = modLoc("block/elderberry_block");
           paneBlockWithRenderType(elderberry_bars, "elderberry_bars", elderberry_bars_texture, elderberry_bars_rim_texture, "cutout_mipped_all"); 
+    //==============================================================================================================================================
+    //|                                                               Door                                                                         |
+    //==============================================================================================================================================
+     //------------------------------------------------------------elderberry-----------------------------------------------------------------------
+          DoorBlock elderberry_door = foodblockregistry.ELDERBERRY_DOOR.get(); 
+          ResourceLocation elderberry_door_top_texture = modLoc("block/elderberry_door_top");
+          ResourceLocation elderberry_door_bottom_texture = modLoc("block/elderberry_door_bottom");
+          doorBlockWithRenderType(elderberry_door, "elderberry_door", elderberry_door_bottom_texture, elderberry_door_top_texture, "translucent"); 
    };
 
 }
