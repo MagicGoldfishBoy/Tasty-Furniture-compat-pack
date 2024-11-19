@@ -85,6 +85,16 @@ public class GM1BlockStateProvider extends BlockStateProvider
           SlabBlock elderberry_bricks_slab = foodblockregistry.ELDERBERRY_BRICKS_SLAB.get();
           ResourceLocation elderberry_bricks_block_texture = modLoc("block/elderberry_bricks_block");
           slabBlock(elderberry_bricks_slab, elderberry_bricks_block_texture, elderberry_bricks_block_texture);
+    //==============================================================================================================================================
+    //|                                                              Stairss                                                                        |
+    //==============================================================================================================================================
+     //------------------------------------------------------------elderberry-----------------------------------------------------------------------
+      //.........plain
+          StairBlock elderberry_stairs = foodblockregistry.ELDERBERRY_STAIRS.get();
+          stairsBlock(elderberry_stairs, elderberry_block_texture);
+      //.........bricks
+          StairBlock elderberry_bricks_stairs = foodblockregistry.ELDERBERRY_BRICKS_STAIRS.get();
+          stairsBlock(elderberry_bricks_stairs, elderberry_bricks_block_texture);
    };
 
 }

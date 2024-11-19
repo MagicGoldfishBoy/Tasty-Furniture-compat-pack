@@ -5,6 +5,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -60,4 +61,22 @@ public class foodblockregistry {
      .explosionResistance(9.5f)
      .sound(SoundType.MUD_BRICKS)
      ));
+//==============================================================================================================================================================================================
+//                                                                                          Stairs
+//==============================================================================================================================================================================================
+ //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
+  //.........plain
+     public static final DeferredHolder<Block, StairBlock> ELDERBERRY_STAIRS = FOODBLOCK.register("elderberry_stairs", 
+     () -> new StairBlock(ELDERBERRY_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
+     .destroyTime(1.5f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     )); 
+  //.........bricks
+     public static final DeferredHolder<Block, StairBlock> ELDERBERRY_BRICKS_STAIRS = FOODBLOCK.register("elderberry_bricks_stairs", 
+     () -> new StairBlock(ELDERBERRY_BRICKS_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
+     .destroyTime(1.5f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     )); 
 }
