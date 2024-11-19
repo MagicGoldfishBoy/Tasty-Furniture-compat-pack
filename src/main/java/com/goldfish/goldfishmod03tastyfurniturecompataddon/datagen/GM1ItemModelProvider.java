@@ -26,6 +26,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         withExistingParent("elderberry_block_item", modLoc("block/elderberry_block"));
        //bricks block
         withExistingParent("elderberry_bricks_block_item", modLoc("block/elderberry_bricks_block"));
+       //chiseled block
+        withExistingParent("elderberry_chiseled_block_item", modLoc("block/elderberry_chiseled_block"));
   }
 }
 
