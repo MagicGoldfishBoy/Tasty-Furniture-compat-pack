@@ -24,6 +24,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         withExistingParent("elderberry_nugget", mcLoc("item/generated")).texture("layer0", "item/elderberry_nugget");
        //block
         withExistingParent("elderberry_block_item", modLoc("block/elderberry_block"));
+       //bricks block
+        withExistingParent("elderberry_bricks_block_item", modLoc("block/elderberry_bricks_block"));
   }
 }
 

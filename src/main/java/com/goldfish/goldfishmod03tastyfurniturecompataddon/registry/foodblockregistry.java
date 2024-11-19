@@ -18,10 +18,15 @@ public class foodblockregistry {
 //==============================================================================================================================================================================================
 //                                                                                          Blocks
 //==============================================================================================================================================================================================
-
- //------------------------------------------------------------------------------------Regular Blocks-------------------------------------------------------------------------------------------
-  //.........elderberry
+ //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
+  //.........plain
     public static final DeferredHolder<Block, Block> ELDERBERRY_BLOCK = FOODBLOCK.register("elderberry_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.MUD_BRICKS)
+         ));
+  //.........bricks
+    public static final DeferredHolder<Block, Block> ELDERBERRY_BRICKS_BLOCK = FOODBLOCK.register("elderberry_bricks_block", () -> new Block(BlockBehaviour.Properties.of()
          .destroyTime(2.0f)
          .explosionResistance(10.0f)
          .sound(SoundType.MUD_BRICKS)

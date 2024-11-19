@@ -184,8 +184,6 @@ public class datagathering {
         try {
         DataGenerator generator = event.getGenerator();
         PackOutput output = generator.getPackOutput();
-        //DataGenHelper.createRedstoneWallTorch(output, "yourmodid", existingFileHelper,
-        //foodblockregistry.APPLE_REDSTONE_WALL_TORCH.get(), apple_redstone_torch_texture, "apple_redstone_wall_torch");
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
         generator.addProvider(event.includeClient(), new GM1LootTableProvider(output, lookupProvider));
