@@ -110,6 +110,13 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation elderberry_door_top_texture = modLoc("block/elderberry_door_top");
           ResourceLocation elderberry_door_bottom_texture = modLoc("block/elderberry_door_bottom");
           doorBlockWithRenderType(elderberry_door, "elderberry_door", elderberry_door_bottom_texture, elderberry_door_top_texture, "translucent"); 
+    //==============================================================================================================================================
+    //|                                                              Button                                                                        |
+    //==============================================================================================================================================
+     //------------------------------------------------------------elderberry-----------------------------------------------------------------------
+          ButtonBlock elderberry_button = foodblockregistry.ELDERBERRY_BUTTON.get();
+          ResourceLocation elderberry_button_texture = modLoc("block/elderberry_block");
+          buttonBlock(elderberry_button, elderberry_button_texture);
    };
 
 }

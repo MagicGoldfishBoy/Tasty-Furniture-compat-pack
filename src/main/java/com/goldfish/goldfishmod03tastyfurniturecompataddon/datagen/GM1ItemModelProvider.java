@@ -42,6 +42,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("elderberry_bars_item", mcLoc("item/generated")).texture("layer0", "block/elderberry_bars");
        //doors
        withExistingParent("elderberry_door_item", mcLoc("item/generated")).texture("layer0", "item/elderberry_door_item");
+       //button
+       buttonInventory("elderberry_button_item", modLoc("block/elderberry_block"));
   }
 }
 

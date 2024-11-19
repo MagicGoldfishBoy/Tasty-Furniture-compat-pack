@@ -78,6 +78,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           buildStairsRecipes(output);
           buildBarsRecipes(output);
           buildDoorRecipes(output);
+          buildButtonRecipes(output);
         }
 
       protected void buildMushRecipes(RecipeOutput output) {
@@ -264,6 +265,13 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', ingotregistry.ELDERBERRY_INGOT.get())
          .unlockedBy("has_elderberry_nugget", has(ingotregistry.ELDERBERRY_INGOT.get()))
          .save(output);
+      }
+      protected void buildButtonRecipes(RecipeOutput output) {
+       //elderberry
+       ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockitemregistry.ELDERBERRY_BUTTON_ITEM.get(), 1)
+       .requires(nuggetregistry.ELDERBERRY_NUGGET.get())
+       .unlockedBy("has_elderberry_nugget", has(nuggetregistry.ELDERBERRY_NUGGET.get()))
+       .save(output);
       }
       
         
