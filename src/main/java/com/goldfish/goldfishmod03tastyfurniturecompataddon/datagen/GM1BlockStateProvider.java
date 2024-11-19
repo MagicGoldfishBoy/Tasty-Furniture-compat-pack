@@ -121,9 +121,14 @@ public class GM1BlockStateProvider extends BlockStateProvider
     //|                                                              Fences                                                                        |
     //==============================================================================================================================================
      //------------------------------------------------------------elderberry-----------------------------------------------------------------------
+       //fence
           FenceBlock elderberry_fence = foodblockregistry.ELDERBERRY_FENCE.get();
           ResourceLocation elderberry_fence_texture = modLoc("block/elderberry_block");
           fenceBlock(elderberry_fence, elderberry_fence_texture);
+       //gate
+          FenceGateBlock elderberry_gate = foodblockregistry.ELDERBERRY_GATE.get();
+          ResourceLocation elderberry_gate_texture = modLoc("block/elderberry_block");
+          fenceGateBlock(elderberry_gate, elderberry_gate_texture);
    };
 
 }

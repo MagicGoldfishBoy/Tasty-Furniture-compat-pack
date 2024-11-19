@@ -8,6 +8,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
+import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.IronBarsBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
@@ -119,4 +120,16 @@ public class foodblockregistry {
   .sound(SoundType.MUD_BRICKS)
   .noOcclusion()
   ));
+//==============================================================================================================================================================================================
+//                                                                                         Fences
+//==============================================================================================================================================================================================
+ //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, FenceGateBlock> ELDERBERRY_GATE = FOODBLOCK.register("elderberry_gate", 
+    () -> new FenceGateBlock(
+            foodmaterialtyperegistry.ELDERBERRYWOODMAT, 
+            BlockBehaviour.Properties.of()
+            .sound(SoundType.ROOTED_DIRT)
+            .destroyTime(1.5f)
+            .explosionResistance(8.0f)
+    ));
 }

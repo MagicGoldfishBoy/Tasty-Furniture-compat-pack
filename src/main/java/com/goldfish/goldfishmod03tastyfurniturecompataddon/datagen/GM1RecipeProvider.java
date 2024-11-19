@@ -276,14 +276,24 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
       }
       protected void buildFenceRecipes(RecipeOutput output) {
        //elderberry
-       ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.ELDERBERRY_FENCE_ITEM.get(), 3)
-       .pattern("ABA")
-       .pattern("ABA")
-       .pattern("   ")
-       .define('A', ingotregistry.ELDERBERRY_INGOT.get())
-       .define('B', Items.STICK)
-       .unlockedBy("has_elderberry_ingot", has(ingotregistry.ELDERBERRY_INGOT.get()))
-       .save(output);        
+        //fence
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.ELDERBERRY_FENCE_ITEM.get(), 3)
+          .pattern("ABA")
+          .pattern("ABA")
+          .pattern("   ")
+          .define('A', ingotregistry.ELDERBERRY_INGOT.get())
+          .define('B', Items.STICK)
+          .unlockedBy("has_elderberry_ingot", has(ingotregistry.ELDERBERRY_INGOT.get()))
+          .save(output);        
+        //gate
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.ELDERBERRY_GATE_ITEM.get(), 1)
+          .pattern("BAB")
+          .pattern("BAB")
+          .pattern("   ")
+          .define('A', ingotregistry.ELDERBERRY_INGOT.get())
+          .define('B', Items.STICK)
+          .unlockedBy("has_elderberry_ingot", has(ingotregistry.ELDERBERRY_INGOT.get()))
+          .save(output);        
       }
       
         

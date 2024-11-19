@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_fence_gate_wall",
+  "textures": {
+    "texture": "goldfishmod03tastyfurniturecompataddon:block/elderberry_block"
+  }
+}

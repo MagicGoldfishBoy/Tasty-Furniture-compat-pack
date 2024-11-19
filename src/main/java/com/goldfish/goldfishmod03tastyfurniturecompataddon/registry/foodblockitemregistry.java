@@ -82,4 +82,10 @@ public class foodblockitemregistry {
  //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> ELDERBERRY_FENCE_ITEM = FOODBLOCKITEM.register("elderberry_fence_item",
    () -> new BlockItem(foodblockregistry.ELDERBERRY_FENCE.get(), new BlockItem.Properties()));
+//==============================================================================================================================================================================================
+//                                                                                         Gates
+//==============================================================================================================================================================================================
+ //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, BlockItem> ELDERBERRY_GATE_ITEM = FOODBLOCKITEM.register("elderberry_gate_item",
+   () -> new BlockItem(foodblockregistry.ELDERBERRY_GATE.get(), new BlockItem.Properties()));
 }

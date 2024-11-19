@@ -113,7 +113,7 @@ public class TastyFurnitureCompatAddon
 
         BLOCKS.register(modEventBus);
 
-        WoodType.register(foodmaterialtyperegistry.APPLEWOODMAT);
+        WoodType.register(foodmaterialtyperegistry.ELDERBERRYWOODMAT);
 
         foodblockregistry.FOODBLOCK.register(modEventBus);
 
