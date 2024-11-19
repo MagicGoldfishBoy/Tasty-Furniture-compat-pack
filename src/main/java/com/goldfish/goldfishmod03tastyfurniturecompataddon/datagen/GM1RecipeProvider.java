@@ -51,6 +51,18 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         Registries.ITEM,
         ResourceLocation.fromNamespaceAndPath("goldfishmod02tastyfurniture", "mushhammer")
         );
+       public static final TagKey<Item> ADVANCED_MUSHHAMMER_TAG = TagKey.create(
+        Registries.ITEM,
+        ResourceLocation.fromNamespaceAndPath("goldfishmod02tastyfurniture", "advanced_mushhammer")
+        );
+       public static final TagKey<Item> MORE_ADVANCED_MUSHHAMMER_TAG = TagKey.create(
+        Registries.ITEM,
+        ResourceLocation.fromNamespaceAndPath("goldfishmod02tastyfurniture", "more_advanced_mushhammer")
+        );
+       public static final TagKey<Item> MOST_ADVANCED_MUSHHAMMER_TAG = TagKey.create(
+        Registries.ITEM,
+        ResourceLocation.fromNamespaceAndPath("goldfishmod02tastyfurniture", "most_advanced_mushhammer")
+        );
 
         public GM1RecipeProviderConcrete(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {
             super(output, lookupProvider);
@@ -76,6 +88,33 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', ELDERBERRY_TAG)
             .unlockedBy("has_mush_hammer", has(MUSHHAMMER_TAG))
             .save(output);
+          //advanced
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.ELDERBERRY_MUSH.get(), 2)
+            .pattern("ABB")
+            .pattern("BB ")
+            .pattern("   ")
+            .define('A', ADVANCED_MUSHHAMMER_TAG)
+            .define('B', ELDERBERRY_TAG)
+            .unlockedBy("has_mush_hammer", has(ADVANCED_MUSHHAMMER_TAG))
+            .save(output, "elderberry_mush_from_advanced_mushhammer");
+          //more advanced
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.ELDERBERRY_MUSH.get(), 4)
+            .pattern("ABB")
+            .pattern("BB ")
+            .pattern("   ")
+            .define('A', MORE_ADVANCED_MUSHHAMMER_TAG)
+            .define('B', ELDERBERRY_TAG)
+            .unlockedBy("has_mush_hammer", has(MORE_ADVANCED_MUSHHAMMER_TAG))
+            .save(output, "elderberry_mush_from_more_advanced_mushhammer");
+          //most advanced
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.ELDERBERRY_MUSH.get(), 8)
+            .pattern("ABB")
+            .pattern("BB ")
+            .pattern("   ")
+            .define('A', MOST_ADVANCED_MUSHHAMMER_TAG)
+            .define('B', ELDERBERRY_TAG)
+            .unlockedBy("has_mush_hammer", has(MOST_ADVANCED_MUSHHAMMER_TAG))
+            .save(output, "elderberry_mush_from_most_advanced_mushhammer");
       }
       protected void buildIngotRecipes(RecipeOutput output) {
        //elderberry
