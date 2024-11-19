@@ -74,6 +74,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           buildIngotRecipes(output);
           buildNuggetRecipes(output);
           buildBlockRecipes(output);
+          buildSlabRecipes(output);
         }
 
       protected void buildMushRecipes(RecipeOutput output) {
@@ -180,16 +181,50 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.ELDERBERRY_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockitemregistry.ELDERBERRY_BRICKS_BLOCK_ITEM.get())
           .unlockedBy("has_elderberry_block", has(foodblockitemregistry.ELDERBERRY_BLOCK_ITEM.get()))
           .save(output, "elderberry_bricks_block_from_elderberry_block_stonecutting");
+
         //chiseled
+         //crafting
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.ELDERBERRY_CHISELED_BLOCK_ITEM.get())
+          .pattern("   ")
+          .pattern(" A ")
+          .pattern(" A ")
+          .define('A', foodblockitemregistry.ELDERBERRY_SLAB_ITEM.get())
+          .unlockedBy("has_elderberry_slab", has(foodblockitemregistry.ELDERBERRY_SLAB_ITEM.get()))
+          .save(output);
          //stonecutting     
           SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.ELDERBERRY_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockitemregistry.ELDERBERRY_CHISELED_BLOCK_ITEM.get())
           .unlockedBy("has_elderberry_block", has(foodblockitemregistry.ELDERBERRY_BLOCK_ITEM.get()))
           .save(output, "elderberry_chiseled_block_from_elderberry_block_stonecutting");
+
         //tiles
+         //crafting
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.ELDERBERRY_TILES_BLOCK_ITEM.get(),2)
+          .pattern("   ")
+          .pattern("AA ")
+          .pattern("AA ")
+          .define('A', foodblockitemregistry.ELDERBERRY_SLAB_ITEM.get())
+          .unlockedBy("has_elderberry_slab", has(foodblockitemregistry.ELDERBERRY_SLAB_ITEM.get()))
+          .save(output);
          //stonecutting     
           SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.ELDERBERRY_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockitemregistry.ELDERBERRY_TILES_BLOCK_ITEM.get())
           .unlockedBy("has_elderberry_block", has(foodblockitemregistry.ELDERBERRY_BLOCK_ITEM.get()))
           .save(output, "elderberry_tiles_block_from_elderberry_block_stonecutting");
+      }
+      protected void buildSlabRecipes(RecipeOutput output) {
+       //elderberry
+        //plain
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.ELDERBERRY_SLAB_ITEM.get())
+          .pattern("   ")
+          .pattern("   ")
+          .pattern("AAA")
+          .define('A', ingotregistry.ELDERBERRY_INGOT.get())
+          .unlockedBy("has_elderberry_ingot", has(ingotregistry.ELDERBERRY_INGOT.get()))
+          .save(output);
+        //bricks
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.ELDERBERRY_BRICKS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, 
+          foodblockitemregistry.ELDERBERRY_BRICKS_SLAB_ITEM.get(), 2)
+          .unlockedBy("has_elderberry_bricks_block", has(foodblockitemregistry.ELDERBERRY_BRICKS_BLOCK_ITEM.get()))
+          .save(output, "elderberry_bricks_slab_from_elderberry_bricks_block_stonecutting");
       }
       
         

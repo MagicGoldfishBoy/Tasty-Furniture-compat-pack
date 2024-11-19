@@ -30,6 +30,10 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         withExistingParent("elderberry_chiseled_block_item", modLoc("block/elderberry_chiseled_block"));
        //tiles block
         withExistingParent("elderberry_tiles_block_item", modLoc("block/elderberry_tiles_block"));
+       //slab
+       slab("elderberry_slab_item", modLoc("block/elderberry_block"), modLoc("block/elderberry_block"), modLoc("block/elderberry_block"));
+       //bricks slab
+       slab("elderberry_bricks_slab_item", modLoc("block/elderberry_bricks_block"), modLoc("block/elderberry_bricks_block"), modLoc("block/elderberry_bricks_block"));
   }
 }
 

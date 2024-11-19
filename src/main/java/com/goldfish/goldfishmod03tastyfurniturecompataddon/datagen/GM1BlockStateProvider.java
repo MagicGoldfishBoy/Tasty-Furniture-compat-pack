@@ -63,7 +63,6 @@ public class GM1BlockStateProvider extends BlockStateProvider
      //------------------------------------------------------------elderberry-----------------------------------------------------------------------
       //.........plain
           net.minecraft.world.level.block.Block elderberry_block = foodblockregistry.ELDERBERRY_BLOCK.get();
-          ResourceLocation elderberry_block_texture = modLoc("block/elderberry_block");
           simpleBlock(elderberry_block);
       //.........bricks
           net.minecraft.world.level.block.Block elderberry_bricks_block = foodblockregistry.ELDERBERRY_BRICKS_BLOCK.get();
@@ -74,6 +73,18 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........tiles
           net.minecraft.world.level.block.Block elderberry_tiles_block = foodblockregistry.ELDERBERRY_TILES_BLOCK.get();
           simpleBlock(elderberry_tiles_block);
+    //==============================================================================================================================================
+    //|                                                              Slabs                                                                        |
+    //==============================================================================================================================================
+     //------------------------------------------------------------elderberry-----------------------------------------------------------------------
+      //.........plain
+          SlabBlock elderberry_slab = foodblockregistry.ELDERBERRY_SLAB.get();
+          ResourceLocation elderberry_block_texture = modLoc("block/elderberry_block");
+          slabBlock(elderberry_slab, elderberry_block_texture, elderberry_block_texture);
+      //.........bricks
+          SlabBlock elderberry_bricks_slab = foodblockregistry.ELDERBERRY_BRICKS_SLAB.get();
+          ResourceLocation elderberry_bricks_block_texture = modLoc("block/elderberry_bricks_block");
+          slabBlock(elderberry_bricks_slab, elderberry_bricks_block_texture, elderberry_bricks_block_texture);
    };
 
 }

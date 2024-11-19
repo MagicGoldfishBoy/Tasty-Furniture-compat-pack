@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "goldfishmod03tastyfurniturecompataddon:block/elderberry_slab"
+    },
+    "type=double": {
+      "model": "goldfishmod03tastyfurniturecompataddon:block/elderberry_block"
+    },
+    "type=top": {
+      "model": "goldfishmod03tastyfurniturecompataddon:block/elderberry_slab_top"
+    }
+  }
+}
