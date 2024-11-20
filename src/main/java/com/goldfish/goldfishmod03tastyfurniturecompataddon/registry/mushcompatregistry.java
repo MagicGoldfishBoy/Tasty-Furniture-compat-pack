@@ -51,7 +51,7 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 
 import java.util.function.Supplier;
 
-public class mushregistry {
+public class mushcompatregistry {
 
     public static final DeferredRegister<Item> MUSH = DeferredRegister.create(BuiltInRegistries.ITEM, TastyFurnitureCompatAddon.MODID);
 

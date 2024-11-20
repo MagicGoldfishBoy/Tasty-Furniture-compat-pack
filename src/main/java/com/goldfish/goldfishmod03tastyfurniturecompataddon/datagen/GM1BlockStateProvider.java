@@ -30,9 +30,6 @@ import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.client.model.generators.BlockModelBuilder;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
-import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.foodChairBlock;
-import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.foodpathtypeminislab;
-import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.foodtable;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.foodblockregistry;
 
 import net.minecraft.core.Direction;
@@ -246,6 +243,30 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/elderberry_ladder");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+    //==============================================================================================================================================
+    //|                                                             Ladders                                                                        |
+    //==============================================================================================================================================
+     //------------------------------------------------------------elderberry-----------------------------------------------------------------------
+          HorizontalDirectionalBlock elderberrytable = foodblockregistry.ELDERBERRY_TABLE.get();
+
+          getVariantBuilder(elderberrytable)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/elderberry_table");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))

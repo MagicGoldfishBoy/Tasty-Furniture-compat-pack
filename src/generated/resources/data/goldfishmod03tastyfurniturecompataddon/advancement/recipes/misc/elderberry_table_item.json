@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_mush_hammer": {
+    "has_elderberry_ingot": {
       "conditions": {
         "items": [
           {
-            "items": "goldfishmod02tastyfurniture:mush_hammer"
+            "items": "goldfishmod03tastyfurniturecompataddon:elderberry_ingot"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "goldfishmod03tastyfurniturecompataddon:elderberry_mush"
+        "recipe": "goldfishmod03tastyfurniturecompataddon:elderberry_table_item"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_mush_hammer"
+      "has_elderberry_ingot"
     ]
   ],
   "rewards": {
     "recipes": [
-      "goldfishmod03tastyfurniturecompataddon:elderberry_mush"
+      "goldfishmod03tastyfurniturecompataddon:elderberry_table_item"
     ]
   }
 }

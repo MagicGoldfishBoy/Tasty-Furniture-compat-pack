@@ -1,14 +1,11 @@
 package com.goldfish.goldfishmod03tastyfurniturecompataddon.registry;
 
-import com.goldfish.goldfishmod02tastyfurniture.block.appleSign;
-import com.goldfish.goldfishmod02tastyfurniture.block.appleWallSign;
-import com.goldfish.goldfishmod02tastyfurniture.block.entity.appleSignEntity;
+import com.goldfish.goldfishmod02tastyfurniture.block.foodtable;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.TastyFurnitureCompatAddon;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.elderberrySign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.elderberryWallSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.elderberrySignEntity;
 
-import net.minecraft.client.gui.components.Button;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.ButtonBlock;
@@ -17,6 +14,7 @@ import net.minecraft.world.level.block.ChainBlock;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
+import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.IronBarsBlock;
 import net.minecraft.world.level.block.LadderBlock;
 import net.minecraft.world.level.block.LanternBlock;
@@ -265,19 +263,29 @@ public class foodblockregistry {
     .noOcclusion()
     ));
        
-    //==============================================================================================================================================================================================
-    //                                                                                        Ladders
-    //==============================================================================================================================================================================================
+//==============================================================================================================================================================================================
+//                                                                                        Ladders
+//==============================================================================================================================================================================================
          private static float ladder_destroy_time = 0.75f;
          static float ladder_explosion_resistance = 0.75f;
          static SoundType plant_ladder_sound = SoundType.VINE;
          static SoundType meat_ladder_sound = SoundType.MUD_BRICKS;
          static SoundType crystal_ladder_sound = SoundType.BASALT;
-     //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
-        public static final DeferredHolder<Block, LadderBlock> ELDERBERRY_LADDER = FOODBLOCK.register("elderberry_ladder", () -> new LadderBlock(BlockBehaviour.Properties.of()
-        .destroyTime(ladder_destroy_time)
-        .explosionResistance(ladder_explosion_resistance)
-        .sound(plant_ladder_sound)
-        .noOcclusion()
-        )); 
+ //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, LadderBlock> ELDERBERRY_LADDER = FOODBLOCK.register("elderberry_ladder", () -> new LadderBlock(BlockBehaviour.Properties.of()
+    .destroyTime(ladder_destroy_time)
+    .explosionResistance(ladder_explosion_resistance)
+    .sound(plant_ladder_sound)
+    .noOcclusion()
+   )); 
+//==============================================================================================================================================================================================
+//                                                                                         Table
+//==============================================================================================================================================================================================
+ //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, HorizontalDirectionalBlock> ELDERBERRY_TABLE = FOODBLOCK.register("elderberry_table", () -> new foodtable(BlockBehaviour.Properties.of()
+    .destroyTime(1.5f)
+    .explosionResistance(1.5f)
+    .sound(SoundType.MUD_BRICKS)
+    .noOcclusion()
+    ));
 }

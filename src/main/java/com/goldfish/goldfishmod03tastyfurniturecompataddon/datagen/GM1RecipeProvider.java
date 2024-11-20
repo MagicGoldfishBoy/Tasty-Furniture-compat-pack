@@ -7,11 +7,12 @@ import java.util.concurrent.CompletableFuture;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.TastyFurnitureCompatAddon;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.foodblockcompatitemregistry;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.ingotregistry;
-import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.mushregistry;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.mushcompatregistry;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.nuggetregistry;
 
 import com.goldfish.goldfishmod02tastyfurniture.block.*;
 import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockitemregistry;
+import com.goldfish.goldfishmod02tastyfurniture.registry.mushregistry;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.HolderLookup.Provider;
@@ -90,22 +91,23 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           buildLanternRecipes(output);
           buildChainRecipes(output);
           buildLadderRecipes(output);
+          buildTableRecipes(output);
         }
 
       protected void buildMushRecipes(RecipeOutput output) {
         LOGGER.info("building mush recipes");
          //elderberry
           //regular
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.ELDERBERRY_MUSH.get(), 1)
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.ELDERBERRY_MUSH.get(), 1)
             .pattern("ABB")
             .pattern("BB ")
             .pattern("   ")
             .define('A', MUSHHAMMER_TAG)
             .define('B', ELDERBERRY_TAG)
-            .unlockedBy("has_mush_hammer", has(MUSHHAMMER_TAG))
+            .unlockedBy("has_mush_hammer", has(mushregistry.mushhammer.get()))
             .save(output);
           //advanced
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.ELDERBERRY_MUSH.get(), 2)
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.ELDERBERRY_MUSH.get(), 2)
             .pattern("ABB")
             .pattern("BB ")
             .pattern("   ")
@@ -114,7 +116,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .unlockedBy("has_mush_hammer", has(ADVANCED_MUSHHAMMER_TAG))
             .save(output, "elderberry_mush_from_advanced_mushhammer");
           //more advanced
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.ELDERBERRY_MUSH.get(), 4)
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.ELDERBERRY_MUSH.get(), 4)
             .pattern("ABB")
             .pattern("BB ")
             .pattern("   ")
@@ -123,7 +125,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .unlockedBy("has_mush_hammer", has(MORE_ADVANCED_MUSHHAMMER_TAG))
             .save(output, "elderberry_mush_from_more_advanced_mushhammer");
           //most advanced
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushregistry.ELDERBERRY_MUSH.get(), 8)
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.ELDERBERRY_MUSH.get(), 8)
             .pattern("ABB")
             .pattern("BB ")
             .pattern("   ")
@@ -143,22 +145,22 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .unlockedBy("has_elderberry_nugget", has(nuggetregistry.ELDERBERRY_NUGGET.get()))
             .save(output, "elderberry_ingot_from_crafting");
           //smelting
-            SimpleCookingRecipeBuilder.smelting(Ingredient.of(mushregistry.ELDERBERRY_MUSH.get()),
+            SimpleCookingRecipeBuilder.smelting(Ingredient.of(mushcompatregistry.ELDERBERRY_MUSH.get()),
             RecipeCategory.MISC,
             ingotregistry.ELDERBERRY_INGOT.get(),
             1.0f,
             200
             )
-            .unlockedBy("has_elderberry_mush", has(mushregistry.ELDERBERRY_MUSH.get()))
+            .unlockedBy("has_elderberry_mush", has(mushcompatregistry.ELDERBERRY_MUSH.get()))
             .save(output, "elderberry_ingot_from_smelting");
           //blasting
-            SimpleCookingRecipeBuilder.blasting(Ingredient.of(mushregistry.ELDERBERRY_MUSH.get()),
+            SimpleCookingRecipeBuilder.blasting(Ingredient.of(mushcompatregistry.ELDERBERRY_MUSH.get()),
             RecipeCategory.MISC,
             ingotregistry.ELDERBERRY_INGOT.get(),
             1.0f,
             100
             )
-            .unlockedBy("has_elderberry_mush", has(mushregistry.ELDERBERRY_MUSH.get()))
+            .unlockedBy("has_elderberry_mush", has(mushcompatregistry.ELDERBERRY_MUSH.get()))
             .save(output, "elderberry_ingot_from_blasting");
           //unpacking
             ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.ELDERBERRY_INGOT.get(), 9)
@@ -388,6 +390,16 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .pattern("ABA")
         .pattern("A A")
         .define('A', Items.STICK)
+        .define('B', ingotregistry.ELDERBERRY_INGOT.get())
+        .unlockedBy("has_elderberry_ingot", has(ingotregistry.ELDERBERRY_INGOT.get()))
+        .save(output);
+      }
+      protected void buildTableRecipes(RecipeOutput output) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ELDERBERRY_TABLE_ITEM.get())
+        .pattern("AAA")
+        .pattern("B B")
+        .pattern("B B")
+        .define('A', foodblockcompatitemregistry.ELDERBERRY_SLAB_ITEM.get())
         .define('B', ingotregistry.ELDERBERRY_INGOT.get())
         .unlockedBy("has_elderberry_ingot", has(ingotregistry.ELDERBERRY_INGOT.get()))
         .save(output);

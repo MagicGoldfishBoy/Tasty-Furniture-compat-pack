@@ -69,6 +69,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        .end();
        //ladder
        withExistingParent("elderberry_ladder_item", modLoc("block/elderberry_ladder"));
+       //table
+       withExistingParent("elderberry_table_item", modLoc("block/elderberry_table"));
   }
 }
 

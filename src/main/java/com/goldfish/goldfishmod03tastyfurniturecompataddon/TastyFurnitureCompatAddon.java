@@ -13,7 +13,7 @@ import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.foodblockcom
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.foodblockregistry;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.foodmaterialtyperegistry;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.ingotregistry;
-import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.mushregistry;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.mushcompatregistry;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.nuggetregistry;
 import com.mojang.logging.LogUtils;
 
@@ -83,9 +83,9 @@ public class TastyFurnitureCompatAddon
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TASTY_FURNITURE_COMPAT_ADDON_TAB = CREATIVE_MODE_TABS.register("tasty_furniture_compat_addon_tab", () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup.tastyfurniturecompataddon"))
             .withTabsBefore(CreativeModeTabs.COMBAT)
-            .icon(() -> mushregistry.ELDERBERRY_MUSH.get().getDefaultInstance())
+            .icon(() -> mushcompatregistry.ELDERBERRY_MUSH.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
-                output.acceptAll(mushregistry.MUSH.getEntries().stream().map(sup -> {
+                output.acceptAll(mushcompatregistry.MUSH.getEntries().stream().map(sup -> {
                     return sup.get().getDefaultInstance();
                 }).toList());
                 output.acceptAll(ingotregistry.FOODINGOT.getEntries().stream().map(sup -> {
@@ -124,7 +124,7 @@ public class TastyFurnitureCompatAddon
 
         ITEMS.register(modEventBus);
 
-        mushregistry.MUSH.register(modEventBus);
+        mushcompatregistry.MUSH.register(modEventBus);
 
         ingotregistry.FOODINGOT.register(modEventBus);
 
