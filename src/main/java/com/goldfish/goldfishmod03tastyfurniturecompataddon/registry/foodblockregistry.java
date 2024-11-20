@@ -6,9 +6,11 @@ import com.goldfish.goldfishmod02tastyfurniture.block.foodBed;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodChairBlock;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodpathtypeminislab;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodtable;
+import com.goldfish.goldfishmod02tastyfurniture.block.smallFoodCabinet;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.applefurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.bedEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodBarrelEntity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.smallFoodContainerEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.TastyFurnitureCompatAddon;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.elderberryFurnace;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.elderberrySign;
@@ -400,4 +402,26 @@ public class foodblockregistry {
    //.........entity
      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<bedEntity>> FOOD_BED_ENTITY = FOODBLOCKENTITY.register("food_bed_entity",
      () -> BlockEntityType.Builder.of(bedEntity::new, ELDERBERRY_BED.get()).build(null));
+   //^ I did not think this would actually work, but it does O.o
+
+//==============================================================================================================================================================================================
+//                                                                                        Cabinets
+//==============================================================================================================================================================================================
+   static float cabinet_destroy_time = 1.25f;
+   static float cabinet_explosion_resistance = 0.75f;
+   static SoundType plant_cabinet_sound = SoundType.MUD_BRICKS;
+   static SoundType meat_cabinet_sound = SoundType.MUD;
+   static SoundType crystal_cabinet_sound = SoundType.BASALT;
+ //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
+     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_ELDERBERRY_CABINET = FOODBLOCK.register("small_elderberry_cabinet", 
+     () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
+     .sound(plant_cabinet_sound)
+     .destroyTime(cabinet_destroy_time)
+     .explosionResistance(cabinet_explosion_resistance)
+     .noOcclusion()
+     ));
+ //----------------------------------------------------------------------------------------Entity-----------------------------------------------------------------------------------------------
+    //small
+     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<smallFoodContainerEntity>> SMALL_CABINET_ENTITY = FOODBLOCKENTITY.register("small_cabinet_entity",
+     () -> BlockEntityType.Builder.of(smallFoodContainerEntity::new, SMALL_ELDERBERRY_CABINET.get()).build(null));
 }

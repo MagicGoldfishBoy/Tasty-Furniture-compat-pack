@@ -98,6 +98,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           buildBarrelRecipes(output);
           buildChairRecipes(output);
           buildBedRecipes(output);
+          buildCabinetRecipes(output);
         }
 
       protected void buildMushRecipes(RecipeOutput output) {
@@ -489,6 +490,17 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
            .define('C', foodblockcompatitemregistry.ELDERBERRY_CARPET_ITEM.get())
            .unlockedBy("has_elderberry_ingot", has(ingotregistry.ELDERBERRY_INGOT.get()))
            .save(output);
+      }
+      protected void buildCabinetRecipes(RecipeOutput output) {
+       //small
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.SMALL_ELDERBERRY_CABINET_ITEM.get())
+         .pattern("AAA")
+         .pattern("B B")
+         .pattern("AAA")
+         .define('A', foodblockcompatitemregistry.ELDERBERRY_SLAB_ITEM.get())
+         .define('B', Items.IRON_INGOT)
+         .unlockedBy("has_elderberry_slab", has(foodblockcompatitemregistry.ELDERBERRY_SLAB_ITEM.get()))
+         .save(output);
       }
   }
 }
