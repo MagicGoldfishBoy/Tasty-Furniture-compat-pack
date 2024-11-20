@@ -144,6 +144,13 @@ public class GM1BlockStateProvider extends BlockStateProvider
            WallSignBlock elderberry_wall_sign = foodblockregistry.ELDERBERRY_WALL_SIGN.get();
            ResourceLocation elderberry_sign_texture = modLoc("block/elderberry_block");
            signBlock(elderberry_sign, elderberry_wall_sign, elderberry_sign_texture);
+    //==============================================================================================================================================
+    //|                                                            Trap Doors                                                                      |
+    //==============================================================================================================================================
+     //------------------------------------------------------------elderberry-----------------------------------------------------------------------
+          TrapDoorBlock elderberry_trapdoor = foodblockregistry.ELDERBERRY_TRAPDOOR.get(); 
+          ResourceLocation elderberry_trapdoor_texture = modLoc("block/elderberry_block");
+          trapdoorBlockWithRenderType(elderberry_trapdoor, "elderberry_trapdoor", elderberry_trapdoor_texture, false, elderberry_trapdoor_texture);
    };
 
 }

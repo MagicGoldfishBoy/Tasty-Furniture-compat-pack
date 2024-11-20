@@ -92,4 +92,10 @@ public class foodblockitemregistry {
  //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, SignItem> ELDERBERRY_SIGN_ITEM = FOODBLOCKITEM.register("elderberry_sign_item",
    () -> new SignItem(new SignItem.Properties(), foodblockregistry.ELDERBERRY_STANDING_SIGN.get(), foodblockregistry.ELDERBERRY_WALL_SIGN.get()));
+//==============================================================================================================================================================================================
+//                                                                                       Trap Doors
+//==============================================================================================================================================================================================
+ //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
+     public static final DeferredHolder<Item, BlockItem> ELDERBERRY_TRAPDOOR_ITEM = FOODBLOCKITEM.register("elderberry_trapdoor_item",
+     () -> new BlockItem(foodblockregistry.ELDERBERRY_TRAPDOOR.get(), new BlockItem.Properties()));
 }

@@ -52,6 +52,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        pressurePlate("elderberry_pressure_plate_item", modLoc("block/elderberry_block"));
        //sign
        withExistingParent("elderberry_sign_item", mcLoc("item/generated")).texture("layer0", "item/elderberry_sign");
+       //trapdoor
+       withExistingParent("elderberry_trapdoor_item", modLoc("block/elderberry_trapdoor_trapdoor_bottom"));
   }
 }
 
