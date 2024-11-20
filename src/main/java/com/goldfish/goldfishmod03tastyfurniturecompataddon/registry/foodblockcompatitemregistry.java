@@ -2,10 +2,12 @@ package com.goldfish.goldfishmod03tastyfurniturecompataddon.registry;
 
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.TastyFurnitureCompatAddon;
 
+import net.minecraft.core.Direction;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SignItem;
+import net.minecraft.world.item.StandingAndWallBlockItem;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -138,4 +140,17 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> ELDERBERRY_TABLE_ITEM =  FOODBLOCKITEM.register("elderberry_table_item",
     () -> new BlockItem(foodblockregistry.ELDERBERRY_TABLE.get(), new BlockItem.Properties()));
+//==============================================================================================================================================================================================
+//                                                                                        Tables
+//==============================================================================================================================================================================================
+ //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
+    //regular
+      public static final DeferredHolder<Item, StandingAndWallBlockItem> ELDERBERRY_TORCH_ITEM = FOODBLOCKITEM.register("elderberry_torch_item", 
+      () -> new StandingAndWallBlockItem(foodblockregistry.ELDERBERRY_TORCH.get(), foodblockregistry.ELDERBERRY_WALL_TORCH.get(), new Item.Properties(), Direction.NORTH));
+    //redstone
+      public static final DeferredHolder<Item, StandingAndWallBlockItem> ELDERBERRY_REDSTONE_TORCH_ITEM =  FOODBLOCKITEM.register("elderberry_redstone_torch_item",
+      () -> new StandingAndWallBlockItem(foodblockregistry.ELDERBERRY_REDSTONE_TORCH.get(), foodblockregistry.ELDERBERRY_REDSTONE_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
+    //soul
+      public static final DeferredHolder<Item, StandingAndWallBlockItem> ELDERBERRY_SOUL_TORCH_ITEM =  FOODBLOCKITEM.register("elderberry_soul_torch_item",
+      () -> new StandingAndWallBlockItem(foodblockregistry.ELDERBERRY_SOUL_TORCH.get(), foodblockregistry.ELDERBERRY_SOUL_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
 }

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:stick"
+    },
+    "B": {
+      "item": "goldfishmod03tastyfurniturecompataddon:elderberry_nugget"
+    },
+    "C": {
+      "tag": "minecraft:coals"
+    }
+  },
+  "pattern": [
+    " C ",
+    " B ",
+    " A "
+  ],
+  "result": {
+    "count": 4,
+    "id": "goldfishmod03tastyfurniturecompataddon:elderberry_torch_item"
+  }
+}

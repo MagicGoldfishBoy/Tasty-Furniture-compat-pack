@@ -92,6 +92,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           buildChainRecipes(output);
           buildLadderRecipes(output);
           buildTableRecipes(output);
+          buildTorchRecipes(output);
         }
 
       protected void buildMushRecipes(RecipeOutput output) {
@@ -404,5 +405,37 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .unlockedBy("has_elderberry_ingot", has(ingotregistry.ELDERBERRY_INGOT.get()))
         .save(output);
       }
+      protected void buildTorchRecipes(RecipeOutput output) {
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ELDERBERRY_TORCH_ITEM.get(), 4)
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetregistry.ELDERBERRY_NUGGET.get())
+            .define('C', ItemTags.COALS)
+            .unlockedBy("has_elderberry_nugget", has(nuggetregistry.ELDERBERRY_NUGGET.get()))
+            .save(output);
+          //redstone
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ELDERBERRY_REDSTONE_TORCH_ITEM.get())
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetregistry.ELDERBERRY_NUGGET.get())
+            .define('C', Items.REDSTONE)
+            .unlockedBy("has_elderberry_nugget", has(nuggetregistry.ELDERBERRY_NUGGET.get()))
+            .save(output);
+          //soul
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ELDERBERRY_SOUL_TORCH_ITEM.get(), 4)
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetregistry.ELDERBERRY_NUGGET.get())
+            .define('C', Items.SOUL_SAND)
+            .unlockedBy("has_elderberry_nugget", has(nuggetregistry.ELDERBERRY_NUGGET.get()))
+            .save(output);
+      } 
   }
 }

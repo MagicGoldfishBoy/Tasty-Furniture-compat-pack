@@ -250,7 +250,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .build();
           });
     //==============================================================================================================================================
-    //|                                                             Ladders                                                                        |
+    //|                                                              Tables                                                                        |
     //==============================================================================================================================================
      //------------------------------------------------------------elderberry-----------------------------------------------------------------------
           HorizontalDirectionalBlock elderberrytable = foodblockregistry.ELDERBERRY_TABLE.get();
@@ -273,6 +273,125 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .rotationY(rotationY)
                   .build();
           });
+    //==============================================================================================================================================
+    //|                                                              Torches                                                                       |
+    //==============================================================================================================================================
+     //------------------------------------------------------------elderberry-----------------------------------------------------------------------
+       //regular
+        TorchBlock elderberry_torch = foodblockregistry.ELDERBERRY_TORCH.get();
+        ResourceLocation elderberry_torch_texture = modLoc("block/elderberry_torch");
+        BlockModelBuilder elderberry_torch_model = models()
+        .withExistingParent("elderberry_torch", mcLoc("block/torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", elderberry_torch_texture)
+        .texture("particle", elderberry_torch_texture);
+
+        simpleBlock(elderberry_torch, elderberry_torch_model);
+
+        TorchBlock elderberry_wall_torch = foodblockregistry.ELDERBERRY_WALL_TORCH.get();
+        BlockModelBuilder elderberry_wall_torch_model = models()
+        .withExistingParent("elderberry_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", elderberry_torch_texture)
+        .texture("particle", elderberry_torch_texture);
+        getVariantBuilder(elderberry_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("elderberry_wall_torch", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", elderberry_torch_texture)
+                    .texture("particle", elderberry_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //redstone
+        RedstoneTorchBlock elderberry_redstone_torch = foodblockregistry.ELDERBERRY_REDSTONE_TORCH.get();
+        ResourceLocation elderberry_redstone_torch_texture = modLoc("block/elderberry_redstone_torch");
+        BlockModelBuilder elderberry_redstone_torch_model = models()
+        .withExistingParent("elderberry_redstone_torch", mcLoc("block/redstone_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", elderberry_redstone_torch_texture)
+        .texture("particle", elderberry_redstone_torch_texture);
+        
+
+        simpleBlock(elderberry_redstone_torch, elderberry_redstone_torch_model);
+
+        ResourceLocation elderberry_redstone_wall_torch_texture = modLoc("block/elderberry_redstone_torch");
+
+        RedstoneTorchBlock elderberry_redstone_wall_torch = foodblockregistry.ELDERBERRY_REDSTONE_WALL_TORCH.get();
+        BlockModelBuilder elderberry_redstone_wall_torch_model = models()
+        .withExistingParent("elderberry_redstone_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", elderberry_redstone_wall_torch_texture)
+        .texture("particle", elderberry_redstone_wall_torch_texture);
+        getVariantBuilder(elderberry_redstone_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("elderberry_redstone_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", elderberry_redstone_wall_torch_texture)
+                    .texture("particle", elderberry_redstone_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //soul
+        TorchBlock elderberry_soul_torch = foodblockregistry.ELDERBERRY_SOUL_TORCH.get();
+        ResourceLocation elderberry_soul_torch_texture = modLoc("block/elderberry_soul_torch");
+        BlockModelBuilder elderberry_soul_torch_model = models()
+        .withExistingParent("elderberry_soul_torch", mcLoc("block/soul_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", elderberry_soul_torch_texture)
+        .texture("particle", elderberry_soul_torch_texture);
+        
+
+        simpleBlock(elderberry_soul_torch, elderberry_soul_torch_model);
+
+        ResourceLocation elderberry_soul_wall_torch_texture = modLoc("block/elderberry_soul_torch");
+        TorchBlock elderberry_soul_wall_torch = foodblockregistry.ELDERBERRY_SOUL_WALL_TORCH.get();
+        BlockModelBuilder elderberry_soul_wall_torch_model = models()
+        .withExistingParent("elderberry_soul_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", elderberry_soul_wall_torch_texture)
+        .texture("particle", elderberry_soul_wall_torch_texture);
+        getVariantBuilder(elderberry_soul_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("elderberry_soul_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", elderberry_soul_wall_torch_texture)
+                    .texture("particle", elderberry_soul_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
    };
 
 }

@@ -25,5 +25,8 @@
     "block.goldfishmod03tastyfurniturecompataddon.elderberry_soul_lantern": "Elderberry Soul Lantern",
     "block.goldfishmod03tastyfurniturecompataddon.elderberry_chain": "Elderberry Chain",
     "block.goldfishmod03tastyfurniturecompataddon.elderberry_ladder": "Elderberry Ladder",
-    "block.goldfishmod03tastyfurniturecompataddon.elderberry_table": "Elderberry Table"
+    "block.goldfishmod03tastyfurniturecompataddon.elderberry_table": "Elderberry Table",
+    "block.goldfishmod03tastyfurniturecompataddon.elderberry_torch": "Elderberry Torch",
+    "block.goldfishmod03tastyfurniturecompataddon.elderberry_redstone_torch": "Elderberry Redstone Torch",
+    "block.goldfishmod03tastyfurniturecompataddon.elderberry_soul_torch": "Elderberry Soul Torch"
 }
