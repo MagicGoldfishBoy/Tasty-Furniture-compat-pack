@@ -9,7 +9,7 @@ import net.minecraft.world.item.SignItem;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-public class foodblockitemregistry {
+public class foodblockcompatitemregistry {
     
     public static DeferredRegister<Item> FOODBLOCKITEM = DeferredRegister.create(BuiltInRegistries.ITEM, TastyFurnitureCompatAddon.MODID);
 
@@ -98,4 +98,10 @@ public class foodblockitemregistry {
  //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
      public static final DeferredHolder<Item, BlockItem> ELDERBERRY_TRAPDOOR_ITEM = FOODBLOCKITEM.register("elderberry_trapdoor_item",
      () -> new BlockItem(foodblockregistry.ELDERBERRY_TRAPDOOR.get(), new BlockItem.Properties()));
+//==============================================================================================================================================================================================
+//                                                                                         Lamps
+//==============================================================================================================================================================================================
+ //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> ELDERBERRY_LAMP_ITEM = FOODBLOCKITEM.register("elderberry_lamp_item",
+    () -> new BlockItem(foodblockregistry.ELDERBERRY_LAMP.get(), new BlockItem.Properties()));
 }

@@ -9,7 +9,7 @@ import com.goldfish.goldfishmod03tastyfurniturecompataddon.datagen.GM1BlockLootT
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.datagen.GM1Datagen;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.datagen.GM1LootTableProvider;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.foodEntityRegistry;
-import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.foodblockitemregistry;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.foodblockcompatitemregistry;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.foodblockregistry;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.foodmaterialtyperegistry;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.ingotregistry;
@@ -94,7 +94,7 @@ public class TastyFurnitureCompatAddon
                 output.acceptAll(nuggetregistry.FOODNUGGET.getEntries().stream().map(sup -> {
                     return sup.get().getDefaultInstance();
                 }).toList());
-                output.acceptAll(foodblockitemregistry.FOODBLOCKITEM.getEntries().stream().map(sup -> {
+                output.acceptAll(foodblockcompatitemregistry.FOODBLOCKITEM.getEntries().stream().map(sup -> {
                     return sup.get().getDefaultInstance();
                 }).toList());
             }).build());
@@ -130,7 +130,7 @@ public class TastyFurnitureCompatAddon
 
         nuggetregistry.FOODNUGGET.register(modEventBus);
 
-        foodblockitemregistry.FOODBLOCKITEM.register(modEventBus);
+        foodblockcompatitemregistry.FOODBLOCKITEM.register(modEventBus);
 
         CREATIVE_MODE_TABS.register(modEventBus);
 

@@ -2,6 +2,7 @@ package com.goldfish.goldfishmod03tastyfurniturecompataddon.datagen;
 
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.CarpetBlock;
 import net.minecraft.world.level.block.ChainBlock;
@@ -151,6 +152,12 @@ public class GM1BlockStateProvider extends BlockStateProvider
           TrapDoorBlock elderberry_trapdoor = foodblockregistry.ELDERBERRY_TRAPDOOR.get(); 
           ResourceLocation elderberry_trapdoor_texture = modLoc("block/elderberry_block");
           trapdoorBlockWithRenderType(elderberry_trapdoor, "elderberry_trapdoor", elderberry_trapdoor_texture, false, elderberry_trapdoor_texture);
+    //==============================================================================================================================================
+    //|                                                               Lamps                                                                        |
+    //==============================================================================================================================================
+     //------------------------------------------------------------elderberry-----------------------------------------------------------------------
+          Block elderberry_lamp = foodblockregistry.ELDERBERRY_LAMP.get();
+          simpleBlock(elderberry_lamp);
    };
 
 }

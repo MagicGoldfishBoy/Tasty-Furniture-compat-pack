@@ -5,12 +5,14 @@ import java.lang.reflect.Method;
 import java.util.concurrent.CompletableFuture;
 
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.TastyFurnitureCompatAddon;
-import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.foodblockitemregistry;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.foodblockcompatitemregistry;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.ingotregistry;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.mushregistry;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.nuggetregistry;
 
-//import com.goldfish.goldfishmod02tastyfurniture;
+import com.goldfish.goldfishmod02tastyfurniture.block.*;
+import com.goldfish.goldfishmod02tastyfurniture.registry.foodblockitemregistry;
+
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.core.registries.Registries;
@@ -83,6 +85,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           buildPressurePlateRecipes(output);
           buildSignRecipes(output);
           buildTrapDoorRecipes(output);
+          buildLampRecipes(output);
         }
 
       protected void buildMushRecipes(RecipeOutput output) {
@@ -155,8 +158,8 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .save(output, "elderberry_ingot_from_blasting");
           //unpacking
             ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotregistry.ELDERBERRY_INGOT.get(), 9)
-            .requires(foodblockitemregistry.ELDERBERRY_BLOCK_ITEM.get())
-            .unlockedBy("has_elderberry_block", has(foodblockitemregistry.ELDERBERRY_BLOCK_ITEM.get()))
+            .requires(foodblockcompatitemregistry.ELDERBERRY_BLOCK_ITEM.get())
+            .unlockedBy("has_elderberry_block", has(foodblockcompatitemregistry.ELDERBERRY_BLOCK_ITEM.get()))
             .save(output, "elderberry_ingot_from_unpacking");
       }
       protected void buildNuggetRecipes(RecipeOutput output) {
@@ -169,7 +172,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
       protected void buildBlockRecipes(RecipeOutput output) {
        //elderberry
         //plain
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.ELDERBERRY_BLOCK_ITEM.get(), 1)
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ELDERBERRY_BLOCK_ITEM.get(), 1)
           .pattern("AAA")
           .pattern("AAA")
           .pattern("AAA")
@@ -178,50 +181,50 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .save(output); 
         //bricks
          //crafting
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.ELDERBERRY_BRICKS_BLOCK_ITEM.get(), 4)
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ELDERBERRY_BRICKS_BLOCK_ITEM.get(), 4)
           .pattern("AA ")
           .pattern("AA ")
           .pattern("   ")
-          .define('A', foodblockitemregistry.ELDERBERRY_BLOCK_ITEM.get())
-          .unlockedBy("has_elderberry_block", has(foodblockitemregistry.ELDERBERRY_BLOCK_ITEM.get()))
+          .define('A', foodblockcompatitemregistry.ELDERBERRY_BLOCK_ITEM.get())
+          .unlockedBy("has_elderberry_block", has(foodblockcompatitemregistry.ELDERBERRY_BLOCK_ITEM.get()))
           .save(output); 
          //stonecutting     
-          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.ELDERBERRY_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockitemregistry.ELDERBERRY_BRICKS_BLOCK_ITEM.get())
-          .unlockedBy("has_elderberry_block", has(foodblockitemregistry.ELDERBERRY_BLOCK_ITEM.get()))
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.ELDERBERRY_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockcompatitemregistry.ELDERBERRY_BRICKS_BLOCK_ITEM.get())
+          .unlockedBy("has_elderberry_block", has(foodblockcompatitemregistry.ELDERBERRY_BLOCK_ITEM.get()))
           .save(output, "elderberry_bricks_block_from_elderberry_block_stonecutting");
 
         //chiseled
          //crafting
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.ELDERBERRY_CHISELED_BLOCK_ITEM.get())
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ELDERBERRY_CHISELED_BLOCK_ITEM.get())
           .pattern("   ")
           .pattern(" A ")
           .pattern(" A ")
-          .define('A', foodblockitemregistry.ELDERBERRY_SLAB_ITEM.get())
-          .unlockedBy("has_elderberry_slab", has(foodblockitemregistry.ELDERBERRY_SLAB_ITEM.get()))
+          .define('A', foodblockcompatitemregistry.ELDERBERRY_SLAB_ITEM.get())
+          .unlockedBy("has_elderberry_slab", has(foodblockcompatitemregistry.ELDERBERRY_SLAB_ITEM.get()))
           .save(output);
          //stonecutting     
-          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.ELDERBERRY_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockitemregistry.ELDERBERRY_CHISELED_BLOCK_ITEM.get())
-          .unlockedBy("has_elderberry_block", has(foodblockitemregistry.ELDERBERRY_BLOCK_ITEM.get()))
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.ELDERBERRY_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockcompatitemregistry.ELDERBERRY_CHISELED_BLOCK_ITEM.get())
+          .unlockedBy("has_elderberry_block", has(foodblockcompatitemregistry.ELDERBERRY_BLOCK_ITEM.get()))
           .save(output, "elderberry_chiseled_block_from_elderberry_block_stonecutting");
 
         //tiles
          //crafting
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.ELDERBERRY_TILES_BLOCK_ITEM.get(),2)
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ELDERBERRY_TILES_BLOCK_ITEM.get(),2)
           .pattern("   ")
           .pattern("AA ")
           .pattern("AA ")
-          .define('A', foodblockitemregistry.ELDERBERRY_SLAB_ITEM.get())
-          .unlockedBy("has_elderberry_slab", has(foodblockitemregistry.ELDERBERRY_SLAB_ITEM.get()))
+          .define('A', foodblockcompatitemregistry.ELDERBERRY_SLAB_ITEM.get())
+          .unlockedBy("has_elderberry_slab", has(foodblockcompatitemregistry.ELDERBERRY_SLAB_ITEM.get()))
           .save(output);
          //stonecutting     
-          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.ELDERBERRY_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockitemregistry.ELDERBERRY_TILES_BLOCK_ITEM.get())
-          .unlockedBy("has_elderberry_block", has(foodblockitemregistry.ELDERBERRY_BLOCK_ITEM.get()))
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.ELDERBERRY_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockcompatitemregistry.ELDERBERRY_TILES_BLOCK_ITEM.get())
+          .unlockedBy("has_elderberry_block", has(foodblockcompatitemregistry.ELDERBERRY_BLOCK_ITEM.get()))
           .save(output, "elderberry_tiles_block_from_elderberry_block_stonecutting");
       }
       protected void buildSlabRecipes(RecipeOutput output) {
        //elderberry
         //plain
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.ELDERBERRY_SLAB_ITEM.get())
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ELDERBERRY_SLAB_ITEM.get())
           .pattern("   ")
           .pattern("   ")
           .pattern("AAA")
@@ -229,15 +232,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .unlockedBy("has_elderberry_ingot", has(ingotregistry.ELDERBERRY_INGOT.get()))
           .save(output);
         //bricks
-          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.ELDERBERRY_BRICKS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, 
-          foodblockitemregistry.ELDERBERRY_BRICKS_SLAB_ITEM.get(), 2)
-          .unlockedBy("has_elderberry_bricks_block", has(foodblockitemregistry.ELDERBERRY_BRICKS_BLOCK_ITEM.get()))
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.ELDERBERRY_BRICKS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, 
+          foodblockcompatitemregistry.ELDERBERRY_BRICKS_SLAB_ITEM.get(), 2)
+          .unlockedBy("has_elderberry_bricks_block", has(foodblockcompatitemregistry.ELDERBERRY_BRICKS_BLOCK_ITEM.get()))
           .save(output, "elderberry_bricks_slab_from_elderberry_bricks_block_stonecutting");
       }
       protected void buildStairsRecipes(RecipeOutput output) {
        //elderberry
         //plain
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.ELDERBERRY_STAIRS_ITEM.get())
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ELDERBERRY_STAIRS_ITEM.get())
           .pattern("A  ")
           .pattern("AA ")
           .pattern("AAA")
@@ -245,14 +248,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .unlockedBy("has_elderberry_ingot", has(ingotregistry.ELDERBERRY_INGOT.get()))
           .save(output);
         //bricks
-          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockitemregistry.ELDERBERRY_BRICKS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, 
-          foodblockitemregistry.ELDERBERRY_BRICKS_STAIRS_ITEM.get(), 1)
-          .unlockedBy("has_elderberry_bricks_block", has(foodblockitemregistry.ELDERBERRY_BRICKS_BLOCK_ITEM.get()))
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.ELDERBERRY_BRICKS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, 
+          foodblockcompatitemregistry.ELDERBERRY_BRICKS_STAIRS_ITEM.get(), 1)
+          .unlockedBy("has_elderberry_bricks_block", has(foodblockcompatitemregistry.ELDERBERRY_BRICKS_BLOCK_ITEM.get()))
           .save(output, "elderberry_bricks_stairs_from_elderberry_bricks_block_stonecutting");
       }
       protected void buildBarsRecipes(RecipeOutput output) {
        //elderberry
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.ELDERBERRY_BARS_ITEM.get(), 8)
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ELDERBERRY_BARS_ITEM.get(), 8)
          .pattern("   ")
          .pattern("AAA")
          .pattern("AAA")
@@ -262,7 +265,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
       }
       protected void buildDoorRecipes(RecipeOutput output) {
        //elderberry
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.ELDERBERRY_DOOR_ITEM.get(), 3)
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ELDERBERRY_DOOR_ITEM.get(), 3)
          .pattern("AA ")
          .pattern("AA ")
          .pattern("AA ")
@@ -272,7 +275,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
       }
       protected void buildButtonRecipes(RecipeOutput output) {
        //elderberry
-       ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockitemregistry.ELDERBERRY_BUTTON_ITEM.get(), 1)
+       ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.ELDERBERRY_BUTTON_ITEM.get(), 1)
        .requires(nuggetregistry.ELDERBERRY_NUGGET.get())
        .unlockedBy("has_elderberry_nugget", has(nuggetregistry.ELDERBERRY_NUGGET.get()))
        .save(output);
@@ -280,7 +283,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
       protected void buildFenceRecipes(RecipeOutput output) {
        //elderberry
         //fence
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.ELDERBERRY_FENCE_ITEM.get(), 3)
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ELDERBERRY_FENCE_ITEM.get(), 3)
           .pattern("ABA")
           .pattern("ABA")
           .pattern("   ")
@@ -289,7 +292,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .unlockedBy("has_elderberry_ingot", has(ingotregistry.ELDERBERRY_INGOT.get()))
           .save(output);        
         //gate
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.ELDERBERRY_GATE_ITEM.get(), 1)
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ELDERBERRY_GATE_ITEM.get(), 1)
           .pattern("BAB")
           .pattern("BAB")
           .pattern("   ")
@@ -299,16 +302,16 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .save(output);        
       }
       protected void buildPressurePlateRecipes(RecipeOutput output) {
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.ELDERBERRY_PRESSURE_PLATE_ITEM.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ELDERBERRY_PRESSURE_PLATE_ITEM.get())
         .pattern("   ")
         .pattern("AA ")
         .pattern("   ")
-        .define('A', foodblockitemregistry.ELDERBERRY_BLOCK_ITEM.get())
-        .unlockedBy("has_elderberry_block",  has(foodblockitemregistry.ELDERBERRY_BLOCK_ITEM.get()))
+        .define('A', foodblockcompatitemregistry.ELDERBERRY_BLOCK_ITEM.get())
+        .unlockedBy("has_elderberry_block",  has(foodblockcompatitemregistry.ELDERBERRY_BLOCK_ITEM.get()))
         .save(output);
       }
       protected void buildSignRecipes(RecipeOutput output) {
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.ELDERBERRY_SIGN_ITEM.get(), 3)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ELDERBERRY_SIGN_ITEM.get(), 3)
         .pattern("AAA")
         .pattern("AAA")
         .pattern(" B ")
@@ -318,12 +321,22 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .save(output);
       }
       protected void buildTrapDoorRecipes(RecipeOutput output) {
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.ELDERBERRY_TRAPDOOR_ITEM.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ELDERBERRY_TRAPDOOR_ITEM.get())
         .pattern("   ")
         .pattern("AAA")
         .pattern("AAA")
         .define('A', ingotregistry.ELDERBERRY_INGOT.get())
         .unlockedBy("has_elderberry_ingot", has(ingotregistry.ELDERBERRY_INGOT.get()))
+        .save(output);
+      }
+      protected void buildLampRecipes(RecipeOutput output) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ELDERBERRY_LAMP_ITEM.get())
+        .pattern("AAA")
+        .pattern("ABA")
+        .pattern("AAA")
+        .define('A', ingotregistry.ELDERBERRY_INGOT.get())
+        .define('B', foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get())
+        .unlockedBy("has_glow_berry_block", has(foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get()))
         .save(output);
       }
   }
