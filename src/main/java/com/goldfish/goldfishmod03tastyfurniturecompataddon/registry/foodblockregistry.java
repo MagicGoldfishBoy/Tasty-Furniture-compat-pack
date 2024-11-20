@@ -6,6 +6,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.foodBed;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodChairBlock;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodpathtypeminislab;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodtable;
+import com.goldfish.goldfishmod02tastyfurniture.block.mediumFoodCabinet;
 import com.goldfish.goldfishmod02tastyfurniture.block.smallFoodCabinet;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.applefurnaceentity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.bedEntity;
@@ -415,6 +416,13 @@ public class foodblockregistry {
  //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
      public static final DeferredHolder<Block, smallFoodCabinet> SMALL_ELDERBERRY_CABINET = FOODBLOCK.register("small_elderberry_cabinet", 
      () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
+     .sound(plant_cabinet_sound)
+     .destroyTime(cabinet_destroy_time)
+     .explosionResistance(cabinet_explosion_resistance)
+     .noOcclusion()
+     ));
+    //medium
+     public static final DeferredHolder<Block, mediumFoodCabinet> MEDIUM_ELDERBERRY_CABINET = FOODBLOCK.register("medium_elderberry_cabinet", () -> new mediumFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)

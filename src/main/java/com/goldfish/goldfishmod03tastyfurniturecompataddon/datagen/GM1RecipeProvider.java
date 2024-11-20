@@ -501,6 +501,16 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('B', Items.IRON_INGOT)
          .unlockedBy("has_elderberry_slab", has(foodblockcompatitemregistry.ELDERBERRY_SLAB_ITEM.get()))
          .save(output);
+       //medium
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.MEDIUM_ELDERBERRY_CABINET_ITEM.get())
+         .pattern("AAA")
+         .pattern("BCB")
+         .pattern("AAA")
+         .define('A', foodblockcompatitemregistry.ELDERBERRY_SLAB_ITEM.get())
+         .define('B', Items.IRON_INGOT)
+         .define('C', foodblockcompatitemregistry.SMALL_ELDERBERRY_CABINET_ITEM.get())
+         .unlockedBy("has_elderberry_slab", has(foodblockcompatitemregistry.ELDERBERRY_SLAB_ITEM.get()))
+         .save(output);
       }
   }
 }

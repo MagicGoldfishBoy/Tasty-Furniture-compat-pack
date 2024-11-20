@@ -34,6 +34,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.foodBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodBed;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodChairBlock;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodpathtypeminislab;
+import com.goldfish.goldfishmod02tastyfurniture.block.mediumFoodCabinet;
 import com.goldfish.goldfishmod02tastyfurniture.block.smallFoodCabinet;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.foodblockregistry;
 
@@ -578,6 +579,28 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = open ? modLoc("block/elderberry_cabinet_open") : modLoc("block/elderberry_cabinet");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+         //medium
+          mediumFoodCabinet elderberryMediumCabinet = foodblockregistry.MEDIUM_ELDERBERRY_CABINET.get();
+
+          getVariantBuilder(elderberryMediumCabinet)
+          .forAllStates(state -> {
+              Boolean open = state.getValue(BlockStateProperties.OPEN);
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = open ? modLoc("block/medium_elderberry_cabinet_open") : modLoc("block/medium_elderberry_cabinet");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))

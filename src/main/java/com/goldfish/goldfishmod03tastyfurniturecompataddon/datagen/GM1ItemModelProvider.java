@@ -90,6 +90,7 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("elderberry_bed_item", modLoc("block/elderberry_bed"));
        //cabinet
        withExistingParent("small_elderberry_cabinet_item", modLoc("block/elderberry_cabinet"));
+       withExistingParent("medium_elderberry_cabinet_item", modLoc("block/medium_elderberry_cabinet"));
   }
 }
 
