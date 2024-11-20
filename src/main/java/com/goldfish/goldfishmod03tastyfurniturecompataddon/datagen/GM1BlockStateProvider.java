@@ -129,6 +129,13 @@ public class GM1BlockStateProvider extends BlockStateProvider
           FenceGateBlock elderberry_gate = foodblockregistry.ELDERBERRY_GATE.get();
           ResourceLocation elderberry_gate_texture = modLoc("block/elderberry_block");
           fenceGateBlock(elderberry_gate, elderberry_gate_texture);
+    //==============================================================================================================================================
+    //|                                                          Pressure Plates                                                                   |
+    //==============================================================================================================================================
+     //------------------------------------------------------------elderberry-----------------------------------------------------------------------
+          PressurePlateBlock elderberry_pressure_plate = foodblockregistry.ELDERBERRY_PRESSURE_PLATE.get();
+          ResourceLocation elderberry_pressure_plate_texture = modLoc("block/elderberry_block");
+          pressurePlateBlock(elderberry_pressure_plate, elderberry_pressure_plate_texture);
    };
 
 }

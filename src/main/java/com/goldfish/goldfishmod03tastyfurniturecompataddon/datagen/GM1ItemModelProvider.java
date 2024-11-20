@@ -48,6 +48,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        fenceInventory("elderberry_fence_item", modLoc("block/elderberry_block"));
        //gate
        withExistingParent("elderberry_gate_item", modLoc("block/elderberry_gate"));
+       //pressure plate
+       pressurePlate("elderberry_pressure_plate_item", modLoc("block/elderberry_block"));
   }
 }
 
