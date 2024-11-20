@@ -141,7 +141,7 @@ public class foodblockcompatitemregistry {
     public static final DeferredHolder<Item, BlockItem> ELDERBERRY_TABLE_ITEM =  FOODBLOCKITEM.register("elderberry_table_item",
     () -> new BlockItem(foodblockregistry.ELDERBERRY_TABLE.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
-//                                                                                        Tables
+//                                                                                        Torches
 //==============================================================================================================================================================================================
  //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
     //regular
@@ -153,4 +153,10 @@ public class foodblockcompatitemregistry {
     //soul
       public static final DeferredHolder<Item, StandingAndWallBlockItem> ELDERBERRY_SOUL_TORCH_ITEM =  FOODBLOCKITEM.register("elderberry_soul_torch_item",
       () -> new StandingAndWallBlockItem(foodblockregistry.ELDERBERRY_SOUL_TORCH.get(), foodblockregistry.ELDERBERRY_SOUL_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
+//==============================================================================================================================================================================================
+//                                                                                        Furnaces
+//==============================================================================================================================================================================================
+ //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> ELDERBERRY_FURNACE_ITEM = FOODBLOCKITEM.register("elderberry_furnace_item", 
+    () -> new BlockItem(foodblockregistry.ELDERBERRY_FURNACE.get(), new BlockItem.Properties()));
 }

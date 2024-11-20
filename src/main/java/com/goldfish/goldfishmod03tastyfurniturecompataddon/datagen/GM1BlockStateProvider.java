@@ -135,7 +135,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation elderberry_pressure_plate_texture = modLoc("block/elderberry_block");
           pressurePlateBlock(elderberry_pressure_plate, elderberry_pressure_plate_texture);
     //==============================================================================================================================================
-    //|                                                          Pressure Plates                                                                   |
+    //|                                                               Signs                                                                        |
     //==============================================================================================================================================
      //------------------------------------------------------------elderberry-----------------------------------------------------------------------
            StandingSignBlock elderberry_sign = foodblockregistry.ELDERBERRY_STANDING_SIGN.get();
@@ -392,6 +392,53 @@ public class GM1BlockStateProvider extends BlockStateProvider
                 .rotationY(rotation)
                 .build();
             });
+    //==============================================================================================================================================
+    //|                                                             Furnaces                                                                       |
+    //==============================================================================================================================================
+     //------------------------------------------------------------elderberry-----------------------------------------------------------------------
+          FurnaceBlock elderberry_furnace = foodblockregistry.ELDERBERRY_FURNACE.get();
+          ResourceLocation elderberry_furnace_unlit_texture = modLoc("block/elderberry_furnace");
+          ResourceLocation elderberry_furnace_lit_texture = modLoc("block/elderberry_furnace_lit");
+          ResourceLocation elderberry_furnace_side = modLoc("block/elderberry_block");
+          
+          // Define the model for the unlit state
+          BlockModelBuilder elderberry_furnace_model_unlit = models()
+              .withExistingParent("elderberry_furnace_model_unlit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", elderberry_furnace_side)
+              .texture("top", elderberry_furnace_side)
+              .texture("front", elderberry_furnace_unlit_texture)
+              .texture("particle", elderberry_furnace_side);
+          
+          // Define the model for the lit state
+          BlockModelBuilder elderberry_furnace_model_lit = models()
+              .withExistingParent("elderberry_furnace_model_lit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", elderberry_furnace_side)
+              .texture("top", elderberry_furnace_side)
+              .texture("front", elderberry_furnace_lit_texture)
+              .texture("particle", elderberry_furnace_side);
+          
+          // Configure variants for the elderberry_furnace block
+          getVariantBuilder(elderberry_furnace)
+              .forAllStates(state -> {
+                  Boolean lit = state.getValue(BlockStateProperties.LIT);
+                  Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                  int rotation = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+
+                  ResourceLocation modelLocation = lit ? modLoc("block/elderberry_furnace_model_lit") : modLoc("block/elderberry_furnace_model_unlit");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotation)
+                      .build();
+              });
    };
 
 }
