@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "goldfishmod03tastyfurniturecompataddon:block/elderberry_chair",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "goldfishmod03tastyfurniturecompataddon:block/elderberry_chair",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "goldfishmod03tastyfurniturecompataddon:block/elderberry_chair"
+    },
+    "facing=west": {
+      "model": "goldfishmod03tastyfurniturecompataddon:block/elderberry_chair",
+      "y": 90
+    }
+  }
+}

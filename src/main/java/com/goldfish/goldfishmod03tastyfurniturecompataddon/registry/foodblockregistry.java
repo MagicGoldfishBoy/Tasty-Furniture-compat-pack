@@ -2,9 +2,11 @@ package com.goldfish.goldfishmod03tastyfurniturecompataddon.registry;
 
 import com.goldfish.goldfishmod02tastyfurniture.block.applefurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodBarrel;
+import com.goldfish.goldfishmod02tastyfurniture.block.foodChairBlock;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodpathtypeminislab;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodtable;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.applefurnaceentity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodBarrelEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.TastyFurnitureCompatAddon;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.elderberryFurnace;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.elderberrySign;
@@ -357,5 +359,24 @@ public class foodblockregistry {
      .sound(plant_barrel_sound)
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
+     ));
+
+ //------entity
+     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<foodBarrelEntity>> FOOD_BARREL_ENTITY = FOODBLOCKENTITY.register("food_barrel_entity", 
+     () -> BlockEntityType.Builder.of(foodBarrelEntity::new, foodblockregistry.ELDERBERRY_BARREL.get()).build(null));
+//==============================================================================================================================================================================================
+//                                                                                          Chairs
+//==============================================================================================================================================================================================
+   static float chair_destroy_time = 1.25f;
+   static float chair_explosion_resistance = 0.75f;
+   static SoundType plant_chair_sound = SoundType.MUD_BRICKS;
+   static SoundType meat_chair_sound = SoundType.MUD;
+   static SoundType crystal_chair_sound = SoundType.BASALT;
+ //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
+     public static final DeferredHolder<Block, foodChairBlock> ELDERBERRY_CHAIR = FOODBLOCK.register("elderberry_chair", () -> new foodChairBlock(BlockBehaviour.Properties.of()
+     .sound(plant_chair_sound)
+     .destroyTime(chair_destroy_time)
+     .explosionResistance(chair_explosion_resistance)
+     .noOcclusion()
      ));
 }
