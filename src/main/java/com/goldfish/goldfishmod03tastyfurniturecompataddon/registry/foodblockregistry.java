@@ -1,6 +1,7 @@
 package com.goldfish.goldfishmod03tastyfurniturecompataddon.registry;
 
 import com.goldfish.goldfishmod02tastyfurniture.block.applefurnace;
+import com.goldfish.goldfishmod02tastyfurniture.block.foodBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodpathtypeminislab;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodtable;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.applefurnaceentity;
@@ -336,10 +337,25 @@ public class foodblockregistry {
 //                                                                                          Paths
 //==============================================================================================================================================================================================
  //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
-    public static final DeferredHolder<Block, foodpathtypeminislab> ELDERBERRY_STONE_PATH = FOODBLOCK.register("elderberry_stone_path", () -> new foodpathtypeminislab(BlockBehaviour.Properties.of()
+    public static final DeferredHolder<Block, foodpathtypeminislab> ELDERBERRY_STONE_PATH = FOODBLOCK.register("elderberry_stone_path", 
+    () -> new foodpathtypeminislab(BlockBehaviour.Properties.of()
     .destroyTime(1.5f)
     .explosionResistance(1.5f)
     .sound(SoundType.MUD_BRICKS)
     .noOcclusion()
     ));
+//==============================================================================================================================================================================================
+//                                                                                        Barrels
+//==============================================================================================================================================================================================
+   static float barrel_destroy_time = 1.25f;
+   static float barrel_explosion_resistance = 0.75f;
+   static SoundType plant_barrel_sound = SoundType.MUD_BRICKS;
+   static SoundType meat_barrel_sound = SoundType.MUD;
+   static SoundType crystal_barrel_sound = SoundType.BASALT;
+ //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
+     public static final DeferredHolder<Block, foodBarrel> ELDERBERRY_BARREL = FOODBLOCK.register("elderberry_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
+     .sound(plant_barrel_sound)
+     .destroyTime(barrel_destroy_time)
+     .explosionResistance(barrel_explosion_resistance)
+     ));
 }

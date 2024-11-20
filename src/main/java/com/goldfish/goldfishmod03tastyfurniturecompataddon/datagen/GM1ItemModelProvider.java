@@ -82,6 +82,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("elderberry_furnace_item", modLoc("block/elderberry_furnace_model_unlit"));
        //paths
        withExistingParent("elderberry_stone_path_item", modLoc("block/elderberry_stone_path"));
+       //barrel
+       withExistingParent("elderberry_barrel_item", modLoc("block/elderberry_barrel_model_closed"));
   }
 }
 

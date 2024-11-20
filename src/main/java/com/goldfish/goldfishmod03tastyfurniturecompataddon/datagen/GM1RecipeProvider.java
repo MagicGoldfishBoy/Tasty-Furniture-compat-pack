@@ -95,6 +95,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           buildTorchRecipes(output);
           buildFurnaceRecipes(output);
           buildPathRecipes(output);
+          buildBarrelRecipes(output);
         }
 
       protected void buildMushRecipes(RecipeOutput output) {
@@ -455,6 +456,16 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .requires(Items.STONE)
         .unlockedBy("has_elderberry_block", has(foodblockcompatitemregistry.ELDERBERRY_BLOCK_ITEM.get()))
         .save(output);        
+      }
+      protected void buildBarrelRecipes(RecipeOutput output) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ELDERBERRY_BARREL_ITEM.get())
+        .pattern("ABA")
+        .pattern("A A")
+        .pattern("ABA")
+        .define('A', foodblockcompatitemregistry.ELDERBERRY_BLOCK_ITEM.get())
+        .define('B', foodblockcompatitemregistry.ELDERBERRY_SLAB_ITEM.get())
+        .unlockedBy("has_elderberry_block", has(foodblockcompatitemregistry.ELDERBERRY_BLOCK_ITEM.get()))
+        .save(output);
       }
   }
 }

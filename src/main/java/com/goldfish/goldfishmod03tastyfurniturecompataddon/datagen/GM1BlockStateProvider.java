@@ -30,6 +30,7 @@ import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.client.model.generators.BlockModelBuilder;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
+import com.goldfish.goldfishmod02tastyfurniture.block.foodBarrel;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodpathtypeminislab;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.foodblockregistry;
 
@@ -455,6 +456,57 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .modelFile(models().getExistingFile(modelLocation))
                   .build();
           });
+    //==============================================================================================================================================
+    //|                                                              Barrels                                                                       |
+    //==============================================================================================================================================
+     //------------------------------------------------------------elderberry-----------------------------------------------------------------------
+          foodBarrel elderberry_barrel = foodblockregistry.ELDERBERRY_BARREL.get();
+          ResourceLocation elderberry_barrel_closed_texture = modLoc("block/elderberry_barrel_top_closed");
+          ResourceLocation elderberry_barrel_open_texture = modLoc("block/elderberry_barrel_top_open");
+          ResourceLocation elderberry_barrel_side = modLoc("block/elderberry_barrel_side");
+          ResourceLocation elderberry_barrel_bottom = modLoc("block/elderberry_barrel_bottom");
+          
+          BlockModelBuilder elderberry_barrel_model_closed = models()
+              .withExistingParent("elderberry_barrel_model_closed", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", elderberry_barrel_side)
+              .texture("bottom", elderberry_barrel_bottom)
+              .texture("top", elderberry_barrel_closed_texture)
+              .texture("particle", elderberry_barrel_side);
+          
+          BlockModelBuilder elderberry_barrel_model_open = models()
+              .withExistingParent("elderberry_barrel_model_open", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", elderberry_barrel_side)
+              .texture("bottom", elderberry_barrel_bottom)
+              .texture("top", elderberry_barrel_open_texture)
+              .texture("particle", elderberry_barrel_side);
+          
+          getVariantBuilder(elderberry_barrel)
+              .forAllStates(state -> {
+                  Boolean open = state.getValue(BlockStateProperties.OPEN);
+                  Direction facing = state.getValue(BlockStateProperties.FACING);
+                  int rotationY = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+                  int rotationX = switch (facing) {
+                      case UP -> 0;
+                      case DOWN -> 180;
+                      default -> 90;
+                  };
+
+                  ResourceLocation modelLocation = open ? modLoc("block/elderberry_barrel_model_open") : modLoc("block/elderberry_barrel_model_closed");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotationY)
+                      .rotationX(rotationX)
+                      .build();
+              });
    };
 
 }
