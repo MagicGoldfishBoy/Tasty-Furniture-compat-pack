@@ -81,6 +81,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           buildButtonRecipes(output);
           buildFenceRecipes(output);
           buildPressurePlateRecipes(output);
+          buildSignRecipes(output);
         }
 
       protected void buildMushRecipes(RecipeOutput output) {
@@ -305,7 +306,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .unlockedBy("has_elderberry_block",  has(foodblockitemregistry.ELDERBERRY_BLOCK_ITEM.get()))
         .save(output);
       }
-      
-        
+      protected void buildSignRecipes(RecipeOutput output) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockitemregistry.ELDERBERRY_SIGN_ITEM.get(), 3)
+        .pattern("AAA")
+        .pattern("AAA")
+        .pattern(" B ")
+        .define('A', ingotregistry.ELDERBERRY_INGOT.get())
+        .define('B', Items.STICK)
+        .unlockedBy("has_elderberry_ingot",  has(ingotregistry.ELDERBERRY_INGOT.get()))
+        .save(output);
+      }
   }
 }

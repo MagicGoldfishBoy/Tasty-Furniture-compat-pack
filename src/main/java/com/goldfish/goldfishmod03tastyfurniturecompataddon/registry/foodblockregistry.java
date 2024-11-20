@@ -1,6 +1,12 @@
 package com.goldfish.goldfishmod03tastyfurniturecompataddon.registry;
 
+import com.goldfish.goldfishmod02tastyfurniture.block.appleSign;
+import com.goldfish.goldfishmod02tastyfurniture.block.appleWallSign;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.appleSignEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.TastyFurnitureCompatAddon;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.elderberrySign;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.elderberryWallSign;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.elderberrySignEntity;
 
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -17,6 +23,8 @@ import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
+import net.minecraft.world.level.material.MapColor;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -143,4 +151,52 @@ public class foodblockregistry {
     .destroyTime(0.5f)
     .explosionResistance(4.0f)
     ));
+//==============================================================================================================================================================================================
+//                                                                                         Signs
+//==============================================================================================================================================================================================
+ //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Block, elderberrySign> ELDERBERRY_SIGN = FOODBLOCK.register("elderberry_sign",
+   () -> new elderberrySign(
+     BlockBehaviour.Properties.of()
+         .mapColor(MapColor.WOOD)
+         .forceSolidOn()
+         .instrument(NoteBlockInstrument.BASS)
+         .noCollission()
+         .strength(1.0F)
+         .ignitedByLava(),
+         foodmaterialtyperegistry.ELDERBERRYWOODMAT
+   ));
+      public static final DeferredHolder<Block, elderberryWallSign> ELDERBERRY_WALL_SIGN = FOODBLOCK.register("elderberry_wall_sign",
+   () -> new elderberryWallSign(
+       BlockBehaviour.Properties.of()
+       .mapColor(MapColor.WOOD)
+       .forceSolidOn()
+       .instrument(NoteBlockInstrument.BASS)
+       .noCollission()
+       .strength(1.0F)
+       .ignitedByLava()
+       .randomTicks(),
+       foodmaterialtyperegistry.ELDERBERRYWOODMAT
+   ));
+   public static final DeferredHolder<Block, elderberrySign> ELDERBERRY_STANDING_SIGN = FOODBLOCK.register("elderberry_standing_sign",
+   () -> new elderberrySign(
+       BlockBehaviour.Properties.of()
+       .mapColor(MapColor.WOOD)
+       .forceSolidOn()
+       .instrument(NoteBlockInstrument.BASS)
+       .noCollission()
+       .strength(1.0F)
+       .ignitedByLava()
+       .randomTicks(),
+       foodmaterialtyperegistry.ELDERBERRYWOODMAT
+   ));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<elderberrySignEntity>> ELDERBERRY_SIGN_ENTITY = FOODBLOCKENTITY.register(
+     "elderberry_sign_entity",
+     () -> BlockEntityType.Builder.of(
+         elderberrySignEntity::new,
+         foodblockregistry.ELDERBERRY_SIGN.get(),
+         foodblockregistry.ELDERBERRY_WALL_SIGN.get(),
+         foodblockregistry.ELDERBERRY_STANDING_SIGN.get()
+     ).build(null)
+   );
 }

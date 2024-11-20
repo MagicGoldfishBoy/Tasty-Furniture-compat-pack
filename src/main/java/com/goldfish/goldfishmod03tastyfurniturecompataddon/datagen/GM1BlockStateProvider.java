@@ -136,6 +136,14 @@ public class GM1BlockStateProvider extends BlockStateProvider
           PressurePlateBlock elderberry_pressure_plate = foodblockregistry.ELDERBERRY_PRESSURE_PLATE.get();
           ResourceLocation elderberry_pressure_plate_texture = modLoc("block/elderberry_block");
           pressurePlateBlock(elderberry_pressure_plate, elderberry_pressure_plate_texture);
+    //==============================================================================================================================================
+    //|                                                          Pressure Plates                                                                   |
+    //==============================================================================================================================================
+     //------------------------------------------------------------elderberry-----------------------------------------------------------------------
+           StandingSignBlock elderberry_sign = foodblockregistry.ELDERBERRY_STANDING_SIGN.get();
+           WallSignBlock elderberry_wall_sign = foodblockregistry.ELDERBERRY_WALL_SIGN.get();
+           ResourceLocation elderberry_sign_texture = modLoc("block/elderberry_block");
+           signBlock(elderberry_sign, elderberry_wall_sign, elderberry_sign_texture);
    };
 
 }

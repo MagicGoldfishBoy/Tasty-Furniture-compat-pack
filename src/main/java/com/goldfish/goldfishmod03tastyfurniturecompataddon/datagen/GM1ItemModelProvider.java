@@ -50,6 +50,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("elderberry_gate_item", modLoc("block/elderberry_gate"));
        //pressure plate
        pressurePlate("elderberry_pressure_plate_item", modLoc("block/elderberry_block"));
+       //sign
+       withExistingParent("elderberry_sign_item", mcLoc("item/generated")).texture("layer0", "item/elderberry_sign");
   }
 }
 

@@ -18,6 +18,7 @@ import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.nuggetregist
 import com.mojang.logging.LogUtils;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -170,7 +171,7 @@ public class TastyFurnitureCompatAddon
 
         @SubscribeEvent(priority = EventPriority.LOWEST)
         public static void onRegisterRenderers(EntityRenderersEvent.RegisterRenderers event) {
-
+        event.registerBlockEntityRenderer(foodblockregistry.ELDERBERRY_SIGN_ENTITY.get(), SignRenderer::new);
         event.registerEntityRenderer(foodEntityRegistry.CHAIR_ENTITY.get(), foodChairEntityRenderer::new);
         }
         
