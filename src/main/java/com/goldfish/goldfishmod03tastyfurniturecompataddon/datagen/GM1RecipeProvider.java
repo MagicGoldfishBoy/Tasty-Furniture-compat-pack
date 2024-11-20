@@ -89,6 +89,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           buildCarpetRecipes(output);
           buildLanternRecipes(output);
           buildChainRecipes(output);
+          buildLadderRecipes(output);
         }
 
       protected void buildMushRecipes(RecipeOutput output) {
@@ -377,6 +378,16 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .pattern(" B ")
         .pattern(" A ")
         .define('A', nuggetregistry.ELDERBERRY_NUGGET.get())
+        .define('B', ingotregistry.ELDERBERRY_INGOT.get())
+        .unlockedBy("has_elderberry_ingot", has(ingotregistry.ELDERBERRY_INGOT.get()))
+        .save(output);
+      }
+      protected void buildLadderRecipes(RecipeOutput output) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ELDERBERRY_LADDER_ITEM.get(), 3)
+        .pattern("A A")
+        .pattern("ABA")
+        .pattern("A A")
+        .define('A', Items.STICK)
         .define('B', ingotregistry.ELDERBERRY_INGOT.get())
         .unlockedBy("has_elderberry_ingot", has(ingotregistry.ELDERBERRY_INGOT.get()))
         .save(output);

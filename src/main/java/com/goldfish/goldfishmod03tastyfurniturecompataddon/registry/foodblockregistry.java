@@ -18,6 +18,7 @@ import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.IronBarsBlock;
+import net.minecraft.world.level.block.LadderBlock;
 import net.minecraft.world.level.block.LanternBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SlabBlock;
@@ -263,4 +264,20 @@ public class foodblockregistry {
     .sound(SoundType.CHAIN)
     .noOcclusion()
     ));
+       
+    //==============================================================================================================================================================================================
+    //                                                                                        Ladders
+    //==============================================================================================================================================================================================
+         private static float ladder_destroy_time = 0.75f;
+         static float ladder_explosion_resistance = 0.75f;
+         static SoundType plant_ladder_sound = SoundType.VINE;
+         static SoundType meat_ladder_sound = SoundType.MUD_BRICKS;
+         static SoundType crystal_ladder_sound = SoundType.BASALT;
+     //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
+        public static final DeferredHolder<Block, LadderBlock> ELDERBERRY_LADDER = FOODBLOCK.register("elderberry_ladder", () -> new LadderBlock(BlockBehaviour.Properties.of()
+        .destroyTime(ladder_destroy_time)
+        .explosionResistance(ladder_explosion_resistance)
+        .sound(plant_ladder_sound)
+        .noOcclusion()
+        )); 
 }

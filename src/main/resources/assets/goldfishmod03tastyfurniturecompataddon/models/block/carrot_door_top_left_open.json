@@ -1,8 +1,0 @@
-{
-    "parent": "minecraft:block/door_top_left_open",
-    "render_type": "cutout_mipped_all",
-    "textures": {
-        "bottom": "goldfishmod02tastyfurniture:block/carrot_door_bottom",
-        "top": "goldfishmod02tastyfurniture:block/carrot_door_top"
-      }
-  }

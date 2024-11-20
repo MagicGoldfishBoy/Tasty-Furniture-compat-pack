@@ -67,6 +67,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //chain
        withExistingParent("elderberry_chain_item", modLoc("block/elderberry_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
        .end();
+       //ladder
+       withExistingParent("elderberry_ladder_item", modLoc("block/elderberry_ladder"));
   }
 }
 
