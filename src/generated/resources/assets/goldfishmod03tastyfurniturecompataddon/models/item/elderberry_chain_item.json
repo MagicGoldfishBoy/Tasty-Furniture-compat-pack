@@ -1,0 +1,15 @@
+{
+  "parent": "goldfishmod03tastyfurniturecompataddon:block/elderberry_chain",
+  "transform": {
+    "scale": [
+      1.5,
+      1.5,
+      1.5
+    ],
+    "translation": [
+      0.25,
+      0.25,
+      0.25
+    ]
+  }
+}

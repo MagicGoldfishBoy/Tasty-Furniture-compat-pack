@@ -209,6 +209,25 @@ public class GM1BlockStateProvider extends BlockStateProvider
              .modelForState().modelFile(hanging_elderberry_soul_lantern_model).addModel()
              .partialState().with(LanternBlock.HANGING, false)
              .modelForState().modelFile(elderberry_soul_lantern_model).addModel();
+    //==============================================================================================================================================
+    //|                                                              Chains                                                                        |
+    //==============================================================================================================================================
+     //------------------------------------------------------------elderberry-----------------------------------------------------------------------
+         ChainBlock elderberry_chain = foodblockregistry.ELDERBERRY_CHAIN.get();
+         ResourceLocation elderberry_chain_texture = modLoc("block/elderberry_chain");
+         BlockModelBuilder elderberry_chain_model = models()
+          .withExistingParent("elderberry_chain", mcLoc("block/chain"))
+          .renderType("cutout_mipped_all")
+          .texture("all", elderberry_chain_texture)
+          .texture("particle", elderberry_chain_texture);
+
+          getVariantBuilder(elderberry_chain)
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Y)
+          .modelForState().modelFile(elderberry_chain_model).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.X)
+          .modelForState().modelFile(elderberry_chain_model).rotationX(90).rotationY(90).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
+          .modelForState().modelFile(elderberry_chain_model).rotationX(90).addModel(); 
    };
 
 }

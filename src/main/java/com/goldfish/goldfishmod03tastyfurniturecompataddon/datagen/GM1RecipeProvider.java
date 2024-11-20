@@ -88,6 +88,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           buildLampRecipes(output);
           buildCarpetRecipes(output);
           buildLanternRecipes(output);
+          buildChainRecipes(output);
         }
 
       protected void buildMushRecipes(RecipeOutput output) {
@@ -369,6 +370,16 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', Items.SOUL_TORCH)
             .unlockedBy("has_elderberry_nugget", has(nuggetregistry.ELDERBERRY_NUGGET.get()))
             .save(output);
+      }
+      protected void buildChainRecipes(RecipeOutput output) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ELDERBERRY_CHAIN_ITEM.get())
+        .pattern(" A ")
+        .pattern(" B ")
+        .pattern(" A ")
+        .define('A', nuggetregistry.ELDERBERRY_NUGGET.get())
+        .define('B', ingotregistry.ELDERBERRY_INGOT.get())
+        .unlockedBy("has_elderberry_ingot", has(ingotregistry.ELDERBERRY_INGOT.get()))
+        .save(output);
       }
   }
 }
