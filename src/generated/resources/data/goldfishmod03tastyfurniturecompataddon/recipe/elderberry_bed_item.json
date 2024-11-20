@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "goldfishmod03tastyfurniturecompataddon:elderberry_ingot"
+    },
+    "B": {
+      "item": "goldfishmod03tastyfurniturecompataddon:elderberry_slab_item"
+    },
+    "C": {
+      "item": "goldfishmod03tastyfurniturecompataddon:elderberry_carpet_item"
+    }
+  },
+  "pattern": [
+    "CCC",
+    "BBB",
+    "A A"
+  ],
+  "result": {
+    "count": 1,
+    "id": "goldfishmod03tastyfurniturecompataddon:elderberry_bed_item"
+  }
+}

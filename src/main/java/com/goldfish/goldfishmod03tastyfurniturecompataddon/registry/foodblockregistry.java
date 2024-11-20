@@ -2,10 +2,12 @@ package com.goldfish.goldfishmod03tastyfurniturecompataddon.registry;
 
 import com.goldfish.goldfishmod02tastyfurniture.block.applefurnace;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodBarrel;
+import com.goldfish.goldfishmod02tastyfurniture.block.foodBed;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodChairBlock;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodpathtypeminislab;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodtable;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.applefurnaceentity;
+import com.goldfish.goldfishmod02tastyfurniture.block.entity.bedEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodBarrelEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.TastyFurnitureCompatAddon;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.elderberryFurnace;
@@ -125,7 +127,7 @@ public class foodblockregistry {
 //                                                                                          Doors
 //==============================================================================================================================================================================================
  //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
-  public static final DeferredHolder<Block, DoorBlock> ELDERBERRY_DOOR = FOODBLOCK.register("elderberry_door", () -> new DoorBlock(BlockSetType.CRIMSON, BlockBehaviour.Properties.of()
+  public static final DeferredHolder<Block, DoorBlock> ELDERBERRY_DOOR = FOODBLOCK.register("elderberry_door", () -> new DoorBlock(foodmaterialtyperegistry.PLANT, BlockBehaviour.Properties.of()
   .strength(0.25F, 0.25F)
   .sound(SoundType.MUD_BRICKS)
   .noOcclusion()));
@@ -379,4 +381,23 @@ public class foodblockregistry {
      .explosionResistance(chair_explosion_resistance)
      .noOcclusion()
      ));
+//==============================================================================================================================================================================================
+//                                                                                          Beds
+//==============================================================================================================================================================================================
+   static float bed_destroy_time = 1.75f;
+   static float bed_explosion_resistance = 1.25f;
+   static SoundType plant_bed_sound = SoundType.MUD_BRICKS;
+   static SoundType meat_bed_sound = SoundType.MUD;
+   static SoundType crystal_bed_sound = SoundType.BASALT;
+ //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
+     public static final DeferredHolder<Block, foodBed> ELDERBERRY_BED = FOODBLOCK.register("elderberry_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     .sound(plant_bed_sound)
+     .destroyTime(bed_destroy_time)
+     .explosionResistance(bed_explosion_resistance)
+     .noOcclusion()
+     ));
+
+   //.........entity
+     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<bedEntity>> FOOD_BED_ENTITY = FOODBLOCKENTITY.register("food_bed_entity",
+     () -> BlockEntityType.Builder.of(bedEntity::new, ELDERBERRY_BED.get()).build(null));
 }
