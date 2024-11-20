@@ -87,6 +87,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           buildTrapDoorRecipes(output);
           buildLampRecipes(output);
           buildCarpetRecipes(output);
+          buildLanternRecipes(output);
         }
 
       protected void buildMushRecipes(RecipeOutput output) {
@@ -348,6 +349,26 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', nuggetregistry.ELDERBERRY_NUGGET.get())
         .unlockedBy("has_elderberry_nugget", has(nuggetregistry.ELDERBERRY_NUGGET.get()))
         .save(output);
+      }
+      protected void buildLanternRecipes(RecipeOutput output) {
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ELDERBERRY_LANTERN_ITEM.get())
+            .pattern("AAA")
+            .pattern("ABA")
+            .pattern("AAA")
+            .define('A', nuggetregistry.ELDERBERRY_NUGGET.get())
+            .define('B', Items.TORCH)
+            .unlockedBy("has_elderberry_nugget", has(nuggetregistry.ELDERBERRY_NUGGET.get()))
+            .save(output);
+          //soul
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ELDERBERRY_SOUL_LANTERN_ITEM.get())
+            .pattern("AAA")
+            .pattern("ABA")
+            .pattern("AAA")
+            .define('A', nuggetregistry.ELDERBERRY_NUGGET.get())
+            .define('B', Items.SOUL_TORCH)
+            .unlockedBy("has_elderberry_nugget", has(nuggetregistry.ELDERBERRY_NUGGET.get()))
+            .save(output);
       }
   }
 }

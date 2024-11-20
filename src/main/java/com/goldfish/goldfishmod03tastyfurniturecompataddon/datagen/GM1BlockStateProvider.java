@@ -167,6 +167,48 @@ public class GM1BlockStateProvider extends BlockStateProvider
           BlockModelBuilder elderberry_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(elderberry_carpet).getPath(), mcLoc("block/carpet"))
           .texture("wool", elderberry_carpet_texture);
           simpleBlock(elderberry_carpet, new ModelFile.UncheckedModelFile(elderberry_carpet_model.getLocation()));
+    //==============================================================================================================================================
+    //|                                                             Lanterns                                                                       |
+    //==============================================================================================================================================
+     //------------------------------------------------------------elderberry-----------------------------------------------------------------------
+         //regular
+          LanternBlock elderberry_lantern = foodblockregistry.ELDERBERRY_LANTERN.get();
+          ResourceLocation elderberry_lantern_texture = modLoc("block/elderberry_lantern");
+  
+          BlockModelBuilder elderberry_lantern_model = models()
+              .withExistingParent("elderberry_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", elderberry_lantern_texture);
+  
+          BlockModelBuilder hanging_elderberry_lantern_model = models()
+              .withExistingParent("elderberry_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", elderberry_lantern_texture);
+  
+          getVariantBuilder(elderberry_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_elderberry_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(elderberry_lantern_model).addModel();
+         //soul
+         LanternBlock elderberry_soul_lantern = foodblockregistry.ELDERBERRY_SOUL_LANTERN.get();
+         ResourceLocation elderberry_soul_lantern_texture = modLoc("block/elderberry_soul_lantern");
+ 
+         BlockModelBuilder elderberry_soul_lantern_model = models()
+             .withExistingParent("elderberry_soul_lantern", mcLoc("block/lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", elderberry_soul_lantern_texture);
+ 
+         BlockModelBuilder hanging_elderberry_soul_lantern_model = models()
+             .withExistingParent("elderberry_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", elderberry_soul_lantern_texture);
+ 
+         getVariantBuilder(elderberry_soul_lantern)
+             .partialState().with(LanternBlock.HANGING, true)
+             .modelForState().modelFile(hanging_elderberry_soul_lantern_model).addModel()
+             .partialState().with(LanternBlock.HANGING, false)
+             .modelForState().modelFile(elderberry_soul_lantern_model).addModel();
    };
 
 }

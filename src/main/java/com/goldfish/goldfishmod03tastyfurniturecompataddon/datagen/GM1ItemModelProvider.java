@@ -59,6 +59,11 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //carpet
        ResourceLocation elderberry_carpet_texture = modLoc("block/elderberry_carpet");
        carpet("elderberry_carpet_item", elderberry_carpet_texture);
+       //lantern
+        //regular
+          withExistingParent("elderberry_lantern_item", modLoc("block/elderberry_lantern"));
+        //soul
+          withExistingParent("elderberry_soul_lantern_item", modLoc("block/elderberry_soul_lantern"));
   }
 }
 
