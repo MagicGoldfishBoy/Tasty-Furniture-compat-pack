@@ -1,6 +1,7 @@
 package com.goldfish.goldfishmod03tastyfurniturecompataddon.registry;
 
 import com.goldfish.goldfishmod02tastyfurniture.block.applefurnace;
+import com.goldfish.goldfishmod02tastyfurniture.block.foodpathtypeminislab;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodtable;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.applefurnaceentity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.TastyFurnitureCompatAddon;
@@ -331,4 +332,14 @@ public class foodblockregistry {
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<elderberryFurnaceEntity>> ELDERBERRY_FURNACE_ENTITY = FOODBLOCKENTITY.register("elderberry_furnace", 
     () -> BlockEntityType.Builder.of(elderberryFurnaceEntity::new, ELDERBERRY_FURNACE.get()).build(null));
+//==============================================================================================================================================================================================
+//                                                                                          Paths
+//==============================================================================================================================================================================================
+ //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, foodpathtypeminislab> ELDERBERRY_STONE_PATH = FOODBLOCK.register("elderberry_stone_path", () -> new foodpathtypeminislab(BlockBehaviour.Properties.of()
+    .destroyTime(1.5f)
+    .explosionResistance(1.5f)
+    .sound(SoundType.MUD_BRICKS)
+    .noOcclusion()
+    ));
 }

@@ -94,6 +94,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           buildTableRecipes(output);
           buildTorchRecipes(output);
           buildFurnaceRecipes(output);
+          buildPathRecipes(output);
         }
 
       protected void buildMushRecipes(RecipeOutput output) {
@@ -447,6 +448,13 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('B', Items.COBBLESTONE)
         .unlockedBy("has_elderberry_ingot", has(ingotregistry.ELDERBERRY_INGOT.get()))
         .save(output);
+      }
+      protected void buildPathRecipes(RecipeOutput output) {
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.ELDERBERRY_STONE_PATH_ITEM.get(), 6)
+        .requires(foodblockcompatitemregistry.ELDERBERRY_BLOCK_ITEM.get())
+        .requires(Items.STONE)
+        .unlockedBy("has_elderberry_block", has(foodblockcompatitemregistry.ELDERBERRY_BLOCK_ITEM.get()))
+        .save(output);        
       }
   }
 }

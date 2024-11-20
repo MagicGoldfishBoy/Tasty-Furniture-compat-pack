@@ -30,6 +30,7 @@ import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.client.model.generators.BlockModelBuilder;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
+import com.goldfish.goldfishmod02tastyfurniture.block.foodpathtypeminislab;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.foodblockregistry;
 
 import net.minecraft.core.Direction;
@@ -439,6 +440,21 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationY(rotation)
                       .build();
               });
+    //==============================================================================================================================================
+    //|                                                               Paths                                                                        |
+    //==============================================================================================================================================
+     //------------------------------------------------------------elderberry-----------------------------------------------------------------------
+          foodpathtypeminislab elderberry_stone_path = foodblockregistry.ELDERBERRY_STONE_PATH.get();
+
+          getVariantBuilder(elderberry_stone_path)
+          .forAllStates(state -> {
+
+              ResourceLocation modelLocation = modLoc("block/elderberry_stone_path");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .build();
+          });
    };
 
 }
