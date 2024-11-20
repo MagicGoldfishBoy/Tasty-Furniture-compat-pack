@@ -158,6 +158,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
      //------------------------------------------------------------elderberry-----------------------------------------------------------------------
           Block elderberry_lamp = foodblockregistry.ELDERBERRY_LAMP.get();
           simpleBlock(elderberry_lamp);
+    //==============================================================================================================================================
+    //|                                                              Carpets                                                                       |
+    //==============================================================================================================================================
+     //------------------------------------------------------------elderberry-----------------------------------------------------------------------
+          CarpetBlock elderberry_carpet = foodblockregistry.ELDERBERRY_CARPET.get();
+          ResourceLocation elderberry_carpet_texture = modLoc("block/elderberry_carpet");
+          BlockModelBuilder elderberry_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(elderberry_carpet).getPath(), mcLoc("block/carpet"))
+          .texture("wool", elderberry_carpet_texture);
+          simpleBlock(elderberry_carpet, new ModelFile.UncheckedModelFile(elderberry_carpet_model.getLocation()));
    };
 
 }

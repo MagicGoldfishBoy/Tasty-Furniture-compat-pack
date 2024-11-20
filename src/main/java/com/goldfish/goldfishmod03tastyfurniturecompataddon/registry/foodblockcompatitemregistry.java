@@ -104,4 +104,10 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> ELDERBERRY_LAMP_ITEM = FOODBLOCKITEM.register("elderberry_lamp_item",
     () -> new BlockItem(foodblockregistry.ELDERBERRY_LAMP.get(), new BlockItem.Properties()));
+//==============================================================================================================================================================================================
+//                                                                                        Carpets
+//==============================================================================================================================================================================================
+ //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> ELDERBERRY_CARPET_ITEM = FOODBLOCKITEM.register("elderberry_carpet_item",
+    () -> new BlockItem(foodblockregistry.ELDERBERRY_CARPET.get(), new BlockItem.Properties())); 
 }

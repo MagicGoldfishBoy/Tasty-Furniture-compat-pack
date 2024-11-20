@@ -56,6 +56,9 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("elderberry_trapdoor_item", modLoc("block/elderberry_trapdoor_trapdoor_bottom"));
        //lamp
        withExistingParent("elderberry_lamp_item", modLoc("block/elderberry_lamp"));
+       //carpet
+       ResourceLocation elderberry_carpet_texture = modLoc("block/elderberry_carpet");
+       carpet("elderberry_carpet_item", elderberry_carpet_texture);
   }
 }
 
