@@ -62,5 +62,8 @@
     "block.goldfishmod03tastyfurniturecompataddon.cherry_soul_lantern": "Cherry Soul Lantern",
     "block.goldfishmod03tastyfurniturecompataddon.cherry_chain": "Cherry Chain",
     "block.goldfishmod03tastyfurniturecompataddon.cherry_ladder": "Cherry Ladder",
-    "block.goldfishmod03tastyfurniturecompataddon.cherry_table": "Cherry Table"
+    "block.goldfishmod03tastyfurniturecompataddon.cherry_table": "Cherry Table",
+    "block.goldfishmod03tastyfurniturecompataddon.cherry_torch": "Cherry Torch",
+    "block.goldfishmod03tastyfurniturecompataddon.cherry_redstone_torch": "Cherry Redstone Torch",
+    "block.goldfishmod03tastyfurniturecompataddon.cherry_soul_torch": "Cherry Soul Torch"
 }

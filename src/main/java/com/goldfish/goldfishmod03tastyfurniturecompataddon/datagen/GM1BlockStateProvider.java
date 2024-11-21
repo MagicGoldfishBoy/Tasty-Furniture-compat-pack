@@ -569,6 +569,122 @@ public class GM1BlockStateProvider extends BlockStateProvider
                 .rotationY(rotation)
                 .build();
             });
+     //------------------------------------------------------------cherry-----------------------------------------------------------------------
+       //regular
+        TorchBlock cherry_torch = foodblockregistry.CHERRY_TORCH.get();
+        ResourceLocation cherry_torch_texture = modLoc("block/cherry_torch");
+        BlockModelBuilder cherry_torch_model = models()
+        .withExistingParent("cherry_torch", mcLoc("block/torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", cherry_torch_texture)
+        .texture("particle", cherry_torch_texture);
+
+        simpleBlock(cherry_torch, cherry_torch_model);
+
+        TorchBlock cherry_wall_torch = foodblockregistry.CHERRY_WALL_TORCH.get();
+        BlockModelBuilder cherry_wall_torch_model = models()
+        .withExistingParent("cherry_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", cherry_torch_texture)
+        .texture("particle", cherry_torch_texture);
+        getVariantBuilder(cherry_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("cherry_wall_torch", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", cherry_torch_texture)
+                    .texture("particle", cherry_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //redstone
+        RedstoneTorchBlock cherry_redstone_torch = foodblockregistry.CHERRY_REDSTONE_TORCH.get();
+        ResourceLocation cherry_redstone_torch_texture = modLoc("block/cherry_redstone_torch");
+        BlockModelBuilder cherry_redstone_torch_model = models()
+        .withExistingParent("cherry_redstone_torch", mcLoc("block/redstone_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", cherry_redstone_torch_texture)
+        .texture("particle", cherry_redstone_torch_texture);
+        
+
+        simpleBlock(cherry_redstone_torch, cherry_redstone_torch_model);
+
+        ResourceLocation cherry_redstone_wall_torch_texture = modLoc("block/cherry_redstone_torch");
+
+        RedstoneTorchBlock cherry_redstone_wall_torch = foodblockregistry.CHERRY_REDSTONE_WALL_TORCH.get();
+        BlockModelBuilder cherry_redstone_wall_torch_model = models()
+        .withExistingParent("cherry_redstone_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", cherry_redstone_wall_torch_texture)
+        .texture("particle", cherry_redstone_wall_torch_texture);
+        getVariantBuilder(cherry_redstone_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("cherry_redstone_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", cherry_redstone_wall_torch_texture)
+                    .texture("particle", cherry_redstone_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //soul
+        TorchBlock cherry_soul_torch = foodblockregistry.CHERRY_SOUL_TORCH.get();
+        ResourceLocation cherry_soul_torch_texture = modLoc("block/cherry_soul_torch");
+        BlockModelBuilder cherry_soul_torch_model = models()
+        .withExistingParent("cherry_soul_torch", mcLoc("block/soul_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", cherry_soul_torch_texture)
+        .texture("particle", cherry_soul_torch_texture);
+        
+
+        simpleBlock(cherry_soul_torch, cherry_soul_torch_model);
+
+        ResourceLocation cherry_soul_wall_torch_texture = modLoc("block/cherry_soul_torch");
+        TorchBlock cherry_soul_wall_torch = foodblockregistry.CHERRY_SOUL_WALL_TORCH.get();
+        BlockModelBuilder cherry_soul_wall_torch_model = models()
+        .withExistingParent("cherry_soul_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", cherry_soul_wall_torch_texture)
+        .texture("particle", cherry_soul_wall_torch_texture);
+        getVariantBuilder(cherry_soul_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("cherry_soul_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", cherry_soul_wall_torch_texture)
+                    .texture("particle", cherry_soul_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
     //==============================================================================================================================================
     //|                                                             Furnaces                                                                       |
     //==============================================================================================================================================

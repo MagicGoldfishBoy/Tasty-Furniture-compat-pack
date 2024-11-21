@@ -147,6 +147,13 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("cherry_ladder_item", modLoc("block/cherry_ladder"));
        //table
        withExistingParent("cherry_table_item", modLoc("block/cherry_table"));
+       //torches
+        //regular
+        withExistingParent("cherry_torch_item", modLoc("block/cherry_torch"));
+        //redstone
+          withExistingParent("cherry_redstone_torch_item", modLoc("block/cherry_redstone_torch"));
+        //soul
+          withExistingParent("cherry_soul_torch_item", modLoc("block/cherry_soul_torch"));
   }
 }
 
