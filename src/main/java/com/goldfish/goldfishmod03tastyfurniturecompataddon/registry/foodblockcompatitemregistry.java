@@ -94,30 +94,45 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> ELDERBERRY_DOOR_ITEM = FOODBLOCKITEM.register("elderberry_door_item",
    () -> new BlockItem(foodblockregistry.ELDERBERRY_DOOR.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, BlockItem> CHERRY_DOOR_ITEM = FOODBLOCKITEM.register("cherry_door_item",
+   () -> new BlockItem(foodblockregistry.CHERRY_DOOR.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                         Buttons
 //==============================================================================================================================================================================================
  //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> ELDERBERRY_BUTTON_ITEM = FOODBLOCKITEM.register("elderberry_button_item",
    () -> new BlockItem(foodblockregistry.ELDERBERRY_BUTTON.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, BlockItem> CHERRY_BUTTON_ITEM = FOODBLOCKITEM.register("cherry_button_item",
+   () -> new BlockItem(foodblockregistry.CHERRY_BUTTON.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                         Fences
 //==============================================================================================================================================================================================
  //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> ELDERBERRY_FENCE_ITEM = FOODBLOCKITEM.register("elderberry_fence_item",
    () -> new BlockItem(foodblockregistry.ELDERBERRY_FENCE.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, BlockItem> CHERRY_FENCE_ITEM = FOODBLOCKITEM.register("cherry_fence_item",
+   () -> new BlockItem(foodblockregistry.CHERRY_FENCE.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                         Gates
 //==============================================================================================================================================================================================
  //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> ELDERBERRY_GATE_ITEM = FOODBLOCKITEM.register("elderberry_gate_item",
    () -> new BlockItem(foodblockregistry.ELDERBERRY_GATE.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, BlockItem> CHERRY_GATE_ITEM = FOODBLOCKITEM.register("cherry_gate_item",
+   () -> new BlockItem(foodblockregistry.CHERRY_GATE.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                     Pressure Plates
 //==============================================================================================================================================================================================
  //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> ELDERBERRY_PRESSURE_PLATE_ITEM = FOODBLOCKITEM.register("elderberry_pressure_plate_item",
    () -> new BlockItem(foodblockregistry.ELDERBERRY_PRESSURE_PLATE.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, BlockItem> CHERRY_PRESSURE_PLATE_ITEM = FOODBLOCKITEM.register("cherry_pressure_plate_item",
+   () -> new BlockItem(foodblockregistry.CHERRY_PRESSURE_PLATE.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                          Signs
 //==============================================================================================================================================================================================

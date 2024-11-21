@@ -148,6 +148,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation elderberry_door_top_texture = modLoc("block/elderberry_door_top");
           ResourceLocation elderberry_door_bottom_texture = modLoc("block/elderberry_door_bottom");
           doorBlockWithRenderType(elderberry_door, "elderberry_door", elderberry_door_bottom_texture, elderberry_door_top_texture, "translucent"); 
+     //------------------------------------------------------------cherry-----------------------------------------------------------------------
+          DoorBlock cherry_door = foodblockregistry.CHERRY_DOOR.get(); 
+          ResourceLocation cherry_door_top_texture = modLoc("block/cherry_door_top");
+          ResourceLocation cherry_door_bottom_texture = modLoc("block/cherry_door_bottom");
+          doorBlockWithRenderType(cherry_door, "cherry_door", cherry_door_top_texture, cherry_door_bottom_texture, "cutout_mipped_all"); 
     //==============================================================================================================================================
     //|                                                              Button                                                                        |
     //==============================================================================================================================================
@@ -155,6 +160,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ButtonBlock elderberry_button = foodblockregistry.ELDERBERRY_BUTTON.get();
           ResourceLocation elderberry_button_texture = modLoc("block/elderberry_block");
           buttonBlock(elderberry_button, elderberry_button_texture);
+     //------------------------------------------------------------cherry-----------------------------------------------------------------------
+          ButtonBlock cherry_button = foodblockregistry.CHERRY_BUTTON.get();
+          ResourceLocation cherry_button_texture = modLoc("block/cherry_block");
+          buttonBlock(cherry_button, cherry_button_texture);
     //==============================================================================================================================================
     //|                                                              Fences                                                                        |
     //==============================================================================================================================================
@@ -167,6 +176,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
           FenceGateBlock elderberry_gate = foodblockregistry.ELDERBERRY_GATE.get();
           ResourceLocation elderberry_gate_texture = modLoc("block/elderberry_block");
           fenceGateBlock(elderberry_gate, elderberry_gate_texture);
+     //------------------------------------------------------------cherry-----------------------------------------------------------------------
+       //fence
+          FenceBlock cherry_fence = foodblockregistry.CHERRY_FENCE.get();
+          ResourceLocation cherry_fence_texture = modLoc("block/cherry_block");
+          fenceBlock(cherry_fence, cherry_fence_texture);
+       //gate
+          FenceGateBlock cherry_gate = foodblockregistry.CHERRY_GATE.get();
+          ResourceLocation cherry_gate_texture = modLoc("block/cherry_block");
+          fenceGateBlock(cherry_gate, cherry_gate_texture);
     //==============================================================================================================================================
     //|                                                          Pressure Plates                                                                   |
     //==============================================================================================================================================
@@ -174,6 +192,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           PressurePlateBlock elderberry_pressure_plate = foodblockregistry.ELDERBERRY_PRESSURE_PLATE.get();
           ResourceLocation elderberry_pressure_plate_texture = modLoc("block/elderberry_block");
           pressurePlateBlock(elderberry_pressure_plate, elderberry_pressure_plate_texture);
+     //------------------------------------------------------------cherry-----------------------------------------------------------------------
+          PressurePlateBlock cherry_pressure_plate = foodblockregistry.CHERRY_PRESSURE_PLATE.get();
+          ResourceLocation cherry_pressure_plate_texture = modLoc("block/cherry_block");
+          pressurePlateBlock(cherry_pressure_plate, cherry_pressure_plate_texture);
     //==============================================================================================================================================
     //|                                                               Signs                                                                        |
     //==============================================================================================================================================

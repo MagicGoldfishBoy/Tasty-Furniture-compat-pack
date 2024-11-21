@@ -48,5 +48,10 @@
     "block.goldfishmod03tastyfurniturecompataddon.cherry_bricks_slab": "Cherry Bricks Slab",
     "block.goldfishmod03tastyfurniturecompataddon.cherry_stairs": "Cherry Stairs",
     "block.goldfishmod03tastyfurniturecompataddon.cherry_bricks_stairs": "Cherry Bricks Stairs",
-    "block.goldfishmod03tastyfurniturecompataddon.cherry_bars": "Cherry Bars"
+    "block.goldfishmod03tastyfurniturecompataddon.cherry_bars": "Cherry Bars",
+    "block.goldfishmod03tastyfurniturecompataddon.cherry_door": "Cherry Door",
+    "block.goldfishmod03tastyfurniturecompataddon.cherry_button": "Cherry Button",
+    "block.goldfishmod03tastyfurniturecompataddon.cherry_fence": "Cherry Fence",
+    "block.goldfishmod03tastyfurniturecompataddon.cherry_gate": "Cherry Gate",
+    "block.goldfishmod03tastyfurniturecompataddon.cherry_pressure_plate": "Cherry Pressure Plate"
 }

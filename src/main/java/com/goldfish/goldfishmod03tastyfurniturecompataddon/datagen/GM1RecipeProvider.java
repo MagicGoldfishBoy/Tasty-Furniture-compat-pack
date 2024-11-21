@@ -424,8 +424,8 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .unlockedBy("has_cherry_nugget", has(nuggetregistry.CHERRY_NUGGET.get()))
          .save(output);
       }
-      protected void buildDoorRecipes(RecipeOutput output) {
-       //elderberry
+ protected void buildDoorRecipes(RecipeOutput output) {
+  //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ELDERBERRY_DOOR_ITEM.get(), 3)
          .pattern("AA ")
          .pattern("AA ")
@@ -433,16 +433,29 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', ingotregistry.ELDERBERRY_INGOT.get())
          .unlockedBy("has_elderberry_nugget", has(ingotregistry.ELDERBERRY_INGOT.get()))
          .save(output);
+  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_DOOR_ITEM.get(), 3)
+         .pattern("AA ")
+         .pattern("AA ")
+         .pattern("AA ")
+         .define('A', ingotregistry.CHERRY_INGOT.get())
+         .unlockedBy("has_cherry_nugget", has(ingotregistry.CHERRY_INGOT.get()))
+         .save(output);
       }
-      protected void buildButtonRecipes(RecipeOutput output) {
-       //elderberry
+ protected void buildButtonRecipes(RecipeOutput output) {
+  //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.ELDERBERRY_BUTTON_ITEM.get(), 1)
        .requires(nuggetregistry.ELDERBERRY_NUGGET.get())
        .unlockedBy("has_elderberry_nugget", has(nuggetregistry.ELDERBERRY_NUGGET.get()))
        .save(output);
+  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
+       ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_BUTTON_ITEM.get(), 1)
+       .requires(nuggetregistry.CHERRY_NUGGET.get())
+       .unlockedBy("has_cherry_nugget", has(nuggetregistry.CHERRY_NUGGET.get()))
+       .save(output);
       }
-      protected void buildFenceRecipes(RecipeOutput output) {
-       //elderberry
+ protected void buildFenceRecipes(RecipeOutput output) {
+  //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
         //fence
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ELDERBERRY_FENCE_ITEM.get(), 3)
           .pattern("ABA")
@@ -461,14 +474,42 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .define('B', Items.STICK)
           .unlockedBy("has_elderberry_ingot", has(ingotregistry.ELDERBERRY_INGOT.get()))
           .save(output);        
+  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
+        //fence
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_FENCE_ITEM.get(), 3)
+          .pattern("ABA")
+          .pattern("ABA")
+          .pattern("   ")
+          .define('A', ingotregistry.CHERRY_INGOT.get())
+          .define('B', Items.STICK)
+          .unlockedBy("has_cherry_ingot", has(ingotregistry.CHERRY_INGOT.get()))
+          .save(output);        
+        //gate
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_GATE_ITEM.get(), 1)
+          .pattern("BAB")
+          .pattern("BAB")
+          .pattern("   ")
+          .define('A', ingotregistry.CHERRY_INGOT.get())
+          .define('B', Items.STICK)
+          .unlockedBy("has_cherry_ingot", has(ingotregistry.CHERRY_INGOT.get()))
+          .save(output);        
       }
       protected void buildPressurePlateRecipes(RecipeOutput output) {
+  //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ELDERBERRY_PRESSURE_PLATE_ITEM.get())
         .pattern("   ")
         .pattern("AA ")
         .pattern("   ")
         .define('A', foodblockcompatitemregistry.ELDERBERRY_BLOCK_ITEM.get())
         .unlockedBy("has_elderberry_block",  has(foodblockcompatitemregistry.ELDERBERRY_BLOCK_ITEM.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_PRESSURE_PLATE_ITEM.get())
+        .pattern("   ")
+        .pattern("AA ")
+        .pattern("   ")
+        .define('A', foodblockcompatitemregistry.CHERRY_BLOCK_ITEM.get())
+        .unlockedBy("has_cherry_block",  has(foodblockcompatitemregistry.CHERRY_BLOCK_ITEM.get()))
         .save(output);
       }
       protected void buildSignRecipes(RecipeOutput output) {

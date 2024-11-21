@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_side",
+  "textures": {
+    "texture": "goldfishmod03tastyfurniturecompataddon:block/cherry_block"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "goldfishmod03tastyfurniturecompataddon:block/cherry_block"
+  }
+}
