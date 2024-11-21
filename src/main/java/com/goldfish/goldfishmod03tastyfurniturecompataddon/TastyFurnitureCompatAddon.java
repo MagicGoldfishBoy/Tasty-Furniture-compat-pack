@@ -172,6 +172,7 @@ public class TastyFurnitureCompatAddon
         @SubscribeEvent(priority = EventPriority.LOWEST)
         public static void onRegisterRenderers(EntityRenderersEvent.RegisterRenderers event) {
         event.registerBlockEntityRenderer(foodblockregistry.ELDERBERRY_SIGN_ENTITY.get(), SignRenderer::new);
+        event.registerBlockEntityRenderer(foodblockregistry.CHERRY_SIGN_ENTITY.get(), SignRenderer::new);
         event.registerEntityRenderer(foodEntityRegistry.CHAIR_ENTITY.get(), foodChairEntityRenderer::new);
         }
         

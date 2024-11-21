@@ -204,6 +204,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
            WallSignBlock elderberry_wall_sign = foodblockregistry.ELDERBERRY_WALL_SIGN.get();
            ResourceLocation elderberry_sign_texture = modLoc("block/elderberry_block");
            signBlock(elderberry_sign, elderberry_wall_sign, elderberry_sign_texture);
+     //------------------------------------------------------------cherry-----------------------------------------------------------------------
+           StandingSignBlock cherry_sign = foodblockregistry.CHERRY_STANDING_SIGN.get();
+           WallSignBlock cherry_wall_sign = foodblockregistry.CHERRY_WALL_SIGN.get();
+           ResourceLocation cherry_sign_texture = modLoc("block/cherry_block");
+           signBlock(cherry_sign, cherry_wall_sign, cherry_sign_texture);
     //==============================================================================================================================================
     //|                                                            Trap Doors                                                                      |
     //==============================================================================================================================================
@@ -211,6 +216,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           TrapDoorBlock elderberry_trapdoor = foodblockregistry.ELDERBERRY_TRAPDOOR.get(); 
           ResourceLocation elderberry_trapdoor_texture = modLoc("block/elderberry_block");
           trapdoorBlockWithRenderType(elderberry_trapdoor, "elderberry_trapdoor", elderberry_trapdoor_texture, false, elderberry_trapdoor_texture);
+     //------------------------------------------------------------cherry-----------------------------------------------------------------------
+          TrapDoorBlock cherry_trapdoor = foodblockregistry.CHERRY_TRAPDOOR.get(); 
+          ResourceLocation cherry_trapdoor_texture = modLoc("block/cherry_block");
+          trapdoorBlockWithRenderType(cherry_trapdoor, "cherry_trapdoor", cherry_trapdoor_texture, false, cherry_trapdoor_texture);
     //==============================================================================================================================================
     //|                                                               Lamps                                                                        |
     //==============================================================================================================================================

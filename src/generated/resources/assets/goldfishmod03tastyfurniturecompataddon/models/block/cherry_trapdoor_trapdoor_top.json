@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_trapdoor_top",
+  "render_type": "goldfishmod03tastyfurniturecompataddon:block/cherry_block",
+  "textures": {
+    "texture": "goldfishmod03tastyfurniturecompataddon:block/cherry_block"
+  }
+}
