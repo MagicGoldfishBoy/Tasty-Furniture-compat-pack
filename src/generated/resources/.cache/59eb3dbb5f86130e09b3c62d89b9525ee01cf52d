@@ -1,6 +1,7 @@
-// 1.21	2024-11-21T00:23:48.984124358	Loot Tables
+// 1.21	2024-11-21T10:22:25.684821575	Loot Tables
 2bd4c66a9999287209515758d57ab820eba36063 data/goldfishmod03tastyfurniturecompataddon/loot_table/blocks/cherry_barrel.json
 10dedab2ffe10d2e25920fe0067bf0fdb3200e53 data/goldfishmod03tastyfurniturecompataddon/loot_table/blocks/cherry_bars.json
+bd631da07d280da9294c1f9d691651c8db98b23d data/goldfishmod03tastyfurniturecompataddon/loot_table/blocks/cherry_bed.json
 54422795706c02bc7fa7553a3065abe2e184f241 data/goldfishmod03tastyfurniturecompataddon/loot_table/blocks/cherry_block.json
 c902b54aedfa5f7ff77d244b3f99cef8103cd71e data/goldfishmod03tastyfurniturecompataddon/loot_table/blocks/cherry_bricks_block.json
 16f3e58f340e03c56162bb034c32b19242f3f004 data/goldfishmod03tastyfurniturecompataddon/loot_table/blocks/cherry_bricks_slab.json
