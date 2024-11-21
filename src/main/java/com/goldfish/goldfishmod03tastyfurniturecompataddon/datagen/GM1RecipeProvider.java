@@ -752,7 +752,8 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .unlockedBy("has_cherry_nugget", has(nuggetregistry.CHERRY_NUGGET.get()))
             .save(output);
       } 
-      protected void buildFurnaceRecipes(RecipeOutput output) {
+ protected void buildFurnaceRecipes(RecipeOutput output) {
+  //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ELDERBERRY_FURNACE_ITEM.get())
         .pattern("ABA")
         .pattern("B B")
@@ -760,6 +761,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', ingotregistry.ELDERBERRY_INGOT.get())
         .define('B', Items.COBBLESTONE)
         .unlockedBy("has_elderberry_ingot", has(ingotregistry.ELDERBERRY_INGOT.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_FURNACE_ITEM.get())
+        .pattern("ABA")
+        .pattern("B B")
+        .pattern("ABA")
+        .define('A', ingotregistry.CHERRY_INGOT.get())
+        .define('B', Items.COBBLESTONE)
+        .unlockedBy("has_cherry_ingot", has(ingotregistry.CHERRY_INGOT.get()))
         .save(output);
       }
       protected void buildPathRecipes(RecipeOutput output) {

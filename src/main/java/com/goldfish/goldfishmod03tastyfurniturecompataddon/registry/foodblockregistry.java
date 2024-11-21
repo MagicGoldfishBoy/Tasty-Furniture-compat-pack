@@ -13,11 +13,13 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.bedEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodBarrelEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.smallFoodContainerEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.TastyFurnitureCompatAddon;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.cherryFurnace;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.cherrySign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.cherryWallSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.elderberryFurnace;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.elderberrySign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.elderberryWallSign;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.cherryFurnaceEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.cherrySignEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.elderberryFurnaceEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.elderberrySignEntity;
@@ -559,6 +561,12 @@ public class foodblockregistry {
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<elderberryFurnaceEntity>> ELDERBERRY_FURNACE_ENTITY = FOODBLOCKENTITY.register("elderberry_furnace", 
     () -> BlockEntityType.Builder.of(elderberryFurnaceEntity::new, ELDERBERRY_FURNACE.get()).build(null));
+ //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, cherryFurnace> CHERRY_FURNACE = FOODBLOCK.register("cherry_furnace", 
+    () -> new cherryFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<cherryFurnaceEntity>> CHERRY_FURNACE_ENTITY = FOODBLOCKENTITY.register("cherry_furnace", 
+    () -> BlockEntityType.Builder.of(cherryFurnaceEntity::new, CHERRY_FURNACE.get()).build(null));
 //==============================================================================================================================================================================================
 //                                                                                          Paths
 //==============================================================================================================================================================================================
