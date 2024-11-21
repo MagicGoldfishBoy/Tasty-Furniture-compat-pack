@@ -1,0 +1,11 @@
+{
+    "replace": false,
+    "values": [
+        {"id":"pamhc2crops:elderberryitem",
+        "required": false},
+        {"id":"productivetrees:elderberry",
+        "required": false},
+        {"id":"croptopia:elderberry",
+        "required": false}
+    ]
+  }
