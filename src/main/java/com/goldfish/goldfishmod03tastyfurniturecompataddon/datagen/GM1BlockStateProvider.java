@@ -76,6 +76,19 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........tiles
           net.minecraft.world.level.block.Block elderberry_tiles_block = foodblockregistry.ELDERBERRY_TILES_BLOCK.get();
           simpleBlock(elderberry_tiles_block);
+     //------------------------------------------------------------cherry-----------------------------------------------------------------------
+      //.........plain
+          net.minecraft.world.level.block.Block cherry_block = foodblockregistry.CHERRY_BLOCK.get();
+          simpleBlock(cherry_block);
+      //.........bricks
+          net.minecraft.world.level.block.Block cherry_bricks_block = foodblockregistry.CHERRY_BRICKS_BLOCK.get();
+          simpleBlock(cherry_bricks_block);
+      //.........chiseled
+          net.minecraft.world.level.block.Block cherry_chiseled_block = foodblockregistry.CHERRY_CHISELED_BLOCK.get();
+          simpleBlock(cherry_chiseled_block);
+      //.........tiles
+          net.minecraft.world.level.block.Block cherry_tiles_block = foodblockregistry.CHERRY_TILES_BLOCK.get();
+          simpleBlock(cherry_tiles_block);
     //==============================================================================================================================================
     //|                                                              Slabs                                                                        |
     //==============================================================================================================================================
@@ -88,6 +101,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
           SlabBlock elderberry_bricks_slab = foodblockregistry.ELDERBERRY_BRICKS_SLAB.get();
           ResourceLocation elderberry_bricks_block_texture = modLoc("block/elderberry_bricks_block");
           slabBlock(elderberry_bricks_slab, elderberry_bricks_block_texture, elderberry_bricks_block_texture);
+     //------------------------------------------------------------cherry-----------------------------------------------------------------------
+      //.........plain
+          SlabBlock cherry_slab = foodblockregistry.CHERRY_SLAB.get();
+          ResourceLocation cherry_block_texture = modLoc("block/cherry_block");
+          slabBlock(cherry_slab, cherry_block_texture, cherry_block_texture);
+      //.........bricks
+          SlabBlock cherry_bricks_slab = foodblockregistry.CHERRY_BRICKS_SLAB.get();
+          ResourceLocation cherry_bricks_block_texture = modLoc("block/cherry_bricks_block");
+          slabBlock(cherry_bricks_slab, cherry_bricks_block_texture, cherry_bricks_block_texture);
     //==============================================================================================================================================
     //|                                                              Stairs                                                                        |
     //==============================================================================================================================================
@@ -98,6 +120,13 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........bricks
           StairBlock elderberry_bricks_stairs = foodblockregistry.ELDERBERRY_BRICKS_STAIRS.get();
           stairsBlock(elderberry_bricks_stairs, elderberry_bricks_block_texture);
+     //------------------------------------------------------------cherry-----------------------------------------------------------------------
+      //.........plain
+          StairBlock cherry_stairs = foodblockregistry.CHERRY_STAIRS.get();
+          stairsBlock(cherry_stairs, cherry_block_texture);
+      //.........bricks
+          StairBlock cherry_bricks_stairs = foodblockregistry.CHERRY_BRICKS_STAIRS.get();
+          stairsBlock(cherry_bricks_stairs, cherry_bricks_block_texture);
     //==============================================================================================================================================
     //|                                                               Bars                                                                         |
     //==============================================================================================================================================

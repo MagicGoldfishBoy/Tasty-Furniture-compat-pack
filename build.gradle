@@ -104,7 +104,11 @@ dependencies {
     //implementation "curse.maven:productivetrees-867074:5594932"
     //implementation "curse.maven:croptopia-415438:5872434"
     api("curse.maven:pamcrops-361385:5581644")
-   // api("curse.maven:jei-238222:5437447")
+    api "curse.maven:pams-harvestcraft-2-trees-365460:5616625"
+    api "curse.maven:productivetrees-867074:5497946"
+    api "curse.maven:productivebees-377897:5530223"
+   // api "curse.maven:croptopia-415438:5571647"
+    api "curse.maven:jei-238222:5846880"
 
     // Example optional mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime

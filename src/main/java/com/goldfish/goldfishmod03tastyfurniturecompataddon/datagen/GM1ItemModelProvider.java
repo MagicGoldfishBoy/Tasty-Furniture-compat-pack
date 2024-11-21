@@ -91,6 +91,29 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //cabinet
        withExistingParent("small_elderberry_cabinet_item", modLoc("block/elderberry_cabinet"));
        withExistingParent("medium_elderberry_cabinet_item", modLoc("block/medium_elderberry_cabinet"));
+      //.........cherry
+       //mush
+        withExistingParent("cherry_mush", mcLoc("item/generated")).texture("layer0", "item/cherry_mush");
+       //ingot
+        withExistingParent("cherry_ingot", mcLoc("item/generated")).texture("layer0", "item/cherry_ingot");
+       //nugget
+        withExistingParent("cherry_nugget", mcLoc("item/generated")).texture("layer0", "item/cherry_nugget");
+       //block
+        withExistingParent("cherry_block_item", modLoc("block/cherry_block"));
+       //bricks block
+        withExistingParent("cherry_bricks_block_item", modLoc("block/cherry_bricks_block"));
+       //chiseled block
+        withExistingParent("cherry_chiseled_block_item", modLoc("block/cherry_chiseled_block"));
+       //tiles block
+        withExistingParent("cherry_tiles_block_item", modLoc("block/cherry_tiles_block"));
+       //slab
+       slab("cherry_slab_item", modLoc("block/cherry_block"), modLoc("block/cherry_block"), modLoc("block/cherry_block"));
+       //bricks slab
+       slab("cherry_bricks_slab_item", modLoc("block/cherry_bricks_block"), modLoc("block/cherry_bricks_block"), modLoc("block/cherry_bricks_block"));
+       //stairs
+       stairs("cherry_stairs_item", modLoc("block/cherry_block"), modLoc("block/cherry_block"), modLoc("block/cherry_block"));
+       //bricks stairs
+       stairs("cherry_bricks_stairs_item", modLoc("block/cherry_bricks_block"), modLoc("block/cherry_bricks_block"), modLoc("block/cherry_bricks_block"));
   }
 }
 

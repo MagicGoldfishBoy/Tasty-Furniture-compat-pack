@@ -1,0 +1,15 @@
+{
+    "replace": false,
+    "values": [
+        {"id":"pamhc2trees:cherryitem",
+        "required": false},
+        {"id":"productivetrees:wild_cherry",
+        "required": false},
+        {"id":"harvestcraft:cherryitem",
+        "required": false},
+        {"id":"croptopia:cherry",
+        "required": false},
+        {"id":"c:crops/cherry",
+        "required": false}
+    ]
+  }

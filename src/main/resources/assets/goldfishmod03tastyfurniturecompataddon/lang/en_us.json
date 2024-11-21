@@ -36,5 +36,16 @@
     "block.goldfishmod03tastyfurniturecompataddon.elderberry_chair": "Elderberry Chair",
     "block.goldfishmod03tastyfurniturecompataddon.elderberry_bed": "Elderberry Bed",
     "block.goldfishmod03tastyfurniturecompataddon.small_elderberry_cabinet": "Elderberry Small Cabinet",
-    "block.goldfishmod03tastyfurniturecompataddon.medium_elderberry_cabinet": "Elderberry Medium Cabinet"
+    "block.goldfishmod03tastyfurniturecompataddon.medium_elderberry_cabinet": "Elderberry Medium Cabinet",
+   "item.goldfishmod03tastyfurniturecompataddon.cherry_mush": "Cherry Mush",
+    "item.goldfishmod03tastyfurniturecompataddon.cherry_ingot": "Cherry Ingot",
+    "item.goldfishmod03tastyfurniturecompataddon.cherry_nugget": "Cherry Nugget",
+    "block.goldfishmod03tastyfurniturecompataddon.cherry_block": "Cherry Block",
+    "block.goldfishmod03tastyfurniturecompataddon.cherry_bricks_block": "Cherry Bricks Block",
+    "block.goldfishmod03tastyfurniturecompataddon.cherry_chiseled_block": "Cherry Chiseled Block",
+    "block.goldfishmod03tastyfurniturecompataddon.cherry_tiles_block": "Cherry Tiles Block",
+    "block.goldfishmod03tastyfurniturecompataddon.cherry_slab": "Cherry Slab",
+    "block.goldfishmod03tastyfurniturecompataddon.cherry_bricks_slab": "Cherry Bricks Slab",
+    "block.goldfishmod03tastyfurniturecompataddon.cherry_stairs": "Cherry Stairs",
+    "block.goldfishmod03tastyfurniturecompataddon.cherry_bricks_stairs": "Cherry Bricks Stairs"
 }

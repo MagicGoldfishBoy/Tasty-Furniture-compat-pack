@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "A": {
-      "tag": "goldfishmod02tastyfurniture:advanced_mushhammer"
+      "item": "goldfishmod02tastyfurniture:advanced_mush_hammer"
     },
     "B": {
       "tag": "c:elderberries"
