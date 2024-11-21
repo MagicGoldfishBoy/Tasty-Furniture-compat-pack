@@ -578,6 +578,14 @@ public class foodblockregistry {
     .sound(SoundType.MUD_BRICKS)
     .noOcclusion()
     ));
+ //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, foodpathtypeminislab> CHERRY_STONE_PATH = FOODBLOCK.register("cherry_stone_path", 
+    () -> new foodpathtypeminislab(BlockBehaviour.Properties.of()
+    .destroyTime(1.5f)
+    .explosionResistance(1.5f)
+    .sound(SoundType.MUD_BRICKS)
+    .noOcclusion()
+    ));
 //==============================================================================================================================================================================================
 //                                                                                        Barrels
 //==============================================================================================================================================================================================
