@@ -648,7 +648,8 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .unlockedBy("has_cherry_ingot", has(ingotregistry.CHERRY_INGOT.get()))
         .save(output);
       }
-      protected void buildLadderRecipes(RecipeOutput output) {
+ protected void buildLadderRecipes(RecipeOutput output) {
+  //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ELDERBERRY_LADDER_ITEM.get(), 3)
         .pattern("A A")
         .pattern("ABA")
@@ -657,8 +658,18 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('B', ingotregistry.ELDERBERRY_INGOT.get())
         .unlockedBy("has_elderberry_ingot", has(ingotregistry.ELDERBERRY_INGOT.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_LADDER_ITEM.get(), 3)
+        .pattern("A A")
+        .pattern("ABA")
+        .pattern("A A")
+        .define('A', Items.STICK)
+        .define('B', ingotregistry.CHERRY_INGOT.get())
+        .unlockedBy("has_cherry_ingot", has(ingotregistry.CHERRY_INGOT.get()))
+        .save(output);
       }
-      protected void buildTableRecipes(RecipeOutput output) {
+ protected void buildTableRecipes(RecipeOutput output) {
+  //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ELDERBERRY_TABLE_ITEM.get())
         .pattern("AAA")
         .pattern("B B")
@@ -666,6 +677,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', foodblockcompatitemregistry.ELDERBERRY_SLAB_ITEM.get())
         .define('B', ingotregistry.ELDERBERRY_INGOT.get())
         .unlockedBy("has_elderberry_ingot", has(ingotregistry.ELDERBERRY_INGOT.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_TABLE_ITEM.get())
+        .pattern("AAA")
+        .pattern("B B")
+        .pattern("B B")
+        .define('A', foodblockcompatitemregistry.CHERRY_SLAB_ITEM.get())
+        .define('B', ingotregistry.CHERRY_INGOT.get())
+        .unlockedBy("has_cherry_ingot", has(ingotregistry.CHERRY_INGOT.get()))
         .save(output);
       }
       protected void buildTorchRecipes(RecipeOutput output) {

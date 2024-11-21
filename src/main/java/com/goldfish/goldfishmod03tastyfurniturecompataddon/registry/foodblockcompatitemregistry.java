@@ -201,12 +201,18 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> ELDERBERRY_LADDER_ITEM =  FOODBLOCKITEM.register("elderberry_ladder_item",
     () -> new BlockItem(foodblockregistry.ELDERBERRY_LADDER.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> CHERRY_LADDER_ITEM =  FOODBLOCKITEM.register("cherry_ladder_item",
+    () -> new BlockItem(foodblockregistry.CHERRY_LADDER.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                        Tables
 //==============================================================================================================================================================================================
  //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> ELDERBERRY_TABLE_ITEM =  FOODBLOCKITEM.register("elderberry_table_item",
     () -> new BlockItem(foodblockregistry.ELDERBERRY_TABLE.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> CHERRY_TABLE_ITEM =  FOODBLOCKITEM.register("cherry_table_item",
+    () -> new BlockItem(foodblockregistry.CHERRY_TABLE.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                        Torches
 //==============================================================================================================================================================================================
