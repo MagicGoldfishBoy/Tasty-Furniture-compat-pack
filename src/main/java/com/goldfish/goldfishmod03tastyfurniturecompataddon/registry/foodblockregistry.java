@@ -568,7 +568,7 @@ public class foodblockregistry {
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<cherryFurnaceEntity>> CHERRY_FURNACE_ENTITY = FOODBLOCKENTITY.register("cherry_furnace", 
     () -> BlockEntityType.Builder.of(cherryFurnaceEntity::new, CHERRY_FURNACE.get()).build(null));
 //==============================================================================================================================================================================================
-//                                                                                          Paths
+//                                                                                         Paths
 //==============================================================================================================================================================================================
  //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, foodpathtypeminislab> ELDERBERRY_STONE_PATH = FOODBLOCK.register("elderberry_stone_path", 
@@ -611,7 +611,7 @@ public class foodblockregistry {
      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<foodBarrelEntity>> FOOD_BARREL_ENTITY = FOODBLOCKENTITY.register("food_barrel_entity", 
      () -> BlockEntityType.Builder.of(foodBarrelEntity::new, foodblockregistry.ELDERBERRY_BARREL.get(), foodblockregistry.CHERRY_BARREL.get()).build(null));
 //==============================================================================================================================================================================================
-//                                                                                          Chairs
+//                                                                                         Chairs
 //==============================================================================================================================================================================================
    static float chair_destroy_time = 1.25f;
    static float chair_explosion_resistance = 0.75f;
@@ -620,6 +620,13 @@ public class foodblockregistry {
    static SoundType crystal_chair_sound = SoundType.BASALT;
  //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
      public static final DeferredHolder<Block, foodChairBlock> ELDERBERRY_CHAIR = FOODBLOCK.register("elderberry_chair", () -> new foodChairBlock(BlockBehaviour.Properties.of()
+     .sound(plant_chair_sound)
+     .destroyTime(chair_destroy_time)
+     .explosionResistance(chair_explosion_resistance)
+     .noOcclusion()
+     ));
+ //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
+     public static final DeferredHolder<Block, foodChairBlock> CHERRY_CHAIR = FOODBLOCK.register("cherry_chair", () -> new foodChairBlock(BlockBehaviour.Properties.of()
      .sound(plant_chair_sound)
      .destroyTime(chair_destroy_time)
      .explosionResistance(chair_explosion_resistance)

@@ -806,7 +806,8 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .unlockedBy("has_cherry_block", has(foodblockcompatitemregistry.CHERRY_BLOCK_ITEM.get()))
         .save(output);
       }
-      protected void buildChairRecipes(RecipeOutput output) {
+ protected void buildChairRecipes(RecipeOutput output) {
+  //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ELDERBERRY_CHAIR_ITEM.get())
         .pattern("AAA")
         .pattern("BBB")
@@ -814,6 +815,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', ingotregistry.ELDERBERRY_INGOT.get())
         .define('B', foodblockcompatitemregistry.ELDERBERRY_SLAB_ITEM.get())
         .unlockedBy("has_elderberry_slab", has(foodblockcompatitemregistry.ELDERBERRY_SLAB_ITEM.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_CHAIR_ITEM.get())
+        .pattern("AAA")
+        .pattern("BBB")
+        .pattern("A A")
+        .define('A', ingotregistry.CHERRY_INGOT.get())
+        .define('B', foodblockcompatitemregistry.CHERRY_SLAB_ITEM.get())
+        .unlockedBy("has_cherry_slab", has(foodblockcompatitemregistry.CHERRY_SLAB_ITEM.get()))
         .save(output);
       } 
       protected void buildBedRecipes(RecipeOutput output) {
