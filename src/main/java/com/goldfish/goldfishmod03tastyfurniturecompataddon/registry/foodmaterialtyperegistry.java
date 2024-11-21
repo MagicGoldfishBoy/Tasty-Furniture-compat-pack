@@ -80,6 +80,11 @@ public class foodmaterialtyperegistry {
         "elderberry_wood_mat", 
         PLANT) 
     );
+    public static final WoodType JUNIPERWOODMAT = WoodType.register(
+     new WoodType(
+        "juniper_wood_mat", 
+        PLANT) 
+    );
     public static final WoodType CHERRYWOODMAT = WoodType.register(
      new WoodType(
         "cherry_wood_mat", 

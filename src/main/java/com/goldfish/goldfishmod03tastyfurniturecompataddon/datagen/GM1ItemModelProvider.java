@@ -14,8 +14,9 @@ public class GM1ItemModelProvider extends ItemModelProvider {
 
         @Override
         protected void registerModels() {
-
-      //.........elderberry
+    //==============================================================================================================================================
+    //|                                                            Elderberry                                                                      |
+    //==============================================================================================================================================
        //mush
         withExistingParent("elderberry_mush", mcLoc("item/generated")).texture("layer0", "item/elderberry_mush");
        //ingot
@@ -91,7 +92,34 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //cabinet
        withExistingParent("small_elderberry_cabinet_item", modLoc("block/elderberry_cabinet"));
        withExistingParent("medium_elderberry_cabinet_item", modLoc("block/medium_elderberry_cabinet"));
-      //.........cherry
+    //==============================================================================================================================================
+    //|                                                            Juniper                                                                      |
+    //==============================================================================================================================================
+       //mush
+       withExistingParent("juniper_mush", mcLoc("item/generated")).texture("layer0", "item/juniper_mush");
+       //ingot
+        withExistingParent("juniper_ingot", mcLoc("item/generated")).texture("layer0", "item/juniper_ingot");
+       //nugget
+        withExistingParent("juniper_nugget", mcLoc("item/generated")).texture("layer0", "item/juniper_nugget");
+       //block
+        withExistingParent("juniper_block_item", modLoc("block/juniper_block"));
+       //bricks block
+        withExistingParent("juniper_bricks_block_item", modLoc("block/juniper_bricks_block"));
+       //chiseled block
+        withExistingParent("juniper_chiseled_block_item", modLoc("block/juniper_chiseled_block"));
+       //tiles block
+        withExistingParent("juniper_tiles_block_item", modLoc("block/juniper_tiles_block"));
+       //slab
+       slab("juniper_slab_item", modLoc("block/juniper_block"), modLoc("block/juniper_block"), modLoc("block/juniper_block"));
+       //bricks slab
+       slab("juniper_bricks_slab_item", modLoc("block/juniper_bricks_block"), modLoc("block/juniper_bricks_block"), modLoc("block/juniper_bricks_block"));
+       //stairs
+       stairs("juniper_stairs_item", modLoc("block/juniper_block"), modLoc("block/juniper_block"), modLoc("block/juniper_block"));
+       //bricks stairs
+       stairs("juniper_bricks_stairs_item", modLoc("block/juniper_bricks_block"), modLoc("block/juniper_bricks_block"), modLoc("block/juniper_bricks_block"));
+    //==============================================================================================================================================
+    //|                                                              Cherry                                                                        |
+    //==============================================================================================================================================
        //mush
         withExistingParent("cherry_mush", mcLoc("item/generated")).texture("layer0", "item/cherry_mush");
        //ingot

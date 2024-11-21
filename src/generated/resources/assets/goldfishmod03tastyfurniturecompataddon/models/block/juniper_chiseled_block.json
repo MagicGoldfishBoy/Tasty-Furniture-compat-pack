@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "goldfishmod03tastyfurniturecompataddon:block/juniper_chiseled_block"
+  }
+}

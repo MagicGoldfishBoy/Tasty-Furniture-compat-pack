@@ -76,6 +76,19 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........tiles
           net.minecraft.world.level.block.Block elderberry_tiles_block = foodblockregistry.ELDERBERRY_TILES_BLOCK.get();
           simpleBlock(elderberry_tiles_block);
+     //------------------------------------------------------------juniper-----------------------------------------------------------------------
+      //.........plain
+          net.minecraft.world.level.block.Block juniper_block = foodblockregistry.JUNIPER_BLOCK.get();
+          simpleBlock(juniper_block);
+      //.........bricks
+          net.minecraft.world.level.block.Block juniper_bricks_block = foodblockregistry.JUNIPER_BRICKS_BLOCK.get();
+          simpleBlock(juniper_bricks_block);
+      //.........chiseled
+          net.minecraft.world.level.block.Block juniper_chiseled_block = foodblockregistry.JUNIPER_CHISELED_BLOCK.get();
+          simpleBlock(juniper_chiseled_block);
+      //.........tiles
+          net.minecraft.world.level.block.Block juniper_tiles_block = foodblockregistry.JUNIPER_TILES_BLOCK.get();
+          simpleBlock(juniper_tiles_block);
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
       //.........plain
           net.minecraft.world.level.block.Block cherry_block = foodblockregistry.CHERRY_BLOCK.get();
@@ -101,6 +114,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
           SlabBlock elderberry_bricks_slab = foodblockregistry.ELDERBERRY_BRICKS_SLAB.get();
           ResourceLocation elderberry_bricks_block_texture = modLoc("block/elderberry_bricks_block");
           slabBlock(elderberry_bricks_slab, elderberry_bricks_block_texture, elderberry_bricks_block_texture);
+     //------------------------------------------------------------juniper-----------------------------------------------------------------------
+      //.........plain
+          SlabBlock juniper_slab = foodblockregistry.JUNIPER_SLAB.get();
+          ResourceLocation juniper_block_texture = modLoc("block/juniper_block");
+          slabBlock(juniper_slab, juniper_block_texture, juniper_block_texture);
+      //.........bricks
+          SlabBlock juniper_bricks_slab = foodblockregistry.JUNIPER_BRICKS_SLAB.get();
+          ResourceLocation juniper_bricks_block_texture = modLoc("block/juniper_bricks_block");
+          slabBlock(juniper_bricks_slab, juniper_bricks_block_texture, juniper_bricks_block_texture);
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
       //.........plain
           SlabBlock cherry_slab = foodblockregistry.CHERRY_SLAB.get();
@@ -120,6 +142,13 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........bricks
           StairBlock elderberry_bricks_stairs = foodblockregistry.ELDERBERRY_BRICKS_STAIRS.get();
           stairsBlock(elderberry_bricks_stairs, elderberry_bricks_block_texture);
+     //------------------------------------------------------------juniper-----------------------------------------------------------------------
+      //.........plain
+          StairBlock juniper_stairs = foodblockregistry.JUNIPER_STAIRS.get();
+          stairsBlock(juniper_stairs, juniper_block_texture);
+      //.........bricks
+          StairBlock juniper_bricks_stairs = foodblockregistry.JUNIPER_BRICKS_STAIRS.get();
+          stairsBlock(juniper_bricks_stairs, juniper_bricks_block_texture);
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
       //.........plain
           StairBlock cherry_stairs = foodblockregistry.CHERRY_STAIRS.get();

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_juniper_bricks_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "goldfishmod03tastyfurniturecompataddon:juniper_bricks_block_item"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:juniper_bricks_stairs_from_juniper_bricks_block_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_juniper_bricks_block"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:juniper_bricks_stairs_from_juniper_bricks_block_stonecutting"
+    ]
+  }
+}

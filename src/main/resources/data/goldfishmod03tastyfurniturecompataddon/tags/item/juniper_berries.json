@@ -1,0 +1,11 @@
+{
+    "replace": false,
+    "values": [
+        {"id":"pamhc2crops:juniperberryitem",
+        "required": false},
+        {"id":"productivetrees:juniper_berry",
+        "required": false},
+        {"id":"harvestcraft:juniperberryitem",
+        "required": false}
+    ]
+  }
