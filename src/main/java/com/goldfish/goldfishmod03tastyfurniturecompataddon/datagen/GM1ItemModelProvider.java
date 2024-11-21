@@ -130,6 +130,19 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("cherry_sign_item", mcLoc("item/generated")).texture("layer0", "item/cherry_sign");
        //trapdoor
        withExistingParent("cherry_trapdoor_item", modLoc("block/cherry_trapdoor_trapdoor_bottom"));
+       //lamp
+       withExistingParent("cherry_lamp_item", modLoc("block/cherry_lamp"));
+       //carpet
+       ResourceLocation cherry_carpet_texture = modLoc("block/cherry_carpet");
+       carpet("cherry_carpet_item", cherry_carpet_texture);
+       //lantern
+        //regular
+          withExistingParent("cherry_lantern_item", modLoc("block/cherry_lantern"));
+        //soul
+          withExistingParent("cherry_soul_lantern_item", modLoc("block/cherry_soul_lantern"));
+       //chain
+       withExistingParent("cherry_chain_item", modLoc("block/cherry_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
   }
 }
 

@@ -226,6 +226,9 @@ public class GM1BlockStateProvider extends BlockStateProvider
      //------------------------------------------------------------elderberry-----------------------------------------------------------------------
           Block elderberry_lamp = foodblockregistry.ELDERBERRY_LAMP.get();
           simpleBlock(elderberry_lamp);
+     //------------------------------------------------------------cherry-----------------------------------------------------------------------
+          Block cherry_lamp = foodblockregistry.CHERRY_LAMP.get();
+          simpleBlock(cherry_lamp);
     //==============================================================================================================================================
     //|                                                              Carpets                                                                       |
     //==============================================================================================================================================
@@ -235,6 +238,12 @@ public class GM1BlockStateProvider extends BlockStateProvider
           BlockModelBuilder elderberry_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(elderberry_carpet).getPath(), mcLoc("block/carpet"))
           .texture("wool", elderberry_carpet_texture);
           simpleBlock(elderberry_carpet, new ModelFile.UncheckedModelFile(elderberry_carpet_model.getLocation()));
+     //------------------------------------------------------------cherry-----------------------------------------------------------------------
+          CarpetBlock cherry_carpet = foodblockregistry.CHERRY_CARPET.get();
+          ResourceLocation cherry_carpet_texture = modLoc("block/cherry_carpet");
+          BlockModelBuilder cherry_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(cherry_carpet).getPath(), mcLoc("block/carpet"))
+          .texture("wool", cherry_carpet_texture);
+          simpleBlock(cherry_carpet, new ModelFile.UncheckedModelFile(cherry_carpet_model.getLocation()));
     //==============================================================================================================================================
     //|                                                             Lanterns                                                                       |
     //==============================================================================================================================================
@@ -277,6 +286,45 @@ public class GM1BlockStateProvider extends BlockStateProvider
              .modelForState().modelFile(hanging_elderberry_soul_lantern_model).addModel()
              .partialState().with(LanternBlock.HANGING, false)
              .modelForState().modelFile(elderberry_soul_lantern_model).addModel();
+     //------------------------------------------------------------cherry-----------------------------------------------------------------------
+         //regular
+          LanternBlock cherry_lantern = foodblockregistry.CHERRY_LANTERN.get();
+          ResourceLocation cherry_lantern_texture = modLoc("block/cherry_lantern");
+  
+          BlockModelBuilder cherry_lantern_model = models()
+              .withExistingParent("cherry_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", cherry_lantern_texture);
+  
+          BlockModelBuilder hanging_cherry_lantern_model = models()
+              .withExistingParent("cherry_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", cherry_lantern_texture);
+  
+          getVariantBuilder(cherry_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_cherry_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(cherry_lantern_model).addModel();
+         //soul
+         LanternBlock cherry_soul_lantern = foodblockregistry.CHERRY_SOUL_LANTERN.get();
+         ResourceLocation cherry_soul_lantern_texture = modLoc("block/cherry_soul_lantern");
+ 
+         BlockModelBuilder cherry_soul_lantern_model = models()
+             .withExistingParent("cherry_soul_lantern", mcLoc("block/lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", cherry_soul_lantern_texture);
+ 
+         BlockModelBuilder hanging_cherry_soul_lantern_model = models()
+             .withExistingParent("cherry_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", cherry_soul_lantern_texture);
+ 
+         getVariantBuilder(cherry_soul_lantern)
+             .partialState().with(LanternBlock.HANGING, true)
+             .modelForState().modelFile(hanging_cherry_soul_lantern_model).addModel()
+             .partialState().with(LanternBlock.HANGING, false)
+             .modelForState().modelFile(cherry_soul_lantern_model).addModel();
     //==============================================================================================================================================
     //|                                                              Chains                                                                        |
     //==============================================================================================================================================
@@ -296,6 +344,22 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .modelForState().modelFile(elderberry_chain_model).rotationX(90).rotationY(90).addModel()
           .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
           .modelForState().modelFile(elderberry_chain_model).rotationX(90).addModel(); 
+     //------------------------------------------------------------cherry-----------------------------------------------------------------------
+         ChainBlock cherry_chain = foodblockregistry.CHERRY_CHAIN.get();
+         ResourceLocation cherry_chain_texture = modLoc("block/cherry_chain");
+         BlockModelBuilder cherry_chain_model = models()
+          .withExistingParent("cherry_chain", mcLoc("block/chain"))
+          .renderType("cutout_mipped_all")
+          .texture("all", cherry_chain_texture)
+          .texture("particle", cherry_chain_texture);
+
+          getVariantBuilder(cherry_chain)
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Y)
+          .modelForState().modelFile(cherry_chain_model).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.X)
+          .modelForState().modelFile(cherry_chain_model).rotationX(90).rotationY(90).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
+          .modelForState().modelFile(cherry_chain_model).rotationX(90).addModel(); 
     //==============================================================================================================================================
     //|                                                             Ladders                                                                        |
     //==============================================================================================================================================
