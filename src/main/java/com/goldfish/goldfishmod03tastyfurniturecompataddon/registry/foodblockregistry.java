@@ -835,6 +835,12 @@ public class foodblockregistry {
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
      ));
+ //--------------------------------------------------------------------------------------Juniper---------------------------------------------------------------------------------------------
+     public static final DeferredHolder<Block, foodBarrel> JUNIPER_BARREL = FOODBLOCK.register("juniper_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
+     .sound(plant_barrel_sound)
+     .destroyTime(barrel_destroy_time)
+     .explosionResistance(barrel_explosion_resistance)
+     ));
  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
      public static final DeferredHolder<Block, foodBarrel> CHERRY_BARREL = FOODBLOCK.register("cherry_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
      .sound(plant_barrel_sound)
@@ -844,7 +850,7 @@ public class foodblockregistry {
 
  //------entity
      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<foodBarrelEntity>> FOOD_BARREL_ENTITY = FOODBLOCKENTITY.register("food_barrel_entity", 
-     () -> BlockEntityType.Builder.of(foodBarrelEntity::new, foodblockregistry.ELDERBERRY_BARREL.get(), foodblockregistry.CHERRY_BARREL.get()).build(null));
+     () -> BlockEntityType.Builder.of(foodBarrelEntity::new, foodblockregistry.ELDERBERRY_BARREL.get(), foodblockregistry.JUNIPER_BARREL.get(), foodblockregistry.CHERRY_BARREL.get()).build(null));
 //==============================================================================================================================================================================================
 //                                                                                         Chairs
 //==============================================================================================================================================================================================

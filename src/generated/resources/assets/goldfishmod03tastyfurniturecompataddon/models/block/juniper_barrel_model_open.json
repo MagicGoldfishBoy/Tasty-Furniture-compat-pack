@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/barrel",
+  "render_type": "minecraft:cutout_mipped_all",
+  "textures": {
+    "bottom": "goldfishmod03tastyfurniturecompataddon:block/juniper_barrel_bottom",
+    "particle": "goldfishmod03tastyfurniturecompataddon:block/juniper_barrel_side",
+    "side": "goldfishmod03tastyfurniturecompataddon:block/juniper_barrel_side",
+    "top": "goldfishmod03tastyfurniturecompataddon:block/juniper_barrel_top_open"
+  }
+}

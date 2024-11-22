@@ -1197,6 +1197,54 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationX(rotationX)
                       .build();
               });
+     //------------------------------------------------------------juniper-----------------------------------------------------------------------
+          foodBarrel juniper_barrel = foodblockregistry.JUNIPER_BARREL.get();
+          ResourceLocation juniper_barrel_closed_texture = modLoc("block/juniper_barrel_top_closed");
+          ResourceLocation juniper_barrel_open_texture = modLoc("block/juniper_barrel_top_open");
+          ResourceLocation juniper_barrel_side = modLoc("block/juniper_barrel_side");
+          ResourceLocation juniper_barrel_bottom = modLoc("block/juniper_barrel_bottom");
+          
+          BlockModelBuilder juniper_barrel_model_closed = models()
+              .withExistingParent("juniper_barrel_model_closed", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", juniper_barrel_side)
+              .texture("bottom", juniper_barrel_bottom)
+              .texture("top", juniper_barrel_closed_texture)
+              .texture("particle", juniper_barrel_side);
+          
+          BlockModelBuilder juniper_barrel_model_open = models()
+              .withExistingParent("juniper_barrel_model_open", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", juniper_barrel_side)
+              .texture("bottom", juniper_barrel_bottom)
+              .texture("top", juniper_barrel_open_texture)
+              .texture("particle", juniper_barrel_side);
+          
+          getVariantBuilder(juniper_barrel)
+              .forAllStates(state -> {
+                  Boolean open = state.getValue(BlockStateProperties.OPEN);
+                  Direction facing = state.getValue(BlockStateProperties.FACING);
+                  int rotationY = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+                  int rotationX = switch (facing) {
+                      case UP -> 0;
+                      case DOWN -> 180;
+                      default -> 90;
+                  };
+
+                  ResourceLocation modelLocation = open ? modLoc("block/juniper_barrel_model_open") : modLoc("block/juniper_barrel_model_closed");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotationY)
+                      .rotationX(rotationX)
+                      .build();
+              });
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           foodBarrel cherry_barrel = foodblockregistry.CHERRY_BARREL.get();
           ResourceLocation cherry_barrel_closed_texture = modLoc("block/cherry_barrel_top_closed");
