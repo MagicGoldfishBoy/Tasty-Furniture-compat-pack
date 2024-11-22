@@ -1103,6 +1103,12 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .requires(Items.STONE)
         .unlockedBy("has_elderberry_block", has(foodblockcompatitemregistry.ELDERBERRY_BLOCK_ITEM.get()))
         .save(output);        
+  //--------------------------------------------------------------------------------------Juniper---------------------------------------------------------------------------------------------
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.JUNIPER_STONE_PATH_ITEM.get(), 6)
+        .requires(foodblockcompatitemregistry.JUNIPER_BLOCK_ITEM.get())
+        .requires(Items.STONE)
+        .unlockedBy("has_juniper_block", has(foodblockcompatitemregistry.JUNIPER_BLOCK_ITEM.get()))
+        .save(output);        
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_STONE_PATH_ITEM.get(), 6)
         .requires(foodblockcompatitemregistry.CHERRY_BLOCK_ITEM.get())

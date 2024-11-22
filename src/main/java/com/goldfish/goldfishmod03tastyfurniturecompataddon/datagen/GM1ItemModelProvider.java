@@ -159,6 +159,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
           withExistingParent("juniper_soul_torch_item", modLoc("block/juniper_soul_torch"));
        //furnaces
        withExistingParent("juniper_furnace_item", modLoc("block/juniper_furnace_model_unlit"));
+       //paths
+       withExistingParent("juniper_stone_path_item", modLoc("block/juniper_stone_path"));
     //==============================================================================================================================================
     //|                                                              Cherry                                                                        |
     //==============================================================================================================================================

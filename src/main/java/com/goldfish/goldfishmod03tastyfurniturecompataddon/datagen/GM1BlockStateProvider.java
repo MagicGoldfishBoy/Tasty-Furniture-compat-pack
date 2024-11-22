@@ -1122,6 +1122,18 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .modelFile(models().getExistingFile(modelLocation))
                   .build();
           });
+     //------------------------------------------------------------juniper-----------------------------------------------------------------------
+          foodpathtypeminislab juniper_stone_path = foodblockregistry.JUNIPER_STONE_PATH.get();
+
+          getVariantBuilder(juniper_stone_path)
+          .forAllStates(state -> {
+
+              ResourceLocation modelLocation = modLoc("block/juniper_stone_path");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .build();
+          });
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           foodpathtypeminislab cherry_stone_path = foodblockregistry.CHERRY_STONE_PATH.get();
 
