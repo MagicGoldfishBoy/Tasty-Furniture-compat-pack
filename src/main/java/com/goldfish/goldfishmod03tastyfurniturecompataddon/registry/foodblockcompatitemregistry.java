@@ -236,6 +236,13 @@ public class foodblockcompatitemregistry {
     //soul
       public static final DeferredHolder<Item, BlockItem> ELDERBERRY_SOUL_LANTERN_ITEM = FOODBLOCKITEM.register("elderberry_soul_lantern_item",
       () -> new BlockItem(foodblockregistry.ELDERBERRY_SOUL_LANTERN.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Juniper---------------------------------------------------------------------------------------------
+    //regular
+      public static final DeferredHolder<Item, BlockItem> JUNIPER_LANTERN_ITEM = FOODBLOCKITEM.register("juniper_lantern_item",
+      () -> new BlockItem(foodblockregistry.JUNIPER_LANTERN.get(), new BlockItem.Properties()));
+    //soul
+      public static final DeferredHolder<Item, BlockItem> JUNIPER_SOUL_LANTERN_ITEM = FOODBLOCKITEM.register("juniper_soul_lantern_item",
+      () -> new BlockItem(foodblockregistry.JUNIPER_SOUL_LANTERN.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
     //regular
       public static final DeferredHolder<Item, BlockItem> CHERRY_LANTERN_ITEM = FOODBLOCKITEM.register("cherry_lantern_item",
@@ -249,6 +256,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> ELDERBERRY_CHAIN_ITEM = FOODBLOCKITEM.register("elderberry_chain_item",
     () -> new BlockItem(foodblockregistry.ELDERBERRY_CHAIN.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Juniper---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> JUNIPER_CHAIN_ITEM = FOODBLOCKITEM.register("juniper_chain_item",
+    () -> new BlockItem(foodblockregistry.JUNIPER_CHAIN.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> CHERRY_CHAIN_ITEM = FOODBLOCKITEM.register("cherry_chain_item",
     () -> new BlockItem(foodblockregistry.CHERRY_CHAIN.get(), new BlockItem.Properties()));

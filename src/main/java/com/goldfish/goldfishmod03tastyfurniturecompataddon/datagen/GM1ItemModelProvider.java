@@ -138,6 +138,14 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //carpet
        ResourceLocation juniper_carpet_texture = modLoc("block/juniper_carpet");
        carpet("juniper_carpet_item", juniper_carpet_texture);
+       //lantern
+        //regular
+        withExistingParent("juniper_lantern_item", modLoc("block/juniper_lantern"));
+        //soul
+          withExistingParent("juniper_soul_lantern_item", modLoc("block/juniper_soul_lantern"));
+       //chain
+       withExistingParent("juniper_chain_item", modLoc("block/juniper_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
     //==============================================================================================================================================
     //|                                                              Cherry                                                                        |
     //==============================================================================================================================================

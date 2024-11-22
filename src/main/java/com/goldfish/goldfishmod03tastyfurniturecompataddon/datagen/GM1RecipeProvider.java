@@ -846,6 +846,25 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', Items.SOUL_TORCH)
             .unlockedBy("has_elderberry_nugget", has(nuggetregistry.ELDERBERRY_NUGGET.get()))
             .save(output);
+  //--------------------------------------------------------------------------------------Juniper---------------------------------------------------------------------------------------------
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.JUNIPER_LANTERN_ITEM.get())
+            .pattern("AAA")
+            .pattern("ABA")
+            .pattern("AAA")
+            .define('A', nuggetregistry.JUNIPER_NUGGET.get())
+            .define('B', Items.TORCH)
+            .unlockedBy("has_juniper_nugget", has(nuggetregistry.JUNIPER_NUGGET.get()))
+            .save(output);
+          //soul
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.JUNIPER_SOUL_LANTERN_ITEM.get())
+            .pattern("AAA")
+            .pattern("ABA")
+            .pattern("AAA")
+            .define('A', nuggetregistry.JUNIPER_NUGGET.get())
+            .define('B', Items.SOUL_TORCH)
+            .unlockedBy("has_juniper_nugget", has(nuggetregistry.JUNIPER_NUGGET.get()))
+            .save(output);
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
           //regular
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_LANTERN_ITEM.get())
@@ -875,6 +894,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', nuggetregistry.ELDERBERRY_NUGGET.get())
         .define('B', ingotregistry.ELDERBERRY_INGOT.get())
         .unlockedBy("has_elderberry_ingot", has(ingotregistry.ELDERBERRY_INGOT.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Juniper---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.JUNIPER_CHAIN_ITEM.get())
+        .pattern(" A ")
+        .pattern(" B ")
+        .pattern(" A ")
+        .define('A', nuggetregistry.JUNIPER_NUGGET.get())
+        .define('B', ingotregistry.JUNIPER_INGOT.get())
+        .unlockedBy("has_juniper_ingot", has(ingotregistry.JUNIPER_INGOT.get()))
         .save(output);
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_CHAIN_ITEM.get())

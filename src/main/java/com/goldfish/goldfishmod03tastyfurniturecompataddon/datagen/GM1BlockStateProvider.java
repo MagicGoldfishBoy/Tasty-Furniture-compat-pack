@@ -360,6 +360,45 @@ public class GM1BlockStateProvider extends BlockStateProvider
              .modelForState().modelFile(hanging_elderberry_soul_lantern_model).addModel()
              .partialState().with(LanternBlock.HANGING, false)
              .modelForState().modelFile(elderberry_soul_lantern_model).addModel();
+     //------------------------------------------------------------juniper-----------------------------------------------------------------------
+         //regular
+          LanternBlock juniper_lantern = foodblockregistry.JUNIPER_LANTERN.get();
+          ResourceLocation juniper_lantern_texture = modLoc("block/juniper_lantern");
+  
+          BlockModelBuilder juniper_lantern_model = models()
+              .withExistingParent("juniper_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", juniper_lantern_texture);
+  
+          BlockModelBuilder hanging_juniper_lantern_model = models()
+              .withExistingParent("juniper_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", juniper_lantern_texture);
+  
+          getVariantBuilder(juniper_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_juniper_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(juniper_lantern_model).addModel();
+         //soul
+         LanternBlock juniper_soul_lantern = foodblockregistry.JUNIPER_SOUL_LANTERN.get();
+         ResourceLocation juniper_soul_lantern_texture = modLoc("block/juniper_soul_lantern");
+ 
+         BlockModelBuilder juniper_soul_lantern_model = models()
+             .withExistingParent("juniper_soul_lantern", mcLoc("block/lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", juniper_soul_lantern_texture);
+ 
+         BlockModelBuilder hanging_juniper_soul_lantern_model = models()
+             .withExistingParent("juniper_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", juniper_soul_lantern_texture);
+ 
+         getVariantBuilder(juniper_soul_lantern)
+             .partialState().with(LanternBlock.HANGING, true)
+             .modelForState().modelFile(hanging_juniper_soul_lantern_model).addModel()
+             .partialState().with(LanternBlock.HANGING, false)
+             .modelForState().modelFile(juniper_soul_lantern_model).addModel();
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
          //regular
           LanternBlock cherry_lantern = foodblockregistry.CHERRY_LANTERN.get();
@@ -418,6 +457,22 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .modelForState().modelFile(elderberry_chain_model).rotationX(90).rotationY(90).addModel()
           .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
           .modelForState().modelFile(elderberry_chain_model).rotationX(90).addModel(); 
+     //------------------------------------------------------------juniper-----------------------------------------------------------------------
+         ChainBlock juniper_chain = foodblockregistry.JUNIPER_CHAIN.get();
+         ResourceLocation juniper_chain_texture = modLoc("block/juniper_chain");
+         BlockModelBuilder juniper_chain_model = models()
+          .withExistingParent("juniper_chain", mcLoc("block/chain"))
+          .renderType("cutout_mipped_all")
+          .texture("all", juniper_chain_texture)
+          .texture("particle", juniper_chain_texture);
+
+          getVariantBuilder(juniper_chain)
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Y)
+          .modelForState().modelFile(juniper_chain_model).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.X)
+          .modelForState().modelFile(juniper_chain_model).rotationX(90).rotationY(90).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
+          .modelForState().modelFile(juniper_chain_model).rotationX(90).addModel(); 
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
          ChainBlock cherry_chain = foodblockregistry.CHERRY_CHAIN.get();
          ResourceLocation cherry_chain_texture = modLoc("block/cherry_chain");

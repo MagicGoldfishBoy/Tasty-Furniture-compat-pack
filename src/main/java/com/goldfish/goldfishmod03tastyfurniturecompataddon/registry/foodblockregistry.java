@@ -593,6 +593,23 @@ public class foodblockregistry {
       .lightLevel(state  -> 10)
       .noOcclusion()
       ));
+ //--------------------------------------------------------------------------------------Juniper---------------------------------------------------------------------------------------------
+    //regular
+      public static final DeferredHolder<Block, LanternBlock> JUNIPER_LANTERN = FOODBLOCK.register("juniper_lantern", () -> new LanternBlock(BlockBehaviour.Properties.of()
+      .destroyTime(0.5f)
+      .explosionResistance(0.5f)
+      .sound(SoundType.SHROOMLIGHT)
+      .lightLevel(state  -> 15)
+      .noOcclusion()
+      ));
+    //soul
+      public static final DeferredHolder<Block, LanternBlock> JUNIPER_SOUL_LANTERN = FOODBLOCK.register("juniper_soul_lantern", () -> new LanternBlock(BlockBehaviour.Properties.of()
+      .destroyTime(0.5f)
+      .explosionResistance(0.5f)
+      .sound(SoundType.SHROOMLIGHT)
+      .lightLevel(state  -> 10)
+      .noOcclusion()
+      ));
  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
     //regular
       public static final DeferredHolder<Block, LanternBlock> CHERRY_LANTERN = FOODBLOCK.register("cherry_lantern", () -> new LanternBlock(BlockBehaviour.Properties.of()
@@ -615,6 +632,13 @@ public class foodblockregistry {
 //==============================================================================================================================================================================================
  //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, ChainBlock> ELDERBERRY_CHAIN = FOODBLOCK.register("elderberry_chain", () -> new ChainBlock(BlockBehaviour.Properties.of()
+    .destroyTime(0.5f)
+    .explosionResistance(0.5f)
+    .sound(SoundType.CHAIN)
+    .noOcclusion()
+    ));
+ //--------------------------------------------------------------------------------------Juniper---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, ChainBlock> JUNIPER_CHAIN = FOODBLOCK.register("juniper_chain", () -> new ChainBlock(BlockBehaviour.Properties.of()
     .destroyTime(0.5f)
     .explosionResistance(0.5f)
     .sound(SoundType.CHAIN)
