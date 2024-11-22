@@ -299,6 +299,16 @@ public class foodblockcompatitemregistry {
     //soul
       public static final DeferredHolder<Item, StandingAndWallBlockItem> ELDERBERRY_SOUL_TORCH_ITEM =  FOODBLOCKITEM.register("elderberry_soul_torch_item",
       () -> new StandingAndWallBlockItem(foodblockregistry.ELDERBERRY_SOUL_TORCH.get(), foodblockregistry.ELDERBERRY_SOUL_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
+ //--------------------------------------------------------------------------------------Juniper---------------------------------------------------------------------------------------------
+    //regular
+      public static final DeferredHolder<Item, StandingAndWallBlockItem> JUNIPER_TORCH_ITEM = FOODBLOCKITEM.register("juniper_torch_item", 
+      () -> new StandingAndWallBlockItem(foodblockregistry.JUNIPER_TORCH.get(), foodblockregistry.JUNIPER_WALL_TORCH.get(), new Item.Properties(), Direction.NORTH));
+    //redstone
+      public static final DeferredHolder<Item, StandingAndWallBlockItem> JUNIPER_REDSTONE_TORCH_ITEM =  FOODBLOCKITEM.register("juniper_redstone_torch_item",
+      () -> new StandingAndWallBlockItem(foodblockregistry.JUNIPER_REDSTONE_TORCH.get(), foodblockregistry.JUNIPER_REDSTONE_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
+    //soul
+      public static final DeferredHolder<Item, StandingAndWallBlockItem> JUNIPER_SOUL_TORCH_ITEM =  FOODBLOCKITEM.register("juniper_soul_torch_item",
+      () -> new StandingAndWallBlockItem(foodblockregistry.JUNIPER_SOUL_TORCH.get(), foodblockregistry.JUNIPER_SOUL_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
     //regular
       public static final DeferredHolder<Item, StandingAndWallBlockItem> CHERRY_TORCH_ITEM = FOODBLOCKITEM.register("cherry_torch_item", 

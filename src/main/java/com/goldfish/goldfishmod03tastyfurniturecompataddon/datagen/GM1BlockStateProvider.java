@@ -740,6 +740,122 @@ public class GM1BlockStateProvider extends BlockStateProvider
                 .rotationY(rotation)
                 .build();
             });
+     //------------------------------------------------------------juniper-----------------------------------------------------------------------
+       //regular
+        TorchBlock juniper_torch = foodblockregistry.JUNIPER_TORCH.get();
+        ResourceLocation juniper_torch_texture = modLoc("block/juniper_torch");
+        BlockModelBuilder juniper_torch_model = models()
+        .withExistingParent("juniper_torch", mcLoc("block/torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", juniper_torch_texture)
+        .texture("particle", juniper_torch_texture);
+
+        simpleBlock(juniper_torch, juniper_torch_model);
+
+        TorchBlock juniper_wall_torch = foodblockregistry.JUNIPER_WALL_TORCH.get();
+        BlockModelBuilder juniper_wall_torch_model = models()
+        .withExistingParent("juniper_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", juniper_torch_texture)
+        .texture("particle", juniper_torch_texture);
+        getVariantBuilder(juniper_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("juniper_wall_torch", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", juniper_torch_texture)
+                    .texture("particle", juniper_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //redstone
+        RedstoneTorchBlock juniper_redstone_torch = foodblockregistry.JUNIPER_REDSTONE_TORCH.get();
+        ResourceLocation juniper_redstone_torch_texture = modLoc("block/juniper_redstone_torch");
+        BlockModelBuilder juniper_redstone_torch_model = models()
+        .withExistingParent("juniper_redstone_torch", mcLoc("block/redstone_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", juniper_redstone_torch_texture)
+        .texture("particle", juniper_redstone_torch_texture);
+        
+
+        simpleBlock(juniper_redstone_torch, juniper_redstone_torch_model);
+
+        ResourceLocation juniper_redstone_wall_torch_texture = modLoc("block/juniper_redstone_torch");
+
+        RedstoneTorchBlock juniper_redstone_wall_torch = foodblockregistry.JUNIPER_REDSTONE_WALL_TORCH.get();
+        BlockModelBuilder juniper_redstone_wall_torch_model = models()
+        .withExistingParent("juniper_redstone_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", juniper_redstone_wall_torch_texture)
+        .texture("particle", juniper_redstone_wall_torch_texture);
+        getVariantBuilder(juniper_redstone_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("juniper_redstone_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", juniper_redstone_wall_torch_texture)
+                    .texture("particle", juniper_redstone_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //soul
+        TorchBlock juniper_soul_torch = foodblockregistry.JUNIPER_SOUL_TORCH.get();
+        ResourceLocation juniper_soul_torch_texture = modLoc("block/juniper_soul_torch");
+        BlockModelBuilder juniper_soul_torch_model = models()
+        .withExistingParent("juniper_soul_torch", mcLoc("block/soul_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", juniper_soul_torch_texture)
+        .texture("particle", juniper_soul_torch_texture);
+        
+
+        simpleBlock(juniper_soul_torch, juniper_soul_torch_model);
+
+        ResourceLocation juniper_soul_wall_torch_texture = modLoc("block/juniper_soul_torch");
+        TorchBlock juniper_soul_wall_torch = foodblockregistry.JUNIPER_SOUL_WALL_TORCH.get();
+        BlockModelBuilder juniper_soul_wall_torch_model = models()
+        .withExistingParent("juniper_soul_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", juniper_soul_wall_torch_texture)
+        .texture("particle", juniper_soul_wall_torch_texture);
+        getVariantBuilder(juniper_soul_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("juniper_soul_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", juniper_soul_wall_torch_texture)
+                    .texture("particle", juniper_soul_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
        //regular
         TorchBlock cherry_torch = foodblockregistry.CHERRY_TORCH.get();
