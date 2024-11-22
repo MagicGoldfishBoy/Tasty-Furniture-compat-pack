@@ -66,6 +66,8 @@
     "block.goldfishmod03tastyfurniturecompataddon.juniper_torch": "Juniper Torch",
     "block.goldfishmod03tastyfurniturecompataddon.juniper_redstone_torch": "Juniper Redstone Torch",
     "block.goldfishmod03tastyfurniturecompataddon.juniper_soul_torch": "Juniper Soul Torch",
+    "block.goldfishmod03tastyfurniturecompataddon.juniper_furnace": "Juniper Furnace",
+    "container.juniper_furnace": "Juniper Furnace",
   "item.goldfishmod03tastyfurniturecompataddon.cherry_mush": "Cherry Mush",
     "item.goldfishmod03tastyfurniturecompataddon.cherry_ingot": "Cherry Ingot",
     "item.goldfishmod03tastyfurniturecompataddon.cherry_nugget": "Cherry Nugget",

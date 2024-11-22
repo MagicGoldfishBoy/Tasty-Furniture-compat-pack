@@ -1019,6 +1019,50 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationY(rotation)
                       .build();
               });
+     //------------------------------------------------------------juniper-----------------------------------------------------------------------
+          FurnaceBlock juniper_furnace = foodblockregistry.JUNIPER_FURNACE.get();
+          ResourceLocation juniper_furnace_unlit_texture = modLoc("block/juniper_furnace");
+          ResourceLocation juniper_furnace_lit_texture = modLoc("block/juniper_furnace_lit");
+          ResourceLocation juniper_furnace_side = modLoc("block/juniper_block");
+          
+          // Define the model for the unlit state
+          BlockModelBuilder juniper_furnace_model_unlit = models()
+              .withExistingParent("juniper_furnace_model_unlit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", juniper_furnace_side)
+              .texture("top", juniper_furnace_side)
+              .texture("front", juniper_furnace_unlit_texture)
+              .texture("particle", juniper_furnace_side);
+          
+          // Define the model for the lit state
+          BlockModelBuilder juniper_furnace_model_lit = models()
+              .withExistingParent("juniper_furnace_model_lit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", juniper_furnace_side)
+              .texture("top", juniper_furnace_side)
+              .texture("front", juniper_furnace_lit_texture)
+              .texture("particle", juniper_furnace_side);
+          
+          // Configure variants for the juniper_furnace block
+          getVariantBuilder(juniper_furnace)
+              .forAllStates(state -> {
+                  Boolean lit = state.getValue(BlockStateProperties.LIT);
+                  Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                  int rotation = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+
+                  ResourceLocation modelLocation = lit ? modLoc("block/juniper_furnace_model_lit") : modLoc("block/juniper_furnace_model_unlit");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotation)
+                      .build();
+              });
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           FurnaceBlock cherry_furnace = foodblockregistry.CHERRY_FURNACE.get();
           ResourceLocation cherry_furnace_unlit_texture = modLoc("block/cherry_furnace");
