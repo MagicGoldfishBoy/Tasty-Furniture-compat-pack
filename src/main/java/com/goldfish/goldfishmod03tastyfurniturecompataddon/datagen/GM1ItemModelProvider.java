@@ -129,6 +129,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("juniper_gate_item", modLoc("block/juniper_gate"));
        //pressure plate
        pressurePlate("juniper_pressure_plate_item", modLoc("block/juniper_block"));
+       //sign
+       withExistingParent("juniper_sign_item", mcLoc("item/generated")).texture("layer0", "item/juniper_sign");
     //==============================================================================================================================================
     //|                                                              Cherry                                                                        |
     //==============================================================================================================================================

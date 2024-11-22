@@ -184,6 +184,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, SignItem> ELDERBERRY_SIGN_ITEM = FOODBLOCKITEM.register("elderberry_sign_item",
    () -> new SignItem(new SignItem.Properties(), foodblockregistry.ELDERBERRY_STANDING_SIGN.get(), foodblockregistry.ELDERBERRY_WALL_SIGN.get()));
+ //--------------------------------------------------------------------------------------Juniper---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, SignItem> JUNIPER_SIGN_ITEM = FOODBLOCKITEM.register("juniper_sign_item",
+   () -> new SignItem(new SignItem.Properties(), foodblockregistry.JUNIPER_STANDING_SIGN.get(), foodblockregistry.JUNIPER_WALL_SIGN.get()));
  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, SignItem> CHERRY_SIGN_ITEM = FOODBLOCKITEM.register("cherry_sign_item",
    () -> new SignItem(new SignItem.Properties(), foodblockregistry.CHERRY_STANDING_SIGN.get(), foodblockregistry.CHERRY_WALL_SIGN.get()));

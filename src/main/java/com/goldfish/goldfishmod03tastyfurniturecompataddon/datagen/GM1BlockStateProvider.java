@@ -260,6 +260,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
            WallSignBlock elderberry_wall_sign = foodblockregistry.ELDERBERRY_WALL_SIGN.get();
            ResourceLocation elderberry_sign_texture = modLoc("block/elderberry_block");
            signBlock(elderberry_sign, elderberry_wall_sign, elderberry_sign_texture);
+     //------------------------------------------------------------juniper-----------------------------------------------------------------------
+           StandingSignBlock juniper_sign = foodblockregistry.JUNIPER_STANDING_SIGN.get();
+           WallSignBlock juniper_wall_sign = foodblockregistry.JUNIPER_WALL_SIGN.get();
+           ResourceLocation juniper_sign_texture = modLoc("block/juniper_block");
+           signBlock(juniper_sign, juniper_wall_sign, juniper_sign_texture);
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
            StandingSignBlock cherry_sign = foodblockregistry.CHERRY_STANDING_SIGN.get();
            WallSignBlock cherry_wall_sign = foodblockregistry.CHERRY_WALL_SIGN.get();

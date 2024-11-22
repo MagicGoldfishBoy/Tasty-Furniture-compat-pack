@@ -20,10 +20,13 @@ import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.cherryWallSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.elderberryFurnace;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.elderberrySign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.elderberryWallSign;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.juniperSign;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.juniperWallSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.cherryFurnaceEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.cherrySignEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.elderberryFurnaceEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.elderberrySignEntity;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.juniperSignEntity;
 
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -338,7 +341,7 @@ public class foodblockregistry {
     ));
 //==============================================================================================================================================================================================
 //                                                                                     Pressure Plates
-//==============================================================================================================================================================================================
+//============================================================================================================================================================================================== 
  //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, PressurePlateBlock> ELDERBERRY_PRESSURE_PLATE = FOODBLOCK.register("elderberry_pressure_plate", 
     () -> new PressurePlateBlock(foodmaterialtyperegistry.PLANT, BlockBehaviour.Properties.of()
@@ -406,6 +409,51 @@ public class foodblockregistry {
          foodblockregistry.ELDERBERRY_SIGN.get(),
          foodblockregistry.ELDERBERRY_WALL_SIGN.get(),
          foodblockregistry.ELDERBERRY_STANDING_SIGN.get()
+     ).build(null)
+   );
+ //--------------------------------------------------------------------------------------Juniper---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Block, juniperSign> JUNIPER_SIGN = FOODBLOCK.register("juniper_sign",
+   () -> new juniperSign(
+     BlockBehaviour.Properties.of()
+         .mapColor(MapColor.WOOD)
+         .forceSolidOn()
+         .instrument(NoteBlockInstrument.BASS)
+         .noCollission()
+         .strength(1.0F)
+         .ignitedByLava(),
+         foodmaterialtyperegistry.JUNIPERWOODMAT
+   ));
+      public static final DeferredHolder<Block, juniperWallSign> JUNIPER_WALL_SIGN = FOODBLOCK.register("juniper_wall_sign",
+   () -> new juniperWallSign(
+       BlockBehaviour.Properties.of()
+       .mapColor(MapColor.WOOD)
+       .forceSolidOn()
+       .instrument(NoteBlockInstrument.BASS)
+       .noCollission()
+       .strength(1.0F)
+       .ignitedByLava()
+       .randomTicks(),
+       foodmaterialtyperegistry.JUNIPERWOODMAT
+   ));
+   public static final DeferredHolder<Block, juniperSign> JUNIPER_STANDING_SIGN = FOODBLOCK.register("juniper_standing_sign",
+   () -> new juniperSign(
+       BlockBehaviour.Properties.of()
+       .mapColor(MapColor.WOOD)
+       .forceSolidOn()
+       .instrument(NoteBlockInstrument.BASS)
+       .noCollission()
+       .strength(1.0F)
+       .ignitedByLava()
+       .randomTicks(),
+       foodmaterialtyperegistry.JUNIPERWOODMAT
+   ));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<juniperSignEntity>> JUNIPER_SIGN_ENTITY = FOODBLOCKENTITY.register(
+     "juniper_sign_entity",
+     () -> BlockEntityType.Builder.of(
+         juniperSignEntity::new,
+         foodblockregistry.JUNIPER_SIGN.get(),
+         foodblockregistry.JUNIPER_WALL_SIGN.get(),
+         foodblockregistry.JUNIPER_STANDING_SIGN.get()
      ).build(null)
    );
  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
