@@ -277,6 +277,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           TrapDoorBlock elderberry_trapdoor = foodblockregistry.ELDERBERRY_TRAPDOOR.get(); 
           ResourceLocation elderberry_trapdoor_texture = modLoc("block/elderberry_block");
           trapdoorBlockWithRenderType(elderberry_trapdoor, "elderberry_trapdoor", elderberry_trapdoor_texture, false, elderberry_trapdoor_texture);
+     //------------------------------------------------------------juniper-----------------------------------------------------------------------
+          TrapDoorBlock juniper_trapdoor = foodblockregistry.JUNIPER_TRAPDOOR.get(); 
+          ResourceLocation juniper_trapdoor_texture = modLoc("block/juniper_block");
+          trapdoorBlockWithRenderType(juniper_trapdoor, "juniper_trapdoor", juniper_trapdoor_texture, false, juniper_trapdoor_texture);
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           TrapDoorBlock cherry_trapdoor = foodblockregistry.CHERRY_TRAPDOOR.get(); 
           ResourceLocation cherry_trapdoor_texture = modLoc("block/cherry_block");
@@ -287,6 +291,9 @@ public class GM1BlockStateProvider extends BlockStateProvider
      //------------------------------------------------------------elderberry-----------------------------------------------------------------------
           Block elderberry_lamp = foodblockregistry.ELDERBERRY_LAMP.get();
           simpleBlock(elderberry_lamp);
+     //------------------------------------------------------------juniper-----------------------------------------------------------------------
+          Block juniper_lamp = foodblockregistry.JUNIPER_LAMP.get();
+          simpleBlock(juniper_lamp);
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           Block cherry_lamp = foodblockregistry.CHERRY_LAMP.get();
           simpleBlock(cherry_lamp);
@@ -299,6 +306,12 @@ public class GM1BlockStateProvider extends BlockStateProvider
           BlockModelBuilder elderberry_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(elderberry_carpet).getPath(), mcLoc("block/carpet"))
           .texture("wool", elderberry_carpet_texture);
           simpleBlock(elderberry_carpet, new ModelFile.UncheckedModelFile(elderberry_carpet_model.getLocation()));
+     //------------------------------------------------------------juniper-----------------------------------------------------------------------
+          CarpetBlock juniper_carpet = foodblockregistry.JUNIPER_CARPET.get();
+          ResourceLocation juniper_carpet_texture = modLoc("block/juniper_carpet");
+          BlockModelBuilder juniper_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(juniper_carpet).getPath(), mcLoc("block/carpet"))
+          .texture("wool", juniper_carpet_texture);
+          simpleBlock(juniper_carpet, new ModelFile.UncheckedModelFile(juniper_carpet_model.getLocation()));
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           CarpetBlock cherry_carpet = foodblockregistry.CHERRY_CARPET.get();
           ResourceLocation cherry_carpet_texture = modLoc("block/cherry_carpet");

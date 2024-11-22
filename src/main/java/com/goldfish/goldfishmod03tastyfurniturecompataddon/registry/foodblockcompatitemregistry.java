@@ -196,6 +196,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
      public static final DeferredHolder<Item, BlockItem> ELDERBERRY_TRAPDOOR_ITEM = FOODBLOCKITEM.register("elderberry_trapdoor_item",
      () -> new BlockItem(foodblockregistry.ELDERBERRY_TRAPDOOR.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Juniper---------------------------------------------------------------------------------------------
+     public static final DeferredHolder<Item, BlockItem> JUNIPER_TRAPDOOR_ITEM = FOODBLOCKITEM.register("juniper_trapdoor_item",
+     () -> new BlockItem(foodblockregistry.JUNIPER_TRAPDOOR.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
      public static final DeferredHolder<Item, BlockItem> CHERRY_TRAPDOOR_ITEM = FOODBLOCKITEM.register("cherry_trapdoor_item",
      () -> new BlockItem(foodblockregistry.CHERRY_TRAPDOOR.get(), new BlockItem.Properties()));
@@ -205,6 +208,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> ELDERBERRY_LAMP_ITEM = FOODBLOCKITEM.register("elderberry_lamp_item",
     () -> new BlockItem(foodblockregistry.ELDERBERRY_LAMP.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Juniper---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> JUNIPER_LAMP_ITEM = FOODBLOCKITEM.register("juniper_lamp_item",
+    () -> new BlockItem(foodblockregistry.JUNIPER_LAMP.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> CHERRY_LAMP_ITEM = FOODBLOCKITEM.register("cherry_lamp_item",
     () -> new BlockItem(foodblockregistry.CHERRY_LAMP.get(), new BlockItem.Properties()));
@@ -214,6 +220,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> ELDERBERRY_CARPET_ITEM = FOODBLOCKITEM.register("elderberry_carpet_item",
     () -> new BlockItem(foodblockregistry.ELDERBERRY_CARPET.get(), new BlockItem.Properties())); 
+ //--------------------------------------------------------------------------------------Juniper---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> JUNIPER_CARPET_ITEM = FOODBLOCKITEM.register("juniper_carpet_item",
+    () -> new BlockItem(foodblockregistry.JUNIPER_CARPET.get(), new BlockItem.Properties())); 
  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> CHERRY_CARPET_ITEM = FOODBLOCKITEM.register("cherry_carpet_item",
     () -> new BlockItem(foodblockregistry.CHERRY_CARPET.get(), new BlockItem.Properties())); 

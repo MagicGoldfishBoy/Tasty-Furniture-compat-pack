@@ -131,6 +131,13 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        pressurePlate("juniper_pressure_plate_item", modLoc("block/juniper_block"));
        //sign
        withExistingParent("juniper_sign_item", mcLoc("item/generated")).texture("layer0", "item/juniper_sign");
+       //trapdoor
+       withExistingParent("juniper_trapdoor_item", modLoc("block/juniper_trapdoor_trapdoor_bottom"));
+       //lamp
+       withExistingParent("juniper_lamp_item", modLoc("block/juniper_lamp"));
+       //carpet
+       ResourceLocation juniper_carpet_texture = modLoc("block/juniper_carpet");
+       carpet("juniper_carpet_item", juniper_carpet_texture);
     //==============================================================================================================================================
     //|                                                              Cherry                                                                        |
     //==============================================================================================================================================

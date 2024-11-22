@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "goldfishmod03tastyfurniturecompataddon:juniper_nugget"
+    }
+  },
+  "pattern": [
+    "   ",
+    "AA ",
+    "AA "
+  ],
+  "result": {
+    "count": 3,
+    "id": "goldfishmod03tastyfurniturecompataddon:juniper_carpet_item"
+  }
+}
