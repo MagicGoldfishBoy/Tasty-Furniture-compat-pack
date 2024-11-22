@@ -117,6 +117,18 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        stairs("juniper_stairs_item", modLoc("block/juniper_block"), modLoc("block/juniper_block"), modLoc("block/juniper_block"));
        //bricks stairs
        stairs("juniper_bricks_stairs_item", modLoc("block/juniper_bricks_block"), modLoc("block/juniper_bricks_block"), modLoc("block/juniper_bricks_block"));
+       //bars
+       withExistingParent("juniper_bars_item", mcLoc("item/generated")).texture("layer0", "block/juniper_bars");
+       //doors
+       withExistingParent("juniper_door_item", mcLoc("item/generated")).texture("layer0", "item/juniper_door_item");
+       //button
+       buttonInventory("juniper_button_item", modLoc("block/juniper_block"));
+       //fence
+       fenceInventory("juniper_fence_item", modLoc("block/juniper_block"));
+       //gate
+       withExistingParent("juniper_gate_item", modLoc("block/juniper_gate"));
+       //pressure plate
+       pressurePlate("juniper_pressure_plate_item", modLoc("block/juniper_block"));
     //==============================================================================================================================================
     //|                                                              Cherry                                                                        |
     //==============================================================================================================================================

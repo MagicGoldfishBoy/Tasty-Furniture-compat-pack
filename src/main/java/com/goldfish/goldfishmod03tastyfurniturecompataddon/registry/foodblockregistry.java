@@ -239,6 +239,11 @@ public class foodblockregistry {
    .strength(0.25F, 0.25F)
    .sound(SoundType.MUD_BRICKS)
    .noOcclusion()));
+ //--------------------------------------------------------------------------------------Juniper---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Block, IronBarsBlock> JUNIPER_BARS = FOODBLOCK.register("juniper_bars", () -> new IronBarsBlock(BlockBehaviour.Properties.of()
+   .strength(0.25F, 0.25F)
+   .sound(SoundType.MUD_BRICKS)
+   .noOcclusion()));
  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Block, IronBarsBlock> CHERRY_BARS = FOODBLOCK.register("cherry_bars", () -> new IronBarsBlock(BlockBehaviour.Properties.of()
    .strength(0.25F, 0.25F)
@@ -249,6 +254,11 @@ public class foodblockregistry {
 //==============================================================================================================================================================================================
  //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
   public static final DeferredHolder<Block, DoorBlock> ELDERBERRY_DOOR = FOODBLOCK.register("elderberry_door", () -> new DoorBlock(foodmaterialtyperegistry.PLANT, BlockBehaviour.Properties.of()
+  .strength(0.25F, 0.25F)
+  .sound(SoundType.MUD_BRICKS)
+  .noOcclusion()));
+ //--------------------------------------------------------------------------------------Juniper---------------------------------------------------------------------------------------------
+  public static final DeferredHolder<Block, DoorBlock> JUNIPER_DOOR = FOODBLOCK.register("juniper_door", () -> new DoorBlock(foodmaterialtyperegistry.PLANT, BlockBehaviour.Properties.of()
   .strength(0.25F, 0.25F)
   .sound(SoundType.MUD_BRICKS)
   .noOcclusion()));
@@ -264,6 +274,10 @@ public class foodblockregistry {
   public static final DeferredHolder<Block, ButtonBlock> ELDERBERRY_BUTTON = FOODBLOCK.register("elderberry_button", () -> new ButtonBlock(BlockSetType.CRIMSON, 20, 
   BlockBehaviour.Properties.of()
   .sound(SoundType.MUD_BRICKS)));
+ //--------------------------------------------------------------------------------------Juniper---------------------------------------------------------------------------------------------
+  public static final DeferredHolder<Block, ButtonBlock> JUNIPER_BUTTON = FOODBLOCK.register("juniper_button", () -> new ButtonBlock(BlockSetType.CRIMSON, 20, 
+  BlockBehaviour.Properties.of()
+  .sound(SoundType.MUD_BRICKS)));
  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
   public static final DeferredHolder<Block, ButtonBlock> CHERRY_BUTTON = FOODBLOCK.register("cherry_button", () -> new ButtonBlock(BlockSetType.CRIMSON, 20, 
   BlockBehaviour.Properties.of()
@@ -273,6 +287,13 @@ public class foodblockregistry {
 //==============================================================================================================================================================================================
  //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
   public static final DeferredHolder<Block, FenceBlock> ELDERBERRY_FENCE = FOODBLOCK.register("elderberry_fence", () -> new FenceBlock(BlockBehaviour.Properties.of()
+  .destroyTime(1.75f)
+  .explosionResistance(9.0f)
+  .sound(SoundType.MUD_BRICKS)
+  .noOcclusion()
+  ));
+ //--------------------------------------------------------------------------------------Juniper---------------------------------------------------------------------------------------------
+  public static final DeferredHolder<Block, FenceBlock> JUNIPER_FENCE = FOODBLOCK.register("juniper_fence", () -> new FenceBlock(BlockBehaviour.Properties.of()
   .destroyTime(1.75f)
   .explosionResistance(9.0f)
   .sound(SoundType.MUD_BRICKS)
@@ -297,6 +318,15 @@ public class foodblockregistry {
             .destroyTime(1.5f)
             .explosionResistance(8.0f)
     ));
+ //--------------------------------------------------------------------------------------Juniper---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, FenceGateBlock> JUNIPER_GATE = FOODBLOCK.register("juniper_gate", 
+    () -> new FenceGateBlock(
+            foodmaterialtyperegistry.JUNIPERWOODMAT, 
+            BlockBehaviour.Properties.of()
+            .sound(SoundType.ROOTED_DIRT)
+            .destroyTime(1.5f)
+            .explosionResistance(8.0f)
+    ));
  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, FenceGateBlock> CHERRY_GATE = FOODBLOCK.register("cherry_gate", 
     () -> new FenceGateBlock(
@@ -311,6 +341,13 @@ public class foodblockregistry {
 //==============================================================================================================================================================================================
  //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, PressurePlateBlock> ELDERBERRY_PRESSURE_PLATE = FOODBLOCK.register("elderberry_pressure_plate", 
+    () -> new PressurePlateBlock(foodmaterialtyperegistry.PLANT, BlockBehaviour.Properties.of()
+    .sound(SoundType.ROOTED_DIRT)
+    .destroyTime(0.5f)
+    .explosionResistance(4.0f)
+    ));
+ //--------------------------------------------------------------------------------------Juniper---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, PressurePlateBlock> JUNIPER_PRESSURE_PLATE = FOODBLOCK.register("juniper_pressure_plate", 
     () -> new PressurePlateBlock(foodmaterialtyperegistry.PLANT, BlockBehaviour.Properties.of()
     .sound(SoundType.ROOTED_DIRT)
     .destroyTime(0.5f)

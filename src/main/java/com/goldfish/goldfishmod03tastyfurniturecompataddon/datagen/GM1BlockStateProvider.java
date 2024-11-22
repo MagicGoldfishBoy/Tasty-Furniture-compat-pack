@@ -164,6 +164,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation elderberry_bars_texture = modLoc("block/elderberry_bars");
           ResourceLocation elderberry_bars_rim_texture = modLoc("block/elderberry_block");
           paneBlockWithRenderType(elderberry_bars, "elderberry_bars", elderberry_bars_texture, elderberry_bars_rim_texture, "cutout_mipped_all"); 
+     //------------------------------------------------------------juniper-----------------------------------------------------------------------
+          IronBarsBlock juniper_bars = foodblockregistry.JUNIPER_BARS.get(); 
+          ResourceLocation juniper_bars_texture = modLoc("block/juniper_bars");
+          ResourceLocation juniper_bars_rim_texture = modLoc("block/juniper_block");
+          paneBlockWithRenderType(juniper_bars, "juniper_bars", juniper_bars_texture, juniper_bars_rim_texture, "cutout_mipped_all"); 
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           IronBarsBlock cherry_bars = foodblockregistry.CHERRY_BARS.get(); 
           ResourceLocation cherry_bars_texture = modLoc("block/cherry_bars");
@@ -177,6 +182,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation elderberry_door_top_texture = modLoc("block/elderberry_door_top");
           ResourceLocation elderberry_door_bottom_texture = modLoc("block/elderberry_door_bottom");
           doorBlockWithRenderType(elderberry_door, "elderberry_door", elderberry_door_bottom_texture, elderberry_door_top_texture, "translucent"); 
+     //------------------------------------------------------------juniper-----------------------------------------------------------------------
+          DoorBlock juniper_door = foodblockregistry.JUNIPER_DOOR.get(); 
+          ResourceLocation juniper_door_top_texture = modLoc("block/juniper_door_top");
+          ResourceLocation juniper_door_bottom_texture = modLoc("block/juniper_door_bottom");
+          doorBlockWithRenderType(juniper_door, "juniper_door", juniper_door_bottom_texture, juniper_door_top_texture, "translucent"); 
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           DoorBlock cherry_door = foodblockregistry.CHERRY_DOOR.get(); 
           ResourceLocation cherry_door_top_texture = modLoc("block/cherry_door_top");
@@ -189,6 +199,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ButtonBlock elderberry_button = foodblockregistry.ELDERBERRY_BUTTON.get();
           ResourceLocation elderberry_button_texture = modLoc("block/elderberry_block");
           buttonBlock(elderberry_button, elderberry_button_texture);
+     //------------------------------------------------------------juniper-----------------------------------------------------------------------
+          ButtonBlock juniper_button = foodblockregistry.JUNIPER_BUTTON.get();
+          ResourceLocation juniper_button_texture = modLoc("block/juniper_block");
+          buttonBlock(juniper_button, juniper_button_texture);
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           ButtonBlock cherry_button = foodblockregistry.CHERRY_BUTTON.get();
           ResourceLocation cherry_button_texture = modLoc("block/cherry_block");
@@ -205,6 +219,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
           FenceGateBlock elderberry_gate = foodblockregistry.ELDERBERRY_GATE.get();
           ResourceLocation elderberry_gate_texture = modLoc("block/elderberry_block");
           fenceGateBlock(elderberry_gate, elderberry_gate_texture);
+     //------------------------------------------------------------juniper-----------------------------------------------------------------------
+       //fence
+          FenceBlock juniper_fence = foodblockregistry.JUNIPER_FENCE.get();
+          ResourceLocation juniper_fence_texture = modLoc("block/juniper_block");
+          fenceBlock(juniper_fence, juniper_fence_texture);
+       //gate
+          FenceGateBlock juniper_gate = foodblockregistry.JUNIPER_GATE.get();
+          ResourceLocation juniper_gate_texture = modLoc("block/juniper_block");
+          fenceGateBlock(juniper_gate, juniper_gate_texture);
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
        //fence
           FenceBlock cherry_fence = foodblockregistry.CHERRY_FENCE.get();
@@ -221,6 +244,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           PressurePlateBlock elderberry_pressure_plate = foodblockregistry.ELDERBERRY_PRESSURE_PLATE.get();
           ResourceLocation elderberry_pressure_plate_texture = modLoc("block/elderberry_block");
           pressurePlateBlock(elderberry_pressure_plate, elderberry_pressure_plate_texture);
+     //------------------------------------------------------------juniper-----------------------------------------------------------------------
+          PressurePlateBlock juniper_pressure_plate = foodblockregistry.JUNIPER_PRESSURE_PLATE.get();
+          ResourceLocation juniper_pressure_plate_texture = modLoc("block/juniper_block");
+          pressurePlateBlock(juniper_pressure_plate, juniper_pressure_plate_texture);
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           PressurePlateBlock cherry_pressure_plate = foodblockregistry.CHERRY_PRESSURE_PLATE.get();
           ResourceLocation cherry_pressure_plate_texture = modLoc("block/cherry_block");

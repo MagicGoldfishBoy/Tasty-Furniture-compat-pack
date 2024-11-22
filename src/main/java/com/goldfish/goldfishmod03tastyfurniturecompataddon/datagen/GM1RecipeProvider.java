@@ -571,6 +571,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', nuggetregistry.ELDERBERRY_NUGGET.get())
          .unlockedBy("has_elderberry_nugget", has(nuggetregistry.ELDERBERRY_NUGGET.get()))
          .save(output);
+  //--------------------------------------------------------------------------------------Juniper---------------------------------------------------------------------------------------------
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.JUNIPER_BARS_ITEM.get(), 8)
+         .pattern("   ")
+         .pattern("AAA")
+         .pattern("AAA")
+         .define('A', nuggetregistry.JUNIPER_NUGGET.get())
+         .unlockedBy("has_juniper_nugget", has(nuggetregistry.JUNIPER_NUGGET.get()))
+         .save(output);
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_BARS_ITEM.get(), 8)
          .pattern("   ")
@@ -589,6 +597,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', ingotregistry.ELDERBERRY_INGOT.get())
          .unlockedBy("has_elderberry_nugget", has(ingotregistry.ELDERBERRY_INGOT.get()))
          .save(output);
+  //--------------------------------------------------------------------------------------Juniper---------------------------------------------------------------------------------------------
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.JUNIPER_DOOR_ITEM.get(), 3)
+         .pattern("AA ")
+         .pattern("AA ")
+         .pattern("AA ")
+         .define('A', ingotregistry.JUNIPER_INGOT.get())
+         .unlockedBy("has_juniper_nugget", has(ingotregistry.JUNIPER_INGOT.get()))
+         .save(output);
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_DOOR_ITEM.get(), 3)
          .pattern("AA ")
@@ -603,6 +619,11 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.ELDERBERRY_BUTTON_ITEM.get(), 1)
        .requires(nuggetregistry.ELDERBERRY_NUGGET.get())
        .unlockedBy("has_elderberry_nugget", has(nuggetregistry.ELDERBERRY_NUGGET.get()))
+       .save(output);
+  //--------------------------------------------------------------------------------------Juniper---------------------------------------------------------------------------------------------
+       ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.JUNIPER_BUTTON_ITEM.get(), 1)
+       .requires(nuggetregistry.JUNIPER_NUGGET.get())
+       .unlockedBy("has_juniper_nugget", has(nuggetregistry.JUNIPER_NUGGET.get()))
        .save(output);
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_BUTTON_ITEM.get(), 1)
@@ -629,6 +650,25 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .define('A', ingotregistry.ELDERBERRY_INGOT.get())
           .define('B', Items.STICK)
           .unlockedBy("has_elderberry_ingot", has(ingotregistry.ELDERBERRY_INGOT.get()))
+          .save(output);        
+  //--------------------------------------------------------------------------------------Juniper---------------------------------------------------------------------------------------------
+        //fence
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.JUNIPER_FENCE_ITEM.get(), 3)
+          .pattern("ABA")
+          .pattern("ABA")
+          .pattern("   ")
+          .define('A', ingotregistry.JUNIPER_INGOT.get())
+          .define('B', Items.STICK)
+          .unlockedBy("has_juniper_ingot", has(ingotregistry.JUNIPER_INGOT.get()))
+          .save(output);        
+        //gate
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.JUNIPER_GATE_ITEM.get(), 1)
+          .pattern("BAB")
+          .pattern("BAB")
+          .pattern("   ")
+          .define('A', ingotregistry.JUNIPER_INGOT.get())
+          .define('B', Items.STICK)
+          .unlockedBy("has_juniper_ingot", has(ingotregistry.JUNIPER_INGOT.get()))
           .save(output);        
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
         //fence
@@ -658,6 +698,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .pattern("   ")
         .define('A', foodblockcompatitemregistry.ELDERBERRY_BLOCK_ITEM.get())
         .unlockedBy("has_elderberry_block",  has(foodblockcompatitemregistry.ELDERBERRY_BLOCK_ITEM.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Juniper---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.JUNIPER_PRESSURE_PLATE_ITEM.get())
+        .pattern("   ")
+        .pattern("AA ")
+        .pattern("   ")
+        .define('A', foodblockcompatitemregistry.JUNIPER_BLOCK_ITEM.get())
+        .unlockedBy("has_juniper_block",  has(foodblockcompatitemregistry.JUNIPER_BLOCK_ITEM.get()))
         .save(output);
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_PRESSURE_PLATE_ITEM.get())
