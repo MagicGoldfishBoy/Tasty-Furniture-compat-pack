@@ -866,6 +866,13 @@ public class foodblockregistry {
      .explosionResistance(chair_explosion_resistance)
      .noOcclusion()
      ));
+ //--------------------------------------------------------------------------------------Juniper---------------------------------------------------------------------------------------------
+     public static final DeferredHolder<Block, foodChairBlock> JUNIPER_CHAIR = FOODBLOCK.register("juniper_chair", () -> new foodChairBlock(BlockBehaviour.Properties.of()
+     .sound(plant_chair_sound)
+     .destroyTime(chair_destroy_time)
+     .explosionResistance(chair_explosion_resistance)
+     .noOcclusion()
+     ));
  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
      public static final DeferredHolder<Block, foodChairBlock> CHERRY_CHAIR = FOODBLOCK.register("cherry_chair", () -> new foodChairBlock(BlockBehaviour.Properties.of()
      .sound(plant_chair_sound)

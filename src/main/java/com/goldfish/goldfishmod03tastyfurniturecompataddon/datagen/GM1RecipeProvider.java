@@ -1155,6 +1155,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('B', foodblockcompatitemregistry.ELDERBERRY_SLAB_ITEM.get())
         .unlockedBy("has_elderberry_slab", has(foodblockcompatitemregistry.ELDERBERRY_SLAB_ITEM.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Juniper---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.JUNIPER_CHAIR_ITEM.get())
+        .pattern("AAA")
+        .pattern("BBB")
+        .pattern("A A")
+        .define('A', ingotregistry.JUNIPER_INGOT.get())
+        .define('B', foodblockcompatitemregistry.JUNIPER_SLAB_ITEM.get())
+        .unlockedBy("has_juniper_slab", has(foodblockcompatitemregistry.JUNIPER_SLAB_ITEM.get()))
+        .save(output);
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_CHAIR_ITEM.get())
         .pattern("AAA")
