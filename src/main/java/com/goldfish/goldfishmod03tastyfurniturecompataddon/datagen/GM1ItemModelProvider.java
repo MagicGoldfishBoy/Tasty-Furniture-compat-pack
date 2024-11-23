@@ -165,6 +165,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("juniper_barrel_item", modLoc("block/juniper_barrel_model_closed"));
        //chair
        withExistingParent("juniper_chair_item", modLoc("block/juniper_chair"));
+       //bed
+       withExistingParent("juniper_bed_item", modLoc("block/juniper_bed"));
     //==============================================================================================================================================
     //|                                                              Cherry                                                                        |
     //==============================================================================================================================================

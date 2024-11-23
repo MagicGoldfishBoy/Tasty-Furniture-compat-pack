@@ -895,6 +895,13 @@ public class foodblockregistry {
      .explosionResistance(bed_explosion_resistance)
      .noOcclusion()
      ));
+ //--------------------------------------------------------------------------------------Juniper---------------------------------------------------------------------------------------------
+     public static final DeferredHolder<Block, foodBed> JUNIPER_BED = FOODBLOCK.register("juniper_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     .sound(plant_bed_sound)
+     .destroyTime(bed_destroy_time)
+     .explosionResistance(bed_explosion_resistance)
+     .noOcclusion()
+     ));
  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
      public static final DeferredHolder<Block, foodBed> CHERRY_BED = FOODBLOCK.register("cherry_bed", () -> new foodBed(BlockBehaviour.Properties.of()
      .sound(plant_bed_sound)
@@ -905,7 +912,7 @@ public class foodblockregistry {
 
    //.........entity
      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<bedEntity>> FOOD_BED_ENTITY = FOODBLOCKENTITY.register("food_bed_entity",
-     () -> BlockEntityType.Builder.of(bedEntity::new, ELDERBERRY_BED.get(), CHERRY_BED.get()).build(null));
+     () -> BlockEntityType.Builder.of(bedEntity::new, ELDERBERRY_BED.get(), JUNIPER_BED.get(), CHERRY_BED.get()).build(null));
    //^ I did not think this would actually work, but it does O.o
 
 //==============================================================================================================================================================================================
