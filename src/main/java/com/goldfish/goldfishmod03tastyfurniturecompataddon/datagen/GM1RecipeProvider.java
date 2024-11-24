@@ -983,6 +983,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', ingotregistry.CHERRY_INGOT.get())
         .unlockedBy("has_cherry_ingot", has(ingotregistry.CHERRY_INGOT.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.COCONUT_TRAPDOOR_ITEM.get())
+        .pattern("   ")
+        .pattern("AAA")
+        .pattern("AAA")
+        .define('A', ingotregistry.COCONUT_INGOT.get())
+        .unlockedBy("has_coconut_ingot", has(ingotregistry.COCONUT_INGOT.get()))
+        .save(output);
       }
  protected void buildLampRecipes(RecipeOutput output) {
   //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
@@ -1012,6 +1020,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('B', foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get())
         .unlockedBy("has_glow_berry_block", has(foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.COCONUT_LAMP_ITEM.get())
+        .pattern("AAA")
+        .pattern("ABA")
+        .pattern("AAA")
+        .define('A', ingotregistry.COCONUT_INGOT.get())
+        .define('B', foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get())
+        .unlockedBy("has_glow_berry_block", has(foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get()))
+        .save(output);
       }
  protected void buildCarpetRecipes(RecipeOutput output) {
   //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
@@ -1037,6 +1054,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .pattern("AA ")
         .define('A', nuggetregistry.CHERRY_NUGGET.get())
         .unlockedBy("has_cherry_nugget", has(nuggetregistry.CHERRY_NUGGET.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.COCONUT_CARPET_ITEM.get(), 3)
+        .pattern("   ")
+        .pattern("AA ")
+        .pattern("AA ")
+        .define('A', nuggetregistry.COCONUT_NUGGET.get())
+        .unlockedBy("has_coconut_nugget", has(nuggetregistry.COCONUT_NUGGET.get()))
         .save(output);
       }
  protected void buildLanternRecipes(RecipeOutput output) {

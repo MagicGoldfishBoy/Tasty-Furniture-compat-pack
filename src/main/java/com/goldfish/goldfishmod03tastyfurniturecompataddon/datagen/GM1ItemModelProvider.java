@@ -287,6 +287,13 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        pressurePlate("coconut_pressure_plate_item", modLoc("block/coconut_block"));
        //sign
        withExistingParent("coconut_sign_item", mcLoc("item/generated")).texture("layer0", "item/coconut_sign");
+       //trapdoor
+       withExistingParent("coconut_trapdoor_item", modLoc("block/coconut_trapdoor_trapdoor_bottom"));
+       //lamp
+       withExistingParent("coconut_lamp_item", modLoc("block/coconut_lamp"));
+       //carpet
+       ResourceLocation coconut_carpet_texture = modLoc("block/coconut_carpet");
+       carpet("coconut_carpet_item", coconut_carpet_texture);
   }
 }
 

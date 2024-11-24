@@ -250,6 +250,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
      public static final DeferredHolder<Item, BlockItem> CHERRY_TRAPDOOR_ITEM = FOODBLOCKITEM.register("cherry_trapdoor_item",
      () -> new BlockItem(foodblockregistry.CHERRY_TRAPDOOR.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
+     public static final DeferredHolder<Item, BlockItem> COCONUT_TRAPDOOR_ITEM = FOODBLOCKITEM.register("coconut_trapdoor_item",
+     () -> new BlockItem(foodblockregistry.COCONUT_TRAPDOOR.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                         Lamps
 //==============================================================================================================================================================================================
@@ -262,6 +265,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> CHERRY_LAMP_ITEM = FOODBLOCKITEM.register("cherry_lamp_item",
     () -> new BlockItem(foodblockregistry.CHERRY_LAMP.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> COCONUT_LAMP_ITEM = FOODBLOCKITEM.register("coconut_lamp_item",
+    () -> new BlockItem(foodblockregistry.COCONUT_LAMP.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                        Carpets
 //==============================================================================================================================================================================================
@@ -274,6 +280,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> CHERRY_CARPET_ITEM = FOODBLOCKITEM.register("cherry_carpet_item",
     () -> new BlockItem(foodblockregistry.CHERRY_CARPET.get(), new BlockItem.Properties())); 
+ //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> COCONUT_CARPET_ITEM = FOODBLOCKITEM.register("coconut_carpet_item",
+    () -> new BlockItem(foodblockregistry.COCONUT_CARPET.get(), new BlockItem.Properties())); 
 //==============================================================================================================================================================================================
 //                                                                                        Lanterns
 //==============================================================================================================================================================================================

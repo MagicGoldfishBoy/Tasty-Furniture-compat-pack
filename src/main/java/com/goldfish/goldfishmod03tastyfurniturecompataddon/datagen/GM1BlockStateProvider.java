@@ -346,6 +346,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           TrapDoorBlock cherry_trapdoor = foodblockregistry.CHERRY_TRAPDOOR.get(); 
           ResourceLocation cherry_trapdoor_texture = modLoc("block/cherry_block");
           trapdoorBlockWithRenderType(cherry_trapdoor, "cherry_trapdoor", cherry_trapdoor_texture, false, cherry_trapdoor_texture);
+     //------------------------------------------------------------coconut-----------------------------------------------------------------------
+          TrapDoorBlock coconut_trapdoor = foodblockregistry.COCONUT_TRAPDOOR.get(); 
+          ResourceLocation coconut_trapdoor_texture = modLoc("block/coconut_block");
+          trapdoorBlockWithRenderType(coconut_trapdoor, "coconut_trapdoor", coconut_trapdoor_texture, false, coconut_trapdoor_texture);
     //==============================================================================================================================================
     //|                                                               Lamps                                                                        |
     //==============================================================================================================================================
@@ -358,6 +362,9 @@ public class GM1BlockStateProvider extends BlockStateProvider
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           Block cherry_lamp = foodblockregistry.CHERRY_LAMP.get();
           simpleBlock(cherry_lamp);
+     //------------------------------------------------------------coconut-----------------------------------------------------------------------
+          Block coconut_lamp = foodblockregistry.COCONUT_LAMP.get();
+          simpleBlock(coconut_lamp);
     //==============================================================================================================================================
     //|                                                              Carpets                                                                       |
     //==============================================================================================================================================
@@ -379,6 +386,12 @@ public class GM1BlockStateProvider extends BlockStateProvider
           BlockModelBuilder cherry_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(cherry_carpet).getPath(), mcLoc("block/carpet"))
           .texture("wool", cherry_carpet_texture);
           simpleBlock(cherry_carpet, new ModelFile.UncheckedModelFile(cherry_carpet_model.getLocation()));
+     //------------------------------------------------------------coconut-----------------------------------------------------------------------
+          CarpetBlock coconut_carpet = foodblockregistry.COCONUT_CARPET.get();
+          ResourceLocation coconut_carpet_texture = modLoc("block/coconut_carpet");
+          BlockModelBuilder coconut_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(coconut_carpet).getPath(), mcLoc("block/carpet"))
+          .texture("wool", coconut_carpet_texture);
+          simpleBlock(coconut_carpet, new ModelFile.UncheckedModelFile(coconut_carpet_model.getLocation()));
     //==============================================================================================================================================
     //|                                                             Lanterns                                                                       |
     //==============================================================================================================================================
