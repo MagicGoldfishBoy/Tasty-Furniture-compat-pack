@@ -110,5 +110,16 @@
     "block.goldfishmod03tastyfurniturecompataddon.cherry_chair": "Cherry Chair",
     "block.goldfishmod03tastyfurniturecompataddon.cherry_bed": "Cherry Bed",
     "block.goldfishmod03tastyfurniturecompataddon.small_cherry_cabinet": "Cherry Small Cabinet",
-    "block.goldfishmod03tastyfurniturecompataddon.medium_cherry_cabinet": "Cherry Medium Cabinet"
+    "block.goldfishmod03tastyfurniturecompataddon.medium_cherry_cabinet": "Cherry Medium Cabinet",
+  "item.goldfishmod03tastyfurniturecompataddon.coconut_mush": "Coconut Mush",
+    "item.goldfishmod03tastyfurniturecompataddon.coconut_ingot": "Coconut Ingot",
+    "item.goldfishmod03tastyfurniturecompataddon.coconut_nugget": "Coconut Nugget",
+    "block.goldfishmod03tastyfurniturecompataddon.coconut_block": "Coconut Block",
+    "block.goldfishmod03tastyfurniturecompataddon.coconut_bricks_block": "Coconut Bricks Block",
+    "block.goldfishmod03tastyfurniturecompataddon.coconut_chiseled_block": "Coconut Chiseled Block",
+    "block.goldfishmod03tastyfurniturecompataddon.coconut_tiles_block": "Coconut Tiles Block",
+    "block.goldfishmod03tastyfurniturecompataddon.coconut_slab": "Coconut Slab",
+    "block.goldfishmod03tastyfurniturecompataddon.coconut_bricks_slab": "Coconut Bricks Slab",
+    "block.goldfishmod03tastyfurniturecompataddon.coconut_stairs": "Coconut Stairs",
+    "block.goldfishmod03tastyfurniturecompataddon.coconut_bricks_stairs": "Coconut Bricks Stairs"
 }

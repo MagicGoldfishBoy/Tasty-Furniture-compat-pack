@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "goldfishmod03tastyfurniturecompataddon:coconut_block_item"
+  },
+  "result": {
+    "count": 1,
+    "id": "goldfishmod03tastyfurniturecompataddon:coconut_chiseled_block_item"
+  }
+}

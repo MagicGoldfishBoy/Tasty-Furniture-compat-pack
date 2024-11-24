@@ -248,6 +248,31 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //cabinet
        withExistingParent("small_cherry_cabinet_item", modLoc("block/cherry_cabinet"));
        withExistingParent("medium_cherry_cabinet_item", modLoc("block/medium_cherry_cabinet"));
+    //==============================================================================================================================================
+    //|                                                              Coconut                                                                        |
+    //==============================================================================================================================================
+       //mush
+        withExistingParent("coconut_mush", mcLoc("item/generated")).texture("layer0", "item/coconut_mush");
+       //ingot
+        withExistingParent("coconut_ingot", mcLoc("item/generated")).texture("layer0", "item/coconut_ingot");
+       //nugget
+        withExistingParent("coconut_nugget", mcLoc("item/generated")).texture("layer0", "item/coconut_nugget");
+       //block
+        withExistingParent("coconut_block_item", modLoc("block/coconut_block"));
+       //bricks block
+        withExistingParent("coconut_bricks_block_item", modLoc("block/coconut_bricks_block"));
+       //chiseled block
+        withExistingParent("coconut_chiseled_block_item", modLoc("block/coconut_chiseled_block"));
+       //tiles block
+        withExistingParent("coconut_tiles_block_item", modLoc("block/coconut_tiles_block"));
+       //slab
+       slab("coconut_slab_item", modLoc("block/coconut_block"), modLoc("block/coconut_block"), modLoc("block/coconut_block"));
+       //bricks slab
+       slab("coconut_bricks_slab_item", modLoc("block/coconut_bricks_block"), modLoc("block/coconut_bricks_block"), modLoc("block/coconut_bricks_block"));
+       //stairs
+       stairs("coconut_stairs_item", modLoc("block/coconut_block"), modLoc("block/coconut_block"), modLoc("block/coconut_block"));
+       //bricks stairs
+       stairs("coconut_bricks_stairs_item", modLoc("block/coconut_bricks_block"), modLoc("block/coconut_bricks_block"), modLoc("block/coconut_bricks_block"));
   }
 }
 

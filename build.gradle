@@ -106,7 +106,9 @@ dependencies {
     api "curse.maven:pams-harvestcraft-2-trees-365460:5616625"
     api "curse.maven:productivetrees-867074:5497946"
     api "curse.maven:productivebees-377897:5530223"
-    //localRuntime "curse.maven:croptopia-415438:5571647"
+    api "curse.maven:epherolib-885449:5549595"
+    api "curse.maven:croptopia-415438:5571647"
+   // localRuntime "curse.maven:farmers-delight-398521:5566383"
     api "curse.maven:jei-238222:5846880"
 
     // Example optional mod dependency with JEI

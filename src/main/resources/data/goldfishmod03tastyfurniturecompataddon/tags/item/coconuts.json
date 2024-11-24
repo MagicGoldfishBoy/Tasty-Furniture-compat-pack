@@ -1,0 +1,15 @@
+{
+    "replace": false,
+    "values": [
+        {"id":"pamhc2trees:coconutitem",
+        "required": false},
+        {"id":"productivetrees:coconut",
+        "required": false},
+        {"id":"harvestcraft:coconutitem",
+        "required": false},
+        {"id":"croptopia:coconut",
+        "required": false},
+        {"id":"c:crops/coconut",
+        "required": false}
+    ]
+  }
