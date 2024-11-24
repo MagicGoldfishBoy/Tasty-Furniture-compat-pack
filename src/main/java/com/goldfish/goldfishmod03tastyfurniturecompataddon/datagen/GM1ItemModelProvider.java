@@ -273,6 +273,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        stairs("coconut_stairs_item", modLoc("block/coconut_block"), modLoc("block/coconut_block"), modLoc("block/coconut_block"));
        //bricks stairs
        stairs("coconut_bricks_stairs_item", modLoc("block/coconut_bricks_block"), modLoc("block/coconut_bricks_block"), modLoc("block/coconut_bricks_block"));
+       //bars
+       withExistingParent("coconut_bars_item", mcLoc("item/generated")).texture("layer0", "block/coconut_bars");
   }
 }
 

@@ -743,6 +743,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', nuggetregistry.CHERRY_NUGGET.get())
          .unlockedBy("has_cherry_nugget", has(nuggetregistry.CHERRY_NUGGET.get()))
          .save(output);
+  //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.COCONUT_BARS_ITEM.get(), 8)
+         .pattern("   ")
+         .pattern("AAA")
+         .pattern("AAA")
+         .define('A', nuggetregistry.COCONUT_NUGGET.get())
+         .unlockedBy("has_coconut_nugget", has(nuggetregistry.COCONUT_NUGGET.get()))
+         .save(output);
       }
  protected void buildDoorRecipes(RecipeOutput output) {
   //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
