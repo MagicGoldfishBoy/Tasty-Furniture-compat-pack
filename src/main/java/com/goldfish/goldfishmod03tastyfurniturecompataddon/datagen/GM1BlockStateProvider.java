@@ -1477,6 +1477,18 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .modelFile(models().getExistingFile(modelLocation))
                   .build();
           });
+     //------------------------------------------------------------coconut-----------------------------------------------------------------------
+          foodpathtypeminislab coconut_stone_path = foodblockregistry.COCONUT_STONE_PATH.get();
+
+          getVariantBuilder(coconut_stone_path)
+          .forAllStates(state -> {
+
+              ResourceLocation modelLocation = modLoc("block/coconut_stone_path");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .build();
+          });
     //==============================================================================================================================================
     //|                                                              Barrels                                                                       |
     //==============================================================================================================================================

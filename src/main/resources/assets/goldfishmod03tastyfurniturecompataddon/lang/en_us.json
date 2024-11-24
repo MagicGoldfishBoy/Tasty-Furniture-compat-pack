@@ -140,5 +140,7 @@
     "block.goldfishmod03tastyfurniturecompataddon.coconut_torch": "Coconut Torch",
     "block.goldfishmod03tastyfurniturecompataddon.coconut_redstone_torch": "Coconut Redstone Torch",
     "block.goldfishmod03tastyfurniturecompataddon.coconut_soul_torch": "Coconut Soul Torch",
-    "block.goldfishmod03tastyfurniturecompataddon.coconut_furnace": "Coconut Furnace"
+    "block.goldfishmod03tastyfurniturecompataddon.coconut_furnace": "Coconut Furnace",
+    "container.coconut_furnace": "Coconut Furnace",
+    "block.goldfishmod03tastyfurniturecompataddon.coconut_stone_path": "Coconut Stone Path"
 }
