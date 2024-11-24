@@ -1125,6 +1125,13 @@ public class foodblockregistry {
      .explosionResistance(chair_explosion_resistance)
      .noOcclusion()
      ));
+ //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
+     public static final DeferredHolder<Block, foodChairBlock> COCONUT_CHAIR = FOODBLOCK.register("coconut_chair", () -> new foodChairBlock(BlockBehaviour.Properties.of()
+     .sound(plant_chair_sound)
+     .destroyTime(chair_destroy_time)
+     .explosionResistance(chair_explosion_resistance)
+     .noOcclusion()
+     ));
 //==============================================================================================================================================================================================
 //                                                                                          Beds
 //==============================================================================================================================================================================================
@@ -1154,10 +1161,17 @@ public class foodblockregistry {
      .explosionResistance(bed_explosion_resistance)
      .noOcclusion()
      ));
+ //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
+     public static final DeferredHolder<Block, foodBed> COCONUT_BED = FOODBLOCK.register("coconut_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     .sound(plant_bed_sound)
+     .destroyTime(bed_destroy_time)
+     .explosionResistance(bed_explosion_resistance)
+     .noOcclusion()
+     ));
 
    //.........entity
      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<bedEntity>> FOOD_BED_ENTITY = FOODBLOCKENTITY.register("food_bed_entity",
-     () -> BlockEntityType.Builder.of(bedEntity::new, ELDERBERRY_BED.get(), JUNIPER_BED.get(), CHERRY_BED.get()).build(null));
+     () -> BlockEntityType.Builder.of(bedEntity::new, ELDERBERRY_BED.get(), JUNIPER_BED.get(), CHERRY_BED.get(), COCONUT_BED.get()).build(null));
    //^ I did not think this would actually work, but it does O.o
 
 //==============================================================================================================================================================================================
@@ -1213,12 +1227,29 @@ public class foodblockregistry {
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
+ //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
+     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_COCONUT_CABINET = FOODBLOCK.register("small_coconut_cabinet", 
+     () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
+     .sound(plant_cabinet_sound)
+     .destroyTime(cabinet_destroy_time)
+     .explosionResistance(cabinet_explosion_resistance)
+     .noOcclusion()
+     ));
+    //medium
+     public static final DeferredHolder<Block, mediumFoodCabinet> MEDIUM_COCONUT_CABINET = FOODBLOCK.register("medium_coconut_cabinet", () -> new mediumFoodCabinet(BlockBehaviour.Properties.of()
+     .sound(plant_cabinet_sound)
+     .destroyTime(cabinet_destroy_time)
+     .explosionResistance(cabinet_explosion_resistance)
+     .noOcclusion()
+     ));
  //----------------------------------------------------------------------------------------Entity-----------------------------------------------------------------------------------------------
     //small
      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<smallFoodContainerEntity>> SMALL_CABINET_ENTITY = FOODBLOCKENTITY.register("small_cabinet_entity",
-     () -> BlockEntityType.Builder.of(smallFoodContainerEntity::new, SMALL_ELDERBERRY_CABINET.get(), SMALL_JUNIPER_CABINET.get(), SMALL_CHERRY_CABINET.get()).build(null));
+     () -> BlockEntityType.Builder.of(smallFoodContainerEntity::new, SMALL_ELDERBERRY_CABINET.get(), SMALL_JUNIPER_CABINET.get(), SMALL_CHERRY_CABINET.get(), 
+     SMALL_COCONUT_CABINET.get()).build(null));
     //medium
      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<mediumFoodContainerEntity>> MEDIUM_CABINET_ENTITY = FOODBLOCKENTITY.register("medium_cabinet_entity",
-     () -> BlockEntityType.Builder.of(mediumFoodContainerEntity::new, MEDIUM_ELDERBERRY_CABINET.get(), MEDIUM_JUNIPER_CABINET.get(), MEDIUM_CHERRY_CABINET.get()).build(null));
+     () -> BlockEntityType.Builder.of(mediumFoodContainerEntity::new, MEDIUM_ELDERBERRY_CABINET.get(), MEDIUM_JUNIPER_CABINET.get(), MEDIUM_CHERRY_CABINET.get(), 
+     MEDIUM_COCONUT_CABINET.get()).build(null));
 
 }

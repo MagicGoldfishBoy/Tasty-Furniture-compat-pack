@@ -143,5 +143,9 @@
     "block.goldfishmod03tastyfurniturecompataddon.coconut_furnace": "Coconut Furnace",
     "container.coconut_furnace": "Coconut Furnace",
     "block.goldfishmod03tastyfurniturecompataddon.coconut_stone_path": "Coconut Stone Path",
-    "block.goldfishmod03tastyfurniturecompataddon.coconut_barrel": "Coconut Barrel"
+    "block.goldfishmod03tastyfurniturecompataddon.coconut_barrel": "Coconut Barrel",
+    "block.goldfishmod03tastyfurniturecompataddon.coconut_chair": "Coconut Chair",
+    "block.goldfishmod03tastyfurniturecompataddon.coconut_bed": "Coconut Bed",
+    "block.goldfishmod03tastyfurniturecompataddon.small_coconut_cabinet": "Coconut Small Cabinet",
+    "block.goldfishmod03tastyfurniturecompataddon.medium_coconut_cabinet": "Coconut Medium Cabinet"
 }
