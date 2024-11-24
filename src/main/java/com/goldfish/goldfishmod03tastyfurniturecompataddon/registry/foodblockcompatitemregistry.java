@@ -341,6 +341,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> CHERRY_LADDER_ITEM =  FOODBLOCKITEM.register("cherry_ladder_item",
     () -> new BlockItem(foodblockregistry.CHERRY_LADDER.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> COCONUT_LADDER_ITEM =  FOODBLOCKITEM.register("coconut_ladder_item",
+    () -> new BlockItem(foodblockregistry.COCONUT_LADDER.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                        Tables
 //==============================================================================================================================================================================================
@@ -353,6 +356,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> CHERRY_TABLE_ITEM =  FOODBLOCKITEM.register("cherry_table_item",
     () -> new BlockItem(foodblockregistry.CHERRY_TABLE.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> COCONUT_TABLE_ITEM =  FOODBLOCKITEM.register("coconut_table_item",
+    () -> new BlockItem(foodblockregistry.COCONUT_TABLE.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                        Torches
 //==============================================================================================================================================================================================
