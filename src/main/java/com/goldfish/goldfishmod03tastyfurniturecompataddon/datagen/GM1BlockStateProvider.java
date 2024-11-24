@@ -1143,6 +1143,122 @@ public class GM1BlockStateProvider extends BlockStateProvider
                 .rotationY(rotation)
                 .build();
             });
+     //------------------------------------------------------------coconut-----------------------------------------------------------------------
+       //regular
+        TorchBlock coconut_torch = foodblockregistry.COCONUT_TORCH.get();
+        ResourceLocation coconut_torch_texture = modLoc("block/coconut_torch");
+        BlockModelBuilder coconut_torch_model = models()
+        .withExistingParent("coconut_torch", mcLoc("block/torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", coconut_torch_texture)
+        .texture("particle", coconut_torch_texture);
+
+        simpleBlock(coconut_torch, coconut_torch_model);
+
+        TorchBlock coconut_wall_torch = foodblockregistry.COCONUT_WALL_TORCH.get();
+        BlockModelBuilder coconut_wall_torch_model = models()
+        .withExistingParent("coconut_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", coconut_torch_texture)
+        .texture("particle", coconut_torch_texture);
+        getVariantBuilder(coconut_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("coconut_wall_torch", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", coconut_torch_texture)
+                    .texture("particle", coconut_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //redstone
+        RedstoneTorchBlock coconut_redstone_torch = foodblockregistry.COCONUT_REDSTONE_TORCH.get();
+        ResourceLocation coconut_redstone_torch_texture = modLoc("block/coconut_redstone_torch");
+        BlockModelBuilder coconut_redstone_torch_model = models()
+        .withExistingParent("coconut_redstone_torch", mcLoc("block/redstone_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", coconut_redstone_torch_texture)
+        .texture("particle", coconut_redstone_torch_texture);
+        
+
+        simpleBlock(coconut_redstone_torch, coconut_redstone_torch_model);
+
+        ResourceLocation coconut_redstone_wall_torch_texture = modLoc("block/coconut_redstone_torch");
+
+        RedstoneTorchBlock coconut_redstone_wall_torch = foodblockregistry.COCONUT_REDSTONE_WALL_TORCH.get();
+        BlockModelBuilder coconut_redstone_wall_torch_model = models()
+        .withExistingParent("coconut_redstone_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", coconut_redstone_wall_torch_texture)
+        .texture("particle", coconut_redstone_wall_torch_texture);
+        getVariantBuilder(coconut_redstone_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("coconut_redstone_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", coconut_redstone_wall_torch_texture)
+                    .texture("particle", coconut_redstone_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //soul
+        TorchBlock coconut_soul_torch = foodblockregistry.COCONUT_SOUL_TORCH.get();
+        ResourceLocation coconut_soul_torch_texture = modLoc("block/coconut_soul_torch");
+        BlockModelBuilder coconut_soul_torch_model = models()
+        .withExistingParent("coconut_soul_torch", mcLoc("block/soul_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", coconut_soul_torch_texture)
+        .texture("particle", coconut_soul_torch_texture);
+        
+
+        simpleBlock(coconut_soul_torch, coconut_soul_torch_model);
+
+        ResourceLocation coconut_soul_wall_torch_texture = modLoc("block/coconut_soul_torch");
+        TorchBlock coconut_soul_wall_torch = foodblockregistry.COCONUT_SOUL_WALL_TORCH.get();
+        BlockModelBuilder coconut_soul_wall_torch_model = models()
+        .withExistingParent("coconut_soul_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", coconut_soul_wall_torch_texture)
+        .texture("particle", coconut_soul_wall_torch_texture);
+        getVariantBuilder(coconut_soul_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("coconut_soul_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", coconut_soul_wall_torch_texture)
+                    .texture("particle", coconut_soul_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
     //==============================================================================================================================================
     //|                                                             Furnaces                                                                       |
     //==============================================================================================================================================

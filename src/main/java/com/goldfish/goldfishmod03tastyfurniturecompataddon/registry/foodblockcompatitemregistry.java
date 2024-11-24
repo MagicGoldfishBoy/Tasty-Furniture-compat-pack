@@ -392,6 +392,16 @@ public class foodblockcompatitemregistry {
     //soul
       public static final DeferredHolder<Item, StandingAndWallBlockItem> CHERRY_SOUL_TORCH_ITEM =  FOODBLOCKITEM.register("cherry_soul_torch_item",
       () -> new StandingAndWallBlockItem(foodblockregistry.CHERRY_SOUL_TORCH.get(), foodblockregistry.CHERRY_SOUL_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
+ //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
+    //regular
+      public static final DeferredHolder<Item, StandingAndWallBlockItem> COCONUT_TORCH_ITEM = FOODBLOCKITEM.register("coconut_torch_item", 
+      () -> new StandingAndWallBlockItem(foodblockregistry.COCONUT_TORCH.get(), foodblockregistry.COCONUT_WALL_TORCH.get(), new Item.Properties(), Direction.NORTH));
+    //redstone
+      public static final DeferredHolder<Item, StandingAndWallBlockItem> COCONUT_REDSTONE_TORCH_ITEM =  FOODBLOCKITEM.register("coconut_redstone_torch_item",
+      () -> new StandingAndWallBlockItem(foodblockregistry.COCONUT_REDSTONE_TORCH.get(), foodblockregistry.COCONUT_REDSTONE_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
+    //soul
+      public static final DeferredHolder<Item, StandingAndWallBlockItem> COCONUT_SOUL_TORCH_ITEM =  FOODBLOCKITEM.register("coconut_soul_torch_item",
+      () -> new StandingAndWallBlockItem(foodblockregistry.COCONUT_SOUL_TORCH.get(), foodblockregistry.COCONUT_SOUL_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
 //==============================================================================================================================================================================================
 //                                                                                        Furnaces
 //==============================================================================================================================================================================================

@@ -136,5 +136,8 @@
     "block.goldfishmod03tastyfurniturecompataddon.coconut_soul_lantern": "Coconut Soul Lantern",
     "block.goldfishmod03tastyfurniturecompataddon.coconut_chain": "Coconut Chain",
     "block.goldfishmod03tastyfurniturecompataddon.coconut_ladder": "Coconut Ladder",
-    "block.goldfishmod03tastyfurniturecompataddon.coconut_table": "Coconut Table"
+    "block.goldfishmod03tastyfurniturecompataddon.coconut_table": "Coconut Table",
+    "block.goldfishmod03tastyfurniturecompataddon.coconut_torch": "Coconut Torch",
+    "block.goldfishmod03tastyfurniturecompataddon.coconut_redstone_torch": "Coconut Redstone Torch",
+    "block.goldfishmod03tastyfurniturecompataddon.coconut_soul_torch": "Coconut Soul Torch"
 }
