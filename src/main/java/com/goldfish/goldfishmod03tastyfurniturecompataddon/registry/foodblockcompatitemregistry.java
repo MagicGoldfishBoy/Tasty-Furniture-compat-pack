@@ -307,6 +307,13 @@ public class foodblockcompatitemregistry {
     //soul
       public static final DeferredHolder<Item, BlockItem> CHERRY_SOUL_LANTERN_ITEM = FOODBLOCKITEM.register("cherry_soul_lantern_item",
       () -> new BlockItem(foodblockregistry.CHERRY_SOUL_LANTERN.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
+    //regular
+      public static final DeferredHolder<Item, BlockItem> COCONUT_LANTERN_ITEM = FOODBLOCKITEM.register("coconut_lantern_item",
+      () -> new BlockItem(foodblockregistry.COCONUT_LANTERN.get(), new BlockItem.Properties()));
+    //soul
+      public static final DeferredHolder<Item, BlockItem> COCONUT_SOUL_LANTERN_ITEM = FOODBLOCKITEM.register("coconut_soul_lantern_item",
+      () -> new BlockItem(foodblockregistry.COCONUT_SOUL_LANTERN.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                        Chains
 //==============================================================================================================================================================================================
@@ -319,6 +326,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> CHERRY_CHAIN_ITEM = FOODBLOCKITEM.register("cherry_chain_item",
     () -> new BlockItem(foodblockregistry.CHERRY_CHAIN.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> COCONUT_CHAIN_ITEM = FOODBLOCKITEM.register("coconut_chain_item",
+    () -> new BlockItem(foodblockregistry.COCONUT_CHAIN.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                        Ladders
 //==============================================================================================================================================================================================

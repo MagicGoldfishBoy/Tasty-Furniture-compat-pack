@@ -512,6 +512,45 @@ public class GM1BlockStateProvider extends BlockStateProvider
              .modelForState().modelFile(hanging_cherry_soul_lantern_model).addModel()
              .partialState().with(LanternBlock.HANGING, false)
              .modelForState().modelFile(cherry_soul_lantern_model).addModel();
+     //------------------------------------------------------------coconut-----------------------------------------------------------------------
+         //regular
+          LanternBlock coconut_lantern = foodblockregistry.COCONUT_LANTERN.get();
+          ResourceLocation coconut_lantern_texture = modLoc("block/coconut_lantern");
+  
+          BlockModelBuilder coconut_lantern_model = models()
+              .withExistingParent("coconut_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", coconut_lantern_texture);
+  
+          BlockModelBuilder hanging_coconut_lantern_model = models()
+              .withExistingParent("coconut_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", coconut_lantern_texture);
+  
+          getVariantBuilder(coconut_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_coconut_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(coconut_lantern_model).addModel();
+         //soul
+         LanternBlock coconut_soul_lantern = foodblockregistry.COCONUT_SOUL_LANTERN.get();
+         ResourceLocation coconut_soul_lantern_texture = modLoc("block/coconut_soul_lantern");
+ 
+         BlockModelBuilder coconut_soul_lantern_model = models()
+             .withExistingParent("coconut_soul_lantern", mcLoc("block/lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", coconut_soul_lantern_texture);
+ 
+         BlockModelBuilder hanging_coconut_soul_lantern_model = models()
+             .withExistingParent("coconut_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", coconut_soul_lantern_texture);
+ 
+         getVariantBuilder(coconut_soul_lantern)
+             .partialState().with(LanternBlock.HANGING, true)
+             .modelForState().modelFile(hanging_coconut_soul_lantern_model).addModel()
+             .partialState().with(LanternBlock.HANGING, false)
+             .modelForState().modelFile(coconut_soul_lantern_model).addModel();
     //==============================================================================================================================================
     //|                                                              Chains                                                                        |
     //==============================================================================================================================================
@@ -563,6 +602,22 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .modelForState().modelFile(cherry_chain_model).rotationX(90).rotationY(90).addModel()
           .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
           .modelForState().modelFile(cherry_chain_model).rotationX(90).addModel(); 
+     //------------------------------------------------------------coconut-----------------------------------------------------------------------
+         ChainBlock coconut_chain = foodblockregistry.COCONUT_CHAIN.get();
+         ResourceLocation coconut_chain_texture = modLoc("block/coconut_chain");
+         BlockModelBuilder coconut_chain_model = models()
+          .withExistingParent("coconut_chain", mcLoc("block/chain"))
+          .renderType("cutout_mipped_all")
+          .texture("all", coconut_chain_texture)
+          .texture("particle", coconut_chain_texture);
+
+          getVariantBuilder(coconut_chain)
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Y)
+          .modelForState().modelFile(coconut_chain_model).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.X)
+          .modelForState().modelFile(coconut_chain_model).rotationX(90).rotationY(90).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
+          .modelForState().modelFile(coconut_chain_model).rotationX(90).addModel(); 
     //==============================================================================================================================================
     //|                                                             Ladders                                                                        |
     //==============================================================================================================================================

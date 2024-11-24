@@ -1122,6 +1122,25 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', Items.SOUL_TORCH)
             .unlockedBy("has_cherry_nugget", has(nuggetregistry.CHERRY_NUGGET.get()))
             .save(output);
+  //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.COCONUT_LANTERN_ITEM.get())
+            .pattern("AAA")
+            .pattern("ABA")
+            .pattern("AAA")
+            .define('A', nuggetregistry.COCONUT_NUGGET.get())
+            .define('B', Items.TORCH)
+            .unlockedBy("has_coconut_nugget", has(nuggetregistry.COCONUT_NUGGET.get()))
+            .save(output);
+          //soul
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.COCONUT_SOUL_LANTERN_ITEM.get())
+            .pattern("AAA")
+            .pattern("ABA")
+            .pattern("AAA")
+            .define('A', nuggetregistry.COCONUT_NUGGET.get())
+            .define('B', Items.SOUL_TORCH)
+            .unlockedBy("has_coconut_nugget", has(nuggetregistry.COCONUT_NUGGET.get()))
+            .save(output);
       }
  protected void buildChainRecipes(RecipeOutput output) {
   //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
@@ -1150,6 +1169,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', nuggetregistry.CHERRY_NUGGET.get())
         .define('B', ingotregistry.CHERRY_INGOT.get())
         .unlockedBy("has_cherry_ingot", has(ingotregistry.CHERRY_INGOT.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.COCONUT_CHAIN_ITEM.get())
+        .pattern(" A ")
+        .pattern(" B ")
+        .pattern(" A ")
+        .define('A', nuggetregistry.COCONUT_NUGGET.get())
+        .define('B', ingotregistry.COCONUT_INGOT.get())
+        .unlockedBy("has_coconut_ingot", has(ingotregistry.COCONUT_INGOT.get()))
         .save(output);
       }
  protected void buildLadderRecipes(RecipeOutput output) {

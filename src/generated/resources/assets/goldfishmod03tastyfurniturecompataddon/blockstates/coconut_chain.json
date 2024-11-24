@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "goldfishmod03tastyfurniturecompataddon:block/coconut_chain",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "goldfishmod03tastyfurniturecompataddon:block/coconut_chain"
+    },
+    "axis=z": {
+      "model": "goldfishmod03tastyfurniturecompataddon:block/coconut_chain",
+      "x": 90
+    }
+  }
+}

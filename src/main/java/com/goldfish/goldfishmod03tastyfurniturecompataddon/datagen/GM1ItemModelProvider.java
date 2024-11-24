@@ -294,6 +294,14 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //carpet
        ResourceLocation coconut_carpet_texture = modLoc("block/coconut_carpet");
        carpet("coconut_carpet_item", coconut_carpet_texture);
+       //lantern
+        //regular
+        withExistingParent("coconut_lantern_item", modLoc("block/coconut_lantern"));
+        //soul
+          withExistingParent("coconut_soul_lantern_item", modLoc("block/coconut_soul_lantern"));
+       //chain
+       withExistingParent("coconut_chain_item", modLoc("block/coconut_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
   }
 }
 
