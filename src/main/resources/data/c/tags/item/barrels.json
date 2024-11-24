@@ -1,10 +1,10 @@
 {
     "replace": false,
     "values": [
-        "goldfishmod02tastyfurniture:elderberry_barrel_item",
-        "goldfishmod02tastyfurniture:juniper_barrel_item",
-        "goldfishmod02tastyfurniture:cherry_barrel_item",
-        "goldfishmod02tastyfurniture:carrot_barrel_item",
+        "goldfishmod03tastyfurniturecompataddon:elderberry_barrel_item",
+        "goldfishmod03tastyfurniturecompataddon:juniper_barrel_item",
+        "goldfishmod03tastyfurniturecompataddon:cherry_barrel_item",
+        "goldfishmod03tastyfurniturecompataddon:coconut_barrel_item",
         "goldfishmod02tastyfurniture:chorus_barrel_item",
         "goldfishmod02tastyfurniture:glowberry_barrel_item",
         "goldfishmod02tastyfurniture:melon_barrel_item",

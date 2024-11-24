@@ -235,6 +235,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, SignItem> CHERRY_SIGN_ITEM = FOODBLOCKITEM.register("cherry_sign_item",
    () -> new SignItem(new SignItem.Properties(), foodblockregistry.CHERRY_STANDING_SIGN.get(), foodblockregistry.CHERRY_WALL_SIGN.get()));
+ //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, SignItem> COCONUT_SIGN_ITEM = FOODBLOCKITEM.register("coconut_sign_item",
+   () -> new SignItem(new SignItem.Properties(), foodblockregistry.COCONUT_STANDING_SIGN.get(), foodblockregistry.COCONUT_WALL_SIGN.get()));
 //==============================================================================================================================================================================================
 //                                                                                       Trap Doors
 //==============================================================================================================================================================================================

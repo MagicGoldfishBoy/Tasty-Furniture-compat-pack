@@ -326,6 +326,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
            WallSignBlock cherry_wall_sign = foodblockregistry.CHERRY_WALL_SIGN.get();
            ResourceLocation cherry_sign_texture = modLoc("block/cherry_block");
            signBlock(cherry_sign, cherry_wall_sign, cherry_sign_texture);
+     //------------------------------------------------------------coconut-----------------------------------------------------------------------
+           StandingSignBlock coconut_sign = foodblockregistry.COCONUT_STANDING_SIGN.get();
+           WallSignBlock coconut_wall_sign = foodblockregistry.COCONUT_WALL_SIGN.get();
+           ResourceLocation coconut_sign_texture = modLoc("block/coconut_block");
+           signBlock(coconut_sign, coconut_wall_sign, coconut_sign_texture);
     //==============================================================================================================================================
     //|                                                            Trap Doors                                                                      |
     //==============================================================================================================================================

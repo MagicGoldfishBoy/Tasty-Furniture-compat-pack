@@ -17,6 +17,8 @@ import com.goldfish.goldfishmod03tastyfurniturecompataddon.TastyFurnitureCompatA
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.cherryFurnace;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.cherrySign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.cherryWallSign;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.coconutSign;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.coconutWallSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.elderberryFurnace;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.elderberrySign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.elderberryWallSign;
@@ -25,6 +27,7 @@ import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.juniperSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.juniperWallSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.cherryFurnaceEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.cherrySignEntity;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.coconutSignEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.elderberryFurnaceEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.elderberrySignEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.juniperFurnaceEntity;
@@ -591,6 +594,51 @@ public class foodblockregistry {
          foodblockregistry.CHERRY_SIGN.get(),
          foodblockregistry.CHERRY_WALL_SIGN.get(),
          foodblockregistry.CHERRY_STANDING_SIGN.get()
+     ).build(null)
+   );
+ //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Block, coconutSign> COCONUT_SIGN = FOODBLOCK.register("coconut_sign",
+   () -> new coconutSign(
+     BlockBehaviour.Properties.of()
+         .mapColor(MapColor.WOOD)
+         .forceSolidOn()
+         .instrument(NoteBlockInstrument.BASS)
+         .noCollission()
+         .strength(1.0F)
+         .ignitedByLava(),
+         foodmaterialtyperegistry.COCONUTWOODMAT
+   ));
+      public static final DeferredHolder<Block, coconutWallSign> COCONUT_WALL_SIGN = FOODBLOCK.register("coconut_wall_sign",
+   () -> new coconutWallSign(
+       BlockBehaviour.Properties.of()
+       .mapColor(MapColor.WOOD)
+       .forceSolidOn()
+       .instrument(NoteBlockInstrument.BASS)
+       .noCollission()
+       .strength(1.0F)
+       .ignitedByLava()
+       .randomTicks(),
+       foodmaterialtyperegistry.COCONUTWOODMAT
+   ));
+   public static final DeferredHolder<Block, coconutSign> COCONUT_STANDING_SIGN = FOODBLOCK.register("coconut_standing_sign",
+   () -> new coconutSign(
+       BlockBehaviour.Properties.of()
+       .mapColor(MapColor.WOOD)
+       .forceSolidOn()
+       .instrument(NoteBlockInstrument.BASS)
+       .noCollission()
+       .strength(1.0F)
+       .ignitedByLava()
+       .randomTicks(),
+       foodmaterialtyperegistry.COCONUTWOODMAT
+   ));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<coconutSignEntity>> COCONUT_SIGN_ENTITY = FOODBLOCKENTITY.register(
+     "coconut_sign_entity",
+     () -> BlockEntityType.Builder.of(
+         coconutSignEntity::new,
+         foodblockregistry.COCONUT_SIGN.get(),
+         foodblockregistry.COCONUT_WALL_SIGN.get(),
+         foodblockregistry.COCONUT_STANDING_SIGN.get()
      ).build(null)
    );
 //==============================================================================================================================================================================================

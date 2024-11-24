@@ -1,10 +1,10 @@
 {
     "replace": false,
     "values": [
-    "goldfishmod02tastyfurniture:elderberry_standing_sign",
-    "goldfishmod02tastyfurniture:juniper_standing_sign",
-    "goldfishmod02tastyfurniture:cherry_standing_sign",
-    "goldfishmod02tastyfurniture:carrot_standing_sign",
+    "goldfishmod03tastyfurniturecompataddon:elderberry_standing_sign",
+    "goldfishmod03tastyfurniturecompataddon:juniper_standing_sign",
+    "goldfishmod03tastyfurniturecompataddon:cherry_standing_sign",
+    "goldfishmod03tastyfurniturecompataddon:coconut_standing_sign",
     "goldfishmod02tastyfurniture:chorus_standing_sign",
     "goldfishmod02tastyfurniture:glowberry_standing_sign",
     "goldfishmod02tastyfurniture:melon_standing_sign",
