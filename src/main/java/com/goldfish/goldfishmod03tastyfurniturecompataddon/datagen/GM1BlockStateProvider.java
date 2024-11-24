@@ -226,6 +226,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation cherry_door_top_texture = modLoc("block/cherry_door_top");
           ResourceLocation cherry_door_bottom_texture = modLoc("block/cherry_door_bottom");
           doorBlockWithRenderType(cherry_door, "cherry_door", cherry_door_top_texture, cherry_door_bottom_texture, "cutout_mipped_all"); 
+     //------------------------------------------------------------coconut-----------------------------------------------------------------------
+          DoorBlock coconut_door = foodblockregistry.COCONUT_DOOR.get(); 
+          ResourceLocation coconut_door_top_texture = modLoc("block/coconut_door_top");
+          ResourceLocation coconut_door_bottom_texture = modLoc("block/coconut_door_bottom");
+          doorBlockWithRenderType(coconut_door, "coconut_door", coconut_door_bottom_texture, coconut_door_top_texture, "cutout_mipped_all"); 
     //==============================================================================================================================================
     //|                                                              Button                                                                        |
     //==============================================================================================================================================
@@ -241,6 +246,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ButtonBlock cherry_button = foodblockregistry.CHERRY_BUTTON.get();
           ResourceLocation cherry_button_texture = modLoc("block/cherry_block");
           buttonBlock(cherry_button, cherry_button_texture);
+     //------------------------------------------------------------coconut-----------------------------------------------------------------------
+          ButtonBlock coconut_button = foodblockregistry.COCONUT_BUTTON.get();
+          ResourceLocation coconut_button_texture = modLoc("block/coconut_block");
+          buttonBlock(coconut_button, coconut_button_texture);
     //==============================================================================================================================================
     //|                                                              Fences                                                                        |
     //==============================================================================================================================================
@@ -271,6 +280,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
           FenceGateBlock cherry_gate = foodblockregistry.CHERRY_GATE.get();
           ResourceLocation cherry_gate_texture = modLoc("block/cherry_block");
           fenceGateBlock(cherry_gate, cherry_gate_texture);
+     //------------------------------------------------------------coconut-----------------------------------------------------------------------
+       //fence
+          FenceBlock coconut_fence = foodblockregistry.COCONUT_FENCE.get();
+          ResourceLocation coconut_fence_texture = modLoc("block/coconut_block");
+          fenceBlock(coconut_fence, coconut_fence_texture);
+       //gate
+          FenceGateBlock coconut_gate = foodblockregistry.COCONUT_GATE.get();
+          ResourceLocation coconut_gate_texture = modLoc("block/coconut_block");
+          fenceGateBlock(coconut_gate, coconut_gate_texture);
     //==============================================================================================================================================
     //|                                                          Pressure Plates                                                                   |
     //==============================================================================================================================================
@@ -286,6 +304,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           PressurePlateBlock cherry_pressure_plate = foodblockregistry.CHERRY_PRESSURE_PLATE.get();
           ResourceLocation cherry_pressure_plate_texture = modLoc("block/cherry_block");
           pressurePlateBlock(cherry_pressure_plate, cherry_pressure_plate_texture);
+     //------------------------------------------------------------coconut-----------------------------------------------------------------------
+          PressurePlateBlock coconut_pressure_plate = foodblockregistry.COCONUT_PRESSURE_PLATE.get();
+          ResourceLocation coconut_pressure_plate_texture = modLoc("block/coconut_block");
+          pressurePlateBlock(coconut_pressure_plate, coconut_pressure_plate_texture);
     //==============================================================================================================================================
     //|                                                               Signs                                                                        |
     //==============================================================================================================================================

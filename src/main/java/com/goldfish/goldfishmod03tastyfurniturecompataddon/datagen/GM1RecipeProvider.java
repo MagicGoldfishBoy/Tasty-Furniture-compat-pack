@@ -777,6 +777,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', ingotregistry.CHERRY_INGOT.get())
          .unlockedBy("has_cherry_nugget", has(ingotregistry.CHERRY_INGOT.get()))
          .save(output);
+  //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.COCONUT_DOOR_ITEM.get(), 3)
+         .pattern("AA ")
+         .pattern("AA ")
+         .pattern("AA ")
+         .define('A', ingotregistry.COCONUT_INGOT.get())
+         .unlockedBy("has_coconut_nugget", has(ingotregistry.COCONUT_INGOT.get()))
+         .save(output);
       }
  protected void buildButtonRecipes(RecipeOutput output) {
   //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
@@ -793,6 +801,11 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_BUTTON_ITEM.get(), 1)
        .requires(nuggetregistry.CHERRY_NUGGET.get())
        .unlockedBy("has_cherry_nugget", has(nuggetregistry.CHERRY_NUGGET.get()))
+       .save(output);
+  //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
+       ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.COCONUT_BUTTON_ITEM.get(), 1)
+       .requires(nuggetregistry.COCONUT_NUGGET.get())
+       .unlockedBy("has_coconut_nugget", has(nuggetregistry.COCONUT_NUGGET.get()))
        .save(output);
       }
  protected void buildFenceRecipes(RecipeOutput output) {
@@ -853,6 +866,25 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .define('B', Items.STICK)
           .unlockedBy("has_cherry_ingot", has(ingotregistry.CHERRY_INGOT.get()))
           .save(output);        
+  //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
+        //fence
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.COCONUT_FENCE_ITEM.get(), 3)
+          .pattern("ABA")
+          .pattern("ABA")
+          .pattern("   ")
+          .define('A', ingotregistry.COCONUT_INGOT.get())
+          .define('B', Items.STICK)
+          .unlockedBy("has_coconut_ingot", has(ingotregistry.COCONUT_INGOT.get()))
+          .save(output);        
+        //gate
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.COCONUT_GATE_ITEM.get(), 1)
+          .pattern("BAB")
+          .pattern("BAB")
+          .pattern("   ")
+          .define('A', ingotregistry.COCONUT_INGOT.get())
+          .define('B', Items.STICK)
+          .unlockedBy("has_coconut_ingot", has(ingotregistry.COCONUT_INGOT.get()))
+          .save(output);        
       }
  protected void buildPressurePlateRecipes(RecipeOutput output) {
   //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
@@ -878,6 +910,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .pattern("   ")
         .define('A', foodblockcompatitemregistry.CHERRY_BLOCK_ITEM.get())
         .unlockedBy("has_cherry_block",  has(foodblockcompatitemregistry.CHERRY_BLOCK_ITEM.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.COCONUT_PRESSURE_PLATE_ITEM.get())
+        .pattern("   ")
+        .pattern("AA ")
+        .pattern("   ")
+        .define('A', foodblockcompatitemregistry.COCONUT_BLOCK_ITEM.get())
+        .unlockedBy("has_coconut_block",  has(foodblockcompatitemregistry.COCONUT_BLOCK_ITEM.get()))
         .save(output);
       }
  protected void buildSignRecipes(RecipeOutput output) {

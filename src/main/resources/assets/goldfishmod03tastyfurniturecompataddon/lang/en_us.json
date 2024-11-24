@@ -122,5 +122,10 @@
     "block.goldfishmod03tastyfurniturecompataddon.coconut_bricks_slab": "Coconut Bricks Slab",
     "block.goldfishmod03tastyfurniturecompataddon.coconut_stairs": "Coconut Stairs",
     "block.goldfishmod03tastyfurniturecompataddon.coconut_bricks_stairs": "Coconut Bricks Stairs",
-    "block.goldfishmod03tastyfurniturecompataddon.coconut_bars": "Coconut Bars"
+    "block.goldfishmod03tastyfurniturecompataddon.coconut_bars": "Coconut Bars",
+    "block.goldfishmod03tastyfurniturecompataddon.coconut_door": "Coconut Door",
+    "block.goldfishmod03tastyfurniturecompataddon.coconut_button": "Coconut Button",
+    "block.goldfishmod03tastyfurniturecompataddon.coconut_fence": "Coconut Fence",
+    "block.goldfishmod03tastyfurniturecompataddon.coconut_gate": "Coconut Gate",
+    "block.goldfishmod03tastyfurniturecompataddon.coconut_pressure_plate": "Coconut Pressure Plate"
 }

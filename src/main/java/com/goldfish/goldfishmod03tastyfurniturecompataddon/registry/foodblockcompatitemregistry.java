@@ -160,6 +160,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> CHERRY_DOOR_ITEM = FOODBLOCKITEM.register("cherry_door_item",
    () -> new BlockItem(foodblockregistry.CHERRY_DOOR.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, BlockItem> COCONUT_DOOR_ITEM = FOODBLOCKITEM.register("coconut_door_item",
+   () -> new BlockItem(foodblockregistry.COCONUT_DOOR.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                         Buttons
 //==============================================================================================================================================================================================
@@ -172,6 +175,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> CHERRY_BUTTON_ITEM = FOODBLOCKITEM.register("cherry_button_item",
    () -> new BlockItem(foodblockregistry.CHERRY_BUTTON.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, BlockItem> COCONUT_BUTTON_ITEM = FOODBLOCKITEM.register("coconut_button_item",
+   () -> new BlockItem(foodblockregistry.COCONUT_BUTTON.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                         Fences
 //==============================================================================================================================================================================================
@@ -184,6 +190,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> CHERRY_FENCE_ITEM = FOODBLOCKITEM.register("cherry_fence_item",
    () -> new BlockItem(foodblockregistry.CHERRY_FENCE.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, BlockItem> COCONUT_FENCE_ITEM = FOODBLOCKITEM.register("coconut_fence_item",
+   () -> new BlockItem(foodblockregistry.COCONUT_FENCE.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                         Gates
 //==============================================================================================================================================================================================
@@ -196,6 +205,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> CHERRY_GATE_ITEM = FOODBLOCKITEM.register("cherry_gate_item",
    () -> new BlockItem(foodblockregistry.CHERRY_GATE.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, BlockItem> COCONUT_GATE_ITEM = FOODBLOCKITEM.register("coconut_gate_item",
+   () -> new BlockItem(foodblockregistry.COCONUT_GATE.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                     Pressure Plates
 //==============================================================================================================================================================================================
@@ -208,6 +220,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> CHERRY_PRESSURE_PLATE_ITEM = FOODBLOCKITEM.register("cherry_pressure_plate_item",
    () -> new BlockItem(foodblockregistry.CHERRY_PRESSURE_PLATE.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, BlockItem> COCONUT_PRESSURE_PLATE_ITEM = FOODBLOCKITEM.register("coconut_pressure_plate_item",
+   () -> new BlockItem(foodblockregistry.COCONUT_PRESSURE_PLATE.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                          Signs
 //==============================================================================================================================================================================================

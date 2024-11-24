@@ -330,6 +330,11 @@ public class foodblockregistry {
   .strength(0.25F, 0.25F)
   .sound(SoundType.MUD_BRICKS)
   .noOcclusion()));
+ //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
+  public static final DeferredHolder<Block, DoorBlock> COCONUT_DOOR = FOODBLOCK.register("coconut_door", () -> new DoorBlock(foodmaterialtyperegistry.PLANT, BlockBehaviour.Properties.of()
+  .strength(0.25F, 0.25F)
+  .sound(SoundType.MUD_BRICKS)
+  .noOcclusion()));
 //==============================================================================================================================================================================================
 //                                                                                         Buttons
 //==============================================================================================================================================================================================
@@ -343,6 +348,10 @@ public class foodblockregistry {
   .sound(SoundType.MUD_BRICKS)));
  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
   public static final DeferredHolder<Block, ButtonBlock> CHERRY_BUTTON = FOODBLOCK.register("cherry_button", () -> new ButtonBlock(BlockSetType.CRIMSON, 20, 
+  BlockBehaviour.Properties.of()
+  .sound(SoundType.MUD_BRICKS)));
+ //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
+  public static final DeferredHolder<Block, ButtonBlock> COCONUT_BUTTON = FOODBLOCK.register("coconut_button", () -> new ButtonBlock(BlockSetType.CRIMSON, 20, 
   BlockBehaviour.Properties.of()
   .sound(SoundType.MUD_BRICKS)));
 //==============================================================================================================================================================================================
@@ -364,6 +373,13 @@ public class foodblockregistry {
   ));
  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
   public static final DeferredHolder<Block, FenceBlock> CHERRY_FENCE = FOODBLOCK.register("cherry_fence", () -> new FenceBlock(BlockBehaviour.Properties.of()
+  .destroyTime(1.75f)
+  .explosionResistance(9.0f)
+  .sound(SoundType.MUD_BRICKS)
+  .noOcclusion()
+  ));
+ //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
+  public static final DeferredHolder<Block, FenceBlock> COCONUT_FENCE = FOODBLOCK.register("coconut_fence", () -> new FenceBlock(BlockBehaviour.Properties.of()
   .destroyTime(1.75f)
   .explosionResistance(9.0f)
   .sound(SoundType.MUD_BRICKS)
@@ -399,6 +415,15 @@ public class foodblockregistry {
             .destroyTime(1.5f)
             .explosionResistance(8.0f)
     ));
+ //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, FenceGateBlock> COCONUT_GATE = FOODBLOCK.register("coconut_gate", 
+    () -> new FenceGateBlock(
+            foodmaterialtyperegistry.COCONUTWOODMAT, 
+            BlockBehaviour.Properties.of()
+            .sound(SoundType.ROOTED_DIRT)
+            .destroyTime(1.5f)
+            .explosionResistance(8.0f)
+    ));
 //==============================================================================================================================================================================================
 //                                                                                     Pressure Plates
 //============================================================================================================================================================================================== 
@@ -418,6 +443,13 @@ public class foodblockregistry {
     ));
  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, PressurePlateBlock> CHERRY_PRESSURE_PLATE = FOODBLOCK.register("cherry_pressure_plate", 
+    () -> new PressurePlateBlock(foodmaterialtyperegistry.PLANT, BlockBehaviour.Properties.of()
+    .sound(SoundType.ROOTED_DIRT)
+    .destroyTime(0.5f)
+    .explosionResistance(4.0f)
+    ));
+ //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, PressurePlateBlock> COCONUT_PRESSURE_PLATE = FOODBLOCK.register("coconut_pressure_plate", 
     () -> new PressurePlateBlock(foodmaterialtyperegistry.PLANT, BlockBehaviour.Properties.of()
     .sound(SoundType.ROOTED_DIRT)
     .destroyTime(0.5f)
