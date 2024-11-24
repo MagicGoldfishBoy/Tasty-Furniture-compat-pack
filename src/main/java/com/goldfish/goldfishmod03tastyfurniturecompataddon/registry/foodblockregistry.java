@@ -17,6 +17,7 @@ import com.goldfish.goldfishmod03tastyfurniturecompataddon.TastyFurnitureCompatA
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.cherryFurnace;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.cherrySign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.cherryWallSign;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.coconutFurnace;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.coconutSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.coconutWallSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.elderberryFurnace;
@@ -27,6 +28,7 @@ import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.juniperSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.juniperWallSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.cherryFurnaceEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.cherrySignEntity;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.coconutFurnaceEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.coconutSignEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.elderberryFurnaceEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.elderberrySignEntity;
@@ -1004,18 +1006,24 @@ public class foodblockregistry {
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<elderberryFurnaceEntity>> ELDERBERRY_FURNACE_ENTITY = FOODBLOCKENTITY.register("elderberry_furnace", 
     () -> BlockEntityType.Builder.of(elderberryFurnaceEntity::new, ELDERBERRY_FURNACE.get()).build(null));
- //--------------------------------------------------------------------------------------Juniper---------------------------------------------------------------------------------------------
+ //---------------------------------------------------------------------------------------Juniper-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, juniperFurnace> JUNIPER_FURNACE = FOODBLOCK.register("juniper_furnace", 
     () -> new juniperFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<juniperFurnaceEntity>> JUNIPER_FURNACE_ENTITY = FOODBLOCKENTITY.register("juniper_furnace", 
     () -> BlockEntityType.Builder.of(juniperFurnaceEntity::new, JUNIPER_FURNACE.get()).build(null));
- //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
+ //----------------------------------------------------------------------------------------Cherry-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, cherryFurnace> CHERRY_FURNACE = FOODBLOCK.register("cherry_furnace", 
     () -> new cherryFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<cherryFurnaceEntity>> CHERRY_FURNACE_ENTITY = FOODBLOCKENTITY.register("cherry_furnace", 
     () -> BlockEntityType.Builder.of(cherryFurnaceEntity::new, CHERRY_FURNACE.get()).build(null));
+ //----------------------------------------------------------------------------------------Coconut-----------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, coconutFurnace> COCONUT_FURNACE = FOODBLOCK.register("coconut_furnace", 
+    () -> new coconutFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<coconutFurnaceEntity>> COCONUT_FURNACE_ENTITY = FOODBLOCKENTITY.register("coconut_furnace", 
+    () -> BlockEntityType.Builder.of(coconutFurnaceEntity::new, COCONUT_FURNACE.get()).build(null));
 //==============================================================================================================================================================================================
 //                                                                                         Paths
 //==============================================================================================================================================================================================

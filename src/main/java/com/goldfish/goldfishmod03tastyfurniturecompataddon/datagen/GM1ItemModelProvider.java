@@ -313,6 +313,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
           withExistingParent("coconut_redstone_torch_item", modLoc("block/coconut_redstone_torch"));
         //soul
           withExistingParent("coconut_soul_torch_item", modLoc("block/coconut_soul_torch"));
+       //furnaces
+       withExistingParent("coconut_furnace_item", modLoc("block/coconut_furnace_model_unlit"));
   }
 }
 

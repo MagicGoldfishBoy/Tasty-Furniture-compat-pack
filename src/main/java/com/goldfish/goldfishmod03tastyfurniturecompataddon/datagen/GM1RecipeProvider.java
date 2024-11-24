@@ -1410,6 +1410,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('B', Items.COBBLESTONE)
         .unlockedBy("has_cherry_ingot", has(ingotregistry.CHERRY_INGOT.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.COCONUT_FURNACE_ITEM.get())
+        .pattern("ABA")
+        .pattern("B B")
+        .pattern("ABA")
+        .define('A', ingotregistry.COCONUT_INGOT.get())
+        .define('B', Items.COBBLESTONE)
+        .unlockedBy("has_coconut_ingot", has(ingotregistry.COCONUT_INGOT.get()))
+        .save(output);
       }
  protected void buildPathRecipes(RecipeOutput output) {
   //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------

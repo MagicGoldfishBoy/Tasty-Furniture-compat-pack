@@ -1394,6 +1394,50 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationY(rotation)
                       .build();
               });
+     //------------------------------------------------------------coconut-----------------------------------------------------------------------
+          FurnaceBlock coconut_furnace = foodblockregistry.COCONUT_FURNACE.get();
+          ResourceLocation coconut_furnace_unlit_texture = modLoc("block/coconut_furnace");
+          ResourceLocation coconut_furnace_lit_texture = modLoc("block/coconut_furnace_lit");
+          ResourceLocation coconut_furnace_side = modLoc("block/coconut_block");
+          
+          // Define the model for the unlit state
+          BlockModelBuilder coconut_furnace_model_unlit = models()
+              .withExistingParent("coconut_furnace_model_unlit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", coconut_furnace_side)
+              .texture("top", coconut_furnace_side)
+              .texture("front", coconut_furnace_unlit_texture)
+              .texture("particle", coconut_furnace_side);
+          
+          // Define the model for the lit state
+          BlockModelBuilder coconut_furnace_model_lit = models()
+              .withExistingParent("coconut_furnace_model_lit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", coconut_furnace_side)
+              .texture("top", coconut_furnace_side)
+              .texture("front", coconut_furnace_lit_texture)
+              .texture("particle", coconut_furnace_side);
+          
+          // Configure variants for the coconut_furnace block
+          getVariantBuilder(coconut_furnace)
+              .forAllStates(state -> {
+                  Boolean lit = state.getValue(BlockStateProperties.LIT);
+                  Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                  int rotation = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+
+                  ResourceLocation modelLocation = lit ? modLoc("block/coconut_furnace_model_lit") : modLoc("block/coconut_furnace_model_unlit");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotation)
+                      .build();
+              });
     //==============================================================================================================================================
     //|                                                               Paths                                                                        |
     //==============================================================================================================================================

@@ -414,6 +414,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> CHERRY_FURNACE_ITEM = FOODBLOCKITEM.register("cherry_furnace_item", 
     () -> new BlockItem(foodblockregistry.CHERRY_FURNACE.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> COCONUT_FURNACE_ITEM = FOODBLOCKITEM.register("coconut_furnace_item", 
+    () -> new BlockItem(foodblockregistry.COCONUT_FURNACE.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                         Paths
 //==============================================================================================================================================================================================
