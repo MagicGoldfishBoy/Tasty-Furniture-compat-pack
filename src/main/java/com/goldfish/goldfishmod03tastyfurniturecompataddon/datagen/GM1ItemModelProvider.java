@@ -326,6 +326,31 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //cabinet
        withExistingParent("small_coconut_cabinet_item", modLoc("block/coconut_cabinet"));
        withExistingParent("medium_coconut_cabinet_item", modLoc("block/medium_coconut_cabinet"));
+    //==============================================================================================================================================
+    //|                                                              Orange                                                                        |
+    //==============================================================================================================================================
+       //mush
+        withExistingParent("orange_mush", mcLoc("item/generated")).texture("layer0", "item/orange_mush");
+       //ingot
+        withExistingParent("orange_ingot", mcLoc("item/generated")).texture("layer0", "item/orange_ingot");
+       //nugget
+        withExistingParent("orange_nugget", mcLoc("item/generated")).texture("layer0", "item/orange_nugget");
+       //block
+        withExistingParent("orange_block_item", modLoc("block/orange_block"));
+       //bricks block
+        withExistingParent("orange_bricks_block_item", modLoc("block/orange_bricks_block"));
+       //chiseled block
+        withExistingParent("orange_chiseled_block_item", modLoc("block/orange_chiseled_block"));
+       //tiles block
+        withExistingParent("orange_tiles_block_item", modLoc("block/orange_tiles_block"));
+       //slab
+        slab("orange_slab_item", modLoc("block/orange_block"), modLoc("block/orange_block"), modLoc("block/orange_block"));
+       //bricks slab
+        slab("orange_bricks_slab_item", modLoc("block/orange_bricks_block"), modLoc("block/orange_bricks_block"), modLoc("block/orange_bricks_block"));
+       //stairs
+        stairs("orange_stairs_item", modLoc("block/orange_block"), modLoc("block/orange_block"), modLoc("block/orange_block"));
+       //bricks stairs
+        stairs("orange_bricks_stairs_item", modLoc("block/orange_bricks_block"), modLoc("block/orange_bricks_block"), modLoc("block/orange_bricks_block"));
   }
 }
 

@@ -147,5 +147,16 @@
     "block.goldfishmod03tastyfurniturecompataddon.coconut_chair": "Coconut Chair",
     "block.goldfishmod03tastyfurniturecompataddon.coconut_bed": "Coconut Bed",
     "block.goldfishmod03tastyfurniturecompataddon.small_coconut_cabinet": "Coconut Small Cabinet",
-    "block.goldfishmod03tastyfurniturecompataddon.medium_coconut_cabinet": "Coconut Medium Cabinet"
+    "block.goldfishmod03tastyfurniturecompataddon.medium_coconut_cabinet": "Coconut Medium Cabinet",
+  "item.goldfishmod03tastyfurniturecompataddon.orange_mush": "Orange Mush",
+    "item.goldfishmod03tastyfurniturecompataddon.orange_ingot": "Orange Ingot",
+    "item.goldfishmod03tastyfurniturecompataddon.orange_nugget": "Orange Nugget",
+    "block.goldfishmod03tastyfurniturecompataddon.orange_block": "Orange Block",
+    "block.goldfishmod03tastyfurniturecompataddon.orange_bricks_block": "Orange Bricks Block",
+    "block.goldfishmod03tastyfurniturecompataddon.orange_chiseled_block": "Orange Chiseled Block",
+    "block.goldfishmod03tastyfurniturecompataddon.orange_tiles_block": "Orange Tiles Block",
+    "block.goldfishmod03tastyfurniturecompataddon.orange_slab": "Orange Slab",
+    "block.goldfishmod03tastyfurniturecompataddon.orange_bricks_slab": "Orange Bricks Slab",
+    "block.goldfishmod03tastyfurniturecompataddon.orange_stairs": "Orange Stairs",
+    "block.goldfishmod03tastyfurniturecompataddon.orange_bricks_stairs": "Orange Bricks Stairs"
 }

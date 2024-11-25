@@ -150,7 +150,7 @@ public class foodblockregistry {
          .explosionResistance(10.0f)
          .sound(SoundType.MUD_BRICKS)
          ));
- //----------------------------------------------------------------------------------------Coconut-----------------------------------------------------------------------------------------------
+ //---------------------------------------------------------------------------------------Coconut-----------------------------------------------------------------------------------------------
   //.........plain
     public static final DeferredHolder<Block, Block> COCONUT_BLOCK = FOODBLOCK.register("coconut_block", () -> new Block(BlockBehaviour.Properties.of()
          .destroyTime(2.0f)
@@ -171,6 +171,31 @@ public class foodblockregistry {
          ));
   //.........tiles
     public static final DeferredHolder<Block, Block> COCONUT_TILES_BLOCK = FOODBLOCK.register("coconut_tiles_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.MUD_BRICKS)
+         ));
+ //----------------------------------------------------------------------------------------Orange-----------------------------------------------------------------------------------------------
+  //.........plain
+    public static final DeferredHolder<Block, Block> ORANGE_BLOCK = FOODBLOCK.register("orange_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.MUD_BRICKS)
+         ));
+  //.........bricks
+    public static final DeferredHolder<Block, Block> ORANGE_BRICKS_BLOCK = FOODBLOCK.register("orange_bricks_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.MUD_BRICKS)
+         ));
+  //.........chiseled
+    public static final DeferredHolder<Block, Block> ORANGE_CHISELED_BLOCK = FOODBLOCK.register("orange_chiseled_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.MUD_BRICKS)
+         ));
+  //.........tiles
+    public static final DeferredHolder<Block, Block> ORANGE_TILES_BLOCK = FOODBLOCK.register("orange_tiles_block", () -> new Block(BlockBehaviour.Properties.of()
          .destroyTime(2.0f)
          .explosionResistance(10.0f)
          .sound(SoundType.MUD_BRICKS)
@@ -227,6 +252,19 @@ public class foodblockregistry {
      ));
   //.........bricks
      public static final DeferredHolder<Block, SlabBlock> COCONUT_BRICKS_SLAB = FOODBLOCK.register("coconut_bricks_slab", () -> new SlabBlock(BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     ));
+ //--------------------------------------------------------------------------------------Orange---------------------------------------------------------------------------------------------
+  //.........plain
+     public static final DeferredHolder<Block, SlabBlock> ORANGE_SLAB = FOODBLOCK.register("orange_slab", () -> new SlabBlock(BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     ));
+  //.........bricks
+     public static final DeferredHolder<Block, SlabBlock> ORANGE_BRICKS_SLAB = FOODBLOCK.register("orange_bricks_slab", () -> new SlabBlock(BlockBehaviour.Properties.of()
      .destroyTime(1.75f)
      .explosionResistance(9.5f)
      .sound(SoundType.MUD_BRICKS)
@@ -290,6 +328,21 @@ public class foodblockregistry {
   //.........bricks
      public static final DeferredHolder<Block, StairBlock> COCONUT_BRICKS_STAIRS = FOODBLOCK.register("coconut_bricks_stairs", 
      () -> new StairBlock(COCONUT_BRICKS_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
+     .destroyTime(1.5f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     )); 
+ //--------------------------------------------------------------------------------------Orange---------------------------------------------------------------------------------------------
+  //.........plain
+     public static final DeferredHolder<Block, StairBlock> ORANGE_STAIRS = FOODBLOCK.register("orange_stairs", 
+     () -> new StairBlock(ORANGE_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
+     .destroyTime(1.5f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     )); 
+  //.........bricks
+     public static final DeferredHolder<Block, StairBlock> ORANGE_BRICKS_STAIRS = FOODBLOCK.register("orange_bricks_stairs", 
+     () -> new StairBlock(ORANGE_BRICKS_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
      .destroyTime(1.5f)
      .explosionResistance(9.5f)
      .sound(SoundType.MUD_BRICKS)

@@ -71,6 +71,10 @@ public class mushcompatregistry {
         public static final DeferredHolder<Item, Item> COCONUT_MUSH = MUSH.register("coconut_mush",
                 () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
                 .alwaysEdible().nutrition(1).saturationModifier(0.3f).build())));
+ //--------------------------------------------------------------------------------------Orange---------------------------------------------------------------------------------------------
+        public static final DeferredHolder<Item, Item> ORANGE_MUSH = MUSH.register("orange_mush",
+                () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
+                .alwaysEdible().nutrition(1).saturationModifier(0.3f).build())));
 
     }//class
 
