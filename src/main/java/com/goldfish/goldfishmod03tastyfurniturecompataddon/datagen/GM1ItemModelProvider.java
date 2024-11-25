@@ -380,6 +380,10 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //chain
        withExistingParent("orange_chain_item", modLoc("block/orange_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
        .end();
+       //ladder
+       withExistingParent("orange_ladder_item", modLoc("block/orange_ladder"));
+       //table
+       withExistingParent("orange_table_item", modLoc("block/orange_table"));
   }
 }
 
