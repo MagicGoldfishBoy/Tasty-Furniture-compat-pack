@@ -395,6 +395,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("orange_furnace_item", modLoc("block/orange_furnace_model_unlit"));
        //paths
        withExistingParent("orange_stone_path_item", modLoc("block/orange_stone_path"));
+       //barrel
+       withExistingParent("orange_barrel_item", modLoc("block/orange_barrel_model_closed"));
   }
 }
 

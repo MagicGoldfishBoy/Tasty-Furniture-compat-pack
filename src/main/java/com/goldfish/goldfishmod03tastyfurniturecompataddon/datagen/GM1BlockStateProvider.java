@@ -2027,6 +2027,54 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationX(rotationX)
                       .build();
               });
+     //------------------------------------------------------------orange-----------------------------------------------------------------------
+          foodBarrel orange_barrel = foodblockregistry.ORANGE_BARREL.get();
+          ResourceLocation orange_barrel_closed_texture = modLoc("block/orange_barrel_top_closed");
+          ResourceLocation orange_barrel_open_texture = modLoc("block/orange_barrel_top_open");
+          ResourceLocation orange_barrel_side = modLoc("block/orange_barrel_side");
+          ResourceLocation orange_barrel_bottom = modLoc("block/orange_barrel_bottom");
+          
+          BlockModelBuilder orange_barrel_model_closed = models()
+              .withExistingParent("orange_barrel_model_closed", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", orange_barrel_side)
+              .texture("bottom", orange_barrel_bottom)
+              .texture("top", orange_barrel_closed_texture)
+              .texture("particle", orange_barrel_side);
+          
+          BlockModelBuilder orange_barrel_model_open = models()
+              .withExistingParent("orange_barrel_model_open", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", orange_barrel_side)
+              .texture("bottom", orange_barrel_bottom)
+              .texture("top", orange_barrel_open_texture)
+              .texture("particle", orange_barrel_side);
+          
+          getVariantBuilder(orange_barrel)
+              .forAllStates(state -> {
+                  Boolean open = state.getValue(BlockStateProperties.OPEN);
+                  Direction facing = state.getValue(BlockStateProperties.FACING);
+                  int rotationY = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+                  int rotationX = switch (facing) {
+                      case UP -> 0;
+                      case DOWN -> 180;
+                      default -> 90;
+                  };
+
+                  ResourceLocation modelLocation = open ? modLoc("block/orange_barrel_model_open") : modLoc("block/orange_barrel_model_closed");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotationY)
+                      .rotationX(rotationX)
+                      .build();
+              });
     //==============================================================================================================================================
     //|                                                              Chairs                                                                       |
     //==============================================================================================================================================

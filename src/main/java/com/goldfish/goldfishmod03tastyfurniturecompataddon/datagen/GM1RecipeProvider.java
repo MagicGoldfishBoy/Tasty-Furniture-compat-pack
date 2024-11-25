@@ -1813,6 +1813,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('B', foodblockcompatitemregistry.COCONUT_SLAB_ITEM.get())
         .unlockedBy("has_coconut_block", has(foodblockcompatitemregistry.COCONUT_BLOCK_ITEM.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Orange---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ORANGE_BARREL_ITEM.get())
+        .pattern("ABA")
+        .pattern("A A")
+        .pattern("ABA")
+        .define('A', foodblockcompatitemregistry.ORANGE_BLOCK_ITEM.get())
+        .define('B', foodblockcompatitemregistry.ORANGE_SLAB_ITEM.get())
+        .unlockedBy("has_orange_block", has(foodblockcompatitemregistry.ORANGE_BLOCK_ITEM.get()))
+        .save(output);
       }
  protected void buildChairRecipes(RecipeOutput output) {
   //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
