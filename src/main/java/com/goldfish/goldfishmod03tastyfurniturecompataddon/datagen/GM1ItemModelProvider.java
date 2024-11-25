@@ -363,6 +363,10 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         withExistingParent("orange_gate_item", modLoc("block/orange_gate"));
        //pressure plate
         pressurePlate("orange_pressure_plate_item", modLoc("block/orange_block"));
+       //sign
+       withExistingParent("orange_sign_item", mcLoc("item/generated")).texture("layer0", "item/orange_sign");
+       //trapdoor
+       withExistingParent("orange_trapdoor_item", modLoc("block/orange_trapdoor_trapdoor_bottom"));
   }
 }
 

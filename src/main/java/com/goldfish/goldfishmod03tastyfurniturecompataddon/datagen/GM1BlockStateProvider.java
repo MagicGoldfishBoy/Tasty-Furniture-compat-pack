@@ -387,6 +387,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
            WallSignBlock coconut_wall_sign = foodblockregistry.COCONUT_WALL_SIGN.get();
            ResourceLocation coconut_sign_texture = modLoc("block/coconut_block");
            signBlock(coconut_sign, coconut_wall_sign, coconut_sign_texture);
+     //------------------------------------------------------------orange-----------------------------------------------------------------------
+           StandingSignBlock orange_sign = foodblockregistry.ORANGE_STANDING_SIGN.get();
+           WallSignBlock orange_wall_sign = foodblockregistry.ORANGE_WALL_SIGN.get();
+           ResourceLocation orange_sign_texture = modLoc("block/orange_block");
+           signBlock(orange_sign, orange_wall_sign, orange_sign_texture);
     //==============================================================================================================================================
     //|                                                            Trap Doors                                                                      |
     //==============================================================================================================================================
@@ -406,6 +411,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           TrapDoorBlock coconut_trapdoor = foodblockregistry.COCONUT_TRAPDOOR.get(); 
           ResourceLocation coconut_trapdoor_texture = modLoc("block/coconut_block");
           trapdoorBlockWithRenderType(coconut_trapdoor, "coconut_trapdoor", coconut_trapdoor_texture, false, coconut_trapdoor_texture);
+     //------------------------------------------------------------orange-----------------------------------------------------------------------
+          TrapDoorBlock orange_trapdoor = foodblockregistry.ORANGE_TRAPDOOR.get(); 
+          ResourceLocation orange_trapdoor_texture = modLoc("block/orange_block");
+          trapdoorBlockWithRenderType(orange_trapdoor, "orange_trapdoor", orange_trapdoor_texture, false, orange_trapdoor_texture);
     //==============================================================================================================================================
     //|                                                               Lamps                                                                        |
     //==============================================================================================================================================

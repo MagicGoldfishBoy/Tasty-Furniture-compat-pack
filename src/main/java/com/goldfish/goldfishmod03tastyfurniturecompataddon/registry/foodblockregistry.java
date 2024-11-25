@@ -26,6 +26,8 @@ import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.elderberryWallS
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.juniperFurnace;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.juniperSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.juniperWallSign;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.orangeSign;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.orangeWallSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.cherryFurnaceEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.cherrySignEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.coconutFurnaceEntity;
@@ -34,6 +36,7 @@ import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.elderber
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.elderberrySignEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.juniperFurnaceEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.juniperSignEntity;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.orangeSignEntity;
 
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -733,6 +736,51 @@ public class foodblockregistry {
          foodblockregistry.COCONUT_STANDING_SIGN.get()
      ).build(null)
    );
+ //--------------------------------------------------------------------------------------Orange---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Block, orangeSign> ORANGE_SIGN = FOODBLOCK.register("orange_sign",
+   () -> new orangeSign(
+     BlockBehaviour.Properties.of()
+         .mapColor(MapColor.WOOD)
+         .forceSolidOn()
+         .instrument(NoteBlockInstrument.BASS)
+         .noCollission()
+         .strength(1.0F)
+         .ignitedByLava(),
+         foodmaterialtyperegistry.ORANGEWOODMAT
+   ));
+      public static final DeferredHolder<Block, orangeWallSign> ORANGE_WALL_SIGN = FOODBLOCK.register("orange_wall_sign",
+   () -> new orangeWallSign(
+       BlockBehaviour.Properties.of()
+       .mapColor(MapColor.WOOD)
+       .forceSolidOn()
+       .instrument(NoteBlockInstrument.BASS)
+       .noCollission()
+       .strength(1.0F)
+       .ignitedByLava()
+       .randomTicks(),
+       foodmaterialtyperegistry.ORANGEWOODMAT
+   ));
+   public static final DeferredHolder<Block, orangeSign> ORANGE_STANDING_SIGN = FOODBLOCK.register("orange_standing_sign",
+   () -> new orangeSign(
+       BlockBehaviour.Properties.of()
+       .mapColor(MapColor.WOOD)
+       .forceSolidOn()
+       .instrument(NoteBlockInstrument.BASS)
+       .noCollission()
+       .strength(1.0F)
+       .ignitedByLava()
+       .randomTicks(),
+       foodmaterialtyperegistry.ORANGEWOODMAT
+   ));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<orangeSignEntity>> ORANGE_SIGN_ENTITY = FOODBLOCKENTITY.register(
+     "orange_sign_entity",
+     () -> BlockEntityType.Builder.of(
+         orangeSignEntity::new,
+         foodblockregistry.ORANGE_SIGN.get(),
+         foodblockregistry.ORANGE_WALL_SIGN.get(),
+         foodblockregistry.ORANGE_STANDING_SIGN.get()
+     ).build(null)
+   );
 //==============================================================================================================================================================================================
 //                                                                                       Trap Doors
 //==============================================================================================================================================================================================
@@ -759,6 +807,13 @@ public class foodblockregistry {
      ));
  //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
      public static final DeferredHolder<Block, TrapDoorBlock> COCONUT_TRAPDOOR = FOODBLOCK.register("coconut_trapdoor", () -> new TrapDoorBlock(foodmaterialtyperegistry.PLANT, 
+     BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     ));
+ //--------------------------------------------------------------------------------------Orange---------------------------------------------------------------------------------------------
+     public static final DeferredHolder<Block, TrapDoorBlock> ORANGE_TRAPDOOR = FOODBLOCK.register("orange_trapdoor", () -> new TrapDoorBlock(foodmaterialtyperegistry.PLANT, 
      BlockBehaviour.Properties.of()
      .destroyTime(1.75f)
      .explosionResistance(9.5f)

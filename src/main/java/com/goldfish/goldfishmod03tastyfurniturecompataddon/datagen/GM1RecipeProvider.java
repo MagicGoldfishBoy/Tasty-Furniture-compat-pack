@@ -1161,6 +1161,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('B', Items.STICK)
         .unlockedBy("has_coconut_ingot",  has(ingotregistry.COCONUT_INGOT.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Orange---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ORANGE_SIGN_ITEM.get(), 3)
+        .pattern("AAA")
+        .pattern("AAA")
+        .pattern(" B ")
+        .define('A', ingotregistry.ORANGE_INGOT.get())
+        .define('B', Items.STICK)
+        .unlockedBy("has_orange_ingot",  has(ingotregistry.ORANGE_INGOT.get()))
+        .save(output);
       }
  protected void buildTrapDoorRecipes(RecipeOutput output) {
   //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
@@ -1194,6 +1203,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .pattern("AAA")
         .define('A', ingotregistry.COCONUT_INGOT.get())
         .unlockedBy("has_coconut_ingot", has(ingotregistry.COCONUT_INGOT.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Orange---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ORANGE_TRAPDOOR_ITEM.get())
+        .pattern("   ")
+        .pattern("AAA")
+        .pattern("AAA")
+        .define('A', ingotregistry.ORANGE_INGOT.get())
+        .unlockedBy("has_orange_ingot", has(ingotregistry.ORANGE_INGOT.get()))
         .save(output);
       }
  protected void buildLampRecipes(RecipeOutput output) {
