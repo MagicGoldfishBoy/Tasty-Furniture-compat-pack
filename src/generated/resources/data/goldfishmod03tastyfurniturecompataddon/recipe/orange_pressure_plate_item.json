@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "goldfishmod03tastyfurniturecompataddon:orange_block_item"
+    }
+  },
+  "pattern": [
+    "   ",
+    "AA ",
+    "   "
+  ],
+  "result": {
+    "count": 1,
+    "id": "goldfishmod03tastyfurniturecompataddon:orange_pressure_plate_item"
+  }
+}

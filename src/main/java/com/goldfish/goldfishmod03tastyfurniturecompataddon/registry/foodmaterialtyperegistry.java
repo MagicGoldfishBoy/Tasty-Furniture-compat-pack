@@ -95,5 +95,10 @@ public class foodmaterialtyperegistry {
         "coconut_wood_mat", 
         PLANT) 
     );
+    public static final WoodType ORANGEWOODMAT = WoodType.register(
+     new WoodType(
+        "orange_wood_mat", 
+        PLANT) 
+    );
 
 }

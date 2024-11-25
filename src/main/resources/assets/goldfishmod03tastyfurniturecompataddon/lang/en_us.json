@@ -158,5 +158,11 @@
     "block.goldfishmod03tastyfurniturecompataddon.orange_slab": "Orange Slab",
     "block.goldfishmod03tastyfurniturecompataddon.orange_bricks_slab": "Orange Bricks Slab",
     "block.goldfishmod03tastyfurniturecompataddon.orange_stairs": "Orange Stairs",
-    "block.goldfishmod03tastyfurniturecompataddon.orange_bricks_stairs": "Orange Bricks Stairs"
+    "block.goldfishmod03tastyfurniturecompataddon.orange_bricks_stairs": "Orange Bricks Stairs",
+    "block.goldfishmod03tastyfurniturecompataddon.orange_bars": "Orange Bars",
+    "block.goldfishmod03tastyfurniturecompataddon.orange_door": "Orange Door",
+    "block.goldfishmod03tastyfurniturecompataddon.orange_button": "Orange Button",
+    "block.goldfishmod03tastyfurniturecompataddon.orange_fence": "Orange Fence",
+    "block.goldfishmod03tastyfurniturecompataddon.orange_gate": "Orange Gate",
+    "block.goldfishmod03tastyfurniturecompataddon.orange_pressure_plate": "Orange Pressure Plate"
 }

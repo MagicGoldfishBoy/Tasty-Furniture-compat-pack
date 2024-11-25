@@ -351,6 +351,18 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         stairs("orange_stairs_item", modLoc("block/orange_block"), modLoc("block/orange_block"), modLoc("block/orange_block"));
        //bricks stairs
         stairs("orange_bricks_stairs_item", modLoc("block/orange_bricks_block"), modLoc("block/orange_bricks_block"), modLoc("block/orange_bricks_block"));
+       //bars
+        withExistingParent("orange_bars_item", mcLoc("item/generated")).texture("layer0", "block/orange_bars");
+       //doors
+        withExistingParent("orange_door_item", mcLoc("item/generated")).texture("layer0", "item/orange_door_item");
+       //button
+        buttonInventory("orange_button_item", modLoc("block/orange_block"));
+       //fence
+        fenceInventory("orange_fence_item", modLoc("block/orange_block"));
+       //gate
+        withExistingParent("orange_gate_item", modLoc("block/orange_gate"));
+       //pressure plate
+        pressurePlate("orange_pressure_plate_item", modLoc("block/orange_block"));
   }
 }
 
