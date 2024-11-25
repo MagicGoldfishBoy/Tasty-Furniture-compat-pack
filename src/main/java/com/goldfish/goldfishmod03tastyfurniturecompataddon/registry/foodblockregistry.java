@@ -26,6 +26,7 @@ import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.elderberryWallS
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.juniperFurnace;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.juniperSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.juniperWallSign;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.orangeFurnace;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.orangeSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.orangeWallSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.cherryFurnaceEntity;
@@ -36,6 +37,7 @@ import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.elderber
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.elderberrySignEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.juniperFurnaceEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.juniperSignEntity;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.orangeFurnaceEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.orangeSignEntity;
 
 import net.minecraft.core.particles.ParticleTypes;
@@ -1195,6 +1197,27 @@ public class foodblockregistry {
 
      public static final DeferredHolder<Block, WallTorchBlock> COCONUT_SOUL_WALL_TORCH = FOODBLOCK.register("coconut_soul_wall_torch", 
      () -> new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_WALL_TORCH)));
+ //--------------------------------------------------------------------------------------Orange---------------------------------------------------------------------------------------------
+    //regular
+     public static final DeferredHolder<Block, TorchBlock> ORANGE_TORCH = FOODBLOCK.register("orange_torch", 
+     () -> new TorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH)));
+
+     public static final DeferredHolder<Block, WallTorchBlock> ORANGE_WALL_TORCH = FOODBLOCK.register("orange_wall_torch", 
+     () -> new WallTorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH)));
+
+    //redstone
+     public static final DeferredHolder<Block, RedstoneTorchBlock> ORANGE_REDSTONE_TORCH = FOODBLOCK.register("orange_redstone_torch", 
+     () -> new RedstoneTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_TORCH)));
+
+     public static final DeferredHolder<Block, RedstoneWallTorchBlock> ORANGE_REDSTONE_WALL_TORCH = FOODBLOCK.register("orange_redstone_wall_torch", 
+     () -> new RedstoneWallTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_WALL_TORCH)));
+
+    //soul
+     public static final DeferredHolder<Block, TorchBlock> ORANGE_SOUL_TORCH = FOODBLOCK.register("orange_soul_torch", 
+     () -> new TorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_TORCH)));
+
+     public static final DeferredHolder<Block, WallTorchBlock> ORANGE_SOUL_WALL_TORCH = FOODBLOCK.register("orange_soul_wall_torch", 
+     () -> new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_WALL_TORCH)));
 //==============================================================================================================================================================================================
 //                                                                                        Furnaces
 //==============================================================================================================================================================================================
@@ -1222,6 +1245,12 @@ public class foodblockregistry {
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<coconutFurnaceEntity>> COCONUT_FURNACE_ENTITY = FOODBLOCKENTITY.register("coconut_furnace", 
     () -> BlockEntityType.Builder.of(coconutFurnaceEntity::new, COCONUT_FURNACE.get()).build(null));
+ //----------------------------------------------------------------------------------------Orange-----------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, orangeFurnace> ORANGE_FURNACE = FOODBLOCK.register("orange_furnace", 
+    () -> new orangeFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<orangeFurnaceEntity>> ORANGE_FURNACE_ENTITY = FOODBLOCKENTITY.register("orange_furnace", 
+    () -> BlockEntityType.Builder.of(orangeFurnaceEntity::new, ORANGE_FURNACE.get()).build(null));
 //==============================================================================================================================================================================================
 //                                                                                         Paths
 //==============================================================================================================================================================================================

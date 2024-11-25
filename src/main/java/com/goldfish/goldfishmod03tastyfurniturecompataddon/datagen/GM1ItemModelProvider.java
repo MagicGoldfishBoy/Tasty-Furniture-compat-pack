@@ -384,6 +384,15 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("orange_ladder_item", modLoc("block/orange_ladder"));
        //table
        withExistingParent("orange_table_item", modLoc("block/orange_table"));
+       //torches
+        //regular
+        withExistingParent("orange_torch_item", modLoc("block/orange_torch"));
+        //redstone
+          withExistingParent("orange_redstone_torch_item", modLoc("block/orange_redstone_torch"));
+        //soul
+          withExistingParent("orange_soul_torch_item", modLoc("block/orange_soul_torch"));
+       //furnaces
+       withExistingParent("orange_furnace_item", modLoc("block/orange_furnace_model_unlit"));
   }
 }
 

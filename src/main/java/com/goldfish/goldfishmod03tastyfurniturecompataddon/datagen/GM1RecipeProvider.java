@@ -1665,6 +1665,37 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('C', Items.SOUL_SAND)
             .unlockedBy("has_coconut_nugget", has(nuggetregistry.COCONUT_NUGGET.get()))
             .save(output);
+  //--------------------------------------------------------------------------------------Orange---------------------------------------------------------------------------------------------
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ORANGE_TORCH_ITEM.get(), 4)
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetregistry.ORANGE_NUGGET.get())
+            .define('C', ItemTags.COALS)
+            .unlockedBy("has_orange_nugget", has(nuggetregistry.ORANGE_NUGGET.get()))
+            .save(output);
+          //redstone
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ORANGE_REDSTONE_TORCH_ITEM.get())
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetregistry.ORANGE_NUGGET.get())
+            .define('C', Items.REDSTONE)
+            .unlockedBy("has_orange_nugget", has(nuggetregistry.ORANGE_NUGGET.get()))
+            .save(output);
+          //soul
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ORANGE_SOUL_TORCH_ITEM.get(), 4)
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetregistry.ORANGE_NUGGET.get())
+            .define('C', Items.SOUL_SAND)
+            .unlockedBy("has_orange_nugget", has(nuggetregistry.ORANGE_NUGGET.get()))
+            .save(output);
       } 
  protected void buildFurnaceRecipes(RecipeOutput output) {
   //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
@@ -1702,6 +1733,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', ingotregistry.COCONUT_INGOT.get())
         .define('B', Items.COBBLESTONE)
         .unlockedBy("has_coconut_ingot", has(ingotregistry.COCONUT_INGOT.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Orange---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ORANGE_FURNACE_ITEM.get())
+        .pattern("ABA")
+        .pattern("B B")
+        .pattern("ABA")
+        .define('A', ingotregistry.ORANGE_INGOT.get())
+        .define('B', Items.COBBLESTONE)
+        .unlockedBy("has_orange_ingot", has(ingotregistry.ORANGE_INGOT.get()))
         .save(output);
       }
  protected void buildPathRecipes(RecipeOutput output) {
