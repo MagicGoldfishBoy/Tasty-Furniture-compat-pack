@@ -559,6 +559,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> COCONUT_CHAIR_ITEM = FOODBLOCKITEM.register("coconut_chair_item", () -> new BlockItem(foodblockregistry.COCONUT_CHAIR.get(),
     new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Orange---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> ORANGE_CHAIR_ITEM = FOODBLOCKITEM.register("orange_chair_item", () -> new BlockItem(foodblockregistry.ORANGE_CHAIR.get(),
+    new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                         Beds
 //==============================================================================================================================================================================================
@@ -573,6 +576,9 @@ public class foodblockcompatitemregistry {
     new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> COCONUT_BED_ITEM = FOODBLOCKITEM.register("coconut_bed_item", () -> new BlockItem(foodblockregistry.COCONUT_BED.get(),
+    new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Orange---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> ORANGE_BED_ITEM = FOODBLOCKITEM.register("orange_bed_item", () -> new BlockItem(foodblockregistry.ORANGE_BED.get(),
     new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                        Cabinets
@@ -612,5 +618,14 @@ public class foodblockcompatitemregistry {
     //medium
       public static final DeferredHolder<Item, BlockItem> MEDIUM_COCONUT_CABINET_ITEM = FOODBLOCKITEM.register("medium_coconut_cabinet_item", 
       () -> new BlockItem(foodblockregistry.MEDIUM_COCONUT_CABINET.get(),
+      new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Orange---------------------------------------------------------------------------------------------
+    //small
+      public static final DeferredHolder<Item, BlockItem> SMALL_ORANGE_CABINET_ITEM = FOODBLOCKITEM.register("small_orange_cabinet_item", 
+      () -> new BlockItem(foodblockregistry.SMALL_ORANGE_CABINET.get(),
+      new BlockItem.Properties()));
+    //medium
+      public static final DeferredHolder<Item, BlockItem> MEDIUM_ORANGE_CABINET_ITEM = FOODBLOCKITEM.register("medium_orange_cabinet_item", 
+      () -> new BlockItem(foodblockregistry.MEDIUM_ORANGE_CABINET.get(),
       new BlockItem.Properties()));
 }

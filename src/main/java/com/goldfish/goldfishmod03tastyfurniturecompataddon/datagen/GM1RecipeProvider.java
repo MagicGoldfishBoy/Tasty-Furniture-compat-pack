@@ -1860,6 +1860,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('B', foodblockcompatitemregistry.COCONUT_SLAB_ITEM.get())
         .unlockedBy("has_coconut_slab", has(foodblockcompatitemregistry.COCONUT_SLAB_ITEM.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Orange---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ORANGE_CHAIR_ITEM.get())
+        .pattern("AAA")
+        .pattern("BBB")
+        .pattern("A A")
+        .define('A', ingotregistry.ORANGE_INGOT.get())
+        .define('B', foodblockcompatitemregistry.ORANGE_SLAB_ITEM.get())
+        .unlockedBy("has_orange_slab", has(foodblockcompatitemregistry.ORANGE_SLAB_ITEM.get()))
+        .save(output);
       } 
  protected void buildBedRecipes(RecipeOutput output) {
   //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
@@ -1901,6 +1910,16 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
            .define('B', foodblockcompatitemregistry.COCONUT_SLAB_ITEM.get())
            .define('C', foodblockcompatitemregistry.COCONUT_CARPET_ITEM.get())
            .unlockedBy("has_coconut_ingot", has(ingotregistry.COCONUT_INGOT.get()))
+           .save(output);
+  //--------------------------------------------------------------------------------------Orange---------------------------------------------------------------------------------------------
+           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ORANGE_BED_ITEM.get())
+           .pattern("CCC")
+           .pattern("BBB")
+           .pattern("A A")
+           .define('A', ingotregistry.ORANGE_INGOT.get())
+           .define('B', foodblockcompatitemregistry.ORANGE_SLAB_ITEM.get())
+           .define('C', foodblockcompatitemregistry.ORANGE_CARPET_ITEM.get())
+           .unlockedBy("has_orange_ingot", has(ingotregistry.ORANGE_INGOT.get()))
            .save(output);
       }
  protected void buildCabinetRecipes(RecipeOutput output) {
@@ -1983,6 +2002,26 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('B', Items.IRON_INGOT)
          .define('C', foodblockcompatitemregistry.SMALL_COCONUT_CABINET_ITEM.get())
          .unlockedBy("has_coconut_slab", has(foodblockcompatitemregistry.COCONUT_SLAB_ITEM.get()))
+         .save(output);
+  //--------------------------------------------------------------------------------------Orange---------------------------------------------------------------------------------------------
+       //small
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.SMALL_ORANGE_CABINET_ITEM.get())
+         .pattern("AAA")
+         .pattern("B B")
+         .pattern("AAA")
+         .define('A', foodblockcompatitemregistry.ORANGE_SLAB_ITEM.get())
+         .define('B', Items.IRON_INGOT)
+         .unlockedBy("has_orange_slab", has(foodblockcompatitemregistry.ORANGE_SLAB_ITEM.get()))
+         .save(output);
+       //medium
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.MEDIUM_ORANGE_CABINET_ITEM.get())
+         .pattern("AAA")
+         .pattern("BCB")
+         .pattern("AAA")
+         .define('A', foodblockcompatitemregistry.ORANGE_SLAB_ITEM.get())
+         .define('B', Items.IRON_INGOT)
+         .define('C', foodblockcompatitemregistry.SMALL_ORANGE_CABINET_ITEM.get())
+         .unlockedBy("has_orange_slab", has(foodblockcompatitemregistry.ORANGE_SLAB_ITEM.get()))
          .save(output);
       }
   }
