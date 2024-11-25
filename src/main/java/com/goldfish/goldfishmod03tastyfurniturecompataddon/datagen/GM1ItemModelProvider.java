@@ -367,6 +367,19 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("orange_sign_item", mcLoc("item/generated")).texture("layer0", "item/orange_sign");
        //trapdoor
        withExistingParent("orange_trapdoor_item", modLoc("block/orange_trapdoor_trapdoor_bottom"));
+       //lamp
+       withExistingParent("orange_lamp_item", modLoc("block/orange_lamp"));
+       //carpet
+       ResourceLocation orange_carpet_texture = modLoc("block/orange_carpet");
+       carpet("orange_carpet_item", orange_carpet_texture);
+       //lantern
+        //regular
+        withExistingParent("orange_lantern_item", modLoc("block/orange_lantern"));
+        //soul
+          withExistingParent("orange_soul_lantern_item", modLoc("block/orange_soul_lantern"));
+       //chain
+       withExistingParent("orange_chain_item", modLoc("block/orange_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
   }
 }
 
