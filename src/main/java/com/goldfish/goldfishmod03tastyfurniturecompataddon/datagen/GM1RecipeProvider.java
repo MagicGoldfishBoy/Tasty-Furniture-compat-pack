@@ -1769,6 +1769,12 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .requires(Items.STONE)
         .unlockedBy("has_coconut_block", has(foodblockcompatitemregistry.COCONUT_BLOCK_ITEM.get()))
         .save(output);        
+  //--------------------------------------------------------------------------------------Orange---------------------------------------------------------------------------------------------
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.ORANGE_STONE_PATH_ITEM.get(), 6)
+        .requires(foodblockcompatitemregistry.ORANGE_BLOCK_ITEM.get())
+        .requires(Items.STONE)
+        .unlockedBy("has_orange_block", has(foodblockcompatitemregistry.ORANGE_BLOCK_ITEM.get()))
+        .save(output);        
       }
  protected void buildBarrelRecipes(RecipeOutput output) {
   //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
