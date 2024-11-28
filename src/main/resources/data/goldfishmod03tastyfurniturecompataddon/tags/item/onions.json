@@ -1,0 +1,15 @@
+{
+    "replace": false,
+    "values": [
+        {"id":"harvestcraft:onionitem",
+        "required": false},
+        {"id":"farmersdelight:onion",
+        "required": false},
+        {"id":"croptopia:onion",
+        "required": false},
+        {"id":"pamhc2crops:onionitem",
+        "required": false},
+        {"id":"c:crops/onion",
+        "required": false}
+    ]
+  }

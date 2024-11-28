@@ -141,6 +141,19 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........tiles
           net.minecraft.world.level.block.Block corn_tiles_block = foodblockcompatregistry.CORN_TILES_BLOCK.get();
           simpleBlock(corn_tiles_block);
+     //------------------------------------------------------------onion-----------------------------------------------------------------------
+      //.........plain
+          net.minecraft.world.level.block.Block onion_block = foodblockcompatregistry.ONION_BLOCK.get();
+          simpleBlock(onion_block);
+      //.........bricks
+          net.minecraft.world.level.block.Block onion_bricks_block = foodblockcompatregistry.ONION_BRICKS_BLOCK.get();
+          simpleBlock(onion_bricks_block);
+      //.........chiseled
+          net.minecraft.world.level.block.Block onion_chiseled_block = foodblockcompatregistry.ONION_CHISELED_BLOCK.get();
+          simpleBlock(onion_chiseled_block);
+      //.........tiles
+          net.minecraft.world.level.block.Block onion_tiles_block = foodblockcompatregistry.ONION_TILES_BLOCK.get();
+          simpleBlock(onion_tiles_block);
     //==============================================================================================================================================
     //|                                                              Slabs                                                                        |
     //==============================================================================================================================================
@@ -198,6 +211,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
           SlabBlock corn_bricks_slab = foodblockcompatregistry.CORN_BRICKS_SLAB.get();
           ResourceLocation corn_bricks_block_texture = modLoc("block/corn_bricks_block");
           slabBlock(corn_bricks_slab, corn_bricks_block_texture, corn_bricks_block_texture);
+     //------------------------------------------------------------onion-----------------------------------------------------------------------
+      //.........plain
+          SlabBlock onion_slab = foodblockcompatregistry.ONION_SLAB.get();
+          ResourceLocation onion_block_texture = modLoc("block/onion_block");
+          slabBlock(onion_slab, onion_block_texture, onion_block_texture);
+      //.........bricks
+          SlabBlock onion_bricks_slab = foodblockcompatregistry.ONION_BRICKS_SLAB.get();
+          ResourceLocation onion_bricks_block_texture = modLoc("block/onion_bricks_block");
+          slabBlock(onion_bricks_slab, onion_bricks_block_texture, onion_bricks_block_texture);
     //==============================================================================================================================================
     //|                                                              Stairs                                                                        |
     //==============================================================================================================================================
@@ -243,6 +265,13 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........bricks
           StairBlock corn_bricks_stairs = foodblockcompatregistry.CORN_BRICKS_STAIRS.get();
           stairsBlock(corn_bricks_stairs, corn_bricks_block_texture);
+     //------------------------------------------------------------onion-----------------------------------------------------------------------
+      //.........plain
+          StairBlock onion_stairs = foodblockcompatregistry.ONION_STAIRS.get();
+          stairsBlock(onion_stairs, onion_block_texture);
+      //.........bricks
+          StairBlock onion_bricks_stairs = foodblockcompatregistry.ONION_BRICKS_STAIRS.get();
+          stairsBlock(onion_bricks_stairs, onion_bricks_block_texture);
     //==============================================================================================================================================
     //|                                                               Bars                                                                         |
     //==============================================================================================================================================

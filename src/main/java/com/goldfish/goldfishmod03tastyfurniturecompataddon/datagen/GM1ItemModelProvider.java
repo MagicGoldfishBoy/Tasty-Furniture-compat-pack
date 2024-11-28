@@ -429,6 +429,31 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         stairs("corn_stairs_item", modLoc("block/corn_block"), modLoc("block/corn_block"), modLoc("block/corn_block"));
        //bricks stairs
         stairs("corn_bricks_stairs_item", modLoc("block/corn_bricks_block"), modLoc("block/corn_bricks_block"), modLoc("block/corn_bricks_block"));
+    //==============================================================================================================================================
+    //|                                                              Onion                                                                        |
+    //==============================================================================================================================================
+       //mush
+        withExistingParent("onion_mush", mcLoc("item/generated")).texture("layer0", "item/onion_mush");
+       //ingot
+        withExistingParent("onion_ingot", mcLoc("item/generated")).texture("layer0", "item/onion_ingot");
+       //nugget
+        withExistingParent("onion_nugget", mcLoc("item/generated")).texture("layer0", "item/onion_nugget");
+       //block
+        withExistingParent("onion_block_item", modLoc("block/onion_block"));
+       //bricks block
+        withExistingParent("onion_bricks_block_item", modLoc("block/onion_bricks_block"));
+       //chiseled block
+        withExistingParent("onion_chiseled_block_item", modLoc("block/onion_chiseled_block"));
+       //tiles block
+        withExistingParent("onion_tiles_block_item", modLoc("block/onion_tiles_block"));
+       //slab
+        slab("onion_slab_item", modLoc("block/onion_block"), modLoc("block/onion_block"), modLoc("block/onion_block"));
+       //bricks slab
+        slab("onion_bricks_slab_item", modLoc("block/onion_bricks_block"), modLoc("block/onion_bricks_block"), modLoc("block/onion_bricks_block"));
+       //stairs
+        stairs("onion_stairs_item", modLoc("block/onion_block"), modLoc("block/onion_block"), modLoc("block/onion_block"));
+       //bricks stairs
+        stairs("onion_bricks_stairs_item", modLoc("block/onion_bricks_block"), modLoc("block/onion_bricks_block"), modLoc("block/onion_bricks_block"));
   }
 }
 

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "goldfishmod03tastyfurniturecompataddon:block/onion_block",
+    "side": "goldfishmod03tastyfurniturecompataddon:block/onion_block",
+    "top": "goldfishmod03tastyfurniturecompataddon:block/onion_block"
+  }
+}

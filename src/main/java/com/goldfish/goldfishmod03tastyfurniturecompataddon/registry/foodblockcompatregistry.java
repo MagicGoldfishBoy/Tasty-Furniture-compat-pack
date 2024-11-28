@@ -230,6 +230,31 @@ public class foodblockcompatregistry {
          .explosionResistance(10.0f)
          .sound(SoundType.MUD_BRICKS)
          ));
+ //----------------------------------------------------------------------------------------Onion-----------------------------------------------------------------------------------------------
+  //.........plain
+    public static final DeferredHolder<Block, Block> ONION_BLOCK = FOODBLOCK.register("onion_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.MUD_BRICKS)
+         ));
+  //.........bricks
+    public static final DeferredHolder<Block, Block> ONION_BRICKS_BLOCK = FOODBLOCK.register("onion_bricks_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.MUD_BRICKS)
+         ));
+  //.........chiseled
+    public static final DeferredHolder<Block, Block> ONION_CHISELED_BLOCK = FOODBLOCK.register("onion_chiseled_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.MUD_BRICKS)
+         ));
+  //.........tiles
+    public static final DeferredHolder<Block, Block> ONION_TILES_BLOCK = FOODBLOCK.register("onion_tiles_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.MUD_BRICKS)
+         ));
 
 //==============================================================================================================================================================================================
 //                                                                                          Slabs
@@ -308,6 +333,19 @@ public class foodblockcompatregistry {
      ));
   //.........bricks
      public static final DeferredHolder<Block, SlabBlock> CORN_BRICKS_SLAB = FOODBLOCK.register("corn_bricks_slab", () -> new SlabBlock(BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     ));
+ //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
+  //.........plain
+     public static final DeferredHolder<Block, SlabBlock> ONION_SLAB = FOODBLOCK.register("onion_slab", () -> new SlabBlock(BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     ));
+  //.........bricks
+     public static final DeferredHolder<Block, SlabBlock> ONION_BRICKS_SLAB = FOODBLOCK.register("onion_bricks_slab", () -> new SlabBlock(BlockBehaviour.Properties.of()
      .destroyTime(1.75f)
      .explosionResistance(9.5f)
      .sound(SoundType.MUD_BRICKS)
@@ -401,6 +439,21 @@ public class foodblockcompatregistry {
   //.........bricks
      public static final DeferredHolder<Block, StairBlock> CORN_BRICKS_STAIRS = FOODBLOCK.register("corn_bricks_stairs", 
      () -> new StairBlock(CORN_BRICKS_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
+     .destroyTime(1.5f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     )); 
+ //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
+  //.........plain
+     public static final DeferredHolder<Block, StairBlock> ONION_STAIRS = FOODBLOCK.register("onion_stairs", 
+     () -> new StairBlock(ONION_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
+     .destroyTime(1.5f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     )); 
+  //.........bricks
+     public static final DeferredHolder<Block, StairBlock> ONION_BRICKS_STAIRS = FOODBLOCK.register("onion_bricks_stairs", 
+     () -> new StairBlock(ONION_BRICKS_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
      .destroyTime(1.5f)
      .explosionResistance(9.5f)
      .sound(SoundType.MUD_BRICKS)

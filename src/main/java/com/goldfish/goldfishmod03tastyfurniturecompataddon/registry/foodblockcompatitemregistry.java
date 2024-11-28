@@ -97,6 +97,19 @@ public class foodblockcompatitemregistry {
   //.........tiles
      public static final DeferredHolder<Item, BlockItem> CORN_TILES_BLOCK_ITEM = FOODBLOCKITEM.register("corn_tiles_block_item",
      () -> new BlockItem(foodblockcompatregistry.CORN_TILES_BLOCK.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
+  //.........plain
+     public static final DeferredHolder<Item, BlockItem> ONION_BLOCK_ITEM = FOODBLOCKITEM.register("onion_block_item",
+     () -> new BlockItem(foodblockcompatregistry.ONION_BLOCK.get(), new BlockItem.Properties()));
+  //.........bricks
+     public static final DeferredHolder<Item, BlockItem> ONION_BRICKS_BLOCK_ITEM = FOODBLOCKITEM.register("onion_bricks_block_item",
+     () -> new BlockItem(foodblockcompatregistry.ONION_BRICKS_BLOCK.get(), new BlockItem.Properties()));
+  //.........chiseled
+     public static final DeferredHolder<Item, BlockItem> ONION_CHISELED_BLOCK_ITEM = FOODBLOCKITEM.register("onion_chiseled_block_item",
+     () -> new BlockItem(foodblockcompatregistry.ONION_CHISELED_BLOCK.get(), new BlockItem.Properties()));
+  //.........tiles
+     public static final DeferredHolder<Item, BlockItem> ONION_TILES_BLOCK_ITEM = FOODBLOCKITEM.register("onion_tiles_block_item",
+     () -> new BlockItem(foodblockcompatregistry.ONION_TILES_BLOCK.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                         Slabs
 //==============================================================================================================================================================================================
@@ -142,6 +155,13 @@ public class foodblockcompatitemregistry {
   //.........bricks
    public static final DeferredHolder<Item, BlockItem> CORN_BRICKS_SLAB_ITEM = FOODBLOCKITEM.register("corn_bricks_slab_item",
    () -> new BlockItem(foodblockcompatregistry.CORN_BRICKS_SLAB.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
+  //.........plain
+   public static final DeferredHolder<Item, BlockItem> ONION_SLAB_ITEM = FOODBLOCKITEM.register("onion_slab_item",
+   () -> new BlockItem(foodblockcompatregistry.ONION_SLAB.get(), new BlockItem.Properties()));
+  //.........bricks
+   public static final DeferredHolder<Item, BlockItem> ONION_BRICKS_SLAB_ITEM = FOODBLOCKITEM.register("onion_bricks_slab_item",
+   () -> new BlockItem(foodblockcompatregistry.ONION_BRICKS_SLAB.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                         Stairs
 //==============================================================================================================================================================================================
@@ -187,6 +207,13 @@ public class foodblockcompatitemregistry {
   //.........bricks
    public static final DeferredHolder<Item, BlockItem> CORN_BRICKS_STAIRS_ITEM = FOODBLOCKITEM.register("corn_bricks_stairs_item",
    () -> new BlockItem(foodblockcompatregistry.CORN_BRICKS_STAIRS.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
+  //.........plain
+   public static final DeferredHolder<Item, BlockItem> ONION_STAIRS_ITEM = FOODBLOCKITEM.register("onion_stairs_item",
+   () -> new BlockItem(foodblockcompatregistry.ONION_STAIRS.get(), new BlockItem.Properties()));
+  //.........bricks
+   public static final DeferredHolder<Item, BlockItem> ONION_BRICKS_STAIRS_ITEM = FOODBLOCKITEM.register("onion_bricks_stairs_item",
+   () -> new BlockItem(foodblockcompatregistry.ONION_BRICKS_STAIRS.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                         Bars
 //==============================================================================================================================================================================================

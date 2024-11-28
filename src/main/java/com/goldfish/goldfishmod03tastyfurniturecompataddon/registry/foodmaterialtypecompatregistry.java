@@ -105,5 +105,10 @@ public class foodmaterialtypecompatregistry {
         "corn_wood_mat", 
         PLANT) 
     );
+    public static final WoodType ONIONWOODMAT = WoodType.register(
+     new WoodType(
+        "onion_wood_mat", 
+        PLANT) 
+    );
 
 }
