@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/door_top_left_open",
+  "render_type": "minecraft:cutout_mipped_all",
+  "textures": {
+    "bottom": "goldfishmod03tastyfurniturecompataddon:block/corn_door_bottom",
+    "top": "goldfishmod03tastyfurniturecompataddon:block/corn_door_top"
+  }
+}
