@@ -28,6 +28,8 @@ import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.elderberryWallS
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.juniperFurnace;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.juniperSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.juniperWallSign;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.onionSign;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.onionWallSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.orangeFurnace;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.orangeSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.orangeWallSign;
@@ -40,6 +42,7 @@ import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.elderber
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.elderberrySignEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.juniperFurnaceEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.juniperSignEntity;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.onionSignEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.orangeFurnaceEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.orangeSignEntity;
 
@@ -1009,6 +1012,51 @@ public class foodblockcompatregistry {
          foodblockcompatregistry.CORN_SIGN.get(),
          foodblockcompatregistry.CORN_WALL_SIGN.get(),
          foodblockcompatregistry.CORN_STANDING_SIGN.get()
+     ).build(null)
+   );
+ //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Block, onionSign> ONION_SIGN = FOODBLOCK.register("onion_sign",
+   () -> new onionSign(
+     BlockBehaviour.Properties.of()
+         .mapColor(MapColor.WOOD)
+         .forceSolidOn()
+         .instrument(NoteBlockInstrument.BASS)
+         .noCollission()
+         .strength(1.0F)
+         .ignitedByLava(),
+         foodmaterialtypecompatregistry.ONIONWOODMAT
+   ));
+      public static final DeferredHolder<Block, onionWallSign> ONION_WALL_SIGN = FOODBLOCK.register("onion_wall_sign",
+   () -> new onionWallSign(
+       BlockBehaviour.Properties.of()
+       .mapColor(MapColor.WOOD)
+       .forceSolidOn()
+       .instrument(NoteBlockInstrument.BASS)
+       .noCollission()
+       .strength(1.0F)
+       .ignitedByLava()
+       .randomTicks(),
+       foodmaterialtypecompatregistry.ONIONWOODMAT
+   ));
+   public static final DeferredHolder<Block, onionSign> ONION_STANDING_SIGN = FOODBLOCK.register("onion_standing_sign",
+   () -> new onionSign(
+       BlockBehaviour.Properties.of()
+       .mapColor(MapColor.WOOD)
+       .forceSolidOn()
+       .instrument(NoteBlockInstrument.BASS)
+       .noCollission()
+       .strength(1.0F)
+       .ignitedByLava()
+       .randomTicks(),
+       foodmaterialtypecompatregistry.ONIONWOODMAT
+   ));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<onionSignEntity>> ONION_SIGN_ENTITY = FOODBLOCKENTITY.register(
+     "onion_sign_entity",
+     () -> BlockEntityType.Builder.of(
+         onionSignEntity::new,
+         foodblockcompatregistry.ONION_SIGN.get(),
+         foodblockcompatregistry.ONION_WALL_SIGN.get(),
+         foodblockcompatregistry.ONION_STANDING_SIGN.get()
      ).build(null)
    );
 //==============================================================================================================================================================================================

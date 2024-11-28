@@ -379,6 +379,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, SignItem> CORN_SIGN_ITEM = FOODBLOCKITEM.register("corn_sign_item",
    () -> new SignItem(new SignItem.Properties(), foodblockcompatregistry.CORN_STANDING_SIGN.get(), foodblockcompatregistry.CORN_WALL_SIGN.get()));
+ //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, SignItem> ONION_SIGN_ITEM = FOODBLOCKITEM.register("onion_sign_item",
+   () -> new SignItem(new SignItem.Properties(), foodblockcompatregistry.ONION_STANDING_SIGN.get(), foodblockcompatregistry.ONION_WALL_SIGN.get()));
 //==============================================================================================================================================================================================
 //                                                                                       Trap Doors
 //==============================================================================================================================================================================================
