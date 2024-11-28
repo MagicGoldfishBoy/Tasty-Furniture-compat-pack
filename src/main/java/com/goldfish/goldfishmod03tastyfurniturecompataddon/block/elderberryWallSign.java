@@ -1,7 +1,7 @@
 package com.goldfish.goldfishmod03tastyfurniturecompataddon.block;
 
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.elderberrySignEntity;
-import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.foodblockregistry;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.foodblockcompatregistry;
 import com.mojang.serialization.MapCodec;
 
 import net.minecraft.core.BlockPos;
@@ -24,7 +24,7 @@ public class elderberryWallSign extends WallSignBlock {
     
     @Override
    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
-        return createTickerHelper(type, foodblockregistry.ELDERBERRY_SIGN_ENTITY.get(), elderberrySignEntity::tick);
+        return createTickerHelper(type, foodblockcompatregistry.ELDERBERRY_SIGN_ENTITY.get(), elderberrySignEntity::tick);
    }
 
    @Override

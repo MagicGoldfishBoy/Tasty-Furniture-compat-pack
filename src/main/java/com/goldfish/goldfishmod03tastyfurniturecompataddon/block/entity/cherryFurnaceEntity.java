@@ -3,7 +3,7 @@ package com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity;
 import org.jetbrains.annotations.NotNull;
 
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.cherryFurnace;
-import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.foodblockregistry;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.foodblockcompatregistry;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -16,7 +16,7 @@ import net.minecraft.world.level.block.state.BlockState;
 
 public class cherryFurnaceEntity extends AbstractFurnaceBlockEntity {
     public cherryFurnaceEntity(BlockPos pos, BlockState state) {
-        super(foodblockregistry.CHERRY_FURNACE_ENTITY.get(), pos, state, RecipeType.SMELTING);
+        super(foodblockcompatregistry.CHERRY_FURNACE_ENTITY.get(), pos, state, RecipeType.SMELTING);
     }
 
     @Override
@@ -30,7 +30,7 @@ public class cherryFurnaceEntity extends AbstractFurnaceBlockEntity {
     }
 
     protected cherryFurnace getBlock() {
-        return (foodblockregistry.CHERRY_FURNACE.get()); //getBlockState().getBlock();
+        return (foodblockcompatregistry.CHERRY_FURNACE.get()); //getBlockState().getBlock();
     }
 
     

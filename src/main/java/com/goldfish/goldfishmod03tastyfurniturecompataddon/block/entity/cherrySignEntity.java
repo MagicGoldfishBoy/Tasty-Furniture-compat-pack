@@ -2,7 +2,7 @@ package com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity;
 
 import org.jetbrains.annotations.NotNull;
 
-import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.foodblockregistry;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.foodblockcompatregistry;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
@@ -17,7 +17,7 @@ public class cherrySignEntity extends SignBlockEntity {
     }
     @Override
     public @NotNull BlockEntityType<?> getType() {
-        return foodblockregistry.CHERRY_SIGN_ENTITY.get();
+        return foodblockcompatregistry.CHERRY_SIGN_ENTITY.get();
     }
     public static void tick(Level level, BlockPos pos, BlockState state, cherrySignEntity entity) {
           if (level instanceof ServerLevel) {

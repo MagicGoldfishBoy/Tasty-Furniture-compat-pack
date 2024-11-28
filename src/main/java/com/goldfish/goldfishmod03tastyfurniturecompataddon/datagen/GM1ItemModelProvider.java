@@ -404,6 +404,31 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //cabinet
        withExistingParent("small_orange_cabinet_item", modLoc("block/orange_cabinet"));
        withExistingParent("medium_orange_cabinet_item", modLoc("block/medium_orange_cabinet"));
+    //==============================================================================================================================================
+    //|                                                              Corn                                                                        |
+    //==============================================================================================================================================
+       //mush
+        withExistingParent("corn_mush", mcLoc("item/generated")).texture("layer0", "item/corn_mush");
+       //ingot
+        withExistingParent("corn_ingot", mcLoc("item/generated")).texture("layer0", "item/corn_ingot");
+       //nugget
+        withExistingParent("corn_nugget", mcLoc("item/generated")).texture("layer0", "item/corn_nugget");
+       //block
+        withExistingParent("corn_block_item", modLoc("block/corn_block"));
+       //bricks block
+        withExistingParent("corn_bricks_block_item", modLoc("block/corn_bricks_block"));
+       //chiseled block
+        withExistingParent("corn_chiseled_block_item", modLoc("block/corn_chiseled_block"));
+       //tiles block
+        withExistingParent("corn_tiles_block_item", modLoc("block/corn_tiles_block"));
+       //slab
+        slab("corn_slab_item", modLoc("block/corn_block"), modLoc("block/corn_block"), modLoc("block/corn_block"));
+       //bricks slab
+        slab("corn_bricks_slab_item", modLoc("block/corn_bricks_block"), modLoc("block/corn_bricks_block"), modLoc("block/corn_bricks_block"));
+       //stairs
+        stairs("corn_stairs_item", modLoc("block/corn_block"), modLoc("block/corn_block"), modLoc("block/corn_block"));
+       //bricks stairs
+        stairs("corn_bricks_stairs_item", modLoc("block/corn_bricks_block"), modLoc("block/corn_bricks_block"), modLoc("block/corn_bricks_block"));
   }
 }
 

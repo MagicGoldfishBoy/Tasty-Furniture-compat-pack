@@ -5,7 +5,7 @@ import javax.annotation.Nullable;
 import org.jetbrains.annotations.NotNull;
 
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.juniperFurnaceEntity;
-import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.foodblockregistry;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.foodblockcompatregistry;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.stats.Stats;
@@ -37,7 +37,7 @@ public class juniperFurnace extends FurnaceBlock {
     @Override
     @Nullable
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(@NotNull Level level, @NotNull BlockState state, @NotNull BlockEntityType<T> type) {
-        return juniperFurnace.createFurnaceTicker(level, type, foodblockregistry.JUNIPER_FURNACE_ENTITY.get());
+        return juniperFurnace.createFurnaceTicker(level, type, foodblockcompatregistry.JUNIPER_FURNACE_ENTITY.get());
     }
 
     @Override

@@ -19,7 +19,7 @@ import net.neoforged.neoforge.common.SimpleTier;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-public class foodmaterialtyperegistry {
+public class foodmaterialtypecompatregistry {
 
     public static final BlockSetType PLANT = BlockSetType.register(
      new BlockSetType(
@@ -98,6 +98,11 @@ public class foodmaterialtyperegistry {
     public static final WoodType ORANGEWOODMAT = WoodType.register(
      new WoodType(
         "orange_wood_mat", 
+        PLANT) 
+    );
+    public static final WoodType CORNWOODMAT = WoodType.register(
+     new WoodType(
+        "corn_wood_mat", 
         PLANT) 
     );
 

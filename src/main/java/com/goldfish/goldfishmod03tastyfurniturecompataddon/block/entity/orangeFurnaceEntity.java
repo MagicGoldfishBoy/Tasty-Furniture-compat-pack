@@ -3,7 +3,7 @@ package com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity;
 import org.jetbrains.annotations.NotNull;
 
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.orangeFurnace;
-import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.foodblockregistry;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.foodblockcompatregistry;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -16,7 +16,7 @@ import net.minecraft.world.level.block.state.BlockState;
 
 public class orangeFurnaceEntity extends AbstractFurnaceBlockEntity {
     public orangeFurnaceEntity(BlockPos pos, BlockState state) {
-        super(foodblockregistry.ORANGE_FURNACE_ENTITY.get(), pos, state, RecipeType.SMELTING);
+        super(foodblockcompatregistry.ORANGE_FURNACE_ENTITY.get(), pos, state, RecipeType.SMELTING);
     }
 
     @Override
@@ -30,7 +30,7 @@ public class orangeFurnaceEntity extends AbstractFurnaceBlockEntity {
     }
 
     protected orangeFurnace getBlock() {
-        return (foodblockregistry.ORANGE_FURNACE.get()); //getBlockState().getBlock();
+        return (foodblockcompatregistry.ORANGE_FURNACE.get()); //getBlockState().getBlock();
     }
 
     

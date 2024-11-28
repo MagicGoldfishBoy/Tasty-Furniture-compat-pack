@@ -1,6 +1,6 @@
 package com.goldfish.goldfishmod03tastyfurniturecompataddon.datagen;
 
-import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.foodblockregistry;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.foodblockcompatregistry;
 import com.mojang.logging.LogUtils;
 
 import net.minecraft.core.HolderLookup;
@@ -25,7 +25,7 @@ public class GM1BlockLootTableProvider extends BlockLootSubProvider {
 
     @Override
     protected Iterable<Block> getKnownBlocks() {
-        return foodblockregistry.FOODBLOCK.getEntries()
+        return foodblockcompatregistry.FOODBLOCK.getEntries()
                 .stream()
                 .map(entry -> entry.get())
                 .collect(Collectors.toList());
@@ -33,7 +33,7 @@ public class GM1BlockLootTableProvider extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
-     foodblockregistry.FOODBLOCK.getEntries().forEach((a) -> {if (a.get().getName().toString().matches(".*slab.*")) {this.add(a.get(), this::createSlabItemTable);}
+     foodblockcompatregistry.FOODBLOCK.getEntries().forEach((a) -> {if (a.get().getName().toString().matches(".*slab.*")) {this.add(a.get(), this::createSlabItemTable);}
      else if (a.get().getName().toString().matches(".*door.*") && (!a.get().getName().toString().matches(".*trap.*"))) {this.add(a.get(), this::createDoorTable);} 
      else {dropSelf(a.get());} });
      }

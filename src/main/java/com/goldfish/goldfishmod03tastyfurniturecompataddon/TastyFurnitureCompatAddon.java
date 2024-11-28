@@ -10,11 +10,11 @@ import com.goldfish.goldfishmod03tastyfurniturecompataddon.datagen.GM1Datagen;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.datagen.GM1LootTableProvider;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.foodEntityRegistry;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.foodblockcompatitemregistry;
-import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.foodblockregistry;
-import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.foodmaterialtyperegistry;
-import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.ingotregistry;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.foodblockcompatregistry;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.foodmaterialtypecompatregistry;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.ingotcompatregistry;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.mushcompatregistry;
-import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.nuggetregistry;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.nuggetcompatregistry;
 import com.mojang.logging.LogUtils;
 
 import net.minecraft.client.Minecraft;
@@ -88,10 +88,10 @@ public class TastyFurnitureCompatAddon
                 output.acceptAll(mushcompatregistry.MUSH.getEntries().stream().map(sup -> {
                     return sup.get().getDefaultInstance();
                 }).toList());
-                output.acceptAll(ingotregistry.FOODINGOT.getEntries().stream().map(sup -> {
+                output.acceptAll(ingotcompatregistry.FOODINGOT.getEntries().stream().map(sup -> {
                     return sup.get().getDefaultInstance();
                 }).toList());
-                output.acceptAll(nuggetregistry.FOODNUGGET.getEntries().stream().map(sup -> {
+                output.acceptAll(nuggetcompatregistry.FOODNUGGET.getEntries().stream().map(sup -> {
                     return sup.get().getDefaultInstance();
                 }).toList());
                 output.acceptAll(foodblockcompatitemregistry.FOODBLOCKITEM.getEntries().stream().map(sup -> {
@@ -114,11 +114,11 @@ public class TastyFurnitureCompatAddon
 
         BLOCKS.register(modEventBus);
 
-        WoodType.register(foodmaterialtyperegistry.ELDERBERRYWOODMAT);
+        WoodType.register(foodmaterialtypecompatregistry.ELDERBERRYWOODMAT);
 
-        foodblockregistry.FOODBLOCK.register(modEventBus);
+        foodblockcompatregistry.FOODBLOCK.register(modEventBus);
 
-        foodblockregistry.FOODBLOCKENTITY.register(modEventBus);
+        foodblockcompatregistry.FOODBLOCKENTITY.register(modEventBus);
 
         foodEntityRegistry.FOODENTITY.register(modEventBus);
 
@@ -126,9 +126,9 @@ public class TastyFurnitureCompatAddon
 
         mushcompatregistry.MUSH.register(modEventBus);
 
-        ingotregistry.FOODINGOT.register(modEventBus);
+        ingotcompatregistry.FOODINGOT.register(modEventBus);
 
-        nuggetregistry.FOODNUGGET.register(modEventBus);
+        nuggetcompatregistry.FOODNUGGET.register(modEventBus);
 
         foodblockcompatitemregistry.FOODBLOCKITEM.register(modEventBus);
 
@@ -171,11 +171,11 @@ public class TastyFurnitureCompatAddon
 
         @SubscribeEvent(priority = EventPriority.LOWEST)
         public static void onRegisterRenderers(EntityRenderersEvent.RegisterRenderers event) {
-        event.registerBlockEntityRenderer(foodblockregistry.ELDERBERRY_SIGN_ENTITY.get(), SignRenderer::new);
-        event.registerBlockEntityRenderer(foodblockregistry.JUNIPER_SIGN_ENTITY.get(), SignRenderer::new);
-        event.registerBlockEntityRenderer(foodblockregistry.CHERRY_SIGN_ENTITY.get(), SignRenderer::new);
-        event.registerBlockEntityRenderer(foodblockregistry.COCONUT_SIGN_ENTITY.get(), SignRenderer::new);
-        event.registerBlockEntityRenderer(foodblockregistry.ORANGE_SIGN_ENTITY.get(), SignRenderer::new);
+        event.registerBlockEntityRenderer(foodblockcompatregistry.ELDERBERRY_SIGN_ENTITY.get(), SignRenderer::new);
+        event.registerBlockEntityRenderer(foodblockcompatregistry.JUNIPER_SIGN_ENTITY.get(), SignRenderer::new);
+        event.registerBlockEntityRenderer(foodblockcompatregistry.CHERRY_SIGN_ENTITY.get(), SignRenderer::new);
+        event.registerBlockEntityRenderer(foodblockcompatregistry.COCONUT_SIGN_ENTITY.get(), SignRenderer::new);
+        event.registerBlockEntityRenderer(foodblockcompatregistry.ORANGE_SIGN_ENTITY.get(), SignRenderer::new);
         event.registerEntityRenderer(foodEntityRegistry.CHAIR_ENTITY.get(), foodChairEntityRenderer::new);
         }
         

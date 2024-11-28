@@ -1,7 +1,7 @@
 package com.goldfish.goldfishmod03tastyfurniturecompataddon.block;
 
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.juniperSignEntity;
-import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.foodblockregistry;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.foodblockcompatregistry;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
@@ -21,7 +21,7 @@ public class juniperSign extends StandingSignBlock {
 
      @Override
      public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
-         return createTickerHelper(type, foodblockregistry.JUNIPER_SIGN_ENTITY.get(), juniperSignEntity::tick);
+         return createTickerHelper(type, foodblockcompatregistry.JUNIPER_SIGN_ENTITY.get(), juniperSignEntity::tick);
      }
 
      @Override

@@ -1,0 +1,13 @@
+{
+    "replace": false,
+    "values": [
+        {"id":"pamhc2crops:cornitem",
+        "required": false},
+        {"id":"harvestcraft:cornitem",
+        "required": false},
+        {"id":"croptopia:corn",
+        "required": false},
+        {"id":"c:crops/corn",
+        "required": false}
+    ]
+  }

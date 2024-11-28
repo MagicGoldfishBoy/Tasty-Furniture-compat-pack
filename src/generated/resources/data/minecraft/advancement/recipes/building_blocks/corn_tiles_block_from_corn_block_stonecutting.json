@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_corn_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "goldfishmod03tastyfurniturecompataddon:corn_block_item"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:corn_tiles_block_from_corn_block_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_corn_block"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:corn_tiles_block_from_corn_block_stonecutting"
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 package com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity;
 
-import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.foodblockregistry;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.foodblockcompatregistry;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;

@@ -184,5 +184,16 @@
     "block.goldfishmod03tastyfurniturecompataddon.orange_chair": "Orange Chair",
     "block.goldfishmod03tastyfurniturecompataddon.orange_bed": "Orange Bed",
     "block.goldfishmod03tastyfurniturecompataddon.small_orange_cabinet": "Orange Small Cabinet",
-    "block.goldfishmod03tastyfurniturecompataddon.medium_orange_cabinet": "Orange Medium Cabinet"
+    "block.goldfishmod03tastyfurniturecompataddon.medium_orange_cabinet": "Orange Medium Cabinet",
+  "item.goldfishmod03tastyfurniturecompataddon.corn_mush": "Corn Mush",
+    "item.goldfishmod03tastyfurniturecompataddon.corn_ingot": "Corn Ingot",
+    "item.goldfishmod03tastyfurniturecompataddon.corn_nugget": "Corn Nugget",
+    "block.goldfishmod03tastyfurniturecompataddon.corn_block": "Corn Block",
+    "block.goldfishmod03tastyfurniturecompataddon.corn_bricks_block": "Corn Bricks Block",
+    "block.goldfishmod03tastyfurniturecompataddon.corn_chiseled_block": "Corn Chiseled Block",
+    "block.goldfishmod03tastyfurniturecompataddon.corn_tiles_block": "Corn Tiles Block",
+    "block.goldfishmod03tastyfurniturecompataddon.corn_slab": "Corn Slab",
+    "block.goldfishmod03tastyfurniturecompataddon.corn_bricks_slab": "Corn Bricks Slab",
+    "block.goldfishmod03tastyfurniturecompataddon.corn_stairs": "Corn Stairs",
+    "block.goldfishmod03tastyfurniturecompataddon.corn_bricks_stairs": "Corn Bricks Stairs"
 }

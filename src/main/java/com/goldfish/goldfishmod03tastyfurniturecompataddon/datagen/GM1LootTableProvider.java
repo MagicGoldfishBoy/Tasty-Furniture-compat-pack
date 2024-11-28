@@ -10,7 +10,7 @@ import org.apache.logging.log4j.util.BiConsumer;
 import org.slf4j.Logger;
 
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.datagen.GM1BlockLootTableProvider;
-import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.foodblockregistry;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.foodblockcompatregistry;
 import com.mojang.logging.LogUtils;
 
 import net.neoforged.bus.api.SubscribeEvent;
