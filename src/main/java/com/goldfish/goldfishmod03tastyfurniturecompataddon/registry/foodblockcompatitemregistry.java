@@ -235,6 +235,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> CORN_BARS_ITEM = FOODBLOCKITEM.register("corn_bars_item",
    () -> new BlockItem(foodblockcompatregistry.CORN_BARS.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, BlockItem> ONION_BARS_ITEM = FOODBLOCKITEM.register("onion_bars_item",
+   () -> new BlockItem(foodblockcompatregistry.ONION_BARS.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                         Doors
 //==============================================================================================================================================================================================
@@ -256,6 +259,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> CORN_DOOR_ITEM = FOODBLOCKITEM.register("corn_door_item",
    () -> new BlockItem(foodblockcompatregistry.CORN_DOOR.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, BlockItem> ONION_DOOR_ITEM = FOODBLOCKITEM.register("onion_door_item",
+   () -> new BlockItem(foodblockcompatregistry.ONION_DOOR.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                         Buttons
 //==============================================================================================================================================================================================
@@ -277,6 +283,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> CORN_BUTTON_ITEM = FOODBLOCKITEM.register("corn_button_item",
    () -> new BlockItem(foodblockcompatregistry.CORN_BUTTON.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, BlockItem> ONION_BUTTON_ITEM = FOODBLOCKITEM.register("onion_button_item",
+   () -> new BlockItem(foodblockcompatregistry.ONION_BUTTON.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                         Fences
 //==============================================================================================================================================================================================
@@ -298,6 +307,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> CORN_FENCE_ITEM = FOODBLOCKITEM.register("corn_fence_item",
    () -> new BlockItem(foodblockcompatregistry.CORN_FENCE.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, BlockItem> ONION_FENCE_ITEM = FOODBLOCKITEM.register("onion_fence_item",
+   () -> new BlockItem(foodblockcompatregistry.ONION_FENCE.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                         Gates
 //==============================================================================================================================================================================================
@@ -319,6 +331,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> CORN_GATE_ITEM = FOODBLOCKITEM.register("corn_gate_item",
    () -> new BlockItem(foodblockcompatregistry.CORN_GATE.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, BlockItem> ONION_GATE_ITEM = FOODBLOCKITEM.register("onion_gate_item",
+   () -> new BlockItem(foodblockcompatregistry.ONION_GATE.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                     Pressure Plates
 //==============================================================================================================================================================================================
@@ -340,6 +355,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> CORN_PRESSURE_PLATE_ITEM = FOODBLOCKITEM.register("corn_pressure_plate_item",
    () -> new BlockItem(foodblockcompatregistry.CORN_PRESSURE_PLATE.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, BlockItem> ONION_PRESSURE_PLATE_ITEM = FOODBLOCKITEM.register("onion_pressure_plate_item",
+   () -> new BlockItem(foodblockcompatregistry.ONION_PRESSURE_PLATE.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                          Signs
 //==============================================================================================================================================================================================

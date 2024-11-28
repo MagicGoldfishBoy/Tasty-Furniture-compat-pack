@@ -212,5 +212,11 @@
     "block.goldfishmod03tastyfurniturecompataddon.onion_slab": "Onion Slab",
     "block.goldfishmod03tastyfurniturecompataddon.onion_bricks_slab": "Onion Bricks Slab",
     "block.goldfishmod03tastyfurniturecompataddon.onion_stairs": "Onion Stairs",
-    "block.goldfishmod03tastyfurniturecompataddon.onion_bricks_stairs": "Onion Bricks Stairs"
+    "block.goldfishmod03tastyfurniturecompataddon.onion_bricks_stairs": "Onion Bricks Stairs",
+    "block.goldfishmod03tastyfurniturecompataddon.onion_bars": "Onion Bars",
+    "block.goldfishmod03tastyfurniturecompataddon.onion_door": "Onion Door",
+    "block.goldfishmod03tastyfurniturecompataddon.onion_button": "Onion Button",
+    "block.goldfishmod03tastyfurniturecompataddon.onion_fence": "Onion Fence",
+    "block.goldfishmod03tastyfurniturecompataddon.onion_gate": "Onion Gate",
+    "block.goldfishmod03tastyfurniturecompataddon.onion_pressure_plate": "Onion Pressure Plate"
 }

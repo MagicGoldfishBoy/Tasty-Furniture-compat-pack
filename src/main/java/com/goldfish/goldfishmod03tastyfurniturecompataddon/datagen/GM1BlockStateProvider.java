@@ -305,6 +305,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation corn_bars_texture = modLoc("block/corn_bars");
           ResourceLocation corn_bars_rim_texture = modLoc("block/corn_block");
           paneBlockWithRenderType(corn_bars, "corn_bars", corn_bars_texture, corn_bars_rim_texture, "cutout_mipped_all"); 
+     //------------------------------------------------------------onion-----------------------------------------------------------------------
+          IronBarsBlock onion_bars = foodblockcompatregistry.ONION_BARS.get(); 
+          ResourceLocation onion_bars_texture = modLoc("block/onion_bars");
+          ResourceLocation onion_bars_rim_texture = modLoc("block/onion_block");
+          paneBlockWithRenderType(onion_bars, "onion_bars", onion_bars_texture, onion_bars_rim_texture, "cutout_mipped_all"); 
     //==============================================================================================================================================
     //|                                                               Door                                                                         |
     //==============================================================================================================================================
@@ -338,6 +343,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation corn_door_top_texture = modLoc("block/corn_door_top");
           ResourceLocation corn_door_bottom_texture = modLoc("block/corn_door_bottom");
           doorBlockWithRenderType(corn_door, "corn_door", corn_door_bottom_texture, corn_door_top_texture, "cutout_mipped_all"); 
+     //------------------------------------------------------------onion-----------------------------------------------------------------------
+          DoorBlock onion_door = foodblockcompatregistry.ONION_DOOR.get(); 
+          ResourceLocation onion_door_top_texture = modLoc("block/onion_door_top");
+          ResourceLocation onion_door_bottom_texture = modLoc("block/onion_door_bottom");
+          doorBlockWithRenderType(onion_door, "onion_door", onion_door_bottom_texture, onion_door_top_texture, "translucent"); 
     //==============================================================================================================================================
     //|                                                              Button                                                                        |
     //==============================================================================================================================================
@@ -365,6 +375,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ButtonBlock corn_button = foodblockcompatregistry.CORN_BUTTON.get();
           ResourceLocation corn_button_texture = modLoc("block/corn_block");
           buttonBlock(corn_button, corn_button_texture);
+     //------------------------------------------------------------onion-----------------------------------------------------------------------
+          ButtonBlock onion_button = foodblockcompatregistry.ONION_BUTTON.get();
+          ResourceLocation onion_button_texture = modLoc("block/onion_block");
+          buttonBlock(onion_button, onion_button_texture);
     //==============================================================================================================================================
     //|                                                              Fences                                                                        |
     //==============================================================================================================================================
@@ -422,6 +436,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
           FenceGateBlock corn_gate = foodblockcompatregistry.CORN_GATE.get();
           ResourceLocation corn_gate_texture = modLoc("block/corn_block");
           fenceGateBlock(corn_gate, corn_gate_texture);
+     //------------------------------------------------------------onion-----------------------------------------------------------------------
+       //fence
+          FenceBlock onion_fence = foodblockcompatregistry.ONION_FENCE.get();
+          ResourceLocation onion_fence_texture = modLoc("block/onion_block");
+          fenceBlock(onion_fence, onion_fence_texture);
+       //gate
+          FenceGateBlock onion_gate = foodblockcompatregistry.ONION_GATE.get();
+          ResourceLocation onion_gate_texture = modLoc("block/onion_block");
+          fenceGateBlock(onion_gate, onion_gate_texture);
     //==============================================================================================================================================
     //|                                                          Pressure Plates                                                                   |
     //==============================================================================================================================================
@@ -449,6 +472,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           PressurePlateBlock corn_pressure_plate = foodblockcompatregistry.CORN_PRESSURE_PLATE.get();
           ResourceLocation corn_pressure_plate_texture = modLoc("block/corn_block");
           pressurePlateBlock(corn_pressure_plate, corn_pressure_plate_texture);
+     //------------------------------------------------------------onion-----------------------------------------------------------------------
+          PressurePlateBlock onion_pressure_plate = foodblockcompatregistry.ONION_PRESSURE_PLATE.get();
+          ResourceLocation onion_pressure_plate_texture = modLoc("block/onion_block");
+          pressurePlateBlock(onion_pressure_plate, onion_pressure_plate_texture);
     //==============================================================================================================================================
     //|                                                               Signs                                                                        |
     //==============================================================================================================================================

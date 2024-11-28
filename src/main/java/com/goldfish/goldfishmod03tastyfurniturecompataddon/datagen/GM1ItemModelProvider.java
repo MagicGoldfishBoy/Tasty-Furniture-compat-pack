@@ -466,6 +466,18 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         stairs("onion_stairs_item", modLoc("block/onion_block"), modLoc("block/onion_block"), modLoc("block/onion_block"));
        //bricks stairs
         stairs("onion_bricks_stairs_item", modLoc("block/onion_bricks_block"), modLoc("block/onion_bricks_block"), modLoc("block/onion_bricks_block"));
+       //bars
+        withExistingParent("onion_bars_item", mcLoc("item/generated")).texture("layer0", "block/onion_bars");
+       //doors
+        withExistingParent("onion_door_item", mcLoc("item/generated")).texture("layer0", "item/onion_door_item");
+       //button
+        buttonInventory("onion_button_item", modLoc("block/onion_block"));
+       //fence
+        fenceInventory("onion_fence_item", modLoc("block/onion_block"));
+       //gate
+        withExistingParent("onion_gate_item", modLoc("block/onion_gate"));
+       //pressure plate
+        pressurePlate("onion_pressure_plate_item", modLoc("block/onion_block"));
   }
 }
 
