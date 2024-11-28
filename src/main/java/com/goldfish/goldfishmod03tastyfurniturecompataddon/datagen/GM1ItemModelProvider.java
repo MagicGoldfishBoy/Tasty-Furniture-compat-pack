@@ -441,6 +441,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         withExistingParent("corn_gate_item", modLoc("block/corn_gate"));
        //pressure plate
         pressurePlate("corn_pressure_plate_item", modLoc("block/corn_block"));
+       //sign
+        withExistingParent("corn_sign_item", mcLoc("item/generated")).texture("layer0", "item/corn_sign");
     //==============================================================================================================================================
     //|                                                              Onion                                                                        |
     //==============================================================================================================================================
