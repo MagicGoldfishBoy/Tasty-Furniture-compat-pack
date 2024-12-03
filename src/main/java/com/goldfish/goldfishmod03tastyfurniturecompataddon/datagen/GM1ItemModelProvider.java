@@ -443,6 +443,13 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         pressurePlate("corn_pressure_plate_item", modLoc("block/corn_block"));
        //sign
         withExistingParent("corn_sign_item", mcLoc("item/generated")).texture("layer0", "item/corn_sign");
+       //trapdoor
+       withExistingParent("corn_trapdoor_item", modLoc("block/corn_trapdoor_trapdoor_bottom"));
+       //lamp
+       withExistingParent("corn_lamp_item", modLoc("block/corn_lamp"));
+       //carpet
+       ResourceLocation corn_carpet_texture = modLoc("block/corn_carpet");
+       carpet("corn_carpet_item", corn_carpet_texture);
     //==============================================================================================================================================
     //|                                                              Onion                                                                        |
     //==============================================================================================================================================
@@ -482,6 +489,13 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         pressurePlate("onion_pressure_plate_item", modLoc("block/onion_block"));
        //sign
         withExistingParent("onion_sign_item", mcLoc("item/generated")).texture("layer0", "item/onion_sign");
+       //trapdoor
+       withExistingParent("onion_trapdoor_item", modLoc("block/onion_trapdoor_trapdoor_bottom"));
+       //lamp
+       withExistingParent("onion_lamp_item", modLoc("block/onion_lamp"));
+       //carpet
+       ResourceLocation onion_carpet_texture = modLoc("block/onion_carpet");
+       carpet("onion_carpet_item", onion_carpet_texture);
   }
 }
 

@@ -537,6 +537,14 @@ public class GM1BlockStateProvider extends BlockStateProvider
           TrapDoorBlock orange_trapdoor = foodblockcompatregistry.ORANGE_TRAPDOOR.get(); 
           ResourceLocation orange_trapdoor_texture = modLoc("block/orange_block");
           trapdoorBlockWithRenderType(orange_trapdoor, "orange_trapdoor", orange_trapdoor_texture, false, orange_trapdoor_texture);
+     //------------------------------------------------------------corn-----------------------------------------------------------------------
+          TrapDoorBlock corn_trapdoor = foodblockcompatregistry.CORN_TRAPDOOR.get(); 
+          ResourceLocation corn_trapdoor_texture = modLoc("block/corn_block");
+          trapdoorBlockWithRenderType(corn_trapdoor, "corn_trapdoor", corn_trapdoor_texture, false, corn_trapdoor_texture);
+     //------------------------------------------------------------onion-----------------------------------------------------------------------
+          TrapDoorBlock onion_trapdoor = foodblockcompatregistry.ONION_TRAPDOOR.get(); 
+          ResourceLocation onion_trapdoor_texture = modLoc("block/onion_block");
+          trapdoorBlockWithRenderType(onion_trapdoor, "onion_trapdoor", onion_trapdoor_texture, false, onion_trapdoor_texture);
     //==============================================================================================================================================
     //|                                                               Lamps                                                                        |
     //==============================================================================================================================================
@@ -555,6 +563,12 @@ public class GM1BlockStateProvider extends BlockStateProvider
      //------------------------------------------------------------orange-----------------------------------------------------------------------
           Block orange_lamp = foodblockcompatregistry.ORANGE_LAMP.get();
           simpleBlock(orange_lamp);
+     //------------------------------------------------------------corn-----------------------------------------------------------------------
+          Block corn_lamp = foodblockcompatregistry.CORN_LAMP.get();
+          simpleBlock(corn_lamp);
+     //------------------------------------------------------------onion-----------------------------------------------------------------------
+          Block onion_lamp = foodblockcompatregistry.ONION_LAMP.get();
+          simpleBlock(onion_lamp);
     //==============================================================================================================================================
     //|                                                              Carpets                                                                       |
     //==============================================================================================================================================
@@ -588,6 +602,18 @@ public class GM1BlockStateProvider extends BlockStateProvider
           BlockModelBuilder orange_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(orange_carpet).getPath(), mcLoc("block/carpet"))
           .texture("wool", orange_carpet_texture);
           simpleBlock(orange_carpet, new ModelFile.UncheckedModelFile(orange_carpet_model.getLocation()));
+     //------------------------------------------------------------corn-----------------------------------------------------------------------
+          CarpetBlock corn_carpet = foodblockcompatregistry.CORN_CARPET.get();
+          ResourceLocation corn_carpet_texture = modLoc("block/corn_carpet");
+          BlockModelBuilder corn_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(corn_carpet).getPath(), mcLoc("block/carpet"))
+          .texture("wool", corn_carpet_texture);
+          simpleBlock(corn_carpet, new ModelFile.UncheckedModelFile(corn_carpet_model.getLocation()));
+     //------------------------------------------------------------onion-----------------------------------------------------------------------
+          CarpetBlock onion_carpet = foodblockcompatregistry.ONION_CARPET.get();
+          ResourceLocation onion_carpet_texture = modLoc("block/onion_carpet");
+          BlockModelBuilder onion_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(onion_carpet).getPath(), mcLoc("block/carpet"))
+          .texture("wool", onion_carpet_texture);
+          simpleBlock(onion_carpet, new ModelFile.UncheckedModelFile(onion_carpet_model.getLocation()));
     //==============================================================================================================================================
     //|                                                             Lanterns                                                                       |
     //==============================================================================================================================================
