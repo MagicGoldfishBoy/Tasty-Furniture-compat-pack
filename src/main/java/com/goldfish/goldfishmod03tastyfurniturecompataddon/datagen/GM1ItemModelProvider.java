@@ -458,6 +458,10 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //chain
        withExistingParent("corn_chain_item", modLoc("block/corn_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
        .end();
+       //ladder
+       withExistingParent("corn_ladder_item", modLoc("block/corn_ladder"));
+       //table
+       withExistingParent("corn_table_item", modLoc("block/corn_table"));
     //==============================================================================================================================================
     //|                                                              Onion                                                                        |
     //==============================================================================================================================================
@@ -512,6 +516,10 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //chain
        withExistingParent("onion_chain_item", modLoc("block/onion_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
        .end();
+       //ladder
+       withExistingParent("onion_ladder_item", modLoc("block/onion_ladder"));
+       //table
+       withExistingParent("onion_table_item", modLoc("block/onion_table"));
   }
 }
 
