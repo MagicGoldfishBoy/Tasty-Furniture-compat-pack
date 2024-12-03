@@ -812,6 +812,84 @@ public class GM1BlockStateProvider extends BlockStateProvider
              .modelForState().modelFile(hanging_orange_soul_lantern_model).addModel()
              .partialState().with(LanternBlock.HANGING, false)
              .modelForState().modelFile(orange_soul_lantern_model).addModel();
+     //------------------------------------------------------------corn-----------------------------------------------------------------------
+         //regular
+          LanternBlock corn_lantern = foodblockcompatregistry.CORN_LANTERN.get();
+          ResourceLocation corn_lantern_texture = modLoc("block/corn_lantern");
+  
+          BlockModelBuilder corn_lantern_model = models()
+              .withExistingParent("corn_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", corn_lantern_texture);
+  
+          BlockModelBuilder hanging_corn_lantern_model = models()
+              .withExistingParent("corn_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", corn_lantern_texture);
+  
+          getVariantBuilder(corn_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_corn_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(corn_lantern_model).addModel();
+         //soul
+         LanternBlock corn_soul_lantern = foodblockcompatregistry.CORN_SOUL_LANTERN.get();
+         ResourceLocation corn_soul_lantern_texture = modLoc("block/corn_soul_lantern");
+ 
+         BlockModelBuilder corn_soul_lantern_model = models()
+             .withExistingParent("corn_soul_lantern", mcLoc("block/lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", corn_soul_lantern_texture);
+ 
+         BlockModelBuilder hanging_corn_soul_lantern_model = models()
+             .withExistingParent("corn_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", corn_soul_lantern_texture);
+ 
+         getVariantBuilder(corn_soul_lantern)
+             .partialState().with(LanternBlock.HANGING, true)
+             .modelForState().modelFile(hanging_corn_soul_lantern_model).addModel()
+             .partialState().with(LanternBlock.HANGING, false)
+             .modelForState().modelFile(corn_soul_lantern_model).addModel();
+     //------------------------------------------------------------onion-----------------------------------------------------------------------
+         //regular
+          LanternBlock onion_lantern = foodblockcompatregistry.ONION_LANTERN.get();
+          ResourceLocation onion_lantern_texture = modLoc("block/onion_lantern");
+  
+          BlockModelBuilder onion_lantern_model = models()
+              .withExistingParent("onion_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", onion_lantern_texture);
+  
+          BlockModelBuilder hanging_onion_lantern_model = models()
+              .withExistingParent("onion_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", onion_lantern_texture);
+  
+          getVariantBuilder(onion_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_onion_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(onion_lantern_model).addModel();
+         //soul
+         LanternBlock onion_soul_lantern = foodblockcompatregistry.ONION_SOUL_LANTERN.get();
+         ResourceLocation onion_soul_lantern_texture = modLoc("block/onion_soul_lantern");
+ 
+         BlockModelBuilder onion_soul_lantern_model = models()
+             .withExistingParent("onion_soul_lantern", mcLoc("block/lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", onion_soul_lantern_texture);
+ 
+         BlockModelBuilder hanging_onion_soul_lantern_model = models()
+             .withExistingParent("onion_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", onion_soul_lantern_texture);
+ 
+         getVariantBuilder(onion_soul_lantern)
+             .partialState().with(LanternBlock.HANGING, true)
+             .modelForState().modelFile(hanging_onion_soul_lantern_model).addModel()
+             .partialState().with(LanternBlock.HANGING, false)
+             .modelForState().modelFile(onion_soul_lantern_model).addModel();
     //==============================================================================================================================================
     //|                                                              Chains                                                                        |
     //==============================================================================================================================================
@@ -895,6 +973,38 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .modelForState().modelFile(orange_chain_model).rotationX(90).rotationY(90).addModel()
           .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
           .modelForState().modelFile(orange_chain_model).rotationX(90).addModel(); 
+     //------------------------------------------------------------corn-----------------------------------------------------------------------
+         ChainBlock corn_chain = foodblockcompatregistry.CORN_CHAIN.get();
+         ResourceLocation corn_chain_texture = modLoc("block/corn_chain");
+         BlockModelBuilder corn_chain_model = models()
+          .withExistingParent("corn_chain", mcLoc("block/chain"))
+          .renderType("cutout_mipped_all")
+          .texture("all", corn_chain_texture)
+          .texture("particle", corn_chain_texture);
+
+          getVariantBuilder(corn_chain)
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Y)
+          .modelForState().modelFile(corn_chain_model).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.X)
+          .modelForState().modelFile(corn_chain_model).rotationX(90).rotationY(90).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
+          .modelForState().modelFile(corn_chain_model).rotationX(90).addModel(); 
+     //------------------------------------------------------------onion-----------------------------------------------------------------------
+         ChainBlock onion_chain = foodblockcompatregistry.ONION_CHAIN.get();
+         ResourceLocation onion_chain_texture = modLoc("block/onion_chain");
+         BlockModelBuilder onion_chain_model = models()
+          .withExistingParent("onion_chain", mcLoc("block/chain"))
+          .renderType("cutout_mipped_all")
+          .texture("all", onion_chain_texture)
+          .texture("particle", onion_chain_texture);
+
+          getVariantBuilder(onion_chain)
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Y)
+          .modelForState().modelFile(onion_chain_model).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.X)
+          .modelForState().modelFile(onion_chain_model).rotationX(90).rotationY(90).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
+          .modelForState().modelFile(onion_chain_model).rotationX(90).addModel(); 
     //==============================================================================================================================================
     //|                                                             Ladders                                                                        |
     //==============================================================================================================================================

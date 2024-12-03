@@ -450,6 +450,14 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //carpet
        ResourceLocation corn_carpet_texture = modLoc("block/corn_carpet");
        carpet("corn_carpet_item", corn_carpet_texture);
+       //lantern
+        //regular
+        withExistingParent("corn_lantern_item", modLoc("block/corn_lantern"));
+        //soul
+          withExistingParent("corn_soul_lantern_item", modLoc("block/corn_soul_lantern"));
+       //chain
+       withExistingParent("corn_chain_item", modLoc("block/corn_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
     //==============================================================================================================================================
     //|                                                              Onion                                                                        |
     //==============================================================================================================================================
@@ -496,6 +504,14 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //carpet
        ResourceLocation onion_carpet_texture = modLoc("block/onion_carpet");
        carpet("onion_carpet_item", onion_carpet_texture);
+       //lantern
+        //regular
+        withExistingParent("onion_lantern_item", modLoc("block/onion_lantern"));
+        //soul
+          withExistingParent("onion_soul_lantern_item", modLoc("block/onion_soul_lantern"));
+       //chain
+       withExistingParent("onion_chain_item", modLoc("block/onion_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
   }
 }
 

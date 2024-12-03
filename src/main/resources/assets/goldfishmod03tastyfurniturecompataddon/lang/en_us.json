@@ -206,6 +206,9 @@
     "block.goldfishmod03tastyfurniturecompataddon.corn_trapdoor": "Corn Trapdoor",
     "block.goldfishmod03tastyfurniturecompataddon.corn_lamp": "Corn Lamp",
     "block.goldfishmod03tastyfurniturecompataddon.corn_carpet": "Corn Carpet",
+    "block.goldfishmod03tastyfurniturecompataddon.corn_lantern": "Corn Lantern",
+    "block.goldfishmod03tastyfurniturecompataddon.corn_soul_lantern": "Corn Soul Lantern",
+    "block.goldfishmod03tastyfurniturecompataddon.corn_chain": "Corn Chain",
   "item.goldfishmod03tastyfurniturecompataddon.onion_mush": "Onion Mush",
     "item.goldfishmod03tastyfurniturecompataddon.onion_ingot": "Onion Ingot",
     "item.goldfishmod03tastyfurniturecompataddon.onion_nugget": "Onion Nugget",
@@ -226,5 +229,8 @@
     "block.goldfishmod03tastyfurniturecompataddon.onion_standing_sign": "Onion Sign",
     "block.goldfishmod03tastyfurniturecompataddon.onion_trapdoor": "Onion Trapdoor",
     "block.goldfishmod03tastyfurniturecompataddon.onion_lamp": "Onion Lamp",
-    "block.goldfishmod03tastyfurniturecompataddon.onion_carpet": "Onion Carpet"
+    "block.goldfishmod03tastyfurniturecompataddon.onion_carpet": "Onion Carpet",
+    "block.goldfishmod03tastyfurniturecompataddon.onion_lantern": "Onion Lantern",
+    "block.goldfishmod03tastyfurniturecompataddon.onion_soul_lantern": "Onion Soul Lantern",
+    "block.goldfishmod03tastyfurniturecompataddon.onion_chain": "Onion Chain"
 }

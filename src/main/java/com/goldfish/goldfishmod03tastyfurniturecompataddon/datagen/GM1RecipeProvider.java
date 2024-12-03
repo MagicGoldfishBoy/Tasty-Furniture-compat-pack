@@ -1874,6 +1874,44 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', Items.SOUL_TORCH)
             .unlockedBy("has_orange_nugget", has(nuggetcompatregistry.ORANGE_NUGGET.get()))
             .save(output);
+  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CORN_LANTERN_ITEM.get())
+            .pattern("AAA")
+            .pattern("ABA")
+            .pattern("AAA")
+            .define('A', nuggetcompatregistry.CORN_NUGGET.get())
+            .define('B', Items.TORCH)
+            .unlockedBy("has_corn_nugget", has(nuggetcompatregistry.CORN_NUGGET.get()))
+            .save(output);
+          //soul
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CORN_SOUL_LANTERN_ITEM.get())
+            .pattern("AAA")
+            .pattern("ABA")
+            .pattern("AAA")
+            .define('A', nuggetcompatregistry.CORN_NUGGET.get())
+            .define('B', Items.SOUL_TORCH)
+            .unlockedBy("has_corn_nugget", has(nuggetcompatregistry.CORN_NUGGET.get()))
+            .save(output);
+  //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ONION_LANTERN_ITEM.get())
+            .pattern("AAA")
+            .pattern("ABA")
+            .pattern("AAA")
+            .define('A', nuggetcompatregistry.ONION_NUGGET.get())
+            .define('B', Items.TORCH)
+            .unlockedBy("has_onion_nugget", has(nuggetcompatregistry.ONION_NUGGET.get()))
+            .save(output);
+          //soul
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ONION_SOUL_LANTERN_ITEM.get())
+            .pattern("AAA")
+            .pattern("ABA")
+            .pattern("AAA")
+            .define('A', nuggetcompatregistry.ONION_NUGGET.get())
+            .define('B', Items.SOUL_TORCH)
+            .unlockedBy("has_onion_nugget", has(nuggetcompatregistry.ONION_NUGGET.get()))
+            .save(output);
       }
  protected void buildChainRecipes(RecipeOutput output) {
   //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
@@ -1920,6 +1958,24 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', nuggetcompatregistry.ORANGE_NUGGET.get())
         .define('B', ingotcompatregistry.ORANGE_INGOT.get())
         .unlockedBy("has_orange_ingot", has(ingotcompatregistry.ORANGE_INGOT.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CORN_CHAIN_ITEM.get())
+        .pattern(" A ")
+        .pattern(" B ")
+        .pattern(" A ")
+        .define('A', nuggetcompatregistry.CORN_NUGGET.get())
+        .define('B', ingotcompatregistry.CORN_INGOT.get())
+        .unlockedBy("has_corn_ingot", has(ingotcompatregistry.CORN_INGOT.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ONION_CHAIN_ITEM.get())
+        .pattern(" A ")
+        .pattern(" B ")
+        .pattern(" A ")
+        .define('A', nuggetcompatregistry.ONION_NUGGET.get())
+        .define('B', ingotcompatregistry.ONION_INGOT.get())
+        .unlockedBy("has_onion_ingot", has(ingotcompatregistry.ONION_INGOT.get()))
         .save(output);
       }
  protected void buildLadderRecipes(RecipeOutput output) {
