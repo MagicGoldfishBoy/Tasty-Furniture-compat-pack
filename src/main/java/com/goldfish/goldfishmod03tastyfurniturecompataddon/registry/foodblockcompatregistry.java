@@ -1862,6 +1862,20 @@ public class foodblockcompatregistry {
      .explosionResistance(chair_explosion_resistance)
      .noOcclusion()
      ));
+ //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
+     public static final DeferredHolder<Block, foodChairBlock> CORN_CHAIR = FOODBLOCK.register("corn_chair", () -> new foodChairBlock(BlockBehaviour.Properties.of()
+     .sound(plant_chair_sound)
+     .destroyTime(chair_destroy_time)
+     .explosionResistance(chair_explosion_resistance)
+     .noOcclusion()
+     ));
+ //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
+     public static final DeferredHolder<Block, foodChairBlock> ONION_CHAIR = FOODBLOCK.register("onion_chair", () -> new foodChairBlock(BlockBehaviour.Properties.of()
+     .sound(plant_chair_sound)
+     .destroyTime(chair_destroy_time)
+     .explosionResistance(chair_explosion_resistance)
+     .noOcclusion()
+     ));
 //==============================================================================================================================================================================================
 //                                                                                          Beds
 //==============================================================================================================================================================================================
