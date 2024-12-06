@@ -473,6 +473,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("corn_furnace_item", modLoc("block/corn_furnace_model_unlit"));
        //paths
        withExistingParent("corn_stone_path_item", modLoc("block/corn_stone_path"));
+       //barrel
+       withExistingParent("corn_barrel_item", modLoc("block/corn_barrel_model_closed"));
     //==============================================================================================================================================
     //|                                                              Onion                                                                        |
     //==============================================================================================================================================
@@ -542,6 +544,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("onion_furnace_item", modLoc("block/onion_furnace_model_unlit"));
        //paths
        withExistingParent("onion_stone_path_item", modLoc("block/onion_stone_path"));
+       //barrel
+       withExistingParent("onion_barrel_item", modLoc("block/onion_barrel_model_closed"));
   }
 }
 

@@ -217,6 +217,7 @@
     "block.goldfishmod03tastyfurniturecompataddon.corn_furnace": "Corn Furnace",
     "container.corn_furnace": "Corn Furnace",
     "block.goldfishmod03tastyfurniturecompataddon.corn_stone_path": "Corn Stone Path",
+    "block.goldfishmod03tastyfurniturecompataddon.corn_barrel": "Corn Barrel",
   "item.goldfishmod03tastyfurniturecompataddon.onion_mush": "Onion Mush",
     "item.goldfishmod03tastyfurniturecompataddon.onion_ingot": "Onion Ingot",
     "item.goldfishmod03tastyfurniturecompataddon.onion_nugget": "Onion Nugget",
@@ -248,5 +249,6 @@
     "block.goldfishmod03tastyfurniturecompataddon.onion_soul_torch": "Onion Soul Torch",
     "block.goldfishmod03tastyfurniturecompataddon.onion_furnace": "Onion Furnace",
     "container.onion_furnace": "Onion Furnace",
-    "block.goldfishmod03tastyfurniturecompataddon.onion_stone_path": "Onion Stone Path"
+    "block.goldfishmod03tastyfurniturecompataddon.onion_stone_path": "Onion Stone Path",
+    "block.goldfishmod03tastyfurniturecompataddon.onion_barrel": "Onion Barrel"
 }

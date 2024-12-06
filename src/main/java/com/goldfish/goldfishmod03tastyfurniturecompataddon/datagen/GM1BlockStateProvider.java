@@ -2759,6 +2759,102 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationX(rotationX)
                       .build();
               });
+     //------------------------------------------------------------corn-----------------------------------------------------------------------
+          foodBarrel corn_barrel = foodblockcompatregistry.CORN_BARREL.get();
+          ResourceLocation corn_barrel_closed_texture = modLoc("block/corn_barrel_top_closed");
+          ResourceLocation corn_barrel_open_texture = modLoc("block/corn_barrel_top_open");
+          ResourceLocation corn_barrel_side = modLoc("block/corn_barrel_side");
+          ResourceLocation corn_barrel_bottom = modLoc("block/corn_barrel_bottom");
+          
+          BlockModelBuilder corn_barrel_model_closed = models()
+              .withExistingParent("corn_barrel_model_closed", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", corn_barrel_side)
+              .texture("bottom", corn_barrel_bottom)
+              .texture("top", corn_barrel_closed_texture)
+              .texture("particle", corn_barrel_side);
+          
+          BlockModelBuilder corn_barrel_model_open = models()
+              .withExistingParent("corn_barrel_model_open", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", corn_barrel_side)
+              .texture("bottom", corn_barrel_bottom)
+              .texture("top", corn_barrel_open_texture)
+              .texture("particle", corn_barrel_side);
+          
+          getVariantBuilder(corn_barrel)
+              .forAllStates(state -> {
+                  Boolean open = state.getValue(BlockStateProperties.OPEN);
+                  Direction facing = state.getValue(BlockStateProperties.FACING);
+                  int rotationY = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+                  int rotationX = switch (facing) {
+                      case UP -> 0;
+                      case DOWN -> 180;
+                      default -> 90;
+                  };
+
+                  ResourceLocation modelLocation = open ? modLoc("block/corn_barrel_model_open") : modLoc("block/corn_barrel_model_closed");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotationY)
+                      .rotationX(rotationX)
+                      .build();
+              });
+     //------------------------------------------------------------onion-----------------------------------------------------------------------
+          foodBarrel onion_barrel = foodblockcompatregistry.ONION_BARREL.get();
+          ResourceLocation onion_barrel_closed_texture = modLoc("block/onion_barrel_top_closed");
+          ResourceLocation onion_barrel_open_texture = modLoc("block/onion_barrel_top_open");
+          ResourceLocation onion_barrel_side = modLoc("block/onion_barrel_side");
+          ResourceLocation onion_barrel_bottom = modLoc("block/onion_barrel_bottom");
+          
+          BlockModelBuilder onion_barrel_model_closed = models()
+              .withExistingParent("onion_barrel_model_closed", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", onion_barrel_side)
+              .texture("bottom", onion_barrel_bottom)
+              .texture("top", onion_barrel_closed_texture)
+              .texture("particle", onion_barrel_side);
+          
+          BlockModelBuilder onion_barrel_model_open = models()
+              .withExistingParent("onion_barrel_model_open", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", onion_barrel_side)
+              .texture("bottom", onion_barrel_bottom)
+              .texture("top", onion_barrel_open_texture)
+              .texture("particle", onion_barrel_side);
+          
+          getVariantBuilder(onion_barrel)
+              .forAllStates(state -> {
+                  Boolean open = state.getValue(BlockStateProperties.OPEN);
+                  Direction facing = state.getValue(BlockStateProperties.FACING);
+                  int rotationY = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+                  int rotationX = switch (facing) {
+                      case UP -> 0;
+                      case DOWN -> 180;
+                      default -> 90;
+                  };
+
+                  ResourceLocation modelLocation = open ? modLoc("block/onion_barrel_model_open") : modLoc("block/onion_barrel_model_closed");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotationY)
+                      .rotationX(rotationX)
+                      .build();
+              });
     //==============================================================================================================================================
     //|                                                              Chairs                                                                       |
     //==============================================================================================================================================
