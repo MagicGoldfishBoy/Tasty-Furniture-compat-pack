@@ -790,7 +790,7 @@ public class foodblockcompatitemregistry {
       public static final DeferredHolder<Item, BlockItem> MEDIUM_ELDERBERRY_CABINET_ITEM = FOODBLOCKITEM.register("medium_elderberry_cabinet_item", 
       () -> new BlockItem(foodblockcompatregistry.MEDIUM_ELDERBERRY_CABINET.get(),
       new BlockItem.Properties()));
- //--------------------------------------------------------------------------------------Juniper---------------------------------------------------------------------------------------------
+ //---------------------------------------------------------------------------------------Juniper-----------------------------------------------------------------------------------------------
     //small
       public static final DeferredHolder<Item, BlockItem> SMALL_JUNIPER_CABINET_ITEM = FOODBLOCKITEM.register("small_juniper_cabinet_item", 
       () -> new BlockItem(foodblockcompatregistry.SMALL_JUNIPER_CABINET.get(),
@@ -799,7 +799,7 @@ public class foodblockcompatitemregistry {
       public static final DeferredHolder<Item, BlockItem> MEDIUM_JUNIPER_CABINET_ITEM = FOODBLOCKITEM.register("medium_juniper_cabinet_item", 
       () -> new BlockItem(foodblockcompatregistry.MEDIUM_JUNIPER_CABINET.get(),
       new BlockItem.Properties()));
- //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
+ //----------------------------------------------------------------------------------------Cherry-----------------------------------------------------------------------------------------------
     //small
       public static final DeferredHolder<Item, BlockItem> SMALL_CHERRY_CABINET_ITEM = FOODBLOCKITEM.register("small_cherry_cabinet_item", 
       () -> new BlockItem(foodblockcompatregistry.SMALL_CHERRY_CABINET.get(),
@@ -808,7 +808,7 @@ public class foodblockcompatitemregistry {
       public static final DeferredHolder<Item, BlockItem> MEDIUM_CHERRY_CABINET_ITEM = FOODBLOCKITEM.register("medium_cherry_cabinet_item", 
       () -> new BlockItem(foodblockcompatregistry.MEDIUM_CHERRY_CABINET.get(),
       new BlockItem.Properties()));
- //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
+ //---------------------------------------------------------------------------------------Coconut-----------------------------------------------------------------------------------------------
     //small
       public static final DeferredHolder<Item, BlockItem> SMALL_COCONUT_CABINET_ITEM = FOODBLOCKITEM.register("small_coconut_cabinet_item", 
       () -> new BlockItem(foodblockcompatregistry.SMALL_COCONUT_CABINET.get(),
@@ -817,7 +817,7 @@ public class foodblockcompatitemregistry {
       public static final DeferredHolder<Item, BlockItem> MEDIUM_COCONUT_CABINET_ITEM = FOODBLOCKITEM.register("medium_coconut_cabinet_item", 
       () -> new BlockItem(foodblockcompatregistry.MEDIUM_COCONUT_CABINET.get(),
       new BlockItem.Properties()));
- //--------------------------------------------------------------------------------------Orange---------------------------------------------------------------------------------------------
+ //----------------------------------------------------------------------------------------Orange-----------------------------------------------------------------------------------------------
     //small
       public static final DeferredHolder<Item, BlockItem> SMALL_ORANGE_CABINET_ITEM = FOODBLOCKITEM.register("small_orange_cabinet_item", 
       () -> new BlockItem(foodblockcompatregistry.SMALL_ORANGE_CABINET.get(),
@@ -825,5 +825,23 @@ public class foodblockcompatitemregistry {
     //medium
       public static final DeferredHolder<Item, BlockItem> MEDIUM_ORANGE_CABINET_ITEM = FOODBLOCKITEM.register("medium_orange_cabinet_item", 
       () -> new BlockItem(foodblockcompatregistry.MEDIUM_ORANGE_CABINET.get(),
+      new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
+    //small
+      public static final DeferredHolder<Item, BlockItem> SMALL_CORN_CABINET_ITEM = FOODBLOCKITEM.register("small_corn_cabinet_item", 
+      () -> new BlockItem(foodblockcompatregistry.SMALL_CORN_CABINET.get(),
+      new BlockItem.Properties()));
+    //medium
+      public static final DeferredHolder<Item, BlockItem> MEDIUM_CORN_CABINET_ITEM = FOODBLOCKITEM.register("medium_corn_cabinet_item", 
+      () -> new BlockItem(foodblockcompatregistry.MEDIUM_CORN_CABINET.get(),
+      new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
+    //small
+      public static final DeferredHolder<Item, BlockItem> SMALL_ONION_CABINET_ITEM = FOODBLOCKITEM.register("small_onion_cabinet_item", 
+      () -> new BlockItem(foodblockcompatregistry.SMALL_ONION_CABINET.get(),
+      new BlockItem.Properties()));
+    //medium
+      public static final DeferredHolder<Item, BlockItem> MEDIUM_ONION_CABINET_ITEM = FOODBLOCKITEM.register("medium_onion_cabinet_item", 
+      () -> new BlockItem(foodblockcompatregistry.MEDIUM_ONION_CABINET.get(),
       new BlockItem.Properties()));
 }

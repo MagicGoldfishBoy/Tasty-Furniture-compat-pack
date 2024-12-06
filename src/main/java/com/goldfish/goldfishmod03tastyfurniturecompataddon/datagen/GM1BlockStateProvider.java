@@ -3383,6 +3383,96 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .rotationY(rotationY)
                   .build();
           });
+     //------------------------------------------------------------corn-----------------------------------------------------------------------
+         //small
+          smallFoodCabinet cornCabinet = foodblockcompatregistry.SMALL_CORN_CABINET.get();
+
+          getVariantBuilder(cornCabinet)
+          .forAllStates(state -> {
+              Boolean open = state.getValue(BlockStateProperties.OPEN);
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = open ? modLoc("block/corn_cabinet_open") : modLoc("block/corn_cabinet");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+         //medium
+          mediumFoodCabinet cornMediumCabinet = foodblockcompatregistry.MEDIUM_CORN_CABINET.get();
+
+          getVariantBuilder(cornMediumCabinet)
+          .forAllStates(state -> {
+              Boolean open = state.getValue(BlockStateProperties.OPEN);
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = open ? modLoc("block/medium_corn_cabinet_open") : modLoc("block/medium_corn_cabinet");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------onion-----------------------------------------------------------------------
+         //small
+          smallFoodCabinet onionCabinet = foodblockcompatregistry.SMALL_ONION_CABINET.get();
+
+          getVariantBuilder(onionCabinet)
+          .forAllStates(state -> {
+              Boolean open = state.getValue(BlockStateProperties.OPEN);
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = open ? modLoc("block/onion_cabinet_open") : modLoc("block/onion_cabinet");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+         //medium
+          mediumFoodCabinet onionMediumCabinet = foodblockcompatregistry.MEDIUM_ONION_CABINET.get();
+
+          getVariantBuilder(onionMediumCabinet)
+          .forAllStates(state -> {
+              Boolean open = state.getValue(BlockStateProperties.OPEN);
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = open ? modLoc("block/medium_onion_cabinet_open") : modLoc("block/medium_onion_cabinet");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
    };
 
 }

@@ -220,6 +220,8 @@
     "block.goldfishmod03tastyfurniturecompataddon.corn_barrel": "Corn Barrel",
     "block.goldfishmod03tastyfurniturecompataddon.corn_chair": "Corn Chair",
     "block.goldfishmod03tastyfurniturecompataddon.corn_bed": "Corn Bed",
+    "block.goldfishmod03tastyfurniturecompataddon.small_corn_cabinet": "Corn Small Cabinet",
+    "block.goldfishmod03tastyfurniturecompataddon.medium_corn_cabinet": "Corn Medium Cabinet",
   "item.goldfishmod03tastyfurniturecompataddon.onion_mush": "Onion Mush",
     "item.goldfishmod03tastyfurniturecompataddon.onion_ingot": "Onion Ingot",
     "item.goldfishmod03tastyfurniturecompataddon.onion_nugget": "Onion Nugget",
@@ -254,5 +256,7 @@
     "block.goldfishmod03tastyfurniturecompataddon.onion_stone_path": "Onion Stone Path",
     "block.goldfishmod03tastyfurniturecompataddon.onion_barrel": "Onion Barrel",
     "block.goldfishmod03tastyfurniturecompataddon.onion_chair": "Onion Chair",
-    "block.goldfishmod03tastyfurniturecompataddon.onion_bed": "Onion Bed"
+    "block.goldfishmod03tastyfurniturecompataddon.onion_bed": "Onion Bed",
+    "block.goldfishmod03tastyfurniturecompataddon.small_onion_cabinet": "Onion Small Cabinet",
+    "block.goldfishmod03tastyfurniturecompataddon.medium_onion_cabinet": "Onion Medium Cabinet"
 }

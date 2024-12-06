@@ -2739,6 +2739,46 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('C', foodblockcompatitemregistry.SMALL_ORANGE_CABINET_ITEM.get())
          .unlockedBy("has_orange_slab", has(foodblockcompatitemregistry.ORANGE_SLAB_ITEM.get()))
          .save(output);
+  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
+       //small
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.SMALL_CORN_CABINET_ITEM.get())
+         .pattern("AAA")
+         .pattern("B B")
+         .pattern("AAA")
+         .define('A', foodblockcompatitemregistry.CORN_SLAB_ITEM.get())
+         .define('B', Items.IRON_INGOT)
+         .unlockedBy("has_corn_slab", has(foodblockcompatitemregistry.CORN_SLAB_ITEM.get()))
+         .save(output);
+       //medium
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.MEDIUM_CORN_CABINET_ITEM.get())
+         .pattern("AAA")
+         .pattern("BCB")
+         .pattern("AAA")
+         .define('A', foodblockcompatitemregistry.CORN_SLAB_ITEM.get())
+         .define('B', Items.IRON_INGOT)
+         .define('C', foodblockcompatitemregistry.SMALL_CORN_CABINET_ITEM.get())
+         .unlockedBy("has_corn_slab", has(foodblockcompatitemregistry.CORN_SLAB_ITEM.get()))
+         .save(output);
+  //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
+       //small
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.SMALL_ONION_CABINET_ITEM.get())
+         .pattern("AAA")
+         .pattern("B B")
+         .pattern("AAA")
+         .define('A', foodblockcompatitemregistry.ONION_SLAB_ITEM.get())
+         .define('B', Items.IRON_INGOT)
+         .unlockedBy("has_onion_slab", has(foodblockcompatitemregistry.ONION_SLAB_ITEM.get()))
+         .save(output);
+       //medium
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.MEDIUM_ONION_CABINET_ITEM.get())
+         .pattern("AAA")
+         .pattern("BCB")
+         .pattern("AAA")
+         .define('A', foodblockcompatitemregistry.ONION_SLAB_ITEM.get())
+         .define('B', Items.IRON_INGOT)
+         .define('C', foodblockcompatitemregistry.SMALL_ONION_CABINET_ITEM.get())
+         .unlockedBy("has_onion_slab", has(foodblockcompatitemregistry.ONION_SLAB_ITEM.get()))
+         .save(output);
       }
   }
 }

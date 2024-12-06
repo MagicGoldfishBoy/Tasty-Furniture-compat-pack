@@ -479,6 +479,9 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("corn_chair_item", modLoc("block/corn_chair"));
        //bed
        withExistingParent("corn_bed_item", modLoc("block/corn_bed"));
+       //cabinet
+       withExistingParent("small_corn_cabinet_item", modLoc("block/corn_cabinet"));
+       withExistingParent("medium_corn_cabinet_item", modLoc("block/medium_corn_cabinet"));
     //==============================================================================================================================================
     //|                                                              Onion                                                                        |
     //==============================================================================================================================================
@@ -554,6 +557,9 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("onion_chair_item", modLoc("block/onion_chair"));
        //bed
        withExistingParent("onion_bed_item", modLoc("block/onion_bed"));
+       //cabinet
+       withExistingParent("small_onion_cabinet_item", modLoc("block/onion_cabinet"));
+       withExistingParent("medium_onion_cabinet_item", modLoc("block/medium_onion_cabinet"));
   }
 }
 
