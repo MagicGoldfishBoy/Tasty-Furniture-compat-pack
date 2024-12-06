@@ -20,6 +20,7 @@ import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.cherryWallSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.coconutFurnace;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.coconutSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.coconutWallSign;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.cornFurnace;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.cornSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.cornWallSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.elderberryFurnace;
@@ -28,6 +29,7 @@ import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.elderberryWallS
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.juniperFurnace;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.juniperSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.juniperWallSign;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.onionFurnace;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.onionSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.onionWallSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.orangeFurnace;
@@ -37,11 +39,13 @@ import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.cherryFu
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.cherrySignEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.coconutFurnaceEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.coconutSignEntity;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.cornFurnaceEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.cornSignEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.elderberryFurnaceEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.elderberrySignEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.juniperFurnaceEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.juniperSignEntity;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.onionFurnaceEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.onionSignEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.orangeFurnaceEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.orangeSignEntity;
@@ -1614,6 +1618,48 @@ public class foodblockcompatregistry {
 
      public static final DeferredHolder<Block, WallTorchBlock> ORANGE_SOUL_WALL_TORCH = FOODBLOCK.register("orange_soul_wall_torch", 
      () -> new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_WALL_TORCH)));
+ //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
+    //regular
+     public static final DeferredHolder<Block, TorchBlock> CORN_TORCH = FOODBLOCK.register("corn_torch", 
+     () -> new TorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH)));
+
+     public static final DeferredHolder<Block, WallTorchBlock> CORN_WALL_TORCH = FOODBLOCK.register("corn_wall_torch", 
+     () -> new WallTorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH)));
+
+    //redstone
+     public static final DeferredHolder<Block, RedstoneTorchBlock> CORN_REDSTONE_TORCH = FOODBLOCK.register("corn_redstone_torch", 
+     () -> new RedstoneTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_TORCH)));
+
+     public static final DeferredHolder<Block, RedstoneWallTorchBlock> CORN_REDSTONE_WALL_TORCH = FOODBLOCK.register("corn_redstone_wall_torch", 
+     () -> new RedstoneWallTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_WALL_TORCH)));
+
+    //soul
+     public static final DeferredHolder<Block, TorchBlock> CORN_SOUL_TORCH = FOODBLOCK.register("corn_soul_torch", 
+     () -> new TorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_TORCH)));
+
+     public static final DeferredHolder<Block, WallTorchBlock> CORN_SOUL_WALL_TORCH = FOODBLOCK.register("corn_soul_wall_torch", 
+     () -> new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_WALL_TORCH)));
+ //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
+    //regular
+     public static final DeferredHolder<Block, TorchBlock> ONION_TORCH = FOODBLOCK.register("onion_torch", 
+     () -> new TorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH)));
+
+     public static final DeferredHolder<Block, WallTorchBlock> ONION_WALL_TORCH = FOODBLOCK.register("onion_wall_torch", 
+     () -> new WallTorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH)));
+
+    //redstone
+     public static final DeferredHolder<Block, RedstoneTorchBlock> ONION_REDSTONE_TORCH = FOODBLOCK.register("onion_redstone_torch", 
+     () -> new RedstoneTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_TORCH)));
+
+     public static final DeferredHolder<Block, RedstoneWallTorchBlock> ONION_REDSTONE_WALL_TORCH = FOODBLOCK.register("onion_redstone_wall_torch", 
+     () -> new RedstoneWallTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_WALL_TORCH)));
+
+    //soul
+     public static final DeferredHolder<Block, TorchBlock> ONION_SOUL_TORCH = FOODBLOCK.register("onion_soul_torch", 
+     () -> new TorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_TORCH)));
+
+     public static final DeferredHolder<Block, WallTorchBlock> ONION_SOUL_WALL_TORCH = FOODBLOCK.register("onion_soul_wall_torch", 
+     () -> new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_WALL_TORCH)));
 //==============================================================================================================================================================================================
 //                                                                                        Furnaces
 //==============================================================================================================================================================================================
@@ -1647,6 +1693,18 @@ public class foodblockcompatregistry {
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<orangeFurnaceEntity>> ORANGE_FURNACE_ENTITY = FOODBLOCKENTITY.register("orange_furnace", 
     () -> BlockEntityType.Builder.of(orangeFurnaceEntity::new, ORANGE_FURNACE.get()).build(null));
+ //----------------------------------------------------------------------------------------Corn-----------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, cornFurnace> CORN_FURNACE = FOODBLOCK.register("corn_furnace", 
+    () -> new cornFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<cornFurnaceEntity>> CORN_FURNACE_ENTITY = FOODBLOCKENTITY.register("corn_furnace", 
+    () -> BlockEntityType.Builder.of(cornFurnaceEntity::new, CORN_FURNACE.get()).build(null));
+ //----------------------------------------------------------------------------------------Onion-----------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, onionFurnace> ONION_FURNACE = FOODBLOCK.register("onion_furnace", 
+    () -> new onionFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<onionFurnaceEntity>> ONION_FURNACE_ENTITY = FOODBLOCKENTITY.register("onion_furnace", 
+    () -> BlockEntityType.Builder.of(onionFurnaceEntity::new, ONION_FURNACE.get()).build(null));
 //==============================================================================================================================================================================================
 //                                                                                         Paths
 //==============================================================================================================================================================================================

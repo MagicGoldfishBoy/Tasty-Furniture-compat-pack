@@ -462,6 +462,15 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("corn_ladder_item", modLoc("block/corn_ladder"));
        //table
        withExistingParent("corn_table_item", modLoc("block/corn_table"));
+       //torches
+        //regular
+        withExistingParent("corn_torch_item", modLoc("block/corn_torch"));
+        //redstone
+          withExistingParent("corn_redstone_torch_item", modLoc("block/corn_redstone_torch"));
+        //soul
+          withExistingParent("corn_soul_torch_item", modLoc("block/corn_soul_torch"));
+       //furnaces
+       withExistingParent("corn_furnace_item", modLoc("block/corn_furnace_model_unlit"));
     //==============================================================================================================================================
     //|                                                              Onion                                                                        |
     //==============================================================================================================================================
@@ -520,6 +529,15 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("onion_ladder_item", modLoc("block/onion_ladder"));
        //table
        withExistingParent("onion_table_item", modLoc("block/onion_table"));
+       //torches
+        //regular
+        withExistingParent("onion_torch_item", modLoc("block/onion_torch"));
+        //redstone
+          withExistingParent("onion_redstone_torch_item", modLoc("block/onion_redstone_torch"));
+        //soul
+          withExistingParent("onion_soul_torch_item", modLoc("block/onion_soul_torch"));
+       //furnaces
+       withExistingParent("onion_furnace_item", modLoc("block/onion_furnace_model_unlit"));
   }
 }
 

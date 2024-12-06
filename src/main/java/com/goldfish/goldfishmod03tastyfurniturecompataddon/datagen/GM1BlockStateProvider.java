@@ -1888,6 +1888,238 @@ public class GM1BlockStateProvider extends BlockStateProvider
                 .rotationY(rotation)
                 .build();
             });
+     //------------------------------------------------------------corn-----------------------------------------------------------------------
+       //regular
+        TorchBlock corn_torch = foodblockcompatregistry.CORN_TORCH.get();
+        ResourceLocation corn_torch_texture = modLoc("block/corn_torch");
+        BlockModelBuilder corn_torch_model = models()
+        .withExistingParent("corn_torch", mcLoc("block/torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", corn_torch_texture)
+        .texture("particle", corn_torch_texture);
+
+        simpleBlock(corn_torch, corn_torch_model);
+
+        TorchBlock corn_wall_torch = foodblockcompatregistry.CORN_WALL_TORCH.get();
+        BlockModelBuilder corn_wall_torch_model = models()
+        .withExistingParent("corn_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", corn_torch_texture)
+        .texture("particle", corn_torch_texture);
+        getVariantBuilder(corn_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("corn_wall_torch", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", corn_torch_texture)
+                    .texture("particle", corn_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //redstone
+        RedstoneTorchBlock corn_redstone_torch = foodblockcompatregistry.CORN_REDSTONE_TORCH.get();
+        ResourceLocation corn_redstone_torch_texture = modLoc("block/corn_redstone_torch");
+        BlockModelBuilder corn_redstone_torch_model = models()
+        .withExistingParent("corn_redstone_torch", mcLoc("block/redstone_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", corn_redstone_torch_texture)
+        .texture("particle", corn_redstone_torch_texture);
+        
+
+        simpleBlock(corn_redstone_torch, corn_redstone_torch_model);
+
+        ResourceLocation corn_redstone_wall_torch_texture = modLoc("block/corn_redstone_torch");
+
+        RedstoneTorchBlock corn_redstone_wall_torch = foodblockcompatregistry.CORN_REDSTONE_WALL_TORCH.get();
+        BlockModelBuilder corn_redstone_wall_torch_model = models()
+        .withExistingParent("corn_redstone_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", corn_redstone_wall_torch_texture)
+        .texture("particle", corn_redstone_wall_torch_texture);
+        getVariantBuilder(corn_redstone_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("corn_redstone_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", corn_redstone_wall_torch_texture)
+                    .texture("particle", corn_redstone_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //soul
+        TorchBlock corn_soul_torch = foodblockcompatregistry.CORN_SOUL_TORCH.get();
+        ResourceLocation corn_soul_torch_texture = modLoc("block/corn_soul_torch");
+        BlockModelBuilder corn_soul_torch_model = models()
+        .withExistingParent("corn_soul_torch", mcLoc("block/soul_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", corn_soul_torch_texture)
+        .texture("particle", corn_soul_torch_texture);
+        
+
+        simpleBlock(corn_soul_torch, corn_soul_torch_model);
+
+        ResourceLocation corn_soul_wall_torch_texture = modLoc("block/corn_soul_torch");
+        TorchBlock corn_soul_wall_torch = foodblockcompatregistry.CORN_SOUL_WALL_TORCH.get();
+        BlockModelBuilder corn_soul_wall_torch_model = models()
+        .withExistingParent("corn_soul_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", corn_soul_wall_torch_texture)
+        .texture("particle", corn_soul_wall_torch_texture);
+        getVariantBuilder(corn_soul_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("corn_soul_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", corn_soul_wall_torch_texture)
+                    .texture("particle", corn_soul_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+     //------------------------------------------------------------onion-----------------------------------------------------------------------
+       //regular
+        TorchBlock onion_torch = foodblockcompatregistry.ONION_TORCH.get();
+        ResourceLocation onion_torch_texture = modLoc("block/onion_torch");
+        BlockModelBuilder onion_torch_model = models()
+        .withExistingParent("onion_torch", mcLoc("block/torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", onion_torch_texture)
+        .texture("particle", onion_torch_texture);
+
+        simpleBlock(onion_torch, onion_torch_model);
+
+        TorchBlock onion_wall_torch = foodblockcompatregistry.ONION_WALL_TORCH.get();
+        BlockModelBuilder onion_wall_torch_model = models()
+        .withExistingParent("onion_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", onion_torch_texture)
+        .texture("particle", onion_torch_texture);
+        getVariantBuilder(onion_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("onion_wall_torch", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", onion_torch_texture)
+                    .texture("particle", onion_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //redstone
+        RedstoneTorchBlock onion_redstone_torch = foodblockcompatregistry.ONION_REDSTONE_TORCH.get();
+        ResourceLocation onion_redstone_torch_texture = modLoc("block/onion_redstone_torch");
+        BlockModelBuilder onion_redstone_torch_model = models()
+        .withExistingParent("onion_redstone_torch", mcLoc("block/redstone_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", onion_redstone_torch_texture)
+        .texture("particle", onion_redstone_torch_texture);
+        
+
+        simpleBlock(onion_redstone_torch, onion_redstone_torch_model);
+
+        ResourceLocation onion_redstone_wall_torch_texture = modLoc("block/onion_redstone_torch");
+
+        RedstoneTorchBlock onion_redstone_wall_torch = foodblockcompatregistry.ONION_REDSTONE_WALL_TORCH.get();
+        BlockModelBuilder onion_redstone_wall_torch_model = models()
+        .withExistingParent("onion_redstone_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", onion_redstone_wall_torch_texture)
+        .texture("particle", onion_redstone_wall_torch_texture);
+        getVariantBuilder(onion_redstone_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("onion_redstone_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", onion_redstone_wall_torch_texture)
+                    .texture("particle", onion_redstone_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //soul
+        TorchBlock onion_soul_torch = foodblockcompatregistry.ONION_SOUL_TORCH.get();
+        ResourceLocation onion_soul_torch_texture = modLoc("block/onion_soul_torch");
+        BlockModelBuilder onion_soul_torch_model = models()
+        .withExistingParent("onion_soul_torch", mcLoc("block/soul_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", onion_soul_torch_texture)
+        .texture("particle", onion_soul_torch_texture);
+        
+
+        simpleBlock(onion_soul_torch, onion_soul_torch_model);
+
+        ResourceLocation onion_soul_wall_torch_texture = modLoc("block/onion_soul_torch");
+        TorchBlock onion_soul_wall_torch = foodblockcompatregistry.ONION_SOUL_WALL_TORCH.get();
+        BlockModelBuilder onion_soul_wall_torch_model = models()
+        .withExistingParent("onion_soul_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", onion_soul_wall_torch_texture)
+        .texture("particle", onion_soul_wall_torch_texture);
+        getVariantBuilder(onion_soul_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("onion_soul_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", onion_soul_wall_torch_texture)
+                    .texture("particle", onion_soul_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
     //==============================================================================================================================================
     //|                                                             Furnaces                                                                       |
     //==============================================================================================================================================
@@ -2105,6 +2337,92 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   };
 
                   ResourceLocation modelLocation = lit ? modLoc("block/orange_furnace_model_lit") : modLoc("block/orange_furnace_model_unlit");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotation)
+                      .build();
+              });
+     //------------------------------------------------------------corn-----------------------------------------------------------------------
+          FurnaceBlock corn_furnace = foodblockcompatregistry.CORN_FURNACE.get();
+          ResourceLocation corn_furnace_unlit_texture = modLoc("block/corn_furnace");
+          ResourceLocation corn_furnace_lit_texture = modLoc("block/corn_furnace_lit");
+          ResourceLocation corn_furnace_side = modLoc("block/corn_block");
+          
+          BlockModelBuilder corn_furnace_model_unlit = models()
+              .withExistingParent("corn_furnace_model_unlit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", corn_furnace_side)
+              .texture("top", corn_furnace_side)
+              .texture("front", corn_furnace_unlit_texture)
+              .texture("particle", corn_furnace_side);
+          
+          BlockModelBuilder corn_furnace_model_lit = models()
+              .withExistingParent("corn_furnace_model_lit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", corn_furnace_side)
+              .texture("top", corn_furnace_side)
+              .texture("front", corn_furnace_lit_texture)
+              .texture("particle", corn_furnace_side);
+          
+          // Configure variants for the corn_furnace block
+          getVariantBuilder(corn_furnace)
+              .forAllStates(state -> {
+                  Boolean lit = state.getValue(BlockStateProperties.LIT);
+                  Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                  int rotation = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+
+                  ResourceLocation modelLocation = lit ? modLoc("block/corn_furnace_model_lit") : modLoc("block/corn_furnace_model_unlit");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotation)
+                      .build();
+              });
+     //------------------------------------------------------------onion-----------------------------------------------------------------------
+          FurnaceBlock onion_furnace = foodblockcompatregistry.ONION_FURNACE.get();
+          ResourceLocation onion_furnace_unlit_texture = modLoc("block/onion_furnace");
+          ResourceLocation onion_furnace_lit_texture = modLoc("block/onion_furnace_lit");
+          ResourceLocation onion_furnace_side = modLoc("block/onion_block");
+          
+          // Define the model for the unlit state
+          BlockModelBuilder onion_furnace_model_unlit = models()
+              .withExistingParent("onion_furnace_model_unlit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", onion_furnace_side)
+              .texture("top", onion_furnace_side)
+              .texture("front", onion_furnace_unlit_texture)
+              .texture("particle", onion_furnace_side);
+          
+          // Define the model for the lit state
+          BlockModelBuilder onion_furnace_model_lit = models()
+              .withExistingParent("onion_furnace_model_lit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", onion_furnace_side)
+              .texture("top", onion_furnace_side)
+              .texture("front", onion_furnace_lit_texture)
+              .texture("particle", onion_furnace_side);
+          
+          // Configure variants for the onion_furnace block
+          getVariantBuilder(onion_furnace)
+              .forAllStates(state -> {
+                  Boolean lit = state.getValue(BlockStateProperties.LIT);
+                  Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                  int rotation = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+
+                  ResourceLocation modelLocation = lit ? modLoc("block/onion_furnace_model_lit") : modLoc("block/onion_furnace_model_unlit");
               
                   return ConfiguredModel.builder()
                       .modelFile(models().getExistingFile(modelLocation))

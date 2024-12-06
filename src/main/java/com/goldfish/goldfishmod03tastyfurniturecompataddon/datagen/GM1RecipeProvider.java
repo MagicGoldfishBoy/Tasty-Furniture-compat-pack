@@ -2264,6 +2264,68 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('C', Items.SOUL_SAND)
             .unlockedBy("has_orange_nugget", has(nuggetcompatregistry.ORANGE_NUGGET.get()))
             .save(output);
+  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CORN_TORCH_ITEM.get(), 4)
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetcompatregistry.CORN_NUGGET.get())
+            .define('C', ItemTags.COALS)
+            .unlockedBy("has_corn_nugget", has(nuggetcompatregistry.CORN_NUGGET.get()))
+            .save(output);
+          //redstone
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CORN_REDSTONE_TORCH_ITEM.get())
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetcompatregistry.CORN_NUGGET.get())
+            .define('C', Items.REDSTONE)
+            .unlockedBy("has_corn_nugget", has(nuggetcompatregistry.CORN_NUGGET.get()))
+            .save(output);
+          //soul
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CORN_SOUL_TORCH_ITEM.get(), 4)
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetcompatregistry.CORN_NUGGET.get())
+            .define('C', Items.SOUL_SAND)
+            .unlockedBy("has_corn_nugget", has(nuggetcompatregistry.CORN_NUGGET.get()))
+            .save(output);
+  //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ONION_TORCH_ITEM.get(), 4)
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetcompatregistry.ONION_NUGGET.get())
+            .define('C', ItemTags.COALS)
+            .unlockedBy("has_onion_nugget", has(nuggetcompatregistry.ONION_NUGGET.get()))
+            .save(output);
+          //redstone
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ONION_REDSTONE_TORCH_ITEM.get())
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetcompatregistry.ONION_NUGGET.get())
+            .define('C', Items.REDSTONE)
+            .unlockedBy("has_onion_nugget", has(nuggetcompatregistry.ONION_NUGGET.get()))
+            .save(output);
+          //soul
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ONION_SOUL_TORCH_ITEM.get(), 4)
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetcompatregistry.ONION_NUGGET.get())
+            .define('C', Items.SOUL_SAND)
+            .unlockedBy("has_onion_nugget", has(nuggetcompatregistry.ONION_NUGGET.get()))
+            .save(output);
       } 
  protected void buildFurnaceRecipes(RecipeOutput output) {
   //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
@@ -2310,6 +2372,24 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', ingotcompatregistry.ORANGE_INGOT.get())
         .define('B', Items.COBBLESTONE)
         .unlockedBy("has_orange_ingot", has(ingotcompatregistry.ORANGE_INGOT.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CORN_FURNACE_ITEM.get())
+        .pattern("ABA")
+        .pattern("B B")
+        .pattern("ABA")
+        .define('A', ingotcompatregistry.CORN_INGOT.get())
+        .define('B', Items.COBBLESTONE)
+        .unlockedBy("has_corn_ingot", has(ingotcompatregistry.CORN_INGOT.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ONION_FURNACE_ITEM.get())
+        .pattern("ABA")
+        .pattern("B B")
+        .pattern("ABA")
+        .define('A', ingotcompatregistry.ONION_INGOT.get())
+        .define('B', Items.COBBLESTONE)
+        .unlockedBy("has_onion_ingot", has(ingotcompatregistry.ONION_INGOT.get()))
         .save(output);
       }
  protected void buildPathRecipes(RecipeOutput output) {
