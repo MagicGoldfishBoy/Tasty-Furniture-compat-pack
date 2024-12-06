@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "goldfishmod03tastyfurniturecompataddon:block/pecan_block",
+    "side": "goldfishmod03tastyfurniturecompataddon:block/pecan_block",
+    "top": "goldfishmod03tastyfurniturecompataddon:block/pecan_block"
+  }
+}

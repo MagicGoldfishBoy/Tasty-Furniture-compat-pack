@@ -74,6 +74,10 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         Registries.ITEM,
         ResourceLocation.fromNamespaceAndPath("goldfishmod03tastyfurniturecompataddon", "onions")
         );
+       public static final TagKey<Item> PECAN_TAG = TagKey.create(
+        Registries.ITEM,
+        ResourceLocation.fromNamespaceAndPath("goldfishmod03tastyfurniturecompataddon", "pecans")
+        );
 
         public GM1RecipeProviderConcrete(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {
             super(output, lookupProvider);
@@ -370,6 +374,43 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', ONION_TAG)
             .unlockedBy("has_mush_hammer", has(mushregistry.most_advanced_mushhammer.get()))
             .save(output, "onion_mush_from_most_advanced_mushhammer");
+  //----------------------------------------------------------------------------------------Pecan-----------------------------------------------------------------------------------------------
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.PECAN_MUSH.get(), 1)
+            .pattern("ABB")
+            .pattern("BB ")
+            .pattern("   ")
+            .define('A', mushregistry.mushhammer.get())
+            .define('B', PECAN_TAG)
+            .unlockedBy("has_mush_hammer", has(mushregistry.mushhammer.get()))
+            .save(output);
+          //advanced
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.PECAN_MUSH.get(), 2)
+            .pattern("ABB")
+            .pattern("BB ")
+            .pattern("   ")
+            .define('A', mushregistry.advanced_mushhammer.get())
+            .define('B', PECAN_TAG)
+            .unlockedBy("has_mush_hammer", has(mushregistry.advanced_mushhammer.get()))
+            .save(output, "pecan_mush_from_advanced_mushhammer");
+          //more advanced
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.PECAN_MUSH.get(), 4)
+            .pattern("ABB")
+            .pattern("BB ")
+            .pattern("   ")
+            .define('A', mushregistry.more_advanced_mushhammer.get())
+            .define('B', PECAN_TAG)
+            .unlockedBy("has_mush_hammer", has(mushregistry.more_advanced_mushhammer.get()))
+            .save(output, "pecan_mush_from_more_advanced_mushhammer");
+          //most advanced
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.PECAN_MUSH.get(), 8)
+            .pattern("ABB")
+            .pattern("BB ")
+            .pattern("   ")
+            .define('A', mushregistry.most_advanced_mushhammer.get())
+            .define('B', PECAN_TAG)
+            .unlockedBy("has_mush_hammer", has(mushregistry.most_advanced_mushhammer.get()))
+            .save(output, "pecan_mush_from_most_advanced_mushhammer");
       }
  protected void buildIngotRecipes(RecipeOutput output) {
   //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
@@ -596,6 +637,38 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .requires(foodblockcompatitemregistry.ONION_BLOCK_ITEM.get())
             .unlockedBy("has_onion_block", has(foodblockcompatitemregistry.ONION_BLOCK_ITEM.get()))
             .save(output, "onion_ingot_from_unpacking");
+  //----------------------------------------------------------------------------------------Pecan-----------------------------------------------------------------------------------------------
+          //crafting
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotcompatregistry.PECAN_INGOT.get(), 1)
+            .pattern("AAA")
+            .pattern("AAA")
+            .pattern("AAA")
+            .define('A', nuggetcompatregistry.PECAN_NUGGET.get())
+            .unlockedBy("has_pecan_nugget", has(nuggetcompatregistry.PECAN_NUGGET.get()))
+            .save(output, "pecan_ingot_from_crafting");
+          //smelting
+            SimpleCookingRecipeBuilder.smelting(Ingredient.of(mushcompatregistry.PECAN_MUSH.get()),
+            RecipeCategory.MISC,
+            ingotcompatregistry.PECAN_INGOT.get(),
+            1.0f,
+            200
+            )
+            .unlockedBy("has_pecan_mush", has(mushcompatregistry.PECAN_MUSH.get()))
+            .save(output, "pecan_ingot_from_smelting");
+          //blasting
+            SimpleCookingRecipeBuilder.blasting(Ingredient.of(mushcompatregistry.PECAN_MUSH.get()),
+            RecipeCategory.MISC,
+            ingotcompatregistry.PECAN_INGOT.get(),
+            1.0f,
+            100
+            )
+            .unlockedBy("has_pecan_mush", has(mushcompatregistry.PECAN_MUSH.get()))
+            .save(output, "pecan_ingot_from_blasting");
+          //unpacking
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotcompatregistry.PECAN_INGOT.get(), 9)
+            .requires(foodblockcompatitemregistry.PECAN_BLOCK_ITEM.get())
+            .unlockedBy("has_pecan_block", has(foodblockcompatitemregistry.PECAN_BLOCK_ITEM.get()))
+            .save(output, "pecan_ingot_from_unpacking");
       }
  protected void buildNuggetRecipes(RecipeOutput output) {
   //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
@@ -632,6 +705,11 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, nuggetcompatregistry.ONION_NUGGET.get(), 9)
         .requires(ingotcompatregistry.ONION_INGOT.get())
         .unlockedBy("has_onion_ingot", has(ingotcompatregistry.ONION_INGOT.get()))
+        .save(output);
+  //----------------------------------------------------------------------------------------Pecan-----------------------------------------------------------------------------------------------
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, nuggetcompatregistry.PECAN_NUGGET.get(), 9)
+        .requires(ingotcompatregistry.PECAN_INGOT.get())
+        .unlockedBy("has_pecan_ingot", has(ingotcompatregistry.PECAN_INGOT.get()))
         .save(output);
       }
  protected void buildBlockRecipes(RecipeOutput output) {
@@ -985,6 +1063,56 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.ONION_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockcompatitemregistry.ONION_TILES_BLOCK_ITEM.get())
           .unlockedBy("has_onion_block", has(foodblockcompatitemregistry.ONION_BLOCK_ITEM.get()))
           .save(output, "onion_tiles_block_from_onion_block_stonecutting");
+  //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
+        //plain
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.PECAN_BLOCK_ITEM.get(), 1)
+          .pattern("AAA")
+          .pattern("AAA")
+          .pattern("AAA")
+          .define('A', ingotcompatregistry.PECAN_INGOT.get())
+          .unlockedBy("has_pecan_ingot", has(ingotcompatregistry.PECAN_INGOT.get()))
+          .save(output); 
+        //bricks
+         //crafting
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.PECAN_BRICKS_BLOCK_ITEM.get(), 4)
+          .pattern("AA ")
+          .pattern("AA ")
+          .pattern("   ")
+          .define('A', foodblockcompatitemregistry.PECAN_BLOCK_ITEM.get())
+          .unlockedBy("has_pecan_block", has(foodblockcompatitemregistry.PECAN_BLOCK_ITEM.get()))
+          .save(output); 
+         //stonecutting     
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.PECAN_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockcompatitemregistry.PECAN_BRICKS_BLOCK_ITEM.get())
+          .unlockedBy("has_pecan_block", has(foodblockcompatitemregistry.PECAN_BLOCK_ITEM.get()))
+          .save(output, "pecan_bricks_block_from_pecan_block_stonecutting");
+
+        //chiseled
+         //crafting
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.PECAN_CHISELED_BLOCK_ITEM.get())
+          .pattern("   ")
+          .pattern(" A ")
+          .pattern(" A ")
+          .define('A', foodblockcompatitemregistry.PECAN_SLAB_ITEM.get())
+          .unlockedBy("has_pecan_slab", has(foodblockcompatitemregistry.PECAN_SLAB_ITEM.get()))
+          .save(output);
+         //stonecutting     
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.PECAN_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockcompatitemregistry.PECAN_CHISELED_BLOCK_ITEM.get())
+          .unlockedBy("has_pecan_block", has(foodblockcompatitemregistry.PECAN_BLOCK_ITEM.get()))
+          .save(output, "pecan_chiseled_block_from_pecan_block_stonecutting");
+
+        //tiles
+         //crafting
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.PECAN_TILES_BLOCK_ITEM.get(),2)
+          .pattern("   ")
+          .pattern("AA ")
+          .pattern("AA ")
+          .define('A', foodblockcompatitemregistry.PECAN_SLAB_ITEM.get())
+          .unlockedBy("has_pecan_slab", has(foodblockcompatitemregistry.PECAN_SLAB_ITEM.get()))
+          .save(output);
+         //stonecutting     
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.PECAN_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockcompatitemregistry.PECAN_TILES_BLOCK_ITEM.get())
+          .unlockedBy("has_pecan_block", has(foodblockcompatitemregistry.PECAN_BLOCK_ITEM.get()))
+          .save(output, "pecan_tiles_block_from_pecan_block_stonecutting");
       }
  protected void buildSlabRecipes(RecipeOutput output) {
   //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
@@ -1085,6 +1213,20 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           foodblockcompatitemregistry.ONION_BRICKS_SLAB_ITEM.get(), 2)
           .unlockedBy("has_onion_bricks_block", has(foodblockcompatitemregistry.ONION_BRICKS_BLOCK_ITEM.get()))
           .save(output, "onion_bricks_slab_from_onion_bricks_block_stonecutting");
+  //----------------------------------------------------------------------------------------Pecan-----------------------------------------------------------------------------------------------
+        //plain
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.PECAN_SLAB_ITEM.get())
+          .pattern("   ")
+          .pattern("   ")
+          .pattern("AAA")
+          .define('A', ingotcompatregistry.PECAN_INGOT.get())
+          .unlockedBy("has_pecan_ingot", has(ingotcompatregistry.PECAN_INGOT.get()))
+          .save(output);
+        //bricks
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.PECAN_BRICKS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, 
+          foodblockcompatitemregistry.PECAN_BRICKS_SLAB_ITEM.get(), 2)
+          .unlockedBy("has_pecan_bricks_block", has(foodblockcompatitemregistry.PECAN_BRICKS_BLOCK_ITEM.get()))
+          .save(output, "pecan_bricks_slab_from_pecan_bricks_block_stonecutting");
       }
  protected void buildStairsRecipes(RecipeOutput output) {
   //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
@@ -1185,6 +1327,20 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           foodblockcompatitemregistry.ONION_BRICKS_STAIRS_ITEM.get(), 1)
           .unlockedBy("has_onion_bricks_block", has(foodblockcompatitemregistry.ONION_BRICKS_BLOCK_ITEM.get()))
           .save(output, "onion_bricks_stairs_from_onion_bricks_block_stonecutting");
+  //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
+        //plain
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.PECAN_STAIRS_ITEM.get())
+          .pattern("A  ")
+          .pattern("AA ")
+          .pattern("AAA")
+          .define('A', ingotcompatregistry.PECAN_INGOT.get())
+          .unlockedBy("has_pecan_ingot", has(ingotcompatregistry.PECAN_INGOT.get()))
+          .save(output);
+        //bricks
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.PECAN_BRICKS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, 
+          foodblockcompatitemregistry.PECAN_BRICKS_STAIRS_ITEM.get(), 1)
+          .unlockedBy("has_pecan_bricks_block", has(foodblockcompatitemregistry.PECAN_BRICKS_BLOCK_ITEM.get()))
+          .save(output, "pecan_bricks_stairs_from_pecan_bricks_block_stonecutting");
       }
  protected void buildBarsRecipes(RecipeOutput output) {
   //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------

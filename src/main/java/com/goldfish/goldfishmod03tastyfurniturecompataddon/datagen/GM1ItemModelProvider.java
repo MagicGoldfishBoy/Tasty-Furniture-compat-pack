@@ -560,6 +560,31 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //cabinet
        withExistingParent("small_onion_cabinet_item", modLoc("block/onion_cabinet"));
        withExistingParent("medium_onion_cabinet_item", modLoc("block/medium_onion_cabinet"));
+    //==============================================================================================================================================
+    //|                                                              Pecan                                                                        |
+    //==============================================================================================================================================
+       //mush
+       withExistingParent("pecan_mush", mcLoc("item/generated")).texture("layer0", "item/pecan_mush");
+       //ingot
+        withExistingParent("pecan_ingot", mcLoc("item/generated")).texture("layer0", "item/pecan_ingot");
+       //nugget
+        withExistingParent("pecan_nugget", mcLoc("item/generated")).texture("layer0", "item/pecan_nugget");
+       //block
+        withExistingParent("pecan_block_item", modLoc("block/pecan_block"));
+       //bricks block
+        withExistingParent("pecan_bricks_block_item", modLoc("block/pecan_bricks_block"));
+       //chiseled block
+        withExistingParent("pecan_chiseled_block_item", modLoc("block/pecan_chiseled_block"));
+       //tiles block
+        withExistingParent("pecan_tiles_block_item", modLoc("block/pecan_tiles_block"));
+       //slab
+        slab("pecan_slab_item", modLoc("block/pecan_block"), modLoc("block/pecan_block"), modLoc("block/pecan_block"));
+       //bricks slab
+        slab("pecan_bricks_slab_item", modLoc("block/pecan_bricks_block"), modLoc("block/pecan_bricks_block"), modLoc("block/pecan_bricks_block"));
+       //stairs
+        stairs("pecan_stairs_item", modLoc("block/pecan_block"), modLoc("block/pecan_block"), modLoc("block/pecan_block"));
+       //bricks stairs
+        stairs("pecan_bricks_stairs_item", modLoc("block/pecan_bricks_block"), modLoc("block/pecan_bricks_block"), modLoc("block/pecan_bricks_block"));
   }
 }
 

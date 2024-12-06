@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "goldfishmod03tastyfurniturecompataddon:block/pecan_slab"
+    },
+    "type=double": {
+      "model": "goldfishmod03tastyfurniturecompataddon:block/pecan_block"
+    },
+    "type=top": {
+      "model": "goldfishmod03tastyfurniturecompataddon:block/pecan_slab_top"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+    "replace": false,
+    "values": [
+        {"id":"pamhc2trees:pecanitem",
+        "required": false},
+        {"id":"productivetrees:pecan",
+        "required": false},
+        {"id":"harvestcraft:pecanitem",
+        "required": false},
+        {"id":"croptopia:pecan",
+        "required": false},
+        {"id":"c:crops/pecan",
+        "required": false}
+    ]
+  }

@@ -258,5 +258,16 @@
     "block.goldfishmod03tastyfurniturecompataddon.onion_chair": "Onion Chair",
     "block.goldfishmod03tastyfurniturecompataddon.onion_bed": "Onion Bed",
     "block.goldfishmod03tastyfurniturecompataddon.small_onion_cabinet": "Onion Small Cabinet",
-    "block.goldfishmod03tastyfurniturecompataddon.medium_onion_cabinet": "Onion Medium Cabinet"
+    "block.goldfishmod03tastyfurniturecompataddon.medium_onion_cabinet": "Onion Medium Cabinet",
+    "item.goldfishmod03tastyfurniturecompataddon.pecan_mush": "Pecan Mush",
+    "item.goldfishmod03tastyfurniturecompataddon.pecan_ingot": "Pecan Ingot",
+    "item.goldfishmod03tastyfurniturecompataddon.pecan_nugget": "Pecan Nugget",
+    "block.goldfishmod03tastyfurniturecompataddon.pecan_block": "Pecan Block",
+    "block.goldfishmod03tastyfurniturecompataddon.pecan_bricks_block": "Pecan Bricks Block",
+    "block.goldfishmod03tastyfurniturecompataddon.pecan_chiseled_block": "Pecan Chiseled Block",
+    "block.goldfishmod03tastyfurniturecompataddon.pecan_tiles_block": "Pecan Tiles Block",
+    "block.goldfishmod03tastyfurniturecompataddon.pecan_slab": "Pecan Slab",
+    "block.goldfishmod03tastyfurniturecompataddon.pecan_bricks_slab": "Pecan Bricks Slab",
+    "block.goldfishmod03tastyfurniturecompataddon.pecan_stairs": "Pecan Stairs",
+    "block.goldfishmod03tastyfurniturecompataddon.pecan_bricks_stairs": "Pecan Bricks Stairs"
 }

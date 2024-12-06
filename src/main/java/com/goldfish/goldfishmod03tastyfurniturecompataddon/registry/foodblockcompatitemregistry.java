@@ -110,6 +110,19 @@ public class foodblockcompatitemregistry {
   //.........tiles
      public static final DeferredHolder<Item, BlockItem> ONION_TILES_BLOCK_ITEM = FOODBLOCKITEM.register("onion_tiles_block_item",
      () -> new BlockItem(foodblockcompatregistry.ONION_TILES_BLOCK.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
+  //.........plain
+     public static final DeferredHolder<Item, BlockItem> PECAN_BLOCK_ITEM = FOODBLOCKITEM.register("pecan_block_item",
+     () -> new BlockItem(foodblockcompatregistry.PECAN_BLOCK.get(), new BlockItem.Properties()));
+  //.........bricks
+     public static final DeferredHolder<Item, BlockItem> PECAN_BRICKS_BLOCK_ITEM = FOODBLOCKITEM.register("pecan_bricks_block_item",
+     () -> new BlockItem(foodblockcompatregistry.PECAN_BRICKS_BLOCK.get(), new BlockItem.Properties()));
+  //.........chiseled
+     public static final DeferredHolder<Item, BlockItem> PECAN_CHISELED_BLOCK_ITEM = FOODBLOCKITEM.register("pecan_chiseled_block_item",
+     () -> new BlockItem(foodblockcompatregistry.PECAN_CHISELED_BLOCK.get(), new BlockItem.Properties()));
+  //.........tiles
+     public static final DeferredHolder<Item, BlockItem> PECAN_TILES_BLOCK_ITEM = FOODBLOCKITEM.register("pecan_tiles_block_item",
+     () -> new BlockItem(foodblockcompatregistry.PECAN_TILES_BLOCK.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                         Slabs
 //==============================================================================================================================================================================================
@@ -162,6 +175,13 @@ public class foodblockcompatitemregistry {
   //.........bricks
    public static final DeferredHolder<Item, BlockItem> ONION_BRICKS_SLAB_ITEM = FOODBLOCKITEM.register("onion_bricks_slab_item",
    () -> new BlockItem(foodblockcompatregistry.ONION_BRICKS_SLAB.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
+  //.........plain
+   public static final DeferredHolder<Item, BlockItem> PECAN_SLAB_ITEM = FOODBLOCKITEM.register("pecan_slab_item",
+   () -> new BlockItem(foodblockcompatregistry.PECAN_SLAB.get(), new BlockItem.Properties()));
+  //.........bricks
+   public static final DeferredHolder<Item, BlockItem> PECAN_BRICKS_SLAB_ITEM = FOODBLOCKITEM.register("pecan_bricks_slab_item",
+   () -> new BlockItem(foodblockcompatregistry.PECAN_BRICKS_SLAB.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                         Stairs
 //==============================================================================================================================================================================================
@@ -214,6 +234,13 @@ public class foodblockcompatitemregistry {
   //.........bricks
    public static final DeferredHolder<Item, BlockItem> ONION_BRICKS_STAIRS_ITEM = FOODBLOCKITEM.register("onion_bricks_stairs_item",
    () -> new BlockItem(foodblockcompatregistry.ONION_BRICKS_STAIRS.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
+  //.........plain
+   public static final DeferredHolder<Item, BlockItem> PECAN_STAIRS_ITEM = FOODBLOCKITEM.register("pecan_stairs_item",
+   () -> new BlockItem(foodblockcompatregistry.PECAN_STAIRS.get(), new BlockItem.Properties()));
+  //.........bricks
+   public static final DeferredHolder<Item, BlockItem> PECAN_BRICKS_STAIRS_ITEM = FOODBLOCKITEM.register("pecan_bricks_stairs_item",
+   () -> new BlockItem(foodblockcompatregistry.PECAN_BRICKS_STAIRS.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                         Bars
 //==============================================================================================================================================================================================
