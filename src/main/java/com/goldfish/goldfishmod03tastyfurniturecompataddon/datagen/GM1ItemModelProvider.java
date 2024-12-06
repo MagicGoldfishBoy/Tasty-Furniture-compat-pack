@@ -477,6 +477,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("corn_barrel_item", modLoc("block/corn_barrel_model_closed"));
        //chair
        withExistingParent("corn_chair_item", modLoc("block/corn_chair"));
+       //bed
+       withExistingParent("corn_bed_item", modLoc("block/corn_bed"));
     //==============================================================================================================================================
     //|                                                              Onion                                                                        |
     //==============================================================================================================================================
@@ -550,6 +552,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("onion_barrel_item", modLoc("block/onion_barrel_model_closed"));
        //chair
        withExistingParent("onion_chair_item", modLoc("block/onion_chair"));
+       //bed
+       withExistingParent("onion_bed_item", modLoc("block/onion_bed"));
   }
 }
 

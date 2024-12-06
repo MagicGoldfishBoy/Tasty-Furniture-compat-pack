@@ -2617,6 +2617,26 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
            .define('C', foodblockcompatitemregistry.ORANGE_CARPET_ITEM.get())
            .unlockedBy("has_orange_ingot", has(ingotcompatregistry.ORANGE_INGOT.get()))
            .save(output);
+  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
+           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CORN_BED_ITEM.get())
+           .pattern("CCC")
+           .pattern("BBB")
+           .pattern("A A")
+           .define('A', ingotcompatregistry.CORN_INGOT.get())
+           .define('B', foodblockcompatitemregistry.CORN_SLAB_ITEM.get())
+           .define('C', foodblockcompatitemregistry.CORN_CARPET_ITEM.get())
+           .unlockedBy("has_corn_ingot", has(ingotcompatregistry.CORN_INGOT.get()))
+           .save(output);
+  //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
+           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ONION_BED_ITEM.get())
+           .pattern("CCC")
+           .pattern("BBB")
+           .pattern("A A")
+           .define('A', ingotcompatregistry.ONION_INGOT.get())
+           .define('B', foodblockcompatitemregistry.ONION_SLAB_ITEM.get())
+           .define('C', foodblockcompatitemregistry.ONION_CARPET_ITEM.get())
+           .unlockedBy("has_onion_ingot", has(ingotcompatregistry.ONION_INGOT.get()))
+           .save(output);
       }
  protected void buildCabinetRecipes(RecipeOutput output) {
   //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------

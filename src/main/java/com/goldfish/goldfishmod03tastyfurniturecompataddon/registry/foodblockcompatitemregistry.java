@@ -772,6 +772,12 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Orange---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> ORANGE_BED_ITEM = FOODBLOCKITEM.register("orange_bed_item", () -> new BlockItem(foodblockcompatregistry.ORANGE_BED.get(),
     new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> CORN_BED_ITEM = FOODBLOCKITEM.register("corn_bed_item", () -> new BlockItem(foodblockcompatregistry.CORN_BED.get(),
+    new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> ONION_BED_ITEM = FOODBLOCKITEM.register("onion_bed_item", () -> new BlockItem(foodblockcompatregistry.ONION_BED.get(),
+    new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                        Cabinets
 //==============================================================================================================================================================================================
