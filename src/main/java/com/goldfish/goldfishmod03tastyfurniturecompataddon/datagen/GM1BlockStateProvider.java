@@ -2492,6 +2492,30 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .modelFile(models().getExistingFile(modelLocation))
                   .build();
           });
+     //------------------------------------------------------------corn-----------------------------------------------------------------------
+          foodpathtypeminislab corn_stone_path = foodblockcompatregistry.CORN_STONE_PATH.get();
+
+          getVariantBuilder(corn_stone_path)
+          .forAllStates(state -> {
+
+              ResourceLocation modelLocation = modLoc("block/corn_stone_path");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .build();
+          });
+     //------------------------------------------------------------onion-----------------------------------------------------------------------
+          foodpathtypeminislab onion_stone_path = foodblockcompatregistry.ONION_STONE_PATH.get();
+
+          getVariantBuilder(onion_stone_path)
+          .forAllStates(state -> {
+
+              ResourceLocation modelLocation = modLoc("block/onion_stone_path");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .build();
+          });
     //==============================================================================================================================================
     //|                                                              Barrels                                                                       |
     //==============================================================================================================================================

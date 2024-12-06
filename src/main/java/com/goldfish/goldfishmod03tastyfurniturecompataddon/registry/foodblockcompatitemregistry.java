@@ -693,6 +693,12 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Orange---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> ORANGE_STONE_PATH_ITEM = FOODBLOCKITEM.register("orange_stone_path_item", 
     () -> new BlockItem(foodblockcompatregistry.ORANGE_STONE_PATH.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> CORN_STONE_PATH_ITEM = FOODBLOCKITEM.register("corn_stone_path_item", 
+    () -> new BlockItem(foodblockcompatregistry.CORN_STONE_PATH.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> ONION_STONE_PATH_ITEM = FOODBLOCKITEM.register("onion_stone_path_item", 
+    () -> new BlockItem(foodblockcompatregistry.ONION_STONE_PATH.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                        Barrels
 //==============================================================================================================================================================================================
