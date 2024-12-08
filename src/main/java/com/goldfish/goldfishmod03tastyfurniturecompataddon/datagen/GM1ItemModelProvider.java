@@ -614,6 +614,10 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //chain
        withExistingParent("pecan_chain_item", modLoc("block/pecan_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
        .end();
+       //ladder
+       withExistingParent("pecan_ladder_item", modLoc("block/pecan_ladder"));
+       //table
+       withExistingParent("pecan_table_item", modLoc("block/pecan_table"));
   }
 }
 

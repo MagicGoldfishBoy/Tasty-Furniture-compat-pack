@@ -282,5 +282,7 @@
     "block.goldfishmod03tastyfurniturecompataddon.pecan_carpet": "Pecan Carpet",
     "block.goldfishmod03tastyfurniturecompataddon.pecan_lantern": "Pecan Lantern",
     "block.goldfishmod03tastyfurniturecompataddon.pecan_soul_lantern": "Pecan Soul Lantern",
-    "block.goldfishmod03tastyfurniturecompataddon.pecan_chain": "Pecan Chain"
+    "block.goldfishmod03tastyfurniturecompataddon.pecan_chain": "Pecan Chain",
+    "block.goldfishmod03tastyfurniturecompataddon.pecan_ladder": "Pecan Ladder",
+    "block.goldfishmod03tastyfurniturecompataddon.pecan_table": "Pecan Table"
 }
