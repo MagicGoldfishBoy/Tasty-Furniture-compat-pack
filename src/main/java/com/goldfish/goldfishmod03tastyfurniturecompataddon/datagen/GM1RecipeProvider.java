@@ -2058,6 +2058,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', ingotcompatregistry.ORANGE_INGOT.get())
         .unlockedBy("has_orange_ingot", has(ingotcompatregistry.ORANGE_INGOT.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.LEMON_TRAPDOOR_ITEM.get())
+        .pattern("   ")
+        .pattern("AAA")
+        .pattern("AAA")
+        .define('A', ingotcompatregistry.LEMON_INGOT.get())
+        .unlockedBy("has_lemon_ingot", has(ingotcompatregistry.LEMON_INGOT.get()))
+        .save(output);
   //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CORN_TRAPDOOR_ITEM.get())
         .pattern("   ")
@@ -2126,6 +2134,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .pattern("ABA")
         .pattern("AAA")
         .define('A', ingotcompatregistry.ORANGE_INGOT.get())
+        .define('B', foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get())
+        .unlockedBy("has_glow_berry_block", has(foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.LEMON_LAMP_ITEM.get())
+        .pattern("AAA")
+        .pattern("ABA")
+        .pattern("AAA")
+        .define('A', ingotcompatregistry.LEMON_INGOT.get())
         .define('B', foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get())
         .unlockedBy("has_glow_berry_block", has(foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get()))
         .save(output);
@@ -2319,6 +2336,25 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', Items.SOUL_TORCH)
             .unlockedBy("has_orange_nugget", has(nuggetcompatregistry.ORANGE_NUGGET.get()))
             .save(output);
+  //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.LEMON_LANTERN_ITEM.get())
+            .pattern("AAA")
+            .pattern("ABA")
+            .pattern("AAA")
+            .define('A', nuggetcompatregistry.LEMON_NUGGET.get())
+            .define('B', Items.TORCH)
+            .unlockedBy("has_lemon_nugget", has(nuggetcompatregistry.LEMON_NUGGET.get()))
+            .save(output);
+          //soul
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.LEMON_SOUL_LANTERN_ITEM.get())
+            .pattern("AAA")
+            .pattern("ABA")
+            .pattern("AAA")
+            .define('A', nuggetcompatregistry.LEMON_NUGGET.get())
+            .define('B', Items.SOUL_TORCH)
+            .unlockedBy("has_lemon_nugget", has(nuggetcompatregistry.LEMON_NUGGET.get()))
+            .save(output);
   //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
           //regular
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CORN_LANTERN_ITEM.get())
@@ -2422,6 +2458,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', nuggetcompatregistry.ORANGE_NUGGET.get())
         .define('B', ingotcompatregistry.ORANGE_INGOT.get())
         .unlockedBy("has_orange_ingot", has(ingotcompatregistry.ORANGE_INGOT.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.LEMON_CHAIN_ITEM.get())
+        .pattern(" A ")
+        .pattern(" B ")
+        .pattern(" A ")
+        .define('A', nuggetcompatregistry.LEMON_NUGGET.get())
+        .define('B', ingotcompatregistry.LEMON_INGOT.get())
+        .unlockedBy("has_lemon_ingot", has(ingotcompatregistry.LEMON_INGOT.get()))
         .save(output);
   //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CORN_CHAIN_ITEM.get())

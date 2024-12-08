@@ -443,6 +443,21 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         pressurePlate("lemon_pressure_plate_item", modLoc("block/lemon_block"));
        //sign
        withExistingParent("lemon_sign_item", mcLoc("item/generated")).texture("layer0", "item/lemon_sign");
+       //trapdoor
+       withExistingParent("lemon_trapdoor_item", modLoc("block/lemon_trapdoor_trapdoor_bottom"));
+       //lamp
+       withExistingParent("lemon_lamp_item", modLoc("block/lemon_lamp"));
+       //carpet
+       ResourceLocation lemon_carpet_texture = modLoc("block/lemon_carpet");
+       carpet("lemon_carpet_item", lemon_carpet_texture);
+       //lantern
+        //regular
+        withExistingParent("lemon_lantern_item", modLoc("block/lemon_lantern"));
+        //soul
+          withExistingParent("lemon_soul_lantern_item", modLoc("block/lemon_soul_lantern"));
+       //chain
+       withExistingParent("lemon_chain_item", modLoc("block/lemon_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
     //==============================================================================================================================================
     //|                                                              Corn                                                                        |
     //==============================================================================================================================================

@@ -659,6 +659,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           TrapDoorBlock orange_trapdoor = foodblockcompatregistry.ORANGE_TRAPDOOR.get(); 
           ResourceLocation orange_trapdoor_texture = modLoc("block/orange_block");
           trapdoorBlockWithRenderType(orange_trapdoor, "orange_trapdoor", orange_trapdoor_texture, false, orange_trapdoor_texture);
+     //------------------------------------------------------------lemon-----------------------------------------------------------------------
+          TrapDoorBlock lemon_trapdoor = foodblockcompatregistry.LEMON_TRAPDOOR.get(); 
+          ResourceLocation lemon_trapdoor_texture = modLoc("block/lemon_block");
+          trapdoorBlockWithRenderType(lemon_trapdoor, "lemon_trapdoor", lemon_trapdoor_texture, false, lemon_trapdoor_texture);
      //------------------------------------------------------------corn-----------------------------------------------------------------------
           TrapDoorBlock corn_trapdoor = foodblockcompatregistry.CORN_TRAPDOOR.get(); 
           ResourceLocation corn_trapdoor_texture = modLoc("block/corn_block");
@@ -689,6 +693,9 @@ public class GM1BlockStateProvider extends BlockStateProvider
      //------------------------------------------------------------orange-----------------------------------------------------------------------
           Block orange_lamp = foodblockcompatregistry.ORANGE_LAMP.get();
           simpleBlock(orange_lamp);
+     //------------------------------------------------------------lemon-----------------------------------------------------------------------
+          Block lemon_lamp = foodblockcompatregistry.LEMON_LAMP.get();
+          simpleBlock(lemon_lamp);
      //------------------------------------------------------------corn-----------------------------------------------------------------------
           Block corn_lamp = foodblockcompatregistry.CORN_LAMP.get();
           simpleBlock(corn_lamp);
@@ -731,6 +738,12 @@ public class GM1BlockStateProvider extends BlockStateProvider
           BlockModelBuilder orange_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(orange_carpet).getPath(), mcLoc("block/carpet"))
           .texture("wool", orange_carpet_texture);
           simpleBlock(orange_carpet, new ModelFile.UncheckedModelFile(orange_carpet_model.getLocation()));
+     //------------------------------------------------------------lemon-----------------------------------------------------------------------
+          CarpetBlock lemon_carpet = foodblockcompatregistry.LEMON_CARPET.get();
+          ResourceLocation lemon_carpet_texture = modLoc("block/lemon_carpet");
+          BlockModelBuilder lemon_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(lemon_carpet).getPath(), mcLoc("block/carpet"))
+          .texture("wool", lemon_carpet_texture);
+          simpleBlock(lemon_carpet, new ModelFile.UncheckedModelFile(lemon_carpet_model.getLocation()));
      //------------------------------------------------------------corn-----------------------------------------------------------------------
           CarpetBlock corn_carpet = foodblockcompatregistry.CORN_CARPET.get();
           ResourceLocation corn_carpet_texture = modLoc("block/corn_carpet");
@@ -947,6 +960,45 @@ public class GM1BlockStateProvider extends BlockStateProvider
              .modelForState().modelFile(hanging_orange_soul_lantern_model).addModel()
              .partialState().with(LanternBlock.HANGING, false)
              .modelForState().modelFile(orange_soul_lantern_model).addModel();
+     //------------------------------------------------------------lemon-----------------------------------------------------------------------
+         //regular
+          LanternBlock lemon_lantern = foodblockcompatregistry.LEMON_LANTERN.get();
+          ResourceLocation lemon_lantern_texture = modLoc("block/lemon_lantern");
+  
+          BlockModelBuilder lemon_lantern_model = models()
+              .withExistingParent("lemon_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", lemon_lantern_texture);
+  
+          BlockModelBuilder hanging_lemon_lantern_model = models()
+              .withExistingParent("lemon_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", lemon_lantern_texture);
+  
+          getVariantBuilder(lemon_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_lemon_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(lemon_lantern_model).addModel();
+         //soul
+         LanternBlock lemon_soul_lantern = foodblockcompatregistry.LEMON_SOUL_LANTERN.get();
+         ResourceLocation lemon_soul_lantern_texture = modLoc("block/lemon_soul_lantern");
+ 
+         BlockModelBuilder lemon_soul_lantern_model = models()
+             .withExistingParent("lemon_soul_lantern", mcLoc("block/lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", lemon_soul_lantern_texture);
+ 
+         BlockModelBuilder hanging_lemon_soul_lantern_model = models()
+             .withExistingParent("lemon_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", lemon_soul_lantern_texture);
+ 
+         getVariantBuilder(lemon_soul_lantern)
+             .partialState().with(LanternBlock.HANGING, true)
+             .modelForState().modelFile(hanging_lemon_soul_lantern_model).addModel()
+             .partialState().with(LanternBlock.HANGING, false)
+             .modelForState().modelFile(lemon_soul_lantern_model).addModel();
      //------------------------------------------------------------corn-----------------------------------------------------------------------
          //regular
           LanternBlock corn_lantern = foodblockcompatregistry.CORN_LANTERN.get();
@@ -1147,6 +1199,22 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .modelForState().modelFile(orange_chain_model).rotationX(90).rotationY(90).addModel()
           .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
           .modelForState().modelFile(orange_chain_model).rotationX(90).addModel(); 
+     //------------------------------------------------------------lemon-----------------------------------------------------------------------
+         ChainBlock lemon_chain = foodblockcompatregistry.LEMON_CHAIN.get();
+         ResourceLocation lemon_chain_texture = modLoc("block/lemon_chain");
+         BlockModelBuilder lemon_chain_model = models()
+          .withExistingParent("lemon_chain", mcLoc("block/chain"))
+          .renderType("cutout_mipped_all")
+          .texture("all", lemon_chain_texture)
+          .texture("particle", lemon_chain_texture);
+
+          getVariantBuilder(lemon_chain)
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Y)
+          .modelForState().modelFile(lemon_chain_model).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.X)
+          .modelForState().modelFile(lemon_chain_model).rotationX(90).rotationY(90).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
+          .modelForState().modelFile(lemon_chain_model).rotationX(90).addModel(); 
      //------------------------------------------------------------corn-----------------------------------------------------------------------
          ChainBlock corn_chain = foodblockcompatregistry.CORN_CHAIN.get();
          ResourceLocation corn_chain_texture = modLoc("block/corn_chain");
