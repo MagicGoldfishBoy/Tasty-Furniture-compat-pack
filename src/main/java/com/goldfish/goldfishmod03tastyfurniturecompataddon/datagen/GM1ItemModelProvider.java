@@ -429,6 +429,18 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         stairs("lemon_stairs_item", modLoc("block/lemon_block"), modLoc("block/lemon_block"), modLoc("block/lemon_block"));
        //bricks stairs
         stairs("lemon_bricks_stairs_item", modLoc("block/lemon_bricks_block"), modLoc("block/lemon_bricks_block"), modLoc("block/lemon_bricks_block"));
+       //bars
+        withExistingParent("lemon_bars_item", mcLoc("item/generated")).texture("layer0", "block/lemon_bars");
+       //doors
+        withExistingParent("lemon_door_item", mcLoc("item/generated")).texture("layer0", "item/lemon_door_item");
+       //button
+        buttonInventory("lemon_button_item", modLoc("block/lemon_block"));
+       //fence
+        fenceInventory("lemon_fence_item", modLoc("block/lemon_block"));
+       //gate
+        withExistingParent("lemon_gate_item", modLoc("block/lemon_gate"));
+       //pressure plate
+        pressurePlate("lemon_pressure_plate_item", modLoc("block/lemon_block"));
     //==============================================================================================================================================
     //|                                                              Corn                                                                        |
     //==============================================================================================================================================
