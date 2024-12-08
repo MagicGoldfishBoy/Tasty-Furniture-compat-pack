@@ -599,6 +599,10 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         pressurePlate("pecan_pressure_plate_item", modLoc("block/pecan_block"));
        //sign
        withExistingParent("pecan_sign_item", mcLoc("item/generated")).texture("layer0", "item/pecan_sign");
+       //trapdoor
+       withExistingParent("pecan_trapdoor_item", modLoc("block/pecan_trapdoor_trapdoor_bottom"));
+       //lamp
+       withExistingParent("pecan_lamp_item", modLoc("block/pecan_lamp"));
   }
 }
 

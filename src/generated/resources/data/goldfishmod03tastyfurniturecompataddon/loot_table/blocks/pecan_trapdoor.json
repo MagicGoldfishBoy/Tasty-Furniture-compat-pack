@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "goldfishmod03tastyfurniturecompataddon:pecan_trapdoor_item"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "goldfishmod03tastyfurniturecompataddon:blocks/pecan_trapdoor"
+}

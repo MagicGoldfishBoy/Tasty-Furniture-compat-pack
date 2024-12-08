@@ -1867,6 +1867,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', ingotcompatregistry.ONION_INGOT.get())
         .unlockedBy("has_onion_ingot", has(ingotcompatregistry.ONION_INGOT.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.PECAN_TRAPDOOR_ITEM.get())
+        .pattern("   ")
+        .pattern("AAA")
+        .pattern("AAA")
+        .define('A', ingotcompatregistry.PECAN_INGOT.get())
+        .unlockedBy("has_pecan_ingot", has(ingotcompatregistry.PECAN_INGOT.get()))
+        .save(output);
       }
  protected void buildLampRecipes(RecipeOutput output) {
   //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
@@ -1929,6 +1937,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .pattern("ABA")
         .pattern("AAA")
         .define('A', ingotcompatregistry.ONION_INGOT.get())
+        .define('B', foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get())
+        .unlockedBy("has_glow_berry_block", has(foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.PECAN_LAMP_ITEM.get())
+        .pattern("AAA")
+        .pattern("ABA")
+        .pattern("AAA")
+        .define('A', ingotcompatregistry.PECAN_INGOT.get())
         .define('B', foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get())
         .unlockedBy("has_glow_berry_block", has(foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get()))
         .save(output);

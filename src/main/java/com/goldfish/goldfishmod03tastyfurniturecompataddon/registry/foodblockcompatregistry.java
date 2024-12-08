@@ -1253,6 +1253,13 @@ public class foodblockcompatregistry {
      .explosionResistance(9.5f)
      .sound(SoundType.MUD_BRICKS)
      ));
+ //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
+     public static final DeferredHolder<Block, TrapDoorBlock> PECAN_TRAPDOOR = FOODBLOCK.register("pecan_trapdoor", () -> new TrapDoorBlock(foodmaterialtypecompatregistry.PLANT, 
+     BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     ));
 //==============================================================================================================================================================================================
 //                                                                                         Lamps
 //==============================================================================================================================================================================================
@@ -1300,6 +1307,13 @@ public class foodblockcompatregistry {
      ));
  //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
      public static final DeferredHolder<Block, Block> ONION_LAMP = FOODBLOCK.register("onion_lamp", () -> new Block(BlockBehaviour.Properties.of()
+     .destroyTime(1.5f)
+     .explosionResistance(10.0f)
+     .sound(SoundType.FROGLIGHT)
+     .lightLevel(state -> 15)
+     ));
+ //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
+     public static final DeferredHolder<Block, Block> PECAN_LAMP = FOODBLOCK.register("pecan_lamp", () -> new Block(BlockBehaviour.Properties.of()
      .destroyTime(1.5f)
      .explosionResistance(10.0f)
      .sound(SoundType.FROGLIGHT)

@@ -454,6 +454,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
      public static final DeferredHolder<Item, BlockItem> ONION_TRAPDOOR_ITEM = FOODBLOCKITEM.register("onion_trapdoor_item",
      () -> new BlockItem(foodblockcompatregistry.ONION_TRAPDOOR.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
+     public static final DeferredHolder<Item, BlockItem> PECAN_TRAPDOOR_ITEM = FOODBLOCKITEM.register("pecan_trapdoor_item",
+     () -> new BlockItem(foodblockcompatregistry.PECAN_TRAPDOOR.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                         Lamps
 //==============================================================================================================================================================================================
@@ -478,6 +481,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> ONION_LAMP_ITEM = FOODBLOCKITEM.register("onion_lamp_item",
     () -> new BlockItem(foodblockcompatregistry.ONION_LAMP.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> PECAN_LAMP_ITEM = FOODBLOCKITEM.register("pecan_lamp_item",
+    () -> new BlockItem(foodblockcompatregistry.PECAN_LAMP.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                        Carpets
 //==============================================================================================================================================================================================

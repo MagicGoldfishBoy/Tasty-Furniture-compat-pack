@@ -606,6 +606,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           TrapDoorBlock onion_trapdoor = foodblockcompatregistry.ONION_TRAPDOOR.get(); 
           ResourceLocation onion_trapdoor_texture = modLoc("block/onion_block");
           trapdoorBlockWithRenderType(onion_trapdoor, "onion_trapdoor", onion_trapdoor_texture, false, onion_trapdoor_texture);
+     //------------------------------------------------------------pecan-----------------------------------------------------------------------
+          TrapDoorBlock pecan_trapdoor = foodblockcompatregistry.PECAN_TRAPDOOR.get(); 
+          ResourceLocation pecan_trapdoor_texture = modLoc("block/pecan_block");
+          trapdoorBlockWithRenderType(pecan_trapdoor, "pecan_trapdoor", pecan_trapdoor_texture, false, pecan_trapdoor_texture);
     //==============================================================================================================================================
     //|                                                               Lamps                                                                        |
     //==============================================================================================================================================
@@ -630,6 +634,9 @@ public class GM1BlockStateProvider extends BlockStateProvider
      //------------------------------------------------------------onion-----------------------------------------------------------------------
           Block onion_lamp = foodblockcompatregistry.ONION_LAMP.get();
           simpleBlock(onion_lamp);
+     //------------------------------------------------------------pecan-----------------------------------------------------------------------
+          Block pecan_lamp = foodblockcompatregistry.PECAN_LAMP.get();
+          simpleBlock(pecan_lamp);
     //==============================================================================================================================================
     //|                                                              Carpets                                                                       |
     //==============================================================================================================================================

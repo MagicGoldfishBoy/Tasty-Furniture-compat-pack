@@ -276,5 +276,7 @@
     "block.goldfishmod03tastyfurniturecompataddon.pecan_fence": "Pecan Fence",
     "block.goldfishmod03tastyfurniturecompataddon.pecan_gate": "Pecan Gate",
     "block.goldfishmod03tastyfurniturecompataddon.pecan_pressure_plate": "Pecan Pressure Plate",
-    "block.goldfishmod03tastyfurniturecompataddon.pecan_standing_sign": "Pecan Sign"
+    "block.goldfishmod03tastyfurniturecompataddon.pecan_standing_sign": "Pecan Sign",
+    "block.goldfishmod03tastyfurniturecompataddon.pecan_trapdoor": "Pecan Trapdoor",
+    "block.goldfishmod03tastyfurniturecompataddon.pecan_lamp": "Pecan Lamp"
 }
