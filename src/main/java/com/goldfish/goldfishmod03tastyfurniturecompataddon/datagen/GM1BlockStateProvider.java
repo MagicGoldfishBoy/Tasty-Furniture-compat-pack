@@ -616,6 +616,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
            WallSignBlock orange_wall_sign = foodblockcompatregistry.ORANGE_WALL_SIGN.get();
            ResourceLocation orange_sign_texture = modLoc("block/orange_block");
            signBlock(orange_sign, orange_wall_sign, orange_sign_texture);
+     //------------------------------------------------------------lemon-----------------------------------------------------------------------
+           StandingSignBlock lemon_sign = foodblockcompatregistry.LEMON_STANDING_SIGN.get();
+           WallSignBlock lemon_wall_sign = foodblockcompatregistry.LEMON_WALL_SIGN.get();
+           ResourceLocation lemon_sign_texture = modLoc("block/lemon_block");
+           signBlock(lemon_sign, lemon_wall_sign, lemon_sign_texture);
      //------------------------------------------------------------corn-----------------------------------------------------------------------
            StandingSignBlock corn_sign = foodblockcompatregistry.CORN_STANDING_SIGN.get();
            WallSignBlock corn_wall_sign = foodblockcompatregistry.CORN_WALL_SIGN.get();
