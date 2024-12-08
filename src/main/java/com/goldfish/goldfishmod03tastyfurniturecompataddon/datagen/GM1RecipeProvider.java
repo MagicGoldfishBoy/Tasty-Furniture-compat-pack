@@ -2610,6 +2610,37 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('C', Items.SOUL_SAND)
             .unlockedBy("has_onion_nugget", has(nuggetcompatregistry.ONION_NUGGET.get()))
             .save(output);
+  //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.PECAN_TORCH_ITEM.get(), 4)
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetcompatregistry.PECAN_NUGGET.get())
+            .define('C', ItemTags.COALS)
+            .unlockedBy("has_pecan_nugget", has(nuggetcompatregistry.PECAN_NUGGET.get()))
+            .save(output);
+          //redstone
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.PECAN_REDSTONE_TORCH_ITEM.get())
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetcompatregistry.PECAN_NUGGET.get())
+            .define('C', Items.REDSTONE)
+            .unlockedBy("has_pecan_nugget", has(nuggetcompatregistry.PECAN_NUGGET.get()))
+            .save(output);
+          //soul
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.PECAN_SOUL_TORCH_ITEM.get(), 4)
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetcompatregistry.PECAN_NUGGET.get())
+            .define('C', Items.SOUL_SAND)
+            .unlockedBy("has_pecan_nugget", has(nuggetcompatregistry.PECAN_NUGGET.get()))
+            .save(output);
       } 
  protected void buildFurnaceRecipes(RecipeOutput output) {
   //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
@@ -2674,6 +2705,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', ingotcompatregistry.ONION_INGOT.get())
         .define('B', Items.COBBLESTONE)
         .unlockedBy("has_onion_ingot", has(ingotcompatregistry.ONION_INGOT.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.PECAN_FURNACE_ITEM.get())
+        .pattern("ABA")
+        .pattern("B B")
+        .pattern("ABA")
+        .define('A', ingotcompatregistry.PECAN_INGOT.get())
+        .define('B', Items.COBBLESTONE)
+        .unlockedBy("has_pecan_ingot", has(ingotcompatregistry.PECAN_INGOT.get()))
         .save(output);
       }
  protected void buildPathRecipes(RecipeOutput output) {

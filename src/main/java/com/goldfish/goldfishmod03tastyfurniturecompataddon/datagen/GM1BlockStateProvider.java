@@ -2291,6 +2291,122 @@ public class GM1BlockStateProvider extends BlockStateProvider
                 .rotationY(rotation)
                 .build();
             });
+     //------------------------------------------------------------pecan-----------------------------------------------------------------------
+       //regular
+        TorchBlock pecan_torch = foodblockcompatregistry.PECAN_TORCH.get();
+        ResourceLocation pecan_torch_texture = modLoc("block/pecan_torch");
+        BlockModelBuilder pecan_torch_model = models()
+        .withExistingParent("pecan_torch", mcLoc("block/torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", pecan_torch_texture)
+        .texture("particle", pecan_torch_texture);
+
+        simpleBlock(pecan_torch, pecan_torch_model);
+
+        TorchBlock pecan_wall_torch = foodblockcompatregistry.PECAN_WALL_TORCH.get();
+        BlockModelBuilder pecan_wall_torch_model = models()
+        .withExistingParent("pecan_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", pecan_torch_texture)
+        .texture("particle", pecan_torch_texture);
+        getVariantBuilder(pecan_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("pecan_wall_torch", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", pecan_torch_texture)
+                    .texture("particle", pecan_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //redstone
+        RedstoneTorchBlock pecan_redstone_torch = foodblockcompatregistry.PECAN_REDSTONE_TORCH.get();
+        ResourceLocation pecan_redstone_torch_texture = modLoc("block/pecan_redstone_torch");
+        BlockModelBuilder pecan_redstone_torch_model = models()
+        .withExistingParent("pecan_redstone_torch", mcLoc("block/redstone_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", pecan_redstone_torch_texture)
+        .texture("particle", pecan_redstone_torch_texture);
+        
+
+        simpleBlock(pecan_redstone_torch, pecan_redstone_torch_model);
+
+        ResourceLocation pecan_redstone_wall_torch_texture = modLoc("block/pecan_redstone_torch");
+
+        RedstoneTorchBlock pecan_redstone_wall_torch = foodblockcompatregistry.PECAN_REDSTONE_WALL_TORCH.get();
+        BlockModelBuilder pecan_redstone_wall_torch_model = models()
+        .withExistingParent("pecan_redstone_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", pecan_redstone_wall_torch_texture)
+        .texture("particle", pecan_redstone_wall_torch_texture);
+        getVariantBuilder(pecan_redstone_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("pecan_redstone_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", pecan_redstone_wall_torch_texture)
+                    .texture("particle", pecan_redstone_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //soul
+        TorchBlock pecan_soul_torch = foodblockcompatregistry.PECAN_SOUL_TORCH.get();
+        ResourceLocation pecan_soul_torch_texture = modLoc("block/pecan_soul_torch");
+        BlockModelBuilder pecan_soul_torch_model = models()
+        .withExistingParent("pecan_soul_torch", mcLoc("block/soul_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", pecan_soul_torch_texture)
+        .texture("particle", pecan_soul_torch_texture);
+        
+
+        simpleBlock(pecan_soul_torch, pecan_soul_torch_model);
+
+        ResourceLocation pecan_soul_wall_torch_texture = modLoc("block/pecan_soul_torch");
+        TorchBlock pecan_soul_wall_torch = foodblockcompatregistry.PECAN_SOUL_WALL_TORCH.get();
+        BlockModelBuilder pecan_soul_wall_torch_model = models()
+        .withExistingParent("pecan_soul_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", pecan_soul_wall_torch_texture)
+        .texture("particle", pecan_soul_wall_torch_texture);
+        getVariantBuilder(pecan_soul_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("pecan_soul_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", pecan_soul_wall_torch_texture)
+                    .texture("particle", pecan_soul_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
     //==============================================================================================================================================
     //|                                                             Furnaces                                                                       |
     //==============================================================================================================================================
@@ -2594,6 +2710,50 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   };
 
                   ResourceLocation modelLocation = lit ? modLoc("block/onion_furnace_model_lit") : modLoc("block/onion_furnace_model_unlit");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotation)
+                      .build();
+              });
+     //------------------------------------------------------------pecan-----------------------------------------------------------------------
+          FurnaceBlock pecan_furnace = foodblockcompatregistry.PECAN_FURNACE.get();
+          ResourceLocation pecan_furnace_unlit_texture = modLoc("block/pecan_furnace");
+          ResourceLocation pecan_furnace_lit_texture = modLoc("block/pecan_furnace_lit");
+          ResourceLocation pecan_furnace_side = modLoc("block/pecan_block");
+          
+          // Define the model for the unlit state
+          BlockModelBuilder pecan_furnace_model_unlit = models()
+              .withExistingParent("pecan_furnace_model_unlit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", pecan_furnace_side)
+              .texture("top", pecan_furnace_side)
+              .texture("front", pecan_furnace_unlit_texture)
+              .texture("particle", pecan_furnace_side);
+          
+          // Define the model for the lit state
+          BlockModelBuilder pecan_furnace_model_lit = models()
+              .withExistingParent("pecan_furnace_model_lit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", pecan_furnace_side)
+              .texture("top", pecan_furnace_side)
+              .texture("front", pecan_furnace_lit_texture)
+              .texture("particle", pecan_furnace_side);
+          
+          // Configure variants for the pecan_furnace block
+          getVariantBuilder(pecan_furnace)
+              .forAllStates(state -> {
+                  Boolean lit = state.getValue(BlockStateProperties.LIT);
+                  Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                  int rotation = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+
+                  ResourceLocation modelLocation = lit ? modLoc("block/pecan_furnace_model_lit") : modLoc("block/pecan_furnace_model_unlit");
               
                   return ConfiguredModel.builder()
                       .modelFile(models().getExistingFile(modelLocation))

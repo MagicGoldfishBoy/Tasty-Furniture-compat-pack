@@ -724,6 +724,16 @@ public class foodblockcompatitemregistry {
     //soul
       public static final DeferredHolder<Item, StandingAndWallBlockItem> ONION_SOUL_TORCH_ITEM =  FOODBLOCKITEM.register("onion_soul_torch_item",
       () -> new StandingAndWallBlockItem(foodblockcompatregistry.ONION_SOUL_TORCH.get(), foodblockcompatregistry.ONION_SOUL_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
+ //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
+    //regular
+      public static final DeferredHolder<Item, StandingAndWallBlockItem> PECAN_TORCH_ITEM = FOODBLOCKITEM.register("pecan_torch_item", 
+      () -> new StandingAndWallBlockItem(foodblockcompatregistry.PECAN_TORCH.get(), foodblockcompatregistry.PECAN_WALL_TORCH.get(), new Item.Properties(), Direction.NORTH));
+    //redstone
+      public static final DeferredHolder<Item, StandingAndWallBlockItem> PECAN_REDSTONE_TORCH_ITEM =  FOODBLOCKITEM.register("pecan_redstone_torch_item",
+      () -> new StandingAndWallBlockItem(foodblockcompatregistry.PECAN_REDSTONE_TORCH.get(), foodblockcompatregistry.PECAN_REDSTONE_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
+    //soul
+      public static final DeferredHolder<Item, StandingAndWallBlockItem> PECAN_SOUL_TORCH_ITEM =  FOODBLOCKITEM.register("pecan_soul_torch_item",
+      () -> new StandingAndWallBlockItem(foodblockcompatregistry.PECAN_SOUL_TORCH.get(), foodblockcompatregistry.PECAN_SOUL_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
 //==============================================================================================================================================================================================
 //                                                                                        Furnaces
 //==============================================================================================================================================================================================
@@ -748,6 +758,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> ONION_FURNACE_ITEM = FOODBLOCKITEM.register("onion_furnace_item", 
     () -> new BlockItem(foodblockcompatregistry.ONION_FURNACE.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> PECAN_FURNACE_ITEM = FOODBLOCKITEM.register("pecan_furnace_item", 
+    () -> new BlockItem(foodblockcompatregistry.PECAN_FURNACE.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                         Paths
 //==============================================================================================================================================================================================

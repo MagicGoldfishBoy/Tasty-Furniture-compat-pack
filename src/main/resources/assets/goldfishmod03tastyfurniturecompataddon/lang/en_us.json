@@ -284,5 +284,10 @@
     "block.goldfishmod03tastyfurniturecompataddon.pecan_soul_lantern": "Pecan Soul Lantern",
     "block.goldfishmod03tastyfurniturecompataddon.pecan_chain": "Pecan Chain",
     "block.goldfishmod03tastyfurniturecompataddon.pecan_ladder": "Pecan Ladder",
-    "block.goldfishmod03tastyfurniturecompataddon.pecan_table": "Pecan Table"
+    "block.goldfishmod03tastyfurniturecompataddon.pecan_table": "Pecan Table",
+    "block.goldfishmod03tastyfurniturecompataddon.pecan_torch": "Pecan Torch",
+    "block.goldfishmod03tastyfurniturecompataddon.pecan_redstone_torch": "Pecan Redstone Torch",
+    "block.goldfishmod03tastyfurniturecompataddon.pecan_soul_torch": "Pecan Soul Torch",
+    "block.goldfishmod03tastyfurniturecompataddon.pecan_furnace": "Pecan Furnace",
+    "container.pecan_furnace": "Pecan Furnace"
 }
