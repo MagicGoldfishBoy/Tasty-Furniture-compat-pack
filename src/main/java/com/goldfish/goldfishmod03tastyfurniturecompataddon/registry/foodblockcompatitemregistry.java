@@ -943,4 +943,13 @@ public class foodblockcompatitemregistry {
       public static final DeferredHolder<Item, BlockItem> MEDIUM_ONION_CABINET_ITEM = FOODBLOCKITEM.register("medium_onion_cabinet_item", 
       () -> new BlockItem(foodblockcompatregistry.MEDIUM_ONION_CABINET.get(),
       new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
+    //small
+      public static final DeferredHolder<Item, BlockItem> SMALL_PECAN_CABINET_ITEM = FOODBLOCKITEM.register("small_pecan_cabinet_item", 
+      () -> new BlockItem(foodblockcompatregistry.SMALL_PECAN_CABINET.get(),
+      new BlockItem.Properties()));
+    //medium
+      public static final DeferredHolder<Item, BlockItem> MEDIUM_PECAN_CABINET_ITEM = FOODBLOCKITEM.register("medium_pecan_cabinet_item", 
+      () -> new BlockItem(foodblockcompatregistry.MEDIUM_PECAN_CABINET.get(),
+      new BlockItem.Properties()));
 }

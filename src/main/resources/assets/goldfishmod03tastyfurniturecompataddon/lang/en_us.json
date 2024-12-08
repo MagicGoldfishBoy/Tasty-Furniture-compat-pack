@@ -293,5 +293,7 @@
     "block.goldfishmod03tastyfurniturecompataddon.pecan_stone_path": "Pecan Stone Path",
     "block.goldfishmod03tastyfurniturecompataddon.pecan_barrel": "Pecan Barrel",
     "block.goldfishmod03tastyfurniturecompataddon.pecan_chair": "Pecan Chair",
-    "block.goldfishmod03tastyfurniturecompataddon.pecan_bed": "Pecan Bed"
+    "block.goldfishmod03tastyfurniturecompataddon.pecan_bed": "Pecan Bed",
+    "block.goldfishmod03tastyfurniturecompataddon.small_pecan_cabinet": "Pecan Small Cabinet",
+    "block.goldfishmod03tastyfurniturecompataddon.medium_pecan_cabinet": "Pecan Medium Cabinet"
 }
