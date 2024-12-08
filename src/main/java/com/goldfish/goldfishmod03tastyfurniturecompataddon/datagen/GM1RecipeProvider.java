@@ -2904,6 +2904,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('B', foodblockcompatitemregistry.ONION_SLAB_ITEM.get())
         .unlockedBy("has_onion_slab", has(foodblockcompatitemregistry.ONION_SLAB_ITEM.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.PECAN_CHAIR_ITEM.get())
+        .pattern("AAA")
+        .pattern("BBB")
+        .pattern("A A")
+        .define('A', ingotcompatregistry.PECAN_INGOT.get())
+        .define('B', foodblockcompatitemregistry.PECAN_SLAB_ITEM.get())
+        .unlockedBy("has_pecan_slab", has(foodblockcompatitemregistry.PECAN_SLAB_ITEM.get()))
+        .save(output);
       } 
  protected void buildBedRecipes(RecipeOutput output) {
   //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
@@ -2975,6 +2984,16 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
            .define('B', foodblockcompatitemregistry.ONION_SLAB_ITEM.get())
            .define('C', foodblockcompatitemregistry.ONION_CARPET_ITEM.get())
            .unlockedBy("has_onion_ingot", has(ingotcompatregistry.ONION_INGOT.get()))
+           .save(output);
+  //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
+           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.PECAN_BED_ITEM.get())
+           .pattern("CCC")
+           .pattern("BBB")
+           .pattern("A A")
+           .define('A', ingotcompatregistry.PECAN_INGOT.get())
+           .define('B', foodblockcompatitemregistry.PECAN_SLAB_ITEM.get())
+           .define('C', foodblockcompatitemregistry.PECAN_CARPET_ITEM.get())
+           .unlockedBy("has_pecan_ingot", has(ingotcompatregistry.PECAN_INGOT.get()))
            .save(output);
       }
  protected void buildCabinetRecipes(RecipeOutput output) {

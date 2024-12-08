@@ -631,6 +631,10 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("pecan_stone_path_item", modLoc("block/pecan_stone_path"));
        //barrel
        withExistingParent("pecan_barrel_item", modLoc("block/pecan_barrel_model_closed"));
+       //chair
+       withExistingParent("pecan_chair_item", modLoc("block/pecan_chair"));
+       //bed
+       withExistingParent("pecan_bed_item", modLoc("block/pecan_bed"));
   }
 }
 

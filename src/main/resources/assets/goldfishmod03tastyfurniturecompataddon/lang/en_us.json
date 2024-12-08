@@ -291,5 +291,7 @@
     "block.goldfishmod03tastyfurniturecompataddon.pecan_furnace": "Pecan Furnace",
     "container.pecan_furnace": "Pecan Furnace",
     "block.goldfishmod03tastyfurniturecompataddon.pecan_stone_path": "Pecan Stone Path",
-    "block.goldfishmod03tastyfurniturecompataddon.pecan_barrel": "Pecan Barrel"
+    "block.goldfishmod03tastyfurniturecompataddon.pecan_barrel": "Pecan Barrel",
+    "block.goldfishmod03tastyfurniturecompataddon.pecan_chair": "Pecan Chair",
+    "block.goldfishmod03tastyfurniturecompataddon.pecan_bed": "Pecan Bed"
 }
