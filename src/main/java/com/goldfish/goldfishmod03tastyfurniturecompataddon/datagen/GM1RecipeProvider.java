@@ -1800,6 +1800,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('B', Items.STICK)
         .unlockedBy("has_onion_ingot",  has(ingotcompatregistry.ONION_INGOT.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.PECAN_SIGN_ITEM.get(), 3)
+        .pattern("AAA")
+        .pattern("AAA")
+        .pattern(" B ")
+        .define('A', ingotcompatregistry.PECAN_INGOT.get())
+        .define('B', Items.STICK)
+        .unlockedBy("has_pecan_ingot",  has(ingotcompatregistry.PECAN_INGOT.get()))
+        .save(output);
       }
  protected void buildTrapDoorRecipes(RecipeOutput output) {
   //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------

@@ -570,6 +570,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
            WallSignBlock onion_wall_sign = foodblockcompatregistry.ONION_WALL_SIGN.get();
            ResourceLocation onion_sign_texture = modLoc("block/onion_block");
            signBlock(onion_sign, onion_wall_sign, onion_sign_texture);
+     //------------------------------------------------------------pecan-----------------------------------------------------------------------
+           StandingSignBlock pecan_sign = foodblockcompatregistry.PECAN_STANDING_SIGN.get();
+           WallSignBlock pecan_wall_sign = foodblockcompatregistry.PECAN_WALL_SIGN.get();
+           ResourceLocation pecan_sign_texture = modLoc("block/pecan_block");
+           signBlock(pecan_sign, pecan_wall_sign, pecan_sign_texture);
     //==============================================================================================================================================
     //|                                                            Trap Doors                                                                      |
     //==============================================================================================================================================

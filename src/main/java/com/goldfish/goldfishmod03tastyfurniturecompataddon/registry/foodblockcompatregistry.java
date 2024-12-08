@@ -35,6 +35,8 @@ import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.onionWallSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.orangeFurnace;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.orangeSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.orangeWallSign;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.pecanSign;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.pecanWallSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.cherryFurnaceEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.cherrySignEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.coconutFurnaceEntity;
@@ -49,6 +51,7 @@ import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.onionFur
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.onionSignEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.orangeFurnaceEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.orangeSignEntity;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.pecanSignEntity;
 
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -1151,6 +1154,51 @@ public class foodblockcompatregistry {
          foodblockcompatregistry.ONION_SIGN.get(),
          foodblockcompatregistry.ONION_WALL_SIGN.get(),
          foodblockcompatregistry.ONION_STANDING_SIGN.get()
+     ).build(null)
+   );
+ //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Block, pecanSign> PECAN_SIGN = FOODBLOCK.register("pecan_sign",
+   () -> new pecanSign(
+     BlockBehaviour.Properties.of()
+         .mapColor(MapColor.WOOD)
+         .forceSolidOn()
+         .instrument(NoteBlockInstrument.BASS)
+         .noCollission()
+         .strength(1.0F)
+         .ignitedByLava(),
+         foodmaterialtypecompatregistry.PECANWOODMAT
+   ));
+      public static final DeferredHolder<Block, pecanWallSign> PECAN_WALL_SIGN = FOODBLOCK.register("pecan_wall_sign",
+   () -> new pecanWallSign(
+       BlockBehaviour.Properties.of()
+       .mapColor(MapColor.WOOD)
+       .forceSolidOn()
+       .instrument(NoteBlockInstrument.BASS)
+       .noCollission()
+       .strength(1.0F)
+       .ignitedByLava()
+       .randomTicks(),
+       foodmaterialtypecompatregistry.PECANWOODMAT
+   ));
+   public static final DeferredHolder<Block, pecanSign> PECAN_STANDING_SIGN = FOODBLOCK.register("pecan_standing_sign",
+   () -> new pecanSign(
+       BlockBehaviour.Properties.of()
+       .mapColor(MapColor.WOOD)
+       .forceSolidOn()
+       .instrument(NoteBlockInstrument.BASS)
+       .noCollission()
+       .strength(1.0F)
+       .ignitedByLava()
+       .randomTicks(),
+       foodmaterialtypecompatregistry.PECANWOODMAT
+   ));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<pecanSignEntity>> PECAN_SIGN_ENTITY = FOODBLOCKENTITY.register(
+     "pecan_sign_entity",
+     () -> BlockEntityType.Builder.of(
+         pecanSignEntity::new,
+         foodblockcompatregistry.PECAN_SIGN.get(),
+         foodblockcompatregistry.PECAN_WALL_SIGN.get(),
+         foodblockcompatregistry.PECAN_STANDING_SIGN.get()
      ).build(null)
    );
 //==============================================================================================================================================================================================
