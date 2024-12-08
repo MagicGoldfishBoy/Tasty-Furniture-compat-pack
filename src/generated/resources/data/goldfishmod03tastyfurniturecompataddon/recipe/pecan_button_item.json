@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "goldfishmod03tastyfurniturecompataddon:pecan_nugget"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "goldfishmod03tastyfurniturecompataddon:pecan_button_item"
+  }
+}

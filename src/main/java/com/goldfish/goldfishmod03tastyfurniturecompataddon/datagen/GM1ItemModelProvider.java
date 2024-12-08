@@ -585,6 +585,18 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         stairs("pecan_stairs_item", modLoc("block/pecan_block"), modLoc("block/pecan_block"), modLoc("block/pecan_block"));
        //bricks stairs
         stairs("pecan_bricks_stairs_item", modLoc("block/pecan_bricks_block"), modLoc("block/pecan_bricks_block"), modLoc("block/pecan_bricks_block"));
+       //bars
+       withExistingParent("pecan_bars_item", mcLoc("item/generated")).texture("layer0", "block/pecan_bars");
+       //doors
+        withExistingParent("pecan_door_item", mcLoc("item/generated")).texture("layer0", "item/pecan_door_item");
+       //button
+        buttonInventory("pecan_button_item", modLoc("block/pecan_block"));
+       //fence
+        fenceInventory("pecan_fence_item", modLoc("block/pecan_block"));
+       //gate
+        withExistingParent("pecan_gate_item", modLoc("block/pecan_gate"));
+       //pressure plate
+        pressurePlate("pecan_pressure_plate_item", modLoc("block/pecan_block"));
   }
 }
 

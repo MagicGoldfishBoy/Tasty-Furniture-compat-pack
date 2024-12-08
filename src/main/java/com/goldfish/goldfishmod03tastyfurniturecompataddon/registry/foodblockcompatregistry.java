@@ -559,6 +559,11 @@ public class foodblockcompatregistry {
    .strength(0.25F, 0.25F)
    .sound(SoundType.MUD_BRICKS)
    .noOcclusion()));
+ //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Block, IronBarsBlock> PECAN_BARS = FOODBLOCK.register("pecan_bars", () -> new IronBarsBlock(BlockBehaviour.Properties.of()
+   .strength(0.25F, 0.25F)
+   .sound(SoundType.MUD_BRICKS)
+   .noOcclusion()));
 //==============================================================================================================================================================================================
 //                                                                                          Doors
 //==============================================================================================================================================================================================
@@ -597,6 +602,11 @@ public class foodblockcompatregistry {
   .strength(0.25F, 0.25F)
   .sound(SoundType.MUD_BRICKS)
   .noOcclusion()));
+ //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
+  public static final DeferredHolder<Block, DoorBlock> PECAN_DOOR = FOODBLOCK.register("pecan_door", () -> new DoorBlock(foodmaterialtypecompatregistry.PLANT, BlockBehaviour.Properties.of()
+  .strength(0.25F, 0.25F)
+  .sound(SoundType.MUD_BRICKS)
+  .noOcclusion()));
 //==============================================================================================================================================================================================
 //                                                                                         Buttons
 //==============================================================================================================================================================================================
@@ -626,6 +636,10 @@ public class foodblockcompatregistry {
   .sound(SoundType.MUD_BRICKS)));
  //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
   public static final DeferredHolder<Block, ButtonBlock> ONION_BUTTON = FOODBLOCK.register("onion_button", () -> new ButtonBlock(BlockSetType.CRIMSON, 20, 
+  BlockBehaviour.Properties.of()
+  .sound(SoundType.MUD_BRICKS)));
+ //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
+  public static final DeferredHolder<Block, ButtonBlock> PECAN_BUTTON = FOODBLOCK.register("pecan_button", () -> new ButtonBlock(BlockSetType.CRIMSON, 20, 
   BlockBehaviour.Properties.of()
   .sound(SoundType.MUD_BRICKS)));
 //==============================================================================================================================================================================================
@@ -675,6 +689,13 @@ public class foodblockcompatregistry {
   ));
  //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
   public static final DeferredHolder<Block, FenceBlock> ONION_FENCE = FOODBLOCK.register("onion_fence", () -> new FenceBlock(BlockBehaviour.Properties.of()
+  .destroyTime(1.75f)
+  .explosionResistance(9.0f)
+  .sound(SoundType.MUD_BRICKS)
+  .noOcclusion()
+  ));
+ //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
+  public static final DeferredHolder<Block, FenceBlock> PECAN_FENCE = FOODBLOCK.register("pecan_fence", () -> new FenceBlock(BlockBehaviour.Properties.of()
   .destroyTime(1.75f)
   .explosionResistance(9.0f)
   .sound(SoundType.MUD_BRICKS)
@@ -746,6 +767,15 @@ public class foodblockcompatregistry {
             .destroyTime(1.5f)
             .explosionResistance(8.0f)
     ));
+ //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, FenceGateBlock> PECAN_GATE = FOODBLOCK.register("pecan_gate", 
+    () -> new FenceGateBlock(
+            foodmaterialtypecompatregistry.PECANWOODMAT, 
+            BlockBehaviour.Properties.of()
+            .sound(SoundType.ROOTED_DIRT)
+            .destroyTime(1.5f)
+            .explosionResistance(8.0f)
+    ));
 //==============================================================================================================================================================================================
 //                                                                                     Pressure Plates
 //============================================================================================================================================================================================== 
@@ -793,6 +823,13 @@ public class foodblockcompatregistry {
     ));
  //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, PressurePlateBlock> ONION_PRESSURE_PLATE = FOODBLOCK.register("onion_pressure_plate", 
+    () -> new PressurePlateBlock(foodmaterialtypecompatregistry.PLANT, BlockBehaviour.Properties.of()
+    .sound(SoundType.ROOTED_DIRT)
+    .destroyTime(0.5f)
+    .explosionResistance(4.0f)
+    ));
+ //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, PressurePlateBlock> PECAN_PRESSURE_PLATE = FOODBLOCK.register("pecan_pressure_plate", 
     () -> new PressurePlateBlock(foodmaterialtypecompatregistry.PLANT, BlockBehaviour.Properties.of()
     .sound(SoundType.ROOTED_DIRT)
     .destroyTime(0.5f)

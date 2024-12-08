@@ -269,5 +269,11 @@
     "block.goldfishmod03tastyfurniturecompataddon.pecan_slab": "Pecan Slab",
     "block.goldfishmod03tastyfurniturecompataddon.pecan_bricks_slab": "Pecan Bricks Slab",
     "block.goldfishmod03tastyfurniturecompataddon.pecan_stairs": "Pecan Stairs",
-    "block.goldfishmod03tastyfurniturecompataddon.pecan_bricks_stairs": "Pecan Bricks Stairs"
+    "block.goldfishmod03tastyfurniturecompataddon.pecan_bricks_stairs": "Pecan Bricks Stairs",
+    "block.goldfishmod03tastyfurniturecompataddon.pecan_bars": "Pecan Bars",
+    "block.goldfishmod03tastyfurniturecompataddon.pecan_door": "Pecan Door",
+    "block.goldfishmod03tastyfurniturecompataddon.pecan_button": "Pecan Button",
+    "block.goldfishmod03tastyfurniturecompataddon.pecan_fence": "Pecan Fence",
+    "block.goldfishmod03tastyfurniturecompataddon.pecan_gate": "Pecan Gate",
+    "block.goldfishmod03tastyfurniturecompataddon.pecan_pressure_plate": "Pecan Pressure Plate"
 }
