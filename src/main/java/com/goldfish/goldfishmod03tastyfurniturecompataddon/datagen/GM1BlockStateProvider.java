@@ -2847,6 +2847,18 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .modelFile(models().getExistingFile(modelLocation))
                   .build();
           });
+     //------------------------------------------------------------pecan-----------------------------------------------------------------------
+          foodpathtypeminislab pecan_stone_path = foodblockcompatregistry.PECAN_STONE_PATH.get();
+
+          getVariantBuilder(pecan_stone_path)
+          .forAllStates(state -> {
+
+              ResourceLocation modelLocation = modLoc("block/pecan_stone_path");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .build();
+          });
     //==============================================================================================================================================
     //|                                                              Barrels                                                                       |
     //==============================================================================================================================================
@@ -3179,6 +3191,54 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   };
 
                   ResourceLocation modelLocation = open ? modLoc("block/onion_barrel_model_open") : modLoc("block/onion_barrel_model_closed");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotationY)
+                      .rotationX(rotationX)
+                      .build();
+              });
+     //------------------------------------------------------------pecan-----------------------------------------------------------------------
+          foodBarrel pecan_barrel = foodblockcompatregistry.PECAN_BARREL.get();
+          ResourceLocation pecan_barrel_closed_texture = modLoc("block/pecan_barrel_top_closed");
+          ResourceLocation pecan_barrel_open_texture = modLoc("block/pecan_barrel_top_open");
+          ResourceLocation pecan_barrel_side = modLoc("block/pecan_barrel_side");
+          ResourceLocation pecan_barrel_bottom = modLoc("block/pecan_barrel_bottom");
+          
+          BlockModelBuilder pecan_barrel_model_closed = models()
+              .withExistingParent("pecan_barrel_model_closed", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", pecan_barrel_side)
+              .texture("bottom", pecan_barrel_bottom)
+              .texture("top", pecan_barrel_closed_texture)
+              .texture("particle", pecan_barrel_side);
+          
+          BlockModelBuilder pecan_barrel_model_open = models()
+              .withExistingParent("pecan_barrel_model_open", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", pecan_barrel_side)
+              .texture("bottom", pecan_barrel_bottom)
+              .texture("top", pecan_barrel_open_texture)
+              .texture("particle", pecan_barrel_side);
+          
+          getVariantBuilder(pecan_barrel)
+              .forAllStates(state -> {
+                  Boolean open = state.getValue(BlockStateProperties.OPEN);
+                  Direction facing = state.getValue(BlockStateProperties.FACING);
+                  int rotationY = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+                  int rotationX = switch (facing) {
+                      case UP -> 0;
+                      case DOWN -> 180;
+                      default -> 90;
+                  };
+
+                  ResourceLocation modelLocation = open ? modLoc("block/pecan_barrel_model_open") : modLoc("block/pecan_barrel_model_closed");
               
                   return ConfiguredModel.builder()
                       .modelFile(models().getExistingFile(modelLocation))

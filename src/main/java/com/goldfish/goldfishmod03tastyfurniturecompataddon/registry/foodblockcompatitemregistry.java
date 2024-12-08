@@ -785,6 +785,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> ONION_STONE_PATH_ITEM = FOODBLOCKITEM.register("onion_stone_path_item", 
     () -> new BlockItem(foodblockcompatregistry.ONION_STONE_PATH.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> PECAN_STONE_PATH_ITEM = FOODBLOCKITEM.register("pecan_stone_path_item", 
+    () -> new BlockItem(foodblockcompatregistry.PECAN_STONE_PATH.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                        Barrels
 //==============================================================================================================================================================================================
@@ -815,6 +818,10 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> ONION_BARREL_ITEM = FOODBLOCKITEM.register("onion_barrel_item", 
     () -> new BlockItem(foodblockcompatregistry.ONION_BARREL.get(),
+    new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> PECAN_BARREL_ITEM = FOODBLOCKITEM.register("pecan_barrel_item", 
+    () -> new BlockItem(foodblockcompatregistry.PECAN_BARREL.get(),
     new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                        Chairs

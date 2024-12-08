@@ -2759,6 +2759,12 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .requires(Items.STONE)
         .unlockedBy("has_onion_block", has(foodblockcompatitemregistry.ONION_BLOCK_ITEM.get()))
         .save(output);        
+  //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.PECAN_STONE_PATH_ITEM.get(), 6)
+        .requires(foodblockcompatitemregistry.PECAN_BLOCK_ITEM.get())
+        .requires(Items.STONE)
+        .unlockedBy("has_pecan_block", has(foodblockcompatitemregistry.PECAN_BLOCK_ITEM.get()))
+        .save(output);        
       }
  protected void buildBarrelRecipes(RecipeOutput output) {
   //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
@@ -2823,6 +2829,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', foodblockcompatitemregistry.ONION_BLOCK_ITEM.get())
         .define('B', foodblockcompatitemregistry.ONION_SLAB_ITEM.get())
         .unlockedBy("has_onion_block", has(foodblockcompatitemregistry.ONION_BLOCK_ITEM.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.PECAN_BARREL_ITEM.get())
+        .pattern("ABA")
+        .pattern("A A")
+        .pattern("ABA")
+        .define('A', foodblockcompatitemregistry.PECAN_BLOCK_ITEM.get())
+        .define('B', foodblockcompatitemregistry.PECAN_SLAB_ITEM.get())
+        .unlockedBy("has_pecan_block", has(foodblockcompatitemregistry.PECAN_BLOCK_ITEM.get()))
         .save(output);
       }
  protected void buildChairRecipes(RecipeOutput output) {

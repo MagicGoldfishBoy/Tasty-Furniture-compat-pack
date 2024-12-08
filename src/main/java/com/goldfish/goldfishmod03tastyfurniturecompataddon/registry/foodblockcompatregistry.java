@@ -1991,6 +1991,14 @@ public class foodblockcompatregistry {
     .sound(SoundType.MUD_BRICKS)
     .noOcclusion()
     ));
+ //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, foodpathtypeminislab> PECAN_STONE_PATH = FOODBLOCK.register("pecan_stone_path", 
+    () -> new foodpathtypeminislab(BlockBehaviour.Properties.of()
+    .destroyTime(1.5f)
+    .explosionResistance(1.5f)
+    .sound(SoundType.MUD_BRICKS)
+    .noOcclusion()
+    ));
 //==============================================================================================================================================================================================
 //                                                                                        Barrels
 //==============================================================================================================================================================================================
@@ -2041,11 +2049,18 @@ public class foodblockcompatregistry {
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
      ));
+ //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
+     public static final DeferredHolder<Block, foodBarrel> PECAN_BARREL = FOODBLOCK.register("pecan_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
+     .sound(plant_barrel_sound)
+     .destroyTime(barrel_destroy_time)
+     .explosionResistance(barrel_explosion_resistance)
+     ));
 
  //------entity
      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<foodBarrelEntity>> FOOD_BARREL_ENTITY = FOODBLOCKENTITY.register("food_barrel_entity", 
      () -> BlockEntityType.Builder.of(foodBarrelEntity::new, foodblockcompatregistry.ELDERBERRY_BARREL.get(), foodblockcompatregistry.JUNIPER_BARREL.get(), foodblockcompatregistry.CHERRY_BARREL.get(), 
-     foodblockcompatregistry.COCONUT_BARREL.get(),foodblockcompatregistry.ORANGE_BARREL.get(),foodblockcompatregistry.CORN_BARREL.get(),foodblockcompatregistry.ONION_BARREL.get()).build(null));
+     foodblockcompatregistry.COCONUT_BARREL.get(),foodblockcompatregistry.ORANGE_BARREL.get(),foodblockcompatregistry.CORN_BARREL.get(),foodblockcompatregistry.ONION_BARREL.get(),
+     foodblockcompatregistry.PECAN_BARREL.get()).build(null));
 //==============================================================================================================================================================================================
 //                                                                                         Chairs
 //==============================================================================================================================================================================================

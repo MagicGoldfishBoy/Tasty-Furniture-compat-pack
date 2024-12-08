@@ -627,6 +627,10 @@ public class GM1ItemModelProvider extends ItemModelProvider {
           withExistingParent("pecan_soul_torch_item", modLoc("block/pecan_soul_torch"));
        //furnaces
        withExistingParent("pecan_furnace_item", modLoc("block/pecan_furnace_model_unlit"));
+       //paths
+       withExistingParent("pecan_stone_path_item", modLoc("block/pecan_stone_path"));
+       //barrel
+       withExistingParent("pecan_barrel_item", modLoc("block/pecan_barrel_model_closed"));
   }
 }
 
