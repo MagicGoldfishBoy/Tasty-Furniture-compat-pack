@@ -128,6 +128,19 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........tiles
           net.minecraft.world.level.block.Block orange_tiles_block = foodblockcompatregistry.ORANGE_TILES_BLOCK.get();
           simpleBlock(orange_tiles_block);
+     //------------------------------------------------------------lemon-----------------------------------------------------------------------
+      //.........plain
+          net.minecraft.world.level.block.Block lemon_block = foodblockcompatregistry.LEMON_BLOCK.get();
+          simpleBlock(lemon_block);
+      //.........bricks
+          net.minecraft.world.level.block.Block lemon_bricks_block = foodblockcompatregistry.LEMON_BRICKS_BLOCK.get();
+          simpleBlock(lemon_bricks_block);
+      //.........chiseled
+          net.minecraft.world.level.block.Block lemon_chiseled_block = foodblockcompatregistry.LEMON_CHISELED_BLOCK.get();
+          simpleBlock(lemon_chiseled_block);
+      //.........tiles
+          net.minecraft.world.level.block.Block lemon_tiles_block = foodblockcompatregistry.LEMON_TILES_BLOCK.get();
+          simpleBlock(lemon_tiles_block);
      //------------------------------------------------------------corn-----------------------------------------------------------------------
       //.........plain
           net.minecraft.world.level.block.Block corn_block = foodblockcompatregistry.CORN_BLOCK.get();
@@ -215,6 +228,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
           SlabBlock orange_bricks_slab = foodblockcompatregistry.ORANGE_BRICKS_SLAB.get();
           ResourceLocation orange_bricks_block_texture = modLoc("block/orange_bricks_block");
           slabBlock(orange_bricks_slab, orange_bricks_block_texture, orange_bricks_block_texture);
+     //------------------------------------------------------------lemon-----------------------------------------------------------------------
+      //.........plain
+          SlabBlock lemon_slab = foodblockcompatregistry.LEMON_SLAB.get();
+          ResourceLocation lemon_block_texture = modLoc("block/lemon_block");
+          slabBlock(lemon_slab, lemon_block_texture, lemon_block_texture);
+      //.........bricks
+          SlabBlock lemon_bricks_slab = foodblockcompatregistry.LEMON_BRICKS_SLAB.get();
+          ResourceLocation lemon_bricks_block_texture = modLoc("block/lemon_bricks_block");
+          slabBlock(lemon_bricks_slab, lemon_bricks_block_texture, lemon_bricks_block_texture);
      //------------------------------------------------------------corn-----------------------------------------------------------------------
       //.........plain
           SlabBlock corn_slab = foodblockcompatregistry.CORN_SLAB.get();
@@ -280,6 +302,13 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........bricks
           StairBlock orange_bricks_stairs = foodblockcompatregistry.ORANGE_BRICKS_STAIRS.get();
           stairsBlock(orange_bricks_stairs, orange_bricks_block_texture);
+     //------------------------------------------------------------lemon-----------------------------------------------------------------------
+      //.........plain
+          StairBlock lemon_stairs = foodblockcompatregistry.LEMON_STAIRS.get();
+          stairsBlock(lemon_stairs, lemon_block_texture);
+      //.........bricks
+          StairBlock lemon_bricks_stairs = foodblockcompatregistry.LEMON_BRICKS_STAIRS.get();
+          stairsBlock(lemon_bricks_stairs, lemon_bricks_block_texture);
      //------------------------------------------------------------corn-----------------------------------------------------------------------
       //.........plain
           StairBlock corn_stairs = foodblockcompatregistry.CORN_STAIRS.get();

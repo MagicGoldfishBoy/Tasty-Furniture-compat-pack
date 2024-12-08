@@ -218,6 +218,31 @@ public class foodblockcompatregistry {
          .explosionResistance(10.0f)
          .sound(SoundType.MUD_BRICKS)
          ));
+ //----------------------------------------------------------------------------------------Lemon-----------------------------------------------------------------------------------------------
+  //.........plain
+    public static final DeferredHolder<Block, Block> LEMON_BLOCK = FOODBLOCK.register("lemon_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.MUD_BRICKS)
+         ));
+  //.........bricks
+    public static final DeferredHolder<Block, Block> LEMON_BRICKS_BLOCK = FOODBLOCK.register("lemon_bricks_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.MUD_BRICKS)
+         ));
+  //.........chiseled
+    public static final DeferredHolder<Block, Block> LEMON_CHISELED_BLOCK = FOODBLOCK.register("lemon_chiseled_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.MUD_BRICKS)
+         ));
+  //.........tiles
+    public static final DeferredHolder<Block, Block> LEMON_TILES_BLOCK = FOODBLOCK.register("lemon_tiles_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.MUD_BRICKS)
+         ));
  //----------------------------------------------------------------------------------------Corn-----------------------------------------------------------------------------------------------
   //.........plain
     public static final DeferredHolder<Block, Block> CORN_BLOCK = FOODBLOCK.register("corn_block", () -> new Block(BlockBehaviour.Properties.of()
@@ -362,6 +387,19 @@ public class foodblockcompatregistry {
      .explosionResistance(9.5f)
      .sound(SoundType.MUD_BRICKS)
      ));
+ //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
+  //.........plain
+     public static final DeferredHolder<Block, SlabBlock> LEMON_SLAB = FOODBLOCK.register("lemon_slab", () -> new SlabBlock(BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     ));
+  //.........bricks
+     public static final DeferredHolder<Block, SlabBlock> LEMON_BRICKS_SLAB = FOODBLOCK.register("lemon_bricks_slab", () -> new SlabBlock(BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     ));
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
   //.........plain
      public static final DeferredHolder<Block, SlabBlock> CORN_SLAB = FOODBLOCK.register("corn_slab", () -> new SlabBlock(BlockBehaviour.Properties.of()
@@ -475,6 +513,21 @@ public class foodblockcompatregistry {
   //.........bricks
      public static final DeferredHolder<Block, StairBlock> ORANGE_BRICKS_STAIRS = FOODBLOCK.register("orange_bricks_stairs", 
      () -> new StairBlock(ORANGE_BRICKS_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
+     .destroyTime(1.5f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     )); 
+ //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
+  //.........plain
+     public static final DeferredHolder<Block, StairBlock> LEMON_STAIRS = FOODBLOCK.register("lemon_stairs", 
+     () -> new StairBlock(LEMON_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
+     .destroyTime(1.5f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     )); 
+  //.........bricks
+     public static final DeferredHolder<Block, StairBlock> LEMON_BRICKS_STAIRS = FOODBLOCK.register("lemon_bricks_stairs", 
+     () -> new StairBlock(LEMON_BRICKS_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
      .destroyTime(1.5f)
      .explosionResistance(9.5f)
      .sound(SoundType.MUD_BRICKS)

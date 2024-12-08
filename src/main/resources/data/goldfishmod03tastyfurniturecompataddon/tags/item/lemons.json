@@ -1,0 +1,17 @@
+{
+    "replace": false,
+    "values": [
+        {"id":"pamhc2trees:lemonitem",
+        "required": false},
+        {"id":"fruitsdelight:lemon",
+        "required": false},
+        {"id":"productivetrees:lemon",
+        "required": false},
+        {"id":"harvestcraft:lemonitem",
+        "required": false},
+        {"id":"croptopia:lemon",
+        "required": false},
+        {"id":"c:crops/lemon",
+        "required": false}
+    ]
+  }

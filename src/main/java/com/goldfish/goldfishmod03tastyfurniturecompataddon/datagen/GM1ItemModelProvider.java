@@ -405,6 +405,31 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("small_orange_cabinet_item", modLoc("block/orange_cabinet"));
        withExistingParent("medium_orange_cabinet_item", modLoc("block/medium_orange_cabinet"));
     //==============================================================================================================================================
+    //|                                                              Lemon                                                                        |
+    //==============================================================================================================================================
+       //mush
+        withExistingParent("lemon_mush", mcLoc("item/generated")).texture("layer0", "item/lemon_mush");
+       //ingot
+        withExistingParent("lemon_ingot", mcLoc("item/generated")).texture("layer0", "item/lemon_ingot");
+       //nugget
+        withExistingParent("lemon_nugget", mcLoc("item/generated")).texture("layer0", "item/lemon_nugget");
+       //block
+        withExistingParent("lemon_block_item", modLoc("block/lemon_block"));
+       //bricks block
+        withExistingParent("lemon_bricks_block_item", modLoc("block/lemon_bricks_block"));
+       //chiseled block
+        withExistingParent("lemon_chiseled_block_item", modLoc("block/lemon_chiseled_block"));
+       //tiles block
+        withExistingParent("lemon_tiles_block_item", modLoc("block/lemon_tiles_block"));
+       //slab
+        slab("lemon_slab_item", modLoc("block/lemon_block"), modLoc("block/lemon_block"), modLoc("block/lemon_block"));
+       //bricks slab
+        slab("lemon_bricks_slab_item", modLoc("block/lemon_bricks_block"), modLoc("block/lemon_bricks_block"), modLoc("block/lemon_bricks_block"));
+       //stairs
+        stairs("lemon_stairs_item", modLoc("block/lemon_block"), modLoc("block/lemon_block"), modLoc("block/lemon_block"));
+       //bricks stairs
+        stairs("lemon_bricks_stairs_item", modLoc("block/lemon_bricks_block"), modLoc("block/lemon_bricks_block"), modLoc("block/lemon_bricks_block"));
+    //==============================================================================================================================================
     //|                                                              Corn                                                                        |
     //==============================================================================================================================================
        //mush
