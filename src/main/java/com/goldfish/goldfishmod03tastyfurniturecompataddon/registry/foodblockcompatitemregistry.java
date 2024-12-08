@@ -508,6 +508,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> ONION_CARPET_ITEM = FOODBLOCKITEM.register("onion_carpet_item",
     () -> new BlockItem(foodblockcompatregistry.ONION_CARPET.get(), new BlockItem.Properties())); 
+ //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> PECAN_CARPET_ITEM = FOODBLOCKITEM.register("pecan_carpet_item",
+    () -> new BlockItem(foodblockcompatregistry.PECAN_CARPET.get(), new BlockItem.Properties())); 
 //==============================================================================================================================================================================================
 //                                                                                        Lanterns
 //==============================================================================================================================================================================================
@@ -560,6 +563,13 @@ public class foodblockcompatitemregistry {
     //soul
       public static final DeferredHolder<Item, BlockItem> ONION_SOUL_LANTERN_ITEM = FOODBLOCKITEM.register("onion_soul_lantern_item",
       () -> new BlockItem(foodblockcompatregistry.ONION_SOUL_LANTERN.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
+    //regular
+      public static final DeferredHolder<Item, BlockItem> PECAN_LANTERN_ITEM = FOODBLOCKITEM.register("pecan_lantern_item",
+      () -> new BlockItem(foodblockcompatregistry.PECAN_LANTERN.get(), new BlockItem.Properties()));
+    //soul
+      public static final DeferredHolder<Item, BlockItem> PECAN_SOUL_LANTERN_ITEM = FOODBLOCKITEM.register("pecan_soul_lantern_item",
+      () -> new BlockItem(foodblockcompatregistry.PECAN_SOUL_LANTERN.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                        Chains
 //==============================================================================================================================================================================================
@@ -584,6 +594,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> ONION_CHAIN_ITEM = FOODBLOCKITEM.register("onion_chain_item",
     () -> new BlockItem(foodblockcompatregistry.ONION_CHAIN.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> PECAN_CHAIN_ITEM = FOODBLOCKITEM.register("pecan_chain_item",
+    () -> new BlockItem(foodblockcompatregistry.PECAN_CHAIN.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                        Ladders
 //==============================================================================================================================================================================================

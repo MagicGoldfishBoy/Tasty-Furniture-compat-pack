@@ -682,6 +682,12 @@ public class GM1BlockStateProvider extends BlockStateProvider
           BlockModelBuilder onion_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(onion_carpet).getPath(), mcLoc("block/carpet"))
           .texture("wool", onion_carpet_texture);
           simpleBlock(onion_carpet, new ModelFile.UncheckedModelFile(onion_carpet_model.getLocation()));
+     //------------------------------------------------------------pecan-----------------------------------------------------------------------
+          CarpetBlock pecan_carpet = foodblockcompatregistry.PECAN_CARPET.get();
+          ResourceLocation pecan_carpet_texture = modLoc("block/pecan_carpet");
+          BlockModelBuilder pecan_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(pecan_carpet).getPath(), mcLoc("block/carpet"))
+          .texture("wool", pecan_carpet_texture);
+          simpleBlock(pecan_carpet, new ModelFile.UncheckedModelFile(pecan_carpet_model.getLocation()));
     //==============================================================================================================================================
     //|                                                             Lanterns                                                                       |
     //==============================================================================================================================================
@@ -958,6 +964,45 @@ public class GM1BlockStateProvider extends BlockStateProvider
              .modelForState().modelFile(hanging_onion_soul_lantern_model).addModel()
              .partialState().with(LanternBlock.HANGING, false)
              .modelForState().modelFile(onion_soul_lantern_model).addModel();
+     //------------------------------------------------------------pecan-----------------------------------------------------------------------
+         //regular
+          LanternBlock pecan_lantern = foodblockcompatregistry.PECAN_LANTERN.get();
+          ResourceLocation pecan_lantern_texture = modLoc("block/pecan_lantern");
+  
+          BlockModelBuilder pecan_lantern_model = models()
+              .withExistingParent("pecan_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", pecan_lantern_texture);
+  
+          BlockModelBuilder hanging_pecan_lantern_model = models()
+              .withExistingParent("pecan_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", pecan_lantern_texture);
+  
+          getVariantBuilder(pecan_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_pecan_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(pecan_lantern_model).addModel();
+         //soul
+         LanternBlock pecan_soul_lantern = foodblockcompatregistry.PECAN_SOUL_LANTERN.get();
+         ResourceLocation pecan_soul_lantern_texture = modLoc("block/pecan_soul_lantern");
+ 
+         BlockModelBuilder pecan_soul_lantern_model = models()
+             .withExistingParent("pecan_soul_lantern", mcLoc("block/lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", pecan_soul_lantern_texture);
+ 
+         BlockModelBuilder hanging_pecan_soul_lantern_model = models()
+             .withExistingParent("pecan_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", pecan_soul_lantern_texture);
+ 
+         getVariantBuilder(pecan_soul_lantern)
+             .partialState().with(LanternBlock.HANGING, true)
+             .modelForState().modelFile(hanging_pecan_soul_lantern_model).addModel()
+             .partialState().with(LanternBlock.HANGING, false)
+             .modelForState().modelFile(pecan_soul_lantern_model).addModel();
     //==============================================================================================================================================
     //|                                                              Chains                                                                        |
     //==============================================================================================================================================
@@ -1073,6 +1118,22 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .modelForState().modelFile(onion_chain_model).rotationX(90).rotationY(90).addModel()
           .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
           .modelForState().modelFile(onion_chain_model).rotationX(90).addModel(); 
+     //------------------------------------------------------------pecan-----------------------------------------------------------------------
+         ChainBlock pecan_chain = foodblockcompatregistry.PECAN_CHAIN.get();
+         ResourceLocation pecan_chain_texture = modLoc("block/pecan_chain");
+         BlockModelBuilder pecan_chain_model = models()
+          .withExistingParent("pecan_chain", mcLoc("block/chain"))
+          .renderType("cutout_mipped_all")
+          .texture("all", pecan_chain_texture)
+          .texture("particle", pecan_chain_texture);
+
+          getVariantBuilder(pecan_chain)
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Y)
+          .modelForState().modelFile(pecan_chain_model).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.X)
+          .modelForState().modelFile(pecan_chain_model).rotationX(90).rotationY(90).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
+          .modelForState().modelFile(pecan_chain_model).rotationX(90).addModel(); 
     //==============================================================================================================================================
     //|                                                             Ladders                                                                        |
     //==============================================================================================================================================

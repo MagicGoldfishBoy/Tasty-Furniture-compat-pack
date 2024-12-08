@@ -278,5 +278,9 @@
     "block.goldfishmod03tastyfurniturecompataddon.pecan_pressure_plate": "Pecan Pressure Plate",
     "block.goldfishmod03tastyfurniturecompataddon.pecan_standing_sign": "Pecan Sign",
     "block.goldfishmod03tastyfurniturecompataddon.pecan_trapdoor": "Pecan Trapdoor",
-    "block.goldfishmod03tastyfurniturecompataddon.pecan_lamp": "Pecan Lamp"
+    "block.goldfishmod03tastyfurniturecompataddon.pecan_lamp": "Pecan Lamp",
+    "block.goldfishmod03tastyfurniturecompataddon.pecan_carpet": "Pecan Carpet",
+    "block.goldfishmod03tastyfurniturecompataddon.pecan_lantern": "Pecan Lantern",
+    "block.goldfishmod03tastyfurniturecompataddon.pecan_soul_lantern": "Pecan Soul Lantern",
+    "block.goldfishmod03tastyfurniturecompataddon.pecan_chain": "Pecan Chain"
 }

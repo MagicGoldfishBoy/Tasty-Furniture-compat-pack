@@ -603,6 +603,17 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("pecan_trapdoor_item", modLoc("block/pecan_trapdoor_trapdoor_bottom"));
        //lamp
        withExistingParent("pecan_lamp_item", modLoc("block/pecan_lamp"));
+       //carpet
+       ResourceLocation pecan_carpet_texture = modLoc("block/pecan_carpet");
+       carpet("pecan_carpet_item", pecan_carpet_texture);
+       //lantern
+        //regular
+        withExistingParent("pecan_lantern_item", modLoc("block/pecan_lantern"));
+        //soul
+          withExistingParent("pecan_soul_lantern_item", modLoc("block/pecan_soul_lantern"));
+       //chain
+       withExistingParent("pecan_chain_item", modLoc("block/pecan_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
   }
 }
 
