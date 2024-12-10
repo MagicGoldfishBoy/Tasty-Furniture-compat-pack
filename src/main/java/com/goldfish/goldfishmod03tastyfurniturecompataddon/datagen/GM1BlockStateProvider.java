@@ -3154,6 +3154,18 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .modelFile(models().getExistingFile(modelLocation))
                   .build();
           });
+     //------------------------------------------------------------lemon-----------------------------------------------------------------------
+          foodpathtypeminislab lemon_stone_path = foodblockcompatregistry.LEMON_STONE_PATH.get();
+
+          getVariantBuilder(lemon_stone_path)
+          .forAllStates(state -> {
+
+              ResourceLocation modelLocation = modLoc("block/lemon_stone_path");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .build();
+          });
      //------------------------------------------------------------corn-----------------------------------------------------------------------
           foodpathtypeminislab corn_stone_path = foodblockcompatregistry.CORN_STONE_PATH.get();
 
@@ -3426,6 +3438,54 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   };
 
                   ResourceLocation modelLocation = open ? modLoc("block/orange_barrel_model_open") : modLoc("block/orange_barrel_model_closed");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotationY)
+                      .rotationX(rotationX)
+                      .build();
+              });
+     //------------------------------------------------------------lemon-----------------------------------------------------------------------
+          foodBarrel lemon_barrel = foodblockcompatregistry.LEMON_BARREL.get();
+          ResourceLocation lemon_barrel_closed_texture = modLoc("block/lemon_barrel_top_closed");
+          ResourceLocation lemon_barrel_open_texture = modLoc("block/lemon_barrel_top_open");
+          ResourceLocation lemon_barrel_side = modLoc("block/lemon_barrel_side");
+          ResourceLocation lemon_barrel_bottom = modLoc("block/lemon_barrel_bottom");
+          
+          BlockModelBuilder lemon_barrel_model_closed = models()
+              .withExistingParent("lemon_barrel_model_closed", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", lemon_barrel_side)
+              .texture("bottom", lemon_barrel_bottom)
+              .texture("top", lemon_barrel_closed_texture)
+              .texture("particle", lemon_barrel_side);
+          
+          BlockModelBuilder lemon_barrel_model_open = models()
+              .withExistingParent("lemon_barrel_model_open", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", lemon_barrel_side)
+              .texture("bottom", lemon_barrel_bottom)
+              .texture("top", lemon_barrel_open_texture)
+              .texture("particle", lemon_barrel_side);
+          
+          getVariantBuilder(lemon_barrel)
+              .forAllStates(state -> {
+                  Boolean open = state.getValue(BlockStateProperties.OPEN);
+                  Direction facing = state.getValue(BlockStateProperties.FACING);
+                  int rotationY = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+                  int rotationX = switch (facing) {
+                      case UP -> 0;
+                      case DOWN -> 180;
+                      default -> 90;
+                  };
+
+                  ResourceLocation modelLocation = open ? modLoc("block/lemon_barrel_model_open") : modLoc("block/lemon_barrel_model_closed");
               
                   return ConfiguredModel.builder()
                       .modelFile(models().getExistingFile(modelLocation))
