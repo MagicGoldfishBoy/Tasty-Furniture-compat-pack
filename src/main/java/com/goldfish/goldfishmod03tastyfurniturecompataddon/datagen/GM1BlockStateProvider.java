@@ -3745,6 +3745,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .rotationY(rotationY)
                   .build();
           });
+     //------------------------------------------------------------lemon-----------------------------------------------------------------------
+          foodChairBlock lemonChair = foodblockcompatregistry.LEMON_CHAIR.get();
+
+          getVariantBuilder(lemonChair)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/lemon_chair");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
      //------------------------------------------------------------corn-----------------------------------------------------------------------
           foodChairBlock cornChair = foodblockcompatregistry.CORN_CHAIR.get();
 
@@ -3910,6 +3931,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/orange_bed");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------lemon-----------------------------------------------------------------------
+          foodBed lemonBed = foodblockcompatregistry.LEMON_BED.get();
+
+          getVariantBuilder(lemonBed)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/lemon_bed");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))

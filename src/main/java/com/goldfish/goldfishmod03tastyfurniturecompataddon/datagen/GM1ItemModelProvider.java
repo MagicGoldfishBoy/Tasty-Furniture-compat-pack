@@ -475,6 +475,10 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("lemon_stone_path_item", modLoc("block/lemon_stone_path"));
        //barrel
        withExistingParent("lemon_barrel_item", modLoc("block/lemon_barrel_model_closed"));
+       //chair
+       withExistingParent("lemon_chair_item", modLoc("block/lemon_chair"));
+       //bed
+       withExistingParent("lemon_bed_item", modLoc("block/lemon_bed"));
     //==============================================================================================================================================
     //|                                                              Corn                                                                        |
     //==============================================================================================================================================

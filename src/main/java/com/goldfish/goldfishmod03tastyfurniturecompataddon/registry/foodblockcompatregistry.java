@@ -2343,6 +2343,13 @@ public class foodblockcompatregistry {
      .explosionResistance(chair_explosion_resistance)
      .noOcclusion()
      ));
+ //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
+     public static final DeferredHolder<Block, foodChairBlock> LEMON_CHAIR = FOODBLOCK.register("lemon_chair", () -> new foodChairBlock(BlockBehaviour.Properties.of()
+     .sound(plant_chair_sound)
+     .destroyTime(chair_destroy_time)
+     .explosionResistance(chair_explosion_resistance)
+     .noOcclusion()
+     ));
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
      public static final DeferredHolder<Block, foodChairBlock> CORN_CHAIR = FOODBLOCK.register("corn_chair", () -> new foodChairBlock(BlockBehaviour.Properties.of()
      .sound(plant_chair_sound)
@@ -2407,6 +2414,13 @@ public class foodblockcompatregistry {
      .explosionResistance(bed_explosion_resistance)
      .noOcclusion()
      ));
+ //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
+     public static final DeferredHolder<Block, foodBed> LEMON_BED = FOODBLOCK.register("lemon_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     .sound(plant_bed_sound)
+     .destroyTime(bed_destroy_time)
+     .explosionResistance(bed_explosion_resistance)
+     .noOcclusion()
+     ));
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
      public static final DeferredHolder<Block, foodBed> CORN_BED = FOODBLOCK.register("corn_bed", () -> new foodBed(BlockBehaviour.Properties.of()
      .sound(plant_bed_sound)
@@ -2429,10 +2443,10 @@ public class foodblockcompatregistry {
      .noOcclusion()
      ));
 
-   //.........entity
+ //.........entity
      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<bedEntity>> FOOD_BED_ENTITY = FOODBLOCKENTITY.register("food_bed_entity",
-     () -> BlockEntityType.Builder.of(bedEntity::new, ELDERBERRY_BED.get(), JUNIPER_BED.get(), CHERRY_BED.get(), COCONUT_BED.get(), ORANGE_BED.get(), CORN_BED.get(), 
-     ONION_BED.get(), PECAN_BED.get()).build(null));
+     () -> BlockEntityType.Builder.of(bedEntity::new, ELDERBERRY_BED.get(), JUNIPER_BED.get(), CHERRY_BED.get(), COCONUT_BED.get(), ORANGE_BED.get(), LEMON_BED.get(), 
+     CORN_BED.get(), ONION_BED.get(), PECAN_BED.get()).build(null));
    //^ I did not think this would actually work, but it does O.o
 
 //==============================================================================================================================================================================================
