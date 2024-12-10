@@ -682,6 +682,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Orange---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> ORANGE_LADDER_ITEM =  FOODBLOCKITEM.register("orange_ladder_item",
     () -> new BlockItem(foodblockcompatregistry.ORANGE_LADDER.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> LEMON_LADDER_ITEM =  FOODBLOCKITEM.register("lemon_ladder_item",
+    () -> new BlockItem(foodblockcompatregistry.LEMON_LADDER.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> CORN_LADDER_ITEM =  FOODBLOCKITEM.register("corn_ladder_item",
     () -> new BlockItem(foodblockcompatregistry.CORN_LADDER.get(), new BlockItem.Properties()));
@@ -709,6 +712,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Orange---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> ORANGE_TABLE_ITEM =  FOODBLOCKITEM.register("orange_table_item",
     () -> new BlockItem(foodblockcompatregistry.ORANGE_TABLE.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> LEMON_TABLE_ITEM =  FOODBLOCKITEM.register("lemon_table_item",
+    () -> new BlockItem(foodblockcompatregistry.LEMON_TABLE.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> CORN_TABLE_ITEM =  FOODBLOCKITEM.register("corn_table_item",
     () -> new BlockItem(foodblockcompatregistry.CORN_TABLE.get(), new BlockItem.Properties()));
