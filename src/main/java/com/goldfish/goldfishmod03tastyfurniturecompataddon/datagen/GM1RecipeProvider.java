@@ -3827,6 +3827,26 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('C', foodblockcompatitemregistry.SMALL_LEMON_CABINET_ITEM.get())
          .unlockedBy("has_lemon_slab", has(foodblockcompatitemregistry.LEMON_SLAB_ITEM.get()))
          .save(output);
+  //--------------------------------------------------------------------------------------Lime---------------------------------------------------------------------------------------------
+       //small
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.SMALL_LIME_CABINET_ITEM.get())
+         .pattern("AAA")
+         .pattern("B B")
+         .pattern("AAA")
+         .define('A', foodblockcompatitemregistry.LIME_SLAB_ITEM.get())
+         .define('B', Items.IRON_INGOT)
+         .unlockedBy("has_lime_slab", has(foodblockcompatitemregistry.LIME_SLAB_ITEM.get()))
+         .save(output);
+       //medium
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.MEDIUM_LIME_CABINET_ITEM.get())
+         .pattern("AAA")
+         .pattern("BCB")
+         .pattern("AAA")
+         .define('A', foodblockcompatitemregistry.LIME_SLAB_ITEM.get())
+         .define('B', Items.IRON_INGOT)
+         .define('C', foodblockcompatitemregistry.SMALL_LIME_CABINET_ITEM.get())
+         .unlockedBy("has_lime_slab", has(foodblockcompatitemregistry.LIME_SLAB_ITEM.get()))
+         .save(output);
   //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
        //small
          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.SMALL_CORN_CABINET_ITEM.get())
