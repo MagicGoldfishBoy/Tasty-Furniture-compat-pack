@@ -3475,6 +3475,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('B', foodblockcompatitemregistry.LEMON_SLAB_ITEM.get())
         .unlockedBy("has_lemon_block", has(foodblockcompatitemregistry.LEMON_BLOCK_ITEM.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Lime---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.LIME_BARREL_ITEM.get())
+        .pattern("ABA")
+        .pattern("A A")
+        .pattern("ABA")
+        .define('A', foodblockcompatitemregistry.LIME_BLOCK_ITEM.get())
+        .define('B', foodblockcompatitemregistry.LIME_SLAB_ITEM.get())
+        .unlockedBy("has_lime_block", has(foodblockcompatitemregistry.LIME_BLOCK_ITEM.get()))
+        .save(output);
   //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CORN_BARREL_ITEM.get())
         .pattern("ABA")
@@ -3557,6 +3566,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', ingotcompatregistry.LEMON_INGOT.get())
         .define('B', foodblockcompatitemregistry.LEMON_SLAB_ITEM.get())
         .unlockedBy("has_lemon_slab", has(foodblockcompatitemregistry.LEMON_SLAB_ITEM.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Lime---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.LIME_CHAIR_ITEM.get())
+        .pattern("AAA")
+        .pattern("BBB")
+        .pattern("A A")
+        .define('A', ingotcompatregistry.LIME_INGOT.get())
+        .define('B', foodblockcompatitemregistry.LIME_SLAB_ITEM.get())
+        .unlockedBy("has_lime_slab", has(foodblockcompatitemregistry.LIME_SLAB_ITEM.get()))
         .save(output);
   //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CORN_CHAIR_ITEM.get())
@@ -3646,6 +3664,16 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
            .define('B', foodblockcompatitemregistry.LEMON_SLAB_ITEM.get())
            .define('C', foodblockcompatitemregistry.LEMON_CARPET_ITEM.get())
            .unlockedBy("has_lemon_ingot", has(ingotcompatregistry.LEMON_INGOT.get()))
+           .save(output);
+  //--------------------------------------------------------------------------------------Lime---------------------------------------------------------------------------------------------
+           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.LIME_BED_ITEM.get())
+           .pattern("CCC")
+           .pattern("BBB")
+           .pattern("A A")
+           .define('A', ingotcompatregistry.LIME_INGOT.get())
+           .define('B', foodblockcompatitemregistry.LIME_SLAB_ITEM.get())
+           .define('C', foodblockcompatitemregistry.LIME_CARPET_ITEM.get())
+           .unlockedBy("has_lime_ingot", has(ingotcompatregistry.LIME_INGOT.get()))
            .save(output);
   //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CORN_BED_ITEM.get())

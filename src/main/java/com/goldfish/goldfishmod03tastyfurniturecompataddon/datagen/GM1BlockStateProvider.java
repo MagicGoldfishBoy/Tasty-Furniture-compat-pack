@@ -3836,6 +3836,54 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationX(rotationX)
                       .build();
               });
+     //------------------------------------------------------------lime-----------------------------------------------------------------------
+          foodBarrel lime_barrel = foodblockcompatregistry.LIME_BARREL.get();
+          ResourceLocation lime_barrel_closed_texture = modLoc("block/lime_barrel_top_closed");
+          ResourceLocation lime_barrel_open_texture = modLoc("block/lime_barrel_top_open");
+          ResourceLocation lime_barrel_side = modLoc("block/lime_barrel_side");
+          ResourceLocation lime_barrel_bottom = modLoc("block/lime_barrel_bottom");
+          
+          BlockModelBuilder lime_barrel_model_closed = models()
+              .withExistingParent("lime_barrel_model_closed", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", lime_barrel_side)
+              .texture("bottom", lime_barrel_bottom)
+              .texture("top", lime_barrel_closed_texture)
+              .texture("particle", lime_barrel_side);
+          
+          BlockModelBuilder lime_barrel_model_open = models()
+              .withExistingParent("lime_barrel_model_open", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", lime_barrel_side)
+              .texture("bottom", lime_barrel_bottom)
+              .texture("top", lime_barrel_open_texture)
+              .texture("particle", lime_barrel_side);
+          
+          getVariantBuilder(lime_barrel)
+              .forAllStates(state -> {
+                  Boolean open = state.getValue(BlockStateProperties.OPEN);
+                  Direction facing = state.getValue(BlockStateProperties.FACING);
+                  int rotationY = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+                  int rotationX = switch (facing) {
+                      case UP -> 0;
+                      case DOWN -> 180;
+                      default -> 90;
+                  };
+
+                  ResourceLocation modelLocation = open ? modLoc("block/lime_barrel_model_open") : modLoc("block/lime_barrel_model_closed");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotationY)
+                      .rotationX(rotationX)
+                      .build();
+              });
      //------------------------------------------------------------corn-----------------------------------------------------------------------
           foodBarrel corn_barrel = foodblockcompatregistry.CORN_BARREL.get();
           ResourceLocation corn_barrel_closed_texture = modLoc("block/corn_barrel_top_closed");
@@ -4109,6 +4157,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .rotationY(rotationY)
                   .build();
           });
+     //------------------------------------------------------------lime-----------------------------------------------------------------------
+          foodChairBlock limeChair = foodblockcompatregistry.LIME_CHAIR.get();
+
+          getVariantBuilder(limeChair)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/lime_chair");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
      //------------------------------------------------------------corn-----------------------------------------------------------------------
           foodChairBlock cornChair = foodblockcompatregistry.CORN_CHAIR.get();
 
@@ -4295,6 +4364,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/lemon_bed");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------lime-----------------------------------------------------------------------
+          foodBed limeBed = foodblockcompatregistry.LIME_BED.get();
+
+          getVariantBuilder(limeBed)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/lime_bed");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
