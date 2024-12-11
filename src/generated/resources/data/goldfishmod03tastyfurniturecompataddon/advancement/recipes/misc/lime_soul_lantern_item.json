@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_lime_nugget": {
+      "conditions": {
+        "items": [
+          {
+            "items": "goldfishmod03tastyfurniturecompataddon:lime_nugget"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "goldfishmod03tastyfurniturecompataddon:lime_soul_lantern_item"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_lime_nugget"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "goldfishmod03tastyfurniturecompataddon:lime_soul_lantern_item"
+    ]
+  }
+}

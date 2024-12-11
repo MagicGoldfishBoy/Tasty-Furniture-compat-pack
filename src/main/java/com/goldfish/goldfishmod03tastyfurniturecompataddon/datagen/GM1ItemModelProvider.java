@@ -521,6 +521,21 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         pressurePlate("lime_pressure_plate_item", modLoc("block/lime_block"));
        //sign
         withExistingParent("lime_sign_item", mcLoc("item/generated")).texture("layer0", "item/lime_sign");
+       //trapdoor
+       withExistingParent("lime_trapdoor_item", modLoc("block/lime_trapdoor_trapdoor_bottom"));
+       //lamp
+       withExistingParent("lime_lamp_item", modLoc("block/lime_lamp"));
+       //carpet
+       ResourceLocation lime_carpet_texture = modLoc("block/lime_carpet");
+       carpet("lime_carpet_item", lime_carpet_texture);
+       //lantern
+        //regular
+        withExistingParent("lime_lantern_item", modLoc("block/lime_lantern"));
+        //soul
+          withExistingParent("lime_soul_lantern_item", modLoc("block/lime_soul_lantern"));
+       //chain
+       withExistingParent("lime_chain_item", modLoc("block/lime_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
     //==============================================================================================================================================
     //|                                                              Corn                                                                        |
     //==============================================================================================================================================
