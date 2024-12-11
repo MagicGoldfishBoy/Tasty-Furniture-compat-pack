@@ -540,6 +540,17 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("lime_ladder_item", modLoc("block/lime_ladder"));
        //table
        withExistingParent("lime_table_item", modLoc("block/lime_table"));
+       //torches
+        //regular
+        withExistingParent("lime_torch_item", modLoc("block/lime_torch"));
+        //redstone
+          withExistingParent("lime_redstone_torch_item", modLoc("block/lime_redstone_torch"));
+        //soul
+          withExistingParent("lime_soul_torch_item", modLoc("block/lime_soul_torch"));
+       //furnaces
+       withExistingParent("lime_furnace_item", modLoc("block/lime_furnace_model_unlit"));
+       //paths
+       withExistingParent("lime_stone_path_item", modLoc("block/lime_stone_path"));
     //==============================================================================================================================================
     //|                                                              Corn                                                                        |
     //==============================================================================================================================================

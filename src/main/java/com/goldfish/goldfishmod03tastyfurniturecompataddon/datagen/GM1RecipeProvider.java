@@ -3141,6 +3141,37 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('C', Items.SOUL_SAND)
             .unlockedBy("has_lemon_nugget", has(nuggetcompatregistry.LEMON_NUGGET.get()))
             .save(output);
+  //--------------------------------------------------------------------------------------Lime---------------------------------------------------------------------------------------------
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.LIME_TORCH_ITEM.get(), 4)
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetcompatregistry.LIME_NUGGET.get())
+            .define('C', ItemTags.COALS)
+            .unlockedBy("has_lime_nugget", has(nuggetcompatregistry.LIME_NUGGET.get()))
+            .save(output);
+          //redstone
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.LIME_REDSTONE_TORCH_ITEM.get())
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetcompatregistry.LIME_NUGGET.get())
+            .define('C', Items.REDSTONE)
+            .unlockedBy("has_lime_nugget", has(nuggetcompatregistry.LIME_NUGGET.get()))
+            .save(output);
+          //soul
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.LIME_SOUL_TORCH_ITEM.get(), 4)
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetcompatregistry.LIME_NUGGET.get())
+            .define('C', Items.SOUL_SAND)
+            .unlockedBy("has_lime_nugget", has(nuggetcompatregistry.LIME_NUGGET.get()))
+            .save(output);
   //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
           //regular
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CORN_TORCH_ITEM.get(), 4)
@@ -3290,6 +3321,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('B', Items.COBBLESTONE)
         .unlockedBy("has_lemon_ingot", has(ingotcompatregistry.LEMON_INGOT.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Lime---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.LIME_FURNACE_ITEM.get())
+        .pattern("ABA")
+        .pattern("B B")
+        .pattern("ABA")
+        .define('A', ingotcompatregistry.LIME_INGOT.get())
+        .define('B', Items.COBBLESTONE)
+        .unlockedBy("has_lime_ingot", has(ingotcompatregistry.LIME_INGOT.get()))
+        .save(output);
   //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CORN_FURNACE_ITEM.get())
         .pattern("ABA")
@@ -3354,6 +3394,12 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .requires(foodblockcompatitemregistry.LEMON_BLOCK_ITEM.get())
         .requires(Items.STONE)
         .unlockedBy("has_lemon_block", has(foodblockcompatitemregistry.LEMON_BLOCK_ITEM.get()))
+        .save(output);        
+  //--------------------------------------------------------------------------------------Lime---------------------------------------------------------------------------------------------
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.LIME_STONE_PATH_ITEM.get(), 6)
+        .requires(foodblockcompatitemregistry.LIME_BLOCK_ITEM.get())
+        .requires(Items.STONE)
+        .unlockedBy("has_lime_block", has(foodblockcompatitemregistry.LIME_BLOCK_ITEM.get()))
         .save(output);        
   //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.CORN_STONE_PATH_ITEM.get(), 6)

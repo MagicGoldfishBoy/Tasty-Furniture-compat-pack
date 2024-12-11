@@ -30,6 +30,7 @@ import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.juniperWallSign
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.lemonFurnace;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.lemonSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.lemonWallSign;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.limeFurnace;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.limeSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.limeWallSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.onionFurnace;
@@ -53,6 +54,7 @@ import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.juniperF
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.juniperSignEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.lemonFurnaceEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.lemonSignEntity;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.limeFurnaceEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.limeSignEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.onionFurnaceEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.onionSignEntity;
@@ -2235,6 +2237,27 @@ public class foodblockcompatregistry {
 
      public static final DeferredHolder<Block, WallTorchBlock> LEMON_SOUL_WALL_TORCH = FOODBLOCK.register("lemon_soul_wall_torch", 
      () -> new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_WALL_TORCH)));
+ //--------------------------------------------------------------------------------------Lime---------------------------------------------------------------------------------------------
+    //regular
+     public static final DeferredHolder<Block, TorchBlock> LIME_TORCH = FOODBLOCK.register("lime_torch", 
+     () -> new TorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH)));
+
+     public static final DeferredHolder<Block, WallTorchBlock> LIME_WALL_TORCH = FOODBLOCK.register("lime_wall_torch", 
+     () -> new WallTorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH)));
+
+    //redstone
+     public static final DeferredHolder<Block, RedstoneTorchBlock> LIME_REDSTONE_TORCH = FOODBLOCK.register("lime_redstone_torch", 
+     () -> new RedstoneTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_TORCH)));
+
+     public static final DeferredHolder<Block, RedstoneWallTorchBlock> LIME_REDSTONE_WALL_TORCH = FOODBLOCK.register("lime_redstone_wall_torch", 
+     () -> new RedstoneWallTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_WALL_TORCH)));
+
+    //soul
+     public static final DeferredHolder<Block, TorchBlock> LIME_SOUL_TORCH = FOODBLOCK.register("lime_soul_torch", 
+     () -> new TorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_TORCH)));
+
+     public static final DeferredHolder<Block, WallTorchBlock> LIME_SOUL_WALL_TORCH = FOODBLOCK.register("lime_soul_wall_torch", 
+     () -> new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_WALL_TORCH)));
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
     //regular
      public static final DeferredHolder<Block, TorchBlock> CORN_TORCH = FOODBLOCK.register("corn_torch", 
@@ -2337,6 +2360,12 @@ public class foodblockcompatregistry {
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<lemonFurnaceEntity>> LEMON_FURNACE_ENTITY = FOODBLOCKENTITY.register("lemon_furnace", 
     () -> BlockEntityType.Builder.of(lemonFurnaceEntity::new, LEMON_FURNACE.get()).build(null));
+ //----------------------------------------------------------------------------------------Lime-----------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, limeFurnace> LIME_FURNACE = FOODBLOCK.register("lime_furnace", 
+    () -> new limeFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<limeFurnaceEntity>> LIME_FURNACE_ENTITY = FOODBLOCKENTITY.register("lime_furnace", 
+    () -> BlockEntityType.Builder.of(limeFurnaceEntity::new, LIME_FURNACE.get()).build(null));
  //----------------------------------------------------------------------------------------Corn-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, cornFurnace> CORN_FURNACE = FOODBLOCK.register("corn_furnace", 
     () -> new cornFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
@@ -2400,6 +2429,14 @@ public class foodblockcompatregistry {
     ));
  //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, foodpathtypeminislab> LEMON_STONE_PATH = FOODBLOCK.register("lemon_stone_path", 
+    () -> new foodpathtypeminislab(BlockBehaviour.Properties.of()
+    .destroyTime(1.5f)
+    .explosionResistance(1.5f)
+    .sound(SoundType.MUD_BRICKS)
+    .noOcclusion()
+    ));
+ //--------------------------------------------------------------------------------------Lime---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, foodpathtypeminislab> LIME_STONE_PATH = FOODBLOCK.register("lime_stone_path", 
     () -> new foodpathtypeminislab(BlockBehaviour.Properties.of()
     .destroyTime(1.5f)
     .explosionResistance(1.5f)

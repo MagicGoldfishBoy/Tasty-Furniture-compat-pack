@@ -2517,6 +2517,122 @@ public class GM1BlockStateProvider extends BlockStateProvider
                 .rotationY(rotation)
                 .build();
             });
+     //------------------------------------------------------------lime-----------------------------------------------------------------------
+       //regular
+        TorchBlock lime_torch = foodblockcompatregistry.LIME_TORCH.get();
+        ResourceLocation lime_torch_texture = modLoc("block/lime_torch");
+        BlockModelBuilder lime_torch_model = models()
+        .withExistingParent("lime_torch", mcLoc("block/torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", lime_torch_texture)
+        .texture("particle", lime_torch_texture);
+
+        simpleBlock(lime_torch, lime_torch_model);
+
+        TorchBlock lime_wall_torch = foodblockcompatregistry.LIME_WALL_TORCH.get();
+        BlockModelBuilder lime_wall_torch_model = models()
+        .withExistingParent("lime_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", lime_torch_texture)
+        .texture("particle", lime_torch_texture);
+        getVariantBuilder(lime_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("lime_wall_torch", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", lime_torch_texture)
+                    .texture("particle", lime_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //redstone
+        RedstoneTorchBlock lime_redstone_torch = foodblockcompatregistry.LIME_REDSTONE_TORCH.get();
+        ResourceLocation lime_redstone_torch_texture = modLoc("block/lime_redstone_torch");
+        BlockModelBuilder lime_redstone_torch_model = models()
+        .withExistingParent("lime_redstone_torch", mcLoc("block/redstone_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", lime_redstone_torch_texture)
+        .texture("particle", lime_redstone_torch_texture);
+        
+
+        simpleBlock(lime_redstone_torch, lime_redstone_torch_model);
+
+        ResourceLocation lime_redstone_wall_torch_texture = modLoc("block/lime_redstone_torch");
+
+        RedstoneTorchBlock lime_redstone_wall_torch = foodblockcompatregistry.LIME_REDSTONE_WALL_TORCH.get();
+        BlockModelBuilder lime_redstone_wall_torch_model = models()
+        .withExistingParent("lime_redstone_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", lime_redstone_wall_torch_texture)
+        .texture("particle", lime_redstone_wall_torch_texture);
+        getVariantBuilder(lime_redstone_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("lime_redstone_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", lime_redstone_wall_torch_texture)
+                    .texture("particle", lime_redstone_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //soul
+        TorchBlock lime_soul_torch = foodblockcompatregistry.LIME_SOUL_TORCH.get();
+        ResourceLocation lime_soul_torch_texture = modLoc("block/lime_soul_torch");
+        BlockModelBuilder lime_soul_torch_model = models()
+        .withExistingParent("lime_soul_torch", mcLoc("block/soul_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", lime_soul_torch_texture)
+        .texture("particle", lime_soul_torch_texture);
+        
+
+        simpleBlock(lime_soul_torch, lime_soul_torch_model);
+
+        ResourceLocation lime_soul_wall_torch_texture = modLoc("block/lime_soul_torch");
+        TorchBlock lime_soul_wall_torch = foodblockcompatregistry.LIME_SOUL_WALL_TORCH.get();
+        BlockModelBuilder lime_soul_wall_torch_model = models()
+        .withExistingParent("lime_soul_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", lime_soul_wall_torch_texture)
+        .texture("particle", lime_soul_wall_torch_texture);
+        getVariantBuilder(lime_soul_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("lime_soul_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", lime_soul_wall_torch_texture)
+                    .texture("particle", lime_soul_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
      //------------------------------------------------------------corn-----------------------------------------------------------------------
        //regular
         TorchBlock corn_torch = foodblockcompatregistry.CORN_TORCH.get();
@@ -3132,6 +3248,50 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationY(rotation)
                       .build();
               });
+     //------------------------------------------------------------lime-----------------------------------------------------------------------
+          FurnaceBlock lime_furnace = foodblockcompatregistry.LIME_FURNACE.get();
+          ResourceLocation lime_furnace_unlit_texture = modLoc("block/lime_furnace");
+          ResourceLocation lime_furnace_lit_texture = modLoc("block/lime_furnace_lit");
+          ResourceLocation lime_furnace_side = modLoc("block/lime_block");
+          
+          // Define the model for the unlit state
+          BlockModelBuilder lime_furnace_model_unlit = models()
+              .withExistingParent("lime_furnace_model_unlit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", lime_furnace_side)
+              .texture("top", lime_furnace_side)
+              .texture("front", lime_furnace_unlit_texture)
+              .texture("particle", lime_furnace_side);
+          
+          // Define the model for the lit state
+          BlockModelBuilder lime_furnace_model_lit = models()
+              .withExistingParent("lime_furnace_model_lit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", lime_furnace_side)
+              .texture("top", lime_furnace_side)
+              .texture("front", lime_furnace_lit_texture)
+              .texture("particle", lime_furnace_side);
+          
+          // Configure variants for the lime_furnace block
+          getVariantBuilder(lime_furnace)
+              .forAllStates(state -> {
+                  Boolean lit = state.getValue(BlockStateProperties.LIT);
+                  Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                  int rotation = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+
+                  ResourceLocation modelLocation = lit ? modLoc("block/lime_furnace_model_lit") : modLoc("block/lime_furnace_model_unlit");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotation)
+                      .build();
+              });
      //------------------------------------------------------------corn-----------------------------------------------------------------------
           FurnaceBlock corn_furnace = foodblockcompatregistry.CORN_FURNACE.get();
           ResourceLocation corn_furnace_unlit_texture = modLoc("block/corn_furnace");
@@ -3332,6 +3492,18 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .forAllStates(state -> {
 
               ResourceLocation modelLocation = modLoc("block/lemon_stone_path");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .build();
+          });
+     //------------------------------------------------------------lime-----------------------------------------------------------------------
+          foodpathtypeminislab lime_stone_path = foodblockcompatregistry.LIME_STONE_PATH.get();
+
+          getVariantBuilder(lime_stone_path)
+          .forAllStates(state -> {
+
+              ResourceLocation modelLocation = modLoc("block/lime_stone_path");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
