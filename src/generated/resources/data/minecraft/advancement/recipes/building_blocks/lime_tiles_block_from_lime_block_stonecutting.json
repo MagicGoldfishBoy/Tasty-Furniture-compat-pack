@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_lime_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "goldfishmod03tastyfurniturecompataddon:lime_block_item"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:lime_tiles_block_from_lime_block_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_lime_block"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:lime_tiles_block_from_lime_block_stonecutting"
+    ]
+  }
+}

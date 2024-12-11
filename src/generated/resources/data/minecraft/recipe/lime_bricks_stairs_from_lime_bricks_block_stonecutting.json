@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "goldfishmod03tastyfurniturecompataddon:lime_bricks_block_item"
+  },
+  "result": {
+    "count": 1,
+    "id": "goldfishmod03tastyfurniturecompataddon:lime_bricks_stairs_item"
+  }
+}
