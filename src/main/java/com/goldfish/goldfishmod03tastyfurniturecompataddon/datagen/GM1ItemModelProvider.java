@@ -536,6 +536,10 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //chain
        withExistingParent("lime_chain_item", modLoc("block/lime_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
        .end();
+       //ladder
+       withExistingParent("lime_ladder_item", modLoc("block/lime_ladder"));
+       //table
+       withExistingParent("lime_table_item", modLoc("block/lime_table"));
     //==============================================================================================================================================
     //|                                                              Corn                                                                        |
     //==============================================================================================================================================
