@@ -392,6 +392,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation lemon_bars_texture = modLoc("block/lemon_bars");
           ResourceLocation lemon_bars_rim_texture = modLoc("block/lemon_block");
           paneBlockWithRenderType(lemon_bars, "lemon_bars", lemon_bars_texture, lemon_bars_rim_texture, "cutout_mipped_all"); 
+     //------------------------------------------------------------lime-----------------------------------------------------------------------
+          IronBarsBlock lime_bars = foodblockcompatregistry.LIME_BARS.get(); 
+          ResourceLocation lime_bars_texture = modLoc("block/lime_bars");
+          ResourceLocation lime_bars_rim_texture = modLoc("block/lime_block");
+          paneBlockWithRenderType(lime_bars, "lime_bars", lime_bars_texture, lime_bars_rim_texture, "cutout_mipped_all"); 
      //------------------------------------------------------------corn-----------------------------------------------------------------------
           IronBarsBlock corn_bars = foodblockcompatregistry.CORN_BARS.get(); 
           ResourceLocation corn_bars_texture = modLoc("block/corn_bars");
@@ -440,6 +445,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation lemon_door_top_texture = modLoc("block/lemon_door_top");
           ResourceLocation lemon_door_bottom_texture = modLoc("block/lemon_door_bottom");
           doorBlockWithRenderType(lemon_door, "lemon_door", lemon_door_bottom_texture, lemon_door_top_texture, "translucent"); 
+     //------------------------------------------------------------lime-----------------------------------------------------------------------
+          DoorBlock lime_door = foodblockcompatregistry.LIME_DOOR.get(); 
+          ResourceLocation lime_door_top_texture = modLoc("block/lime_door_top");
+          ResourceLocation lime_door_bottom_texture = modLoc("block/lime_door_bottom");
+          doorBlockWithRenderType(lime_door, "lime_door", lime_door_bottom_texture, lime_door_top_texture, "translucent"); 
      //------------------------------------------------------------corn-----------------------------------------------------------------------
           DoorBlock corn_door = foodblockcompatregistry.CORN_DOOR.get(); 
           ResourceLocation corn_door_top_texture = modLoc("block/corn_door_top");
@@ -482,6 +492,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ButtonBlock lemon_button = foodblockcompatregistry.LEMON_BUTTON.get();
           ResourceLocation lemon_button_texture = modLoc("block/lemon_block");
           buttonBlock(lemon_button, lemon_button_texture);
+     //------------------------------------------------------------lime-----------------------------------------------------------------------
+          ButtonBlock lime_button = foodblockcompatregistry.LIME_BUTTON.get();
+          ResourceLocation lime_button_texture = modLoc("block/lime_block");
+          buttonBlock(lime_button, lime_button_texture);
      //------------------------------------------------------------corn-----------------------------------------------------------------------
           ButtonBlock corn_button = foodblockcompatregistry.CORN_BUTTON.get();
           ResourceLocation corn_button_texture = modLoc("block/corn_block");
@@ -551,6 +565,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
           FenceGateBlock lemon_gate = foodblockcompatregistry.LEMON_GATE.get();
           ResourceLocation lemon_gate_texture = modLoc("block/lemon_block");
           fenceGateBlock(lemon_gate, lemon_gate_texture);
+     //------------------------------------------------------------lime-----------------------------------------------------------------------
+       //fence
+          FenceBlock lime_fence = foodblockcompatregistry.LIME_FENCE.get();
+          ResourceLocation lime_fence_texture = modLoc("block/lime_block");
+          fenceBlock(lime_fence, lime_fence_texture);
+       //gate
+          FenceGateBlock lime_gate = foodblockcompatregistry.LIME_GATE.get();
+          ResourceLocation lime_gate_texture = modLoc("block/lime_block");
+          fenceGateBlock(lime_gate, lime_gate_texture);
      //------------------------------------------------------------corn-----------------------------------------------------------------------
        //fence
           FenceBlock corn_fence = foodblockcompatregistry.CORN_FENCE.get();
@@ -605,6 +628,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           PressurePlateBlock lemon_pressure_plate = foodblockcompatregistry.LEMON_PRESSURE_PLATE.get();
           ResourceLocation lemon_pressure_plate_texture = modLoc("block/lemon_block");
           pressurePlateBlock(lemon_pressure_plate, lemon_pressure_plate_texture);
+     //------------------------------------------------------------lime-----------------------------------------------------------------------
+          PressurePlateBlock lime_pressure_plate = foodblockcompatregistry.LIME_PRESSURE_PLATE.get();
+          ResourceLocation lime_pressure_plate_texture = modLoc("block/lime_block");
+          pressurePlateBlock(lime_pressure_plate, lime_pressure_plate_texture);
      //------------------------------------------------------------corn-----------------------------------------------------------------------
           PressurePlateBlock corn_pressure_plate = foodblockcompatregistry.CORN_PRESSURE_PLATE.get();
           ResourceLocation corn_pressure_plate_texture = modLoc("block/corn_block");

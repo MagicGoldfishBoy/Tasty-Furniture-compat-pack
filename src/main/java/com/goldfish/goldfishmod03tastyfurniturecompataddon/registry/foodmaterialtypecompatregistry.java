@@ -120,5 +120,10 @@ public class foodmaterialtypecompatregistry {
         "lemon_wood_mat", 
         PLANT) 
     );
+    public static final WoodType LIMEWOODMAT = WoodType.register(
+     new WoodType(
+        "lime_wood_mat", 
+        PLANT) 
+    );
 
 }
