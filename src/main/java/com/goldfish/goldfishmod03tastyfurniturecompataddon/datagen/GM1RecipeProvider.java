@@ -2193,6 +2193,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('B', Items.STICK)
         .unlockedBy("has_lemon_ingot",  has(ingotcompatregistry.LEMON_INGOT.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Lime---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.LIME_SIGN_ITEM.get(), 3)
+        .pattern("AAA")
+        .pattern("AAA")
+        .pattern(" B ")
+        .define('A', ingotcompatregistry.LIME_INGOT.get())
+        .define('B', Items.STICK)
+        .unlockedBy("has_lime_ingot",  has(ingotcompatregistry.LIME_INGOT.get()))
+        .save(output);
   //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CORN_SIGN_ITEM.get(), 3)
         .pattern("AAA")
