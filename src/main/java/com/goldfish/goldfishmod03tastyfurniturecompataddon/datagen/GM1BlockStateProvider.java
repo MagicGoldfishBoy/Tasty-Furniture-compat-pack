@@ -3403,6 +3403,50 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationY(rotation)
                       .build();
               });
+     //------------------------------------------------------------blackcherry-----------------------------------------------------------------------
+          FurnaceBlock blackcherry_furnace = foodblockcompatregistry.BLACKCHERRY_FURNACE.get();
+          ResourceLocation blackcherry_furnace_unlit_texture = modLoc("block/blackcherry_furnace");
+          ResourceLocation blackcherry_furnace_lit_texture = modLoc("block/blackcherry_furnace_lit");
+          ResourceLocation blackcherry_furnace_side = modLoc("block/blackcherry_block");
+          
+          // Define the model for the unlit state
+          BlockModelBuilder blackcherry_furnace_model_unlit = models()
+              .withExistingParent("blackcherry_furnace_model_unlit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", blackcherry_furnace_side)
+              .texture("top", blackcherry_furnace_side)
+              .texture("front", blackcherry_furnace_unlit_texture)
+              .texture("particle", blackcherry_furnace_side);
+          
+          // Define the model for the lit state
+          BlockModelBuilder blackcherry_furnace_model_lit = models()
+              .withExistingParent("blackcherry_furnace_model_lit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", blackcherry_furnace_side)
+              .texture("top", blackcherry_furnace_side)
+              .texture("front", blackcherry_furnace_lit_texture)
+              .texture("particle", blackcherry_furnace_side);
+          
+          // Configure variants for the blackcherry_furnace block
+          getVariantBuilder(blackcherry_furnace)
+              .forAllStates(state -> {
+                  Boolean lit = state.getValue(BlockStateProperties.LIT);
+                  Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                  int rotation = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+
+                  ResourceLocation modelLocation = lit ? modLoc("block/blackcherry_furnace_model_lit") : modLoc("block/blackcherry_furnace_model_unlit");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotation)
+                      .build();
+              });
      //------------------------------------------------------------coconut-----------------------------------------------------------------------
           FurnaceBlock coconut_furnace = foodblockcompatregistry.COCONUT_FURNACE.get();
           ResourceLocation coconut_furnace_unlit_texture = modLoc("block/coconut_furnace");
@@ -3748,6 +3792,18 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .modelFile(models().getExistingFile(modelLocation))
                   .build();
           });
+     //------------------------------------------------------------blackcherry-----------------------------------------------------------------------
+          foodpathtypeminislab blackcherry_stone_path = foodblockcompatregistry.BLACKCHERRY_STONE_PATH.get();
+
+          getVariantBuilder(blackcherry_stone_path)
+          .forAllStates(state -> {
+
+              ResourceLocation modelLocation = modLoc("block/blackcherry_stone_path");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .build();
+          });
      //------------------------------------------------------------coconut-----------------------------------------------------------------------
           foodpathtypeminislab coconut_stone_path = foodblockcompatregistry.COCONUT_STONE_PATH.get();
 
@@ -3972,6 +4028,54 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   };
 
                   ResourceLocation modelLocation = open ? modLoc("block/cherry_barrel_model_open") : modLoc("block/cherry_barrel_model_closed");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotationY)
+                      .rotationX(rotationX)
+                      .build();
+              });
+     //------------------------------------------------------------blackcherry-----------------------------------------------------------------------
+          foodBarrel blackcherry_barrel = foodblockcompatregistry.BLACKCHERRY_BARREL.get();
+          ResourceLocation blackcherry_barrel_closed_texture = modLoc("block/blackcherry_barrel_top_closed");
+          ResourceLocation blackcherry_barrel_open_texture = modLoc("block/blackcherry_barrel_top_open");
+          ResourceLocation blackcherry_barrel_side = modLoc("block/blackcherry_barrel_side");
+          ResourceLocation blackcherry_barrel_bottom = modLoc("block/blackcherry_barrel_bottom");
+          
+          BlockModelBuilder blackcherry_barrel_model_closed = models()
+              .withExistingParent("blackcherry_barrel_model_closed", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", blackcherry_barrel_side)
+              .texture("bottom", blackcherry_barrel_bottom)
+              .texture("top", blackcherry_barrel_closed_texture)
+              .texture("particle", blackcherry_barrel_side);
+          
+          BlockModelBuilder blackcherry_barrel_model_open = models()
+              .withExistingParent("blackcherry_barrel_model_open", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", blackcherry_barrel_side)
+              .texture("bottom", blackcherry_barrel_bottom)
+              .texture("top", blackcherry_barrel_open_texture)
+              .texture("particle", blackcherry_barrel_side);
+          
+          getVariantBuilder(blackcherry_barrel)
+              .forAllStates(state -> {
+                  Boolean open = state.getValue(BlockStateProperties.OPEN);
+                  Direction facing = state.getValue(BlockStateProperties.FACING);
+                  int rotationY = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+                  int rotationX = switch (facing) {
+                      case UP -> 0;
+                      case DOWN -> 180;
+                      default -> 90;
+                  };
+
+                  ResourceLocation modelLocation = open ? modLoc("block/blackcherry_barrel_model_open") : modLoc("block/blackcherry_barrel_model_closed");
               
                   return ConfiguredModel.builder()
                       .modelFile(models().getExistingFile(modelLocation))

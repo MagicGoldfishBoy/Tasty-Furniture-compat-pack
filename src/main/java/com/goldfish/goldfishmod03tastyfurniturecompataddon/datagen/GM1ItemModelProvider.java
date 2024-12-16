@@ -317,6 +317,12 @@ public class GM1ItemModelProvider extends ItemModelProvider {
           withExistingParent("blackcherry_redstone_torch_item", modLoc("block/blackcherry_redstone_torch"));
         //soul
           withExistingParent("blackcherry_soul_torch_item", modLoc("block/blackcherry_soul_torch"));
+       //furnaces
+       withExistingParent("blackcherry_furnace_item", modLoc("block/blackcherry_furnace_model_unlit"));
+       //paths
+       withExistingParent("blackcherry_stone_path_item", modLoc("block/blackcherry_stone_path"));
+       //barrel
+       withExistingParent("blackcherry_barrel_item", modLoc("block/blackcherry_barrel_model_closed"));
     //==============================================================================================================================================
     //|                                                              Coconut                                                                       |
     //==============================================================================================================================================

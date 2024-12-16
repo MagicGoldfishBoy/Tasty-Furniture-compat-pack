@@ -3609,6 +3609,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('B', Items.COBBLESTONE)
         .unlockedBy("has_cherry_ingot", has(ingotcompatregistry.CHERRY_INGOT.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Blackcherry---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BLACKCHERRY_FURNACE_ITEM.get())
+        .pattern("ABA")
+        .pattern("B B")
+        .pattern("ABA")
+        .define('A', ingotcompatregistry.BLACKCHERRY_INGOT.get())
+        .define('B', Items.COBBLESTONE)
+        .unlockedBy("has_blackcherry_ingot", has(ingotcompatregistry.BLACKCHERRY_INGOT.get()))
+        .save(output);
   //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.COCONUT_FURNACE_ITEM.get())
         .pattern("ABA")
@@ -3686,11 +3695,11 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .requires(Items.STONE)
         .unlockedBy("has_juniper_block", has(foodblockcompatitemregistry.JUNIPER_BLOCK_ITEM.get()))
         .save(output);        
-  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_STONE_PATH_ITEM.get(), 6)
-        .requires(foodblockcompatitemregistry.CHERRY_BLOCK_ITEM.get())
+  //--------------------------------------------------------------------------------------Blackcherry---------------------------------------------------------------------------------------------
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.BLACKCHERRY_STONE_PATH_ITEM.get(), 6)
+        .requires(foodblockcompatitemregistry.BLACKCHERRY_BLOCK_ITEM.get())
         .requires(Items.STONE)
-        .unlockedBy("has_cherry_block", has(foodblockcompatitemregistry.CHERRY_BLOCK_ITEM.get()))
+        .unlockedBy("has_blackcherry_block", has(foodblockcompatitemregistry.BLACKCHERRY_BLOCK_ITEM.get()))
         .save(output);        
   //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.COCONUT_STONE_PATH_ITEM.get(), 6)
@@ -3762,6 +3771,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', foodblockcompatitemregistry.CHERRY_BLOCK_ITEM.get())
         .define('B', foodblockcompatitemregistry.CHERRY_SLAB_ITEM.get())
         .unlockedBy("has_cherry_block", has(foodblockcompatitemregistry.CHERRY_BLOCK_ITEM.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Blackcherry---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BLACKCHERRY_BARREL_ITEM.get())
+        .pattern("ABA")
+        .pattern("A A")
+        .pattern("ABA")
+        .define('A', foodblockcompatitemregistry.BLACKCHERRY_BLOCK_ITEM.get())
+        .define('B', foodblockcompatitemregistry.BLACKCHERRY_SLAB_ITEM.get())
+        .unlockedBy("has_blackcherry_block", has(foodblockcompatitemregistry.BLACKCHERRY_BLOCK_ITEM.get()))
         .save(output);
   //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.COCONUT_BARREL_ITEM.get())
