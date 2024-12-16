@@ -249,7 +249,36 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("small_cherry_cabinet_item", modLoc("block/cherry_cabinet"));
        withExistingParent("medium_cherry_cabinet_item", modLoc("block/medium_cherry_cabinet"));
     //==============================================================================================================================================
-    //|                                                              Coconut                                                                        |
+    //|                                                            Blackcherry                                                                     |
+    //==============================================================================================================================================
+       //mush
+        withExistingParent("blackcherry_mush", mcLoc("item/generated")).texture("layer0", "item/blackcherry_mush");
+       //ingot
+        withExistingParent("blackcherry_ingot", mcLoc("item/generated")).texture("layer0", "item/blackcherry_ingot");
+       //nugget
+        withExistingParent("blackcherry_nugget", mcLoc("item/generated")).texture("layer0", "item/blackcherry_nugget");
+       //block
+        withExistingParent("blackcherry_block_item", modLoc("block/blackcherry_block"));
+       //bricks block
+        withExistingParent("blackcherry_bricks_block_item", modLoc("block/blackcherry_bricks_block"));
+       //chiseled block
+        withExistingParent("blackcherry_chiseled_block_item", modLoc("block/blackcherry_chiseled_block"));
+       //tiles block
+        withExistingParent("blackcherry_tiles_block_item", modLoc("block/blackcherry_tiles_block"));
+       //slab
+       slab("blackcherry_slab_item", modLoc("block/blackcherry_block"), modLoc("block/blackcherry_block"), 
+       modLoc("block/blackcherry_block"));
+       //bricks slab
+       slab("blackcherry_bricks_slab_item", modLoc("block/blackcherry_bricks_block"), modLoc("block/blackcherry_bricks_block"), 
+       modLoc("block/blackcherry_bricks_block"));
+       //stairs
+       stairs("blackcherry_stairs_item", modLoc("block/blackcherry_block"), modLoc("block/blackcherry_block"), 
+       modLoc("block/blackcherry_block"));
+       //bricks stairs
+       stairs("blackcherry_bricks_stairs_item", modLoc("block/blackcherry_bricks_block"), modLoc("block/blackcherry_bricks_block"), 
+       modLoc("block/blackcherry_bricks_block"));
+    //==============================================================================================================================================
+    //|                                                              Coconut                                                                       |
     //==============================================================================================================================================
        //mush
         withExistingParent("coconut_mush", mcLoc("item/generated")).texture("layer0", "item/coconut_mush");

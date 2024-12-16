@@ -19,6 +19,9 @@ public class ingotcompatregistry {
  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, Item> CHERRY_INGOT = FOODINGOT.register("cherry_ingot",
     () -> new Item(new Item.Properties()));
+ //--------------------------------------------------------------------------------------Blackcherry---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, Item> BLACKCHERRY_INGOT = FOODINGOT.register("blackcherry_ingot",
+    () -> new Item(new Item.Properties()));
  //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, Item> COCONUT_INGOT = FOODINGOT.register("coconut_ingot",
     () -> new Item(new Item.Properties()));

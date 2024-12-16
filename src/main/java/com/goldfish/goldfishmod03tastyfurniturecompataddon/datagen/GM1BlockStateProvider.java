@@ -102,6 +102,19 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........tiles
           net.minecraft.world.level.block.Block cherry_tiles_block = foodblockcompatregistry.CHERRY_TILES_BLOCK.get();
           simpleBlock(cherry_tiles_block);
+     //------------------------------------------------------------blackcherry-----------------------------------------------------------------------
+      //.........plain
+          net.minecraft.world.level.block.Block blackcherry_block = foodblockcompatregistry.BLACKCHERRY_BLOCK.get();
+          simpleBlock(blackcherry_block);
+      //.........bricks
+          net.minecraft.world.level.block.Block blackcherry_bricks_block = foodblockcompatregistry.BLACKCHERRY_BRICKS_BLOCK.get();
+          simpleBlock(blackcherry_bricks_block);
+      //.........chiseled
+          net.minecraft.world.level.block.Block blackcherry_chiseled_block = foodblockcompatregistry.BLACKCHERRY_CHISELED_BLOCK.get();
+          simpleBlock(blackcherry_chiseled_block);
+      //.........tiles
+          net.minecraft.world.level.block.Block blackcherry_tiles_block = foodblockcompatregistry.BLACKCHERRY_TILES_BLOCK.get();
+          simpleBlock(blackcherry_tiles_block);
      //------------------------------------------------------------coconut-----------------------------------------------------------------------
       //.........plain
           net.minecraft.world.level.block.Block coconut_block = foodblockcompatregistry.COCONUT_BLOCK.get();
@@ -223,6 +236,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
           SlabBlock cherry_bricks_slab = foodblockcompatregistry.CHERRY_BRICKS_SLAB.get();
           ResourceLocation cherry_bricks_block_texture = modLoc("block/cherry_bricks_block");
           slabBlock(cherry_bricks_slab, cherry_bricks_block_texture, cherry_bricks_block_texture);
+     //------------------------------------------------------------blackcherry-----------------------------------------------------------------------
+      //.........plain
+          SlabBlock blackcherry_slab = foodblockcompatregistry.BLACKCHERRY_SLAB.get();
+          ResourceLocation blackcherry_block_texture = modLoc("block/blackcherry_block");
+          slabBlock(blackcherry_slab, blackcherry_block_texture, blackcherry_block_texture);
+      //.........bricks
+          SlabBlock blackcherry_bricks_slab = foodblockcompatregistry.BLACKCHERRY_BRICKS_SLAB.get();
+          ResourceLocation blackcherry_bricks_block_texture = modLoc("block/blackcherry_bricks_block");
+          slabBlock(blackcherry_bricks_slab, blackcherry_bricks_block_texture, blackcherry_bricks_block_texture);
      //------------------------------------------------------------coconut-----------------------------------------------------------------------
       //.........plain
           SlabBlock coconut_slab = foodblockcompatregistry.COCONUT_SLAB.get();
@@ -310,6 +332,13 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........bricks
           StairBlock cherry_bricks_stairs = foodblockcompatregistry.CHERRY_BRICKS_STAIRS.get();
           stairsBlock(cherry_bricks_stairs, cherry_bricks_block_texture);
+     //------------------------------------------------------------blackcherry-----------------------------------------------------------------------
+      //.........plain
+          StairBlock blackcherry_stairs = foodblockcompatregistry.BLACKCHERRY_STAIRS.get();
+          stairsBlock(blackcherry_stairs, blackcherry_block_texture);
+      //.........bricks
+          StairBlock blackcherry_bricks_stairs = foodblockcompatregistry.BLACKCHERRY_BRICKS_STAIRS.get();
+          stairsBlock(blackcherry_bricks_stairs, blackcherry_bricks_block_texture);
      //------------------------------------------------------------coconut-----------------------------------------------------------------------
       //.........plain
           StairBlock coconut_stairs = foodblockcompatregistry.COCONUT_STAIRS.get();

@@ -58,6 +58,19 @@ public class foodblockcompatitemregistry {
   //.........tiles
      public static final DeferredHolder<Item, BlockItem> CHERRY_TILES_BLOCK_ITEM = FOODBLOCKITEM.register("cherry_tiles_block_item",
      () -> new BlockItem(foodblockcompatregistry.CHERRY_TILES_BLOCK.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Blackcherry---------------------------------------------------------------------------------------------
+  //.........plain
+     public static final DeferredHolder<Item, BlockItem> BLACKCHERRY_BLOCK_ITEM = FOODBLOCKITEM.register("blackcherry_block_item",
+     () -> new BlockItem(foodblockcompatregistry.BLACKCHERRY_BLOCK.get(), new BlockItem.Properties()));
+  //.........bricks
+     public static final DeferredHolder<Item, BlockItem> BLACKCHERRY_BRICKS_BLOCK_ITEM = FOODBLOCKITEM.register("blackcherry_bricks_block_item",
+     () -> new BlockItem(foodblockcompatregistry.BLACKCHERRY_BRICKS_BLOCK.get(), new BlockItem.Properties()));
+  //.........chiseled
+     public static final DeferredHolder<Item, BlockItem> BLACKCHERRY_CHISELED_BLOCK_ITEM = FOODBLOCKITEM.register("blackcherry_chiseled_block_item",
+     () -> new BlockItem(foodblockcompatregistry.BLACKCHERRY_CHISELED_BLOCK.get(), new BlockItem.Properties()));
+  //.........tiles
+     public static final DeferredHolder<Item, BlockItem> BLACKCHERRY_TILES_BLOCK_ITEM = FOODBLOCKITEM.register("blackcherry_tiles_block_item",
+     () -> new BlockItem(foodblockcompatregistry.BLACKCHERRY_TILES_BLOCK.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
   //.........plain
      public static final DeferredHolder<Item, BlockItem> COCONUT_BLOCK_ITEM = FOODBLOCKITEM.register("coconut_block_item",
@@ -173,6 +186,13 @@ public class foodblockcompatitemregistry {
   //.........bricks
    public static final DeferredHolder<Item, BlockItem> CHERRY_BRICKS_SLAB_ITEM = FOODBLOCKITEM.register("cherry_bricks_slab_item",
    () -> new BlockItem(foodblockcompatregistry.CHERRY_BRICKS_SLAB.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Blackcherry---------------------------------------------------------------------------------------------
+  //.........plain
+   public static final DeferredHolder<Item, BlockItem> BLACKCHERRY_SLAB_ITEM = FOODBLOCKITEM.register("blackcherry_slab_item",
+   () -> new BlockItem(foodblockcompatregistry.BLACKCHERRY_SLAB.get(), new BlockItem.Properties()));
+  //.........bricks
+   public static final DeferredHolder<Item, BlockItem> BLACKCHERRY_BRICKS_SLAB_ITEM = FOODBLOCKITEM.register("blackcherry_bricks_slab_item",
+   () -> new BlockItem(foodblockcompatregistry.BLACKCHERRY_BRICKS_SLAB.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
   //.........plain
    public static final DeferredHolder<Item, BlockItem> COCONUT_SLAB_ITEM = FOODBLOCKITEM.register("coconut_slab_item",
@@ -246,6 +266,13 @@ public class foodblockcompatitemregistry {
   //.........bricks
    public static final DeferredHolder<Item, BlockItem> CHERRY_BRICKS_STAIRS_ITEM = FOODBLOCKITEM.register("cherry_bricks_stairs_item",
    () -> new BlockItem(foodblockcompatregistry.CHERRY_BRICKS_STAIRS.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Blackcherry---------------------------------------------------------------------------------------------
+  //.........plain
+   public static final DeferredHolder<Item, BlockItem> BLACKCHERRY_STAIRS_ITEM = FOODBLOCKITEM.register("blackcherry_stairs_item",
+   () -> new BlockItem(foodblockcompatregistry.BLACKCHERRY_STAIRS.get(), new BlockItem.Properties()));
+  //.........bricks
+   public static final DeferredHolder<Item, BlockItem> BLACKCHERRY_BRICKS_STAIRS_ITEM = FOODBLOCKITEM.register("blackcherry_bricks_stairs_item",
+   () -> new BlockItem(foodblockcompatregistry.BLACKCHERRY_BRICKS_STAIRS.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
   //.........plain
    public static final DeferredHolder<Item, BlockItem> COCONUT_STAIRS_ITEM = FOODBLOCKITEM.register("coconut_stairs_item",
