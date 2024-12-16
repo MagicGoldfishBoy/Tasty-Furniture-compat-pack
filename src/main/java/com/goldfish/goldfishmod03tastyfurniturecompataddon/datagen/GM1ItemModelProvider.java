@@ -876,6 +876,31 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //cabinet
        withExistingParent("small_pecan_cabinet_item", modLoc("block/pecan_cabinet"));
        withExistingParent("medium_pecan_cabinet_item", modLoc("block/medium_pecan_cabinet"));
+    //==============================================================================================================================================
+    //|                                                              Almond                                                                        |
+    //==============================================================================================================================================
+       //mush
+        withExistingParent("almond_mush", mcLoc("item/generated")).texture("layer0", "item/almond_mush");
+       //ingot
+        withExistingParent("almond_ingot", mcLoc("item/generated")).texture("layer0", "item/almond_ingot");
+       //nugget
+        withExistingParent("almond_nugget", mcLoc("item/generated")).texture("layer0", "item/almond_nugget");
+       //block
+        withExistingParent("almond_block_item", modLoc("block/almond_block"));
+       //bricks block
+        withExistingParent("almond_bricks_block_item", modLoc("block/almond_bricks_block"));
+       //chiseled block
+        withExistingParent("almond_chiseled_block_item", modLoc("block/almond_chiseled_block"));
+       //tiles block
+        withExistingParent("almond_tiles_block_item", modLoc("block/almond_tiles_block"));
+       //slab
+        slab("almond_slab_item", modLoc("block/almond_block"), modLoc("block/almond_block"), modLoc("block/almond_block"));
+       //bricks slab
+        slab("almond_bricks_slab_item", modLoc("block/almond_bricks_block"), modLoc("block/almond_bricks_block"), modLoc("block/almond_bricks_block"));
+       //stairs
+        stairs("almond_stairs_item", modLoc("block/almond_block"), modLoc("block/almond_block"), modLoc("block/almond_block"));
+       //bricks stairs
+        stairs("almond_bricks_stairs_item", modLoc("block/almond_bricks_block"), modLoc("block/almond_bricks_block"), modLoc("block/almond_bricks_block"));
   }
 }
 

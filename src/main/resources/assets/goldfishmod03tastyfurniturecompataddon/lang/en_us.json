@@ -406,5 +406,16 @@
     "block.goldfishmod03tastyfurniturecompataddon.pecan_chair": "Pecan Chair",
     "block.goldfishmod03tastyfurniturecompataddon.pecan_bed": "Pecan Bed",
     "block.goldfishmod03tastyfurniturecompataddon.small_pecan_cabinet": "Pecan Small Cabinet",
-    "block.goldfishmod03tastyfurniturecompataddon.medium_pecan_cabinet": "Pecan Medium Cabinet"
+    "block.goldfishmod03tastyfurniturecompataddon.medium_pecan_cabinet": "Pecan Medium Cabinet",
+  "item.goldfishmod03tastyfurniturecompataddon.almond_mush": "Almond Mush",
+    "item.goldfishmod03tastyfurniturecompataddon.almond_ingot": "Almond Ingot",
+    "item.goldfishmod03tastyfurniturecompataddon.almond_nugget": "Almond Nugget",
+    "block.goldfishmod03tastyfurniturecompataddon.almond_block": "Almond Block",
+    "block.goldfishmod03tastyfurniturecompataddon.almond_bricks_block": "Almond Bricks Block",
+    "block.goldfishmod03tastyfurniturecompataddon.almond_chiseled_block": "Almond Chiseled Block",
+    "block.goldfishmod03tastyfurniturecompataddon.almond_tiles_block": "Almond Tiles Block",
+    "block.goldfishmod03tastyfurniturecompataddon.almond_slab": "Almond Slab",
+    "block.goldfishmod03tastyfurniturecompataddon.almond_bricks_slab": "Almond Bricks Slab",
+    "block.goldfishmod03tastyfurniturecompataddon.almond_stairs": "Almond Stairs",
+    "block.goldfishmod03tastyfurniturecompataddon.almond_bricks_stairs": "Almond Bricks Stairs"
 }

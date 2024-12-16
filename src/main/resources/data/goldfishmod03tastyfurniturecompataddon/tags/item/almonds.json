@@ -1,0 +1,15 @@
+{
+    "replace": false,
+    "values": [
+        {"id":"pamhc2trees:almonditem",
+        "required": false},
+        {"id":"productivetrees:almond",
+        "required": false},
+        {"id":"harvestcraft:almonditem",
+        "required": false},
+        {"id":"croptopia:almond",
+        "required": false},
+        {"id":"c:almonds",
+        "required": false}
+    ]
+  }

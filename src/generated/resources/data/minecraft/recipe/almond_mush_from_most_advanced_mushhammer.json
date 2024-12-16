@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "goldfishmod02tastyfurniture:most_advanced_mush_hammer"
+    },
+    "B": {
+      "tag": "goldfishmod03tastyfurniturecompataddon:almonds"
+    }
+  },
+  "pattern": [
+    "ABB",
+    "BB ",
+    "   "
+  ],
+  "result": {
+    "count": 8,
+    "id": "goldfishmod03tastyfurniturecompataddon:almond_mush"
+  }
+}

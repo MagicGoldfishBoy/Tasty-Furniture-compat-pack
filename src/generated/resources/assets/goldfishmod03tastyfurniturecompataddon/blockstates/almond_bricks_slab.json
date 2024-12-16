@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "goldfishmod03tastyfurniturecompataddon:block/almond_bricks_slab"
+    },
+    "type=double": {
+      "model": "goldfishmod03tastyfurniturecompataddon:block/almond_bricks_block"
+    },
+    "type=top": {
+      "model": "goldfishmod03tastyfurniturecompataddon:block/almond_bricks_slab_top"
+    }
+  }
+}
