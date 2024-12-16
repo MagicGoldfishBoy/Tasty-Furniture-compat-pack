@@ -1587,6 +1587,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .rotationY(rotationY)
                   .build();
           });
+     //------------------------------------------------------------blackcherry-----------------------------------------------------------------------
+          LadderBlock blackcherryladder = foodblockcompatregistry.BLACKCHERRY_LADDER.get();
+
+          getVariantBuilder(blackcherryladder)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/blackcherry_ladder");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
      //------------------------------------------------------------coconut-----------------------------------------------------------------------
           LadderBlock coconutladder = foodblockcompatregistry.COCONUT_LADDER.get();
 
@@ -1794,6 +1815,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/cherry_table");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------blackcherry-----------------------------------------------------------------------
+          HorizontalDirectionalBlock blackcherrytable = foodblockcompatregistry.BLACKCHERRY_TABLE.get();
+
+          getVariantBuilder(blackcherrytable)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/blackcherry_table");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -2295,6 +2337,122 @@ public class GM1BlockStateProvider extends BlockStateProvider
                     .renderType("cutout_mipped_all")
                     .texture("torch", cherry_soul_wall_torch_texture)
                     .texture("particle", cherry_soul_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+     //------------------------------------------------------------blackcherry-----------------------------------------------------------------------
+       //regular
+        TorchBlock blackcherry_torch = foodblockcompatregistry.BLACKCHERRY_TORCH.get();
+        ResourceLocation blackcherry_torch_texture = modLoc("block/blackcherry_torch");
+        BlockModelBuilder blackcherry_torch_model = models()
+        .withExistingParent("blackcherry_torch", mcLoc("block/torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", blackcherry_torch_texture)
+        .texture("particle", blackcherry_torch_texture);
+
+        simpleBlock(blackcherry_torch, blackcherry_torch_model);
+
+        TorchBlock blackcherry_wall_torch = foodblockcompatregistry.BLACKCHERRY_WALL_TORCH.get();
+        BlockModelBuilder blackcherry_wall_torch_model = models()
+        .withExistingParent("blackcherry_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", blackcherry_torch_texture)
+        .texture("particle", blackcherry_torch_texture);
+        getVariantBuilder(blackcherry_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("blackcherry_wall_torch", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", blackcherry_torch_texture)
+                    .texture("particle", blackcherry_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //redstone
+        RedstoneTorchBlock blackcherry_redstone_torch = foodblockcompatregistry.BLACKCHERRY_REDSTONE_TORCH.get();
+        ResourceLocation blackcherry_redstone_torch_texture = modLoc("block/blackcherry_redstone_torch");
+        BlockModelBuilder blackcherry_redstone_torch_model = models()
+        .withExistingParent("blackcherry_redstone_torch", mcLoc("block/redstone_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", blackcherry_redstone_torch_texture)
+        .texture("particle", blackcherry_redstone_torch_texture);
+        
+
+        simpleBlock(blackcherry_redstone_torch, blackcherry_redstone_torch_model);
+
+        ResourceLocation blackcherry_redstone_wall_torch_texture = modLoc("block/blackcherry_redstone_torch");
+
+        RedstoneTorchBlock blackcherry_redstone_wall_torch = foodblockcompatregistry.BLACKCHERRY_REDSTONE_WALL_TORCH.get();
+        BlockModelBuilder blackcherry_redstone_wall_torch_model = models()
+        .withExistingParent("blackcherry_redstone_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", blackcherry_redstone_wall_torch_texture)
+        .texture("particle", blackcherry_redstone_wall_torch_texture);
+        getVariantBuilder(blackcherry_redstone_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("blackcherry_redstone_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", blackcherry_redstone_wall_torch_texture)
+                    .texture("particle", blackcherry_redstone_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //soul
+        TorchBlock blackcherry_soul_torch = foodblockcompatregistry.BLACKCHERRY_SOUL_TORCH.get();
+        ResourceLocation blackcherry_soul_torch_texture = modLoc("block/blackcherry_soul_torch");
+        BlockModelBuilder blackcherry_soul_torch_model = models()
+        .withExistingParent("blackcherry_soul_torch", mcLoc("block/soul_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", blackcherry_soul_torch_texture)
+        .texture("particle", blackcherry_soul_torch_texture);
+        
+
+        simpleBlock(blackcherry_soul_torch, blackcherry_soul_torch_model);
+
+        ResourceLocation blackcherry_soul_wall_torch_texture = modLoc("block/blackcherry_soul_torch");
+        TorchBlock blackcherry_soul_wall_torch = foodblockcompatregistry.BLACKCHERRY_SOUL_WALL_TORCH.get();
+        BlockModelBuilder blackcherry_soul_wall_torch_model = models()
+        .withExistingParent("blackcherry_soul_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", blackcherry_soul_wall_torch_texture)
+        .texture("particle", blackcherry_soul_wall_torch_texture);
+        getVariantBuilder(blackcherry_soul_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("blackcherry_soul_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", blackcherry_soul_wall_torch_texture)
+                    .texture("particle", blackcherry_soul_wall_torch_texture))
                 .rotationY(rotation)
                 .build();
             });

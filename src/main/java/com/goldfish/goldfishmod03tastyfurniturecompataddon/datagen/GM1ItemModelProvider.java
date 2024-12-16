@@ -306,6 +306,17 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //chain
        withExistingParent("blackcherry_chain_item", modLoc("block/blackcherry_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
        .end();
+       //ladder
+       withExistingParent("blackcherry_ladder_item", modLoc("block/blackcherry_ladder"));
+       //table
+       withExistingParent("blackcherry_table_item", modLoc("block/blackcherry_table"));
+       //torches
+        //regular
+        withExistingParent("blackcherry_torch_item", modLoc("block/blackcherry_torch"));
+        //redstone
+          withExistingParent("blackcherry_redstone_torch_item", modLoc("block/blackcherry_redstone_torch"));
+        //soul
+          withExistingParent("blackcherry_soul_torch_item", modLoc("block/blackcherry_soul_torch"));
     //==============================================================================================================================================
     //|                                                              Coconut                                                                       |
     //==============================================================================================================================================

@@ -810,6 +810,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> CHERRY_LADDER_ITEM =  FOODBLOCKITEM.register("cherry_ladder_item",
     () -> new BlockItem(foodblockcompatregistry.CHERRY_LADDER.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Blackcherry---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> BLACKCHERRY_LADDER_ITEM =  FOODBLOCKITEM.register("blackcherry_ladder_item",
+    () -> new BlockItem(foodblockcompatregistry.BLACKCHERRY_LADDER.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> COCONUT_LADDER_ITEM =  FOODBLOCKITEM.register("coconut_ladder_item",
     () -> new BlockItem(foodblockcompatregistry.COCONUT_LADDER.get(), new BlockItem.Properties()));
@@ -843,6 +846,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> CHERRY_TABLE_ITEM =  FOODBLOCKITEM.register("cherry_table_item",
     () -> new BlockItem(foodblockcompatregistry.CHERRY_TABLE.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Blackcherry---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> BLACKCHERRY_TABLE_ITEM =  FOODBLOCKITEM.register("blackcherry_table_item",
+    () -> new BlockItem(foodblockcompatregistry.BLACKCHERRY_TABLE.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> COCONUT_TABLE_ITEM =  FOODBLOCKITEM.register("coconut_table_item",
     () -> new BlockItem(foodblockcompatregistry.COCONUT_TABLE.get(), new BlockItem.Properties()));
@@ -897,6 +903,16 @@ public class foodblockcompatitemregistry {
     //soul
       public static final DeferredHolder<Item, StandingAndWallBlockItem> CHERRY_SOUL_TORCH_ITEM =  FOODBLOCKITEM.register("cherry_soul_torch_item",
       () -> new StandingAndWallBlockItem(foodblockcompatregistry.CHERRY_SOUL_TORCH.get(), foodblockcompatregistry.CHERRY_SOUL_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
+ //--------------------------------------------------------------------------------------Blackcherry---------------------------------------------------------------------------------------------
+    //regular
+      public static final DeferredHolder<Item, StandingAndWallBlockItem> BLACKCHERRY_TORCH_ITEM = FOODBLOCKITEM.register("blackcherry_torch_item", 
+      () -> new StandingAndWallBlockItem(foodblockcompatregistry.BLACKCHERRY_TORCH.get(), foodblockcompatregistry.BLACKCHERRY_WALL_TORCH.get(), new Item.Properties(), Direction.NORTH));
+    //redstone
+      public static final DeferredHolder<Item, StandingAndWallBlockItem> BLACKCHERRY_REDSTONE_TORCH_ITEM =  FOODBLOCKITEM.register("blackcherry_redstone_torch_item",
+      () -> new StandingAndWallBlockItem(foodblockcompatregistry.BLACKCHERRY_REDSTONE_TORCH.get(), foodblockcompatregistry.BLACKCHERRY_REDSTONE_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
+    //soul
+      public static final DeferredHolder<Item, StandingAndWallBlockItem> BLACKCHERRY_SOUL_TORCH_ITEM =  FOODBLOCKITEM.register("blackcherry_soul_torch_item",
+      () -> new StandingAndWallBlockItem(foodblockcompatregistry.BLACKCHERRY_SOUL_TORCH.get(), foodblockcompatregistry.BLACKCHERRY_SOUL_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
  //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
     //regular
       public static final DeferredHolder<Item, StandingAndWallBlockItem> COCONUT_TORCH_ITEM = FOODBLOCKITEM.register("coconut_torch_item", 
