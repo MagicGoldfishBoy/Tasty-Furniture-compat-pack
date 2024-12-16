@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/carpet",
+  "textures": {
+    "wool": "goldfishmod03tastyfurniturecompataddon:block/blackcherry_carpet"
+  }
+}

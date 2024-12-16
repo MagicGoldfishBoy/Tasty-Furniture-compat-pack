@@ -817,6 +817,9 @@ public class GM1BlockStateProvider extends BlockStateProvider
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           Block cherry_lamp = foodblockcompatregistry.CHERRY_LAMP.get();
           simpleBlock(cherry_lamp);
+     //------------------------------------------------------------blackcherry-----------------------------------------------------------------------
+          Block blackcherry_lamp = foodblockcompatregistry.BLACKCHERRY_LAMP.get();
+          simpleBlock(blackcherry_lamp);
      //------------------------------------------------------------coconut-----------------------------------------------------------------------
           Block coconut_lamp = foodblockcompatregistry.COCONUT_LAMP.get();
           simpleBlock(coconut_lamp);
@@ -859,6 +862,12 @@ public class GM1BlockStateProvider extends BlockStateProvider
           BlockModelBuilder cherry_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(cherry_carpet).getPath(), mcLoc("block/carpet"))
           .texture("wool", cherry_carpet_texture);
           simpleBlock(cherry_carpet, new ModelFile.UncheckedModelFile(cherry_carpet_model.getLocation()));
+     //------------------------------------------------------------blackcherry-----------------------------------------------------------------------
+          CarpetBlock blackcherry_carpet = foodblockcompatregistry.BLACKCHERRY_CARPET.get();
+          ResourceLocation blackcherry_carpet_texture = modLoc("block/blackcherry_carpet");
+          BlockModelBuilder blackcherry_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(blackcherry_carpet).getPath(), mcLoc("block/carpet"))
+          .texture("wool", blackcherry_carpet_texture);
+          simpleBlock(blackcherry_carpet, new ModelFile.UncheckedModelFile(blackcherry_carpet_model.getLocation()));
      //------------------------------------------------------------coconut-----------------------------------------------------------------------
           CarpetBlock coconut_carpet = foodblockcompatregistry.COCONUT_CARPET.get();
           ResourceLocation coconut_carpet_texture = modLoc("block/coconut_carpet");
@@ -1021,6 +1030,45 @@ public class GM1BlockStateProvider extends BlockStateProvider
              .modelForState().modelFile(hanging_cherry_soul_lantern_model).addModel()
              .partialState().with(LanternBlock.HANGING, false)
              .modelForState().modelFile(cherry_soul_lantern_model).addModel();
+     //------------------------------------------------------------blackcherry-----------------------------------------------------------------------
+         //regular
+          LanternBlock blackcherry_lantern = foodblockcompatregistry.BLACKCHERRY_LANTERN.get();
+          ResourceLocation blackcherry_lantern_texture = modLoc("block/blackcherry_lantern");
+  
+          BlockModelBuilder blackcherry_lantern_model = models()
+              .withExistingParent("blackcherry_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", blackcherry_lantern_texture);
+  
+          BlockModelBuilder hanging_blackcherry_lantern_model = models()
+              .withExistingParent("blackcherry_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", blackcherry_lantern_texture);
+  
+          getVariantBuilder(blackcherry_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_blackcherry_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(blackcherry_lantern_model).addModel();
+         //soul
+         LanternBlock blackcherry_soul_lantern = foodblockcompatregistry.BLACKCHERRY_SOUL_LANTERN.get();
+         ResourceLocation blackcherry_soul_lantern_texture = modLoc("block/blackcherry_soul_lantern");
+ 
+         BlockModelBuilder blackcherry_soul_lantern_model = models()
+             .withExistingParent("blackcherry_soul_lantern", mcLoc("block/lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", blackcherry_soul_lantern_texture);
+ 
+         BlockModelBuilder hanging_blackcherry_soul_lantern_model = models()
+             .withExistingParent("blackcherry_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", blackcherry_soul_lantern_texture);
+ 
+         getVariantBuilder(blackcherry_soul_lantern)
+             .partialState().with(LanternBlock.HANGING, true)
+             .modelForState().modelFile(hanging_blackcherry_soul_lantern_model).addModel()
+             .partialState().with(LanternBlock.HANGING, false)
+             .modelForState().modelFile(blackcherry_soul_lantern_model).addModel();
      //------------------------------------------------------------coconut-----------------------------------------------------------------------
          //regular
           LanternBlock coconut_lantern = foodblockcompatregistry.COCONUT_LANTERN.get();
@@ -1345,6 +1393,22 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .modelForState().modelFile(cherry_chain_model).rotationX(90).rotationY(90).addModel()
           .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
           .modelForState().modelFile(cherry_chain_model).rotationX(90).addModel(); 
+     //------------------------------------------------------------blackcherry-----------------------------------------------------------------------
+         ChainBlock blackcherry_chain = foodblockcompatregistry.BLACKCHERRY_CHAIN.get();
+         ResourceLocation blackcherry_chain_texture = modLoc("block/blackcherry_chain");
+         BlockModelBuilder blackcherry_chain_model = models()
+          .withExistingParent("blackcherry_chain", mcLoc("block/chain"))
+          .renderType("cutout_mipped_all")
+          .texture("all", blackcherry_chain_texture)
+          .texture("particle", blackcherry_chain_texture);
+
+          getVariantBuilder(blackcherry_chain)
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Y)
+          .modelForState().modelFile(blackcherry_chain_model).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.X)
+          .modelForState().modelFile(blackcherry_chain_model).rotationX(90).rotationY(90).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
+          .modelForState().modelFile(blackcherry_chain_model).rotationX(90).addModel(); 
      //------------------------------------------------------------coconut-----------------------------------------------------------------------
          ChainBlock coconut_chain = foodblockcompatregistry.COCONUT_CHAIN.get();
          ResourceLocation coconut_chain_texture = modLoc("block/coconut_chain");

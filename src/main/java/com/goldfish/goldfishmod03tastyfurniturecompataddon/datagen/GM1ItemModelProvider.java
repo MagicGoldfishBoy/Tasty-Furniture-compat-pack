@@ -293,6 +293,19 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("blackcherry_sign_item", mcLoc("item/generated")).texture("layer0", "item/blackcherry_sign");
        //trapdoor
        withExistingParent("blackcherry_trapdoor_item", modLoc("block/blackcherry_trapdoor_trapdoor_bottom"));
+       //lamp
+       withExistingParent("blackcherry_lamp_item", modLoc("block/blackcherry_lamp"));
+       //carpet
+       ResourceLocation blackcherry_carpet_texture = modLoc("block/blackcherry_carpet");
+       carpet("blackcherry_carpet_item", blackcherry_carpet_texture);
+       //lantern
+        //regular
+          withExistingParent("blackcherry_lantern_item", modLoc("block/blackcherry_lantern"));
+        //soul
+          withExistingParent("blackcherry_soul_lantern_item", modLoc("block/blackcherry_soul_lantern"));
+       //chain
+       withExistingParent("blackcherry_chain_item", modLoc("block/blackcherry_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
     //==============================================================================================================================================
     //|                                                              Coconut                                                                       |
     //==============================================================================================================================================
