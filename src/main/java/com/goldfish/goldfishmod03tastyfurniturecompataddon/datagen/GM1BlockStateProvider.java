@@ -406,6 +406,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation cherry_bars_texture = modLoc("block/cherry_bars");
           ResourceLocation cherry_bars_rim_texture = modLoc("block/cherry_block");
           paneBlockWithRenderType(cherry_bars, "cherry_bars", cherry_bars_texture, cherry_bars_rim_texture, "cutout_mipped_all"); 
+     //------------------------------------------------------------blackcherry-----------------------------------------------------------------------
+          IronBarsBlock blackcherry_bars = foodblockcompatregistry.BLACKCHERRY_BARS.get(); 
+          ResourceLocation blackcherry_bars_texture = modLoc("block/blackcherry_bars");
+          ResourceLocation blackcherry_bars_rim_texture = modLoc("block/blackcherry_block");
+          paneBlockWithRenderType(blackcherry_bars, "blackcherry_bars", blackcherry_bars_texture, blackcherry_bars_rim_texture, "cutout_mipped_all"); 
      //------------------------------------------------------------coconut-----------------------------------------------------------------------
           IronBarsBlock coconut_bars = foodblockcompatregistry.COCONUT_BARS.get(); 
           ResourceLocation coconut_bars_texture = modLoc("block/coconut_bars");
@@ -459,6 +464,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation cherry_door_top_texture = modLoc("block/cherry_door_top");
           ResourceLocation cherry_door_bottom_texture = modLoc("block/cherry_door_bottom");
           doorBlockWithRenderType(cherry_door, "cherry_door", cherry_door_top_texture, cherry_door_bottom_texture, "cutout_mipped_all"); 
+     //------------------------------------------------------------blackcherry-----------------------------------------------------------------------
+          DoorBlock blackcherry_door = foodblockcompatregistry.BLACKCHERRY_DOOR.get(); 
+          ResourceLocation blackcherry_door_top_texture = modLoc("block/blackcherry_door_top");
+          ResourceLocation blackcherry_door_bottom_texture = modLoc("block/blackcherry_door_bottom");
+          doorBlockWithRenderType(blackcherry_door, "blackcherry_door", blackcherry_door_bottom_texture, blackcherry_door_top_texture, "cutout_mipped_all"); 
      //------------------------------------------------------------coconut-----------------------------------------------------------------------
           DoorBlock coconut_door = foodblockcompatregistry.COCONUT_DOOR.get(); 
           ResourceLocation coconut_door_top_texture = modLoc("block/coconut_door_top");
@@ -509,6 +519,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ButtonBlock cherry_button = foodblockcompatregistry.CHERRY_BUTTON.get();
           ResourceLocation cherry_button_texture = modLoc("block/cherry_block");
           buttonBlock(cherry_button, cherry_button_texture);
+     //------------------------------------------------------------blackcherry-----------------------------------------------------------------------
+          ButtonBlock blackcherry_button = foodblockcompatregistry.BLACKCHERRY_BUTTON.get();
+          ResourceLocation blackcherry_button_texture = modLoc("block/blackcherry_block");
+          buttonBlock(blackcherry_button, blackcherry_button_texture);
      //------------------------------------------------------------coconut-----------------------------------------------------------------------
           ButtonBlock coconut_button = foodblockcompatregistry.COCONUT_BUTTON.get();
           ResourceLocation coconut_button_texture = modLoc("block/coconut_block");
@@ -567,6 +581,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
           FenceGateBlock cherry_gate = foodblockcompatregistry.CHERRY_GATE.get();
           ResourceLocation cherry_gate_texture = modLoc("block/cherry_block");
           fenceGateBlock(cherry_gate, cherry_gate_texture);
+     //------------------------------------------------------------blackcherry-----------------------------------------------------------------------
+       //fence
+          FenceBlock blackcherry_fence = foodblockcompatregistry.BLACKCHERRY_FENCE.get();
+          ResourceLocation blackcherry_fence_texture = modLoc("block/blackcherry_block");
+          fenceBlock(blackcherry_fence, blackcherry_fence_texture);
+       //gate
+          FenceGateBlock blackcherry_gate = foodblockcompatregistry.BLACKCHERRY_GATE.get();
+          ResourceLocation blackcherry_gate_texture = modLoc("block/blackcherry_block");
+          fenceGateBlock(blackcherry_gate, blackcherry_gate_texture);
      //------------------------------------------------------------coconut-----------------------------------------------------------------------
        //fence
           FenceBlock coconut_fence = foodblockcompatregistry.COCONUT_FENCE.get();
@@ -645,6 +668,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           PressurePlateBlock cherry_pressure_plate = foodblockcompatregistry.CHERRY_PRESSURE_PLATE.get();
           ResourceLocation cherry_pressure_plate_texture = modLoc("block/cherry_block");
           pressurePlateBlock(cherry_pressure_plate, cherry_pressure_plate_texture);
+     //------------------------------------------------------------blackcherry-----------------------------------------------------------------------
+          PressurePlateBlock blackcherry_pressure_plate = foodblockcompatregistry.BLACKCHERRY_PRESSURE_PLATE.get();
+          ResourceLocation blackcherry_pressure_plate_texture = modLoc("block/blackcherry_block");
+          pressurePlateBlock(blackcherry_pressure_plate, blackcherry_pressure_plate_texture);
      //------------------------------------------------------------coconut-----------------------------------------------------------------------
           PressurePlateBlock coconut_pressure_plate = foodblockcompatregistry.COCONUT_PRESSURE_PLATE.get();
           ResourceLocation coconut_pressure_plate_texture = modLoc("block/coconut_block");

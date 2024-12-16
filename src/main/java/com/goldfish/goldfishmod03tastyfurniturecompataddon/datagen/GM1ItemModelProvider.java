@@ -277,6 +277,18 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //bricks stairs
        stairs("blackcherry_bricks_stairs_item", modLoc("block/blackcherry_bricks_block"), modLoc("block/blackcherry_bricks_block"), 
        modLoc("block/blackcherry_bricks_block"));
+       //bars
+       withExistingParent("blackcherry_bars_item", mcLoc("item/generated")).texture("layer0", "block/blackcherry_bars");
+       //doors
+       withExistingParent("blackcherry_door_item", mcLoc("item/generated")).texture("layer0", "item/blackcherry_door_item");
+       //button
+       buttonInventory("blackcherry_button_item", modLoc("block/blackcherry_block"));
+       //fence
+       fenceInventory("blackcherry_fence_item", modLoc("block/blackcherry_block"));
+       //gate
+       withExistingParent("blackcherry_gate_item", modLoc("block/blackcherry_gate"));
+       //pressure plate
+       pressurePlate("blackcherry_pressure_plate_item", modLoc("block/blackcherry_block"));
     //==============================================================================================================================================
     //|                                                              Coconut                                                                       |
     //==============================================================================================================================================
