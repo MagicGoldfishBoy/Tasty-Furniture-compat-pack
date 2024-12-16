@@ -323,6 +323,13 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("blackcherry_stone_path_item", modLoc("block/blackcherry_stone_path"));
        //barrel
        withExistingParent("blackcherry_barrel_item", modLoc("block/blackcherry_barrel_model_closed"));
+       //chair
+       withExistingParent("blackcherry_chair_item", modLoc("block/blackcherry_chair"));
+       //bed
+       withExistingParent("blackcherry_bed_item", modLoc("block/blackcherry_bed"));
+       //cabinet
+       withExistingParent("small_blackcherry_cabinet_item", modLoc("block/blackcherry_cabinet"));
+       withExistingParent("medium_blackcherry_cabinet_item", modLoc("block/medium_blackcherry_cabinet"));
     //==============================================================================================================================================
     //|                                                              Coconut                                                                       |
     //==============================================================================================================================================
