@@ -12,6 +12,8 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodBarrelEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.mediumFoodContainerEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.smallFoodContainerEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.TastyFurnitureCompatAddon;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.blackcherrySign;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.blackcherryWallSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.cherryFurnace;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.cherrySign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.cherryWallSign;
@@ -42,6 +44,7 @@ import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.orangeWallSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.pecanFurnace;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.pecanSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.pecanWallSign;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.blackcherrySignEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.cherryFurnaceEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.cherrySignEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.coconutFurnaceEntity;
@@ -1256,6 +1259,51 @@ public class foodblockcompatregistry {
          foodblockcompatregistry.CHERRY_STANDING_SIGN.get()
      ).build(null)
    );
+ //--------------------------------------------------------------------------------------Blackcherry---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Block, blackcherrySign> BLACKCHERRY_SIGN = FOODBLOCK.register("blackcherry_sign",
+   () -> new blackcherrySign(
+     BlockBehaviour.Properties.of()
+         .mapColor(MapColor.WOOD)
+         .forceSolidOn()
+         .instrument(NoteBlockInstrument.BASS)
+         .noCollission()
+         .strength(1.0F)
+         .ignitedByLava(),
+         foodmaterialtypecompatregistry.BLACKCHERRYWOODMAT
+   ));
+      public static final DeferredHolder<Block, blackcherryWallSign> BLACKCHERRY_WALL_SIGN = FOODBLOCK.register("blackcherry_wall_sign",
+   () -> new blackcherryWallSign(
+       BlockBehaviour.Properties.of()
+       .mapColor(MapColor.WOOD)
+       .forceSolidOn()
+       .instrument(NoteBlockInstrument.BASS)
+       .noCollission()
+       .strength(1.0F)
+       .ignitedByLava()
+       .randomTicks(),
+       foodmaterialtypecompatregistry.BLACKCHERRYWOODMAT
+   ));
+   public static final DeferredHolder<Block, blackcherrySign> BLACKCHERRY_STANDING_SIGN = FOODBLOCK.register("blackcherry_standing_sign",
+   () -> new blackcherrySign(
+       BlockBehaviour.Properties.of()
+       .mapColor(MapColor.WOOD)
+       .forceSolidOn()
+       .instrument(NoteBlockInstrument.BASS)
+       .noCollission()
+       .strength(1.0F)
+       .ignitedByLava()
+       .randomTicks(),
+       foodmaterialtypecompatregistry.BLACKCHERRYWOODMAT
+   ));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<blackcherrySignEntity>> BLACKCHERRY_SIGN_ENTITY = FOODBLOCKENTITY.register(
+     "blackcherry_sign_entity",
+     () -> BlockEntityType.Builder.of(
+         blackcherrySignEntity::new,
+         foodblockcompatregistry.BLACKCHERRY_SIGN.get(),
+         foodblockcompatregistry.BLACKCHERRY_WALL_SIGN.get(),
+         foodblockcompatregistry.BLACKCHERRY_STANDING_SIGN.get()
+     ).build(null)
+   );
  //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Block, coconutSign> COCONUT_SIGN = FOODBLOCK.register("coconut_sign",
    () -> new coconutSign(
@@ -1590,6 +1638,13 @@ public class foodblockcompatregistry {
      ));
  //----------------------------------------------------------------------------------------Cherry-----------------------------------------------------------------------------------------------
      public static final DeferredHolder<Block, TrapDoorBlock> CHERRY_TRAPDOOR = FOODBLOCK.register("cherry_trapdoor", () -> new TrapDoorBlock(foodmaterialtypecompatregistry.PLANT, 
+     BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     ));
+ //----------------------------------------------------------------------------------------Blackcherry-----------------------------------------------------------------------------------------------
+     public static final DeferredHolder<Block, TrapDoorBlock> BLACKCHERRY_TRAPDOOR = FOODBLOCK.register("blackcherry_trapdoor", () -> new TrapDoorBlock(foodmaterialtypecompatregistry.PLANT, 
      BlockBehaviour.Properties.of()
      .destroyTime(1.75f)
      .explosionResistance(9.5f)

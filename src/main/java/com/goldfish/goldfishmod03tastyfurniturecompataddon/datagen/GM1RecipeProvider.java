@@ -2370,6 +2370,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('B', Items.STICK)
         .unlockedBy("has_cherry_ingot",  has(ingotcompatregistry.CHERRY_INGOT.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Blackcherry---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BLACKCHERRY_SIGN_ITEM.get(), 3)
+        .pattern("AAA")
+        .pattern("AAA")
+        .pattern(" B ")
+        .define('A', ingotcompatregistry.BLACKCHERRY_INGOT.get())
+        .define('B', Items.STICK)
+        .unlockedBy("has_blackcherry_ingot",  has(ingotcompatregistry.BLACKCHERRY_INGOT.get()))
+        .save(output);
   //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.COCONUT_SIGN_ITEM.get(), 3)
         .pattern("AAA")
@@ -2458,6 +2467,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .pattern("AAA")
         .define('A', ingotcompatregistry.CHERRY_INGOT.get())
         .unlockedBy("has_cherry_ingot", has(ingotcompatregistry.CHERRY_INGOT.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Blackcherry---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BLACKCHERRY_TRAPDOOR_ITEM.get())
+        .pattern("   ")
+        .pattern("AAA")
+        .pattern("AAA")
+        .define('A', ingotcompatregistry.BLACKCHERRY_INGOT.get())
+        .unlockedBy("has_blackcherry_ingot", has(ingotcompatregistry.BLACKCHERRY_INGOT.get()))
         .save(output);
   //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.COCONUT_TRAPDOOR_ITEM.get())

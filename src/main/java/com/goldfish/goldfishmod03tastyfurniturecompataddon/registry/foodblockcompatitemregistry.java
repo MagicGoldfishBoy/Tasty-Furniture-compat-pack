@@ -550,6 +550,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, SignItem> CHERRY_SIGN_ITEM = FOODBLOCKITEM.register("cherry_sign_item",
    () -> new SignItem(new SignItem.Properties(), foodblockcompatregistry.CHERRY_STANDING_SIGN.get(), foodblockcompatregistry.CHERRY_WALL_SIGN.get()));
+ //--------------------------------------------------------------------------------------Blackcherry---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, SignItem> BLACKCHERRY_SIGN_ITEM = FOODBLOCKITEM.register("blackcherry_sign_item",
+   () -> new SignItem(new SignItem.Properties(), foodblockcompatregistry.BLACKCHERRY_STANDING_SIGN.get(), foodblockcompatregistry.BLACKCHERRY_WALL_SIGN.get()));
  //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, SignItem> COCONUT_SIGN_ITEM = FOODBLOCKITEM.register("coconut_sign_item",
    () -> new SignItem(new SignItem.Properties(), foodblockcompatregistry.COCONUT_STANDING_SIGN.get(), foodblockcompatregistry.COCONUT_WALL_SIGN.get()));
@@ -583,6 +586,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
      public static final DeferredHolder<Item, BlockItem> CHERRY_TRAPDOOR_ITEM = FOODBLOCKITEM.register("cherry_trapdoor_item",
      () -> new BlockItem(foodblockcompatregistry.CHERRY_TRAPDOOR.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Blackcherry---------------------------------------------------------------------------------------------
+     public static final DeferredHolder<Item, BlockItem> BLACKCHERRY_TRAPDOOR_ITEM = FOODBLOCKITEM.register("blackcherry_trapdoor_item",
+     () -> new BlockItem(foodblockcompatregistry.BLACKCHERRY_TRAPDOOR.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
      public static final DeferredHolder<Item, BlockItem> COCONUT_TRAPDOOR_ITEM = FOODBLOCKITEM.register("coconut_trapdoor_item",
      () -> new BlockItem(foodblockcompatregistry.COCONUT_TRAPDOOR.get(), new BlockItem.Properties()));

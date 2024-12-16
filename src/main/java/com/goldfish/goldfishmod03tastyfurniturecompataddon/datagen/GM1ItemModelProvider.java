@@ -289,6 +289,10 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("blackcherry_gate_item", modLoc("block/blackcherry_gate"));
        //pressure plate
        pressurePlate("blackcherry_pressure_plate_item", modLoc("block/blackcherry_block"));
+       //sign
+       withExistingParent("blackcherry_sign_item", mcLoc("item/generated")).texture("layer0", "item/blackcherry_sign");
+       //trapdoor
+       withExistingParent("blackcherry_trapdoor_item", modLoc("block/blackcherry_trapdoor_trapdoor_bottom"));
     //==============================================================================================================================================
     //|                                                              Coconut                                                                       |
     //==============================================================================================================================================

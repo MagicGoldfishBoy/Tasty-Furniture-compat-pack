@@ -718,6 +718,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
            WallSignBlock cherry_wall_sign = foodblockcompatregistry.CHERRY_WALL_SIGN.get();
            ResourceLocation cherry_sign_texture = modLoc("block/cherry_block");
            signBlock(cherry_sign, cherry_wall_sign, cherry_sign_texture);
+     //------------------------------------------------------------blackcherry-----------------------------------------------------------------------
+           StandingSignBlock blackcherry_sign = foodblockcompatregistry.BLACKCHERRY_STANDING_SIGN.get();
+           WallSignBlock blackcherry_wall_sign = foodblockcompatregistry.BLACKCHERRY_WALL_SIGN.get();
+           ResourceLocation blackcherry_sign_texture = modLoc("block/blackcherry_block");
+           signBlock(blackcherry_sign, blackcherry_wall_sign, blackcherry_sign_texture);
      //------------------------------------------------------------coconut-----------------------------------------------------------------------
            StandingSignBlock coconut_sign = foodblockcompatregistry.COCONUT_STANDING_SIGN.get();
            WallSignBlock coconut_wall_sign = foodblockcompatregistry.COCONUT_WALL_SIGN.get();
@@ -768,6 +773,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           TrapDoorBlock cherry_trapdoor = foodblockcompatregistry.CHERRY_TRAPDOOR.get(); 
           ResourceLocation cherry_trapdoor_texture = modLoc("block/cherry_block");
           trapdoorBlockWithRenderType(cherry_trapdoor, "cherry_trapdoor", cherry_trapdoor_texture, false, cherry_trapdoor_texture);
+     //------------------------------------------------------------blackcherry-----------------------------------------------------------------------
+          TrapDoorBlock blackcherry_trapdoor = foodblockcompatregistry.BLACKCHERRY_TRAPDOOR.get(); 
+          ResourceLocation blackcherry_trapdoor_texture = modLoc("block/blackcherry_block");
+          trapdoorBlockWithRenderType(blackcherry_trapdoor, "blackcherry_trapdoor", blackcherry_trapdoor_texture, false, blackcherry_trapdoor_texture);
      //------------------------------------------------------------coconut-----------------------------------------------------------------------
           TrapDoorBlock coconut_trapdoor = foodblockcompatregistry.COCONUT_TRAPDOOR.get(); 
           ResourceLocation coconut_trapdoor_texture = modLoc("block/coconut_block");
