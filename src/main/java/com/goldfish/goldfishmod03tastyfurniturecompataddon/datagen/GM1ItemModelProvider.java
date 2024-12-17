@@ -913,6 +913,23 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         withExistingParent("almond_gate_item", modLoc("block/almond_gate"));
        //pressure plate
         pressurePlate("almond_pressure_plate_item", modLoc("block/almond_block"));
+       //sign
+       withExistingParent("almond_sign_item", mcLoc("item/generated")).texture("layer0", "item/almond_sign");
+       //trapdoor
+       withExistingParent("almond_trapdoor_item", modLoc("block/almond_trapdoor_trapdoor_bottom"));
+       //lamp
+       withExistingParent("almond_lamp_item", modLoc("block/almond_lamp"));
+       //carpet
+       ResourceLocation almond_carpet_texture = modLoc("block/almond_carpet");
+       carpet("almond_carpet_item", almond_carpet_texture);
+       //lantern
+        //regular
+        withExistingParent("almond_lantern_item", modLoc("block/almond_lantern"));
+        //soul
+          withExistingParent("almond_soul_lantern_item", modLoc("block/almond_soul_lantern"));
+       //chain
+       withExistingParent("almond_chain_item", modLoc("block/almond_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
   }
 }
 

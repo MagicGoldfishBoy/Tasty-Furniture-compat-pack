@@ -2646,6 +2646,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('B', Items.STICK)
         .unlockedBy("has_pecan_ingot",  has(ingotcompatregistry.PECAN_INGOT.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Almond---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ALMOND_SIGN_ITEM.get(), 3)
+        .pattern("AAA")
+        .pattern("AAA")
+        .pattern(" B ")
+        .define('A', ingotcompatregistry.ALMOND_INGOT.get())
+        .define('B', Items.STICK)
+        .unlockedBy("has_almond_ingot",  has(ingotcompatregistry.ALMOND_INGOT.get()))
+        .save(output);
       }
  protected void buildTrapDoorRecipes(RecipeOutput output) {
   //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
@@ -2735,6 +2744,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .pattern("AAA")
         .define('A', ingotcompatregistry.PECAN_INGOT.get())
         .unlockedBy("has_pecan_ingot", has(ingotcompatregistry.PECAN_INGOT.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Almond---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ALMOND_TRAPDOOR_ITEM.get())
+        .pattern("   ")
+        .pattern("AAA")
+        .pattern("AAA")
+        .define('A', ingotcompatregistry.ALMOND_INGOT.get())
+        .unlockedBy("has_almond_ingot", has(ingotcompatregistry.ALMOND_INGOT.get()))
         .save(output);
       }
  protected void buildLampRecipes(RecipeOutput output) {
@@ -2837,6 +2854,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('B', foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get())
         .unlockedBy("has_glow_berry_block", has(foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Almond---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ALMOND_LAMP_ITEM.get())
+        .pattern("AAA")
+        .pattern("ABA")
+        .pattern("AAA")
+        .define('A', ingotcompatregistry.ALMOND_INGOT.get())
+        .define('B', foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get())
+        .unlockedBy("has_glow_berry_block", has(foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get()))
+        .save(output);
       }
  protected void buildCarpetRecipes(RecipeOutput output) {
   //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
@@ -2926,6 +2952,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .pattern("AA ")
         .define('A', nuggetcompatregistry.PECAN_NUGGET.get())
         .unlockedBy("has_pecan_nugget", has(nuggetcompatregistry.PECAN_NUGGET.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Almond---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ALMOND_CARPET_ITEM.get(), 3)
+        .pattern("   ")
+        .pattern("AA ")
+        .pattern("AA ")
+        .define('A', nuggetcompatregistry.ALMOND_NUGGET.get())
+        .unlockedBy("has_almond_nugget", has(nuggetcompatregistry.ALMOND_NUGGET.get()))
         .save(output);
       }
  protected void buildLanternRecipes(RecipeOutput output) {
@@ -3138,6 +3172,25 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', Items.SOUL_TORCH)
             .unlockedBy("has_pecan_nugget", has(nuggetcompatregistry.PECAN_NUGGET.get()))
             .save(output);
+  //--------------------------------------------------------------------------------------Almond---------------------------------------------------------------------------------------------
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ALMOND_LANTERN_ITEM.get())
+            .pattern("AAA")
+            .pattern("ABA")
+            .pattern("AAA")
+            .define('A', nuggetcompatregistry.ALMOND_NUGGET.get())
+            .define('B', Items.TORCH)
+            .unlockedBy("has_almond_nugget", has(nuggetcompatregistry.ALMOND_NUGGET.get()))
+            .save(output);
+          //soul
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ALMOND_SOUL_LANTERN_ITEM.get())
+            .pattern("AAA")
+            .pattern("ABA")
+            .pattern("AAA")
+            .define('A', nuggetcompatregistry.ALMOND_NUGGET.get())
+            .define('B', Items.SOUL_TORCH)
+            .unlockedBy("has_almond_nugget", has(nuggetcompatregistry.ALMOND_NUGGET.get()))
+            .save(output);
       }
  protected void buildChainRecipes(RecipeOutput output) {
   //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
@@ -3238,6 +3291,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', nuggetcompatregistry.PECAN_NUGGET.get())
         .define('B', ingotcompatregistry.PECAN_INGOT.get())
         .unlockedBy("has_pecan_ingot", has(ingotcompatregistry.PECAN_INGOT.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Almond---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ALMOND_CHAIN_ITEM.get())
+        .pattern(" A ")
+        .pattern(" B ")
+        .pattern(" A ")
+        .define('A', nuggetcompatregistry.ALMOND_NUGGET.get())
+        .define('B', ingotcompatregistry.ALMOND_INGOT.get())
+        .unlockedBy("has_almond_ingot", has(ingotcompatregistry.ALMOND_INGOT.get()))
         .save(output);
       }
  protected void buildLadderRecipes(RecipeOutput output) {

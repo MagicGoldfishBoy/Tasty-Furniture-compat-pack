@@ -619,6 +619,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, SignItem> PECAN_SIGN_ITEM = FOODBLOCKITEM.register("pecan_sign_item",
    () -> new SignItem(new SignItem.Properties(), foodblockcompatregistry.PECAN_STANDING_SIGN.get(), foodblockcompatregistry.PECAN_WALL_SIGN.get()));
+ //--------------------------------------------------------------------------------------Almond---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, SignItem> ALMOND_SIGN_ITEM = FOODBLOCKITEM.register("almond_sign_item",
+   () -> new SignItem(new SignItem.Properties(), foodblockcompatregistry.ALMOND_STANDING_SIGN.get(), foodblockcompatregistry.ALMOND_WALL_SIGN.get()));
 //==============================================================================================================================================================================================
 //                                                                                       Trap Doors
 //==============================================================================================================================================================================================
@@ -655,6 +658,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
      public static final DeferredHolder<Item, BlockItem> PECAN_TRAPDOOR_ITEM = FOODBLOCKITEM.register("pecan_trapdoor_item",
      () -> new BlockItem(foodblockcompatregistry.PECAN_TRAPDOOR.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Almond---------------------------------------------------------------------------------------------
+     public static final DeferredHolder<Item, BlockItem> ALMOND_TRAPDOOR_ITEM = FOODBLOCKITEM.register("almond_trapdoor_item",
+     () -> new BlockItem(foodblockcompatregistry.ALMOND_TRAPDOOR.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                         Lamps
 //==============================================================================================================================================================================================
@@ -691,6 +697,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> PECAN_LAMP_ITEM = FOODBLOCKITEM.register("pecan_lamp_item",
     () -> new BlockItem(foodblockcompatregistry.PECAN_LAMP.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Almond---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> ALMOND_LAMP_ITEM = FOODBLOCKITEM.register("almond_lamp_item",
+    () -> new BlockItem(foodblockcompatregistry.ALMOND_LAMP.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                        Carpets
 //==============================================================================================================================================================================================
@@ -727,6 +736,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> PECAN_CARPET_ITEM = FOODBLOCKITEM.register("pecan_carpet_item",
     () -> new BlockItem(foodblockcompatregistry.PECAN_CARPET.get(), new BlockItem.Properties())); 
+ //--------------------------------------------------------------------------------------Almond---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> ALMOND_CARPET_ITEM = FOODBLOCKITEM.register("almond_carpet_item",
+    () -> new BlockItem(foodblockcompatregistry.ALMOND_CARPET.get(), new BlockItem.Properties())); 
 //==============================================================================================================================================================================================
 //                                                                                        Lanterns
 //==============================================================================================================================================================================================
@@ -807,6 +819,13 @@ public class foodblockcompatitemregistry {
     //soul
       public static final DeferredHolder<Item, BlockItem> PECAN_SOUL_LANTERN_ITEM = FOODBLOCKITEM.register("pecan_soul_lantern_item",
       () -> new BlockItem(foodblockcompatregistry.PECAN_SOUL_LANTERN.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Almond---------------------------------------------------------------------------------------------
+    //regular
+      public static final DeferredHolder<Item, BlockItem> ALMOND_LANTERN_ITEM = FOODBLOCKITEM.register("almond_lantern_item",
+      () -> new BlockItem(foodblockcompatregistry.ALMOND_LANTERN.get(), new BlockItem.Properties()));
+    //soul
+      public static final DeferredHolder<Item, BlockItem> ALMOND_SOUL_LANTERN_ITEM = FOODBLOCKITEM.register("almond_soul_lantern_item",
+      () -> new BlockItem(foodblockcompatregistry.ALMOND_SOUL_LANTERN.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                        Chains
 //==============================================================================================================================================================================================
@@ -843,6 +862,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> PECAN_CHAIN_ITEM = FOODBLOCKITEM.register("pecan_chain_item",
     () -> new BlockItem(foodblockcompatregistry.PECAN_CHAIN.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Almond---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> ALMOND_CHAIN_ITEM = FOODBLOCKITEM.register("almond_chain_item",
+    () -> new BlockItem(foodblockcompatregistry.ALMOND_CHAIN.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                        Ladders
 //==============================================================================================================================================================================================

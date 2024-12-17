@@ -814,6 +814,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
            WallSignBlock pecan_wall_sign = foodblockcompatregistry.PECAN_WALL_SIGN.get();
            ResourceLocation pecan_sign_texture = modLoc("block/pecan_block");
            signBlock(pecan_sign, pecan_wall_sign, pecan_sign_texture);
+     //------------------------------------------------------------almond-----------------------------------------------------------------------
+           StandingSignBlock almond_sign = foodblockcompatregistry.ALMOND_STANDING_SIGN.get();
+           WallSignBlock almond_wall_sign = foodblockcompatregistry.ALMOND_WALL_SIGN.get();
+           ResourceLocation almond_sign_texture = modLoc("block/almond_block");
+           signBlock(almond_sign, almond_wall_sign, almond_sign_texture);
     //==============================================================================================================================================
     //|                                                            Trap Doors                                                                      |
     //==============================================================================================================================================
@@ -861,6 +866,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           TrapDoorBlock pecan_trapdoor = foodblockcompatregistry.PECAN_TRAPDOOR.get(); 
           ResourceLocation pecan_trapdoor_texture = modLoc("block/pecan_block");
           trapdoorBlockWithRenderType(pecan_trapdoor, "pecan_trapdoor", pecan_trapdoor_texture, false, pecan_trapdoor_texture);
+     //------------------------------------------------------------almond-----------------------------------------------------------------------
+          TrapDoorBlock almond_trapdoor = foodblockcompatregistry.ALMOND_TRAPDOOR.get(); 
+          ResourceLocation almond_trapdoor_texture = modLoc("block/almond_block");
+          trapdoorBlockWithRenderType(almond_trapdoor, "almond_trapdoor", almond_trapdoor_texture, false, almond_trapdoor_texture);
     //==============================================================================================================================================
     //|                                                               Lamps                                                                        |
     //==============================================================================================================================================
@@ -897,6 +906,9 @@ public class GM1BlockStateProvider extends BlockStateProvider
      //------------------------------------------------------------pecan-----------------------------------------------------------------------
           Block pecan_lamp = foodblockcompatregistry.PECAN_LAMP.get();
           simpleBlock(pecan_lamp);
+     //------------------------------------------------------------almond-----------------------------------------------------------------------
+          Block almond_lamp = foodblockcompatregistry.ALMOND_LAMP.get();
+          simpleBlock(almond_lamp);
     //==============================================================================================================================================
     //|                                                              Carpets                                                                       |
     //==============================================================================================================================================
@@ -966,6 +978,12 @@ public class GM1BlockStateProvider extends BlockStateProvider
           BlockModelBuilder pecan_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(pecan_carpet).getPath(), mcLoc("block/carpet"))
           .texture("wool", pecan_carpet_texture);
           simpleBlock(pecan_carpet, new ModelFile.UncheckedModelFile(pecan_carpet_model.getLocation()));
+     //------------------------------------------------------------almond-----------------------------------------------------------------------
+          CarpetBlock almond_carpet = foodblockcompatregistry.ALMOND_CARPET.get();
+          ResourceLocation almond_carpet_texture = modLoc("block/almond_carpet");
+          BlockModelBuilder almond_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(almond_carpet).getPath(), mcLoc("block/carpet"))
+          .texture("wool", almond_carpet_texture);
+          simpleBlock(almond_carpet, new ModelFile.UncheckedModelFile(almond_carpet_model.getLocation()));
     //==============================================================================================================================================
     //|                                                             Lanterns                                                                       |
     //==============================================================================================================================================
@@ -1398,6 +1416,45 @@ public class GM1BlockStateProvider extends BlockStateProvider
              .modelForState().modelFile(hanging_pecan_soul_lantern_model).addModel()
              .partialState().with(LanternBlock.HANGING, false)
              .modelForState().modelFile(pecan_soul_lantern_model).addModel();
+     //------------------------------------------------------------almond-----------------------------------------------------------------------
+         //regular
+          LanternBlock almond_lantern = foodblockcompatregistry.ALMOND_LANTERN.get();
+          ResourceLocation almond_lantern_texture = modLoc("block/almond_lantern");
+  
+          BlockModelBuilder almond_lantern_model = models()
+              .withExistingParent("almond_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", almond_lantern_texture);
+  
+          BlockModelBuilder hanging_almond_lantern_model = models()
+              .withExistingParent("almond_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", almond_lantern_texture);
+  
+          getVariantBuilder(almond_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_almond_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(almond_lantern_model).addModel();
+         //soul
+         LanternBlock almond_soul_lantern = foodblockcompatregistry.ALMOND_SOUL_LANTERN.get();
+         ResourceLocation almond_soul_lantern_texture = modLoc("block/almond_soul_lantern");
+ 
+         BlockModelBuilder almond_soul_lantern_model = models()
+             .withExistingParent("almond_soul_lantern", mcLoc("block/lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", almond_soul_lantern_texture);
+ 
+         BlockModelBuilder hanging_almond_soul_lantern_model = models()
+             .withExistingParent("almond_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", almond_soul_lantern_texture);
+ 
+         getVariantBuilder(almond_soul_lantern)
+             .partialState().with(LanternBlock.HANGING, true)
+             .modelForState().modelFile(hanging_almond_soul_lantern_model).addModel()
+             .partialState().with(LanternBlock.HANGING, false)
+             .modelForState().modelFile(almond_soul_lantern_model).addModel();
     //==============================================================================================================================================
     //|                                                              Chains                                                                        |
     //==============================================================================================================================================
@@ -1577,6 +1634,22 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .modelForState().modelFile(pecan_chain_model).rotationX(90).rotationY(90).addModel()
           .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
           .modelForState().modelFile(pecan_chain_model).rotationX(90).addModel(); 
+     //------------------------------------------------------------almond-----------------------------------------------------------------------
+         ChainBlock almond_chain = foodblockcompatregistry.ALMOND_CHAIN.get();
+         ResourceLocation almond_chain_texture = modLoc("block/almond_chain");
+         BlockModelBuilder almond_chain_model = models()
+          .withExistingParent("almond_chain", mcLoc("block/chain"))
+          .renderType("cutout_mipped_all")
+          .texture("all", almond_chain_texture)
+          .texture("particle", almond_chain_texture);
+
+          getVariantBuilder(almond_chain)
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Y)
+          .modelForState().modelFile(almond_chain_model).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.X)
+          .modelForState().modelFile(almond_chain_model).rotationX(90).rotationY(90).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
+          .modelForState().modelFile(almond_chain_model).rotationX(90).addModel(); 
     //==============================================================================================================================================
     //|                                                             Ladders                                                                        |
     //==============================================================================================================================================
