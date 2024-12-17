@@ -475,6 +475,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation pecan_bars_texture = modLoc("block/pecan_bars");
           ResourceLocation pecan_bars_rim_texture = modLoc("block/pecan_block");
           paneBlockWithRenderType(pecan_bars, "pecan_bars", pecan_bars_texture, pecan_bars_rim_texture, "cutout_mipped_all"); 
+     //------------------------------------------------------------almond-----------------------------------------------------------------------
+          IronBarsBlock almond_bars = foodblockcompatregistry.ALMOND_BARS.get(); 
+          ResourceLocation almond_bars_texture = modLoc("block/almond_bars");
+          ResourceLocation almond_bars_rim_texture = modLoc("block/almond_block");
+          paneBlockWithRenderType(almond_bars, "almond_bars", almond_bars_texture, almond_bars_rim_texture, "cutout_mipped_all"); 
     //==============================================================================================================================================
     //|                                                               Door                                                                         |
     //==============================================================================================================================================
@@ -533,6 +538,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation pecan_door_top_texture = modLoc("block/pecan_door_top");
           ResourceLocation pecan_door_bottom_texture = modLoc("block/pecan_door_bottom");
           doorBlockWithRenderType(pecan_door, "pecan_door", pecan_door_bottom_texture, pecan_door_top_texture, "cutout_mipped_all"); 
+     //------------------------------------------------------------almond-----------------------------------------------------------------------
+          DoorBlock almond_door = foodblockcompatregistry.ALMOND_DOOR.get(); 
+          ResourceLocation almond_door_top_texture = modLoc("block/almond_door_top");
+          ResourceLocation almond_door_bottom_texture = modLoc("block/almond_door_bottom");
+          doorBlockWithRenderType(almond_door, "almond_door", almond_door_bottom_texture, almond_door_top_texture, "cutout_mipped_all"); 
     //==============================================================================================================================================
     //|                                                              Button                                                                        |
     //==============================================================================================================================================
@@ -580,6 +590,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ButtonBlock pecan_button = foodblockcompatregistry.PECAN_BUTTON.get();
           ResourceLocation pecan_button_texture = modLoc("block/pecan_block");
           buttonBlock(pecan_button, pecan_button_texture);
+     //------------------------------------------------------------almond-----------------------------------------------------------------------
+          ButtonBlock almond_button = foodblockcompatregistry.ALMOND_BUTTON.get();
+          ResourceLocation almond_button_texture = modLoc("block/almond_block");
+          buttonBlock(almond_button, almond_button_texture);
     //==============================================================================================================================================
     //|                                                              Fences                                                                        |
     //==============================================================================================================================================
@@ -682,6 +696,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
           FenceGateBlock pecan_gate = foodblockcompatregistry.PECAN_GATE.get();
           ResourceLocation pecan_gate_texture = modLoc("block/pecan_block");
           fenceGateBlock(pecan_gate, pecan_gate_texture);
+     //------------------------------------------------------------almond-----------------------------------------------------------------------
+       //fence
+          FenceBlock almond_fence = foodblockcompatregistry.ALMOND_FENCE.get();
+          ResourceLocation almond_fence_texture = modLoc("block/almond_block");
+          fenceBlock(almond_fence, almond_fence_texture);
+       //gate
+          FenceGateBlock almond_gate = foodblockcompatregistry.ALMOND_GATE.get();
+          ResourceLocation almond_gate_texture = modLoc("block/almond_block");
+          fenceGateBlock(almond_gate, almond_gate_texture);
     //==============================================================================================================================================
     //|                                                          Pressure Plates                                                                   |
     //==============================================================================================================================================
@@ -729,6 +752,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           PressurePlateBlock pecan_pressure_plate = foodblockcompatregistry.PECAN_PRESSURE_PLATE.get();
           ResourceLocation pecan_pressure_plate_texture = modLoc("block/pecan_block");
           pressurePlateBlock(pecan_pressure_plate, pecan_pressure_plate_texture);
+     //------------------------------------------------------------almond-----------------------------------------------------------------------
+          PressurePlateBlock almond_pressure_plate = foodblockcompatregistry.ALMOND_PRESSURE_PLATE.get();
+          ResourceLocation almond_pressure_plate_texture = modLoc("block/almond_block");
+          pressurePlateBlock(almond_pressure_plate, almond_pressure_plate_texture);
     //==============================================================================================================================================
     //|                                                               Signs                                                                        |
     //==============================================================================================================================================

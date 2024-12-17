@@ -120,6 +120,11 @@ public class foodmaterialtypecompatregistry {
         "pecan_wood_mat", 
         PLANT) 
     );
+    public static final WoodType ALMONDWOODMAT = WoodType.register(
+     new WoodType(
+        "almond_wood_mat", 
+        PLANT) 
+    );
     public static final WoodType LEMONWOODMAT = WoodType.register(
      new WoodType(
         "lemon_wood_mat", 

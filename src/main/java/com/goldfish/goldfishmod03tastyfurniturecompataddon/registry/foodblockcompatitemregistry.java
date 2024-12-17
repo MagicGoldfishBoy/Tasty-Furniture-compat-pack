@@ -385,6 +385,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> PECAN_BARS_ITEM = FOODBLOCKITEM.register("pecan_bars_item",
    () -> new BlockItem(foodblockcompatregistry.PECAN_BARS.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Almond---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, BlockItem> ALMOND_BARS_ITEM = FOODBLOCKITEM.register("almond_bars_item",
+   () -> new BlockItem(foodblockcompatregistry.ALMOND_BARS.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                         Doors
 //==============================================================================================================================================================================================
@@ -421,6 +424,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> PECAN_DOOR_ITEM = FOODBLOCKITEM.register("pecan_door_item",
    () -> new BlockItem(foodblockcompatregistry.PECAN_DOOR.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Almond---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, BlockItem> ALMOND_DOOR_ITEM = FOODBLOCKITEM.register("almond_door_item",
+   () -> new BlockItem(foodblockcompatregistry.ALMOND_DOOR.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                         Buttons
 //==============================================================================================================================================================================================
@@ -457,6 +463,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> PECAN_BUTTON_ITEM = FOODBLOCKITEM.register("pecan_button_item",
    () -> new BlockItem(foodblockcompatregistry.PECAN_BUTTON.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Almond---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, BlockItem> ALMOND_BUTTON_ITEM = FOODBLOCKITEM.register("almond_button_item",
+   () -> new BlockItem(foodblockcompatregistry.ALMOND_BUTTON.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                         Fences
 //==============================================================================================================================================================================================
@@ -493,6 +502,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> PECAN_FENCE_ITEM = FOODBLOCKITEM.register("pecan_fence_item",
    () -> new BlockItem(foodblockcompatregistry.PECAN_FENCE.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Almond---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, BlockItem> ALMOND_FENCE_ITEM = FOODBLOCKITEM.register("almond_fence_item",
+   () -> new BlockItem(foodblockcompatregistry.ALMOND_FENCE.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                         Gates
 //==============================================================================================================================================================================================
@@ -529,6 +541,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> PECAN_GATE_ITEM = FOODBLOCKITEM.register("pecan_gate_item",
    () -> new BlockItem(foodblockcompatregistry.PECAN_GATE.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Almond---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, BlockItem> ALMOND_GATE_ITEM = FOODBLOCKITEM.register("almond_gate_item",
+   () -> new BlockItem(foodblockcompatregistry.ALMOND_GATE.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                     Pressure Plates
 //==============================================================================================================================================================================================
@@ -565,6 +580,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> PECAN_PRESSURE_PLATE_ITEM = FOODBLOCKITEM.register("pecan_pressure_plate_item",
    () -> new BlockItem(foodblockcompatregistry.PECAN_PRESSURE_PLATE.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Almond---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, BlockItem> ALMOND_PRESSURE_PLATE_ITEM = FOODBLOCKITEM.register("almond_pressure_plate_item",
+   () -> new BlockItem(foodblockcompatregistry.ALMOND_PRESSURE_PLATE.get(), new BlockItem.Properties()));
 //==============================================================================================================================================================================================
 //                                                                                          Signs
 //==============================================================================================================================================================================================0

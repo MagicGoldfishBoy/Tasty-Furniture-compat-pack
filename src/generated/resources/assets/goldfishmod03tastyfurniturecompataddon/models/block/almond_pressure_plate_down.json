@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/pressure_plate_down",
+  "textures": {
+    "texture": "goldfishmod03tastyfurniturecompataddon:block/almond_block"
+  }
+}
