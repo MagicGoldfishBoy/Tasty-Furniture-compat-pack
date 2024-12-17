@@ -3402,6 +3402,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('B', ingotcompatregistry.PECAN_INGOT.get())
         .unlockedBy("has_pecan_ingot", has(ingotcompatregistry.PECAN_INGOT.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Almond---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ALMOND_LADDER_ITEM.get(), 3)
+        .pattern("A A")
+        .pattern("ABA")
+        .pattern("A A")
+        .define('A', Items.STICK)
+        .define('B', ingotcompatregistry.ALMOND_INGOT.get())
+        .unlockedBy("has_almond_ingot", has(ingotcompatregistry.ALMOND_INGOT.get()))
+        .save(output);
       }
  protected void buildTableRecipes(RecipeOutput output) {
   //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
@@ -3502,6 +3511,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', foodblockcompatitemregistry.PECAN_SLAB_ITEM.get())
         .define('B', ingotcompatregistry.PECAN_INGOT.get())
         .unlockedBy("has_pecan_ingot", has(ingotcompatregistry.PECAN_INGOT.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Almond---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ALMOND_TABLE_ITEM.get())
+        .pattern("AAA")
+        .pattern("B B")
+        .pattern("B B")
+        .define('A', foodblockcompatitemregistry.ALMOND_SLAB_ITEM.get())
+        .define('B', ingotcompatregistry.ALMOND_INGOT.get())
+        .unlockedBy("has_almond_ingot", has(ingotcompatregistry.ALMOND_INGOT.get()))
         .save(output);
       }
  protected void buildTorchRecipes(RecipeOutput output) {
@@ -3846,6 +3864,37 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('C', Items.SOUL_SAND)
             .unlockedBy("has_pecan_nugget", has(nuggetcompatregistry.PECAN_NUGGET.get()))
             .save(output);
+  //--------------------------------------------------------------------------------------Almond---------------------------------------------------------------------------------------------
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ALMOND_TORCH_ITEM.get(), 4)
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetcompatregistry.ALMOND_NUGGET.get())
+            .define('C', ItemTags.COALS)
+            .unlockedBy("has_almond_nugget", has(nuggetcompatregistry.ALMOND_NUGGET.get()))
+            .save(output);
+          //redstone
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ALMOND_REDSTONE_TORCH_ITEM.get())
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetcompatregistry.ALMOND_NUGGET.get())
+            .define('C', Items.REDSTONE)
+            .unlockedBy("has_almond_nugget", has(nuggetcompatregistry.ALMOND_NUGGET.get()))
+            .save(output);
+          //soul
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ALMOND_SOUL_TORCH_ITEM.get(), 4)
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetcompatregistry.ALMOND_NUGGET.get())
+            .define('C', Items.SOUL_SAND)
+            .unlockedBy("has_almond_nugget", has(nuggetcompatregistry.ALMOND_NUGGET.get()))
+            .save(output);
       } 
  protected void buildFurnaceRecipes(RecipeOutput output) {
   //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
@@ -3947,6 +3996,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('B', Items.COBBLESTONE)
         .unlockedBy("has_pecan_ingot", has(ingotcompatregistry.PECAN_INGOT.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Almond---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ALMOND_FURNACE_ITEM.get())
+        .pattern("ABA")
+        .pattern("B B")
+        .pattern("ABA")
+        .define('A', ingotcompatregistry.ALMOND_INGOT.get())
+        .define('B', Items.COBBLESTONE)
+        .unlockedBy("has_almond_ingot", has(ingotcompatregistry.ALMOND_INGOT.get()))
+        .save(output);
       }
  protected void buildPathRecipes(RecipeOutput output) {
   //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
@@ -4008,6 +4066,12 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .requires(foodblockcompatitemregistry.PECAN_BLOCK_ITEM.get())
         .requires(Items.STONE)
         .unlockedBy("has_pecan_block", has(foodblockcompatitemregistry.PECAN_BLOCK_ITEM.get()))
+        .save(output);        
+  //--------------------------------------------------------------------------------------Almond---------------------------------------------------------------------------------------------
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.ALMOND_STONE_PATH_ITEM.get(), 6)
+        .requires(foodblockcompatitemregistry.ALMOND_BLOCK_ITEM.get())
+        .requires(Items.STONE)
+        .unlockedBy("has_almond_block", has(foodblockcompatitemregistry.ALMOND_BLOCK_ITEM.get()))
         .save(output);        
       }
  protected void buildBarrelRecipes(RecipeOutput output) {

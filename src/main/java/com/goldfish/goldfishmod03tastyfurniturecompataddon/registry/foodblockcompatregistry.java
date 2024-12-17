@@ -12,6 +12,7 @@ import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodBarrelEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.mediumFoodContainerEntity;
 import com.goldfish.goldfishmod02tastyfurniture.block.entity.smallFoodContainerEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.TastyFurnitureCompatAddon;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.almondFurnace;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.almondSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.almondWallSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.blackcherryFurnace;
@@ -47,6 +48,7 @@ import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.orangeWallSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.pecanFurnace;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.pecanSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.pecanWallSign;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.almondFurnaceEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.almondSignEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.blackcherryFurnaceEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.blackcherrySignEntity;
@@ -2412,6 +2414,13 @@ public class foodblockcompatregistry {
     .sound(plant_ladder_sound)
     .noOcclusion()
    )); 
+ //--------------------------------------------------------------------------------------Almond---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, LadderBlock> ALMOND_LADDER = FOODBLOCK.register("almond_ladder", () -> new LadderBlock(BlockBehaviour.Properties.of()
+    .destroyTime(ladder_destroy_time)
+    .explosionResistance(ladder_explosion_resistance)
+    .sound(plant_ladder_sound)
+    .noOcclusion()
+   )); 
 //==============================================================================================================================================================================================
 //                                                                                         Table
 //==============================================================================================================================================================================================
@@ -2487,6 +2496,13 @@ public class foodblockcompatregistry {
     ));
  //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, HorizontalDirectionalBlock> PECAN_TABLE = FOODBLOCK.register("pecan_table", () -> new foodtable(BlockBehaviour.Properties.of()
+    .destroyTime(1.5f)
+    .explosionResistance(1.5f)
+    .sound(SoundType.MUD_BRICKS)
+    .noOcclusion()
+    ));
+ //--------------------------------------------------------------------------------------Almond---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, HorizontalDirectionalBlock> ALMOND_TABLE = FOODBLOCK.register("almond_table", () -> new foodtable(BlockBehaviour.Properties.of()
     .destroyTime(1.5f)
     .explosionResistance(1.5f)
     .sound(SoundType.MUD_BRICKS)
@@ -2726,6 +2742,27 @@ public class foodblockcompatregistry {
 
      public static final DeferredHolder<Block, WallTorchBlock> PECAN_SOUL_WALL_TORCH = FOODBLOCK.register("pecan_soul_wall_torch", 
      () -> new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_WALL_TORCH)));
+ //--------------------------------------------------------------------------------------Almond---------------------------------------------------------------------------------------------
+    //regular
+     public static final DeferredHolder<Block, TorchBlock> ALMOND_TORCH = FOODBLOCK.register("almond_torch", 
+     () -> new TorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH)));
+
+     public static final DeferredHolder<Block, WallTorchBlock> ALMOND_WALL_TORCH = FOODBLOCK.register("almond_wall_torch", 
+     () -> new WallTorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH)));
+
+    //redstone
+     public static final DeferredHolder<Block, RedstoneTorchBlock> ALMOND_REDSTONE_TORCH = FOODBLOCK.register("almond_redstone_torch", 
+     () -> new RedstoneTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_TORCH)));
+
+     public static final DeferredHolder<Block, RedstoneWallTorchBlock> ALMOND_REDSTONE_WALL_TORCH = FOODBLOCK.register("almond_redstone_wall_torch", 
+     () -> new RedstoneWallTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_WALL_TORCH)));
+
+    //soul
+     public static final DeferredHolder<Block, TorchBlock> ALMOND_SOUL_TORCH = FOODBLOCK.register("almond_soul_torch", 
+     () -> new TorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_TORCH)));
+
+     public static final DeferredHolder<Block, WallTorchBlock> ALMOND_SOUL_WALL_TORCH = FOODBLOCK.register("almond_soul_wall_torch", 
+     () -> new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_WALL_TORCH)));
 //==============================================================================================================================================================================================
 //                                                                                        Furnaces
 //==============================================================================================================================================================================================
@@ -2795,6 +2832,12 @@ public class foodblockcompatregistry {
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<pecanFurnaceEntity>> PECAN_FURNACE_ENTITY = FOODBLOCKENTITY.register("pecan_furnace", 
     () -> BlockEntityType.Builder.of(pecanFurnaceEntity::new, PECAN_FURNACE.get()).build(null));
+ //----------------------------------------------------------------------------------------Almond-----------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, almondFurnace> ALMOND_FURNACE = FOODBLOCK.register("almond_furnace", 
+    () -> new almondFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<almondFurnaceEntity>> ALMOND_FURNACE_ENTITY = FOODBLOCKENTITY.register("almond_furnace", 
+    () -> BlockEntityType.Builder.of(almondFurnaceEntity::new, ALMOND_FURNACE.get()).build(null));
 //==============================================================================================================================================================================================
 //                                                                                         Paths
 //==============================================================================================================================================================================================
@@ -2880,6 +2923,14 @@ public class foodblockcompatregistry {
     ));
  //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, foodpathtypeminislab> PECAN_STONE_PATH = FOODBLOCK.register("pecan_stone_path", 
+    () -> new foodpathtypeminislab(BlockBehaviour.Properties.of()
+    .destroyTime(1.5f)
+    .explosionResistance(1.5f)
+    .sound(SoundType.MUD_BRICKS)
+    .noOcclusion()
+    ));
+ //--------------------------------------------------------------------------------------Almond---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, foodpathtypeminislab> ALMOND_STONE_PATH = FOODBLOCK.register("almond_stone_path", 
     () -> new foodpathtypeminislab(BlockBehaviour.Properties.of()
     .destroyTime(1.5f)
     .explosionResistance(1.5f)

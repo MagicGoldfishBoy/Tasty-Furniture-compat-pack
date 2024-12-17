@@ -930,6 +930,21 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //chain
        withExistingParent("almond_chain_item", modLoc("block/almond_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
        .end();
+      //ladder
+       withExistingParent("almond_ladder_item", modLoc("block/almond_ladder"));
+       //table
+       withExistingParent("almond_table_item", modLoc("block/almond_table"));
+       //torches
+        //regular
+        withExistingParent("almond_torch_item", modLoc("block/almond_torch"));
+        //redstone
+          withExistingParent("almond_redstone_torch_item", modLoc("block/almond_redstone_torch"));
+        //soul
+          withExistingParent("almond_soul_torch_item", modLoc("block/almond_soul_torch"));
+       //furnaces
+       withExistingParent("almond_furnace_item", modLoc("block/almond_furnace_model_unlit"));
+       //paths
+       withExistingParent("almond_stone_path_item", modLoc("block/almond_stone_path"));
   }
 }
 

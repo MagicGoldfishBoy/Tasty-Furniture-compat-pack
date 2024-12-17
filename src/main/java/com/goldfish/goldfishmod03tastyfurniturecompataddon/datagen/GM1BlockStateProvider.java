@@ -1884,6 +1884,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .rotationY(rotationY)
                   .build();
           });
+     //------------------------------------------------------------almond-----------------------------------------------------------------------
+          LadderBlock almondladder = foodblockcompatregistry.ALMOND_LADDER.get();
+
+          getVariantBuilder(almondladder)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/almond_ladder");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
     //==============================================================================================================================================
     //|                                                              Tables                                                                        |
     //==============================================================================================================================================
@@ -2112,6 +2133,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/pecan_table");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------almond-----------------------------------------------------------------------
+          HorizontalDirectionalBlock almondtable = foodblockcompatregistry.ALMOND_TABLE.get();
+
+          getVariantBuilder(almondtable)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/almond_table");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -3397,6 +3439,122 @@ public class GM1BlockStateProvider extends BlockStateProvider
                 .rotationY(rotation)
                 .build();
             });
+     //------------------------------------------------------------almond-----------------------------------------------------------------------
+       //regular
+        TorchBlock almond_torch = foodblockcompatregistry.ALMOND_TORCH.get();
+        ResourceLocation almond_torch_texture = modLoc("block/almond_torch");
+        BlockModelBuilder almond_torch_model = models()
+        .withExistingParent("almond_torch", mcLoc("block/torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", almond_torch_texture)
+        .texture("particle", almond_torch_texture);
+
+        simpleBlock(almond_torch, almond_torch_model);
+
+        TorchBlock almond_wall_torch = foodblockcompatregistry.ALMOND_WALL_TORCH.get();
+        BlockModelBuilder almond_wall_torch_model = models()
+        .withExistingParent("almond_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", almond_torch_texture)
+        .texture("particle", almond_torch_texture);
+        getVariantBuilder(almond_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("almond_wall_torch", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", almond_torch_texture)
+                    .texture("particle", almond_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //redstone
+        RedstoneTorchBlock almond_redstone_torch = foodblockcompatregistry.ALMOND_REDSTONE_TORCH.get();
+        ResourceLocation almond_redstone_torch_texture = modLoc("block/almond_redstone_torch");
+        BlockModelBuilder almond_redstone_torch_model = models()
+        .withExistingParent("almond_redstone_torch", mcLoc("block/redstone_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", almond_redstone_torch_texture)
+        .texture("particle", almond_redstone_torch_texture);
+        
+
+        simpleBlock(almond_redstone_torch, almond_redstone_torch_model);
+
+        ResourceLocation almond_redstone_wall_torch_texture = modLoc("block/almond_redstone_torch");
+
+        RedstoneTorchBlock almond_redstone_wall_torch = foodblockcompatregistry.ALMOND_REDSTONE_WALL_TORCH.get();
+        BlockModelBuilder almond_redstone_wall_torch_model = models()
+        .withExistingParent("almond_redstone_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", almond_redstone_wall_torch_texture)
+        .texture("particle", almond_redstone_wall_torch_texture);
+        getVariantBuilder(almond_redstone_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("almond_redstone_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", almond_redstone_wall_torch_texture)
+                    .texture("particle", almond_redstone_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //soul
+        TorchBlock almond_soul_torch = foodblockcompatregistry.ALMOND_SOUL_TORCH.get();
+        ResourceLocation almond_soul_torch_texture = modLoc("block/almond_soul_torch");
+        BlockModelBuilder almond_soul_torch_model = models()
+        .withExistingParent("almond_soul_torch", mcLoc("block/soul_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", almond_soul_torch_texture)
+        .texture("particle", almond_soul_torch_texture);
+        
+
+        simpleBlock(almond_soul_torch, almond_soul_torch_model);
+
+        ResourceLocation almond_soul_wall_torch_texture = modLoc("block/almond_soul_torch");
+        TorchBlock almond_soul_wall_torch = foodblockcompatregistry.ALMOND_SOUL_WALL_TORCH.get();
+        BlockModelBuilder almond_soul_wall_torch_model = models()
+        .withExistingParent("almond_soul_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", almond_soul_wall_torch_texture)
+        .texture("particle", almond_soul_wall_torch_texture);
+        getVariantBuilder(almond_soul_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("almond_soul_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", almond_soul_wall_torch_texture)
+                    .texture("particle", almond_soul_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
     //==============================================================================================================================================
     //|                                                             Furnaces                                                                       |
     //==============================================================================================================================================
@@ -3882,6 +4040,50 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationY(rotation)
                       .build();
               });
+     //------------------------------------------------------------almond-----------------------------------------------------------------------
+          FurnaceBlock almond_furnace = foodblockcompatregistry.ALMOND_FURNACE.get();
+          ResourceLocation almond_furnace_unlit_texture = modLoc("block/almond_furnace");
+          ResourceLocation almond_furnace_lit_texture = modLoc("block/almond_furnace_lit");
+          ResourceLocation almond_furnace_side = modLoc("block/almond_block");
+          
+          // Define the model for the unlit state
+          BlockModelBuilder almond_furnace_model_unlit = models()
+              .withExistingParent("almond_furnace_model_unlit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", almond_furnace_side)
+              .texture("top", almond_furnace_side)
+              .texture("front", almond_furnace_unlit_texture)
+              .texture("particle", almond_furnace_side);
+          
+          // Define the model for the lit state
+          BlockModelBuilder almond_furnace_model_lit = models()
+              .withExistingParent("almond_furnace_model_lit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", almond_furnace_side)
+              .texture("top", almond_furnace_side)
+              .texture("front", almond_furnace_lit_texture)
+              .texture("particle", almond_furnace_side);
+          
+          // Configure variants for the almond_furnace block
+          getVariantBuilder(almond_furnace)
+              .forAllStates(state -> {
+                  Boolean lit = state.getValue(BlockStateProperties.LIT);
+                  Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                  int rotation = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+
+                  ResourceLocation modelLocation = lit ? modLoc("block/almond_furnace_model_lit") : modLoc("block/almond_furnace_model_unlit");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotation)
+                      .build();
+              });
     //==============================================================================================================================================
     //|                                                               Paths                                                                        |
     //==============================================================================================================================================
@@ -4012,6 +4214,18 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .forAllStates(state -> {
 
               ResourceLocation modelLocation = modLoc("block/pecan_stone_path");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .build();
+          });
+     //------------------------------------------------------------almond-----------------------------------------------------------------------
+          foodpathtypeminislab almond_stone_path = foodblockcompatregistry.ALMOND_STONE_PATH.get();
+
+          getVariantBuilder(almond_stone_path)
+          .forAllStates(state -> {
+
+              ResourceLocation modelLocation = modLoc("block/almond_stone_path");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
