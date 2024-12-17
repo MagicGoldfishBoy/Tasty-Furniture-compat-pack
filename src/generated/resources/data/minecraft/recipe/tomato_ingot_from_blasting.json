@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 1.0,
+  "ingredient": {
+    "item": "goldfishmod03tastyfurniturecompataddon:tomato_mush"
+  },
+  "result": {
+    "count": 1,
+    "id": "goldfishmod03tastyfurniturecompataddon:tomato_ingot"
+  }
+}

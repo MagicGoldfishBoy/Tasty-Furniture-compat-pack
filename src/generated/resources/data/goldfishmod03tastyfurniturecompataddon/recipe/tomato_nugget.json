@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "goldfishmod03tastyfurniturecompataddon:tomato_ingot"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "goldfishmod03tastyfurniturecompataddon:tomato_nugget"
+  }
+}

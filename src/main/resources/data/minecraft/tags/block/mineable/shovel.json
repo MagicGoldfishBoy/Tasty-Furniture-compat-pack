@@ -11,6 +11,7 @@
        "goldfishmod03tastyfurniturecompataddon:lime_block",
        "goldfishmod03tastyfurniturecompataddon:corn_block",
        "goldfishmod03tastyfurniturecompataddon:onion_block",
+       "goldfishmod03tastyfurniturecompataddon:tomato_block",
        "goldfishmod03tastyfurniturecompataddon:pecan_block",
        "goldfishmod03tastyfurniturecompataddon:almond_block",
      "goldfishmod03tastyfurniturecompataddon:elderberry_bricks_block",
@@ -23,6 +24,7 @@
        "goldfishmod03tastyfurniturecompataddon:lime_bricks_block",
        "goldfishmod03tastyfurniturecompataddon:corn_bricks_block",
        "goldfishmod03tastyfurniturecompataddon:onion_bricks_block",
+       "goldfishmod03tastyfurniturecompataddon:tomato_bricks_block",
        "goldfishmod03tastyfurniturecompataddon:pecan_bricks_block",
        "goldfishmod03tastyfurniturecompataddon:almond_bricks_block",
      "goldfishmod03tastyfurniturecompataddon:elderberry_chiseled_block",
@@ -35,6 +37,7 @@
        "goldfishmod03tastyfurniturecompataddon:lime_chiseled_block",
        "goldfishmod03tastyfurniturecompataddon:corn_chiseled_block",
        "goldfishmod03tastyfurniturecompataddon:onion_chiseled_block",
+       "goldfishmod03tastyfurniturecompataddon:tomato_chiseled_block",
        "goldfishmod03tastyfurniturecompataddon:pecan_chiseled_block",
        "goldfishmod03tastyfurniturecompataddon:almond_chiseled_block",
      "goldfishmod03tastyfurniturecompataddon:elderberry_tile_block",
@@ -47,6 +50,7 @@
        "goldfishmod03tastyfurniturecompataddon:lime_tile_block",
        "goldfishmod03tastyfurniturecompataddon:corn_tile_block",
        "goldfishmod03tastyfurniturecompataddon:onion_tile_block",
+       "goldfishmod03tastyfurniturecompataddon:tomato_tile_block",
        "goldfishmod03tastyfurniturecompataddon:pecan_tile_block",
        "goldfishmod03tastyfurniturecompataddon:almond_tile_block",
      "goldfishmod03tastyfurniturecompataddon:elderberry_door",
@@ -359,6 +363,7 @@
        "goldfishmod03tastyfurniturecompataddon:lime_bed",
        "goldfishmod03tastyfurniturecompataddon:corn_bed",
        "goldfishmod03tastyfurniturecompataddon:onion_bed",
-       "goldfishmod03tastyfurniturecompataddon:pecan_bed"
+       "goldfishmod03tastyfurniturecompataddon:pecan_bed",
+       "goldfishmod03tastyfurniturecompataddon:almond_bed"
     ]
   }

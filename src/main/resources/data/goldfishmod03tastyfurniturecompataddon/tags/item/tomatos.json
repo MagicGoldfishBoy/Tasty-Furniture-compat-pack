@@ -1,0 +1,17 @@
+{
+    "replace": false,
+    "values": [
+        {"id":"harvestcraft:tomatoitem",
+        "required": false},
+        {"id":"farmersdelight:tomato",
+        "required": false},
+        {"id":"farmersdelight:rotten_tomato",
+        "required": false},
+        {"id":"croptopia:tomato",
+        "required": false},
+        {"id":"pamhc2crops:tomatoitem",
+        "required": false},
+        {"id":"c:crops/tomato",
+        "required": false}
+    ]
+  }

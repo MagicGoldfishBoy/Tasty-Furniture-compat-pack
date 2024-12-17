@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:tomato_ingot_from_smelting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_tomato_mush": {
+      "conditions": {
+        "items": [
+          {
+            "items": "goldfishmod03tastyfurniturecompataddon:tomato_mush"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_tomato_mush"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:tomato_ingot_from_smelting"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:tomato_ingot_from_crafting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_tomato_nugget": {
+      "conditions": {
+        "items": [
+          {
+            "items": "goldfishmod03tastyfurniturecompataddon:tomato_nugget"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_tomato_nugget"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:tomato_ingot_from_crafting"
+    ]
+  }
+}

@@ -193,6 +193,19 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........tiles
           net.minecraft.world.level.block.Block onion_tiles_block = foodblockcompatregistry.ONION_TILES_BLOCK.get();
           simpleBlock(onion_tiles_block);
+     //------------------------------------------------------------tomato-----------------------------------------------------------------------
+      //.........plain
+          net.minecraft.world.level.block.Block tomato_block = foodblockcompatregistry.TOMATO_BLOCK.get();
+          simpleBlock(tomato_block);
+      //.........bricks
+          net.minecraft.world.level.block.Block tomato_bricks_block = foodblockcompatregistry.TOMATO_BRICKS_BLOCK.get();
+          simpleBlock(tomato_bricks_block);
+      //.........chiseled
+          net.minecraft.world.level.block.Block tomato_chiseled_block = foodblockcompatregistry.TOMATO_CHISELED_BLOCK.get();
+          simpleBlock(tomato_chiseled_block);
+      //.........tiles
+          net.minecraft.world.level.block.Block tomato_tiles_block = foodblockcompatregistry.TOMATO_TILES_BLOCK.get();
+          simpleBlock(tomato_tiles_block);
      //------------------------------------------------------------pecan-----------------------------------------------------------------------
       //.........plain
           net.minecraft.world.level.block.Block pecan_block = foodblockcompatregistry.PECAN_BLOCK.get();
@@ -312,6 +325,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
           SlabBlock onion_bricks_slab = foodblockcompatregistry.ONION_BRICKS_SLAB.get();
           ResourceLocation onion_bricks_block_texture = modLoc("block/onion_bricks_block");
           slabBlock(onion_bricks_slab, onion_bricks_block_texture, onion_bricks_block_texture);
+     //------------------------------------------------------------tomato-----------------------------------------------------------------------
+      //.........plain
+          SlabBlock tomato_slab = foodblockcompatregistry.TOMATO_SLAB.get();
+          ResourceLocation tomato_block_texture = modLoc("block/tomato_block");
+          slabBlock(tomato_slab, tomato_block_texture, tomato_block_texture);
+      //.........bricks
+          SlabBlock tomato_bricks_slab = foodblockcompatregistry.TOMATO_BRICKS_SLAB.get();
+          ResourceLocation tomato_bricks_block_texture = modLoc("block/tomato_bricks_block");
+          slabBlock(tomato_bricks_slab, tomato_bricks_block_texture, tomato_bricks_block_texture);
      //------------------------------------------------------------pecan-----------------------------------------------------------------------
       //.........plain
           SlabBlock pecan_slab = foodblockcompatregistry.PECAN_SLAB.get();
@@ -403,6 +425,13 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........bricks
           StairBlock onion_bricks_stairs = foodblockcompatregistry.ONION_BRICKS_STAIRS.get();
           stairsBlock(onion_bricks_stairs, onion_bricks_block_texture);
+     //------------------------------------------------------------tomato-----------------------------------------------------------------------
+      //.........plain
+          StairBlock tomato_stairs = foodblockcompatregistry.TOMATO_STAIRS.get();
+          stairsBlock(tomato_stairs, tomato_block_texture);
+      //.........bricks
+          StairBlock tomato_bricks_stairs = foodblockcompatregistry.TOMATO_BRICKS_STAIRS.get();
+          stairsBlock(tomato_bricks_stairs, tomato_bricks_block_texture);
      //------------------------------------------------------------pecan-----------------------------------------------------------------------
       //.........plain
           StairBlock pecan_stairs = foodblockcompatregistry.PECAN_STAIRS.get();

@@ -799,6 +799,31 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("small_onion_cabinet_item", modLoc("block/onion_cabinet"));
        withExistingParent("medium_onion_cabinet_item", modLoc("block/medium_onion_cabinet"));
     //==============================================================================================================================================
+    //|                                                              Tomato                                                                        |
+    //==============================================================================================================================================
+       //mush
+        withExistingParent("tomato_mush", mcLoc("item/generated")).texture("layer0", "item/tomato_mush");
+       //ingot
+        withExistingParent("tomato_ingot", mcLoc("item/generated")).texture("layer0", "item/tomato_ingot");
+       //nugget
+        withExistingParent("tomato_nugget", mcLoc("item/generated")).texture("layer0", "item/tomato_nugget");
+       //block
+        withExistingParent("tomato_block_item", modLoc("block/tomato_block"));
+       //bricks block
+        withExistingParent("tomato_bricks_block_item", modLoc("block/tomato_bricks_block"));
+       //chiseled block
+        withExistingParent("tomato_chiseled_block_item", modLoc("block/tomato_chiseled_block"));
+       //tiles block
+        withExistingParent("tomato_tiles_block_item", modLoc("block/tomato_tiles_block"));
+       //slab
+        slab("tomato_slab_item", modLoc("block/tomato_block"), modLoc("block/tomato_block"), modLoc("block/tomato_block"));
+       //bricks slab
+        slab("tomato_bricks_slab_item", modLoc("block/tomato_bricks_block"), modLoc("block/tomato_bricks_block"), modLoc("block/tomato_bricks_block"));
+       //stairs
+        stairs("tomato_stairs_item", modLoc("block/tomato_block"), modLoc("block/tomato_block"), modLoc("block/tomato_block"));
+       //bricks stairs
+        stairs("tomato_bricks_stairs_item", modLoc("block/tomato_bricks_block"), modLoc("block/tomato_bricks_block"), modLoc("block/tomato_bricks_block"));
+    //==============================================================================================================================================
     //|                                                              Pecan                                                                        |
     //==============================================================================================================================================
        //mush
