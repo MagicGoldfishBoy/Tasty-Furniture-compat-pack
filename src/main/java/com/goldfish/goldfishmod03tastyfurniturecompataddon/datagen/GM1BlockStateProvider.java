@@ -4762,6 +4762,54 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationX(rotationX)
                       .build();
               });
+     //------------------------------------------------------------almond-----------------------------------------------------------------------
+          foodBarrel almond_barrel = foodblockcompatregistry.ALMOND_BARREL.get();
+          ResourceLocation almond_barrel_closed_texture = modLoc("block/almond_barrel_top_closed");
+          ResourceLocation almond_barrel_open_texture = modLoc("block/almond_barrel_top_open");
+          ResourceLocation almond_barrel_side = modLoc("block/almond_barrel_side");
+          ResourceLocation almond_barrel_bottom = modLoc("block/almond_barrel_bottom");
+          
+          BlockModelBuilder almond_barrel_model_closed = models()
+              .withExistingParent("almond_barrel_model_closed", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", almond_barrel_side)
+              .texture("bottom", almond_barrel_bottom)
+              .texture("top", almond_barrel_closed_texture)
+              .texture("particle", almond_barrel_side);
+          
+          BlockModelBuilder almond_barrel_model_open = models()
+              .withExistingParent("almond_barrel_model_open", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", almond_barrel_side)
+              .texture("bottom", almond_barrel_bottom)
+              .texture("top", almond_barrel_open_texture)
+              .texture("particle", almond_barrel_side);
+          
+          getVariantBuilder(almond_barrel)
+              .forAllStates(state -> {
+                  Boolean open = state.getValue(BlockStateProperties.OPEN);
+                  Direction facing = state.getValue(BlockStateProperties.FACING);
+                  int rotationY = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+                  int rotationX = switch (facing) {
+                      case UP -> 0;
+                      case DOWN -> 180;
+                      default -> 90;
+                  };
+
+                  ResourceLocation modelLocation = open ? modLoc("block/almond_barrel_model_open") : modLoc("block/almond_barrel_model_closed");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotationY)
+                      .rotationX(rotationX)
+                      .build();
+              });
     //==============================================================================================================================================
     //|                                                              Chairs                                                                       |
     //==============================================================================================================================================
@@ -4996,6 +5044,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .rotationY(rotationY)
                   .build();
           });
+     //------------------------------------------------------------almond-----------------------------------------------------------------------
+          foodChairBlock almondChair = foodblockcompatregistry.ALMOND_CHAIR.get();
+
+          getVariantBuilder(almondChair)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/almond_chair");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
     //==============================================================================================================================================
     //|                                                               Beds                                                                         |
     //==============================================================================================================================================
@@ -5224,6 +5293,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/pecan_bed");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------almond-----------------------------------------------------------------------
+          foodBed almondBed = foodblockcompatregistry.ALMOND_BED.get();
+
+          getVariantBuilder(almondBed)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/almond_bed");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -5722,6 +5812,51 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = open ? modLoc("block/medium_pecan_cabinet_open") : modLoc("block/medium_pecan_cabinet");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------almond-----------------------------------------------------------------------
+         //small
+          smallFoodCabinet almondCabinet = foodblockcompatregistry.SMALL_ALMOND_CABINET.get();
+
+          getVariantBuilder(almondCabinet)
+          .forAllStates(state -> {
+              Boolean open = state.getValue(BlockStateProperties.OPEN);
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = open ? modLoc("block/almond_cabinet_open") : modLoc("block/almond_cabinet");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+         //medium
+          mediumFoodCabinet almondMediumCabinet = foodblockcompatregistry.MEDIUM_ALMOND_CABINET.get();
+
+          getVariantBuilder(almondMediumCabinet)
+          .forAllStates(state -> {
+              Boolean open = state.getValue(BlockStateProperties.OPEN);
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = open ? modLoc("block/medium_almond_cabinet_open") : modLoc("block/medium_almond_cabinet");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))

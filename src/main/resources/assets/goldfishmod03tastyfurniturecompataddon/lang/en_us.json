@@ -438,5 +438,10 @@
     "block.goldfishmod03tastyfurniturecompataddon.almond_soul_torch": "Almond Soul Torch",
     "block.goldfishmod03tastyfurniturecompataddon.almond_furnace": "Almond Furnace",
     "container.almond_furnace": "Almond Furnace",
-    "block.goldfishmod03tastyfurniturecompataddon.almond_stone_path": "Almond Stone Path"
+    "block.goldfishmod03tastyfurniturecompataddon.almond_stone_path": "Almond Stone Path",
+    "block.goldfishmod03tastyfurniturecompataddon.almond_barrel": "Almond Barrel",
+    "block.goldfishmod03tastyfurniturecompataddon.almond_chair": "Almond Chair",
+    "block.goldfishmod03tastyfurniturecompataddon.almond_bed": "Almond Bed",
+    "block.goldfishmod03tastyfurniturecompataddon.small_almond_cabinet": "Almond Small Cabinet",
+    "block.goldfishmod03tastyfurniturecompataddon.medium_almond_cabinet": "Almond Medium Cabinet"
 }

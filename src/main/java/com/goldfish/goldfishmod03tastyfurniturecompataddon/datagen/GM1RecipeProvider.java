@@ -4174,6 +4174,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('B', foodblockcompatitemregistry.PECAN_SLAB_ITEM.get())
         .unlockedBy("has_pecan_block", has(foodblockcompatitemregistry.PECAN_BLOCK_ITEM.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Almond---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ALMOND_BARREL_ITEM.get())
+        .pattern("ABA")
+        .pattern("A A")
+        .pattern("ABA")
+        .define('A', foodblockcompatitemregistry.ALMOND_BLOCK_ITEM.get())
+        .define('B', foodblockcompatitemregistry.ALMOND_SLAB_ITEM.get())
+        .unlockedBy("has_almond_block", has(foodblockcompatitemregistry.ALMOND_BLOCK_ITEM.get()))
+        .save(output);
       }
  protected void buildChairRecipes(RecipeOutput output) {
   //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
@@ -4274,6 +4283,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', ingotcompatregistry.PECAN_INGOT.get())
         .define('B', foodblockcompatitemregistry.PECAN_SLAB_ITEM.get())
         .unlockedBy("has_pecan_slab", has(foodblockcompatitemregistry.PECAN_SLAB_ITEM.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Almond---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ALMOND_CHAIR_ITEM.get())
+        .pattern("AAA")
+        .pattern("BBB")
+        .pattern("A A")
+        .define('A', ingotcompatregistry.ALMOND_INGOT.get())
+        .define('B', foodblockcompatitemregistry.ALMOND_SLAB_ITEM.get())
+        .unlockedBy("has_almond_slab", has(foodblockcompatitemregistry.ALMOND_SLAB_ITEM.get()))
         .save(output);
       } 
  protected void buildBedRecipes(RecipeOutput output) {
@@ -4386,6 +4404,16 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
            .define('B', foodblockcompatitemregistry.PECAN_SLAB_ITEM.get())
            .define('C', foodblockcompatitemregistry.PECAN_CARPET_ITEM.get())
            .unlockedBy("has_pecan_ingot", has(ingotcompatregistry.PECAN_INGOT.get()))
+           .save(output);
+  //--------------------------------------------------------------------------------------Almond---------------------------------------------------------------------------------------------
+           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ALMOND_BED_ITEM.get())
+           .pattern("CCC")
+           .pattern("BBB")
+           .pattern("A A")
+           .define('A', ingotcompatregistry.ALMOND_INGOT.get())
+           .define('B', foodblockcompatitemregistry.ALMOND_SLAB_ITEM.get())
+           .define('C', foodblockcompatitemregistry.ALMOND_CARPET_ITEM.get())
+           .unlockedBy("has_almond_ingot", has(ingotcompatregistry.ALMOND_INGOT.get()))
            .save(output);
       }
  protected void buildCabinetRecipes(RecipeOutput output) {
@@ -4608,6 +4636,26 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('B', Items.IRON_INGOT)
          .define('C', foodblockcompatitemregistry.SMALL_PECAN_CABINET_ITEM.get())
          .unlockedBy("has_pecan_slab", has(foodblockcompatitemregistry.PECAN_SLAB_ITEM.get()))
+         .save(output);
+  //--------------------------------------------------------------------------------------Almond---------------------------------------------------------------------------------------------
+       //small
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.SMALL_ALMOND_CABINET_ITEM.get())
+         .pattern("AAA")
+         .pattern("B B")
+         .pattern("AAA")
+         .define('A', foodblockcompatitemregistry.ALMOND_SLAB_ITEM.get())
+         .define('B', Items.IRON_INGOT)
+         .unlockedBy("has_almond_slab", has(foodblockcompatitemregistry.ALMOND_SLAB_ITEM.get()))
+         .save(output);
+       //medium
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.MEDIUM_ALMOND_CABINET_ITEM.get())
+         .pattern("AAA")
+         .pattern("BCB")
+         .pattern("AAA")
+         .define('A', foodblockcompatitemregistry.ALMOND_SLAB_ITEM.get())
+         .define('B', Items.IRON_INGOT)
+         .define('C', foodblockcompatitemregistry.SMALL_ALMOND_CABINET_ITEM.get())
+         .unlockedBy("has_almond_slab", has(foodblockcompatitemregistry.ALMOND_SLAB_ITEM.get()))
          .save(output);
       }
   }

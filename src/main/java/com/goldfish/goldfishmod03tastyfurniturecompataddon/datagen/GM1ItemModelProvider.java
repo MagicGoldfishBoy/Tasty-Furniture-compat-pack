@@ -945,6 +945,15 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("almond_furnace_item", modLoc("block/almond_furnace_model_unlit"));
        //paths
        withExistingParent("almond_stone_path_item", modLoc("block/almond_stone_path"));
+       //barrel
+       withExistingParent("almond_barrel_item", modLoc("block/almond_barrel_model_closed"));
+       //chair
+       withExistingParent("almond_chair_item", modLoc("block/almond_chair"));
+       //bed
+       withExistingParent("almond_bed_item", modLoc("block/almond_bed"));
+       //cabinet
+       withExistingParent("small_almond_cabinet_item", modLoc("block/almond_cabinet"));
+       withExistingParent("medium_almond_cabinet_item", modLoc("block/medium_almond_cabinet"));
   }
 }
 
