@@ -835,6 +835,23 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         withExistingParent("tomato_gate_item", modLoc("block/tomato_gate"));
        //pressure plate
         pressurePlate("tomato_pressure_plate_item", modLoc("block/tomato_block"));
+       //sign
+        withExistingParent("tomato_sign_item", mcLoc("item/generated")).texture("layer0", "item/tomato_sign");
+       //trapdoor
+       withExistingParent("tomato_trapdoor_item", modLoc("block/tomato_trapdoor_trapdoor_bottom"));
+       //lamp
+       withExistingParent("tomato_lamp_item", modLoc("block/tomato_lamp"));
+       //carpet
+       ResourceLocation tomato_carpet_texture = modLoc("block/tomato_carpet");
+       carpet("tomato_carpet_item", tomato_carpet_texture);
+       //lantern
+        //regular
+        withExistingParent("tomato_lantern_item", modLoc("block/tomato_lantern"));
+        //soul
+          withExistingParent("tomato_soul_lantern_item", modLoc("block/tomato_soul_lantern"));
+       //chain
+       withExistingParent("tomato_chain_item", modLoc("block/tomato_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
     //==============================================================================================================================================
     //|                                                              Pecan                                                                        |
     //==============================================================================================================================================

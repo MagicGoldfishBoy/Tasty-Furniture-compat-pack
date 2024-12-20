@@ -48,6 +48,8 @@ import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.orangeWallSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.pecanFurnace;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.pecanSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.pecanWallSign;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.tomatoSign;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.tomatoWallSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.almondFurnaceEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.almondSignEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.blackcherryFurnaceEntity;
@@ -72,6 +74,7 @@ import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.orangeFu
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.orangeSignEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.pecanFurnaceEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.pecanSignEntity;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.tomatoSignEntity;
 
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -1761,6 +1764,51 @@ public class foodblockcompatregistry {
          foodblockcompatregistry.ONION_STANDING_SIGN.get()
      ).build(null)
    );
+ //--------------------------------------------------------------------------------------Tomato---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Block, tomatoSign> TOMATO_SIGN = FOODBLOCK.register("tomato_sign",
+   () -> new tomatoSign(
+     BlockBehaviour.Properties.of()
+         .mapColor(MapColor.WOOD)
+         .forceSolidOn()
+         .instrument(NoteBlockInstrument.BASS)
+         .noCollission()
+         .strength(1.0F)
+         .ignitedByLava(),
+         foodmaterialtypecompatregistry.TOMATOWOODMAT
+   ));
+      public static final DeferredHolder<Block, tomatoWallSign> TOMATO_WALL_SIGN = FOODBLOCK.register("tomato_wall_sign",
+   () -> new tomatoWallSign(
+       BlockBehaviour.Properties.of()
+       .mapColor(MapColor.WOOD)
+       .forceSolidOn()
+       .instrument(NoteBlockInstrument.BASS)
+       .noCollission()
+       .strength(1.0F)
+       .ignitedByLava()
+       .randomTicks(),
+       foodmaterialtypecompatregistry.TOMATOWOODMAT
+   ));
+   public static final DeferredHolder<Block, tomatoSign> TOMATO_STANDING_SIGN = FOODBLOCK.register("tomato_standing_sign",
+   () -> new tomatoSign(
+       BlockBehaviour.Properties.of()
+       .mapColor(MapColor.WOOD)
+       .forceSolidOn()
+       .instrument(NoteBlockInstrument.BASS)
+       .noCollission()
+       .strength(1.0F)
+       .ignitedByLava()
+       .randomTicks(),
+       foodmaterialtypecompatregistry.TOMATOWOODMAT
+   ));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<tomatoSignEntity>> TOMATO_SIGN_ENTITY = FOODBLOCKENTITY.register(
+     "tomato_sign_entity",
+     () -> BlockEntityType.Builder.of(
+         tomatoSignEntity::new,
+         foodblockcompatregistry.TOMATO_SIGN.get(),
+         foodblockcompatregistry.TOMATO_WALL_SIGN.get(),
+         foodblockcompatregistry.TOMATO_STANDING_SIGN.get()
+     ).build(null)
+   );
  //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Block, pecanSign> PECAN_SIGN = FOODBLOCK.register("pecan_sign",
    () -> new pecanSign(
@@ -1924,6 +1972,13 @@ public class foodblockcompatregistry {
      .explosionResistance(9.5f)
      .sound(SoundType.MUD_BRICKS)
      ));
+ //--------------------------------------------------------------------------------------Tomato---------------------------------------------------------------------------------------------
+     public static final DeferredHolder<Block, TrapDoorBlock> TOMATO_TRAPDOOR = FOODBLOCK.register("tomato_trapdoor", () -> new TrapDoorBlock(foodmaterialtypecompatregistry.PLANT, 
+     BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     ));
  //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
      public static final DeferredHolder<Block, TrapDoorBlock> PECAN_TRAPDOOR = FOODBLOCK.register("pecan_trapdoor", () -> new TrapDoorBlock(foodmaterialtypecompatregistry.PLANT, 
      BlockBehaviour.Properties.of()
@@ -2006,6 +2061,13 @@ public class foodblockcompatregistry {
      ));
  //----------------------------------------------------------------------------------------Onion------------------------------------------------------------------------------------------------
      public static final DeferredHolder<Block, Block> ONION_LAMP = FOODBLOCK.register("onion_lamp", () -> new Block(BlockBehaviour.Properties.of()
+     .destroyTime(1.5f)
+     .explosionResistance(10.0f)
+     .sound(SoundType.FROGLIGHT)
+     .lightLevel(state -> 15)
+     ));
+ //----------------------------------------------------------------------------------------Tomato------------------------------------------------------------------------------------------------
+     public static final DeferredHolder<Block, Block> TOMATO_LAMP = FOODBLOCK.register("tomato_lamp", () -> new Block(BlockBehaviour.Properties.of()
      .destroyTime(1.5f)
      .explosionResistance(10.0f)
      .sound(SoundType.FROGLIGHT)
@@ -2102,6 +2164,14 @@ public class foodblockcompatregistry {
       ));
  //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, CarpetBlock> ONION_CARPET = FOODBLOCK.register("onion_carpet", () -> new CarpetBlock(BlockBehaviour.Properties.of()
+      .destroyTime(0.5f)
+      .explosionResistance(0.5f)
+      .sound(SoundType.MOSS_CARPET)
+      .friction(0.3f)
+      .ignitedByLava()
+      ));
+ //--------------------------------------------------------------------------------------Tomato---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, CarpetBlock> TOMATO_CARPET = FOODBLOCK.register("tomato_carpet", () -> new CarpetBlock(BlockBehaviour.Properties.of()
       .destroyTime(0.5f)
       .explosionResistance(0.5f)
       .sound(SoundType.MOSS_CARPET)
@@ -2297,6 +2367,23 @@ public class foodblockcompatregistry {
       .lightLevel(state  -> 10)
       .noOcclusion()
       ));
+ //--------------------------------------------------------------------------------------Tomato---------------------------------------------------------------------------------------------
+    //regular
+      public static final DeferredHolder<Block, LanternBlock> TOMATO_LANTERN = FOODBLOCK.register("tomato_lantern", () -> new LanternBlock(BlockBehaviour.Properties.of()
+      .destroyTime(0.5f)
+      .explosionResistance(0.5f)
+      .sound(SoundType.SHROOMLIGHT)
+      .lightLevel(state  -> 15)
+      .noOcclusion()
+      ));
+    //soul
+      public static final DeferredHolder<Block, LanternBlock> TOMATO_SOUL_LANTERN = FOODBLOCK.register("tomato_soul_lantern", () -> new LanternBlock(BlockBehaviour.Properties.of()
+      .destroyTime(0.5f)
+      .explosionResistance(0.5f)
+      .sound(SoundType.SHROOMLIGHT)
+      .lightLevel(state  -> 10)
+      .noOcclusion()
+      ));
  //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
     //regular
       public static final DeferredHolder<Block, LanternBlock> PECAN_LANTERN = FOODBLOCK.register("pecan_lantern", () -> new LanternBlock(BlockBehaviour.Properties.of()
@@ -2399,6 +2486,13 @@ public class foodblockcompatregistry {
     ));
  //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, ChainBlock> ONION_CHAIN = FOODBLOCK.register("onion_chain", () -> new ChainBlock(BlockBehaviour.Properties.of()
+    .destroyTime(0.5f)
+    .explosionResistance(0.5f)
+    .sound(SoundType.CHAIN)
+    .noOcclusion()
+    ));
+ //--------------------------------------------------------------------------------------Tomato---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, ChainBlock> TOMATO_CHAIN = FOODBLOCK.register("tomato_chain", () -> new ChainBlock(BlockBehaviour.Properties.of()
     .destroyTime(0.5f)
     .explosionResistance(0.5f)
     .sound(SoundType.CHAIN)

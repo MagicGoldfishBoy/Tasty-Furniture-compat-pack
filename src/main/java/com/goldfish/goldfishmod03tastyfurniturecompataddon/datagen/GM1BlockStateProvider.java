@@ -865,6 +865,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
            WallSignBlock onion_wall_sign = foodblockcompatregistry.ONION_WALL_SIGN.get();
            ResourceLocation onion_sign_texture = modLoc("block/onion_block");
            signBlock(onion_sign, onion_wall_sign, onion_sign_texture);
+     //------------------------------------------------------------tomato-----------------------------------------------------------------------
+           StandingSignBlock tomato_sign = foodblockcompatregistry.TOMATO_STANDING_SIGN.get();
+           WallSignBlock tomato_wall_sign = foodblockcompatregistry.TOMATO_WALL_SIGN.get();
+           ResourceLocation tomato_sign_texture = modLoc("block/tomato_block");
+           signBlock(tomato_sign, tomato_wall_sign, tomato_sign_texture);
      //------------------------------------------------------------pecan-----------------------------------------------------------------------
            StandingSignBlock pecan_sign = foodblockcompatregistry.PECAN_STANDING_SIGN.get();
            WallSignBlock pecan_wall_sign = foodblockcompatregistry.PECAN_WALL_SIGN.get();
@@ -918,6 +923,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           TrapDoorBlock onion_trapdoor = foodblockcompatregistry.ONION_TRAPDOOR.get(); 
           ResourceLocation onion_trapdoor_texture = modLoc("block/onion_block");
           trapdoorBlockWithRenderType(onion_trapdoor, "onion_trapdoor", onion_trapdoor_texture, false, onion_trapdoor_texture);
+     //------------------------------------------------------------tomato-----------------------------------------------------------------------
+          TrapDoorBlock tomato_trapdoor = foodblockcompatregistry.TOMATO_TRAPDOOR.get(); 
+          ResourceLocation tomato_trapdoor_texture = modLoc("block/tomato_block");
+          trapdoorBlockWithRenderType(tomato_trapdoor, "tomato_trapdoor", tomato_trapdoor_texture, false, tomato_trapdoor_texture);
      //------------------------------------------------------------pecan-----------------------------------------------------------------------
           TrapDoorBlock pecan_trapdoor = foodblockcompatregistry.PECAN_TRAPDOOR.get(); 
           ResourceLocation pecan_trapdoor_texture = modLoc("block/pecan_block");
@@ -959,6 +968,9 @@ public class GM1BlockStateProvider extends BlockStateProvider
      //------------------------------------------------------------onion-----------------------------------------------------------------------
           Block onion_lamp = foodblockcompatregistry.ONION_LAMP.get();
           simpleBlock(onion_lamp);
+     //------------------------------------------------------------tomato-----------------------------------------------------------------------
+          Block tomato_lamp = foodblockcompatregistry.TOMATO_LAMP.get();
+          simpleBlock(tomato_lamp);
      //------------------------------------------------------------pecan-----------------------------------------------------------------------
           Block pecan_lamp = foodblockcompatregistry.PECAN_LAMP.get();
           simpleBlock(pecan_lamp);
@@ -1028,6 +1040,12 @@ public class GM1BlockStateProvider extends BlockStateProvider
           BlockModelBuilder onion_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(onion_carpet).getPath(), mcLoc("block/carpet"))
           .texture("wool", onion_carpet_texture);
           simpleBlock(onion_carpet, new ModelFile.UncheckedModelFile(onion_carpet_model.getLocation()));
+     //------------------------------------------------------------tomato-----------------------------------------------------------------------
+          CarpetBlock tomato_carpet = foodblockcompatregistry.TOMATO_CARPET.get();
+          ResourceLocation tomato_carpet_texture = modLoc("block/tomato_carpet");
+          BlockModelBuilder tomato_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(tomato_carpet).getPath(), mcLoc("block/carpet"))
+          .texture("wool", tomato_carpet_texture);
+          simpleBlock(tomato_carpet, new ModelFile.UncheckedModelFile(tomato_carpet_model.getLocation()));
      //------------------------------------------------------------pecan-----------------------------------------------------------------------
           CarpetBlock pecan_carpet = foodblockcompatregistry.PECAN_CARPET.get();
           ResourceLocation pecan_carpet_texture = modLoc("block/pecan_carpet");
@@ -1433,6 +1451,45 @@ public class GM1BlockStateProvider extends BlockStateProvider
              .modelForState().modelFile(hanging_onion_soul_lantern_model).addModel()
              .partialState().with(LanternBlock.HANGING, false)
              .modelForState().modelFile(onion_soul_lantern_model).addModel();
+     //------------------------------------------------------------tomato-----------------------------------------------------------------------
+         //regular
+          LanternBlock tomato_lantern = foodblockcompatregistry.TOMATO_LANTERN.get();
+          ResourceLocation tomato_lantern_texture = modLoc("block/tomato_lantern");
+  
+          BlockModelBuilder tomato_lantern_model = models()
+              .withExistingParent("tomato_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", tomato_lantern_texture);
+  
+          BlockModelBuilder hanging_tomato_lantern_model = models()
+              .withExistingParent("tomato_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", tomato_lantern_texture);
+  
+          getVariantBuilder(tomato_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_tomato_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(tomato_lantern_model).addModel();
+         //soul
+         LanternBlock tomato_soul_lantern = foodblockcompatregistry.TOMATO_SOUL_LANTERN.get();
+         ResourceLocation tomato_soul_lantern_texture = modLoc("block/tomato_soul_lantern");
+ 
+         BlockModelBuilder tomato_soul_lantern_model = models()
+             .withExistingParent("tomato_soul_lantern", mcLoc("block/lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", tomato_soul_lantern_texture);
+ 
+         BlockModelBuilder hanging_tomato_soul_lantern_model = models()
+             .withExistingParent("tomato_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", tomato_soul_lantern_texture);
+ 
+         getVariantBuilder(tomato_soul_lantern)
+             .partialState().with(LanternBlock.HANGING, true)
+             .modelForState().modelFile(hanging_tomato_soul_lantern_model).addModel()
+             .partialState().with(LanternBlock.HANGING, false)
+             .modelForState().modelFile(tomato_soul_lantern_model).addModel();
      //------------------------------------------------------------pecan-----------------------------------------------------------------------
          //regular
           LanternBlock pecan_lantern = foodblockcompatregistry.PECAN_LANTERN.get();
@@ -1674,6 +1731,22 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .modelForState().modelFile(onion_chain_model).rotationX(90).rotationY(90).addModel()
           .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
           .modelForState().modelFile(onion_chain_model).rotationX(90).addModel(); 
+     //------------------------------------------------------------tomato-----------------------------------------------------------------------
+         ChainBlock tomato_chain = foodblockcompatregistry.TOMATO_CHAIN.get();
+         ResourceLocation tomato_chain_texture = modLoc("block/tomato_chain");
+         BlockModelBuilder tomato_chain_model = models()
+          .withExistingParent("tomato_chain", mcLoc("block/chain"))
+          .renderType("cutout_mipped_all")
+          .texture("all", tomato_chain_texture)
+          .texture("particle", tomato_chain_texture);
+
+          getVariantBuilder(tomato_chain)
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Y)
+          .modelForState().modelFile(tomato_chain_model).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.X)
+          .modelForState().modelFile(tomato_chain_model).rotationX(90).rotationY(90).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
+          .modelForState().modelFile(tomato_chain_model).rotationX(90).addModel(); 
      //------------------------------------------------------------pecan-----------------------------------------------------------------------
          ChainBlock pecan_chain = foodblockcompatregistry.PECAN_CHAIN.get();
          ResourceLocation pecan_chain_texture = modLoc("block/pecan_chain");

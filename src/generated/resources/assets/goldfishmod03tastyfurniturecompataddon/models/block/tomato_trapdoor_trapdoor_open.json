@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_trapdoor_open",
+  "render_type": "goldfishmod03tastyfurniturecompataddon:block/tomato_block",
+  "textures": {
+    "texture": "goldfishmod03tastyfurniturecompataddon:block/tomato_block"
+  }
+}
