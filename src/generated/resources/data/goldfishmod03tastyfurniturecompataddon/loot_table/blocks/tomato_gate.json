@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:air"
+          "name": "goldfishmod03tastyfurniturecompataddon:tomato_gate_item"
         }
       ],
       "rolls": 1.0

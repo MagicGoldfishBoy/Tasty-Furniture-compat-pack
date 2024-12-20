@@ -2197,6 +2197,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', nuggetcompatregistry.ONION_NUGGET.get())
          .unlockedBy("has_onion_nugget", has(nuggetcompatregistry.ONION_NUGGET.get()))
          .save(output);
+  //--------------------------------------------------------------------------------------Tomato---------------------------------------------------------------------------------------------
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.TOMATO_BARS_ITEM.get(), 8)
+         .pattern("   ")
+         .pattern("AAA")
+         .pattern("AAA")
+         .define('A', nuggetcompatregistry.TOMATO_NUGGET.get())
+         .unlockedBy("has_tomato_nugget", has(nuggetcompatregistry.TOMATO_NUGGET.get()))
+         .save(output);
   //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.PECAN_BARS_ITEM.get(), 8)
          .pattern("   ")
@@ -2295,6 +2303,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', ingotcompatregistry.ONION_INGOT.get())
          .unlockedBy("has_onion_nugget", has(ingotcompatregistry.ONION_INGOT.get()))
          .save(output);
+  //--------------------------------------------------------------------------------------Tomato---------------------------------------------------------------------------------------------
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.TOMATO_DOOR_ITEM.get(), 3)
+         .pattern("AA ")
+         .pattern("AA ")
+         .pattern("AA ")
+         .define('A', ingotcompatregistry.TOMATO_INGOT.get())
+         .unlockedBy("has_tomato_nugget", has(ingotcompatregistry.TOMATO_INGOT.get()))
+         .save(output);
   //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.PECAN_DOOR_ITEM.get(), 3)
          .pattern("AA ")
@@ -2362,6 +2378,11 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.ONION_BUTTON_ITEM.get(), 1)
        .requires(nuggetcompatregistry.ONION_NUGGET.get())
        .unlockedBy("has_onion_nugget", has(nuggetcompatregistry.ONION_NUGGET.get()))
+       .save(output);
+  //--------------------------------------------------------------------------------------Tomato---------------------------------------------------------------------------------------------
+       ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.TOMATO_BUTTON_ITEM.get(), 1)
+       .requires(nuggetcompatregistry.TOMATO_NUGGET.get())
+       .unlockedBy("has_tomato_nugget", has(nuggetcompatregistry.TOMATO_NUGGET.get()))
        .save(output);
   //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.PECAN_BUTTON_ITEM.get(), 1)
@@ -2565,6 +2586,25 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .define('B', Items.STICK)
           .unlockedBy("has_onion_ingot", has(ingotcompatregistry.ONION_INGOT.get()))
           .save(output);        
+  //--------------------------------------------------------------------------------------Tomato---------------------------------------------------------------------------------------------
+        //fence
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.TOMATO_FENCE_ITEM.get(), 3)
+          .pattern("ABA")
+          .pattern("ABA")
+          .pattern("   ")
+          .define('A', ingotcompatregistry.TOMATO_INGOT.get())
+          .define('B', Items.STICK)
+          .unlockedBy("has_tomato_ingot", has(ingotcompatregistry.TOMATO_INGOT.get()))
+          .save(output);        
+        //gate
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.TOMATO_GATE_ITEM.get(), 1)
+          .pattern("BAB")
+          .pattern("BAB")
+          .pattern("   ")
+          .define('A', ingotcompatregistry.TOMATO_INGOT.get())
+          .define('B', Items.STICK)
+          .unlockedBy("has_tomato_ingot", has(ingotcompatregistry.TOMATO_INGOT.get()))
+          .save(output);        
   //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
         //fence
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.PECAN_FENCE_ITEM.get(), 3)
@@ -2684,6 +2724,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .pattern("   ")
         .define('A', foodblockcompatitemregistry.ONION_BLOCK_ITEM.get())
         .unlockedBy("has_onion_block",  has(foodblockcompatitemregistry.ONION_BLOCK_ITEM.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Tomato---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.TOMATO_PRESSURE_PLATE_ITEM.get())
+        .pattern("   ")
+        .pattern("AA ")
+        .pattern("   ")
+        .define('A', foodblockcompatitemregistry.TOMATO_BLOCK_ITEM.get())
+        .unlockedBy("has_tomato_block",  has(foodblockcompatitemregistry.TOMATO_BLOCK_ITEM.get()))
         .save(output);
   //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.PECAN_PRESSURE_PLATE_ITEM.get())

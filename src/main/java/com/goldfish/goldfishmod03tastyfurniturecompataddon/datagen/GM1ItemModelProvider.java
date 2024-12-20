@@ -823,6 +823,18 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         stairs("tomato_stairs_item", modLoc("block/tomato_block"), modLoc("block/tomato_block"), modLoc("block/tomato_block"));
        //bricks stairs
         stairs("tomato_bricks_stairs_item", modLoc("block/tomato_bricks_block"), modLoc("block/tomato_bricks_block"), modLoc("block/tomato_bricks_block"));
+       //bars
+        withExistingParent("tomato_bars_item", mcLoc("item/generated")).texture("layer0", "block/tomato_bars");
+       //doors
+        withExistingParent("tomato_door_item", mcLoc("item/generated")).texture("layer0", "item/tomato_door_item");
+       //button
+        buttonInventory("tomato_button_item", modLoc("block/tomato_block"));
+       //fence
+        fenceInventory("tomato_fence_item", modLoc("block/tomato_block"));
+       //gate
+        withExistingParent("tomato_gate_item", modLoc("block/tomato_gate"));
+       //pressure plate
+        pressurePlate("tomato_pressure_plate_item", modLoc("block/tomato_block"));
     //==============================================================================================================================================
     //|                                                              Pecan                                                                        |
     //==============================================================================================================================================

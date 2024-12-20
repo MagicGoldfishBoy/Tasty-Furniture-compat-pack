@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/pressure_plate_up",
+  "textures": {
+    "texture": "goldfishmod03tastyfurniturecompataddon:block/tomato_block"
+  }
+}

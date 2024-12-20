@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/door_bottom_right",
+  "render_type": "minecraft:translucent",
+  "textures": {
+    "bottom": "goldfishmod03tastyfurniturecompataddon:block/tomato_door_bottom",
+    "top": "goldfishmod03tastyfurniturecompataddon:block/tomato_door_top"
+  }
+}

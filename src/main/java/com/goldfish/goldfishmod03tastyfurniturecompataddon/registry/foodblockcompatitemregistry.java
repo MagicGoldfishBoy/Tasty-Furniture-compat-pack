@@ -409,6 +409,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> ONION_BARS_ITEM = FOODBLOCKITEM.register("onion_bars_item",
    () -> new BlockItem(foodblockcompatregistry.ONION_BARS.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Tomato---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, BlockItem> TOMATO_BARS_ITEM = FOODBLOCKITEM.register("tomato_bars_item",
+   () -> new BlockItem(foodblockcompatregistry.TOMATO_BARS.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> PECAN_BARS_ITEM = FOODBLOCKITEM.register("pecan_bars_item",
    () -> new BlockItem(foodblockcompatregistry.PECAN_BARS.get(), new BlockItem.Properties()));
@@ -448,6 +451,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> ONION_DOOR_ITEM = FOODBLOCKITEM.register("onion_door_item",
    () -> new BlockItem(foodblockcompatregistry.ONION_DOOR.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Tomato---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, BlockItem> TOMATO_DOOR_ITEM = FOODBLOCKITEM.register("tomato_door_item",
+   () -> new BlockItem(foodblockcompatregistry.TOMATO_DOOR.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> PECAN_DOOR_ITEM = FOODBLOCKITEM.register("pecan_door_item",
    () -> new BlockItem(foodblockcompatregistry.PECAN_DOOR.get(), new BlockItem.Properties()));
@@ -487,6 +493,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> ONION_BUTTON_ITEM = FOODBLOCKITEM.register("onion_button_item",
    () -> new BlockItem(foodblockcompatregistry.ONION_BUTTON.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Tomato---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, BlockItem> TOMATO_BUTTON_ITEM = FOODBLOCKITEM.register("tomato_button_item",
+   () -> new BlockItem(foodblockcompatregistry.TOMATO_BUTTON.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> PECAN_BUTTON_ITEM = FOODBLOCKITEM.register("pecan_button_item",
    () -> new BlockItem(foodblockcompatregistry.PECAN_BUTTON.get(), new BlockItem.Properties()));
@@ -526,6 +535,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> ONION_FENCE_ITEM = FOODBLOCKITEM.register("onion_fence_item",
    () -> new BlockItem(foodblockcompatregistry.ONION_FENCE.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Tomato---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, BlockItem> TOMATO_FENCE_ITEM = FOODBLOCKITEM.register("tomato_fence_item",
+   () -> new BlockItem(foodblockcompatregistry.TOMATO_FENCE.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> PECAN_FENCE_ITEM = FOODBLOCKITEM.register("pecan_fence_item",
    () -> new BlockItem(foodblockcompatregistry.PECAN_FENCE.get(), new BlockItem.Properties()));
@@ -565,6 +577,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> ONION_GATE_ITEM = FOODBLOCKITEM.register("onion_gate_item",
    () -> new BlockItem(foodblockcompatregistry.ONION_GATE.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Tomato---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, BlockItem> TOMATO_GATE_ITEM = FOODBLOCKITEM.register("tomato_gate_item",
+   () -> new BlockItem(foodblockcompatregistry.TOMATO_GATE.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> PECAN_GATE_ITEM = FOODBLOCKITEM.register("pecan_gate_item",
    () -> new BlockItem(foodblockcompatregistry.PECAN_GATE.get(), new BlockItem.Properties()));
@@ -604,6 +619,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> ONION_PRESSURE_PLATE_ITEM = FOODBLOCKITEM.register("onion_pressure_plate_item",
    () -> new BlockItem(foodblockcompatregistry.ONION_PRESSURE_PLATE.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Tomato---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, BlockItem> TOMATO_PRESSURE_PLATE_ITEM = FOODBLOCKITEM.register("tomato_pressure_plate_item",
+   () -> new BlockItem(foodblockcompatregistry.TOMATO_PRESSURE_PLATE.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> PECAN_PRESSURE_PLATE_ITEM = FOODBLOCKITEM.register("pecan_pressure_plate_item",
    () -> new BlockItem(foodblockcompatregistry.PECAN_PRESSURE_PLATE.get(), new BlockItem.Properties()));

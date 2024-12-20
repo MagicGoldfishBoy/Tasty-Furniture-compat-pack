@@ -499,6 +499,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation onion_bars_texture = modLoc("block/onion_bars");
           ResourceLocation onion_bars_rim_texture = modLoc("block/onion_block");
           paneBlockWithRenderType(onion_bars, "onion_bars", onion_bars_texture, onion_bars_rim_texture, "cutout_mipped_all"); 
+     //------------------------------------------------------------tomato-----------------------------------------------------------------------
+          IronBarsBlock tomato_bars = foodblockcompatregistry.TOMATO_BARS.get(); 
+          ResourceLocation tomato_bars_texture = modLoc("block/tomato_bars");
+          ResourceLocation tomato_bars_rim_texture = modLoc("block/tomato_block");
+          paneBlockWithRenderType(tomato_bars, "tomato_bars", tomato_bars_texture, tomato_bars_rim_texture, "cutout_mipped_all"); 
      //------------------------------------------------------------pecan-----------------------------------------------------------------------
           IronBarsBlock pecan_bars = foodblockcompatregistry.PECAN_BARS.get(); 
           ResourceLocation pecan_bars_texture = modLoc("block/pecan_bars");
@@ -562,6 +567,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation onion_door_top_texture = modLoc("block/onion_door_top");
           ResourceLocation onion_door_bottom_texture = modLoc("block/onion_door_bottom");
           doorBlockWithRenderType(onion_door, "onion_door", onion_door_bottom_texture, onion_door_top_texture, "translucent"); 
+     //------------------------------------------------------------tomato-----------------------------------------------------------------------
+          DoorBlock tomato_door = foodblockcompatregistry.TOMATO_DOOR.get(); 
+          ResourceLocation tomato_door_top_texture = modLoc("block/tomato_door_top");
+          ResourceLocation tomato_door_bottom_texture = modLoc("block/tomato_door_bottom");
+          doorBlockWithRenderType(tomato_door, "tomato_door", tomato_door_bottom_texture, tomato_door_top_texture, "translucent"); 
      //------------------------------------------------------------pecan-----------------------------------------------------------------------
           DoorBlock pecan_door = foodblockcompatregistry.PECAN_DOOR.get(); 
           ResourceLocation pecan_door_top_texture = modLoc("block/pecan_door_top");
@@ -615,6 +625,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ButtonBlock onion_button = foodblockcompatregistry.ONION_BUTTON.get();
           ResourceLocation onion_button_texture = modLoc("block/onion_block");
           buttonBlock(onion_button, onion_button_texture);
+     //------------------------------------------------------------tomato-----------------------------------------------------------------------
+          ButtonBlock tomato_button = foodblockcompatregistry.TOMATO_BUTTON.get();
+          ResourceLocation tomato_button_texture = modLoc("block/tomato_block");
+          buttonBlock(tomato_button, tomato_button_texture);
      //------------------------------------------------------------pecan-----------------------------------------------------------------------
           ButtonBlock pecan_button = foodblockcompatregistry.PECAN_BUTTON.get();
           ResourceLocation pecan_button_texture = modLoc("block/pecan_block");
@@ -716,6 +730,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
           FenceGateBlock onion_gate = foodblockcompatregistry.ONION_GATE.get();
           ResourceLocation onion_gate_texture = modLoc("block/onion_block");
           fenceGateBlock(onion_gate, onion_gate_texture);
+     //------------------------------------------------------------tomato-----------------------------------------------------------------------
+       //fence
+          FenceBlock tomato_fence = foodblockcompatregistry.TOMATO_FENCE.get();
+          ResourceLocation tomato_fence_texture = modLoc("block/tomato_block");
+          fenceBlock(tomato_fence, tomato_fence_texture);
+       //gate
+          FenceGateBlock tomato_gate = foodblockcompatregistry.TOMATO_GATE.get();
+          ResourceLocation tomato_gate_texture = modLoc("block/tomato_block");
+          fenceGateBlock(tomato_gate, tomato_gate_texture);
      //------------------------------------------------------------pecan-----------------------------------------------------------------------
        //fence
           FenceBlock pecan_fence = foodblockcompatregistry.PECAN_FENCE.get();
@@ -777,6 +800,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           PressurePlateBlock onion_pressure_plate = foodblockcompatregistry.ONION_PRESSURE_PLATE.get();
           ResourceLocation onion_pressure_plate_texture = modLoc("block/onion_block");
           pressurePlateBlock(onion_pressure_plate, onion_pressure_plate_texture);
+     //------------------------------------------------------------tomato-----------------------------------------------------------------------
+          PressurePlateBlock tomato_pressure_plate = foodblockcompatregistry.TOMATO_PRESSURE_PLATE.get();
+          ResourceLocation tomato_pressure_plate_texture = modLoc("block/tomato_block");
+          pressurePlateBlock(tomato_pressure_plate, tomato_pressure_plate_texture);
      //------------------------------------------------------------pecan-----------------------------------------------------------------------
           PressurePlateBlock pecan_pressure_plate = foodblockcompatregistry.PECAN_PRESSURE_PLATE.get();
           ResourceLocation pecan_pressure_plate_texture = modLoc("block/pecan_block");

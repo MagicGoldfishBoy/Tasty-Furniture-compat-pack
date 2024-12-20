@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "goldfishmod03tastyfurniturecompataddon:tomato_bars_item"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_tomato_nugget": {
+      "conditions": {
+        "items": [
+          {
+            "items": "goldfishmod03tastyfurniturecompataddon:tomato_nugget"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_tomato_nugget"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "goldfishmod03tastyfurniturecompataddon:tomato_bars_item"
+    ]
+  }
+}
