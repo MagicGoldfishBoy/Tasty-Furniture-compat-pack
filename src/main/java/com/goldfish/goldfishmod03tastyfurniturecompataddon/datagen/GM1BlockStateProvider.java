@@ -167,6 +167,19 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........tiles
           net.minecraft.world.level.block.Block lime_tiles_block = foodblockcompatregistry.LIME_TILES_BLOCK.get();
           simpleBlock(lime_tiles_block);
+     //------------------------------------------------------------grapefruit-----------------------------------------------------------------------
+      //.........plain
+          net.minecraft.world.level.block.Block grapefruit_block = foodblockcompatregistry.GRAPEFRUIT_BLOCK.get();
+          simpleBlock(grapefruit_block);
+      //.........bricks
+          net.minecraft.world.level.block.Block grapefruit_bricks_block = foodblockcompatregistry.GRAPEFRUIT_BRICKS_BLOCK.get();
+          simpleBlock(grapefruit_bricks_block);
+      //.........chiseled
+          net.minecraft.world.level.block.Block grapefruit_chiseled_block = foodblockcompatregistry.GRAPEFRUIT_CHISELED_BLOCK.get();
+          simpleBlock(grapefruit_chiseled_block);
+      //.........tiles
+          net.minecraft.world.level.block.Block grapefruit_tiles_block = foodblockcompatregistry.GRAPEFRUIT_TILES_BLOCK.get();
+          simpleBlock(grapefruit_tiles_block);
      //------------------------------------------------------------corn-----------------------------------------------------------------------
       //.........plain
           net.minecraft.world.level.block.Block corn_block = foodblockcompatregistry.CORN_BLOCK.get();
@@ -307,6 +320,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
           SlabBlock lime_bricks_slab = foodblockcompatregistry.LIME_BRICKS_SLAB.get();
           ResourceLocation lime_bricks_block_texture = modLoc("block/lime_bricks_block");
           slabBlock(lime_bricks_slab, lime_bricks_block_texture, lime_bricks_block_texture);
+     //------------------------------------------------------------grapefruit-----------------------------------------------------------------------
+      //.........plain
+          SlabBlock grapefruit_slab = foodblockcompatregistry.GRAPEFRUIT_SLAB.get();
+          ResourceLocation grapefruit_block_texture = modLoc("block/grapefruit_block");
+          slabBlock(grapefruit_slab, grapefruit_block_texture, grapefruit_block_texture);
+      //.........bricks
+          SlabBlock grapefruit_bricks_slab = foodblockcompatregistry.GRAPEFRUIT_BRICKS_SLAB.get();
+          ResourceLocation grapefruit_bricks_block_texture = modLoc("block/grapefruit_bricks_block");
+          slabBlock(grapefruit_bricks_slab, grapefruit_bricks_block_texture, grapefruit_bricks_block_texture);
      //------------------------------------------------------------corn-----------------------------------------------------------------------
       //.........plain
           SlabBlock corn_slab = foodblockcompatregistry.CORN_SLAB.get();
@@ -411,6 +433,13 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........bricks
           StairBlock lime_bricks_stairs = foodblockcompatregistry.LIME_BRICKS_STAIRS.get();
           stairsBlock(lime_bricks_stairs, lime_bricks_block_texture);
+     //------------------------------------------------------------grapefruit-----------------------------------------------------------------------
+      //.........plain
+          StairBlock grapefruit_stairs = foodblockcompatregistry.GRAPEFRUIT_STAIRS.get();
+          stairsBlock(grapefruit_stairs, grapefruit_block_texture);
+      //.........bricks
+          StairBlock grapefruit_bricks_stairs = foodblockcompatregistry.GRAPEFRUIT_BRICKS_STAIRS.get();
+          stairsBlock(grapefruit_bricks_stairs, grapefruit_bricks_block_texture);
      //------------------------------------------------------------corn-----------------------------------------------------------------------
       //.........plain
           StairBlock corn_stairs = foodblockcompatregistry.CORN_STAIRS.get();

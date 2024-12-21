@@ -643,6 +643,31 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("small_lime_cabinet_item", modLoc("block/lime_cabinet"));
        withExistingParent("medium_lime_cabinet_item", modLoc("block/medium_lime_cabinet"));
     //==============================================================================================================================================
+    //|                                                            Grapefruit                                                                      |
+    //==============================================================================================================================================
+       //mush
+        withExistingParent("grapefruit_mush", mcLoc("item/generated")).texture("layer0", "item/grapefruit_mush");
+       //ingot
+        withExistingParent("grapefruit_ingot", mcLoc("item/generated")).texture("layer0", "item/grapefruit_ingot");
+       //nugget
+        withExistingParent("grapefruit_nugget", mcLoc("item/generated")).texture("layer0", "item/grapefruit_nugget");
+       //block
+        withExistingParent("grapefruit_block_item", modLoc("block/grapefruit_block"));
+       //bricks block
+        withExistingParent("grapefruit_bricks_block_item", modLoc("block/grapefruit_bricks_block"));
+       //chiseled block
+        withExistingParent("grapefruit_chiseled_block_item", modLoc("block/grapefruit_chiseled_block"));
+       //tiles block
+        withExistingParent("grapefruit_tiles_block_item", modLoc("block/grapefruit_tiles_block"));
+       //slab
+        slab("grapefruit_slab_item", modLoc("block/grapefruit_block"), modLoc("block/grapefruit_block"), modLoc("block/grapefruit_block"));
+       //bricks slab
+        slab("grapefruit_bricks_slab_item", modLoc("block/grapefruit_bricks_block"), modLoc("block/grapefruit_bricks_block"), modLoc("block/grapefruit_bricks_block"));
+       //stairs
+        stairs("grapefruit_stairs_item", modLoc("block/grapefruit_block"), modLoc("block/grapefruit_block"), modLoc("block/grapefruit_block"));
+       //bricks stairs
+        stairs("grapefruit_bricks_stairs_item", modLoc("block/grapefruit_bricks_block"), modLoc("block/grapefruit_bricks_block"), modLoc("block/grapefruit_bricks_block"));
+    //==============================================================================================================================================
     //|                                                              Corn                                                                        |
     //==============================================================================================================================================
        //mush

@@ -1,0 +1,15 @@
+{
+    "replace": false,
+    "values": [
+        {"id":"pamhc2trees:grapefruititem",
+        "required": false},
+        {"id":"productivetrees:grapefruit",
+        "required": false},
+        {"id":"harvestcraft:grapefruititem",
+        "required": false},
+        {"id":"croptopia:grapefruit",
+        "required": false},
+        {"id":"c:crops/grapefruit",
+        "required": false}
+    ]
+  }

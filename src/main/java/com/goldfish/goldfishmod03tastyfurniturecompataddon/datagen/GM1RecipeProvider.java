@@ -72,6 +72,10 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         Registries.ITEM,
         ResourceLocation.fromNamespaceAndPath("goldfishmod03tastyfurniturecompataddon", "limes")
         );
+       public static final TagKey<Item> GRAPEFRUIT_TAG = TagKey.create(
+        Registries.ITEM,
+        ResourceLocation.fromNamespaceAndPath("goldfishmod03tastyfurniturecompataddon", "grapefruits")
+        );
        public static final TagKey<Item> CORN_TAG = TagKey.create(
         Registries.ITEM,
         ResourceLocation.fromNamespaceAndPath("goldfishmod03tastyfurniturecompataddon", "corn")
@@ -425,6 +429,43 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', LIME_TAG)
             .unlockedBy("has_mush_hammer", has(mushregistry.most_advanced_mushhammer.get()))
             .save(output, "lime_mush_from_most_advanced_mushhammer");
+  //----------------------------------------------------------------------------------------Grapefruit-----------------------------------------------------------------------------------------------
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.GRAPEFRUIT_MUSH.get(), 1)
+            .pattern("ABB")
+            .pattern("BB ")
+            .pattern("   ")
+            .define('A', mushregistry.mushhammer.get())
+            .define('B', GRAPEFRUIT_TAG)
+            .unlockedBy("has_mush_hammer", has(mushregistry.mushhammer.get()))
+            .save(output);
+          //advanced
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.GRAPEFRUIT_MUSH.get(), 2)
+            .pattern("ABB")
+            .pattern("BB ")
+            .pattern("   ")
+            .define('A', mushregistry.advanced_mushhammer.get())
+            .define('B', GRAPEFRUIT_TAG)
+            .unlockedBy("has_mush_hammer", has(mushregistry.advanced_mushhammer.get()))
+            .save(output, "grapefruit_mush_from_advanced_mushhammer");
+          //more advanced
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.GRAPEFRUIT_MUSH.get(), 4)
+            .pattern("ABB")
+            .pattern("BB ")
+            .pattern("   ")
+            .define('A', mushregistry.more_advanced_mushhammer.get())
+            .define('B', GRAPEFRUIT_TAG)
+            .unlockedBy("has_mush_hammer", has(mushregistry.more_advanced_mushhammer.get()))
+            .save(output, "grapefruit_mush_from_more_advanced_mushhammer");
+          //most advanced
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.GRAPEFRUIT_MUSH.get(), 8)
+            .pattern("ABB")
+            .pattern("BB ")
+            .pattern("   ")
+            .define('A', mushregistry.most_advanced_mushhammer.get())
+            .define('B', GRAPEFRUIT_TAG)
+            .unlockedBy("has_mush_hammer", has(mushregistry.most_advanced_mushhammer.get()))
+            .save(output, "grapefruit_mush_from_most_advanced_mushhammer");
   //----------------------------------------------------------------------------------------Corn-----------------------------------------------------------------------------------------------
           //regular
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.CORN_MUSH.get(), 1)
@@ -868,6 +909,38 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .requires(foodblockcompatitemregistry.LIME_BLOCK_ITEM.get())
             .unlockedBy("has_lime_block", has(foodblockcompatitemregistry.LIME_BLOCK_ITEM.get()))
             .save(output, "lime_ingot_from_unpacking");
+  //----------------------------------------------------------------------------------------Grapefruit-----------------------------------------------------------------------------------------------
+          //crafting
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotcompatregistry.GRAPEFRUIT_INGOT.get(), 1)
+            .pattern("AAA")
+            .pattern("AAA")
+            .pattern("AAA")
+            .define('A', nuggetcompatregistry.GRAPEFRUIT_NUGGET.get())
+            .unlockedBy("has_grapefruit_nugget", has(nuggetcompatregistry.GRAPEFRUIT_NUGGET.get()))
+            .save(output, "grapefruit_ingot_from_crafting");
+          //smelting
+            SimpleCookingRecipeBuilder.smelting(Ingredient.of(mushcompatregistry.GRAPEFRUIT_MUSH.get()),
+            RecipeCategory.MISC,
+            ingotcompatregistry.GRAPEFRUIT_INGOT.get(),
+            1.0f,
+            200
+            )
+            .unlockedBy("has_grapefruit_mush", has(mushcompatregistry.GRAPEFRUIT_MUSH.get()))
+            .save(output, "grapefruit_ingot_from_smelting");
+          //blasting
+            SimpleCookingRecipeBuilder.blasting(Ingredient.of(mushcompatregistry.GRAPEFRUIT_MUSH.get()),
+            RecipeCategory.MISC,
+            ingotcompatregistry.GRAPEFRUIT_INGOT.get(),
+            1.0f,
+            100
+            )
+            .unlockedBy("has_grapefruit_mush", has(mushcompatregistry.GRAPEFRUIT_MUSH.get()))
+            .save(output, "grapefruit_ingot_from_blasting");
+          //unpacking
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotcompatregistry.GRAPEFRUIT_INGOT.get(), 9)
+            .requires(foodblockcompatitemregistry.GRAPEFRUIT_BLOCK_ITEM.get())
+            .unlockedBy("has_grapefruit_block", has(foodblockcompatitemregistry.GRAPEFRUIT_BLOCK_ITEM.get()))
+            .save(output, "grapefruit_ingot_from_unpacking");
   //----------------------------------------------------------------------------------------Corn-----------------------------------------------------------------------------------------------
           //crafting
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotcompatregistry.CORN_INGOT.get(), 1)
@@ -1069,6 +1142,11 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, nuggetcompatregistry.LIME_NUGGET.get(), 9)
         .requires(ingotcompatregistry.LIME_INGOT.get())
         .unlockedBy("has_lime_ingot", has(ingotcompatregistry.LIME_INGOT.get()))
+        .save(output);
+  //----------------------------------------------------------------------------------------Grapefruit-----------------------------------------------------------------------------------------------
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, nuggetcompatregistry.GRAPEFRUIT_NUGGET.get(), 9)
+        .requires(ingotcompatregistry.GRAPEFRUIT_INGOT.get())
+        .unlockedBy("has_grapefruit_ingot", has(ingotcompatregistry.GRAPEFRUIT_INGOT.get()))
         .save(output);
   //----------------------------------------------------------------------------------------Corn-----------------------------------------------------------------------------------------------
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, nuggetcompatregistry.CORN_NUGGET.get(), 9)
@@ -1497,6 +1575,56 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.LIME_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockcompatitemregistry.LIME_TILES_BLOCK_ITEM.get())
           .unlockedBy("has_lime_block", has(foodblockcompatitemregistry.LIME_BLOCK_ITEM.get()))
           .save(output, "lime_tiles_block_from_lime_block_stonecutting");
+  //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
+        //plain
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.GRAPEFRUIT_BLOCK_ITEM.get(), 1)
+          .pattern("AAA")
+          .pattern("AAA")
+          .pattern("AAA")
+          .define('A', ingotcompatregistry.GRAPEFRUIT_INGOT.get())
+          .unlockedBy("has_grapefruit_ingot", has(ingotcompatregistry.GRAPEFRUIT_INGOT.get()))
+          .save(output); 
+        //bricks
+         //crafting
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.GRAPEFRUIT_BRICKS_BLOCK_ITEM.get(), 4)
+          .pattern("AA ")
+          .pattern("AA ")
+          .pattern("   ")
+          .define('A', foodblockcompatitemregistry.GRAPEFRUIT_BLOCK_ITEM.get())
+          .unlockedBy("has_grapefruit_block", has(foodblockcompatitemregistry.GRAPEFRUIT_BLOCK_ITEM.get()))
+          .save(output); 
+         //stonecutting     
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.GRAPEFRUIT_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockcompatitemregistry.GRAPEFRUIT_BRICKS_BLOCK_ITEM.get())
+          .unlockedBy("has_grapefruit_block", has(foodblockcompatitemregistry.GRAPEFRUIT_BLOCK_ITEM.get()))
+          .save(output, "grapefruit_bricks_block_from_grapefruit_block_stonecutting");
+
+        //chiseled
+         //crafting
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.GRAPEFRUIT_CHISELED_BLOCK_ITEM.get())
+          .pattern("   ")
+          .pattern(" A ")
+          .pattern(" A ")
+          .define('A', foodblockcompatitemregistry.GRAPEFRUIT_SLAB_ITEM.get())
+          .unlockedBy("has_grapefruit_slab", has(foodblockcompatitemregistry.GRAPEFRUIT_SLAB_ITEM.get()))
+          .save(output);
+         //stonecutting     
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.GRAPEFRUIT_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockcompatitemregistry.GRAPEFRUIT_CHISELED_BLOCK_ITEM.get())
+          .unlockedBy("has_grapefruit_block", has(foodblockcompatitemregistry.GRAPEFRUIT_BLOCK_ITEM.get()))
+          .save(output, "grapefruit_chiseled_block_from_grapefruit_block_stonecutting");
+
+        //tiles
+         //crafting
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.GRAPEFRUIT_TILES_BLOCK_ITEM.get(),2)
+          .pattern("   ")
+          .pattern("AA ")
+          .pattern("AA ")
+          .define('A', foodblockcompatitemregistry.GRAPEFRUIT_SLAB_ITEM.get())
+          .unlockedBy("has_grapefruit_slab", has(foodblockcompatitemregistry.GRAPEFRUIT_SLAB_ITEM.get()))
+          .save(output);
+         //stonecutting     
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.GRAPEFRUIT_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockcompatitemregistry.GRAPEFRUIT_TILES_BLOCK_ITEM.get())
+          .unlockedBy("has_grapefruit_block", has(foodblockcompatitemregistry.GRAPEFRUIT_BLOCK_ITEM.get()))
+          .save(output, "grapefruit_tiles_block_from_grapefruit_block_stonecutting");
   //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
         //plain
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CORN_BLOCK_ITEM.get(), 1)
@@ -1861,6 +1989,20 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           foodblockcompatitemregistry.LIME_BRICKS_SLAB_ITEM.get(), 2)
           .unlockedBy("has_lime_bricks_block", has(foodblockcompatitemregistry.LIME_BRICKS_BLOCK_ITEM.get()))
           .save(output, "lime_bricks_slab_from_lime_bricks_block_stonecutting");
+  //----------------------------------------------------------------------------------------Grapefruit-----------------------------------------------------------------------------------------------
+        //plain
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.GRAPEFRUIT_SLAB_ITEM.get())
+          .pattern("   ")
+          .pattern("   ")
+          .pattern("AAA")
+          .define('A', ingotcompatregistry.GRAPEFRUIT_INGOT.get())
+          .unlockedBy("has_grapefruit_ingot", has(ingotcompatregistry.GRAPEFRUIT_INGOT.get()))
+          .save(output);
+        //bricks
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.GRAPEFRUIT_BRICKS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, 
+          foodblockcompatitemregistry.GRAPEFRUIT_BRICKS_SLAB_ITEM.get(), 2)
+          .unlockedBy("has_grapefruit_bricks_block", has(foodblockcompatitemregistry.GRAPEFRUIT_BRICKS_BLOCK_ITEM.get()))
+          .save(output, "grapefruit_bricks_slab_from_grapefruit_bricks_block_stonecutting");
   //----------------------------------------------------------------------------------------Corn-----------------------------------------------------------------------------------------------
         //plain
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CORN_SLAB_ITEM.get())
@@ -2045,6 +2187,20 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           foodblockcompatitemregistry.LIME_BRICKS_STAIRS_ITEM.get(), 1)
           .unlockedBy("has_lime_bricks_block", has(foodblockcompatitemregistry.LIME_BRICKS_BLOCK_ITEM.get()))
           .save(output, "lime_bricks_stairs_from_lime_bricks_block_stonecutting");
+  //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
+        //plain
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.GRAPEFRUIT_STAIRS_ITEM.get())
+          .pattern("A  ")
+          .pattern("AA ")
+          .pattern("AAA")
+          .define('A', ingotcompatregistry.GRAPEFRUIT_INGOT.get())
+          .unlockedBy("has_grapefruit_ingot", has(ingotcompatregistry.GRAPEFRUIT_INGOT.get()))
+          .save(output);
+        //bricks
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.GRAPEFRUIT_BRICKS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, 
+          foodblockcompatitemregistry.GRAPEFRUIT_BRICKS_STAIRS_ITEM.get(), 1)
+          .unlockedBy("has_grapefruit_bricks_block", has(foodblockcompatitemregistry.GRAPEFRUIT_BRICKS_BLOCK_ITEM.get()))
+          .save(output, "grapefruit_bricks_stairs_from_grapefruit_bricks_block_stonecutting");
   //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
         //plain
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CORN_STAIRS_ITEM.get())
