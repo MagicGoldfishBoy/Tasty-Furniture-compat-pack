@@ -865,6 +865,17 @@ public class GM1ItemModelProvider extends ItemModelProvider {
           withExistingParent("tomato_soul_torch_item", modLoc("block/tomato_soul_torch"));
        //furnaces
        withExistingParent("tomato_furnace_item", modLoc("block/tomato_furnace_model_unlit"));
+       //paths
+       withExistingParent("tomato_stone_path_item", modLoc("block/tomato_stone_path"));
+       //barrel
+       withExistingParent("tomato_barrel_item", modLoc("block/tomato_barrel_model_closed"));
+       //chair
+       withExistingParent("tomato_chair_item", modLoc("block/tomato_chair"));
+       //bed
+       withExistingParent("tomato_bed_item", modLoc("block/tomato_bed"));
+       //cabinet
+       withExistingParent("small_tomato_cabinet_item", modLoc("block/tomato_cabinet"));
+       withExistingParent("medium_tomato_cabinet_item", modLoc("block/medium_tomato_cabinet"));
     //==============================================================================================================================================
     //|                                                              Pecan                                                                        |
     //==============================================================================================================================================

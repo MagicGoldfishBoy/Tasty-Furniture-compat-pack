@@ -4532,6 +4532,18 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .modelFile(models().getExistingFile(modelLocation))
                   .build();
           });
+     //------------------------------------------------------------tomato-----------------------------------------------------------------------
+          foodpathtypeminislab tomato_stone_path = foodblockcompatregistry.TOMATO_STONE_PATH.get();
+
+          getVariantBuilder(tomato_stone_path)
+          .forAllStates(state -> {
+
+              ResourceLocation modelLocation = modLoc("block/tomato_stone_path");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .build();
+          });
      //------------------------------------------------------------pecan-----------------------------------------------------------------------
           foodpathtypeminislab pecan_stone_path = foodblockcompatregistry.PECAN_STONE_PATH.get();
 
@@ -5039,6 +5051,54 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationX(rotationX)
                       .build();
               });
+     //------------------------------------------------------------tomato-----------------------------------------------------------------------
+          foodBarrel tomato_barrel = foodblockcompatregistry.TOMATO_BARREL.get();
+          ResourceLocation tomato_barrel_closed_texture = modLoc("block/tomato_barrel_top_closed");
+          ResourceLocation tomato_barrel_open_texture = modLoc("block/tomato_barrel_top_open");
+          ResourceLocation tomato_barrel_side = modLoc("block/tomato_barrel_side");
+          ResourceLocation tomato_barrel_bottom = modLoc("block/tomato_barrel_bottom");
+          
+          BlockModelBuilder tomato_barrel_model_closed = models()
+              .withExistingParent("tomato_barrel_model_closed", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", tomato_barrel_side)
+              .texture("bottom", tomato_barrel_bottom)
+              .texture("top", tomato_barrel_closed_texture)
+              .texture("particle", tomato_barrel_side);
+          
+          BlockModelBuilder tomato_barrel_model_open = models()
+              .withExistingParent("tomato_barrel_model_open", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", tomato_barrel_side)
+              .texture("bottom", tomato_barrel_bottom)
+              .texture("top", tomato_barrel_open_texture)
+              .texture("particle", tomato_barrel_side);
+          
+          getVariantBuilder(tomato_barrel)
+              .forAllStates(state -> {
+                  Boolean open = state.getValue(BlockStateProperties.OPEN);
+                  Direction facing = state.getValue(BlockStateProperties.FACING);
+                  int rotationY = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+                  int rotationX = switch (facing) {
+                      case UP -> 0;
+                      case DOWN -> 180;
+                      default -> 90;
+                  };
+
+                  ResourceLocation modelLocation = open ? modLoc("block/tomato_barrel_model_open") : modLoc("block/tomato_barrel_model_closed");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotationY)
+                      .rotationX(rotationX)
+                      .build();
+              });
      //------------------------------------------------------------pecan-----------------------------------------------------------------------
           foodBarrel pecan_barrel = foodblockcompatregistry.PECAN_BARREL.get();
           ResourceLocation pecan_barrel_closed_texture = modLoc("block/pecan_barrel_top_closed");
@@ -5348,6 +5408,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .rotationY(rotationY)
                   .build();
           });
+     //------------------------------------------------------------tomato-----------------------------------------------------------------------
+          foodChairBlock tomatoChair = foodblockcompatregistry.TOMATO_CHAIR.get();
+
+          getVariantBuilder(tomatoChair)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/tomato_chair");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
      //------------------------------------------------------------pecan-----------------------------------------------------------------------
           foodChairBlock pecanChair = foodblockcompatregistry.PECAN_CHAIR.get();
 
@@ -5597,6 +5678,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/onion_bed");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------tomato-----------------------------------------------------------------------
+          foodBed tomatoBed = foodblockcompatregistry.TOMATO_BED.get();
+
+          getVariantBuilder(tomatoBed)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/tomato_bed");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -6092,6 +6194,51 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = open ? modLoc("block/medium_onion_cabinet_open") : modLoc("block/medium_onion_cabinet");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------tomato-----------------------------------------------------------------------
+         //small
+          smallFoodCabinet tomatoCabinet = foodblockcompatregistry.SMALL_TOMATO_CABINET.get();
+
+          getVariantBuilder(tomatoCabinet)
+          .forAllStates(state -> {
+              Boolean open = state.getValue(BlockStateProperties.OPEN);
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = open ? modLoc("block/tomato_cabinet_open") : modLoc("block/tomato_cabinet");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+         //medium
+          mediumFoodCabinet tomatoMediumCabinet = foodblockcompatregistry.MEDIUM_TOMATO_CABINET.get();
+
+          getVariantBuilder(tomatoMediumCabinet)
+          .forAllStates(state -> {
+              Boolean open = state.getValue(BlockStateProperties.OPEN);
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = open ? modLoc("block/medium_tomato_cabinet_open") : modLoc("block/medium_tomato_cabinet");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))

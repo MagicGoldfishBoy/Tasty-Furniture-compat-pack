@@ -1224,6 +1224,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> ONION_STONE_PATH_ITEM = FOODBLOCKITEM.register("onion_stone_path_item", 
     () -> new BlockItem(foodblockcompatregistry.ONION_STONE_PATH.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Tomato---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> TOMATO_STONE_PATH_ITEM = FOODBLOCKITEM.register("tomato_stone_path_item", 
+    () -> new BlockItem(foodblockcompatregistry.TOMATO_STONE_PATH.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> PECAN_STONE_PATH_ITEM = FOODBLOCKITEM.register("pecan_stone_path_item", 
     () -> new BlockItem(foodblockcompatregistry.PECAN_STONE_PATH.get(), new BlockItem.Properties()));
@@ -1273,6 +1276,10 @@ public class foodblockcompatitemregistry {
     public static final DeferredHolder<Item, BlockItem> ONION_BARREL_ITEM = FOODBLOCKITEM.register("onion_barrel_item", 
     () -> new BlockItem(foodblockcompatregistry.ONION_BARREL.get(),
     new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Tomato---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> TOMATO_BARREL_ITEM = FOODBLOCKITEM.register("tomato_barrel_item", 
+    () -> new BlockItem(foodblockcompatregistry.TOMATO_BARREL.get(),
+    new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> PECAN_BARREL_ITEM = FOODBLOCKITEM.register("pecan_barrel_item", 
     () -> new BlockItem(foodblockcompatregistry.PECAN_BARREL.get(),
@@ -1314,6 +1321,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> ONION_CHAIR_ITEM = FOODBLOCKITEM.register("onion_chair_item", () -> new BlockItem(foodblockcompatregistry.ONION_CHAIR.get(),
     new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Tomato---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> TOMATO_CHAIR_ITEM = FOODBLOCKITEM.register("tomato_chair_item", () -> new BlockItem(foodblockcompatregistry.TOMATO_CHAIR.get(),
+    new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> PECAN_CHAIR_ITEM = FOODBLOCKITEM.register("pecan_chair_item", () -> new BlockItem(foodblockcompatregistry.PECAN_CHAIR.get(),
     new BlockItem.Properties()));
@@ -1352,6 +1362,9 @@ public class foodblockcompatitemregistry {
     new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> ONION_BED_ITEM = FOODBLOCKITEM.register("onion_bed_item", () -> new BlockItem(foodblockcompatregistry.ONION_BED.get(),
+    new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Tomato---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> TOMATO_BED_ITEM = FOODBLOCKITEM.register("tomato_bed_item", () -> new BlockItem(foodblockcompatregistry.TOMATO_BED.get(),
     new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> PECAN_BED_ITEM = FOODBLOCKITEM.register("pecan_bed_item", () -> new BlockItem(foodblockcompatregistry.PECAN_BED.get(),
@@ -1451,6 +1464,15 @@ public class foodblockcompatitemregistry {
     //medium
       public static final DeferredHolder<Item, BlockItem> MEDIUM_ONION_CABINET_ITEM = FOODBLOCKITEM.register("medium_onion_cabinet_item", 
       () -> new BlockItem(foodblockcompatregistry.MEDIUM_ONION_CABINET.get(),
+      new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Tomato---------------------------------------------------------------------------------------------
+    //small
+      public static final DeferredHolder<Item, BlockItem> SMALL_TOMATO_CABINET_ITEM = FOODBLOCKITEM.register("small_tomato_cabinet_item", 
+      () -> new BlockItem(foodblockcompatregistry.SMALL_TOMATO_CABINET.get(),
+      new BlockItem.Properties()));
+    //medium
+      public static final DeferredHolder<Item, BlockItem> MEDIUM_TOMATO_CABINET_ITEM = FOODBLOCKITEM.register("medium_tomato_cabinet_item", 
+      () -> new BlockItem(foodblockcompatregistry.MEDIUM_TOMATO_CABINET.get(),
       new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
     //small
