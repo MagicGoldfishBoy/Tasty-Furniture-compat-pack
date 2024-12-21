@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/wall_torch",
+  "render_type": "minecraft:cutout_mipped_all",
+  "textures": {
+    "particle": "goldfishmod03tastyfurniturecompataddon:block/tomato_soul_torch",
+    "torch": "goldfishmod03tastyfurniturecompataddon:block/tomato_soul_torch"
+  }
+}

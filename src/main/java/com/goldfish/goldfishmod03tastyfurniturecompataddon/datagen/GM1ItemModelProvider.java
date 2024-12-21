@@ -852,6 +852,19 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //chain
        withExistingParent("tomato_chain_item", modLoc("block/tomato_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
        .end();
+       //ladder
+       withExistingParent("tomato_ladder_item", modLoc("block/tomato_ladder"));
+       //table
+       withExistingParent("tomato_table_item", modLoc("block/tomato_table"));
+       //torches
+        //regular
+        withExistingParent("tomato_torch_item", modLoc("block/tomato_torch"));
+        //redstone
+          withExistingParent("tomato_redstone_torch_item", modLoc("block/tomato_redstone_torch"));
+        //soul
+          withExistingParent("tomato_soul_torch_item", modLoc("block/tomato_soul_torch"));
+       //furnaces
+       withExistingParent("tomato_furnace_item", modLoc("block/tomato_furnace_model_unlit"));
     //==============================================================================================================================================
     //|                                                              Pecan                                                                        |
     //==============================================================================================================================================

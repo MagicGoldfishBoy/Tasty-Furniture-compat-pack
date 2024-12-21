@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/furnace",
+  "render_type": "minecraft:cutout_mipped_all",
+  "textures": {
+    "front": "goldfishmod03tastyfurniturecompataddon:block/tomato_furnace",
+    "particle": "goldfishmod03tastyfurniturecompataddon:block/tomato_block",
+    "side": "goldfishmod03tastyfurniturecompataddon:block/tomato_block",
+    "top": "goldfishmod03tastyfurniturecompataddon:block/tomato_block"
+  }
+}

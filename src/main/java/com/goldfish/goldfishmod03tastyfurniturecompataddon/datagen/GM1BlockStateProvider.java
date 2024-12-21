@@ -1992,6 +1992,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .rotationY(rotationY)
                   .build();
           });
+     //------------------------------------------------------------tomato-----------------------------------------------------------------------
+          LadderBlock tomatoladder = foodblockcompatregistry.TOMATO_LADDER.get();
+
+          getVariantBuilder(tomatoladder)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/tomato_ladder");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
      //------------------------------------------------------------pecan-----------------------------------------------------------------------
           LadderBlock pecanladder = foodblockcompatregistry.PECAN_LADDER.get();
 
@@ -2241,6 +2262,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/onion_table");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------tomato-----------------------------------------------------------------------
+          HorizontalDirectionalBlock tomatotable = foodblockcompatregistry.TOMATO_TABLE.get();
+
+          getVariantBuilder(tomatotable)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/tomato_table");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -3452,6 +3494,122 @@ public class GM1BlockStateProvider extends BlockStateProvider
                 .rotationY(rotation)
                 .build();
             });
+     //------------------------------------------------------------tomato-----------------------------------------------------------------------
+       //regular
+        TorchBlock tomato_torch = foodblockcompatregistry.TOMATO_TORCH.get();
+        ResourceLocation tomato_torch_texture = modLoc("block/tomato_torch");
+        BlockModelBuilder tomato_torch_model = models()
+        .withExistingParent("tomato_torch", mcLoc("block/torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", tomato_torch_texture)
+        .texture("particle", tomato_torch_texture);
+
+        simpleBlock(tomato_torch, tomato_torch_model);
+
+        TorchBlock tomato_wall_torch = foodblockcompatregistry.TOMATO_WALL_TORCH.get();
+        BlockModelBuilder tomato_wall_torch_model = models()
+        .withExistingParent("tomato_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", tomato_torch_texture)
+        .texture("particle", tomato_torch_texture);
+        getVariantBuilder(tomato_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("tomato_wall_torch", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", tomato_torch_texture)
+                    .texture("particle", tomato_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //redstone
+        RedstoneTorchBlock tomato_redstone_torch = foodblockcompatregistry.TOMATO_REDSTONE_TORCH.get();
+        ResourceLocation tomato_redstone_torch_texture = modLoc("block/tomato_redstone_torch");
+        BlockModelBuilder tomato_redstone_torch_model = models()
+        .withExistingParent("tomato_redstone_torch", mcLoc("block/redstone_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", tomato_redstone_torch_texture)
+        .texture("particle", tomato_redstone_torch_texture);
+        
+
+        simpleBlock(tomato_redstone_torch, tomato_redstone_torch_model);
+
+        ResourceLocation tomato_redstone_wall_torch_texture = modLoc("block/tomato_redstone_torch");
+
+        RedstoneTorchBlock tomato_redstone_wall_torch = foodblockcompatregistry.TOMATO_REDSTONE_WALL_TORCH.get();
+        BlockModelBuilder tomato_redstone_wall_torch_model = models()
+        .withExistingParent("tomato_redstone_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", tomato_redstone_wall_torch_texture)
+        .texture("particle", tomato_redstone_wall_torch_texture);
+        getVariantBuilder(tomato_redstone_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("tomato_redstone_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", tomato_redstone_wall_torch_texture)
+                    .texture("particle", tomato_redstone_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //soul
+        TorchBlock tomato_soul_torch = foodblockcompatregistry.TOMATO_SOUL_TORCH.get();
+        ResourceLocation tomato_soul_torch_texture = modLoc("block/tomato_soul_torch");
+        BlockModelBuilder tomato_soul_torch_model = models()
+        .withExistingParent("tomato_soul_torch", mcLoc("block/soul_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", tomato_soul_torch_texture)
+        .texture("particle", tomato_soul_torch_texture);
+        
+
+        simpleBlock(tomato_soul_torch, tomato_soul_torch_model);
+
+        ResourceLocation tomato_soul_wall_torch_texture = modLoc("block/tomato_soul_torch");
+        TorchBlock tomato_soul_wall_torch = foodblockcompatregistry.TOMATO_SOUL_WALL_TORCH.get();
+        BlockModelBuilder tomato_soul_wall_torch_model = models()
+        .withExistingParent("tomato_soul_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", tomato_soul_wall_torch_texture)
+        .texture("particle", tomato_soul_wall_torch_texture);
+        getVariantBuilder(tomato_soul_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("tomato_soul_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", tomato_soul_wall_torch_texture)
+                    .texture("particle", tomato_soul_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
      //------------------------------------------------------------pecan-----------------------------------------------------------------------
        //regular
         TorchBlock pecan_torch = foodblockcompatregistry.PECAN_TORCH.get();
@@ -4087,7 +4245,6 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation onion_furnace_lit_texture = modLoc("block/onion_furnace_lit");
           ResourceLocation onion_furnace_side = modLoc("block/onion_block");
           
-          // Define the model for the unlit state
           BlockModelBuilder onion_furnace_model_unlit = models()
               .withExistingParent("onion_furnace_model_unlit", mcLoc("block/furnace"))
               .renderType("cutout_mipped_all")
@@ -4096,7 +4253,6 @@ public class GM1BlockStateProvider extends BlockStateProvider
               .texture("front", onion_furnace_unlit_texture)
               .texture("particle", onion_furnace_side);
           
-          // Define the model for the lit state
           BlockModelBuilder onion_furnace_model_lit = models()
               .withExistingParent("onion_furnace_model_lit", mcLoc("block/furnace"))
               .renderType("cutout_mipped_all")
@@ -4105,7 +4261,6 @@ public class GM1BlockStateProvider extends BlockStateProvider
               .texture("front", onion_furnace_lit_texture)
               .texture("particle", onion_furnace_side);
           
-          // Configure variants for the onion_furnace block
           getVariantBuilder(onion_furnace)
               .forAllStates(state -> {
                   Boolean lit = state.getValue(BlockStateProperties.LIT);
@@ -4119,6 +4274,47 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   };
 
                   ResourceLocation modelLocation = lit ? modLoc("block/onion_furnace_model_lit") : modLoc("block/onion_furnace_model_unlit");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotation)
+                      .build();
+              });
+     //------------------------------------------------------------tomato-----------------------------------------------------------------------
+          FurnaceBlock tomato_furnace = foodblockcompatregistry.TOMATO_FURNACE.get();
+          ResourceLocation tomato_furnace_unlit_texture = modLoc("block/tomato_furnace");
+          ResourceLocation tomato_furnace_lit_texture = modLoc("block/tomato_furnace_lit");
+          ResourceLocation tomato_furnace_side = modLoc("block/tomato_block");
+          
+          BlockModelBuilder tomato_furnace_model_unlit = models()
+              .withExistingParent("tomato_furnace_model_unlit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", tomato_furnace_side)
+              .texture("top", tomato_furnace_side)
+              .texture("front", tomato_furnace_unlit_texture)
+              .texture("particle", tomato_furnace_side);
+          
+          BlockModelBuilder tomato_furnace_model_lit = models()
+              .withExistingParent("tomato_furnace_model_lit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", tomato_furnace_side)
+              .texture("top", tomato_furnace_side)
+              .texture("front", tomato_furnace_lit_texture)
+              .texture("particle", tomato_furnace_side);
+          
+          getVariantBuilder(tomato_furnace)
+              .forAllStates(state -> {
+                  Boolean lit = state.getValue(BlockStateProperties.LIT);
+                  Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                  int rotation = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+
+                  ResourceLocation modelLocation = lit ? modLoc("block/tomato_furnace_model_lit") : modLoc("block/tomato_furnace_model_unlit");
               
                   return ConfiguredModel.builder()
                       .modelFile(models().getExistingFile(modelLocation))

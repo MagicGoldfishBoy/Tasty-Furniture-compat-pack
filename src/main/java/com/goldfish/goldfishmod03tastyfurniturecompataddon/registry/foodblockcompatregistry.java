@@ -48,6 +48,7 @@ import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.orangeWallSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.pecanFurnace;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.pecanSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.pecanWallSign;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.tomatoFurnace;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.tomatoSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.tomatoWallSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.almondFurnaceEntity;
@@ -74,6 +75,7 @@ import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.orangeFu
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.orangeSignEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.pecanFurnaceEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.pecanSignEntity;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.tomatoFurnaceEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.tomatoSignEntity;
 
 import net.minecraft.core.particles.ParticleTypes;
@@ -2528,77 +2530,84 @@ public class foodblockcompatregistry {
     .sound(plant_ladder_sound)
     .noOcclusion()
    )); 
- //--------------------------------------------------------------------------------------Juniper---------------------------------------------------------------------------------------------
+ //---------------------------------------------------------------------------------------Juniper-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, LadderBlock> JUNIPER_LADDER = FOODBLOCK.register("juniper_ladder", () -> new LadderBlock(BlockBehaviour.Properties.of()
     .destroyTime(ladder_destroy_time)
     .explosionResistance(ladder_explosion_resistance)
     .sound(plant_ladder_sound)
     .noOcclusion()
    )); 
- //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
+ //----------------------------------------------------------------------------------------Cherry-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, LadderBlock> CHERRY_LADDER = FOODBLOCK.register("cherry_ladder", () -> new LadderBlock(BlockBehaviour.Properties.of()
     .destroyTime(ladder_destroy_time)
     .explosionResistance(ladder_explosion_resistance)
     .sound(plant_ladder_sound)
     .noOcclusion()
    )); 
- //--------------------------------------------------------------------------------------Blackcherry---------------------------------------------------------------------------------------------
+ //-------------------------------------------------------------------------------------Blackcherry---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, LadderBlock> BLACKCHERRY_LADDER = FOODBLOCK.register("blackcherry_ladder", () -> new LadderBlock(BlockBehaviour.Properties.of()
     .destroyTime(ladder_destroy_time)
     .explosionResistance(ladder_explosion_resistance)
     .sound(plant_ladder_sound)
     .noOcclusion()
    )); 
- //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
+ //---------------------------------------------------------------------------------------Coconut-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, LadderBlock> COCONUT_LADDER = FOODBLOCK.register("coconut_ladder", () -> new LadderBlock(BlockBehaviour.Properties.of()
     .destroyTime(ladder_destroy_time)
     .explosionResistance(ladder_explosion_resistance)
     .sound(plant_ladder_sound)
     .noOcclusion()
    )); 
- //--------------------------------------------------------------------------------------Orange---------------------------------------------------------------------------------------------
+ //----------------------------------------------------------------------------------------Orange-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, LadderBlock> ORANGE_LADDER = FOODBLOCK.register("orange_ladder", () -> new LadderBlock(BlockBehaviour.Properties.of()
     .destroyTime(ladder_destroy_time)
     .explosionResistance(ladder_explosion_resistance)
     .sound(plant_ladder_sound)
     .noOcclusion()
    )); 
- //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
+ //----------------------------------------------------------------------------------------Lemon------------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, LadderBlock> LEMON_LADDER = FOODBLOCK.register("lemon_ladder", () -> new LadderBlock(BlockBehaviour.Properties.of()
     .destroyTime(ladder_destroy_time)
     .explosionResistance(ladder_explosion_resistance)
     .sound(plant_ladder_sound)
     .noOcclusion()
    )); 
- //--------------------------------------------------------------------------------------Lime---------------------------------------------------------------------------------------------
+ //-----------------------------------------------------------------------------------------Lime------------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, LadderBlock> LIME_LADDER = FOODBLOCK.register("lime_ladder", () -> new LadderBlock(BlockBehaviour.Properties.of()
     .destroyTime(ladder_destroy_time)
     .explosionResistance(ladder_explosion_resistance)
     .sound(plant_ladder_sound)
     .noOcclusion()
    )); 
- //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
+ //-----------------------------------------------------------------------------------------Corn------------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, LadderBlock> CORN_LADDER = FOODBLOCK.register("corn_ladder", () -> new LadderBlock(BlockBehaviour.Properties.of()
     .destroyTime(ladder_destroy_time)
     .explosionResistance(ladder_explosion_resistance)
     .sound(plant_ladder_sound)
     .noOcclusion()
    )); 
- //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
+ //----------------------------------------------------------------------------------------Onion------------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, LadderBlock> ONION_LADDER = FOODBLOCK.register("onion_ladder", () -> new LadderBlock(BlockBehaviour.Properties.of()
     .destroyTime(ladder_destroy_time)
     .explosionResistance(ladder_explosion_resistance)
     .sound(plant_ladder_sound)
     .noOcclusion()
    )); 
- //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
+ //----------------------------------------------------------------------------------------Tomato------------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, LadderBlock> TOMATO_LADDER = FOODBLOCK.register("tomato_ladder", () -> new LadderBlock(BlockBehaviour.Properties.of()
+    .destroyTime(ladder_destroy_time)
+    .explosionResistance(ladder_explosion_resistance)
+    .sound(plant_ladder_sound)
+    .noOcclusion()
+   )); 
+ //----------------------------------------------------------------------------------------Pecan------------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, LadderBlock> PECAN_LADDER = FOODBLOCK.register("pecan_ladder", () -> new LadderBlock(BlockBehaviour.Properties.of()
     .destroyTime(ladder_destroy_time)
     .explosionResistance(ladder_explosion_resistance)
     .sound(plant_ladder_sound)
     .noOcclusion()
    )); 
- //--------------------------------------------------------------------------------------Almond---------------------------------------------------------------------------------------------
+ //----------------------------------------------------------------------------------------Almond-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, LadderBlock> ALMOND_LADDER = FOODBLOCK.register("almond_ladder", () -> new LadderBlock(BlockBehaviour.Properties.of()
     .destroyTime(ladder_destroy_time)
     .explosionResistance(ladder_explosion_resistance)
@@ -2615,77 +2624,84 @@ public class foodblockcompatregistry {
     .sound(SoundType.MUD_BRICKS)
     .noOcclusion()
     ));
- //--------------------------------------------------------------------------------------Juniper---------------------------------------------------------------------------------------------
+ //---------------------------------------------------------------------------------------Juniper-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, HorizontalDirectionalBlock> JUNIPER_TABLE = FOODBLOCK.register("juniper_table", () -> new foodtable(BlockBehaviour.Properties.of()
     .destroyTime(1.5f)
     .explosionResistance(1.5f)
     .sound(SoundType.MUD_BRICKS)
     .noOcclusion()
     ));
- //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
+ //----------------------------------------------------------------------------------------Cherry-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, HorizontalDirectionalBlock> CHERRY_TABLE = FOODBLOCK.register("cherry_table", () -> new foodtable(BlockBehaviour.Properties.of()
     .destroyTime(1.5f)
     .explosionResistance(1.5f)
     .sound(SoundType.MUD_BRICKS)
     .noOcclusion()
     ));
- //--------------------------------------------------------------------------------------Blackcherry---------------------------------------------------------------------------------------------
+ //-------------------------------------------------------------------------------------Blackcherry---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, HorizontalDirectionalBlock> BLACKCHERRY_TABLE = FOODBLOCK.register("blackcherry_table", () -> new foodtable(BlockBehaviour.Properties.of()
     .destroyTime(1.5f)
     .explosionResistance(1.5f)
     .sound(SoundType.MUD_BRICKS)
     .noOcclusion()
     ));
- //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
+ //---------------------------------------------------------------------------------------Coconut-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, HorizontalDirectionalBlock> COCONUT_TABLE = FOODBLOCK.register("coconut_table", () -> new foodtable(BlockBehaviour.Properties.of()
     .destroyTime(1.5f)
     .explosionResistance(1.5f)
     .sound(SoundType.MUD_BRICKS)
     .noOcclusion()
     ));
- //--------------------------------------------------------------------------------------Orange---------------------------------------------------------------------------------------------
+ //----------------------------------------------------------------------------------------Orange-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, HorizontalDirectionalBlock> ORANGE_TABLE = FOODBLOCK.register("orange_table", () -> new foodtable(BlockBehaviour.Properties.of()
     .destroyTime(1.5f)
     .explosionResistance(1.5f)
     .sound(SoundType.MUD_BRICKS)
     .noOcclusion()
     ));
- //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
+ //----------------------------------------------------------------------------------------Lemon------------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, HorizontalDirectionalBlock> LEMON_TABLE = FOODBLOCK.register("lemon_table", () -> new foodtable(BlockBehaviour.Properties.of()
     .destroyTime(1.5f)
     .explosionResistance(1.5f)
     .sound(SoundType.MUD_BRICKS)
     .noOcclusion()
     ));
- //--------------------------------------------------------------------------------------Lime---------------------------------------------------------------------------------------------
+ //-----------------------------------------------------------------------------------------Lime------------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, HorizontalDirectionalBlock> LIME_TABLE = FOODBLOCK.register("lime_table", () -> new foodtable(BlockBehaviour.Properties.of()
     .destroyTime(1.5f)
     .explosionResistance(1.5f)
     .sound(SoundType.MUD_BRICKS)
     .noOcclusion()
     ));
- //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
+ //-----------------------------------------------------------------------------------------Corn------------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, HorizontalDirectionalBlock> CORN_TABLE = FOODBLOCK.register("corn_table", () -> new foodtable(BlockBehaviour.Properties.of()
     .destroyTime(1.5f)
     .explosionResistance(1.5f)
     .sound(SoundType.MUD_BRICKS)
     .noOcclusion()
     ));
- //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
+ //----------------------------------------------------------------------------------------Onion------------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, HorizontalDirectionalBlock> ONION_TABLE = FOODBLOCK.register("onion_table", () -> new foodtable(BlockBehaviour.Properties.of()
     .destroyTime(1.5f)
     .explosionResistance(1.5f)
     .sound(SoundType.MUD_BRICKS)
     .noOcclusion()
     ));
- //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
+ //----------------------------------------------------------------------------------------Tomato------------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, HorizontalDirectionalBlock> TOMATO_TABLE = FOODBLOCK.register("tomato_table", () -> new foodtable(BlockBehaviour.Properties.of()
+    .destroyTime(1.5f)
+    .explosionResistance(1.5f)
+    .sound(SoundType.MUD_BRICKS)
+    .noOcclusion()
+    ));
+ //----------------------------------------------------------------------------------------Pecan------------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, HorizontalDirectionalBlock> PECAN_TABLE = FOODBLOCK.register("pecan_table", () -> new foodtable(BlockBehaviour.Properties.of()
     .destroyTime(1.5f)
     .explosionResistance(1.5f)
     .sound(SoundType.MUD_BRICKS)
     .noOcclusion()
     ));
- //--------------------------------------------------------------------------------------Almond---------------------------------------------------------------------------------------------
+ //----------------------------------------------------------------------------------------Almond-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, HorizontalDirectionalBlock> ALMOND_TABLE = FOODBLOCK.register("almond_table", () -> new foodtable(BlockBehaviour.Properties.of()
     .destroyTime(1.5f)
     .explosionResistance(1.5f)
@@ -2905,6 +2921,27 @@ public class foodblockcompatregistry {
 
      public static final DeferredHolder<Block, WallTorchBlock> ONION_SOUL_WALL_TORCH = FOODBLOCK.register("onion_soul_wall_torch", 
      () -> new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_WALL_TORCH)));
+ //--------------------------------------------------------------------------------------Tomato---------------------------------------------------------------------------------------------
+    //regular
+     public static final DeferredHolder<Block, TorchBlock> TOMATO_TORCH = FOODBLOCK.register("tomato_torch", 
+     () -> new TorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH)));
+
+     public static final DeferredHolder<Block, WallTorchBlock> TOMATO_WALL_TORCH = FOODBLOCK.register("tomato_wall_torch", 
+     () -> new WallTorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH)));
+
+    //redstone
+     public static final DeferredHolder<Block, RedstoneTorchBlock> TOMATO_REDSTONE_TORCH = FOODBLOCK.register("tomato_redstone_torch", 
+     () -> new RedstoneTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_TORCH)));
+
+     public static final DeferredHolder<Block, RedstoneWallTorchBlock> TOMATO_REDSTONE_WALL_TORCH = FOODBLOCK.register("tomato_redstone_wall_torch", 
+     () -> new RedstoneWallTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_WALL_TORCH)));
+
+    //soul
+     public static final DeferredHolder<Block, TorchBlock> TOMATO_SOUL_TORCH = FOODBLOCK.register("tomato_soul_torch", 
+     () -> new TorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_TORCH)));
+
+     public static final DeferredHolder<Block, WallTorchBlock> TOMATO_SOUL_WALL_TORCH = FOODBLOCK.register("tomato_soul_wall_torch", 
+     () -> new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_WALL_TORCH)));
  //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
     //regular
      public static final DeferredHolder<Block, TorchBlock> PECAN_TORCH = FOODBLOCK.register("pecan_torch", 
@@ -3010,6 +3047,12 @@ public class foodblockcompatregistry {
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<onionFurnaceEntity>> ONION_FURNACE_ENTITY = FOODBLOCKENTITY.register("onion_furnace", 
     () -> BlockEntityType.Builder.of(onionFurnaceEntity::new, ONION_FURNACE.get()).build(null));
+ //----------------------------------------------------------------------------------------Tomato-----------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, tomatoFurnace> TOMATO_FURNACE = FOODBLOCK.register("tomato_furnace", 
+    () -> new tomatoFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<tomatoFurnaceEntity>> TOMATO_FURNACE_ENTITY = FOODBLOCKENTITY.register("tomato_furnace", 
+    () -> BlockEntityType.Builder.of(tomatoFurnaceEntity::new, TOMATO_FURNACE.get()).build(null));
  //----------------------------------------------------------------------------------------Pecan-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, pecanFurnace> PECAN_FURNACE = FOODBLOCK.register("pecan_furnace", 
     () -> new pecanFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));

@@ -3659,6 +3659,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('B', ingotcompatregistry.ONION_INGOT.get())
         .unlockedBy("has_onion_ingot", has(ingotcompatregistry.ONION_INGOT.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Tomato---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.TOMATO_LADDER_ITEM.get(), 3)
+        .pattern("A A")
+        .pattern("ABA")
+        .pattern("A A")
+        .define('A', Items.STICK)
+        .define('B', ingotcompatregistry.TOMATO_INGOT.get())
+        .unlockedBy("has_tomato_ingot", has(ingotcompatregistry.TOMATO_INGOT.get()))
+        .save(output);
   //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.PECAN_LADDER_ITEM.get(), 3)
         .pattern("A A")
@@ -3768,6 +3777,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', foodblockcompatitemregistry.ONION_SLAB_ITEM.get())
         .define('B', ingotcompatregistry.ONION_INGOT.get())
         .unlockedBy("has_onion_ingot", has(ingotcompatregistry.ONION_INGOT.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Tomato---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.TOMATO_TABLE_ITEM.get())
+        .pattern("AAA")
+        .pattern("B B")
+        .pattern("B B")
+        .define('A', foodblockcompatitemregistry.TOMATO_SLAB_ITEM.get())
+        .define('B', ingotcompatregistry.TOMATO_INGOT.get())
+        .unlockedBy("has_tomato_ingot", has(ingotcompatregistry.TOMATO_INGOT.get()))
         .save(output);
   //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.PECAN_TABLE_ITEM.get())
@@ -4099,6 +4117,37 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('C', Items.SOUL_SAND)
             .unlockedBy("has_onion_nugget", has(nuggetcompatregistry.ONION_NUGGET.get()))
             .save(output);
+  //--------------------------------------------------------------------------------------Tomato---------------------------------------------------------------------------------------------
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.TOMATO_TORCH_ITEM.get(), 4)
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetcompatregistry.TOMATO_NUGGET.get())
+            .define('C', ItemTags.COALS)
+            .unlockedBy("has_tomato_nugget", has(nuggetcompatregistry.TOMATO_NUGGET.get()))
+            .save(output);
+          //redstone
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.TOMATO_REDSTONE_TORCH_ITEM.get())
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetcompatregistry.TOMATO_NUGGET.get())
+            .define('C', Items.REDSTONE)
+            .unlockedBy("has_tomato_nugget", has(nuggetcompatregistry.TOMATO_NUGGET.get()))
+            .save(output);
+          //soul
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.TOMATO_SOUL_TORCH_ITEM.get(), 4)
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetcompatregistry.TOMATO_NUGGET.get())
+            .define('C', Items.SOUL_SAND)
+            .unlockedBy("has_tomato_nugget", has(nuggetcompatregistry.TOMATO_NUGGET.get()))
+            .save(output);
   //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
           //regular
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.PECAN_TORCH_ITEM.get(), 4)
@@ -4252,6 +4301,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', ingotcompatregistry.ONION_INGOT.get())
         .define('B', Items.COBBLESTONE)
         .unlockedBy("has_onion_ingot", has(ingotcompatregistry.ONION_INGOT.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Tomato---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.TOMATO_FURNACE_ITEM.get())
+        .pattern("ABA")
+        .pattern("B B")
+        .pattern("ABA")
+        .define('A', ingotcompatregistry.TOMATO_INGOT.get())
+        .define('B', Items.COBBLESTONE)
+        .unlockedBy("has_tomato_ingot", has(ingotcompatregistry.TOMATO_INGOT.get()))
         .save(output);
   //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.PECAN_FURNACE_ITEM.get())
