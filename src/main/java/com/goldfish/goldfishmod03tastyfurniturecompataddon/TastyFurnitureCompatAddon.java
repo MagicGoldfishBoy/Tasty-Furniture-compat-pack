@@ -170,21 +170,22 @@ public class TastyFurnitureCompatAddon
         }
 
         @SubscribeEvent(priority = EventPriority.LOWEST)
-        public static void onRegisterRenderers(EntityRenderersEvent.RegisterRenderers event) {
-        event.registerBlockEntityRenderer(foodblockcompatregistry.ELDERBERRY_SIGN_ENTITY.get(), SignRenderer::new);
-        event.registerBlockEntityRenderer(foodblockcompatregistry.JUNIPER_SIGN_ENTITY.get(), SignRenderer::new);
-        event.registerBlockEntityRenderer(foodblockcompatregistry.CHERRY_SIGN_ENTITY.get(), SignRenderer::new);
-        event.registerBlockEntityRenderer(foodblockcompatregistry.BLACKCHERRY_SIGN_ENTITY.get(), SignRenderer::new);
-        event.registerBlockEntityRenderer(foodblockcompatregistry.COCONUT_SIGN_ENTITY.get(), SignRenderer::new);
-        event.registerBlockEntityRenderer(foodblockcompatregistry.ORANGE_SIGN_ENTITY.get(), SignRenderer::new);
-        event.registerBlockEntityRenderer(foodblockcompatregistry.LEMON_SIGN_ENTITY.get(), SignRenderer::new);
-        event.registerBlockEntityRenderer(foodblockcompatregistry.LIME_SIGN_ENTITY.get(), SignRenderer::new);
-        event.registerBlockEntityRenderer(foodblockcompatregistry.CORN_SIGN_ENTITY.get(), SignRenderer::new);
-        event.registerBlockEntityRenderer(foodblockcompatregistry.ONION_SIGN_ENTITY.get(), SignRenderer::new);
-        event.registerBlockEntityRenderer(foodblockcompatregistry.TOMATO_SIGN_ENTITY.get(), SignRenderer::new);
-        event.registerBlockEntityRenderer(foodblockcompatregistry.PECAN_SIGN_ENTITY.get(), SignRenderer::new);
-        event.registerBlockEntityRenderer(foodblockcompatregistry.ALMOND_SIGN_ENTITY.get(), SignRenderer::new);
-        event.registerEntityRenderer(foodEntityRegistry.CHAIR_ENTITY.get(), foodChairEntityRenderer::new);
+            public static void onRegisterRenderers(EntityRenderersEvent.RegisterRenderers event) {
+                event.registerBlockEntityRenderer(foodblockcompatregistry.ELDERBERRY_SIGN_ENTITY.get(), SignRenderer::new);
+                event.registerBlockEntityRenderer(foodblockcompatregistry.JUNIPER_SIGN_ENTITY.get(), SignRenderer::new);
+                event.registerBlockEntityRenderer(foodblockcompatregistry.CHERRY_SIGN_ENTITY.get(), SignRenderer::new);
+                event.registerBlockEntityRenderer(foodblockcompatregistry.BLACKCHERRY_SIGN_ENTITY.get(), SignRenderer::new);
+                event.registerBlockEntityRenderer(foodblockcompatregistry.COCONUT_SIGN_ENTITY.get(), SignRenderer::new);
+                event.registerBlockEntityRenderer(foodblockcompatregistry.ORANGE_SIGN_ENTITY.get(), SignRenderer::new);
+                event.registerBlockEntityRenderer(foodblockcompatregistry.LEMON_SIGN_ENTITY.get(), SignRenderer::new);
+                event.registerBlockEntityRenderer(foodblockcompatregistry.LIME_SIGN_ENTITY.get(), SignRenderer::new);
+                event.registerBlockEntityRenderer(foodblockcompatregistry.GRAPEFRUIT_SIGN_ENTITY.get(), SignRenderer::new);
+                event.registerBlockEntityRenderer(foodblockcompatregistry.CORN_SIGN_ENTITY.get(), SignRenderer::new);
+                event.registerBlockEntityRenderer(foodblockcompatregistry.ONION_SIGN_ENTITY.get(), SignRenderer::new);
+                event.registerBlockEntityRenderer(foodblockcompatregistry.TOMATO_SIGN_ENTITY.get(), SignRenderer::new);
+                event.registerBlockEntityRenderer(foodblockcompatregistry.PECAN_SIGN_ENTITY.get(), SignRenderer::new);
+                event.registerBlockEntityRenderer(foodblockcompatregistry.ALMOND_SIGN_ENTITY.get(), SignRenderer::new);
+                event.registerEntityRenderer(foodEntityRegistry.CHAIR_ENTITY.get(), foodChairEntityRenderer::new);
         }
         
     }

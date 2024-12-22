@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "goldfishmod03tastyfurniturecompataddon:block/grapefruit_lantern"
+    },
+    "hanging=true": {
+      "model": "goldfishmod03tastyfurniturecompataddon:block/grapefruit_hanging_lantern"
+    }
+  }
+}

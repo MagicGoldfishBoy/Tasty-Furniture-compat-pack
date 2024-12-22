@@ -679,6 +679,47 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         withExistingParent("grapefruit_gate_item", modLoc("block/grapefruit_gate"));
        //pressure plate
         pressurePlate("grapefruit_pressure_plate_item", modLoc("block/grapefruit_block"));
+       //sign
+        withExistingParent("grapefruit_sign_item", mcLoc("item/generated")).texture("layer0", "item/grapefruit_sign");
+       //trapdoor
+       withExistingParent("grapefruit_trapdoor_item", modLoc("block/grapefruit_trapdoor_trapdoor_bottom"));
+       //lamp
+       withExistingParent("grapefruit_lamp_item", modLoc("block/grapefruit_lamp"));
+       //carpet
+       ResourceLocation grapefruit_carpet_texture = modLoc("block/grapefruit_carpet");
+       carpet("grapefruit_carpet_item", grapefruit_carpet_texture);
+       //lantern
+        //regular
+        withExistingParent("grapefruit_lantern_item", modLoc("block/grapefruit_lantern"));
+        //soul
+          withExistingParent("grapefruit_soul_lantern_item", modLoc("block/grapefruit_soul_lantern"));
+       //chain
+       withExistingParent("grapefruit_chain_item", modLoc("block/grapefruit_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
+       //ladder
+       withExistingParent("grapefruit_ladder_item", modLoc("block/grapefruit_ladder"));
+       //table
+       withExistingParent("grapefruit_table_item", modLoc("block/grapefruit_table"));
+       //torches
+        //regular
+        withExistingParent("grapefruit_torch_item", modLoc("block/grapefruit_torch"));
+        //redstone
+          withExistingParent("grapefruit_redstone_torch_item", modLoc("block/grapefruit_redstone_torch"));
+        //soul
+          withExistingParent("grapefruit_soul_torch_item", modLoc("block/grapefruit_soul_torch"));
+       //furnaces
+       withExistingParent("grapefruit_furnace_item", modLoc("block/grapefruit_furnace_model_unlit"));
+       //paths
+       withExistingParent("grapefruit_stone_path_item", modLoc("block/grapefruit_stone_path"));
+       //barrel
+       withExistingParent("grapefruit_barrel_item", modLoc("block/grapefruit_barrel_model_closed"));
+       //chair
+       withExistingParent("grapefruit_chair_item", modLoc("block/grapefruit_chair"));
+       //bed
+       withExistingParent("grapefruit_bed_item", modLoc("block/grapefruit_bed"));
+       //cabinet
+       withExistingParent("small_grapefruit_cabinet_item", modLoc("block/grapefruit_cabinet"));
+       withExistingParent("medium_grapefruit_cabinet_item", modLoc("block/medium_grapefruit_cabinet"));
     //==============================================================================================================================================
     //|                                                              Corn                                                                        |
     //==============================================================================================================================================

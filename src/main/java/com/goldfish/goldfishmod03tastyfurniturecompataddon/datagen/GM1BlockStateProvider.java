@@ -911,6 +911,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
            WallSignBlock lime_wall_sign = foodblockcompatregistry.LIME_WALL_SIGN.get();
            ResourceLocation lime_sign_texture = modLoc("block/lime_block");
            signBlock(lime_sign, lime_wall_sign, lime_sign_texture);
+     //------------------------------------------------------------grapefruit-----------------------------------------------------------------------
+           StandingSignBlock grapefruit_sign = foodblockcompatregistry.GRAPEFRUIT_STANDING_SIGN.get();
+           WallSignBlock grapefruit_wall_sign = foodblockcompatregistry.GRAPEFRUIT_WALL_SIGN.get();
+           ResourceLocation grapefruit_sign_texture = modLoc("block/grapefruit_block");
+           signBlock(grapefruit_sign, grapefruit_wall_sign, grapefruit_sign_texture);
      //------------------------------------------------------------corn-----------------------------------------------------------------------
            StandingSignBlock corn_sign = foodblockcompatregistry.CORN_STANDING_SIGN.get();
            WallSignBlock corn_wall_sign = foodblockcompatregistry.CORN_WALL_SIGN.get();
@@ -971,6 +976,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           TrapDoorBlock lime_trapdoor = foodblockcompatregistry.LIME_TRAPDOOR.get(); 
           ResourceLocation lime_trapdoor_texture = modLoc("block/lime_block");
           trapdoorBlockWithRenderType(lime_trapdoor, "lime_trapdoor", lime_trapdoor_texture, false, lime_trapdoor_texture);
+     //------------------------------------------------------------grapefruit-----------------------------------------------------------------------
+          TrapDoorBlock grapefruit_trapdoor = foodblockcompatregistry.GRAPEFRUIT_TRAPDOOR.get(); 
+          ResourceLocation grapefruit_trapdoor_texture = modLoc("block/grapefruit_block");
+          trapdoorBlockWithRenderType(grapefruit_trapdoor, "grapefruit_trapdoor", grapefruit_trapdoor_texture, false, grapefruit_trapdoor_texture);
      //------------------------------------------------------------corn-----------------------------------------------------------------------
           TrapDoorBlock corn_trapdoor = foodblockcompatregistry.CORN_TRAPDOOR.get(); 
           ResourceLocation corn_trapdoor_texture = modLoc("block/corn_block");
@@ -1018,6 +1027,9 @@ public class GM1BlockStateProvider extends BlockStateProvider
      //------------------------------------------------------------lime-----------------------------------------------------------------------
           Block lime_lamp = foodblockcompatregistry.LIME_LAMP.get();
           simpleBlock(lime_lamp);
+     //------------------------------------------------------------grapefruit-----------------------------------------------------------------------
+          Block grapefruit_lamp = foodblockcompatregistry.GRAPEFRUIT_LAMP.get();
+          simpleBlock(grapefruit_lamp);
      //------------------------------------------------------------corn-----------------------------------------------------------------------
           Block corn_lamp = foodblockcompatregistry.CORN_LAMP.get();
           simpleBlock(corn_lamp);
@@ -1084,6 +1096,12 @@ public class GM1BlockStateProvider extends BlockStateProvider
           BlockModelBuilder lime_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(lime_carpet).getPath(), mcLoc("block/carpet"))
           .texture("wool", lime_carpet_texture);
           simpleBlock(lime_carpet, new ModelFile.UncheckedModelFile(lime_carpet_model.getLocation()));
+     //------------------------------------------------------------grapefruit-----------------------------------------------------------------------
+          CarpetBlock grapefruit_carpet = foodblockcompatregistry.GRAPEFRUIT_CARPET.get();
+          ResourceLocation grapefruit_carpet_texture = modLoc("block/grapefruit_carpet");
+          BlockModelBuilder grapefruit_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(grapefruit_carpet).getPath(), mcLoc("block/carpet"))
+          .texture("wool", grapefruit_carpet_texture);
+          simpleBlock(grapefruit_carpet, new ModelFile.UncheckedModelFile(grapefruit_carpet_model.getLocation()));
      //------------------------------------------------------------corn-----------------------------------------------------------------------
           CarpetBlock corn_carpet = foodblockcompatregistry.CORN_CARPET.get();
           ResourceLocation corn_carpet_texture = modLoc("block/corn_carpet");
@@ -1429,6 +1447,45 @@ public class GM1BlockStateProvider extends BlockStateProvider
              .modelForState().modelFile(hanging_lime_soul_lantern_model).addModel()
              .partialState().with(LanternBlock.HANGING, false)
              .modelForState().modelFile(lime_soul_lantern_model).addModel();
+     //------------------------------------------------------------grapefruit-----------------------------------------------------------------------
+         //regular
+          LanternBlock grapefruit_lantern = foodblockcompatregistry.GRAPEFRUIT_LANTERN.get();
+          ResourceLocation grapefruit_lantern_texture = modLoc("block/grapefruit_lantern");
+  
+          BlockModelBuilder grapefruit_lantern_model = models()
+              .withExistingParent("grapefruit_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", grapefruit_lantern_texture);
+  
+          BlockModelBuilder hanging_grapefruit_lantern_model = models()
+              .withExistingParent("grapefruit_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", grapefruit_lantern_texture);
+  
+          getVariantBuilder(grapefruit_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_grapefruit_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(grapefruit_lantern_model).addModel();
+         //soul
+         LanternBlock grapefruit_soul_lantern = foodblockcompatregistry.GRAPEFRUIT_SOUL_LANTERN.get();
+         ResourceLocation grapefruit_soul_lantern_texture = modLoc("block/grapefruit_soul_lantern");
+ 
+         BlockModelBuilder grapefruit_soul_lantern_model = models()
+             .withExistingParent("grapefruit_soul_lantern", mcLoc("block/lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", grapefruit_soul_lantern_texture);
+ 
+         BlockModelBuilder hanging_grapefruit_soul_lantern_model = models()
+             .withExistingParent("grapefruit_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", grapefruit_soul_lantern_texture);
+ 
+         getVariantBuilder(grapefruit_soul_lantern)
+             .partialState().with(LanternBlock.HANGING, true)
+             .modelForState().modelFile(hanging_grapefruit_soul_lantern_model).addModel()
+             .partialState().with(LanternBlock.HANGING, false)
+             .modelForState().modelFile(grapefruit_soul_lantern_model).addModel();
      //------------------------------------------------------------corn-----------------------------------------------------------------------
          //regular
           LanternBlock corn_lantern = foodblockcompatregistry.CORN_LANTERN.get();
@@ -1755,6 +1812,22 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .modelForState().modelFile(lime_chain_model).rotationX(90).rotationY(90).addModel()
           .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
           .modelForState().modelFile(lime_chain_model).rotationX(90).addModel(); 
+     //------------------------------------------------------------grapefruit-----------------------------------------------------------------------
+         ChainBlock grapefruit_chain = foodblockcompatregistry.GRAPEFRUIT_CHAIN.get();
+         ResourceLocation grapefruit_chain_texture = modLoc("block/grapefruit_chain");
+         BlockModelBuilder grapefruit_chain_model = models()
+          .withExistingParent("grapefruit_chain", mcLoc("block/chain"))
+          .renderType("cutout_mipped_all")
+          .texture("all", grapefruit_chain_texture)
+          .texture("particle", grapefruit_chain_texture);
+
+          getVariantBuilder(grapefruit_chain)
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Y)
+          .modelForState().modelFile(grapefruit_chain_model).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.X)
+          .modelForState().modelFile(grapefruit_chain_model).rotationX(90).rotationY(90).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
+          .modelForState().modelFile(grapefruit_chain_model).rotationX(90).addModel(); 
      //------------------------------------------------------------corn-----------------------------------------------------------------------
          ChainBlock corn_chain = foodblockcompatregistry.CORN_CHAIN.get();
          ResourceLocation corn_chain_texture = modLoc("block/corn_chain");
@@ -2000,6 +2073,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/lime_ladder");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------grapefruit-----------------------------------------------------------------------
+          LadderBlock grapefruitladder = foodblockcompatregistry.GRAPEFRUIT_LADDER.get();
+
+          getVariantBuilder(grapefruitladder)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/grapefruit_ladder");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -2276,6 +2370,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/lime_table");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------grapefruit-----------------------------------------------------------------------
+          HorizontalDirectionalBlock grapefruittable = foodblockcompatregistry.GRAPEFRUIT_TABLE.get();
+
+          getVariantBuilder(grapefruittable)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/grapefruit_table");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -3318,6 +3433,122 @@ public class GM1BlockStateProvider extends BlockStateProvider
                 .rotationY(rotation)
                 .build();
             });
+     //------------------------------------------------------------grapefruit-----------------------------------------------------------------------
+       //regular
+        TorchBlock grapefruit_torch = foodblockcompatregistry.GRAPEFRUIT_TORCH.get();
+        ResourceLocation grapefruit_torch_texture = modLoc("block/grapefruit_torch");
+        BlockModelBuilder grapefruit_torch_model = models()
+        .withExistingParent("grapefruit_torch", mcLoc("block/torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", grapefruit_torch_texture)
+        .texture("particle", grapefruit_torch_texture);
+
+        simpleBlock(grapefruit_torch, grapefruit_torch_model);
+
+        TorchBlock grapefruit_wall_torch = foodblockcompatregistry.GRAPEFRUIT_WALL_TORCH.get();
+        BlockModelBuilder grapefruit_wall_torch_model = models()
+        .withExistingParent("grapefruit_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", grapefruit_torch_texture)
+        .texture("particle", grapefruit_torch_texture);
+        getVariantBuilder(grapefruit_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("grapefruit_wall_torch", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", grapefruit_torch_texture)
+                    .texture("particle", grapefruit_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //redstone
+        RedstoneTorchBlock grapefruit_redstone_torch = foodblockcompatregistry.GRAPEFRUIT_REDSTONE_TORCH.get();
+        ResourceLocation grapefruit_redstone_torch_texture = modLoc("block/grapefruit_redstone_torch");
+        BlockModelBuilder grapefruit_redstone_torch_model = models()
+        .withExistingParent("grapefruit_redstone_torch", mcLoc("block/redstone_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", grapefruit_redstone_torch_texture)
+        .texture("particle", grapefruit_redstone_torch_texture);
+        
+
+        simpleBlock(grapefruit_redstone_torch, grapefruit_redstone_torch_model);
+
+        ResourceLocation grapefruit_redstone_wall_torch_texture = modLoc("block/grapefruit_redstone_torch");
+
+        RedstoneTorchBlock grapefruit_redstone_wall_torch = foodblockcompatregistry.GRAPEFRUIT_REDSTONE_WALL_TORCH.get();
+        BlockModelBuilder grapefruit_redstone_wall_torch_model = models()
+        .withExistingParent("grapefruit_redstone_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", grapefruit_redstone_wall_torch_texture)
+        .texture("particle", grapefruit_redstone_wall_torch_texture);
+        getVariantBuilder(grapefruit_redstone_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("grapefruit_redstone_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", grapefruit_redstone_wall_torch_texture)
+                    .texture("particle", grapefruit_redstone_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //soul
+        TorchBlock grapefruit_soul_torch = foodblockcompatregistry.GRAPEFRUIT_SOUL_TORCH.get();
+        ResourceLocation grapefruit_soul_torch_texture = modLoc("block/grapefruit_soul_torch");
+        BlockModelBuilder grapefruit_soul_torch_model = models()
+        .withExistingParent("grapefruit_soul_torch", mcLoc("block/soul_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", grapefruit_soul_torch_texture)
+        .texture("particle", grapefruit_soul_torch_texture);
+        
+
+        simpleBlock(grapefruit_soul_torch, grapefruit_soul_torch_model);
+
+        ResourceLocation grapefruit_soul_wall_torch_texture = modLoc("block/grapefruit_soul_torch");
+        TorchBlock grapefruit_soul_wall_torch = foodblockcompatregistry.GRAPEFRUIT_SOUL_WALL_TORCH.get();
+        BlockModelBuilder grapefruit_soul_wall_torch_model = models()
+        .withExistingParent("grapefruit_soul_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", grapefruit_soul_wall_torch_texture)
+        .texture("particle", grapefruit_soul_wall_torch_texture);
+        getVariantBuilder(grapefruit_soul_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("grapefruit_soul_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", grapefruit_soul_wall_torch_texture)
+                    .texture("particle", grapefruit_soul_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
      //------------------------------------------------------------corn-----------------------------------------------------------------------
        //regular
         TorchBlock corn_torch = foodblockcompatregistry.CORN_TORCH.get();
@@ -4253,6 +4484,50 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationY(rotation)
                       .build();
               });
+     //------------------------------------------------------------grapefruit-----------------------------------------------------------------------
+          FurnaceBlock grapefruit_furnace = foodblockcompatregistry.GRAPEFRUIT_FURNACE.get();
+          ResourceLocation grapefruit_furnace_unlit_texture = modLoc("block/grapefruit_furnace");
+          ResourceLocation grapefruit_furnace_lit_texture = modLoc("block/grapefruit_furnace_lit");
+          ResourceLocation grapefruit_furnace_side = modLoc("block/grapefruit_block");
+          
+          // Define the model for the unlit state
+          BlockModelBuilder grapefruit_furnace_model_unlit = models()
+              .withExistingParent("grapefruit_furnace_model_unlit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", grapefruit_furnace_side)
+              .texture("top", grapefruit_furnace_side)
+              .texture("front", grapefruit_furnace_unlit_texture)
+              .texture("particle", grapefruit_furnace_side);
+          
+          // Define the model for the lit state
+          BlockModelBuilder grapefruit_furnace_model_lit = models()
+              .withExistingParent("grapefruit_furnace_model_lit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", grapefruit_furnace_side)
+              .texture("top", grapefruit_furnace_side)
+              .texture("front", grapefruit_furnace_lit_texture)
+              .texture("particle", grapefruit_furnace_side);
+          
+          // Configure variants for the grapefruit_furnace block
+          getVariantBuilder(grapefruit_furnace)
+              .forAllStates(state -> {
+                  Boolean lit = state.getValue(BlockStateProperties.LIT);
+                  Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                  int rotation = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+
+                  ResourceLocation modelLocation = lit ? modLoc("block/grapefruit_furnace_model_lit") : modLoc("block/grapefruit_furnace_model_unlit");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotation)
+                      .build();
+              });
      //------------------------------------------------------------corn-----------------------------------------------------------------------
           FurnaceBlock corn_furnace = foodblockcompatregistry.CORN_FURNACE.get();
           ResourceLocation corn_furnace_unlit_texture = modLoc("block/corn_furnace");
@@ -4559,6 +4834,18 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .forAllStates(state -> {
 
               ResourceLocation modelLocation = modLoc("block/lime_stone_path");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .build();
+          });
+     //------------------------------------------------------------grapefruit-----------------------------------------------------------------------
+          foodpathtypeminislab grapefruit_stone_path = foodblockcompatregistry.GRAPEFRUIT_STONE_PATH.get();
+
+          getVariantBuilder(grapefruit_stone_path)
+          .forAllStates(state -> {
+
+              ResourceLocation modelLocation = modLoc("block/grapefruit_stone_path");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -5011,6 +5298,54 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationX(rotationX)
                       .build();
               });
+     //------------------------------------------------------------grapefruit-----------------------------------------------------------------------
+          foodBarrel grapefruit_barrel = foodblockcompatregistry.GRAPEFRUIT_BARREL.get();
+          ResourceLocation grapefruit_barrel_closed_texture = modLoc("block/grapefruit_barrel_top_closed");
+          ResourceLocation grapefruit_barrel_open_texture = modLoc("block/grapefruit_barrel_top_open");
+          ResourceLocation grapefruit_barrel_side = modLoc("block/grapefruit_barrel_side");
+          ResourceLocation grapefruit_barrel_bottom = modLoc("block/grapefruit_barrel_bottom");
+          
+          BlockModelBuilder grapefruit_barrel_model_closed = models()
+              .withExistingParent("grapefruit_barrel_model_closed", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", grapefruit_barrel_side)
+              .texture("bottom", grapefruit_barrel_bottom)
+              .texture("top", grapefruit_barrel_closed_texture)
+              .texture("particle", grapefruit_barrel_side);
+          
+          BlockModelBuilder grapefruit_barrel_model_open = models()
+              .withExistingParent("grapefruit_barrel_model_open", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", grapefruit_barrel_side)
+              .texture("bottom", grapefruit_barrel_bottom)
+              .texture("top", grapefruit_barrel_open_texture)
+              .texture("particle", grapefruit_barrel_side);
+          
+          getVariantBuilder(grapefruit_barrel)
+              .forAllStates(state -> {
+                  Boolean open = state.getValue(BlockStateProperties.OPEN);
+                  Direction facing = state.getValue(BlockStateProperties.FACING);
+                  int rotationY = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+                  int rotationX = switch (facing) {
+                      case UP -> 0;
+                      case DOWN -> 180;
+                      default -> 90;
+                  };
+
+                  ResourceLocation modelLocation = open ? modLoc("block/grapefruit_barrel_model_open") : modLoc("block/grapefruit_barrel_model_closed");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotationY)
+                      .rotationX(rotationX)
+                      .build();
+              });
      //------------------------------------------------------------corn-----------------------------------------------------------------------
           foodBarrel corn_barrel = foodblockcompatregistry.CORN_BARREL.get();
           ResourceLocation corn_barrel_closed_texture = modLoc("block/corn_barrel_top_closed");
@@ -5422,6 +5757,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .rotationY(rotationY)
                   .build();
           });
+     //------------------------------------------------------------grapefruit-----------------------------------------------------------------------
+          foodChairBlock grapefruitChair = foodblockcompatregistry.GRAPEFRUIT_CHAIR.get();
+
+          getVariantBuilder(grapefruitChair)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/grapefruit_chair");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
      //------------------------------------------------------------corn-----------------------------------------------------------------------
           foodChairBlock cornChair = foodblockcompatregistry.CORN_CHAIR.get();
 
@@ -5692,6 +6048,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/lime_bed");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------grapefruit-----------------------------------------------------------------------
+          foodBed grapefruitBed = foodblockcompatregistry.GRAPEFRUIT_BED.get();
+
+          getVariantBuilder(grapefruitBed)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/grapefruit_bed");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -6160,6 +6537,51 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = open ? modLoc("block/medium_lime_cabinet_open") : modLoc("block/medium_lime_cabinet");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------grapefruit-----------------------------------------------------------------------
+         //small
+          smallFoodCabinet grapefruitCabinet = foodblockcompatregistry.SMALL_GRAPEFRUIT_CABINET.get();
+
+          getVariantBuilder(grapefruitCabinet)
+          .forAllStates(state -> {
+              Boolean open = state.getValue(BlockStateProperties.OPEN);
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = open ? modLoc("block/grapefruit_cabinet_open") : modLoc("block/grapefruit_cabinet");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+         //medium
+          mediumFoodCabinet grapefruitMediumCabinet = foodblockcompatregistry.MEDIUM_GRAPEFRUIT_CABINET.get();
+
+          getVariantBuilder(grapefruitMediumCabinet)
+          .forAllStates(state -> {
+              Boolean open = state.getValue(BlockStateProperties.OPEN);
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = open ? modLoc("block/medium_grapefruit_cabinet_open") : modLoc("block/medium_grapefruit_cabinet");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
