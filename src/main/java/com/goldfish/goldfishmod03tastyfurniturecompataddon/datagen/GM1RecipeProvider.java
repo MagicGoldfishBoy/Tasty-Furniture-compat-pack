@@ -2337,6 +2337,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', nuggetcompatregistry.LIME_NUGGET.get())
          .unlockedBy("has_lime_nugget", has(nuggetcompatregistry.LIME_NUGGET.get()))
          .save(output);
+  //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.GRAPEFRUIT_BARS_ITEM.get(), 8)
+         .pattern("   ")
+         .pattern("AAA")
+         .pattern("AAA")
+         .define('A', nuggetcompatregistry.GRAPEFRUIT_NUGGET.get())
+         .unlockedBy("has_grapefruit_nugget", has(nuggetcompatregistry.GRAPEFRUIT_NUGGET.get()))
+         .save(output);
   //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CORN_BARS_ITEM.get(), 8)
          .pattern("   ")
@@ -2443,6 +2451,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', ingotcompatregistry.LIME_INGOT.get())
          .unlockedBy("has_lime_nugget", has(ingotcompatregistry.LIME_INGOT.get()))
          .save(output);
+  //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.GRAPEFRUIT_DOOR_ITEM.get(), 3)
+         .pattern("AA ")
+         .pattern("AA ")
+         .pattern("AA ")
+         .define('A', ingotcompatregistry.GRAPEFRUIT_INGOT.get())
+         .unlockedBy("has_grapefruit_nugget", has(ingotcompatregistry.GRAPEFRUIT_INGOT.get()))
+         .save(output);
   //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CORN_DOOR_ITEM.get(), 3)
          .pattern("AA ")
@@ -2524,6 +2540,11 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.LIME_BUTTON_ITEM.get(), 1)
        .requires(nuggetcompatregistry.LIME_NUGGET.get())
        .unlockedBy("has_lime_nugget", has(nuggetcompatregistry.LIME_NUGGET.get()))
+       .save(output);
+  //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
+       ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.GRAPEFRUIT_BUTTON_ITEM.get(), 1)
+       .requires(nuggetcompatregistry.GRAPEFRUIT_NUGGET.get())
+       .unlockedBy("has_grapefruit_nugget", has(nuggetcompatregistry.GRAPEFRUIT_NUGGET.get()))
        .save(output);
   //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.CORN_BUTTON_ITEM.get(), 1)
@@ -2704,6 +2725,25 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .define('B', Items.STICK)
           .unlockedBy("has_lime_ingot", has(ingotcompatregistry.LIME_INGOT.get()))
           .save(output);        
+  //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
+        //fence
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.GRAPEFRUIT_FENCE_ITEM.get(), 3)
+          .pattern("ABA")
+          .pattern("ABA")
+          .pattern("   ")
+          .define('A', ingotcompatregistry.GRAPEFRUIT_INGOT.get())
+          .define('B', Items.STICK)
+          .unlockedBy("has_grapefruit_ingot", has(ingotcompatregistry.GRAPEFRUIT_INGOT.get()))
+          .save(output);        
+        //gate
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.GRAPEFRUIT_GATE_ITEM.get(), 1)
+          .pattern("BAB")
+          .pattern("BAB")
+          .pattern("   ")
+          .define('A', ingotcompatregistry.GRAPEFRUIT_INGOT.get())
+          .define('B', Items.STICK)
+          .unlockedBy("has_grapefruit_ingot", has(ingotcompatregistry.GRAPEFRUIT_INGOT.get()))
+          .save(output);        
   //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
         //fence
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CORN_FENCE_ITEM.get(), 3)
@@ -2864,6 +2904,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .pattern("   ")
         .define('A', foodblockcompatitemregistry.LIME_BLOCK_ITEM.get())
         .unlockedBy("has_lime_block",  has(foodblockcompatitemregistry.LIME_BLOCK_ITEM.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.GRAPEFRUIT_PRESSURE_PLATE_ITEM.get())
+        .pattern("   ")
+        .pattern("AA ")
+        .pattern("   ")
+        .define('A', foodblockcompatitemregistry.GRAPEFRUIT_BLOCK_ITEM.get())
+        .unlockedBy("has_grapefruit_block",  has(foodblockcompatitemregistry.GRAPEFRUIT_BLOCK_ITEM.get()))
         .save(output);
   //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CORN_PRESSURE_PLATE_ITEM.get())

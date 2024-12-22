@@ -667,6 +667,18 @@ public class GM1ItemModelProvider extends ItemModelProvider {
         stairs("grapefruit_stairs_item", modLoc("block/grapefruit_block"), modLoc("block/grapefruit_block"), modLoc("block/grapefruit_block"));
        //bricks stairs
         stairs("grapefruit_bricks_stairs_item", modLoc("block/grapefruit_bricks_block"), modLoc("block/grapefruit_bricks_block"), modLoc("block/grapefruit_bricks_block"));
+       //bars
+        withExistingParent("grapefruit_bars_item", mcLoc("item/generated")).texture("layer0", "block/grapefruit_bars");
+       //doors
+        withExistingParent("grapefruit_door_item", mcLoc("item/generated")).texture("layer0", "item/grapefruit_door_item");
+       //button
+        buttonInventory("grapefruit_button_item", modLoc("block/grapefruit_block"));
+       //fence
+        fenceInventory("grapefruit_fence_item", modLoc("block/grapefruit_block"));
+       //gate
+        withExistingParent("grapefruit_gate_item", modLoc("block/grapefruit_gate"));
+       //pressure plate
+        pressurePlate("grapefruit_pressure_plate_item", modLoc("block/grapefruit_block"));
     //==============================================================================================================================================
     //|                                                              Corn                                                                        |
     //==============================================================================================================================================

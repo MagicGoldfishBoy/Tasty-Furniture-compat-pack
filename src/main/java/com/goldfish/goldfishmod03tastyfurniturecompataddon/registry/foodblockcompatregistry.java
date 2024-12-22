@@ -910,6 +910,11 @@ public class foodblockcompatregistry {
    .strength(0.25F, 0.25F)
    .sound(SoundType.MUD_BRICKS)
    .noOcclusion()));
+ //----------------------------------------------------------------------------------------Grapefruit-------------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Block, IronBarsBlock> GRAPEFRUIT_BARS = FOODBLOCK.register("grapefruit_bars", () -> new IronBarsBlock(BlockBehaviour.Properties.of()
+   .strength(0.25F, 0.25F)
+   .sound(SoundType.MUD_BRICKS)
+   .noOcclusion()));
  //-----------------------------------------------------------------------------------------Corn------------------------------------------------------------------------------------------------
    public static final DeferredHolder<Block, IronBarsBlock> CORN_BARS = FOODBLOCK.register("corn_bars", () -> new IronBarsBlock(BlockBehaviour.Properties.of()
    .strength(0.25F, 0.25F)
@@ -978,6 +983,11 @@ public class foodblockcompatregistry {
   .strength(0.25F, 0.25F)
   .sound(SoundType.MUD_BRICKS)
   .noOcclusion()));
+ //----------------------------------------------------------------------------------------Grapefruit-------------------------------------------------------------------------------------------------
+  public static final DeferredHolder<Block, DoorBlock> GRAPEFRUIT_DOOR = FOODBLOCK.register("grapefruit_door", () -> new DoorBlock(foodmaterialtypecompatregistry.PLANT, BlockBehaviour.Properties.of()
+  .strength(0.25F, 0.25F)
+  .sound(SoundType.MUD_BRICKS)
+  .noOcclusion()));
  //-----------------------------------------------------------------------------------------Corn------------------------------------------------------------------------------------------------
   public static final DeferredHolder<Block, DoorBlock> CORN_DOOR = FOODBLOCK.register("corn_door", () -> new DoorBlock(foodmaterialtypecompatregistry.PLANT, BlockBehaviour.Properties.of()
   .strength(0.25F, 0.25F)
@@ -1036,6 +1046,10 @@ public class foodblockcompatregistry {
   .sound(SoundType.MUD_BRICKS)));
  //--------------------------------------------------------------------------------------Lime---------------------------------------------------------------------------------------------
   public static final DeferredHolder<Block, ButtonBlock> LIME_BUTTON = FOODBLOCK.register("lime_button", () -> new ButtonBlock(BlockSetType.CRIMSON, 20, 
+  BlockBehaviour.Properties.of()
+  .sound(SoundType.MUD_BRICKS)));
+ //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
+  public static final DeferredHolder<Block, ButtonBlock> GRAPEFRUIT_BUTTON = FOODBLOCK.register("grapefruit_button", () -> new ButtonBlock(BlockSetType.CRIMSON, 20, 
   BlockBehaviour.Properties.of()
   .sound(SoundType.MUD_BRICKS)));
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
@@ -1112,6 +1126,13 @@ public class foodblockcompatregistry {
   ));
  //--------------------------------------------------------------------------------------Lime---------------------------------------------------------------------------------------------
   public static final DeferredHolder<Block, FenceBlock> LIME_FENCE = FOODBLOCK.register("lime_fence", () -> new FenceBlock(BlockBehaviour.Properties.of()
+  .destroyTime(1.75f)
+  .explosionResistance(9.0f)
+  .sound(SoundType.MUD_BRICKS)
+  .noOcclusion()
+  ));
+ //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
+  public static final DeferredHolder<Block, FenceBlock> GRAPEFRUIT_FENCE = FOODBLOCK.register("grapefruit_fence", () -> new FenceBlock(BlockBehaviour.Properties.of()
   .destroyTime(1.75f)
   .explosionResistance(9.0f)
   .sound(SoundType.MUD_BRICKS)
@@ -1227,6 +1248,15 @@ public class foodblockcompatregistry {
             .destroyTime(1.5f)
             .explosionResistance(8.0f)
     ));
+ //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, FenceGateBlock> GRAPEFRUIT_GATE = FOODBLOCK.register("grapefruit_gate", 
+    () -> new FenceGateBlock(
+            foodmaterialtypecompatregistry.GRAPEFRUITWOODMAT, 
+            BlockBehaviour.Properties.of()
+            .sound(SoundType.ROOTED_DIRT)
+            .destroyTime(1.5f)
+            .explosionResistance(8.0f)
+    ));
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, FenceGateBlock> CORN_GATE = FOODBLOCK.register("corn_gate", 
     () -> new FenceGateBlock(
@@ -1326,6 +1356,13 @@ public class foodblockcompatregistry {
     ));
  //--------------------------------------------------------------------------------------Lime---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, PressurePlateBlock> LIME_PRESSURE_PLATE = FOODBLOCK.register("lime_pressure_plate", 
+    () -> new PressurePlateBlock(foodmaterialtypecompatregistry.PLANT, BlockBehaviour.Properties.of()
+    .sound(SoundType.ROOTED_DIRT)
+    .destroyTime(0.5f)
+    .explosionResistance(4.0f)
+    ));
+ //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, PressurePlateBlock> GRAPEFRUIT_PRESSURE_PLATE = FOODBLOCK.register("grapefruit_pressure_plate", 
     () -> new PressurePlateBlock(foodmaterialtypecompatregistry.PLANT, BlockBehaviour.Properties.of()
     .sound(SoundType.ROOTED_DIRT)
     .destroyTime(0.5f)
