@@ -643,6 +643,84 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("small_lime_cabinet_item", modLoc("block/lime_cabinet"));
        withExistingParent("medium_lime_cabinet_item", modLoc("block/medium_lime_cabinet"));
     //==============================================================================================================================================
+    //|                                                              Keylime                                                                        |
+    //==============================================================================================================================================
+       //mush
+        withExistingParent("keylime_mush", mcLoc("item/generated")).texture("layer0", "item/keylime_mush");
+       //ingot
+        withExistingParent("keylime_ingot", mcLoc("item/generated")).texture("layer0", "item/keylime_ingot");
+       //nugget
+        withExistingParent("keylime_nugget", mcLoc("item/generated")).texture("layer0", "item/keylime_nugget");
+       //block
+        withExistingParent("keylime_block_item", modLoc("block/keylime_block"));
+       //bricks block
+        withExistingParent("keylime_bricks_block_item", modLoc("block/keylime_bricks_block"));
+       //chiseled block
+        withExistingParent("keylime_chiseled_block_item", modLoc("block/keylime_chiseled_block"));
+       //tiles block
+        withExistingParent("keylime_tiles_block_item", modLoc("block/keylime_tiles_block"));
+       //slab
+        slab("keylime_slab_item", modLoc("block/keylime_block"), modLoc("block/keylime_block"), modLoc("block/keylime_block"));
+       //bricks slab
+        slab("keylime_bricks_slab_item", modLoc("block/keylime_bricks_block"), modLoc("block/keylime_bricks_block"), modLoc("block/keylime_bricks_block"));
+       //stairs
+        stairs("keylime_stairs_item", modLoc("block/keylime_block"), modLoc("block/keylime_block"), modLoc("block/keylime_block"));
+       //bricks stairs
+        stairs("keylime_bricks_stairs_item", modLoc("block/keylime_bricks_block"), modLoc("block/keylime_bricks_block"), modLoc("block/keylime_bricks_block"));
+       //bars
+        withExistingParent("keylime_bars_item", mcLoc("item/generated")).texture("layer0", "block/keylime_bars");
+       //doors
+        withExistingParent("keylime_door_item", mcLoc("item/generated")).texture("layer0", "item/keylime_door_item");
+       //button
+        buttonInventory("keylime_button_item", modLoc("block/keylime_block"));
+       //fence
+        fenceInventory("keylime_fence_item", modLoc("block/keylime_block"));
+       //gate
+        withExistingParent("keylime_gate_item", modLoc("block/keylime_gate"));
+       //pressure plate
+        pressurePlate("keylime_pressure_plate_item", modLoc("block/keylime_block"));
+       //sign
+        withExistingParent("keylime_sign_item", mcLoc("item/generated")).texture("layer0", "item/keylime_sign");
+       //trapdoor
+       withExistingParent("keylime_trapdoor_item", modLoc("block/keylime_trapdoor_trapdoor_bottom"));
+       //lamp
+       withExistingParent("keylime_lamp_item", modLoc("block/keylime_lamp"));
+       //carpet
+       ResourceLocation keylime_carpet_texture = modLoc("block/keylime_carpet");
+       carpet("keylime_carpet_item", keylime_carpet_texture);
+       //lantern
+        //regular
+        withExistingParent("keylime_lantern_item", modLoc("block/keylime_lantern"));
+        //soul
+          withExistingParent("keylime_soul_lantern_item", modLoc("block/keylime_soul_lantern"));
+       //chain
+       withExistingParent("keylime_chain_item", modLoc("block/keylime_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
+       //ladder
+       withExistingParent("keylime_ladder_item", modLoc("block/keylime_ladder"));
+       //table
+       withExistingParent("keylime_table_item", modLoc("block/keylime_table"));
+       //torches
+        //regular
+        withExistingParent("keylime_torch_item", modLoc("block/keylime_torch"));
+        //redstone
+          withExistingParent("keylime_redstone_torch_item", modLoc("block/keylime_redstone_torch"));
+        //soul
+          withExistingParent("keylime_soul_torch_item", modLoc("block/keylime_soul_torch"));
+       //furnaces
+       withExistingParent("keylime_furnace_item", modLoc("block/keylime_furnace_model_unlit"));
+       //paths
+       withExistingParent("keylime_stone_path_item", modLoc("block/keylime_stone_path"));
+       //barrel
+       withExistingParent("keylime_barrel_item", modLoc("block/keylime_barrel_model_closed"));
+       //chair
+       withExistingParent("keylime_chair_item", modLoc("block/keylime_chair"));
+       //bed
+       withExistingParent("keylime_bed_item", modLoc("block/keylime_bed"));
+       //cabinet
+       withExistingParent("small_keylime_cabinet_item", modLoc("block/keylime_cabinet"));
+       withExistingParent("medium_keylime_cabinet_item", modLoc("block/medium_keylime_cabinet"));
+    //==============================================================================================================================================
     //|                                                            Grapefruit                                                                      |
     //==============================================================================================================================================
        //mush

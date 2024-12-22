@@ -167,6 +167,19 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........tiles
           net.minecraft.world.level.block.Block lime_tiles_block = foodblockcompatregistry.LIME_TILES_BLOCK.get();
           simpleBlock(lime_tiles_block);
+     //------------------------------------------------------------keylime-----------------------------------------------------------------------
+      //.........plain
+          net.minecraft.world.level.block.Block keylime_block = foodblockcompatregistry.KEYLIME_BLOCK.get();
+          simpleBlock(keylime_block);
+      //.........bricks
+          net.minecraft.world.level.block.Block keylime_bricks_block = foodblockcompatregistry.KEYLIME_BRICKS_BLOCK.get();
+          simpleBlock(keylime_bricks_block);
+      //.........chiseled
+          net.minecraft.world.level.block.Block keylime_chiseled_block = foodblockcompatregistry.KEYLIME_CHISELED_BLOCK.get();
+          simpleBlock(keylime_chiseled_block);
+      //.........tiles
+          net.minecraft.world.level.block.Block keylime_tiles_block = foodblockcompatregistry.KEYLIME_TILES_BLOCK.get();
+          simpleBlock(keylime_tiles_block);
      //------------------------------------------------------------grapefruit-----------------------------------------------------------------------
       //.........plain
           net.minecraft.world.level.block.Block grapefruit_block = foodblockcompatregistry.GRAPEFRUIT_BLOCK.get();
@@ -320,6 +333,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
           SlabBlock lime_bricks_slab = foodblockcompatregistry.LIME_BRICKS_SLAB.get();
           ResourceLocation lime_bricks_block_texture = modLoc("block/lime_bricks_block");
           slabBlock(lime_bricks_slab, lime_bricks_block_texture, lime_bricks_block_texture);
+     //------------------------------------------------------------keylime-----------------------------------------------------------------------
+      //.........plain
+          SlabBlock keylime_slab = foodblockcompatregistry.KEYLIME_SLAB.get();
+          ResourceLocation keylime_block_texture = modLoc("block/keylime_block");
+          slabBlock(keylime_slab, keylime_block_texture, keylime_block_texture);
+      //.........bricks
+          SlabBlock keylime_bricks_slab = foodblockcompatregistry.KEYLIME_BRICKS_SLAB.get();
+          ResourceLocation keylime_bricks_block_texture = modLoc("block/keylime_bricks_block");
+          slabBlock(keylime_bricks_slab, keylime_bricks_block_texture, keylime_bricks_block_texture);
      //------------------------------------------------------------grapefruit-----------------------------------------------------------------------
       //.........plain
           SlabBlock grapefruit_slab = foodblockcompatregistry.GRAPEFRUIT_SLAB.get();
@@ -433,6 +455,13 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........bricks
           StairBlock lime_bricks_stairs = foodblockcompatregistry.LIME_BRICKS_STAIRS.get();
           stairsBlock(lime_bricks_stairs, lime_bricks_block_texture);
+     //------------------------------------------------------------keylime-----------------------------------------------------------------------
+      //.........plain
+          StairBlock keylime_stairs = foodblockcompatregistry.KEYLIME_STAIRS.get();
+          stairsBlock(keylime_stairs, keylime_block_texture);
+      //.........bricks
+          StairBlock keylime_bricks_stairs = foodblockcompatregistry.KEYLIME_BRICKS_STAIRS.get();
+          stairsBlock(keylime_bricks_stairs, keylime_bricks_block_texture);
      //------------------------------------------------------------grapefruit-----------------------------------------------------------------------
       //.........plain
           StairBlock grapefruit_stairs = foodblockcompatregistry.GRAPEFRUIT_STAIRS.get();
@@ -518,6 +547,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation lime_bars_texture = modLoc("block/lime_bars");
           ResourceLocation lime_bars_rim_texture = modLoc("block/lime_block");
           paneBlockWithRenderType(lime_bars, "lime_bars", lime_bars_texture, lime_bars_rim_texture, "cutout_mipped_all"); 
+     //------------------------------------------------------------keylime-----------------------------------------------------------------------
+          IronBarsBlock keylime_bars = foodblockcompatregistry.KEYLIME_BARS.get(); 
+          ResourceLocation keylime_bars_texture = modLoc("block/keylime_bars");
+          ResourceLocation keylime_bars_rim_texture = modLoc("block/keylime_block");
+          paneBlockWithRenderType(keylime_bars, "keylime_bars", keylime_bars_texture, keylime_bars_rim_texture, "cutout_mipped_all"); 
      //------------------------------------------------------------grapefruit-----------------------------------------------------------------------
           IronBarsBlock grapefruit_bars = foodblockcompatregistry.GRAPEFRUIT_BARS.get(); 
           ResourceLocation grapefruit_bars_texture = modLoc("block/grapefruit_bars");
@@ -591,6 +625,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation lime_door_top_texture = modLoc("block/lime_door_top");
           ResourceLocation lime_door_bottom_texture = modLoc("block/lime_door_bottom");
           doorBlockWithRenderType(lime_door, "lime_door", lime_door_bottom_texture, lime_door_top_texture, "translucent"); 
+     //------------------------------------------------------------keylime-----------------------------------------------------------------------
+          DoorBlock keylime_door = foodblockcompatregistry.KEYLIME_DOOR.get(); 
+          ResourceLocation keylime_door_top_texture = modLoc("block/keylime_door_top");
+          ResourceLocation keylime_door_bottom_texture = modLoc("block/keylime_door_bottom");
+          doorBlockWithRenderType(keylime_door, "keylime_door", keylime_door_bottom_texture, keylime_door_top_texture, "translucent"); 
      //------------------------------------------------------------grapefruit-----------------------------------------------------------------------
           DoorBlock grapefruit_door = foodblockcompatregistry.GRAPEFRUIT_DOOR.get(); 
           ResourceLocation grapefruit_door_top_texture = modLoc("block/grapefruit_door_top");
@@ -656,6 +695,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ButtonBlock lime_button = foodblockcompatregistry.LIME_BUTTON.get();
           ResourceLocation lime_button_texture = modLoc("block/lime_block");
           buttonBlock(lime_button, lime_button_texture);
+     //------------------------------------------------------------keylime-----------------------------------------------------------------------
+          ButtonBlock keylime_button = foodblockcompatregistry.KEYLIME_BUTTON.get();
+          ResourceLocation keylime_button_texture = modLoc("block/keylime_block");
+          buttonBlock(keylime_button, keylime_button_texture);
      //------------------------------------------------------------grapefruit-----------------------------------------------------------------------
           ButtonBlock grapefruit_button = foodblockcompatregistry.GRAPEFRUIT_BUTTON.get();
           ResourceLocation grapefruit_button_texture = modLoc("block/grapefruit_block");
@@ -755,6 +798,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
           FenceGateBlock lime_gate = foodblockcompatregistry.LIME_GATE.get();
           ResourceLocation lime_gate_texture = modLoc("block/lime_block");
           fenceGateBlock(lime_gate, lime_gate_texture);
+     //------------------------------------------------------------keylime-----------------------------------------------------------------------
+       //fence
+          FenceBlock keylime_fence = foodblockcompatregistry.KEYLIME_FENCE.get();
+          ResourceLocation keylime_fence_texture = modLoc("block/keylime_block");
+          fenceBlock(keylime_fence, keylime_fence_texture);
+       //gate
+          FenceGateBlock keylime_gate = foodblockcompatregistry.KEYLIME_GATE.get();
+          ResourceLocation keylime_gate_texture = modLoc("block/keylime_block");
+          fenceGateBlock(keylime_gate, keylime_gate_texture);
      //------------------------------------------------------------grapefruit-----------------------------------------------------------------------
        //fence
           FenceBlock grapefruit_fence = foodblockcompatregistry.GRAPEFRUIT_FENCE.get();
@@ -844,6 +896,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           PressurePlateBlock lime_pressure_plate = foodblockcompatregistry.LIME_PRESSURE_PLATE.get();
           ResourceLocation lime_pressure_plate_texture = modLoc("block/lime_block");
           pressurePlateBlock(lime_pressure_plate, lime_pressure_plate_texture);
+     //------------------------------------------------------------keylime-----------------------------------------------------------------------
+          PressurePlateBlock keylime_pressure_plate = foodblockcompatregistry.KEYLIME_PRESSURE_PLATE.get();
+          ResourceLocation keylime_pressure_plate_texture = modLoc("block/keylime_block");
+          pressurePlateBlock(keylime_pressure_plate, keylime_pressure_plate_texture);
      //------------------------------------------------------------grapefruit-----------------------------------------------------------------------
           PressurePlateBlock grapefruit_pressure_plate = foodblockcompatregistry.GRAPEFRUIT_PRESSURE_PLATE.get();
           ResourceLocation grapefruit_pressure_plate_texture = modLoc("block/grapefruit_block");
@@ -911,6 +967,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
            WallSignBlock lime_wall_sign = foodblockcompatregistry.LIME_WALL_SIGN.get();
            ResourceLocation lime_sign_texture = modLoc("block/lime_block");
            signBlock(lime_sign, lime_wall_sign, lime_sign_texture);
+     //------------------------------------------------------------keylime-----------------------------------------------------------------------
+           StandingSignBlock keylime_sign = foodblockcompatregistry.KEYLIME_STANDING_SIGN.get();
+           WallSignBlock keylime_wall_sign = foodblockcompatregistry.KEYLIME_WALL_SIGN.get();
+           ResourceLocation keylime_sign_texture = modLoc("block/keylime_block");
+           signBlock(keylime_sign, keylime_wall_sign, keylime_sign_texture);
      //------------------------------------------------------------grapefruit-----------------------------------------------------------------------
            StandingSignBlock grapefruit_sign = foodblockcompatregistry.GRAPEFRUIT_STANDING_SIGN.get();
            WallSignBlock grapefruit_wall_sign = foodblockcompatregistry.GRAPEFRUIT_WALL_SIGN.get();
@@ -976,6 +1037,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           TrapDoorBlock lime_trapdoor = foodblockcompatregistry.LIME_TRAPDOOR.get(); 
           ResourceLocation lime_trapdoor_texture = modLoc("block/lime_block");
           trapdoorBlockWithRenderType(lime_trapdoor, "lime_trapdoor", lime_trapdoor_texture, false, lime_trapdoor_texture);
+     //------------------------------------------------------------keylime-----------------------------------------------------------------------
+          TrapDoorBlock keylime_trapdoor = foodblockcompatregistry.KEYLIME_TRAPDOOR.get(); 
+          ResourceLocation keylime_trapdoor_texture = modLoc("block/keylime_block");
+          trapdoorBlockWithRenderType(keylime_trapdoor, "keylime_trapdoor", keylime_trapdoor_texture, false, keylime_trapdoor_texture);
      //------------------------------------------------------------grapefruit-----------------------------------------------------------------------
           TrapDoorBlock grapefruit_trapdoor = foodblockcompatregistry.GRAPEFRUIT_TRAPDOOR.get(); 
           ResourceLocation grapefruit_trapdoor_texture = modLoc("block/grapefruit_block");
@@ -1027,6 +1092,9 @@ public class GM1BlockStateProvider extends BlockStateProvider
      //------------------------------------------------------------lime-----------------------------------------------------------------------
           Block lime_lamp = foodblockcompatregistry.LIME_LAMP.get();
           simpleBlock(lime_lamp);
+     //------------------------------------------------------------keylime-----------------------------------------------------------------------
+          Block keylime_lamp = foodblockcompatregistry.KEYLIME_LAMP.get();
+          simpleBlock(keylime_lamp);
      //------------------------------------------------------------grapefruit-----------------------------------------------------------------------
           Block grapefruit_lamp = foodblockcompatregistry.GRAPEFRUIT_LAMP.get();
           simpleBlock(grapefruit_lamp);
@@ -1096,6 +1164,12 @@ public class GM1BlockStateProvider extends BlockStateProvider
           BlockModelBuilder lime_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(lime_carpet).getPath(), mcLoc("block/carpet"))
           .texture("wool", lime_carpet_texture);
           simpleBlock(lime_carpet, new ModelFile.UncheckedModelFile(lime_carpet_model.getLocation()));
+     //------------------------------------------------------------keylime-----------------------------------------------------------------------
+          CarpetBlock keylime_carpet = foodblockcompatregistry.KEYLIME_CARPET.get();
+          ResourceLocation keylime_carpet_texture = modLoc("block/keylime_carpet");
+          BlockModelBuilder keylime_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(keylime_carpet).getPath(), mcLoc("block/carpet"))
+          .texture("wool", keylime_carpet_texture);
+          simpleBlock(keylime_carpet, new ModelFile.UncheckedModelFile(keylime_carpet_model.getLocation()));
      //------------------------------------------------------------grapefruit-----------------------------------------------------------------------
           CarpetBlock grapefruit_carpet = foodblockcompatregistry.GRAPEFRUIT_CARPET.get();
           ResourceLocation grapefruit_carpet_texture = modLoc("block/grapefruit_carpet");
@@ -1447,6 +1521,45 @@ public class GM1BlockStateProvider extends BlockStateProvider
              .modelForState().modelFile(hanging_lime_soul_lantern_model).addModel()
              .partialState().with(LanternBlock.HANGING, false)
              .modelForState().modelFile(lime_soul_lantern_model).addModel();
+     //------------------------------------------------------------keylime-----------------------------------------------------------------------
+         //regular
+          LanternBlock keylime_lantern = foodblockcompatregistry.KEYLIME_LANTERN.get();
+          ResourceLocation keylime_lantern_texture = modLoc("block/keylime_lantern");
+  
+          BlockModelBuilder keylime_lantern_model = models()
+              .withExistingParent("keylime_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", keylime_lantern_texture);
+  
+          BlockModelBuilder hanging_keylime_lantern_model = models()
+              .withExistingParent("keylime_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", keylime_lantern_texture);
+  
+          getVariantBuilder(keylime_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_keylime_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(keylime_lantern_model).addModel();
+         //soul
+         LanternBlock keylime_soul_lantern = foodblockcompatregistry.KEYLIME_SOUL_LANTERN.get();
+         ResourceLocation keylime_soul_lantern_texture = modLoc("block/keylime_soul_lantern");
+ 
+         BlockModelBuilder keylime_soul_lantern_model = models()
+             .withExistingParent("keylime_soul_lantern", mcLoc("block/lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", keylime_soul_lantern_texture);
+ 
+         BlockModelBuilder hanging_keylime_soul_lantern_model = models()
+             .withExistingParent("keylime_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", keylime_soul_lantern_texture);
+ 
+         getVariantBuilder(keylime_soul_lantern)
+             .partialState().with(LanternBlock.HANGING, true)
+             .modelForState().modelFile(hanging_keylime_soul_lantern_model).addModel()
+             .partialState().with(LanternBlock.HANGING, false)
+             .modelForState().modelFile(keylime_soul_lantern_model).addModel();
      //------------------------------------------------------------grapefruit-----------------------------------------------------------------------
          //regular
           LanternBlock grapefruit_lantern = foodblockcompatregistry.GRAPEFRUIT_LANTERN.get();
@@ -1812,6 +1925,22 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .modelForState().modelFile(lime_chain_model).rotationX(90).rotationY(90).addModel()
           .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
           .modelForState().modelFile(lime_chain_model).rotationX(90).addModel(); 
+     //------------------------------------------------------------keylime-----------------------------------------------------------------------
+         ChainBlock keylime_chain = foodblockcompatregistry.KEYLIME_CHAIN.get();
+         ResourceLocation keylime_chain_texture = modLoc("block/keylime_chain");
+         BlockModelBuilder keylime_chain_model = models()
+          .withExistingParent("keylime_chain", mcLoc("block/chain"))
+          .renderType("cutout_mipped_all")
+          .texture("all", keylime_chain_texture)
+          .texture("particle", keylime_chain_texture);
+
+          getVariantBuilder(keylime_chain)
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Y)
+          .modelForState().modelFile(keylime_chain_model).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.X)
+          .modelForState().modelFile(keylime_chain_model).rotationX(90).rotationY(90).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
+          .modelForState().modelFile(keylime_chain_model).rotationX(90).addModel(); 
      //------------------------------------------------------------grapefruit-----------------------------------------------------------------------
          ChainBlock grapefruit_chain = foodblockcompatregistry.GRAPEFRUIT_CHAIN.get();
          ResourceLocation grapefruit_chain_texture = modLoc("block/grapefruit_chain");
@@ -2073,6 +2202,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/lime_ladder");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------keylime-----------------------------------------------------------------------
+          LadderBlock keylimeladder = foodblockcompatregistry.KEYLIME_LADDER.get();
+
+          getVariantBuilder(keylimeladder)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/keylime_ladder");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -2370,6 +2520,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/lime_table");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------keylime-----------------------------------------------------------------------
+          HorizontalDirectionalBlock keylimetable = foodblockcompatregistry.KEYLIME_TABLE.get();
+
+          getVariantBuilder(keylimetable)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/keylime_table");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -3433,6 +3604,122 @@ public class GM1BlockStateProvider extends BlockStateProvider
                 .rotationY(rotation)
                 .build();
             });
+     //------------------------------------------------------------keylime-----------------------------------------------------------------------
+       //regular
+        TorchBlock keylime_torch = foodblockcompatregistry.KEYLIME_TORCH.get();
+        ResourceLocation keylime_torch_texture = modLoc("block/keylime_torch");
+        BlockModelBuilder keylime_torch_model = models()
+        .withExistingParent("keylime_torch", mcLoc("block/torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", keylime_torch_texture)
+        .texture("particle", keylime_torch_texture);
+
+        simpleBlock(keylime_torch, keylime_torch_model);
+
+        TorchBlock keylime_wall_torch = foodblockcompatregistry.KEYLIME_WALL_TORCH.get();
+        BlockModelBuilder keylime_wall_torch_model = models()
+        .withExistingParent("keylime_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", keylime_torch_texture)
+        .texture("particle", keylime_torch_texture);
+        getVariantBuilder(keylime_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("keylime_wall_torch", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", keylime_torch_texture)
+                    .texture("particle", keylime_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //redstone
+        RedstoneTorchBlock keylime_redstone_torch = foodblockcompatregistry.KEYLIME_REDSTONE_TORCH.get();
+        ResourceLocation keylime_redstone_torch_texture = modLoc("block/keylime_redstone_torch");
+        BlockModelBuilder keylime_redstone_torch_model = models()
+        .withExistingParent("keylime_redstone_torch", mcLoc("block/redstone_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", keylime_redstone_torch_texture)
+        .texture("particle", keylime_redstone_torch_texture);
+        
+
+        simpleBlock(keylime_redstone_torch, keylime_redstone_torch_model);
+
+        ResourceLocation keylime_redstone_wall_torch_texture = modLoc("block/keylime_redstone_torch");
+
+        RedstoneTorchBlock keylime_redstone_wall_torch = foodblockcompatregistry.KEYLIME_REDSTONE_WALL_TORCH.get();
+        BlockModelBuilder keylime_redstone_wall_torch_model = models()
+        .withExistingParent("keylime_redstone_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", keylime_redstone_wall_torch_texture)
+        .texture("particle", keylime_redstone_wall_torch_texture);
+        getVariantBuilder(keylime_redstone_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("keylime_redstone_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", keylime_redstone_wall_torch_texture)
+                    .texture("particle", keylime_redstone_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //soul
+        TorchBlock keylime_soul_torch = foodblockcompatregistry.KEYLIME_SOUL_TORCH.get();
+        ResourceLocation keylime_soul_torch_texture = modLoc("block/keylime_soul_torch");
+        BlockModelBuilder keylime_soul_torch_model = models()
+        .withExistingParent("keylime_soul_torch", mcLoc("block/soul_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", keylime_soul_torch_texture)
+        .texture("particle", keylime_soul_torch_texture);
+        
+
+        simpleBlock(keylime_soul_torch, keylime_soul_torch_model);
+
+        ResourceLocation keylime_soul_wall_torch_texture = modLoc("block/keylime_soul_torch");
+        TorchBlock keylime_soul_wall_torch = foodblockcompatregistry.KEYLIME_SOUL_WALL_TORCH.get();
+        BlockModelBuilder keylime_soul_wall_torch_model = models()
+        .withExistingParent("keylime_soul_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", keylime_soul_wall_torch_texture)
+        .texture("particle", keylime_soul_wall_torch_texture);
+        getVariantBuilder(keylime_soul_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("keylime_soul_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", keylime_soul_wall_torch_texture)
+                    .texture("particle", keylime_soul_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
      //------------------------------------------------------------grapefruit-----------------------------------------------------------------------
        //regular
         TorchBlock grapefruit_torch = foodblockcompatregistry.GRAPEFRUIT_TORCH.get();
@@ -4484,6 +4771,50 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationY(rotation)
                       .build();
               });
+     //------------------------------------------------------------keylime-----------------------------------------------------------------------
+          FurnaceBlock keylime_furnace = foodblockcompatregistry.KEYLIME_FURNACE.get();
+          ResourceLocation keylime_furnace_unlit_texture = modLoc("block/keylime_furnace");
+          ResourceLocation keylime_furnace_lit_texture = modLoc("block/keylime_furnace_lit");
+          ResourceLocation keylime_furnace_side = modLoc("block/keylime_block");
+          
+          // Define the model for the unlit state
+          BlockModelBuilder keylime_furnace_model_unlit = models()
+              .withExistingParent("keylime_furnace_model_unlit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", keylime_furnace_side)
+              .texture("top", keylime_furnace_side)
+              .texture("front", keylime_furnace_unlit_texture)
+              .texture("particle", keylime_furnace_side);
+          
+          // Define the model for the lit state
+          BlockModelBuilder keylime_furnace_model_lit = models()
+              .withExistingParent("keylime_furnace_model_lit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", keylime_furnace_side)
+              .texture("top", keylime_furnace_side)
+              .texture("front", keylime_furnace_lit_texture)
+              .texture("particle", keylime_furnace_side);
+          
+          // Configure variants for the keylime_furnace block
+          getVariantBuilder(keylime_furnace)
+              .forAllStates(state -> {
+                  Boolean lit = state.getValue(BlockStateProperties.LIT);
+                  Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                  int rotation = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+
+                  ResourceLocation modelLocation = lit ? modLoc("block/keylime_furnace_model_lit") : modLoc("block/keylime_furnace_model_unlit");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotation)
+                      .build();
+              });
      //------------------------------------------------------------grapefruit-----------------------------------------------------------------------
           FurnaceBlock grapefruit_furnace = foodblockcompatregistry.GRAPEFRUIT_FURNACE.get();
           ResourceLocation grapefruit_furnace_unlit_texture = modLoc("block/grapefruit_furnace");
@@ -4834,6 +5165,18 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .forAllStates(state -> {
 
               ResourceLocation modelLocation = modLoc("block/lime_stone_path");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .build();
+          });
+     //------------------------------------------------------------keylime-----------------------------------------------------------------------
+          foodpathtypeminislab keylime_stone_path = foodblockcompatregistry.KEYLIME_STONE_PATH.get();
+
+          getVariantBuilder(keylime_stone_path)
+          .forAllStates(state -> {
+
+              ResourceLocation modelLocation = modLoc("block/keylime_stone_path");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -5291,6 +5634,54 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   };
 
                   ResourceLocation modelLocation = open ? modLoc("block/lime_barrel_model_open") : modLoc("block/lime_barrel_model_closed");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotationY)
+                      .rotationX(rotationX)
+                      .build();
+              });
+     //------------------------------------------------------------keylime-----------------------------------------------------------------------
+          foodBarrel keylime_barrel = foodblockcompatregistry.KEYLIME_BARREL.get();
+          ResourceLocation keylime_barrel_closed_texture = modLoc("block/keylime_barrel_top_closed");
+          ResourceLocation keylime_barrel_open_texture = modLoc("block/keylime_barrel_top_open");
+          ResourceLocation keylime_barrel_side = modLoc("block/keylime_barrel_side");
+          ResourceLocation keylime_barrel_bottom = modLoc("block/keylime_barrel_bottom");
+          
+          BlockModelBuilder keylime_barrel_model_closed = models()
+              .withExistingParent("keylime_barrel_model_closed", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", keylime_barrel_side)
+              .texture("bottom", keylime_barrel_bottom)
+              .texture("top", keylime_barrel_closed_texture)
+              .texture("particle", keylime_barrel_side);
+          
+          BlockModelBuilder keylime_barrel_model_open = models()
+              .withExistingParent("keylime_barrel_model_open", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", keylime_barrel_side)
+              .texture("bottom", keylime_barrel_bottom)
+              .texture("top", keylime_barrel_open_texture)
+              .texture("particle", keylime_barrel_side);
+          
+          getVariantBuilder(keylime_barrel)
+              .forAllStates(state -> {
+                  Boolean open = state.getValue(BlockStateProperties.OPEN);
+                  Direction facing = state.getValue(BlockStateProperties.FACING);
+                  int rotationY = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+                  int rotationX = switch (facing) {
+                      case UP -> 0;
+                      case DOWN -> 180;
+                      default -> 90;
+                  };
+
+                  ResourceLocation modelLocation = open ? modLoc("block/keylime_barrel_model_open") : modLoc("block/keylime_barrel_model_closed");
               
                   return ConfiguredModel.builder()
                       .modelFile(models().getExistingFile(modelLocation))
@@ -5757,6 +6148,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .rotationY(rotationY)
                   .build();
           });
+     //------------------------------------------------------------keylime-----------------------------------------------------------------------
+          foodChairBlock keylimeChair = foodblockcompatregistry.KEYLIME_CHAIR.get();
+
+          getVariantBuilder(keylimeChair)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/keylime_chair");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
      //------------------------------------------------------------grapefruit-----------------------------------------------------------------------
           foodChairBlock grapefruitChair = foodblockcompatregistry.GRAPEFRUIT_CHAIR.get();
 
@@ -6048,6 +6460,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/lime_bed");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------keylime-----------------------------------------------------------------------
+          foodBed keylimeBed = foodblockcompatregistry.KEYLIME_BED.get();
+
+          getVariantBuilder(keylimeBed)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/keylime_bed");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -6537,6 +6970,51 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = open ? modLoc("block/medium_lime_cabinet_open") : modLoc("block/medium_lime_cabinet");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------keylime-----------------------------------------------------------------------
+         //small
+          smallFoodCabinet keylimeCabinet = foodblockcompatregistry.SMALL_KEYLIME_CABINET.get();
+
+          getVariantBuilder(keylimeCabinet)
+          .forAllStates(state -> {
+              Boolean open = state.getValue(BlockStateProperties.OPEN);
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = open ? modLoc("block/keylime_cabinet_open") : modLoc("block/keylime_cabinet");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+         //medium
+          mediumFoodCabinet keylimeMediumCabinet = foodblockcompatregistry.MEDIUM_KEYLIME_CABINET.get();
+
+          getVariantBuilder(keylimeMediumCabinet)
+          .forAllStates(state -> {
+              Boolean open = state.getValue(BlockStateProperties.OPEN);
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = open ? modLoc("block/medium_keylime_cabinet_open") : modLoc("block/medium_keylime_cabinet");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
