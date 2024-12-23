@@ -154,6 +154,19 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........tiles
           net.minecraft.world.level.block.Block lemon_tiles_block = foodblockcompatregistry.LEMON_TILES_BLOCK.get();
           simpleBlock(lemon_tiles_block);
+     //------------------------------------------------------------buddhashand-----------------------------------------------------------------------
+      //.........plain
+          net.minecraft.world.level.block.Block buddhashand_block = foodblockcompatregistry.BUDDHASHAND_BLOCK.get();
+          simpleBlock(buddhashand_block);
+      //.........bricks
+          net.minecraft.world.level.block.Block buddhashand_bricks_block = foodblockcompatregistry.BUDDHASHAND_BRICKS_BLOCK.get();
+          simpleBlock(buddhashand_bricks_block);
+      //.........chiseled
+          net.minecraft.world.level.block.Block buddhashand_chiseled_block = foodblockcompatregistry.BUDDHASHAND_CHISELED_BLOCK.get();
+          simpleBlock(buddhashand_chiseled_block);
+      //.........tiles
+          net.minecraft.world.level.block.Block buddhashand_tiles_block = foodblockcompatregistry.BUDDHASHAND_TILES_BLOCK.get();
+          simpleBlock(buddhashand_tiles_block);
      //------------------------------------------------------------lime-----------------------------------------------------------------------
       //.........plain
           net.minecraft.world.level.block.Block lime_block = foodblockcompatregistry.LIME_BLOCK.get();
@@ -324,6 +337,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
           SlabBlock lemon_bricks_slab = foodblockcompatregistry.LEMON_BRICKS_SLAB.get();
           ResourceLocation lemon_bricks_block_texture = modLoc("block/lemon_bricks_block");
           slabBlock(lemon_bricks_slab, lemon_bricks_block_texture, lemon_bricks_block_texture);
+     //------------------------------------------------------------buddhashand-----------------------------------------------------------------------
+      //.........plain
+          SlabBlock buddhashand_slab = foodblockcompatregistry.BUDDHASHAND_SLAB.get();
+          ResourceLocation buddhashand_block_texture = modLoc("block/buddhashand_block");
+          slabBlock(buddhashand_slab, buddhashand_block_texture, buddhashand_block_texture);
+      //.........bricks
+          SlabBlock buddhashand_bricks_slab = foodblockcompatregistry.BUDDHASHAND_BRICKS_SLAB.get();
+          ResourceLocation buddhashand_bricks_block_texture = modLoc("block/buddhashand_bricks_block");
+          slabBlock(buddhashand_bricks_slab, buddhashand_bricks_block_texture, buddhashand_bricks_block_texture);
      //------------------------------------------------------------lime-----------------------------------------------------------------------
       //.........plain
           SlabBlock lime_slab = foodblockcompatregistry.LIME_SLAB.get();
@@ -448,6 +470,13 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........bricks
           StairBlock lemon_bricks_stairs = foodblockcompatregistry.LEMON_BRICKS_STAIRS.get();
           stairsBlock(lemon_bricks_stairs, lemon_bricks_block_texture);
+     //------------------------------------------------------------buddhashand-----------------------------------------------------------------------
+      //.........plain
+          StairBlock buddhashand_stairs = foodblockcompatregistry.BUDDHASHAND_STAIRS.get();
+          stairsBlock(buddhashand_stairs, buddhashand_block_texture);
+      //.........bricks
+          StairBlock buddhashand_bricks_stairs = foodblockcompatregistry.BUDDHASHAND_BRICKS_STAIRS.get();
+          stairsBlock(buddhashand_bricks_stairs, buddhashand_bricks_block_texture);
      //------------------------------------------------------------lime-----------------------------------------------------------------------
       //.........plain
           StairBlock lime_stairs = foodblockcompatregistry.LIME_STAIRS.get();
@@ -542,6 +571,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation lemon_bars_texture = modLoc("block/lemon_bars");
           ResourceLocation lemon_bars_rim_texture = modLoc("block/lemon_block");
           paneBlockWithRenderType(lemon_bars, "lemon_bars", lemon_bars_texture, lemon_bars_rim_texture, "cutout_mipped_all"); 
+     //------------------------------------------------------------buddhashand-----------------------------------------------------------------------
+          IronBarsBlock buddhashand_bars = foodblockcompatregistry.BUDDHASHAND_BARS.get(); 
+          ResourceLocation buddhashand_bars_texture = modLoc("block/buddhashand_bars");
+          ResourceLocation buddhashand_bars_rim_texture = modLoc("block/buddhashand_block");
+          paneBlockWithRenderType(buddhashand_bars, "buddhashand_bars", buddhashand_bars_texture, buddhashand_bars_rim_texture, "cutout_mipped_all"); 
      //------------------------------------------------------------lime-----------------------------------------------------------------------
           IronBarsBlock lime_bars = foodblockcompatregistry.LIME_BARS.get(); 
           ResourceLocation lime_bars_texture = modLoc("block/lime_bars");
@@ -620,6 +654,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation lemon_door_top_texture = modLoc("block/lemon_door_top");
           ResourceLocation lemon_door_bottom_texture = modLoc("block/lemon_door_bottom");
           doorBlockWithRenderType(lemon_door, "lemon_door", lemon_door_bottom_texture, lemon_door_top_texture, "translucent"); 
+     //------------------------------------------------------------buddhashand-----------------------------------------------------------------------
+          DoorBlock buddhashand_door = foodblockcompatregistry.BUDDHASHAND_DOOR.get(); 
+          ResourceLocation buddhashand_door_top_texture = modLoc("block/buddhashand_door_top");
+          ResourceLocation buddhashand_door_bottom_texture = modLoc("block/buddhashand_door_bottom");
+          doorBlockWithRenderType(buddhashand_door, "buddhashand_door", buddhashand_door_bottom_texture, buddhashand_door_top_texture, "translucent"); 
      //------------------------------------------------------------lime-----------------------------------------------------------------------
           DoorBlock lime_door = foodblockcompatregistry.LIME_DOOR.get(); 
           ResourceLocation lime_door_top_texture = modLoc("block/lime_door_top");
@@ -691,6 +730,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ButtonBlock lemon_button = foodblockcompatregistry.LEMON_BUTTON.get();
           ResourceLocation lemon_button_texture = modLoc("block/lemon_block");
           buttonBlock(lemon_button, lemon_button_texture);
+     //------------------------------------------------------------buddhashand-----------------------------------------------------------------------
+          ButtonBlock buddhashand_button = foodblockcompatregistry.BUDDHASHAND_BUTTON.get();
+          ResourceLocation buddhashand_button_texture = modLoc("block/buddhashand_block");
+          buttonBlock(buddhashand_button, buddhashand_button_texture);
      //------------------------------------------------------------lime-----------------------------------------------------------------------
           ButtonBlock lime_button = foodblockcompatregistry.LIME_BUTTON.get();
           ResourceLocation lime_button_texture = modLoc("block/lime_block");
@@ -789,6 +832,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
           FenceGateBlock lemon_gate = foodblockcompatregistry.LEMON_GATE.get();
           ResourceLocation lemon_gate_texture = modLoc("block/lemon_block");
           fenceGateBlock(lemon_gate, lemon_gate_texture);
+     //------------------------------------------------------------buddhashand-----------------------------------------------------------------------
+       //fence
+          FenceBlock buddhashand_fence = foodblockcompatregistry.BUDDHASHAND_FENCE.get();
+          ResourceLocation buddhashand_fence_texture = modLoc("block/buddhashand_block");
+          fenceBlock(buddhashand_fence, buddhashand_fence_texture);
+       //gate
+          FenceGateBlock buddhashand_gate = foodblockcompatregistry.BUDDHASHAND_GATE.get();
+          ResourceLocation buddhashand_gate_texture = modLoc("block/buddhashand_block");
+          fenceGateBlock(buddhashand_gate, buddhashand_gate_texture);
      //------------------------------------------------------------lime-----------------------------------------------------------------------
        //fence
           FenceBlock lime_fence = foodblockcompatregistry.LIME_FENCE.get();
@@ -892,6 +944,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           PressurePlateBlock lemon_pressure_plate = foodblockcompatregistry.LEMON_PRESSURE_PLATE.get();
           ResourceLocation lemon_pressure_plate_texture = modLoc("block/lemon_block");
           pressurePlateBlock(lemon_pressure_plate, lemon_pressure_plate_texture);
+     //------------------------------------------------------------buddhashand-----------------------------------------------------------------------
+          PressurePlateBlock buddhashand_pressure_plate = foodblockcompatregistry.BUDDHASHAND_PRESSURE_PLATE.get();
+          ResourceLocation buddhashand_pressure_plate_texture = modLoc("block/buddhashand_block");
+          pressurePlateBlock(buddhashand_pressure_plate, buddhashand_pressure_plate_texture);
      //------------------------------------------------------------lime-----------------------------------------------------------------------
           PressurePlateBlock lime_pressure_plate = foodblockcompatregistry.LIME_PRESSURE_PLATE.get();
           ResourceLocation lime_pressure_plate_texture = modLoc("block/lime_block");
@@ -962,6 +1018,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
            WallSignBlock lemon_wall_sign = foodblockcompatregistry.LEMON_WALL_SIGN.get();
            ResourceLocation lemon_sign_texture = modLoc("block/lemon_block");
            signBlock(lemon_sign, lemon_wall_sign, lemon_sign_texture);
+     //------------------------------------------------------------buddhashand-----------------------------------------------------------------------
+           StandingSignBlock buddhashand_sign = foodblockcompatregistry.BUDDHASHAND_STANDING_SIGN.get();
+           WallSignBlock buddhashand_wall_sign = foodblockcompatregistry.BUDDHASHAND_WALL_SIGN.get();
+           ResourceLocation buddhashand_sign_texture = modLoc("block/buddhashand_block");
+           signBlock(buddhashand_sign, buddhashand_wall_sign, buddhashand_sign_texture);
      //------------------------------------------------------------lime-----------------------------------------------------------------------
            StandingSignBlock lime_sign = foodblockcompatregistry.LIME_STANDING_SIGN.get();
            WallSignBlock lime_wall_sign = foodblockcompatregistry.LIME_WALL_SIGN.get();
@@ -1033,6 +1094,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           TrapDoorBlock lemon_trapdoor = foodblockcompatregistry.LEMON_TRAPDOOR.get(); 
           ResourceLocation lemon_trapdoor_texture = modLoc("block/lemon_block");
           trapdoorBlockWithRenderType(lemon_trapdoor, "lemon_trapdoor", lemon_trapdoor_texture, false, lemon_trapdoor_texture);
+     //------------------------------------------------------------buddhashand-----------------------------------------------------------------------
+          TrapDoorBlock buddhashand_trapdoor = foodblockcompatregistry.BUDDHASHAND_TRAPDOOR.get(); 
+          ResourceLocation buddhashand_trapdoor_texture = modLoc("block/buddhashand_block");
+          trapdoorBlockWithRenderType(buddhashand_trapdoor, "buddhashand_trapdoor", buddhashand_trapdoor_texture, false, buddhashand_trapdoor_texture);
      //------------------------------------------------------------lime-----------------------------------------------------------------------
           TrapDoorBlock lime_trapdoor = foodblockcompatregistry.LIME_TRAPDOOR.get(); 
           ResourceLocation lime_trapdoor_texture = modLoc("block/lime_block");
@@ -1089,6 +1154,9 @@ public class GM1BlockStateProvider extends BlockStateProvider
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
           Block lemon_lamp = foodblockcompatregistry.LEMON_LAMP.get();
           simpleBlock(lemon_lamp);
+     //------------------------------------------------------------buddhashand-----------------------------------------------------------------------
+          Block buddhashand_lamp = foodblockcompatregistry.BUDDHASHAND_LAMP.get();
+          simpleBlock(buddhashand_lamp);
      //------------------------------------------------------------lime-----------------------------------------------------------------------
           Block lime_lamp = foodblockcompatregistry.LIME_LAMP.get();
           simpleBlock(lime_lamp);
@@ -1158,6 +1226,12 @@ public class GM1BlockStateProvider extends BlockStateProvider
           BlockModelBuilder lemon_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(lemon_carpet).getPath(), mcLoc("block/carpet"))
           .texture("wool", lemon_carpet_texture);
           simpleBlock(lemon_carpet, new ModelFile.UncheckedModelFile(lemon_carpet_model.getLocation()));
+     //------------------------------------------------------------buddhashand-----------------------------------------------------------------------
+          CarpetBlock buddhashand_carpet = foodblockcompatregistry.BUDDHASHAND_CARPET.get();
+          ResourceLocation buddhashand_carpet_texture = modLoc("block/buddhashand_carpet");
+          BlockModelBuilder buddhashand_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(buddhashand_carpet).getPath(), mcLoc("block/carpet"))
+          .texture("wool", buddhashand_carpet_texture);
+          simpleBlock(buddhashand_carpet, new ModelFile.UncheckedModelFile(buddhashand_carpet_model.getLocation()));
      //------------------------------------------------------------lime-----------------------------------------------------------------------
           CarpetBlock lime_carpet = foodblockcompatregistry.LIME_CARPET.get();
           ResourceLocation lime_carpet_texture = modLoc("block/lime_carpet");
@@ -1482,6 +1556,45 @@ public class GM1BlockStateProvider extends BlockStateProvider
              .modelForState().modelFile(hanging_lemon_soul_lantern_model).addModel()
              .partialState().with(LanternBlock.HANGING, false)
              .modelForState().modelFile(lemon_soul_lantern_model).addModel();
+     //------------------------------------------------------------buddhashand-----------------------------------------------------------------------
+         //regular
+          LanternBlock buddhashand_lantern = foodblockcompatregistry.BUDDHASHAND_LANTERN.get();
+          ResourceLocation buddhashand_lantern_texture = modLoc("block/buddhashand_lantern");
+  
+          BlockModelBuilder buddhashand_lantern_model = models()
+              .withExistingParent("buddhashand_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", buddhashand_lantern_texture);
+  
+          BlockModelBuilder hanging_buddhashand_lantern_model = models()
+              .withExistingParent("buddhashand_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", buddhashand_lantern_texture);
+  
+          getVariantBuilder(buddhashand_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_buddhashand_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(buddhashand_lantern_model).addModel();
+         //soul
+         LanternBlock buddhashand_soul_lantern = foodblockcompatregistry.BUDDHASHAND_SOUL_LANTERN.get();
+         ResourceLocation buddhashand_soul_lantern_texture = modLoc("block/buddhashand_soul_lantern");
+ 
+         BlockModelBuilder buddhashand_soul_lantern_model = models()
+             .withExistingParent("buddhashand_soul_lantern", mcLoc("block/lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", buddhashand_soul_lantern_texture);
+ 
+         BlockModelBuilder hanging_buddhashand_soul_lantern_model = models()
+             .withExistingParent("buddhashand_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", buddhashand_soul_lantern_texture);
+ 
+         getVariantBuilder(buddhashand_soul_lantern)
+             .partialState().with(LanternBlock.HANGING, true)
+             .modelForState().modelFile(hanging_buddhashand_soul_lantern_model).addModel()
+             .partialState().with(LanternBlock.HANGING, false)
+             .modelForState().modelFile(buddhashand_soul_lantern_model).addModel();
      //------------------------------------------------------------lime-----------------------------------------------------------------------
          //regular
           LanternBlock lime_lantern = foodblockcompatregistry.LIME_LANTERN.get();
@@ -1909,6 +2022,22 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .modelForState().modelFile(lemon_chain_model).rotationX(90).rotationY(90).addModel()
           .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
           .modelForState().modelFile(lemon_chain_model).rotationX(90).addModel(); 
+     //------------------------------------------------------------buddhashand-----------------------------------------------------------------------
+         ChainBlock buddhashand_chain = foodblockcompatregistry.BUDDHASHAND_CHAIN.get();
+         ResourceLocation buddhashand_chain_texture = modLoc("block/buddhashand_chain");
+         BlockModelBuilder buddhashand_chain_model = models()
+          .withExistingParent("buddhashand_chain", mcLoc("block/chain"))
+          .renderType("cutout_mipped_all")
+          .texture("all", buddhashand_chain_texture)
+          .texture("particle", buddhashand_chain_texture);
+
+          getVariantBuilder(buddhashand_chain)
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Y)
+          .modelForState().modelFile(buddhashand_chain_model).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.X)
+          .modelForState().modelFile(buddhashand_chain_model).rotationX(90).rotationY(90).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
+          .modelForState().modelFile(buddhashand_chain_model).rotationX(90).addModel(); 
      //------------------------------------------------------------lime-----------------------------------------------------------------------
          ChainBlock lime_chain = foodblockcompatregistry.LIME_CHAIN.get();
          ResourceLocation lime_chain_texture = modLoc("block/lime_chain");
@@ -2181,6 +2310,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/lemon_ladder");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------buddhashand-----------------------------------------------------------------------
+          LadderBlock buddhashandladder = foodblockcompatregistry.BUDDHASHAND_LADDER.get();
+
+          getVariantBuilder(buddhashandladder)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/buddhashand_ladder");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -2499,6 +2649,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/lemon_table");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------buddhashand-----------------------------------------------------------------------
+          HorizontalDirectionalBlock buddhashandtable = foodblockcompatregistry.BUDDHASHAND_TABLE.get();
+
+          getVariantBuilder(buddhashandtable)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/buddhashand_table");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -3485,6 +3656,122 @@ public class GM1BlockStateProvider extends BlockStateProvider
                     .renderType("cutout_mipped_all")
                     .texture("torch", lemon_soul_wall_torch_texture)
                     .texture("particle", lemon_soul_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+     //------------------------------------------------------------buddhashand-----------------------------------------------------------------------
+       //regular
+        TorchBlock buddhashand_torch = foodblockcompatregistry.BUDDHASHAND_TORCH.get();
+        ResourceLocation buddhashand_torch_texture = modLoc("block/buddhashand_torch");
+        BlockModelBuilder buddhashand_torch_model = models()
+        .withExistingParent("buddhashand_torch", mcLoc("block/torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", buddhashand_torch_texture)
+        .texture("particle", buddhashand_torch_texture);
+
+        simpleBlock(buddhashand_torch, buddhashand_torch_model);
+
+        TorchBlock buddhashand_wall_torch = foodblockcompatregistry.BUDDHASHAND_WALL_TORCH.get();
+        BlockModelBuilder buddhashand_wall_torch_model = models()
+        .withExistingParent("buddhashand_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", buddhashand_torch_texture)
+        .texture("particle", buddhashand_torch_texture);
+        getVariantBuilder(buddhashand_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("buddhashand_wall_torch", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", buddhashand_torch_texture)
+                    .texture("particle", buddhashand_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //redstone
+        RedstoneTorchBlock buddhashand_redstone_torch = foodblockcompatregistry.BUDDHASHAND_REDSTONE_TORCH.get();
+        ResourceLocation buddhashand_redstone_torch_texture = modLoc("block/buddhashand_redstone_torch");
+        BlockModelBuilder buddhashand_redstone_torch_model = models()
+        .withExistingParent("buddhashand_redstone_torch", mcLoc("block/redstone_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", buddhashand_redstone_torch_texture)
+        .texture("particle", buddhashand_redstone_torch_texture);
+        
+
+        simpleBlock(buddhashand_redstone_torch, buddhashand_redstone_torch_model);
+
+        ResourceLocation buddhashand_redstone_wall_torch_texture = modLoc("block/buddhashand_redstone_torch");
+
+        RedstoneTorchBlock buddhashand_redstone_wall_torch = foodblockcompatregistry.BUDDHASHAND_REDSTONE_WALL_TORCH.get();
+        BlockModelBuilder buddhashand_redstone_wall_torch_model = models()
+        .withExistingParent("buddhashand_redstone_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", buddhashand_redstone_wall_torch_texture)
+        .texture("particle", buddhashand_redstone_wall_torch_texture);
+        getVariantBuilder(buddhashand_redstone_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("buddhashand_redstone_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", buddhashand_redstone_wall_torch_texture)
+                    .texture("particle", buddhashand_redstone_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //soul
+        TorchBlock buddhashand_soul_torch = foodblockcompatregistry.BUDDHASHAND_SOUL_TORCH.get();
+        ResourceLocation buddhashand_soul_torch_texture = modLoc("block/buddhashand_soul_torch");
+        BlockModelBuilder buddhashand_soul_torch_model = models()
+        .withExistingParent("buddhashand_soul_torch", mcLoc("block/soul_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", buddhashand_soul_torch_texture)
+        .texture("particle", buddhashand_soul_torch_texture);
+        
+
+        simpleBlock(buddhashand_soul_torch, buddhashand_soul_torch_model);
+
+        ResourceLocation buddhashand_soul_wall_torch_texture = modLoc("block/buddhashand_soul_torch");
+        TorchBlock buddhashand_soul_wall_torch = foodblockcompatregistry.BUDDHASHAND_SOUL_WALL_TORCH.get();
+        BlockModelBuilder buddhashand_soul_wall_torch_model = models()
+        .withExistingParent("buddhashand_soul_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", buddhashand_soul_wall_torch_texture)
+        .texture("particle", buddhashand_soul_wall_torch_texture);
+        getVariantBuilder(buddhashand_soul_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("buddhashand_soul_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", buddhashand_soul_wall_torch_texture)
+                    .texture("particle", buddhashand_soul_wall_torch_texture))
                 .rotationY(rotation)
                 .build();
             });
@@ -4727,6 +5014,47 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationY(rotation)
                       .build();
               });
+     //------------------------------------------------------------buddhashand-----------------------------------------------------------------------
+          FurnaceBlock buddhashand_furnace = foodblockcompatregistry.BUDDHASHAND_FURNACE.get();
+          ResourceLocation buddhashand_furnace_unlit_texture = modLoc("block/buddhashand_furnace");
+          ResourceLocation buddhashand_furnace_lit_texture = modLoc("block/buddhashand_furnace_lit");
+          ResourceLocation buddhashand_furnace_side = modLoc("block/buddhashand_block");
+
+          BlockModelBuilder buddhashand_furnace_model_unlit = models()
+              .withExistingParent("buddhashand_furnace_model_unlit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", buddhashand_furnace_side)
+              .texture("top", buddhashand_furnace_side)
+              .texture("front", buddhashand_furnace_unlit_texture)
+              .texture("particle", buddhashand_furnace_side);
+          
+          BlockModelBuilder buddhashand_furnace_model_lit = models()
+              .withExistingParent("buddhashand_furnace_model_lit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", buddhashand_furnace_side)
+              .texture("top", buddhashand_furnace_side)
+              .texture("front", buddhashand_furnace_lit_texture)
+              .texture("particle", buddhashand_furnace_side);
+          
+          getVariantBuilder(buddhashand_furnace)
+              .forAllStates(state -> {
+                  Boolean lit = state.getValue(BlockStateProperties.LIT);
+                  Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                  int rotation = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+
+                  ResourceLocation modelLocation = lit ? modLoc("block/buddhashand_furnace_model_lit") : modLoc("block/buddhashand_furnace_model_unlit");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotation)
+                      .build();
+              });
      //------------------------------------------------------------lime-----------------------------------------------------------------------
           FurnaceBlock lime_furnace = foodblockcompatregistry.LIME_FURNACE.get();
           ResourceLocation lime_furnace_unlit_texture = modLoc("block/lime_furnace");
@@ -5153,6 +5481,18 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .forAllStates(state -> {
 
               ResourceLocation modelLocation = modLoc("block/lemon_stone_path");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .build();
+          });
+     //------------------------------------------------------------buddhashand-----------------------------------------------------------------------
+          foodpathtypeminislab buddhashand_stone_path = foodblockcompatregistry.BUDDHASHAND_STONE_PATH.get();
+
+          getVariantBuilder(buddhashand_stone_path)
+          .forAllStates(state -> {
+
+              ResourceLocation modelLocation = modLoc("block/buddhashand_stone_path");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -5586,6 +5926,54 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   };
 
                   ResourceLocation modelLocation = open ? modLoc("block/lemon_barrel_model_open") : modLoc("block/lemon_barrel_model_closed");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotationY)
+                      .rotationX(rotationX)
+                      .build();
+              });
+     //------------------------------------------------------------buddhashand-----------------------------------------------------------------------
+          foodBarrel buddhashand_barrel = foodblockcompatregistry.BUDDHASHAND_BARREL.get();
+          ResourceLocation buddhashand_barrel_closed_texture = modLoc("block/buddhashand_barrel_top_closed");
+          ResourceLocation buddhashand_barrel_open_texture = modLoc("block/buddhashand_barrel_top_open");
+          ResourceLocation buddhashand_barrel_side = modLoc("block/buddhashand_barrel_side");
+          ResourceLocation buddhashand_barrel_bottom = modLoc("block/buddhashand_barrel_bottom");
+          
+          BlockModelBuilder buddhashand_barrel_model_closed = models()
+              .withExistingParent("buddhashand_barrel_model_closed", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", buddhashand_barrel_side)
+              .texture("bottom", buddhashand_barrel_bottom)
+              .texture("top", buddhashand_barrel_closed_texture)
+              .texture("particle", buddhashand_barrel_side);
+          
+          BlockModelBuilder buddhashand_barrel_model_open = models()
+              .withExistingParent("buddhashand_barrel_model_open", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", buddhashand_barrel_side)
+              .texture("bottom", buddhashand_barrel_bottom)
+              .texture("top", buddhashand_barrel_open_texture)
+              .texture("particle", buddhashand_barrel_side);
+          
+          getVariantBuilder(buddhashand_barrel)
+              .forAllStates(state -> {
+                  Boolean open = state.getValue(BlockStateProperties.OPEN);
+                  Direction facing = state.getValue(BlockStateProperties.FACING);
+                  int rotationY = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+                  int rotationX = switch (facing) {
+                      case UP -> 0;
+                      case DOWN -> 180;
+                      default -> 90;
+                  };
+
+                  ResourceLocation modelLocation = open ? modLoc("block/buddhashand_barrel_model_open") : modLoc("block/buddhashand_barrel_model_closed");
               
                   return ConfiguredModel.builder()
                       .modelFile(models().getExistingFile(modelLocation))
@@ -6127,6 +6515,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .rotationY(rotationY)
                   .build();
           });
+     //------------------------------------------------------------buddhashand-----------------------------------------------------------------------
+          foodChairBlock buddhashandChair = foodblockcompatregistry.BUDDHASHAND_CHAIR.get();
+
+          getVariantBuilder(buddhashandChair)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/buddhashand_chair");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
      //------------------------------------------------------------lime-----------------------------------------------------------------------
           foodChairBlock limeChair = foodblockcompatregistry.LIME_CHAIR.get();
 
@@ -6439,6 +6848,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/lemon_bed");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------buddhashand-----------------------------------------------------------------------
+          foodBed buddhashandBed = foodblockcompatregistry.BUDDHASHAND_BED.get();
+
+          getVariantBuilder(buddhashandBed)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/buddhashand_bed");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -6925,6 +7355,51 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = open ? modLoc("block/medium_lemon_cabinet_open") : modLoc("block/medium_lemon_cabinet");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------buddhashand-----------------------------------------------------------------------
+         //small
+          smallFoodCabinet buddhashandCabinet = foodblockcompatregistry.SMALL_BUDDHASHAND_CABINET.get();
+
+          getVariantBuilder(buddhashandCabinet)
+          .forAllStates(state -> {
+              Boolean open = state.getValue(BlockStateProperties.OPEN);
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = open ? modLoc("block/buddhashand_cabinet_open") : modLoc("block/buddhashand_cabinet");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+         //medium
+          mediumFoodCabinet buddhashandMediumCabinet = foodblockcompatregistry.MEDIUM_BUDDHASHAND_CABINET.get();
+
+          getVariantBuilder(buddhashandMediumCabinet)
+          .forAllStates(state -> {
+              Boolean open = state.getValue(BlockStateProperties.OPEN);
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = open ? modLoc("block/medium_buddhashand_cabinet_open") : modLoc("block/medium_buddhashand_cabinet");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))

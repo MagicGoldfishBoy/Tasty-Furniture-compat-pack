@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_buddhashand_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "goldfishmod03tastyfurniturecompataddon:buddhashand_block_item"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:buddhashand_tiles_block_from_buddhashand_block_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_buddhashand_block"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:buddhashand_tiles_block_from_buddhashand_block_stonecutting"
+    ]
+  }
+}

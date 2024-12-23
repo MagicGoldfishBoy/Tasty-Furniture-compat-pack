@@ -565,6 +565,84 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("small_lemon_cabinet_item", modLoc("block/lemon_cabinet"));
        withExistingParent("medium_lemon_cabinet_item", modLoc("block/medium_lemon_cabinet"));
     //==============================================================================================================================================
+    //|                                                              Buddhashand                                                                        |
+    //==============================================================================================================================================
+       //mush
+        withExistingParent("buddhashand_mush", mcLoc("item/generated")).texture("layer0", "item/buddhashand_mush");
+       //ingot
+        withExistingParent("buddhashand_ingot", mcLoc("item/generated")).texture("layer0", "item/buddhashand_ingot");
+       //nugget
+        withExistingParent("buddhashand_nugget", mcLoc("item/generated")).texture("layer0", "item/buddhashand_nugget");
+       //block
+        withExistingParent("buddhashand_block_item", modLoc("block/buddhashand_block"));
+       //bricks block
+        withExistingParent("buddhashand_bricks_block_item", modLoc("block/buddhashand_bricks_block"));
+       //chiseled block
+        withExistingParent("buddhashand_chiseled_block_item", modLoc("block/buddhashand_chiseled_block"));
+       //tiles block
+        withExistingParent("buddhashand_tiles_block_item", modLoc("block/buddhashand_tiles_block"));
+       //slab
+        slab("buddhashand_slab_item", modLoc("block/buddhashand_block"), modLoc("block/buddhashand_block"), modLoc("block/buddhashand_block"));
+       //bricks slab
+        slab("buddhashand_bricks_slab_item", modLoc("block/buddhashand_bricks_block"), modLoc("block/buddhashand_bricks_block"), modLoc("block/buddhashand_bricks_block"));
+       //stairs
+        stairs("buddhashand_stairs_item", modLoc("block/buddhashand_block"), modLoc("block/buddhashand_block"), modLoc("block/buddhashand_block"));
+       //bricks stairs
+        stairs("buddhashand_bricks_stairs_item", modLoc("block/buddhashand_bricks_block"), modLoc("block/buddhashand_bricks_block"), modLoc("block/buddhashand_bricks_block"));
+       //bars
+        withExistingParent("buddhashand_bars_item", mcLoc("item/generated")).texture("layer0", "block/buddhashand_bars");
+       //doors
+        withExistingParent("buddhashand_door_item", mcLoc("item/generated")).texture("layer0", "item/buddhashand_door_item");
+       //button
+        buttonInventory("buddhashand_button_item", modLoc("block/buddhashand_block"));
+       //fence
+        fenceInventory("buddhashand_fence_item", modLoc("block/buddhashand_block"));
+       //gate
+        withExistingParent("buddhashand_gate_item", modLoc("block/buddhashand_gate"));
+       //pressure plate
+        pressurePlate("buddhashand_pressure_plate_item", modLoc("block/buddhashand_block"));
+       //sign
+       withExistingParent("buddhashand_sign_item", mcLoc("item/generated")).texture("layer0", "item/buddhashand_sign");
+       //trapdoor
+       withExistingParent("buddhashand_trapdoor_item", modLoc("block/buddhashand_trapdoor_trapdoor_bottom"));
+       //lamp
+       withExistingParent("buddhashand_lamp_item", modLoc("block/buddhashand_lamp"));
+       //carpet
+       ResourceLocation buddhashand_carpet_texture = modLoc("block/buddhashand_carpet");
+       carpet("buddhashand_carpet_item", buddhashand_carpet_texture);
+       //lantern
+        //regular
+        withExistingParent("buddhashand_lantern_item", modLoc("block/buddhashand_lantern"));
+        //soul
+          withExistingParent("buddhashand_soul_lantern_item", modLoc("block/buddhashand_soul_lantern"));
+       //chain
+       withExistingParent("buddhashand_chain_item", modLoc("block/buddhashand_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
+       //ladder
+       withExistingParent("buddhashand_ladder_item", modLoc("block/buddhashand_ladder"));
+       //table
+       withExistingParent("buddhashand_table_item", modLoc("block/buddhashand_table"));
+       //torches
+        //regular
+        withExistingParent("buddhashand_torch_item", modLoc("block/buddhashand_torch"));
+        //redstone
+          withExistingParent("buddhashand_redstone_torch_item", modLoc("block/buddhashand_redstone_torch"));
+        //soul
+          withExistingParent("buddhashand_soul_torch_item", modLoc("block/buddhashand_soul_torch"));
+       //furnaces
+       withExistingParent("buddhashand_furnace_item", modLoc("block/buddhashand_furnace_model_unlit"));
+       //paths
+       withExistingParent("buddhashand_stone_path_item", modLoc("block/buddhashand_stone_path"));
+       //barrel
+       withExistingParent("buddhashand_barrel_item", modLoc("block/buddhashand_barrel_model_closed"));
+       //chair
+       withExistingParent("buddhashand_chair_item", modLoc("block/buddhashand_chair"));
+       //bed
+       withExistingParent("buddhashand_bed_item", modLoc("block/buddhashand_bed"));
+       //cabinet
+       withExistingParent("small_buddhashand_cabinet_item", modLoc("block/buddhashand_cabinet"));
+       withExistingParent("medium_buddhashand_cabinet_item", modLoc("block/medium_buddhashand_cabinet"));
+    //==============================================================================================================================================
     //|                                                              Lime                                                                        |
     //==============================================================================================================================================
        //mush
