@@ -9,6 +9,8 @@
         "required": false},
         {"id":"croptopia:cherry",
         "required": false},
+        {"id":"berries_and_cherries:cherries",
+        "required": false},
         {"id":"c:crops/cherry",
         "required": false}
     ]

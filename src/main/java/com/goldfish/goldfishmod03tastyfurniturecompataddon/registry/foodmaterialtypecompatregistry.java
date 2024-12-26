@@ -150,6 +150,11 @@ public class foodmaterialtypecompatregistry {
         "keylime_wood_mat", 
         PLANT) 
     );
+    public static final WoodType FINGERLIMEWOODMAT = WoodType.register(
+     new WoodType(
+        "fingerlime_wood_mat", 
+        PLANT) 
+    );
     public static final WoodType GRAPEFRUITWOODMAT = WoodType.register(
      new WoodType(
         "grapefruit_wood_mat", 

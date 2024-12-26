@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "goldfishmod03tastyfurniturecompataddon:fingerlime_nugget"
+    }
+  },
+  "pattern": [
+    "   ",
+    "AAA",
+    "AAA"
+  ],
+  "result": {
+    "count": 8,
+    "id": "goldfishmod03tastyfurniturecompataddon:fingerlime_bars_item"
+  }
+}

@@ -80,6 +80,10 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         Registries.ITEM,
         ResourceLocation.fromNamespaceAndPath("goldfishmod03tastyfurniturecompataddon", "keylimes")
         );
+       public static final TagKey<Item> FINGERLIME_TAG = TagKey.create(
+        Registries.ITEM,
+        ResourceLocation.fromNamespaceAndPath("goldfishmod03tastyfurniturecompataddon", "fingerlimes")
+        );
        public static final TagKey<Item> GRAPEFRUIT_TAG = TagKey.create(
         Registries.ITEM,
         ResourceLocation.fromNamespaceAndPath("goldfishmod03tastyfurniturecompataddon", "grapefruits")
@@ -511,6 +515,43 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', KEYLIME_TAG)
             .unlockedBy("has_mush_hammer", has(mushregistry.most_advanced_mushhammer.get()))
             .save(output, "keylime_mush_from_most_advanced_mushhammer");
+  //----------------------------------------------------------------------------------------Fingerlime-----------------------------------------------------------------------------------------------
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.FINGERLIME_MUSH.get(), 1)
+            .pattern("ABB")
+            .pattern("BB ")
+            .pattern("   ")
+            .define('A', mushregistry.mushhammer.get())
+            .define('B', FINGERLIME_TAG)
+            .unlockedBy("has_mush_hammer", has(mushregistry.mushhammer.get()))
+            .save(output);
+          //advanced
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.FINGERLIME_MUSH.get(), 2)
+            .pattern("ABB")
+            .pattern("BB ")
+            .pattern("   ")
+            .define('A', mushregistry.advanced_mushhammer.get())
+            .define('B', FINGERLIME_TAG)
+            .unlockedBy("has_mush_hammer", has(mushregistry.advanced_mushhammer.get()))
+            .save(output, "fingerlime_mush_from_advanced_mushhammer");
+          //more advanced
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.FINGERLIME_MUSH.get(), 4)
+            .pattern("ABB")
+            .pattern("BB ")
+            .pattern("   ")
+            .define('A', mushregistry.more_advanced_mushhammer.get())
+            .define('B', FINGERLIME_TAG)
+            .unlockedBy("has_mush_hammer", has(mushregistry.more_advanced_mushhammer.get()))
+            .save(output, "fingerlime_mush_from_more_advanced_mushhammer");
+          //most advanced
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.FINGERLIME_MUSH.get(), 8)
+            .pattern("ABB")
+            .pattern("BB ")
+            .pattern("   ")
+            .define('A', mushregistry.most_advanced_mushhammer.get())
+            .define('B', FINGERLIME_TAG)
+            .unlockedBy("has_mush_hammer", has(mushregistry.most_advanced_mushhammer.get()))
+            .save(output, "fingerlime_mush_from_most_advanced_mushhammer");
   //----------------------------------------------------------------------------------------Grapefruit-----------------------------------------------------------------------------------------------
           //regular
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.GRAPEFRUIT_MUSH.get(), 1)
@@ -1055,6 +1096,38 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .requires(foodblockcompatitemregistry.KEYLIME_BLOCK_ITEM.get())
             .unlockedBy("has_keylime_block", has(foodblockcompatitemregistry.KEYLIME_BLOCK_ITEM.get()))
             .save(output, "keylime_ingot_from_unpacking");
+  //----------------------------------------------------------------------------------------Fingerlime-----------------------------------------------------------------------------------------------
+          //crafting
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotcompatregistry.FINGERLIME_INGOT.get(), 1)
+            .pattern("AAA")
+            .pattern("AAA")
+            .pattern("AAA")
+            .define('A', nuggetcompatregistry.FINGERLIME_NUGGET.get())
+            .unlockedBy("has_fingerlime_nugget", has(nuggetcompatregistry.FINGERLIME_NUGGET.get()))
+            .save(output, "fingerlime_ingot_from_crafting");
+          //smelting
+            SimpleCookingRecipeBuilder.smelting(Ingredient.of(mushcompatregistry.FINGERLIME_MUSH.get()),
+            RecipeCategory.MISC,
+            ingotcompatregistry.FINGERLIME_INGOT.get(),
+            1.0f,
+            200
+            )
+            .unlockedBy("has_fingerlime_mush", has(mushcompatregistry.FINGERLIME_MUSH.get()))
+            .save(output, "fingerlime_ingot_from_smelting");
+          //blasting
+            SimpleCookingRecipeBuilder.blasting(Ingredient.of(mushcompatregistry.FINGERLIME_MUSH.get()),
+            RecipeCategory.MISC,
+            ingotcompatregistry.FINGERLIME_INGOT.get(),
+            1.0f,
+            100
+            )
+            .unlockedBy("has_fingerlime_mush", has(mushcompatregistry.FINGERLIME_MUSH.get()))
+            .save(output, "fingerlime_ingot_from_blasting");
+          //unpacking
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotcompatregistry.FINGERLIME_INGOT.get(), 9)
+            .requires(foodblockcompatitemregistry.FINGERLIME_BLOCK_ITEM.get())
+            .unlockedBy("has_fingerlime_block", has(foodblockcompatitemregistry.FINGERLIME_BLOCK_ITEM.get()))
+            .save(output, "fingerlime_ingot_from_unpacking");
   //----------------------------------------------------------------------------------------Grapefruit-----------------------------------------------------------------------------------------------
           //crafting
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotcompatregistry.GRAPEFRUIT_INGOT.get(), 1)
@@ -1298,6 +1371,11 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, nuggetcompatregistry.KEYLIME_NUGGET.get(), 9)
         .requires(ingotcompatregistry.KEYLIME_INGOT.get())
         .unlockedBy("has_keylime_ingot", has(ingotcompatregistry.KEYLIME_INGOT.get()))
+        .save(output);
+  //----------------------------------------------------------------------------------------Fingerlime-----------------------------------------------------------------------------------------------
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, nuggetcompatregistry.FINGERLIME_NUGGET.get(), 9)
+        .requires(ingotcompatregistry.FINGERLIME_INGOT.get())
+        .unlockedBy("has_fingerlime_ingot", has(ingotcompatregistry.FINGERLIME_INGOT.get()))
         .save(output);
   //----------------------------------------------------------------------------------------Grapefruit-----------------------------------------------------------------------------------------------
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, nuggetcompatregistry.GRAPEFRUIT_NUGGET.get(), 9)
@@ -1831,6 +1909,56 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.KEYLIME_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockcompatitemregistry.KEYLIME_TILES_BLOCK_ITEM.get())
           .unlockedBy("has_keylime_block", has(foodblockcompatitemregistry.KEYLIME_BLOCK_ITEM.get()))
           .save(output, "keylime_tiles_block_from_keylime_block_stonecutting");
+  //--------------------------------------------------------------------------------------Fingerlime---------------------------------------------------------------------------------------------
+        //plain
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.FINGERLIME_BLOCK_ITEM.get(), 1)
+          .pattern("AAA")
+          .pattern("AAA")
+          .pattern("AAA")
+          .define('A', ingotcompatregistry.FINGERLIME_INGOT.get())
+          .unlockedBy("has_fingerlime_ingot", has(ingotcompatregistry.FINGERLIME_INGOT.get()))
+          .save(output); 
+        //bricks
+         //crafting
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.FINGERLIME_BRICKS_BLOCK_ITEM.get(), 4)
+          .pattern("AA ")
+          .pattern("AA ")
+          .pattern("   ")
+          .define('A', foodblockcompatitemregistry.FINGERLIME_BLOCK_ITEM.get())
+          .unlockedBy("has_fingerlime_block", has(foodblockcompatitemregistry.FINGERLIME_BLOCK_ITEM.get()))
+          .save(output); 
+         //stonecutting     
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.FINGERLIME_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockcompatitemregistry.FINGERLIME_BRICKS_BLOCK_ITEM.get())
+          .unlockedBy("has_fingerlime_block", has(foodblockcompatitemregistry.FINGERLIME_BLOCK_ITEM.get()))
+          .save(output, "fingerlime_bricks_block_from_fingerlime_block_stonecutting");
+
+        //chiseled
+         //crafting
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.FINGERLIME_CHISELED_BLOCK_ITEM.get())
+          .pattern("   ")
+          .pattern(" A ")
+          .pattern(" A ")
+          .define('A', foodblockcompatitemregistry.FINGERLIME_SLAB_ITEM.get())
+          .unlockedBy("has_fingerlime_slab", has(foodblockcompatitemregistry.FINGERLIME_SLAB_ITEM.get()))
+          .save(output);
+         //stonecutting     
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.FINGERLIME_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockcompatitemregistry.FINGERLIME_CHISELED_BLOCK_ITEM.get())
+          .unlockedBy("has_fingerlime_block", has(foodblockcompatitemregistry.FINGERLIME_BLOCK_ITEM.get()))
+          .save(output, "fingerlime_chiseled_block_from_fingerlime_block_stonecutting");
+
+        //tiles
+         //crafting
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.FINGERLIME_TILES_BLOCK_ITEM.get(),2)
+          .pattern("   ")
+          .pattern("AA ")
+          .pattern("AA ")
+          .define('A', foodblockcompatitemregistry.FINGERLIME_SLAB_ITEM.get())
+          .unlockedBy("has_fingerlime_slab", has(foodblockcompatitemregistry.FINGERLIME_SLAB_ITEM.get()))
+          .save(output);
+         //stonecutting     
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.FINGERLIME_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockcompatitemregistry.FINGERLIME_TILES_BLOCK_ITEM.get())
+          .unlockedBy("has_fingerlime_block", has(foodblockcompatitemregistry.FINGERLIME_BLOCK_ITEM.get()))
+          .save(output, "fingerlime_tiles_block_from_fingerlime_block_stonecutting");
   //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
         //plain
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.GRAPEFRUIT_BLOCK_ITEM.get(), 1)
@@ -2273,6 +2401,20 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           foodblockcompatitemregistry.KEYLIME_BRICKS_SLAB_ITEM.get(), 2)
           .unlockedBy("has_keylime_bricks_block", has(foodblockcompatitemregistry.KEYLIME_BRICKS_BLOCK_ITEM.get()))
           .save(output, "keylime_bricks_slab_from_keylime_bricks_block_stonecutting");
+  //----------------------------------------------------------------------------------------Fingerlime-----------------------------------------------------------------------------------------------
+        //plain
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.FINGERLIME_SLAB_ITEM.get())
+          .pattern("   ")
+          .pattern("   ")
+          .pattern("AAA")
+          .define('A', ingotcompatregistry.FINGERLIME_INGOT.get())
+          .unlockedBy("has_fingerlime_ingot", has(ingotcompatregistry.FINGERLIME_INGOT.get()))
+          .save(output);
+        //bricks
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.FINGERLIME_BRICKS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, 
+          foodblockcompatitemregistry.FINGERLIME_BRICKS_SLAB_ITEM.get(), 2)
+          .unlockedBy("has_fingerlime_bricks_block", has(foodblockcompatitemregistry.FINGERLIME_BRICKS_BLOCK_ITEM.get()))
+          .save(output, "fingerlime_bricks_slab_from_fingerlime_bricks_block_stonecutting");
   //----------------------------------------------------------------------------------------Grapefruit-----------------------------------------------------------------------------------------------
         //plain
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.GRAPEFRUIT_SLAB_ITEM.get())
@@ -2499,6 +2641,20 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           foodblockcompatitemregistry.KEYLIME_BRICKS_STAIRS_ITEM.get(), 1)
           .unlockedBy("has_keylime_bricks_block", has(foodblockcompatitemregistry.KEYLIME_BRICKS_BLOCK_ITEM.get()))
           .save(output, "keylime_bricks_stairs_from_keylime_bricks_block_stonecutting");
+  //--------------------------------------------------------------------------------------Fingerlime---------------------------------------------------------------------------------------------
+        //plain
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.FINGERLIME_STAIRS_ITEM.get())
+          .pattern("A  ")
+          .pattern("AA ")
+          .pattern("AAA")
+          .define('A', ingotcompatregistry.FINGERLIME_INGOT.get())
+          .unlockedBy("has_fingerlime_ingot", has(ingotcompatregistry.FINGERLIME_INGOT.get()))
+          .save(output);
+        //bricks
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.FINGERLIME_BRICKS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, 
+          foodblockcompatitemregistry.FINGERLIME_BRICKS_STAIRS_ITEM.get(), 1)
+          .unlockedBy("has_fingerlime_bricks_block", has(foodblockcompatitemregistry.FINGERLIME_BRICKS_BLOCK_ITEM.get()))
+          .save(output, "fingerlime_bricks_stairs_from_fingerlime_bricks_block_stonecutting");
   //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
         //plain
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.GRAPEFRUIT_STAIRS_ITEM.get())
@@ -2665,6 +2821,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', nuggetcompatregistry.KEYLIME_NUGGET.get())
          .unlockedBy("has_keylime_nugget", has(nuggetcompatregistry.KEYLIME_NUGGET.get()))
          .save(output);
+  //--------------------------------------------------------------------------------------Fingerlime---------------------------------------------------------------------------------------------
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.FINGERLIME_BARS_ITEM.get(), 8)
+         .pattern("   ")
+         .pattern("AAA")
+         .pattern("AAA")
+         .define('A', nuggetcompatregistry.FINGERLIME_NUGGET.get())
+         .unlockedBy("has_fingerlime_nugget", has(nuggetcompatregistry.FINGERLIME_NUGGET.get()))
+         .save(output);
   //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.GRAPEFRUIT_BARS_ITEM.get(), 8)
          .pattern("   ")
@@ -2795,6 +2959,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', ingotcompatregistry.KEYLIME_INGOT.get())
          .unlockedBy("has_keylime_nugget", has(ingotcompatregistry.KEYLIME_INGOT.get()))
          .save(output);
+  //--------------------------------------------------------------------------------------Fingerlime---------------------------------------------------------------------------------------------
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.FINGERLIME_DOOR_ITEM.get(), 3)
+         .pattern("AA ")
+         .pattern("AA ")
+         .pattern("AA ")
+         .define('A', ingotcompatregistry.FINGERLIME_INGOT.get())
+         .unlockedBy("has_fingerlime_nugget", has(ingotcompatregistry.FINGERLIME_INGOT.get()))
+         .save(output);
   //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.GRAPEFRUIT_DOOR_ITEM.get(), 3)
          .pattern("AA ")
@@ -2894,6 +3066,11 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.KEYLIME_BUTTON_ITEM.get(), 1)
        .requires(nuggetcompatregistry.KEYLIME_NUGGET.get())
        .unlockedBy("has_keylime_nugget", has(nuggetcompatregistry.KEYLIME_NUGGET.get()))
+       .save(output);
+  //--------------------------------------------------------------------------------------Fingerlime---------------------------------------------------------------------------------------------
+       ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.FINGERLIME_BUTTON_ITEM.get(), 1)
+       .requires(nuggetcompatregistry.FINGERLIME_NUGGET.get())
+       .unlockedBy("has_fingerlime_nugget", has(nuggetcompatregistry.FINGERLIME_NUGGET.get()))
        .save(output);
   //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.GRAPEFRUIT_BUTTON_ITEM.get(), 1)
@@ -3117,6 +3294,25 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .define('B', Items.STICK)
           .unlockedBy("has_keylime_ingot", has(ingotcompatregistry.KEYLIME_INGOT.get()))
           .save(output);        
+  //--------------------------------------------------------------------------------------Fingerlime---------------------------------------------------------------------------------------------
+        //fence
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.FINGERLIME_FENCE_ITEM.get(), 3)
+          .pattern("ABA")
+          .pattern("ABA")
+          .pattern("   ")
+          .define('A', ingotcompatregistry.FINGERLIME_INGOT.get())
+          .define('B', Items.STICK)
+          .unlockedBy("has_fingerlime_ingot", has(ingotcompatregistry.FINGERLIME_INGOT.get()))
+          .save(output);        
+        //gate
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.FINGERLIME_GATE_ITEM.get(), 1)
+          .pattern("BAB")
+          .pattern("BAB")
+          .pattern("   ")
+          .define('A', ingotcompatregistry.FINGERLIME_INGOT.get())
+          .define('B', Items.STICK)
+          .unlockedBy("has_fingerlime_ingot", has(ingotcompatregistry.FINGERLIME_INGOT.get()))
+          .save(output);        
   //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
         //fence
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.GRAPEFRUIT_FENCE_ITEM.get(), 3)
@@ -3313,6 +3509,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', foodblockcompatitemregistry.KEYLIME_BLOCK_ITEM.get())
         .unlockedBy("has_keylime_block",  has(foodblockcompatitemregistry.KEYLIME_BLOCK_ITEM.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Fingerlime---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.FINGERLIME_PRESSURE_PLATE_ITEM.get())
+        .pattern("   ")
+        .pattern("AA ")
+        .pattern("   ")
+        .define('A', foodblockcompatitemregistry.FINGERLIME_BLOCK_ITEM.get())
+        .unlockedBy("has_fingerlime_block",  has(foodblockcompatitemregistry.FINGERLIME_BLOCK_ITEM.get()))
+        .save(output);
   //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.GRAPEFRUIT_PRESSURE_PLATE_ITEM.get())
         .pattern("   ")
@@ -3453,6 +3657,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('B', Items.STICK)
         .unlockedBy("has_keylime_ingot",  has(ingotcompatregistry.KEYLIME_INGOT.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Fingerlime---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.FINGERLIME_SIGN_ITEM.get(), 3)
+        .pattern("AAA")
+        .pattern("AAA")
+        .pattern(" B ")
+        .define('A', ingotcompatregistry.FINGERLIME_INGOT.get())
+        .define('B', Items.STICK)
+        .unlockedBy("has_fingerlime_ingot",  has(ingotcompatregistry.FINGERLIME_INGOT.get()))
+        .save(output);
   //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.GRAPEFRUIT_SIGN_ITEM.get(), 3)
         .pattern("AAA")
@@ -3588,6 +3801,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .pattern("AAA")
         .define('A', ingotcompatregistry.KEYLIME_INGOT.get())
         .unlockedBy("has_keylime_ingot", has(ingotcompatregistry.KEYLIME_INGOT.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Fingerlime---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.FINGERLIME_TRAPDOOR_ITEM.get())
+        .pattern("   ")
+        .pattern("AAA")
+        .pattern("AAA")
+        .define('A', ingotcompatregistry.FINGERLIME_INGOT.get())
+        .unlockedBy("has_fingerlime_ingot", has(ingotcompatregistry.FINGERLIME_INGOT.get()))
         .save(output);
   //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.GRAPEFRUIT_TRAPDOOR_ITEM.get())
@@ -3729,6 +3950,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('B', foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get())
         .unlockedBy("has_glow_berry_block", has(foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Fingerlime---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.FINGERLIME_LAMP_ITEM.get())
+        .pattern("AAA")
+        .pattern("ABA")
+        .pattern("AAA")
+        .define('A', ingotcompatregistry.FINGERLIME_INGOT.get())
+        .define('B', foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get())
+        .unlockedBy("has_glow_berry_block", has(foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get()))
+        .save(output);
   //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.GRAPEFRUIT_LAMP_ITEM.get())
         .pattern("AAA")
@@ -3864,6 +4094,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .pattern("AA ")
         .define('A', nuggetcompatregistry.KEYLIME_NUGGET.get())
         .unlockedBy("has_keylime_nugget", has(nuggetcompatregistry.KEYLIME_NUGGET.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Fingerlime---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.FINGERLIME_CARPET_ITEM.get(), 3)
+        .pattern("   ")
+        .pattern("AA ")
+        .pattern("AA ")
+        .define('A', nuggetcompatregistry.FINGERLIME_NUGGET.get())
+        .unlockedBy("has_fingerlime_nugget", has(nuggetcompatregistry.FINGERLIME_NUGGET.get()))
         .save(output);
   //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.GRAPEFRUIT_CARPET_ITEM.get(), 3)
@@ -4105,6 +4343,25 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', Items.SOUL_TORCH)
             .unlockedBy("has_keylime_nugget", has(nuggetcompatregistry.KEYLIME_NUGGET.get()))
             .save(output);
+  //--------------------------------------------------------------------------------------Fingerlime---------------------------------------------------------------------------------------------
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.FINGERLIME_LANTERN_ITEM.get())
+            .pattern("AAA")
+            .pattern("ABA")
+            .pattern("AAA")
+            .define('A', nuggetcompatregistry.FINGERLIME_NUGGET.get())
+            .define('B', Items.TORCH)
+            .unlockedBy("has_fingerlime_nugget", has(nuggetcompatregistry.FINGERLIME_NUGGET.get()))
+            .save(output);
+          //soul
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.FINGERLIME_SOUL_LANTERN_ITEM.get())
+            .pattern("AAA")
+            .pattern("ABA")
+            .pattern("AAA")
+            .define('A', nuggetcompatregistry.FINGERLIME_NUGGET.get())
+            .define('B', Items.SOUL_TORCH)
+            .unlockedBy("has_fingerlime_nugget", has(nuggetcompatregistry.FINGERLIME_NUGGET.get()))
+            .save(output);
   //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
           //regular
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.GRAPEFRUIT_LANTERN_ITEM.get())
@@ -4311,6 +4568,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('B', ingotcompatregistry.KEYLIME_INGOT.get())
         .unlockedBy("has_keylime_ingot", has(ingotcompatregistry.KEYLIME_INGOT.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Fingerlime---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.FINGERLIME_CHAIN_ITEM.get())
+        .pattern(" A ")
+        .pattern(" B ")
+        .pattern(" A ")
+        .define('A', nuggetcompatregistry.FINGERLIME_NUGGET.get())
+        .define('B', ingotcompatregistry.FINGERLIME_INGOT.get())
+        .unlockedBy("has_fingerlime_ingot", has(ingotcompatregistry.FINGERLIME_INGOT.get()))
+        .save(output);
   //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.GRAPEFRUIT_CHAIN_ITEM.get())
         .pattern(" A ")
@@ -4457,6 +4723,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('B', ingotcompatregistry.KEYLIME_INGOT.get())
         .unlockedBy("has_keylime_ingot", has(ingotcompatregistry.KEYLIME_INGOT.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Fingerlime---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.FINGERLIME_LADDER_ITEM.get(), 3)
+        .pattern("A A")
+        .pattern("ABA")
+        .pattern("A A")
+        .define('A', Items.STICK)
+        .define('B', ingotcompatregistry.FINGERLIME_INGOT.get())
+        .unlockedBy("has_fingerlime_ingot", has(ingotcompatregistry.FINGERLIME_INGOT.get()))
+        .save(output);
   //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.GRAPEFRUIT_LADDER_ITEM.get(), 3)
         .pattern("A A")
@@ -4602,6 +4877,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', foodblockcompatitemregistry.KEYLIME_SLAB_ITEM.get())
         .define('B', ingotcompatregistry.KEYLIME_INGOT.get())
         .unlockedBy("has_keylime_ingot", has(ingotcompatregistry.KEYLIME_INGOT.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Fingerlime---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.FINGERLIME_TABLE_ITEM.get())
+        .pattern("AAA")
+        .pattern("B B")
+        .pattern("B B")
+        .define('A', foodblockcompatitemregistry.FINGERLIME_SLAB_ITEM.get())
+        .define('B', ingotcompatregistry.FINGERLIME_INGOT.get())
+        .unlockedBy("has_fingerlime_ingot", has(ingotcompatregistry.FINGERLIME_INGOT.get()))
         .save(output);
   //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.GRAPEFRUIT_TABLE_ITEM.get())
@@ -4969,6 +5253,37 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('C', Items.SOUL_SAND)
             .unlockedBy("has_keylime_nugget", has(nuggetcompatregistry.KEYLIME_NUGGET.get()))
             .save(output);
+  //--------------------------------------------------------------------------------------Fingerlime---------------------------------------------------------------------------------------------
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.FINGERLIME_TORCH_ITEM.get(), 4)
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetcompatregistry.FINGERLIME_NUGGET.get())
+            .define('C', ItemTags.COALS)
+            .unlockedBy("has_fingerlime_nugget", has(nuggetcompatregistry.FINGERLIME_NUGGET.get()))
+            .save(output);
+          //redstone
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.FINGERLIME_REDSTONE_TORCH_ITEM.get())
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetcompatregistry.FINGERLIME_NUGGET.get())
+            .define('C', Items.REDSTONE)
+            .unlockedBy("has_fingerlime_nugget", has(nuggetcompatregistry.FINGERLIME_NUGGET.get()))
+            .save(output);
+          //soul
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.FINGERLIME_SOUL_TORCH_ITEM.get(), 4)
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetcompatregistry.FINGERLIME_NUGGET.get())
+            .define('C', Items.SOUL_SAND)
+            .unlockedBy("has_fingerlime_nugget", has(nuggetcompatregistry.FINGERLIME_NUGGET.get()))
+            .save(output);
   //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
           //regular
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.GRAPEFRUIT_TORCH_ITEM.get(), 4)
@@ -5247,6 +5562,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('B', Items.COBBLESTONE)
         .unlockedBy("has_keylime_ingot", has(ingotcompatregistry.KEYLIME_INGOT.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Fingerlime---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.FINGERLIME_FURNACE_ITEM.get())
+        .pattern("ABA")
+        .pattern("B B")
+        .pattern("ABA")
+        .define('A', ingotcompatregistry.FINGERLIME_INGOT.get())
+        .define('B', Items.COBBLESTONE)
+        .unlockedBy("has_fingerlime_ingot", has(ingotcompatregistry.FINGERLIME_INGOT.get()))
+        .save(output);
   //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.GRAPEFRUIT_FURNACE_ITEM.get())
         .pattern("ABA")
@@ -5356,6 +5680,12 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .requires(foodblockcompatitemregistry.KEYLIME_BLOCK_ITEM.get())
         .requires(Items.STONE)
         .unlockedBy("has_keylime_block", has(foodblockcompatitemregistry.KEYLIME_BLOCK_ITEM.get()))
+        .save(output);        
+  //--------------------------------------------------------------------------------------Fingerlime---------------------------------------------------------------------------------------------
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.FINGERLIME_STONE_PATH_ITEM.get(), 6)
+        .requires(foodblockcompatitemregistry.FINGERLIME_BLOCK_ITEM.get())
+        .requires(Items.STONE)
+        .unlockedBy("has_fingerlime_block", has(foodblockcompatitemregistry.FINGERLIME_BLOCK_ITEM.get()))
         .save(output);        
   //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.GRAPEFRUIT_STONE_PATH_ITEM.get(), 6)
@@ -5484,6 +5814,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', foodblockcompatitemregistry.KEYLIME_BLOCK_ITEM.get())
         .define('B', foodblockcompatitemregistry.KEYLIME_SLAB_ITEM.get())
         .unlockedBy("has_keylime_block", has(foodblockcompatitemregistry.KEYLIME_BLOCK_ITEM.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Fingerlime---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.FINGERLIME_BARREL_ITEM.get())
+        .pattern("ABA")
+        .pattern("A A")
+        .pattern("ABA")
+        .define('A', foodblockcompatitemregistry.FINGERLIME_BLOCK_ITEM.get())
+        .define('B', foodblockcompatitemregistry.FINGERLIME_SLAB_ITEM.get())
+        .unlockedBy("has_fingerlime_block", has(foodblockcompatitemregistry.FINGERLIME_BLOCK_ITEM.get()))
         .save(output);
   //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.GRAPEFRUIT_BARREL_ITEM.get())
@@ -5630,6 +5969,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', ingotcompatregistry.KEYLIME_INGOT.get())
         .define('B', foodblockcompatitemregistry.KEYLIME_SLAB_ITEM.get())
         .unlockedBy("has_keylime_slab", has(foodblockcompatitemregistry.KEYLIME_SLAB_ITEM.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Fingerlime---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.FINGERLIME_CHAIR_ITEM.get())
+        .pattern("AAA")
+        .pattern("BBB")
+        .pattern("A A")
+        .define('A', ingotcompatregistry.FINGERLIME_INGOT.get())
+        .define('B', foodblockcompatitemregistry.FINGERLIME_SLAB_ITEM.get())
+        .unlockedBy("has_fingerlime_slab", has(foodblockcompatitemregistry.FINGERLIME_SLAB_ITEM.get()))
         .save(output);
   //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.GRAPEFRUIT_CHAIR_ITEM.get())
@@ -5786,6 +6134,16 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
            .define('B', foodblockcompatitemregistry.KEYLIME_SLAB_ITEM.get())
            .define('C', foodblockcompatitemregistry.KEYLIME_CARPET_ITEM.get())
            .unlockedBy("has_keylime_ingot", has(ingotcompatregistry.KEYLIME_INGOT.get()))
+           .save(output);
+  //--------------------------------------------------------------------------------------Fingerlime---------------------------------------------------------------------------------------------
+           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.FINGERLIME_BED_ITEM.get())
+           .pattern("CCC")
+           .pattern("BBB")
+           .pattern("A A")
+           .define('A', ingotcompatregistry.FINGERLIME_INGOT.get())
+           .define('B', foodblockcompatitemregistry.FINGERLIME_SLAB_ITEM.get())
+           .define('C', foodblockcompatitemregistry.FINGERLIME_CARPET_ITEM.get())
+           .unlockedBy("has_fingerlime_ingot", has(ingotcompatregistry.FINGERLIME_INGOT.get()))
            .save(output);
   //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.GRAPEFRUIT_BED_ITEM.get())
@@ -6048,6 +6406,26 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('B', Items.IRON_INGOT)
          .define('C', foodblockcompatitemregistry.SMALL_KEYLIME_CABINET_ITEM.get())
          .unlockedBy("has_keylime_slab", has(foodblockcompatitemregistry.KEYLIME_SLAB_ITEM.get()))
+         .save(output);
+  //--------------------------------------------------------------------------------------Fingerlime---------------------------------------------------------------------------------------------
+       //small
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.SMALL_FINGERLIME_CABINET_ITEM.get())
+         .pattern("AAA")
+         .pattern("B B")
+         .pattern("AAA")
+         .define('A', foodblockcompatitemregistry.FINGERLIME_SLAB_ITEM.get())
+         .define('B', Items.IRON_INGOT)
+         .unlockedBy("has_fingerlime_slab", has(foodblockcompatitemregistry.FINGERLIME_SLAB_ITEM.get()))
+         .save(output);
+       //medium
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.MEDIUM_FINGERLIME_CABINET_ITEM.get())
+         .pattern("AAA")
+         .pattern("BCB")
+         .pattern("AAA")
+         .define('A', foodblockcompatitemregistry.FINGERLIME_SLAB_ITEM.get())
+         .define('B', Items.IRON_INGOT)
+         .define('C', foodblockcompatitemregistry.SMALL_FINGERLIME_CABINET_ITEM.get())
+         .unlockedBy("has_fingerlime_slab", has(foodblockcompatitemregistry.FINGERLIME_SLAB_ITEM.get()))
          .save(output);
   //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
        //small

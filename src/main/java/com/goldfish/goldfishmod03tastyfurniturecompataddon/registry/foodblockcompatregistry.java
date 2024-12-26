@@ -33,6 +33,9 @@ import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.cornWallSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.elderberryFurnace;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.elderberrySign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.elderberryWallSign;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.fingerlimeFurnace;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.fingerlimeSign;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.fingerlimeWallSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.grapefruitFurnace;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.grapefruitSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.grapefruitWallSign;
@@ -74,6 +77,8 @@ import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.cornFurn
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.cornSignEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.elderberryFurnaceEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.elderberrySignEntity;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.fingerlimeFurnaceEntity;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.fingerlimeSignEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.grapefruitFurnaceEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.grapefruitSignEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.juniperFurnaceEntity;
@@ -383,6 +388,31 @@ public class foodblockcompatregistry {
          .explosionResistance(10.0f)
          .sound(SoundType.MUD_BRICKS)
          ));
+ //---------------------------------------------------------------------------------------Fingerlime-----------------------------------------------------------------------------------------------
+  //.........plain
+    public static final DeferredHolder<Block, Block> FINGERLIME_BLOCK = FOODBLOCK.register("fingerlime_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.MUD_BRICKS)
+         ));
+  //.........bricks
+    public static final DeferredHolder<Block, Block> FINGERLIME_BRICKS_BLOCK = FOODBLOCK.register("fingerlime_bricks_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.MUD_BRICKS)
+         ));
+  //.........chiseled
+    public static final DeferredHolder<Block, Block> FINGERLIME_CHISELED_BLOCK = FOODBLOCK.register("fingerlime_chiseled_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.MUD_BRICKS)
+         ));
+  //.........tiles
+    public static final DeferredHolder<Block, Block> FINGERLIME_TILES_BLOCK = FOODBLOCK.register("fingerlime_tiles_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.MUD_BRICKS)
+         ));
  //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
   //.........plain
     public static final DeferredHolder<Block, Block> GRAPEFRUIT_BLOCK = FOODBLOCK.register("grapefruit_block", () -> new Block(BlockBehaviour.Properties.of()
@@ -667,6 +697,19 @@ public class foodblockcompatregistry {
      .explosionResistance(9.5f)
      .sound(SoundType.MUD_BRICKS)
      ));
+ //---------------------------------------------------------------------------------------Fingerlime-----------------------------------------------------------------------------------------------
+  //.........plain
+     public static final DeferredHolder<Block, SlabBlock> FINGERLIME_SLAB = FOODBLOCK.register("fingerlime_slab", () -> new SlabBlock(BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     ));
+  //.........bricks
+     public static final DeferredHolder<Block, SlabBlock> FINGERLIME_BRICKS_SLAB = FOODBLOCK.register("fingerlime_bricks_slab", () -> new SlabBlock(BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     ));
  //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
   //.........plain
      public static final DeferredHolder<Block, SlabBlock> GRAPEFRUIT_SLAB = FOODBLOCK.register("grapefruit_slab", () -> new SlabBlock(BlockBehaviour.Properties.of()
@@ -898,6 +941,21 @@ public class foodblockcompatregistry {
      .explosionResistance(9.5f)
      .sound(SoundType.MUD_BRICKS)
      )); 
+ //---------------------------------------------------------------------------------------Fingerlime-----------------------------------------------------------------------------------------------
+  //.........plain
+     public static final DeferredHolder<Block, StairBlock> FINGERLIME_STAIRS = FOODBLOCK.register("fingerlime_stairs", 
+     () -> new StairBlock(FINGERLIME_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
+     .destroyTime(1.5f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     )); 
+  //.........bricks
+     public static final DeferredHolder<Block, StairBlock> FINGERLIME_BRICKS_STAIRS = FOODBLOCK.register("fingerlime_bricks_stairs", 
+     () -> new StairBlock(FINGERLIME_BRICKS_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
+     .destroyTime(1.5f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     )); 
  //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
   //.........plain
      public static final DeferredHolder<Block, StairBlock> GRAPEFRUIT_STAIRS = FOODBLOCK.register("grapefruit_stairs", 
@@ -1041,6 +1099,11 @@ public class foodblockcompatregistry {
    .strength(0.25F, 0.25F)
    .sound(SoundType.MUD_BRICKS)
    .noOcclusion()));
+ //--------------------------------------------------------------------------------------Fingerlime------------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Block, IronBarsBlock> FINGERLIME_BARS = FOODBLOCK.register("fingerlime_bars", () -> new IronBarsBlock(BlockBehaviour.Properties.of()
+   .strength(0.25F, 0.25F)
+   .sound(SoundType.MUD_BRICKS)
+   .noOcclusion()));
  //-------------------------------------------------------------------------------------Grapefruit----------------------------------------------------------------------------------------------
    public static final DeferredHolder<Block, IronBarsBlock> GRAPEFRUIT_BARS = FOODBLOCK.register("grapefruit_bars", () -> new IronBarsBlock(BlockBehaviour.Properties.of()
    .strength(0.25F, 0.25F)
@@ -1124,6 +1187,11 @@ public class foodblockcompatregistry {
   .strength(0.25F, 0.25F)
   .sound(SoundType.MUD_BRICKS)
   .noOcclusion()));
+ //----------------------------------------------------------------------------------------Fingerlime-------------------------------------------------------------------------------------------------
+  public static final DeferredHolder<Block, DoorBlock> FINGERLIME_DOOR = FOODBLOCK.register("fingerlime_door", () -> new DoorBlock(foodmaterialtypecompatregistry.PLANT, BlockBehaviour.Properties.of()
+  .strength(0.25F, 0.25F)
+  .sound(SoundType.MUD_BRICKS)
+  .noOcclusion()));
  //----------------------------------------------------------------------------------------Grapefruit-------------------------------------------------------------------------------------------------
   public static final DeferredHolder<Block, DoorBlock> GRAPEFRUIT_DOOR = FOODBLOCK.register("grapefruit_door", () -> new DoorBlock(foodmaterialtypecompatregistry.PLANT, BlockBehaviour.Properties.of()
   .strength(0.25F, 0.25F)
@@ -1195,6 +1263,10 @@ public class foodblockcompatregistry {
   .sound(SoundType.MUD_BRICKS)));
  //--------------------------------------------------------------------------------------Keylime---------------------------------------------------------------------------------------------
   public static final DeferredHolder<Block, ButtonBlock> KEYLIME_BUTTON = FOODBLOCK.register("keylime_button", () -> new ButtonBlock(BlockSetType.CRIMSON, 20, 
+  BlockBehaviour.Properties.of()
+  .sound(SoundType.MUD_BRICKS)));
+ //--------------------------------------------------------------------------------------Fingerlime---------------------------------------------------------------------------------------------
+  public static final DeferredHolder<Block, ButtonBlock> FINGERLIME_BUTTON = FOODBLOCK.register("fingerlime_button", () -> new ButtonBlock(BlockSetType.CRIMSON, 20, 
   BlockBehaviour.Properties.of()
   .sound(SoundType.MUD_BRICKS)));
  //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
@@ -1289,6 +1361,13 @@ public class foodblockcompatregistry {
   ));
  //--------------------------------------------------------------------------------------Keylime---------------------------------------------------------------------------------------------
   public static final DeferredHolder<Block, FenceBlock> KEYLIME_FENCE = FOODBLOCK.register("keylime_fence", () -> new FenceBlock(BlockBehaviour.Properties.of()
+  .destroyTime(1.75f)
+  .explosionResistance(9.0f)
+  .sound(SoundType.MUD_BRICKS)
+  .noOcclusion()
+  ));
+ //--------------------------------------------------------------------------------------Fingerlime---------------------------------------------------------------------------------------------
+  public static final DeferredHolder<Block, FenceBlock> FINGERLIME_FENCE = FOODBLOCK.register("fingerlime_fence", () -> new FenceBlock(BlockBehaviour.Properties.of()
   .destroyTime(1.75f)
   .explosionResistance(9.0f)
   .sound(SoundType.MUD_BRICKS)
@@ -1429,6 +1508,15 @@ public class foodblockcompatregistry {
             .destroyTime(1.5f)
             .explosionResistance(8.0f)
     ));
+ //--------------------------------------------------------------------------------------Fingerlime---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, FenceGateBlock> FINGERLIME_GATE = FOODBLOCK.register("fingerlime_gate", 
+    () -> new FenceGateBlock(
+            foodmaterialtypecompatregistry.FINGERLIMEWOODMAT, 
+            BlockBehaviour.Properties.of()
+            .sound(SoundType.ROOTED_DIRT)
+            .destroyTime(1.5f)
+            .explosionResistance(8.0f)
+    ));
  //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, FenceGateBlock> GRAPEFRUIT_GATE = FOODBLOCK.register("grapefruit_gate", 
     () -> new FenceGateBlock(
@@ -1551,6 +1639,13 @@ public class foodblockcompatregistry {
     ));
  //--------------------------------------------------------------------------------------Keylime---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, PressurePlateBlock> KEYLIME_PRESSURE_PLATE = FOODBLOCK.register("keylime_pressure_plate", 
+    () -> new PressurePlateBlock(foodmaterialtypecompatregistry.PLANT, BlockBehaviour.Properties.of()
+    .sound(SoundType.ROOTED_DIRT)
+    .destroyTime(0.5f)
+    .explosionResistance(4.0f)
+    ));
+ //--------------------------------------------------------------------------------------Fingerlime---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, PressurePlateBlock> FINGERLIME_PRESSURE_PLATE = FOODBLOCK.register("fingerlime_pressure_plate", 
     () -> new PressurePlateBlock(foodmaterialtypecompatregistry.PLANT, BlockBehaviour.Properties.of()
     .sound(SoundType.ROOTED_DIRT)
     .destroyTime(0.5f)
@@ -2051,6 +2146,51 @@ public class foodblockcompatregistry {
          foodblockcompatregistry.KEYLIME_STANDING_SIGN.get()
      ).build(null)
    );
+ //--------------------------------------------------------------------------------------Fingerlime---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Block, fingerlimeSign> FINGERLIME_SIGN = FOODBLOCK.register("fingerlime_sign",
+   () -> new fingerlimeSign(
+     BlockBehaviour.Properties.of()
+         .mapColor(MapColor.WOOD)
+         .forceSolidOn()
+         .instrument(NoteBlockInstrument.BASS)
+         .noCollission()
+         .strength(1.0F)
+         .ignitedByLava(),
+         foodmaterialtypecompatregistry.FINGERLIMEWOODMAT
+   ));
+      public static final DeferredHolder<Block, fingerlimeWallSign> FINGERLIME_WALL_SIGN = FOODBLOCK.register("fingerlime_wall_sign",
+   () -> new fingerlimeWallSign(
+       BlockBehaviour.Properties.of()
+       .mapColor(MapColor.WOOD)
+       .forceSolidOn()
+       .instrument(NoteBlockInstrument.BASS)
+       .noCollission()
+       .strength(1.0F)
+       .ignitedByLava()
+       .randomTicks(),
+       foodmaterialtypecompatregistry.FINGERLIMEWOODMAT
+   ));
+   public static final DeferredHolder<Block, fingerlimeSign> FINGERLIME_STANDING_SIGN = FOODBLOCK.register("fingerlime_standing_sign",
+   () -> new fingerlimeSign(
+       BlockBehaviour.Properties.of()
+       .mapColor(MapColor.WOOD)
+       .forceSolidOn()
+       .instrument(NoteBlockInstrument.BASS)
+       .noCollission()
+       .strength(1.0F)
+       .ignitedByLava()
+       .randomTicks(),
+       foodmaterialtypecompatregistry.FINGERLIMEWOODMAT
+   ));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<fingerlimeSignEntity>> FINGERLIME_SIGN_ENTITY = FOODBLOCKENTITY.register(
+     "fingerlime_sign_entity",
+     () -> BlockEntityType.Builder.of(
+         fingerlimeSignEntity::new,
+         foodblockcompatregistry.FINGERLIME_SIGN.get(),
+         foodblockcompatregistry.FINGERLIME_WALL_SIGN.get(),
+         foodblockcompatregistry.FINGERLIME_STANDING_SIGN.get()
+     ).build(null)
+   );
  //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Block, grapefruitSign> GRAPEFRUIT_SIGN = FOODBLOCK.register("grapefruit_sign",
    () -> new grapefruitSign(
@@ -2394,6 +2534,13 @@ public class foodblockcompatregistry {
      .explosionResistance(9.5f)
      .sound(SoundType.MUD_BRICKS)
      ));
+ //----------------------------------------------------------------------------------------Fingerlime-----------------------------------------------------------------------------------------------
+     public static final DeferredHolder<Block, TrapDoorBlock> FINGERLIME_TRAPDOOR = FOODBLOCK.register("fingerlime_trapdoor", () -> new TrapDoorBlock(foodmaterialtypecompatregistry.PLANT, 
+     BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     ));
  //----------------------------------------------------------------------------------------Grapefruit-----------------------------------------------------------------------------------------------
      public static final DeferredHolder<Block, TrapDoorBlock> GRAPEFRUIT_TRAPDOOR = FOODBLOCK.register("grapefruit_trapdoor", () -> new TrapDoorBlock(foodmaterialtypecompatregistry.PLANT, 
      BlockBehaviour.Properties.of()
@@ -2504,6 +2651,13 @@ public class foodblockcompatregistry {
      ));
  //----------------------------------------------------------------------------------------Keylime------------------------------------------------------------------------------------------------
      public static final DeferredHolder<Block, Block> KEYLIME_LAMP = FOODBLOCK.register("keylime_lamp", () -> new Block(BlockBehaviour.Properties.of()
+     .destroyTime(1.5f)
+     .explosionResistance(10.0f)
+     .sound(SoundType.FROGLIGHT)
+     .lightLevel(state -> 15)
+     ));
+ //----------------------------------------------------------------------------------------Fingerlime------------------------------------------------------------------------------------------------
+     public static final DeferredHolder<Block, Block> FINGERLIME_LAMP = FOODBLOCK.register("fingerlime_lamp", () -> new Block(BlockBehaviour.Properties.of()
      .destroyTime(1.5f)
      .explosionResistance(10.0f)
      .sound(SoundType.FROGLIGHT)
@@ -2628,6 +2782,14 @@ public class foodblockcompatregistry {
       ));
  //--------------------------------------------------------------------------------------Keylime---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, CarpetBlock> KEYLIME_CARPET = FOODBLOCK.register("keylime_carpet", () -> new CarpetBlock(BlockBehaviour.Properties.of()
+      .destroyTime(0.5f)
+      .explosionResistance(0.5f)
+      .sound(SoundType.MOSS_CARPET)
+      .friction(0.3f)
+      .ignitedByLava()
+      ));
+ //--------------------------------------------------------------------------------------Fingerlime---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, CarpetBlock> FINGERLIME_CARPET = FOODBLOCK.register("fingerlime_carpet", () -> new CarpetBlock(BlockBehaviour.Properties.of()
       .destroyTime(0.5f)
       .explosionResistance(0.5f)
       .sound(SoundType.MOSS_CARPET)
@@ -2855,6 +3017,23 @@ public class foodblockcompatregistry {
       .lightLevel(state  -> 10)
       .noOcclusion()
       ));
+ //--------------------------------------------------------------------------------------Fingerlime---------------------------------------------------------------------------------------------
+    //regular
+      public static final DeferredHolder<Block, LanternBlock> FINGERLIME_LANTERN = FOODBLOCK.register("fingerlime_lantern", () -> new LanternBlock(BlockBehaviour.Properties.of()
+      .destroyTime(0.5f)
+      .explosionResistance(0.5f)
+      .sound(SoundType.SHROOMLIGHT)
+      .lightLevel(state  -> 15)
+      .noOcclusion()
+      ));
+    //soul
+      public static final DeferredHolder<Block, LanternBlock> FINGERLIME_SOUL_LANTERN = FOODBLOCK.register("fingerlime_soul_lantern", () -> new LanternBlock(BlockBehaviour.Properties.of()
+      .destroyTime(0.5f)
+      .explosionResistance(0.5f)
+      .sound(SoundType.SHROOMLIGHT)
+      .lightLevel(state  -> 10)
+      .noOcclusion()
+      ));
  //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
     //regular
       public static final DeferredHolder<Block, LanternBlock> GRAPEFRUIT_LANTERN = FOODBLOCK.register("grapefruit_lantern", () -> new LanternBlock(BlockBehaviour.Properties.of()
@@ -3030,6 +3209,13 @@ public class foodblockcompatregistry {
     .sound(SoundType.CHAIN)
     .noOcclusion()
     ));
+ //--------------------------------------------------------------------------------------Fingerlime---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, ChainBlock> FINGERLIME_CHAIN = FOODBLOCK.register("fingerlime_chain", () -> new ChainBlock(BlockBehaviour.Properties.of()
+    .destroyTime(0.5f)
+    .explosionResistance(0.5f)
+    .sound(SoundType.CHAIN)
+    .noOcclusion()
+    ));
  //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, ChainBlock> GRAPEFRUIT_CHAIN = FOODBLOCK.register("grapefruit_chain", () -> new ChainBlock(BlockBehaviour.Properties.of()
     .destroyTime(0.5f)
@@ -3151,6 +3337,13 @@ public class foodblockcompatregistry {
     .sound(plant_ladder_sound)
     .noOcclusion()
    )); 
+ //-----------------------------------------------------------------------------------------Fingerlime------------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, LadderBlock> FINGERLIME_LADDER = FOODBLOCK.register("fingerlime_ladder", () -> new LadderBlock(BlockBehaviour.Properties.of()
+    .destroyTime(ladder_destroy_time)
+    .explosionResistance(ladder_explosion_resistance)
+    .sound(plant_ladder_sound)
+    .noOcclusion()
+   )); 
  //-----------------------------------------------------------------------------------------Grapefruit------------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, LadderBlock> GRAPEFRUIT_LADDER = FOODBLOCK.register("grapefruit_ladder", () -> new LadderBlock(BlockBehaviour.Properties.of()
     .destroyTime(ladder_destroy_time)
@@ -3261,6 +3454,13 @@ public class foodblockcompatregistry {
     ));
  //-----------------------------------------------------------------------------------------Keylime------------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, HorizontalDirectionalBlock> KEYLIME_TABLE = FOODBLOCK.register("keylime_table", () -> new foodtable(BlockBehaviour.Properties.of()
+    .destroyTime(1.5f)
+    .explosionResistance(1.5f)
+    .sound(SoundType.MUD_BRICKS)
+    .noOcclusion()
+    ));
+ //-----------------------------------------------------------------------------------------Fingerlime------------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, HorizontalDirectionalBlock> FINGERLIME_TABLE = FOODBLOCK.register("fingerlime_table", () -> new foodtable(BlockBehaviour.Properties.of()
     .destroyTime(1.5f)
     .explosionResistance(1.5f)
     .sound(SoundType.MUD_BRICKS)
@@ -3521,6 +3721,27 @@ public class foodblockcompatregistry {
 
      public static final DeferredHolder<Block, WallTorchBlock> KEYLIME_SOUL_WALL_TORCH = FOODBLOCK.register("keylime_soul_wall_torch", 
      () -> new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_WALL_TORCH)));
+ //--------------------------------------------------------------------------------------Fingerlime---------------------------------------------------------------------------------------------
+    //regular
+     public static final DeferredHolder<Block, TorchBlock> FINGERLIME_TORCH = FOODBLOCK.register("fingerlime_torch", 
+     () -> new TorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH)));
+
+     public static final DeferredHolder<Block, WallTorchBlock> FINGERLIME_WALL_TORCH = FOODBLOCK.register("fingerlime_wall_torch", 
+     () -> new WallTorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH)));
+
+    //redstone
+     public static final DeferredHolder<Block, RedstoneTorchBlock> FINGERLIME_REDSTONE_TORCH = FOODBLOCK.register("fingerlime_redstone_torch", 
+     () -> new RedstoneTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_TORCH)));
+
+     public static final DeferredHolder<Block, RedstoneWallTorchBlock> FINGERLIME_REDSTONE_WALL_TORCH = FOODBLOCK.register("fingerlime_redstone_wall_torch", 
+     () -> new RedstoneWallTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_WALL_TORCH)));
+
+    //soul
+     public static final DeferredHolder<Block, TorchBlock> FINGERLIME_SOUL_TORCH = FOODBLOCK.register("fingerlime_soul_torch", 
+     () -> new TorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_TORCH)));
+
+     public static final DeferredHolder<Block, WallTorchBlock> FINGERLIME_SOUL_WALL_TORCH = FOODBLOCK.register("fingerlime_soul_wall_torch", 
+     () -> new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_WALL_TORCH)));
  //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
     //regular
      public static final DeferredHolder<Block, TorchBlock> GRAPEFRUIT_TORCH = FOODBLOCK.register("grapefruit_torch", 
@@ -3710,6 +3931,12 @@ public class foodblockcompatregistry {
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<keylimeFurnaceEntity>> KEYLIME_FURNACE_ENTITY = FOODBLOCKENTITY.register("keylime_furnace", 
     () -> BlockEntityType.Builder.of(keylimeFurnaceEntity::new, KEYLIME_FURNACE.get()).build(null));
+ //----------------------------------------------------------------------------------------Fingerlime-----------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, fingerlimeFurnace> FINGERLIME_FURNACE = FOODBLOCK.register("fingerlime_furnace", 
+    () -> new fingerlimeFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<fingerlimeFurnaceEntity>> FINGERLIME_FURNACE_ENTITY = FOODBLOCKENTITY.register("fingerlime_furnace", 
+    () -> BlockEntityType.Builder.of(fingerlimeFurnaceEntity::new, FINGERLIME_FURNACE.get()).build(null));
  //----------------------------------------------------------------------------------------Grapefruit-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, grapefruitFurnace> GRAPEFRUIT_FURNACE = FOODBLOCK.register("grapefruit_furnace", 
     () -> new grapefruitFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
@@ -3823,6 +4050,14 @@ public class foodblockcompatregistry {
     ));
  //--------------------------------------------------------------------------------------Keylime---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, foodpathtypeminislab> KEYLIME_STONE_PATH = FOODBLOCK.register("keylime_stone_path", 
+    () -> new foodpathtypeminislab(BlockBehaviour.Properties.of()
+    .destroyTime(1.5f)
+    .explosionResistance(1.5f)
+    .sound(SoundType.MUD_BRICKS)
+    .noOcclusion()
+    ));
+ //--------------------------------------------------------------------------------------Fingerlime---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, foodpathtypeminislab> FINGERLIME_STONE_PATH = FOODBLOCK.register("fingerlime_stone_path", 
     () -> new foodpathtypeminislab(BlockBehaviour.Properties.of()
     .destroyTime(1.5f)
     .explosionResistance(1.5f)
@@ -3945,6 +4180,12 @@ public class foodblockcompatregistry {
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
      ));
+ //--------------------------------------------------------------------------------------Fingerlime---------------------------------------------------------------------------------------------
+     public static final DeferredHolder<Block, foodBarrel> FINGERLIME_BARREL = FOODBLOCK.register("fingerlime_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
+     .sound(plant_barrel_sound)
+     .destroyTime(barrel_destroy_time)
+     .explosionResistance(barrel_explosion_resistance)
+     ));
  //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
      public static final DeferredHolder<Block, foodBarrel> GRAPEFRUIT_BARREL = FOODBLOCK.register("grapefruit_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
      .sound(plant_barrel_sound)
@@ -3986,9 +4227,9 @@ public class foodblockcompatregistry {
      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<foodBarrelEntity>> FOOD_BARREL_ENTITY = FOODBLOCKENTITY.register("food_barrel_entity", 
      () -> BlockEntityType.Builder.of(foodBarrelEntity::new, foodblockcompatregistry.ELDERBERRY_BARREL.get(), foodblockcompatregistry.JUNIPER_BARREL.get(), foodblockcompatregistry.CHERRY_BARREL.get(), 
      foodblockcompatregistry.BLACKCHERRY_BARREL.get(),foodblockcompatregistry.COCONUT_BARREL.get(),foodblockcompatregistry.ORANGE_BARREL.get(),foodblockcompatregistry.LEMON_BARREL.get(),
-     foodblockcompatregistry.BUDDHASHAND_BARREL.get(),foodblockcompatregistry.LIME_BARREL.get(),foodblockcompatregistry.KEYLIME_BARREL.get(),foodblockcompatregistry.GRAPEFRUIT_BARREL.get(),
-     foodblockcompatregistry.CORN_BARREL.get(),foodblockcompatregistry.ONION_BARREL.get(),foodblockcompatregistry.TOMATO_BARREL.get(),foodblockcompatregistry.PECAN_BARREL.get(),
-     foodblockcompatregistry.ALMOND_BARREL.get()).build(null));
+     foodblockcompatregistry.BUDDHASHAND_BARREL.get(),foodblockcompatregistry.LIME_BARREL.get(),foodblockcompatregistry.KEYLIME_BARREL.get(),foodblockcompatregistry.FINGERLIME_BARREL.get(),
+     foodblockcompatregistry.GRAPEFRUIT_BARREL.get(),foodblockcompatregistry.CORN_BARREL.get(),foodblockcompatregistry.ONION_BARREL.get(),foodblockcompatregistry.TOMATO_BARREL.get(),
+     foodblockcompatregistry.PECAN_BARREL.get(),foodblockcompatregistry.ALMOND_BARREL.get()).build(null));
 //==============================================================================================================================================================================================
 //                                                                                         Chairs
 //==============================================================================================================================================================================================
@@ -4062,6 +4303,13 @@ public class foodblockcompatregistry {
      ));
  //--------------------------------------------------------------------------------------Keylime---------------------------------------------------------------------------------------------
      public static final DeferredHolder<Block, foodChairBlock> KEYLIME_CHAIR = FOODBLOCK.register("keylime_chair", () -> new foodChairBlock(BlockBehaviour.Properties.of()
+     .sound(plant_chair_sound)
+     .destroyTime(chair_destroy_time)
+     .explosionResistance(chair_explosion_resistance)
+     .noOcclusion()
+     ));
+ //--------------------------------------------------------------------------------------Fingerlime---------------------------------------------------------------------------------------------
+     public static final DeferredHolder<Block, foodChairBlock> FINGERLIME_CHAIR = FOODBLOCK.register("fingerlime_chair", () -> new foodChairBlock(BlockBehaviour.Properties.of()
      .sound(plant_chair_sound)
      .destroyTime(chair_destroy_time)
      .explosionResistance(chair_explosion_resistance)
@@ -4187,6 +4435,13 @@ public class foodblockcompatregistry {
      .explosionResistance(bed_explosion_resistance)
      .noOcclusion()
      ));
+ //--------------------------------------------------------------------------------------Fingerlime---------------------------------------------------------------------------------------------
+     public static final DeferredHolder<Block, foodBed> FINGERLIME_BED = FOODBLOCK.register("fingerlime_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     .sound(plant_bed_sound)
+     .destroyTime(bed_destroy_time)
+     .explosionResistance(bed_explosion_resistance)
+     .noOcclusion()
+     ));
  //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
      public static final DeferredHolder<Block, foodBed> GRAPEFRUIT_BED = FOODBLOCK.register("grapefruit_bed", () -> new foodBed(BlockBehaviour.Properties.of()
      .sound(plant_bed_sound)
@@ -4233,7 +4488,7 @@ public class foodblockcompatregistry {
  //.........entity
      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<bedEntity>> FOOD_BED_ENTITY = FOODBLOCKENTITY.register("food_bed_entity",
      () -> BlockEntityType.Builder.of(bedEntity::new, ELDERBERRY_BED.get(), JUNIPER_BED.get(), CHERRY_BED.get(), COCONUT_BED.get(), ORANGE_BED.get(), LEMON_BED.get(), LIME_BED.get(), 
-     KEYLIME_BED.get(), GRAPEFRUIT_BED.get(), CORN_BED.get(), ONION_BED.get(), TOMATO_BED.get(), PECAN_BED.get(), ALMOND_BED.get()).build(null));
+     KEYLIME_BED.get(), FINGERLIME_BED.get(), GRAPEFRUIT_BED.get(), CORN_BED.get(), ONION_BED.get(), TOMATO_BED.get(), PECAN_BED.get(), ALMOND_BED.get()).build(null));
    //^ I did not think this would actually work, but it does O.o
 
 //==============================================================================================================================================================================================
@@ -4394,6 +4649,21 @@ public class foodblockcompatregistry {
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
+ //--------------------------------------------------------------------------------------Fingerlime---------------------------------------------------------------------------------------------
+     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_FINGERLIME_CABINET = FOODBLOCK.register("small_fingerlime_cabinet", 
+     () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
+     .sound(plant_cabinet_sound)
+     .destroyTime(cabinet_destroy_time)
+     .explosionResistance(cabinet_explosion_resistance)
+     .noOcclusion()
+     ));
+    //medium
+     public static final DeferredHolder<Block, mediumFoodCabinet> MEDIUM_FINGERLIME_CABINET = FOODBLOCK.register("medium_fingerlime_cabinet", () -> new mediumFoodCabinet(BlockBehaviour.Properties.of()
+     .sound(plant_cabinet_sound)
+     .destroyTime(cabinet_destroy_time)
+     .explosionResistance(cabinet_explosion_resistance)
+     .noOcclusion()
+     ));
  //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
      public static final DeferredHolder<Block, smallFoodCabinet> SMALL_GRAPEFRUIT_CABINET = FOODBLOCK.register("small_grapefruit_cabinet", 
      () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
@@ -4489,11 +4759,13 @@ public class foodblockcompatregistry {
      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<smallFoodContainerEntity>> SMALL_CABINET_ENTITY = FOODBLOCKENTITY.register("small_cabinet_entity",
      () -> BlockEntityType.Builder.of(smallFoodContainerEntity::new, SMALL_ELDERBERRY_CABINET.get(), SMALL_JUNIPER_CABINET.get(), SMALL_CHERRY_CABINET.get(), SMALL_BLACKCHERRY_CABINET.get(),
      SMALL_COCONUT_CABINET.get(), SMALL_ORANGE_CABINET.get(), SMALL_LEMON_CABINET.get(), SMALL_BUDDHASHAND_CABINET.get(), SMALL_LIME_CABINET.get(), SMALL_KEYLIME_CABINET.get(), 
-     SMALL_GRAPEFRUIT_CABINET.get(), SMALL_CORN_CABINET.get(), SMALL_ONION_CABINET.get(), SMALL_TOMATO_CABINET.get(), SMALL_PECAN_CABINET.get(), SMALL_ALMOND_CABINET.get()).build(null));
+     SMALL_FINGERLIME_CABINET.get(), SMALL_GRAPEFRUIT_CABINET.get(), SMALL_CORN_CABINET.get(), SMALL_ONION_CABINET.get(), SMALL_TOMATO_CABINET.get(), SMALL_PECAN_CABINET.get(), 
+     SMALL_ALMOND_CABINET.get()).build(null));
     //medium
      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<mediumFoodContainerEntity>> MEDIUM_CABINET_ENTITY = FOODBLOCKENTITY.register("medium_cabinet_entity",
      () -> BlockEntityType.Builder.of(mediumFoodContainerEntity::new, MEDIUM_ELDERBERRY_CABINET.get(), MEDIUM_JUNIPER_CABINET.get(), MEDIUM_CHERRY_CABINET.get(), MEDIUM_BLACKCHERRY_CABINET.get(), 
      MEDIUM_COCONUT_CABINET.get(), MEDIUM_ORANGE_CABINET.get(), MEDIUM_LEMON_CABINET.get(), MEDIUM_BUDDHASHAND_CABINET.get(), MEDIUM_LIME_CABINET.get(), MEDIUM_KEYLIME_CABINET.get(), 
-     MEDIUM_GRAPEFRUIT_CABINET.get(), MEDIUM_CORN_CABINET.get(), MEDIUM_ONION_CABINET.get(), MEDIUM_TOMATO_CABINET.get(), MEDIUM_PECAN_CABINET.get(), MEDIUM_ALMOND_CABINET.get()).build(null));
+     MEDIUM_FINGERLIME_CABINET.get(), MEDIUM_GRAPEFRUIT_CABINET.get(), MEDIUM_CORN_CABINET.get(), MEDIUM_ONION_CABINET.get(), MEDIUM_TOMATO_CABINET.get(), MEDIUM_PECAN_CABINET.get(), 
+     MEDIUM_ALMOND_CABINET.get()).build(null));
 
 }
