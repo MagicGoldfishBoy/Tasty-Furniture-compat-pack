@@ -487,6 +487,84 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("small_orange_cabinet_item", modLoc("block/orange_cabinet"));
        withExistingParent("medium_orange_cabinet_item", modLoc("block/medium_orange_cabinet"));
     //==============================================================================================================================================
+    //|                                                              Tangerine                                                                        |
+    //==============================================================================================================================================
+       //mush
+        withExistingParent("tangerine_mush", mcLoc("item/generated")).texture("layer0", "item/tangerine_mush");
+       //ingot
+        withExistingParent("tangerine_ingot", mcLoc("item/generated")).texture("layer0", "item/tangerine_ingot");
+       //nugget
+        withExistingParent("tangerine_nugget", mcLoc("item/generated")).texture("layer0", "item/tangerine_nugget");
+       //block
+        withExistingParent("tangerine_block_item", modLoc("block/tangerine_block"));
+       //bricks block
+        withExistingParent("tangerine_bricks_block_item", modLoc("block/tangerine_bricks_block"));
+       //chiseled block
+        withExistingParent("tangerine_chiseled_block_item", modLoc("block/tangerine_chiseled_block"));
+       //tiles block
+        withExistingParent("tangerine_tiles_block_item", modLoc("block/tangerine_tiles_block"));
+       //slab
+        slab("tangerine_slab_item", modLoc("block/tangerine_block"), modLoc("block/tangerine_block"), modLoc("block/tangerine_block"));
+       //bricks slab
+        slab("tangerine_bricks_slab_item", modLoc("block/tangerine_bricks_block"), modLoc("block/tangerine_bricks_block"), modLoc("block/tangerine_bricks_block"));
+       //stairs
+        stairs("tangerine_stairs_item", modLoc("block/tangerine_block"), modLoc("block/tangerine_block"), modLoc("block/tangerine_block"));
+       //bricks stairs
+        stairs("tangerine_bricks_stairs_item", modLoc("block/tangerine_bricks_block"), modLoc("block/tangerine_bricks_block"), modLoc("block/tangerine_bricks_block"));
+       //bars
+        withExistingParent("tangerine_bars_item", mcLoc("item/generated")).texture("layer0", "block/tangerine_bars");
+       //doors
+        withExistingParent("tangerine_door_item", mcLoc("item/generated")).texture("layer0", "item/tangerine_door_item");
+       //button
+        buttonInventory("tangerine_button_item", modLoc("block/tangerine_block"));
+       //fence
+        fenceInventory("tangerine_fence_item", modLoc("block/tangerine_block"));
+       //gate
+        withExistingParent("tangerine_gate_item", modLoc("block/tangerine_gate"));
+       //pressure plate
+        pressurePlate("tangerine_pressure_plate_item", modLoc("block/tangerine_block"));
+       //sign
+       withExistingParent("tangerine_sign_item", mcLoc("item/generated")).texture("layer0", "item/tangerine_sign");
+       //trapdoor
+       withExistingParent("tangerine_trapdoor_item", modLoc("block/tangerine_trapdoor_trapdoor_bottom"));
+       //lamp
+       withExistingParent("tangerine_lamp_item", modLoc("block/tangerine_lamp"));
+       //carpet
+       ResourceLocation tangerine_carpet_texture = modLoc("block/tangerine_carpet");
+       carpet("tangerine_carpet_item", tangerine_carpet_texture);
+       //lantern
+        //regular
+        withExistingParent("tangerine_lantern_item", modLoc("block/tangerine_lantern"));
+        //soul
+          withExistingParent("tangerine_soul_lantern_item", modLoc("block/tangerine_soul_lantern"));
+       //chain
+       withExistingParent("tangerine_chain_item", modLoc("block/tangerine_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
+       //ladder
+       withExistingParent("tangerine_ladder_item", modLoc("block/tangerine_ladder"));
+       //table
+       withExistingParent("tangerine_table_item", modLoc("block/tangerine_table"));
+       //torches
+        //regular
+        withExistingParent("tangerine_torch_item", modLoc("block/tangerine_torch"));
+        //redstone
+          withExistingParent("tangerine_redstone_torch_item", modLoc("block/tangerine_redstone_torch"));
+        //soul
+          withExistingParent("tangerine_soul_torch_item", modLoc("block/tangerine_soul_torch"));
+       //furnaces
+       withExistingParent("tangerine_furnace_item", modLoc("block/tangerine_furnace_model_unlit"));
+       //paths
+       withExistingParent("tangerine_stone_path_item", modLoc("block/tangerine_stone_path"));
+       //barrel
+       withExistingParent("tangerine_barrel_item", modLoc("block/tangerine_barrel_model_closed"));
+       //chair
+       withExistingParent("tangerine_chair_item", modLoc("block/tangerine_chair"));
+       //bed
+       withExistingParent("tangerine_bed_item", modLoc("block/tangerine_bed"));
+       //cabinet
+       withExistingParent("small_tangerine_cabinet_item", modLoc("block/tangerine_cabinet"));
+       withExistingParent("medium_tangerine_cabinet_item", modLoc("block/medium_tangerine_cabinet"));
+    //==============================================================================================================================================
     //|                                                              Lemon                                                                        |
     //==============================================================================================================================================
        //mush

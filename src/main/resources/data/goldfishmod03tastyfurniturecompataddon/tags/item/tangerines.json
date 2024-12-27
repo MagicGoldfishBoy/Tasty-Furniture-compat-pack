@@ -1,0 +1,7 @@
+{
+    "replace": false,
+    "values": [
+        {"id":"productivetrees:tangerine",
+        "required": false}
+    ]
+  }

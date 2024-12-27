@@ -141,6 +141,19 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........tiles
           net.minecraft.world.level.block.Block orange_tiles_block = foodblockcompatregistry.ORANGE_TILES_BLOCK.get();
           simpleBlock(orange_tiles_block);
+     //------------------------------------------------------------tangerine-----------------------------------------------------------------------
+      //.........plain
+          net.minecraft.world.level.block.Block tangerine_block = foodblockcompatregistry.TANGERINE_BLOCK.get();
+          simpleBlock(tangerine_block);
+      //.........bricks
+          net.minecraft.world.level.block.Block tangerine_bricks_block = foodblockcompatregistry.TANGERINE_BRICKS_BLOCK.get();
+          simpleBlock(tangerine_bricks_block);
+      //.........chiseled
+          net.minecraft.world.level.block.Block tangerine_chiseled_block = foodblockcompatregistry.TANGERINE_CHISELED_BLOCK.get();
+          simpleBlock(tangerine_chiseled_block);
+      //.........tiles
+          net.minecraft.world.level.block.Block tangerine_tiles_block = foodblockcompatregistry.TANGERINE_TILES_BLOCK.get();
+          simpleBlock(tangerine_tiles_block);
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
       //.........plain
           net.minecraft.world.level.block.Block lemon_block = foodblockcompatregistry.LEMON_BLOCK.get();
@@ -341,6 +354,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
           SlabBlock orange_bricks_slab = foodblockcompatregistry.ORANGE_BRICKS_SLAB.get();
           ResourceLocation orange_bricks_block_texture = modLoc("block/orange_bricks_block");
           slabBlock(orange_bricks_slab, orange_bricks_block_texture, orange_bricks_block_texture);
+     //------------------------------------------------------------tangerine-----------------------------------------------------------------------
+      //.........plain
+          SlabBlock tangerine_slab = foodblockcompatregistry.TANGERINE_SLAB.get();
+          ResourceLocation tangerine_block_texture = modLoc("block/tangerine_block");
+          slabBlock(tangerine_slab, tangerine_block_texture, tangerine_block_texture);
+      //.........bricks
+          SlabBlock tangerine_bricks_slab = foodblockcompatregistry.TANGERINE_BRICKS_SLAB.get();
+          ResourceLocation tangerine_bricks_block_texture = modLoc("block/tangerine_bricks_block");
+          slabBlock(tangerine_bricks_slab, tangerine_bricks_block_texture, tangerine_bricks_block_texture);
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
       //.........plain
           SlabBlock lemon_slab = foodblockcompatregistry.LEMON_SLAB.get();
@@ -485,6 +507,13 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........bricks
           StairBlock orange_bricks_stairs = foodblockcompatregistry.ORANGE_BRICKS_STAIRS.get();
           stairsBlock(orange_bricks_stairs, orange_bricks_block_texture);
+     //------------------------------------------------------------tangerine-----------------------------------------------------------------------
+      //.........plain
+          StairBlock tangerine_stairs = foodblockcompatregistry.TANGERINE_STAIRS.get();
+          stairsBlock(tangerine_stairs, tangerine_block_texture);
+      //.........bricks
+          StairBlock tangerine_bricks_stairs = foodblockcompatregistry.TANGERINE_BRICKS_STAIRS.get();
+          stairsBlock(tangerine_bricks_stairs, tangerine_bricks_block_texture);
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
       //.........plain
           StairBlock lemon_stairs = foodblockcompatregistry.LEMON_STAIRS.get();
@@ -595,6 +624,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation orange_bars_texture = modLoc("block/orange_bars");
           ResourceLocation orange_bars_rim_texture = modLoc("block/orange_block");
           paneBlockWithRenderType(orange_bars, "orange_bars", orange_bars_texture, orange_bars_rim_texture, "cutout_mipped_all"); 
+     //------------------------------------------------------------tangerine-----------------------------------------------------------------------
+          IronBarsBlock tangerine_bars = foodblockcompatregistry.TANGERINE_BARS.get(); 
+          ResourceLocation tangerine_bars_texture = modLoc("block/tangerine_bars");
+          ResourceLocation tangerine_bars_rim_texture = modLoc("block/tangerine_block");
+          paneBlockWithRenderType(tangerine_bars, "tangerine_bars", tangerine_bars_texture, tangerine_bars_rim_texture, "cutout_mipped_all"); 
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
           IronBarsBlock lemon_bars = foodblockcompatregistry.LEMON_BARS.get(); 
           ResourceLocation lemon_bars_texture = modLoc("block/lemon_bars");
@@ -683,6 +717,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation orange_door_top_texture = modLoc("block/orange_door_top");
           ResourceLocation orange_door_bottom_texture = modLoc("block/orange_door_bottom");
           doorBlockWithRenderType(orange_door, "orange_door", orange_door_bottom_texture, orange_door_top_texture, "cutout_mipped_all"); 
+     //------------------------------------------------------------tangerine-----------------------------------------------------------------------
+          DoorBlock tangerine_door = foodblockcompatregistry.TANGERINE_DOOR.get(); 
+          ResourceLocation tangerine_door_top_texture = modLoc("block/tangerine_door_top");
+          ResourceLocation tangerine_door_bottom_texture = modLoc("block/tangerine_door_bottom");
+          doorBlockWithRenderType(tangerine_door, "tangerine_door", tangerine_door_bottom_texture, tangerine_door_top_texture, "cutout_mipped_all"); 
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
           DoorBlock lemon_door = foodblockcompatregistry.LEMON_DOOR.get(); 
           ResourceLocation lemon_door_top_texture = modLoc("block/lemon_door_top");
@@ -765,6 +804,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ButtonBlock orange_button = foodblockcompatregistry.ORANGE_BUTTON.get();
           ResourceLocation orange_button_texture = modLoc("block/orange_block");
           buttonBlock(orange_button, orange_button_texture);
+     //------------------------------------------------------------tangerine-----------------------------------------------------------------------
+          ButtonBlock tangerine_button = foodblockcompatregistry.TANGERINE_BUTTON.get();
+          ResourceLocation tangerine_button_texture = modLoc("block/tangerine_block");
+          buttonBlock(tangerine_button, tangerine_button_texture);
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
           ButtonBlock lemon_button = foodblockcompatregistry.LEMON_BUTTON.get();
           ResourceLocation lemon_button_texture = modLoc("block/lemon_block");
@@ -866,6 +909,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
           FenceGateBlock orange_gate = foodblockcompatregistry.ORANGE_GATE.get();
           ResourceLocation orange_gate_texture = modLoc("block/orange_block");
           fenceGateBlock(orange_gate, orange_gate_texture);
+     //------------------------------------------------------------tangerine-----------------------------------------------------------------------
+       //fence
+          FenceBlock tangerine_fence = foodblockcompatregistry.TANGERINE_FENCE.get();
+          ResourceLocation tangerine_fence_texture = modLoc("block/tangerine_block");
+          fenceBlock(tangerine_fence, tangerine_fence_texture);
+       //gate
+          FenceGateBlock tangerine_gate = foodblockcompatregistry.TANGERINE_GATE.get();
+          ResourceLocation tangerine_gate_texture = modLoc("block/tangerine_block");
+          fenceGateBlock(tangerine_gate, tangerine_gate_texture);
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
        //fence
           FenceBlock lemon_fence = foodblockcompatregistry.LEMON_FENCE.get();
@@ -992,6 +1044,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           PressurePlateBlock orange_pressure_plate = foodblockcompatregistry.ORANGE_PRESSURE_PLATE.get();
           ResourceLocation orange_pressure_plate_texture = modLoc("block/orange_block");
           pressurePlateBlock(orange_pressure_plate, orange_pressure_plate_texture);
+     //------------------------------------------------------------tangerine-----------------------------------------------------------------------
+          PressurePlateBlock tangerine_pressure_plate = foodblockcompatregistry.TANGERINE_PRESSURE_PLATE.get();
+          ResourceLocation tangerine_pressure_plate_texture = modLoc("block/tangerine_block");
+          pressurePlateBlock(tangerine_pressure_plate, tangerine_pressure_plate_texture);
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
           PressurePlateBlock lemon_pressure_plate = foodblockcompatregistry.LEMON_PRESSURE_PLATE.get();
           ResourceLocation lemon_pressure_plate_texture = modLoc("block/lemon_block");
@@ -1069,6 +1125,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
            WallSignBlock orange_wall_sign = foodblockcompatregistry.ORANGE_WALL_SIGN.get();
            ResourceLocation orange_sign_texture = modLoc("block/orange_block");
            signBlock(orange_sign, orange_wall_sign, orange_sign_texture);
+     //------------------------------------------------------------tangerine-----------------------------------------------------------------------
+           StandingSignBlock tangerine_sign = foodblockcompatregistry.TANGERINE_STANDING_SIGN.get();
+           WallSignBlock tangerine_wall_sign = foodblockcompatregistry.TANGERINE_WALL_SIGN.get();
+           ResourceLocation tangerine_sign_texture = modLoc("block/tangerine_block");
+           signBlock(tangerine_sign, tangerine_wall_sign, tangerine_sign_texture);
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
            StandingSignBlock lemon_sign = foodblockcompatregistry.LEMON_STANDING_SIGN.get();
            WallSignBlock lemon_wall_sign = foodblockcompatregistry.LEMON_WALL_SIGN.get();
@@ -1151,6 +1212,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           TrapDoorBlock orange_trapdoor = foodblockcompatregistry.ORANGE_TRAPDOOR.get(); 
           ResourceLocation orange_trapdoor_texture = modLoc("block/orange_block");
           trapdoorBlockWithRenderType(orange_trapdoor, "orange_trapdoor", orange_trapdoor_texture, false, orange_trapdoor_texture);
+     //------------------------------------------------------------tangerine-----------------------------------------------------------------------
+          TrapDoorBlock tangerine_trapdoor = foodblockcompatregistry.TANGERINE_TRAPDOOR.get(); 
+          ResourceLocation tangerine_trapdoor_texture = modLoc("block/tangerine_block");
+          trapdoorBlockWithRenderType(tangerine_trapdoor, "tangerine_trapdoor", tangerine_trapdoor_texture, false, tangerine_trapdoor_texture);
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
           TrapDoorBlock lemon_trapdoor = foodblockcompatregistry.LEMON_TRAPDOOR.get(); 
           ResourceLocation lemon_trapdoor_texture = modLoc("block/lemon_block");
@@ -1216,6 +1281,9 @@ public class GM1BlockStateProvider extends BlockStateProvider
      //------------------------------------------------------------orange-----------------------------------------------------------------------
           Block orange_lamp = foodblockcompatregistry.ORANGE_LAMP.get();
           simpleBlock(orange_lamp);
+     //------------------------------------------------------------tangerine-----------------------------------------------------------------------
+          Block tangerine_lamp = foodblockcompatregistry.TANGERINE_LAMP.get();
+          simpleBlock(tangerine_lamp);
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
           Block lemon_lamp = foodblockcompatregistry.LEMON_LAMP.get();
           simpleBlock(lemon_lamp);
@@ -1288,6 +1356,12 @@ public class GM1BlockStateProvider extends BlockStateProvider
           BlockModelBuilder orange_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(orange_carpet).getPath(), mcLoc("block/carpet"))
           .texture("wool", orange_carpet_texture);
           simpleBlock(orange_carpet, new ModelFile.UncheckedModelFile(orange_carpet_model.getLocation()));
+     //------------------------------------------------------------tangerine-----------------------------------------------------------------------
+          CarpetBlock tangerine_carpet = foodblockcompatregistry.TANGERINE_CARPET.get();
+          ResourceLocation tangerine_carpet_texture = modLoc("block/tangerine_carpet");
+          BlockModelBuilder tangerine_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(tangerine_carpet).getPath(), mcLoc("block/carpet"))
+          .texture("wool", tangerine_carpet_texture);
+          simpleBlock(tangerine_carpet, new ModelFile.UncheckedModelFile(tangerine_carpet_model.getLocation()));
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
           CarpetBlock lemon_carpet = foodblockcompatregistry.LEMON_CARPET.get();
           ResourceLocation lemon_carpet_texture = modLoc("block/lemon_carpet");
@@ -1591,6 +1665,45 @@ public class GM1BlockStateProvider extends BlockStateProvider
              .modelForState().modelFile(hanging_orange_soul_lantern_model).addModel()
              .partialState().with(LanternBlock.HANGING, false)
              .modelForState().modelFile(orange_soul_lantern_model).addModel();
+     //------------------------------------------------------------tangerine-----------------------------------------------------------------------
+         //regular
+          LanternBlock tangerine_lantern = foodblockcompatregistry.TANGERINE_LANTERN.get();
+          ResourceLocation tangerine_lantern_texture = modLoc("block/tangerine_lantern");
+  
+          BlockModelBuilder tangerine_lantern_model = models()
+              .withExistingParent("tangerine_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", tangerine_lantern_texture);
+  
+          BlockModelBuilder hanging_tangerine_lantern_model = models()
+              .withExistingParent("tangerine_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", tangerine_lantern_texture);
+  
+          getVariantBuilder(tangerine_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_tangerine_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(tangerine_lantern_model).addModel();
+         //soul
+         LanternBlock tangerine_soul_lantern = foodblockcompatregistry.TANGERINE_SOUL_LANTERN.get();
+         ResourceLocation tangerine_soul_lantern_texture = modLoc("block/tangerine_soul_lantern");
+ 
+         BlockModelBuilder tangerine_soul_lantern_model = models()
+             .withExistingParent("tangerine_soul_lantern", mcLoc("block/lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", tangerine_soul_lantern_texture);
+ 
+         BlockModelBuilder hanging_tangerine_soul_lantern_model = models()
+             .withExistingParent("tangerine_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", tangerine_soul_lantern_texture);
+ 
+         getVariantBuilder(tangerine_soul_lantern)
+             .partialState().with(LanternBlock.HANGING, true)
+             .modelForState().modelFile(hanging_tangerine_soul_lantern_model).addModel()
+             .partialState().with(LanternBlock.HANGING, false)
+             .modelForState().modelFile(tangerine_soul_lantern_model).addModel();
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
          //regular
           LanternBlock lemon_lantern = foodblockcompatregistry.LEMON_LANTERN.get();
@@ -2119,6 +2232,22 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .modelForState().modelFile(orange_chain_model).rotationX(90).rotationY(90).addModel()
           .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
           .modelForState().modelFile(orange_chain_model).rotationX(90).addModel(); 
+     //------------------------------------------------------------tangerine-----------------------------------------------------------------------
+         ChainBlock tangerine_chain = foodblockcompatregistry.TANGERINE_CHAIN.get();
+         ResourceLocation tangerine_chain_texture = modLoc("block/tangerine_chain");
+         BlockModelBuilder tangerine_chain_model = models()
+          .withExistingParent("tangerine_chain", mcLoc("block/chain"))
+          .renderType("cutout_mipped_all")
+          .texture("all", tangerine_chain_texture)
+          .texture("particle", tangerine_chain_texture);
+
+          getVariantBuilder(tangerine_chain)
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Y)
+          .modelForState().modelFile(tangerine_chain_model).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.X)
+          .modelForState().modelFile(tangerine_chain_model).rotationX(90).rotationY(90).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
+          .modelForState().modelFile(tangerine_chain_model).rotationX(90).addModel(); 
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
          ChainBlock lemon_chain = foodblockcompatregistry.LEMON_CHAIN.get();
          ResourceLocation lemon_chain_texture = modLoc("block/lemon_chain");
@@ -2418,6 +2547,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/orange_ladder");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------tangerine-----------------------------------------------------------------------
+          LadderBlock tangerineladder = foodblockcompatregistry.TANGERINE_LADDER.get();
+
+          getVariantBuilder(tangerineladder)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/tangerine_ladder");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -2778,6 +2928,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/orange_table");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------tangerine-----------------------------------------------------------------------
+          HorizontalDirectionalBlock tangerinetable = foodblockcompatregistry.TANGERINE_TABLE.get();
+
+          getVariantBuilder(tangerinetable)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/tangerine_table");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -3711,6 +3882,122 @@ public class GM1BlockStateProvider extends BlockStateProvider
                     .renderType("cutout_mipped_all")
                     .texture("torch", orange_soul_wall_torch_texture)
                     .texture("particle", orange_soul_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+     //------------------------------------------------------------tangerine-----------------------------------------------------------------------
+       //regular
+        TorchBlock tangerine_torch = foodblockcompatregistry.TANGERINE_TORCH.get();
+        ResourceLocation tangerine_torch_texture = modLoc("block/tangerine_torch");
+        BlockModelBuilder tangerine_torch_model = models()
+        .withExistingParent("tangerine_torch", mcLoc("block/torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", tangerine_torch_texture)
+        .texture("particle", tangerine_torch_texture);
+
+        simpleBlock(tangerine_torch, tangerine_torch_model);
+
+        TorchBlock tangerine_wall_torch = foodblockcompatregistry.TANGERINE_WALL_TORCH.get();
+        BlockModelBuilder tangerine_wall_torch_model = models()
+        .withExistingParent("tangerine_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", tangerine_torch_texture)
+        .texture("particle", tangerine_torch_texture);
+        getVariantBuilder(tangerine_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("tangerine_wall_torch", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", tangerine_torch_texture)
+                    .texture("particle", tangerine_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //redstone
+        RedstoneTorchBlock tangerine_redstone_torch = foodblockcompatregistry.TANGERINE_REDSTONE_TORCH.get();
+        ResourceLocation tangerine_redstone_torch_texture = modLoc("block/tangerine_redstone_torch");
+        BlockModelBuilder tangerine_redstone_torch_model = models()
+        .withExistingParent("tangerine_redstone_torch", mcLoc("block/redstone_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", tangerine_redstone_torch_texture)
+        .texture("particle", tangerine_redstone_torch_texture);
+        
+
+        simpleBlock(tangerine_redstone_torch, tangerine_redstone_torch_model);
+
+        ResourceLocation tangerine_redstone_wall_torch_texture = modLoc("block/tangerine_redstone_torch");
+
+        RedstoneTorchBlock tangerine_redstone_wall_torch = foodblockcompatregistry.TANGERINE_REDSTONE_WALL_TORCH.get();
+        BlockModelBuilder tangerine_redstone_wall_torch_model = models()
+        .withExistingParent("tangerine_redstone_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", tangerine_redstone_wall_torch_texture)
+        .texture("particle", tangerine_redstone_wall_torch_texture);
+        getVariantBuilder(tangerine_redstone_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("tangerine_redstone_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", tangerine_redstone_wall_torch_texture)
+                    .texture("particle", tangerine_redstone_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //soul
+        TorchBlock tangerine_soul_torch = foodblockcompatregistry.TANGERINE_SOUL_TORCH.get();
+        ResourceLocation tangerine_soul_torch_texture = modLoc("block/tangerine_soul_torch");
+        BlockModelBuilder tangerine_soul_torch_model = models()
+        .withExistingParent("tangerine_soul_torch", mcLoc("block/soul_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", tangerine_soul_torch_texture)
+        .texture("particle", tangerine_soul_torch_texture);
+        
+
+        simpleBlock(tangerine_soul_torch, tangerine_soul_torch_model);
+
+        ResourceLocation tangerine_soul_wall_torch_texture = modLoc("block/tangerine_soul_torch");
+        TorchBlock tangerine_soul_wall_torch = foodblockcompatregistry.TANGERINE_SOUL_WALL_TORCH.get();
+        BlockModelBuilder tangerine_soul_wall_torch_model = models()
+        .withExistingParent("tangerine_soul_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", tangerine_soul_wall_torch_texture)
+        .texture("particle", tangerine_soul_wall_torch_texture);
+        getVariantBuilder(tangerine_soul_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("tangerine_soul_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", tangerine_soul_wall_torch_texture)
+                    .texture("particle", tangerine_soul_wall_torch_texture))
                 .rotationY(rotation)
                 .build();
             });
@@ -5257,6 +5544,50 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationY(rotation)
                       .build();
               });
+     //------------------------------------------------------------tangerine-----------------------------------------------------------------------
+          FurnaceBlock tangerine_furnace = foodblockcompatregistry.TANGERINE_FURNACE.get();
+          ResourceLocation tangerine_furnace_unlit_texture = modLoc("block/tangerine_furnace");
+          ResourceLocation tangerine_furnace_lit_texture = modLoc("block/tangerine_furnace_lit");
+          ResourceLocation tangerine_furnace_side = modLoc("block/tangerine_block");
+          
+          // Define the model for the unlit state
+          BlockModelBuilder tangerine_furnace_model_unlit = models()
+              .withExistingParent("tangerine_furnace_model_unlit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", tangerine_furnace_side)
+              .texture("top", tangerine_furnace_side)
+              .texture("front", tangerine_furnace_unlit_texture)
+              .texture("particle", tangerine_furnace_side);
+          
+          // Define the model for the lit state
+          BlockModelBuilder tangerine_furnace_model_lit = models()
+              .withExistingParent("tangerine_furnace_model_lit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", tangerine_furnace_side)
+              .texture("top", tangerine_furnace_side)
+              .texture("front", tangerine_furnace_lit_texture)
+              .texture("particle", tangerine_furnace_side);
+          
+          // Configure variants for the tangerine_furnace block
+          getVariantBuilder(tangerine_furnace)
+              .forAllStates(state -> {
+                  Boolean lit = state.getValue(BlockStateProperties.LIT);
+                  Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                  int rotation = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+
+                  ResourceLocation modelLocation = lit ? modLoc("block/tangerine_furnace_model_lit") : modLoc("block/tangerine_furnace_model_unlit");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotation)
+                      .build();
+              });
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
           FurnaceBlock lemon_furnace = foodblockcompatregistry.LEMON_FURNACE.get();
           ResourceLocation lemon_furnace_unlit_texture = modLoc("block/lemon_furnace");
@@ -5805,6 +6136,18 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .modelFile(models().getExistingFile(modelLocation))
                   .build();
           });
+     //------------------------------------------------------------tangerine-----------------------------------------------------------------------
+          foodpathtypeminislab tangerine_stone_path = foodblockcompatregistry.TANGERINE_STONE_PATH.get();
+
+          getVariantBuilder(tangerine_stone_path)
+          .forAllStates(state -> {
+
+              ResourceLocation modelLocation = modLoc("block/tangerine_stone_path");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .build();
+          });
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
           foodpathtypeminislab lemon_stone_path = foodblockcompatregistry.LEMON_STONE_PATH.get();
 
@@ -6221,6 +6564,54 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   };
 
                   ResourceLocation modelLocation = open ? modLoc("block/orange_barrel_model_open") : modLoc("block/orange_barrel_model_closed");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotationY)
+                      .rotationX(rotationX)
+                      .build();
+              });
+     //------------------------------------------------------------tangerine-----------------------------------------------------------------------
+          foodBarrel tangerine_barrel = foodblockcompatregistry.TANGERINE_BARREL.get();
+          ResourceLocation tangerine_barrel_closed_texture = modLoc("block/tangerine_barrel_top_closed");
+          ResourceLocation tangerine_barrel_open_texture = modLoc("block/tangerine_barrel_top_open");
+          ResourceLocation tangerine_barrel_side = modLoc("block/tangerine_barrel_side");
+          ResourceLocation tangerine_barrel_bottom = modLoc("block/tangerine_barrel_bottom");
+          
+          BlockModelBuilder tangerine_barrel_model_closed = models()
+              .withExistingParent("tangerine_barrel_model_closed", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", tangerine_barrel_side)
+              .texture("bottom", tangerine_barrel_bottom)
+              .texture("top", tangerine_barrel_closed_texture)
+              .texture("particle", tangerine_barrel_side);
+          
+          BlockModelBuilder tangerine_barrel_model_open = models()
+              .withExistingParent("tangerine_barrel_model_open", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", tangerine_barrel_side)
+              .texture("bottom", tangerine_barrel_bottom)
+              .texture("top", tangerine_barrel_open_texture)
+              .texture("particle", tangerine_barrel_side);
+          
+          getVariantBuilder(tangerine_barrel)
+              .forAllStates(state -> {
+                  Boolean open = state.getValue(BlockStateProperties.OPEN);
+                  Direction facing = state.getValue(BlockStateProperties.FACING);
+                  int rotationY = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+                  int rotationX = switch (facing) {
+                      case UP -> 0;
+                      case DOWN -> 180;
+                      default -> 90;
+                  };
+
+                  ResourceLocation modelLocation = open ? modLoc("block/tangerine_barrel_model_open") : modLoc("block/tangerine_barrel_model_closed");
               
                   return ConfiguredModel.builder()
                       .modelFile(models().getExistingFile(modelLocation))
@@ -6885,6 +7276,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .rotationY(rotationY)
                   .build();
           });
+     //------------------------------------------------------------tangerine-----------------------------------------------------------------------
+          foodChairBlock tangerineChair = foodblockcompatregistry.TANGERINE_CHAIR.get();
+
+          getVariantBuilder(tangerineChair)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/tangerine_chair");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
           foodChairBlock lemonChair = foodblockcompatregistry.LEMON_CHAIR.get();
 
@@ -7239,6 +7651,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/orange_bed");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------tangerine-----------------------------------------------------------------------
+          foodBed tangerineBed = foodblockcompatregistry.TANGERINE_BED.get();
+
+          getVariantBuilder(tangerineBed)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/tangerine_bed");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -7743,6 +8176,51 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = open ? modLoc("block/medium_orange_cabinet_open") : modLoc("block/medium_orange_cabinet");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------tangerine-----------------------------------------------------------------------
+         //small
+          smallFoodCabinet tangerineCabinet = foodblockcompatregistry.SMALL_TANGERINE_CABINET.get();
+
+          getVariantBuilder(tangerineCabinet)
+          .forAllStates(state -> {
+              Boolean open = state.getValue(BlockStateProperties.OPEN);
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = open ? modLoc("block/tangerine_cabinet_open") : modLoc("block/tangerine_cabinet");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+         //medium
+          mediumFoodCabinet tangerineMediumCabinet = foodblockcompatregistry.MEDIUM_TANGERINE_CABINET.get();
+
+          getVariantBuilder(tangerineMediumCabinet)
+          .forAllStates(state -> {
+              Boolean open = state.getValue(BlockStateProperties.OPEN);
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = open ? modLoc("block/medium_tangerine_cabinet_open") : modLoc("block/medium_tangerine_cabinet");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))

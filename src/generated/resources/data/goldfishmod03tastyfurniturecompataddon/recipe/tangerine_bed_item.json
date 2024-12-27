@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "goldfishmod03tastyfurniturecompataddon:tangerine_ingot"
+    },
+    "B": {
+      "item": "goldfishmod03tastyfurniturecompataddon:tangerine_slab_item"
+    },
+    "C": {
+      "item": "goldfishmod03tastyfurniturecompataddon:tangerine_carpet_item"
+    }
+  },
+  "pattern": [
+    "CCC",
+    "BBB",
+    "A A"
+  ],
+  "result": {
+    "count": 1,
+    "id": "goldfishmod03tastyfurniturecompataddon:tangerine_bed_item"
+  }
+}
