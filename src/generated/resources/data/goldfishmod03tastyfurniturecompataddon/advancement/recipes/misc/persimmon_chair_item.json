@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_persimmon_slab": {
+      "conditions": {
+        "items": [
+          {
+            "items": "goldfishmod03tastyfurniturecompataddon:persimmon_slab_item"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "goldfishmod03tastyfurniturecompataddon:persimmon_chair_item"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_persimmon_slab"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "goldfishmod03tastyfurniturecompataddon:persimmon_chair_item"
+    ]
+  }
+}

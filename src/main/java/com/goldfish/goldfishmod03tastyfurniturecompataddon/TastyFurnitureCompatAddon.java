@@ -178,6 +178,7 @@ public class TastyFurnitureCompatAddon
                 event.registerBlockEntityRenderer(foodblockcompatregistry.COCONUT_SIGN_ENTITY.get(), SignRenderer::new);
                 event.registerBlockEntityRenderer(foodblockcompatregistry.ORANGE_SIGN_ENTITY.get(), SignRenderer::new);
                 event.registerBlockEntityRenderer(foodblockcompatregistry.TANGERINE_SIGN_ENTITY.get(), SignRenderer::new);
+                event.registerBlockEntityRenderer(foodblockcompatregistry.PERSIMMON_SIGN_ENTITY.get(), SignRenderer::new);
                 event.registerBlockEntityRenderer(foodblockcompatregistry.LEMON_SIGN_ENTITY.get(), SignRenderer::new);
                 event.registerBlockEntityRenderer(foodblockcompatregistry.BUDDHASHAND_SIGN_ENTITY.get(), SignRenderer::new);
                 event.registerBlockEntityRenderer(foodblockcompatregistry.LIME_SIGN_ENTITY.get(), SignRenderer::new);

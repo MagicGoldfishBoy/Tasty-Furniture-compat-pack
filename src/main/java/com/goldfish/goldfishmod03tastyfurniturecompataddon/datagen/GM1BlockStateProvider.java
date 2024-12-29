@@ -154,6 +154,19 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........tiles
           net.minecraft.world.level.block.Block tangerine_tiles_block = foodblockcompatregistry.TANGERINE_TILES_BLOCK.get();
           simpleBlock(tangerine_tiles_block);
+     //------------------------------------------------------------persimmon-----------------------------------------------------------------------
+      //.........plain
+          net.minecraft.world.level.block.Block persimmon_block = foodblockcompatregistry.PERSIMMON_BLOCK.get();
+          simpleBlock(persimmon_block);
+      //.........bricks
+          net.minecraft.world.level.block.Block persimmon_bricks_block = foodblockcompatregistry.PERSIMMON_BRICKS_BLOCK.get();
+          simpleBlock(persimmon_bricks_block);
+      //.........chiseled
+          net.minecraft.world.level.block.Block persimmon_chiseled_block = foodblockcompatregistry.PERSIMMON_CHISELED_BLOCK.get();
+          simpleBlock(persimmon_chiseled_block);
+      //.........tiles
+          net.minecraft.world.level.block.Block persimmon_tiles_block = foodblockcompatregistry.PERSIMMON_TILES_BLOCK.get();
+          simpleBlock(persimmon_tiles_block);
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
       //.........plain
           net.minecraft.world.level.block.Block lemon_block = foodblockcompatregistry.LEMON_BLOCK.get();
@@ -363,6 +376,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
           SlabBlock tangerine_bricks_slab = foodblockcompatregistry.TANGERINE_BRICKS_SLAB.get();
           ResourceLocation tangerine_bricks_block_texture = modLoc("block/tangerine_bricks_block");
           slabBlock(tangerine_bricks_slab, tangerine_bricks_block_texture, tangerine_bricks_block_texture);
+     //------------------------------------------------------------persimmon-----------------------------------------------------------------------
+      //.........plain
+          SlabBlock persimmon_slab = foodblockcompatregistry.PERSIMMON_SLAB.get();
+          ResourceLocation persimmon_block_texture = modLoc("block/persimmon_block");
+          slabBlock(persimmon_slab, persimmon_block_texture, persimmon_block_texture);
+      //.........bricks
+          SlabBlock persimmon_bricks_slab = foodblockcompatregistry.PERSIMMON_BRICKS_SLAB.get();
+          ResourceLocation persimmon_bricks_block_texture = modLoc("block/persimmon_bricks_block");
+          slabBlock(persimmon_bricks_slab, persimmon_bricks_block_texture, persimmon_bricks_block_texture);
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
       //.........plain
           SlabBlock lemon_slab = foodblockcompatregistry.LEMON_SLAB.get();
@@ -514,6 +536,13 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........bricks
           StairBlock tangerine_bricks_stairs = foodblockcompatregistry.TANGERINE_BRICKS_STAIRS.get();
           stairsBlock(tangerine_bricks_stairs, tangerine_bricks_block_texture);
+     //------------------------------------------------------------persimmon-----------------------------------------------------------------------
+      //.........plain
+          StairBlock persimmon_stairs = foodblockcompatregistry.PERSIMMON_STAIRS.get();
+          stairsBlock(persimmon_stairs, persimmon_block_texture);
+      //.........bricks
+          StairBlock persimmon_bricks_stairs = foodblockcompatregistry.PERSIMMON_BRICKS_STAIRS.get();
+          stairsBlock(persimmon_bricks_stairs, persimmon_bricks_block_texture);
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
       //.........plain
           StairBlock lemon_stairs = foodblockcompatregistry.LEMON_STAIRS.get();
@@ -629,6 +658,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation tangerine_bars_texture = modLoc("block/tangerine_bars");
           ResourceLocation tangerine_bars_rim_texture = modLoc("block/tangerine_block");
           paneBlockWithRenderType(tangerine_bars, "tangerine_bars", tangerine_bars_texture, tangerine_bars_rim_texture, "cutout_mipped_all"); 
+     //------------------------------------------------------------persimmon-----------------------------------------------------------------------
+          IronBarsBlock persimmon_bars = foodblockcompatregistry.PERSIMMON_BARS.get(); 
+          ResourceLocation persimmon_bars_texture = modLoc("block/persimmon_bars");
+          ResourceLocation persimmon_bars_rim_texture = modLoc("block/persimmon_block");
+          paneBlockWithRenderType(persimmon_bars, "persimmon_bars", persimmon_bars_texture, persimmon_bars_rim_texture, "cutout_mipped_all"); 
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
           IronBarsBlock lemon_bars = foodblockcompatregistry.LEMON_BARS.get(); 
           ResourceLocation lemon_bars_texture = modLoc("block/lemon_bars");
@@ -722,6 +756,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation tangerine_door_top_texture = modLoc("block/tangerine_door_top");
           ResourceLocation tangerine_door_bottom_texture = modLoc("block/tangerine_door_bottom");
           doorBlockWithRenderType(tangerine_door, "tangerine_door", tangerine_door_bottom_texture, tangerine_door_top_texture, "cutout_mipped_all"); 
+     //------------------------------------------------------------persimmon-----------------------------------------------------------------------
+          DoorBlock persimmon_door = foodblockcompatregistry.PERSIMMON_DOOR.get(); 
+          ResourceLocation persimmon_door_top_texture = modLoc("block/persimmon_door_top");
+          ResourceLocation persimmon_door_bottom_texture = modLoc("block/persimmon_door_bottom");
+          doorBlockWithRenderType(persimmon_door, "persimmon_door", persimmon_door_bottom_texture, persimmon_door_top_texture, "cutout_mipped_all"); 
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
           DoorBlock lemon_door = foodblockcompatregistry.LEMON_DOOR.get(); 
           ResourceLocation lemon_door_top_texture = modLoc("block/lemon_door_top");
@@ -808,6 +847,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ButtonBlock tangerine_button = foodblockcompatregistry.TANGERINE_BUTTON.get();
           ResourceLocation tangerine_button_texture = modLoc("block/tangerine_block");
           buttonBlock(tangerine_button, tangerine_button_texture);
+     //------------------------------------------------------------persimmon-----------------------------------------------------------------------
+          ButtonBlock persimmon_button = foodblockcompatregistry.PERSIMMON_BUTTON.get();
+          ResourceLocation persimmon_button_texture = modLoc("block/persimmon_block");
+          buttonBlock(persimmon_button, persimmon_button_texture);
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
           ButtonBlock lemon_button = foodblockcompatregistry.LEMON_BUTTON.get();
           ResourceLocation lemon_button_texture = modLoc("block/lemon_block");
@@ -918,6 +961,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
           FenceGateBlock tangerine_gate = foodblockcompatregistry.TANGERINE_GATE.get();
           ResourceLocation tangerine_gate_texture = modLoc("block/tangerine_block");
           fenceGateBlock(tangerine_gate, tangerine_gate_texture);
+     //------------------------------------------------------------persimmon-----------------------------------------------------------------------
+       //fence
+          FenceBlock persimmon_fence = foodblockcompatregistry.PERSIMMON_FENCE.get();
+          ResourceLocation persimmon_fence_texture = modLoc("block/persimmon_block");
+          fenceBlock(persimmon_fence, persimmon_fence_texture);
+       //gate
+          FenceGateBlock persimmon_gate = foodblockcompatregistry.PERSIMMON_GATE.get();
+          ResourceLocation persimmon_gate_texture = modLoc("block/persimmon_block");
+          fenceGateBlock(persimmon_gate, persimmon_gate_texture);
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
        //fence
           FenceBlock lemon_fence = foodblockcompatregistry.LEMON_FENCE.get();
@@ -1048,6 +1100,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           PressurePlateBlock tangerine_pressure_plate = foodblockcompatregistry.TANGERINE_PRESSURE_PLATE.get();
           ResourceLocation tangerine_pressure_plate_texture = modLoc("block/tangerine_block");
           pressurePlateBlock(tangerine_pressure_plate, tangerine_pressure_plate_texture);
+     //------------------------------------------------------------persimmon-----------------------------------------------------------------------
+          PressurePlateBlock persimmon_pressure_plate = foodblockcompatregistry.PERSIMMON_PRESSURE_PLATE.get();
+          ResourceLocation persimmon_pressure_plate_texture = modLoc("block/persimmon_block");
+          pressurePlateBlock(persimmon_pressure_plate, persimmon_pressure_plate_texture);
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
           PressurePlateBlock lemon_pressure_plate = foodblockcompatregistry.LEMON_PRESSURE_PLATE.get();
           ResourceLocation lemon_pressure_plate_texture = modLoc("block/lemon_block");
@@ -1130,6 +1186,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
            WallSignBlock tangerine_wall_sign = foodblockcompatregistry.TANGERINE_WALL_SIGN.get();
            ResourceLocation tangerine_sign_texture = modLoc("block/tangerine_block");
            signBlock(tangerine_sign, tangerine_wall_sign, tangerine_sign_texture);
+     //------------------------------------------------------------persimmon-----------------------------------------------------------------------
+           StandingSignBlock persimmon_sign = foodblockcompatregistry.PERSIMMON_STANDING_SIGN.get();
+           WallSignBlock persimmon_wall_sign = foodblockcompatregistry.PERSIMMON_WALL_SIGN.get();
+           ResourceLocation persimmon_sign_texture = modLoc("block/persimmon_block");
+           signBlock(persimmon_sign, persimmon_wall_sign, persimmon_sign_texture);
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
            StandingSignBlock lemon_sign = foodblockcompatregistry.LEMON_STANDING_SIGN.get();
            WallSignBlock lemon_wall_sign = foodblockcompatregistry.LEMON_WALL_SIGN.get();
@@ -1216,6 +1277,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           TrapDoorBlock tangerine_trapdoor = foodblockcompatregistry.TANGERINE_TRAPDOOR.get(); 
           ResourceLocation tangerine_trapdoor_texture = modLoc("block/tangerine_block");
           trapdoorBlockWithRenderType(tangerine_trapdoor, "tangerine_trapdoor", tangerine_trapdoor_texture, false, tangerine_trapdoor_texture);
+     //------------------------------------------------------------persimmon-----------------------------------------------------------------------
+          TrapDoorBlock persimmon_trapdoor = foodblockcompatregistry.PERSIMMON_TRAPDOOR.get(); 
+          ResourceLocation persimmon_trapdoor_texture = modLoc("block/persimmon_block");
+          trapdoorBlockWithRenderType(persimmon_trapdoor, "persimmon_trapdoor", persimmon_trapdoor_texture, false, persimmon_trapdoor_texture);
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
           TrapDoorBlock lemon_trapdoor = foodblockcompatregistry.LEMON_TRAPDOOR.get(); 
           ResourceLocation lemon_trapdoor_texture = modLoc("block/lemon_block");
@@ -1284,6 +1349,9 @@ public class GM1BlockStateProvider extends BlockStateProvider
      //------------------------------------------------------------tangerine-----------------------------------------------------------------------
           Block tangerine_lamp = foodblockcompatregistry.TANGERINE_LAMP.get();
           simpleBlock(tangerine_lamp);
+     //------------------------------------------------------------persimmon-----------------------------------------------------------------------
+          Block persimmon_lamp = foodblockcompatregistry.PERSIMMON_LAMP.get();
+          simpleBlock(persimmon_lamp);
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
           Block lemon_lamp = foodblockcompatregistry.LEMON_LAMP.get();
           simpleBlock(lemon_lamp);
@@ -1362,6 +1430,12 @@ public class GM1BlockStateProvider extends BlockStateProvider
           BlockModelBuilder tangerine_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(tangerine_carpet).getPath(), mcLoc("block/carpet"))
           .texture("wool", tangerine_carpet_texture);
           simpleBlock(tangerine_carpet, new ModelFile.UncheckedModelFile(tangerine_carpet_model.getLocation()));
+     //------------------------------------------------------------persimmon-----------------------------------------------------------------------
+          CarpetBlock persimmon_carpet = foodblockcompatregistry.PERSIMMON_CARPET.get();
+          ResourceLocation persimmon_carpet_texture = modLoc("block/persimmon_carpet");
+          BlockModelBuilder persimmon_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(persimmon_carpet).getPath(), mcLoc("block/carpet"))
+          .texture("wool", persimmon_carpet_texture);
+          simpleBlock(persimmon_carpet, new ModelFile.UncheckedModelFile(persimmon_carpet_model.getLocation()));
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
           CarpetBlock lemon_carpet = foodblockcompatregistry.LEMON_CARPET.get();
           ResourceLocation lemon_carpet_texture = modLoc("block/lemon_carpet");
@@ -1704,6 +1778,45 @@ public class GM1BlockStateProvider extends BlockStateProvider
              .modelForState().modelFile(hanging_tangerine_soul_lantern_model).addModel()
              .partialState().with(LanternBlock.HANGING, false)
              .modelForState().modelFile(tangerine_soul_lantern_model).addModel();
+     //------------------------------------------------------------persimmon-----------------------------------------------------------------------
+         //regular
+          LanternBlock persimmon_lantern = foodblockcompatregistry.PERSIMMON_LANTERN.get();
+          ResourceLocation persimmon_lantern_texture = modLoc("block/persimmon_lantern");
+  
+          BlockModelBuilder persimmon_lantern_model = models()
+              .withExistingParent("persimmon_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", persimmon_lantern_texture);
+  
+          BlockModelBuilder hanging_persimmon_lantern_model = models()
+              .withExistingParent("persimmon_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", persimmon_lantern_texture);
+  
+          getVariantBuilder(persimmon_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_persimmon_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(persimmon_lantern_model).addModel();
+         //soul
+         LanternBlock persimmon_soul_lantern = foodblockcompatregistry.PERSIMMON_SOUL_LANTERN.get();
+         ResourceLocation persimmon_soul_lantern_texture = modLoc("block/persimmon_soul_lantern");
+ 
+         BlockModelBuilder persimmon_soul_lantern_model = models()
+             .withExistingParent("persimmon_soul_lantern", mcLoc("block/lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", persimmon_soul_lantern_texture);
+ 
+         BlockModelBuilder hanging_persimmon_soul_lantern_model = models()
+             .withExistingParent("persimmon_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", persimmon_soul_lantern_texture);
+ 
+         getVariantBuilder(persimmon_soul_lantern)
+             .partialState().with(LanternBlock.HANGING, true)
+             .modelForState().modelFile(hanging_persimmon_soul_lantern_model).addModel()
+             .partialState().with(LanternBlock.HANGING, false)
+             .modelForState().modelFile(persimmon_soul_lantern_model).addModel();
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
          //regular
           LanternBlock lemon_lantern = foodblockcompatregistry.LEMON_LANTERN.get();
@@ -2248,6 +2361,22 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .modelForState().modelFile(tangerine_chain_model).rotationX(90).rotationY(90).addModel()
           .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
           .modelForState().modelFile(tangerine_chain_model).rotationX(90).addModel(); 
+     //------------------------------------------------------------persimmon-----------------------------------------------------------------------
+         ChainBlock persimmon_chain = foodblockcompatregistry.PERSIMMON_CHAIN.get();
+         ResourceLocation persimmon_chain_texture = modLoc("block/persimmon_chain");
+         BlockModelBuilder persimmon_chain_model = models()
+          .withExistingParent("persimmon_chain", mcLoc("block/chain"))
+          .renderType("cutout_mipped_all")
+          .texture("all", persimmon_chain_texture)
+          .texture("particle", persimmon_chain_texture);
+
+          getVariantBuilder(persimmon_chain)
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Y)
+          .modelForState().modelFile(persimmon_chain_model).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.X)
+          .modelForState().modelFile(persimmon_chain_model).rotationX(90).rotationY(90).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
+          .modelForState().modelFile(persimmon_chain_model).rotationX(90).addModel(); 
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
          ChainBlock lemon_chain = foodblockcompatregistry.LEMON_CHAIN.get();
          ResourceLocation lemon_chain_texture = modLoc("block/lemon_chain");
@@ -2568,6 +2697,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/tangerine_ladder");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------persimmon-----------------------------------------------------------------------
+          LadderBlock persimmonladder = foodblockcompatregistry.PERSIMMON_LADDER.get();
+
+          getVariantBuilder(persimmonladder)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/persimmon_ladder");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -2949,6 +3099,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/tangerine_table");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------persimmon-----------------------------------------------------------------------
+          HorizontalDirectionalBlock persimmontable = foodblockcompatregistry.PERSIMMON_TABLE.get();
+
+          getVariantBuilder(persimmontable)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/persimmon_table");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -3998,6 +4169,122 @@ public class GM1BlockStateProvider extends BlockStateProvider
                     .renderType("cutout_mipped_all")
                     .texture("torch", tangerine_soul_wall_torch_texture)
                     .texture("particle", tangerine_soul_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+     //------------------------------------------------------------persimmon-----------------------------------------------------------------------
+       //regular
+        TorchBlock persimmon_torch = foodblockcompatregistry.PERSIMMON_TORCH.get();
+        ResourceLocation persimmon_torch_texture = modLoc("block/persimmon_torch");
+        BlockModelBuilder persimmon_torch_model = models()
+        .withExistingParent("persimmon_torch", mcLoc("block/torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", persimmon_torch_texture)
+        .texture("particle", persimmon_torch_texture);
+
+        simpleBlock(persimmon_torch, persimmon_torch_model);
+
+        TorchBlock persimmon_wall_torch = foodblockcompatregistry.PERSIMMON_WALL_TORCH.get();
+        BlockModelBuilder persimmon_wall_torch_model = models()
+        .withExistingParent("persimmon_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", persimmon_torch_texture)
+        .texture("particle", persimmon_torch_texture);
+        getVariantBuilder(persimmon_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("persimmon_wall_torch", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", persimmon_torch_texture)
+                    .texture("particle", persimmon_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //redstone
+        RedstoneTorchBlock persimmon_redstone_torch = foodblockcompatregistry.PERSIMMON_REDSTONE_TORCH.get();
+        ResourceLocation persimmon_redstone_torch_texture = modLoc("block/persimmon_redstone_torch");
+        BlockModelBuilder persimmon_redstone_torch_model = models()
+        .withExistingParent("persimmon_redstone_torch", mcLoc("block/redstone_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", persimmon_redstone_torch_texture)
+        .texture("particle", persimmon_redstone_torch_texture);
+        
+
+        simpleBlock(persimmon_redstone_torch, persimmon_redstone_torch_model);
+
+        ResourceLocation persimmon_redstone_wall_torch_texture = modLoc("block/persimmon_redstone_torch");
+
+        RedstoneTorchBlock persimmon_redstone_wall_torch = foodblockcompatregistry.PERSIMMON_REDSTONE_WALL_TORCH.get();
+        BlockModelBuilder persimmon_redstone_wall_torch_model = models()
+        .withExistingParent("persimmon_redstone_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", persimmon_redstone_wall_torch_texture)
+        .texture("particle", persimmon_redstone_wall_torch_texture);
+        getVariantBuilder(persimmon_redstone_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("persimmon_redstone_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", persimmon_redstone_wall_torch_texture)
+                    .texture("particle", persimmon_redstone_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //soul
+        TorchBlock persimmon_soul_torch = foodblockcompatregistry.PERSIMMON_SOUL_TORCH.get();
+        ResourceLocation persimmon_soul_torch_texture = modLoc("block/persimmon_soul_torch");
+        BlockModelBuilder persimmon_soul_torch_model = models()
+        .withExistingParent("persimmon_soul_torch", mcLoc("block/soul_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", persimmon_soul_torch_texture)
+        .texture("particle", persimmon_soul_torch_texture);
+        
+
+        simpleBlock(persimmon_soul_torch, persimmon_soul_torch_model);
+
+        ResourceLocation persimmon_soul_wall_torch_texture = modLoc("block/persimmon_soul_torch");
+        TorchBlock persimmon_soul_wall_torch = foodblockcompatregistry.PERSIMMON_SOUL_WALL_TORCH.get();
+        BlockModelBuilder persimmon_soul_wall_torch_model = models()
+        .withExistingParent("persimmon_soul_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", persimmon_soul_wall_torch_texture)
+        .texture("particle", persimmon_soul_wall_torch_texture);
+        getVariantBuilder(persimmon_soul_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("persimmon_soul_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", persimmon_soul_wall_torch_texture)
+                    .texture("particle", persimmon_soul_wall_torch_texture))
                 .rotationY(rotation)
                 .build();
             });
@@ -5588,6 +5875,50 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationY(rotation)
                       .build();
               });
+     //------------------------------------------------------------persimmon-----------------------------------------------------------------------
+          FurnaceBlock persimmon_furnace = foodblockcompatregistry.PERSIMMON_FURNACE.get();
+          ResourceLocation persimmon_furnace_unlit_texture = modLoc("block/persimmon_furnace");
+          ResourceLocation persimmon_furnace_lit_texture = modLoc("block/persimmon_furnace_lit");
+          ResourceLocation persimmon_furnace_side = modLoc("block/persimmon_block");
+          
+          // Define the model for the unlit state
+          BlockModelBuilder persimmon_furnace_model_unlit = models()
+              .withExistingParent("persimmon_furnace_model_unlit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", persimmon_furnace_side)
+              .texture("top", persimmon_furnace_side)
+              .texture("front", persimmon_furnace_unlit_texture)
+              .texture("particle", persimmon_furnace_side);
+          
+          // Define the model for the lit state
+          BlockModelBuilder persimmon_furnace_model_lit = models()
+              .withExistingParent("persimmon_furnace_model_lit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", persimmon_furnace_side)
+              .texture("top", persimmon_furnace_side)
+              .texture("front", persimmon_furnace_lit_texture)
+              .texture("particle", persimmon_furnace_side);
+          
+          // Configure variants for the persimmon_furnace block
+          getVariantBuilder(persimmon_furnace)
+              .forAllStates(state -> {
+                  Boolean lit = state.getValue(BlockStateProperties.LIT);
+                  Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                  int rotation = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+
+                  ResourceLocation modelLocation = lit ? modLoc("block/persimmon_furnace_model_lit") : modLoc("block/persimmon_furnace_model_unlit");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotation)
+                      .build();
+              });
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
           FurnaceBlock lemon_furnace = foodblockcompatregistry.LEMON_FURNACE.get();
           ResourceLocation lemon_furnace_unlit_texture = modLoc("block/lemon_furnace");
@@ -6148,6 +6479,18 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .modelFile(models().getExistingFile(modelLocation))
                   .build();
           });
+     //------------------------------------------------------------persimmon-----------------------------------------------------------------------
+          foodpathtypeminislab persimmon_stone_path = foodblockcompatregistry.PERSIMMON_STONE_PATH.get();
+
+          getVariantBuilder(persimmon_stone_path)
+          .forAllStates(state -> {
+
+              ResourceLocation modelLocation = modLoc("block/persimmon_stone_path");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .build();
+          });
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
           foodpathtypeminislab lemon_stone_path = foodblockcompatregistry.LEMON_STONE_PATH.get();
 
@@ -6612,6 +6955,54 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   };
 
                   ResourceLocation modelLocation = open ? modLoc("block/tangerine_barrel_model_open") : modLoc("block/tangerine_barrel_model_closed");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotationY)
+                      .rotationX(rotationX)
+                      .build();
+              });
+     //------------------------------------------------------------persimmon-----------------------------------------------------------------------
+          foodBarrel persimmon_barrel = foodblockcompatregistry.PERSIMMON_BARREL.get();
+          ResourceLocation persimmon_barrel_closed_texture = modLoc("block/persimmon_barrel_top_closed");
+          ResourceLocation persimmon_barrel_open_texture = modLoc("block/persimmon_barrel_top_open");
+          ResourceLocation persimmon_barrel_side = modLoc("block/persimmon_barrel_side");
+          ResourceLocation persimmon_barrel_bottom = modLoc("block/persimmon_barrel_bottom");
+          
+          BlockModelBuilder persimmon_barrel_model_closed = models()
+              .withExistingParent("persimmon_barrel_model_closed", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", persimmon_barrel_side)
+              .texture("bottom", persimmon_barrel_bottom)
+              .texture("top", persimmon_barrel_closed_texture)
+              .texture("particle", persimmon_barrel_side);
+          
+          BlockModelBuilder persimmon_barrel_model_open = models()
+              .withExistingParent("persimmon_barrel_model_open", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", persimmon_barrel_side)
+              .texture("bottom", persimmon_barrel_bottom)
+              .texture("top", persimmon_barrel_open_texture)
+              .texture("particle", persimmon_barrel_side);
+          
+          getVariantBuilder(persimmon_barrel)
+              .forAllStates(state -> {
+                  Boolean open = state.getValue(BlockStateProperties.OPEN);
+                  Direction facing = state.getValue(BlockStateProperties.FACING);
+                  int rotationY = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+                  int rotationX = switch (facing) {
+                      case UP -> 0;
+                      case DOWN -> 180;
+                      default -> 90;
+                  };
+
+                  ResourceLocation modelLocation = open ? modLoc("block/persimmon_barrel_model_open") : modLoc("block/persimmon_barrel_model_closed");
               
                   return ConfiguredModel.builder()
                       .modelFile(models().getExistingFile(modelLocation))
@@ -7297,6 +7688,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .rotationY(rotationY)
                   .build();
           });
+     //------------------------------------------------------------persimmon-----------------------------------------------------------------------
+          foodChairBlock persimmonChair = foodblockcompatregistry.PERSIMMON_CHAIR.get();
+
+          getVariantBuilder(persimmonChair)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/persimmon_chair");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
           foodChairBlock lemonChair = foodblockcompatregistry.LEMON_CHAIR.get();
 
@@ -7672,6 +8084,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/tangerine_bed");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------persimmon-----------------------------------------------------------------------
+          foodBed persimmonBed = foodblockcompatregistry.PERSIMMON_BED.get();
+
+          getVariantBuilder(persimmonBed)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/persimmon_bed");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -8221,6 +8654,51 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = open ? modLoc("block/medium_tangerine_cabinet_open") : modLoc("block/medium_tangerine_cabinet");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------persimmon-----------------------------------------------------------------------
+         //small
+          smallFoodCabinet persimmonCabinet = foodblockcompatregistry.SMALL_PERSIMMON_CABINET.get();
+
+          getVariantBuilder(persimmonCabinet)
+          .forAllStates(state -> {
+              Boolean open = state.getValue(BlockStateProperties.OPEN);
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = open ? modLoc("block/persimmon_cabinet_open") : modLoc("block/persimmon_cabinet");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+         //medium
+          mediumFoodCabinet persimmonMediumCabinet = foodblockcompatregistry.MEDIUM_PERSIMMON_CABINET.get();
+
+          getVariantBuilder(persimmonMediumCabinet)
+          .forAllStates(state -> {
+              Boolean open = state.getValue(BlockStateProperties.OPEN);
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = open ? modLoc("block/medium_persimmon_cabinet_open") : modLoc("block/medium_persimmon_cabinet");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))

@@ -1,0 +1,15 @@
+{
+    "replace": false,
+    "values": [
+        {"id":"productivetrees:persimmon",
+        "required": false},
+        {"id":"fruitsdelight:persimmon",
+        "required": false},
+        {"id":"harvestcraft:persimmonitem",
+        "required": false},
+        {"id":"croptopia:persimmon",
+        "required": false},
+        {"id":"pamhc2trees:persimmonitem",
+        "required": false}
+    ]
+  }

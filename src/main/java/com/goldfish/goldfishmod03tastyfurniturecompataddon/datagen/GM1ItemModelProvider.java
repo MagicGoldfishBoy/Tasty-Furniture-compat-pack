@@ -565,6 +565,84 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("small_tangerine_cabinet_item", modLoc("block/tangerine_cabinet"));
        withExistingParent("medium_tangerine_cabinet_item", modLoc("block/medium_tangerine_cabinet"));
     //==============================================================================================================================================
+    //|                                                              Persimmon                                                                        |
+    //==============================================================================================================================================
+       //mush
+        withExistingParent("persimmon_mush", mcLoc("item/generated")).texture("layer0", "item/persimmon_mush");
+       //ingot
+        withExistingParent("persimmon_ingot", mcLoc("item/generated")).texture("layer0", "item/persimmon_ingot");
+       //nugget
+        withExistingParent("persimmon_nugget", mcLoc("item/generated")).texture("layer0", "item/persimmon_nugget");
+       //block
+        withExistingParent("persimmon_block_item", modLoc("block/persimmon_block"));
+       //bricks block
+        withExistingParent("persimmon_bricks_block_item", modLoc("block/persimmon_bricks_block"));
+       //chiseled block
+        withExistingParent("persimmon_chiseled_block_item", modLoc("block/persimmon_chiseled_block"));
+       //tiles block
+        withExistingParent("persimmon_tiles_block_item", modLoc("block/persimmon_tiles_block"));
+       //slab
+        slab("persimmon_slab_item", modLoc("block/persimmon_block"), modLoc("block/persimmon_block"), modLoc("block/persimmon_block"));
+       //bricks slab
+        slab("persimmon_bricks_slab_item", modLoc("block/persimmon_bricks_block"), modLoc("block/persimmon_bricks_block"), modLoc("block/persimmon_bricks_block"));
+       //stairs
+        stairs("persimmon_stairs_item", modLoc("block/persimmon_block"), modLoc("block/persimmon_block"), modLoc("block/persimmon_block"));
+       //bricks stairs
+        stairs("persimmon_bricks_stairs_item", modLoc("block/persimmon_bricks_block"), modLoc("block/persimmon_bricks_block"), modLoc("block/persimmon_bricks_block"));
+       //bars
+        withExistingParent("persimmon_bars_item", mcLoc("item/generated")).texture("layer0", "block/persimmon_bars");
+       //doors
+        withExistingParent("persimmon_door_item", mcLoc("item/generated")).texture("layer0", "item/persimmon_door_item");
+       //button
+        buttonInventory("persimmon_button_item", modLoc("block/persimmon_block"));
+       //fence
+        fenceInventory("persimmon_fence_item", modLoc("block/persimmon_block"));
+       //gate
+        withExistingParent("persimmon_gate_item", modLoc("block/persimmon_gate"));
+       //pressure plate
+        pressurePlate("persimmon_pressure_plate_item", modLoc("block/persimmon_block"));
+       //sign
+       withExistingParent("persimmon_sign_item", mcLoc("item/generated")).texture("layer0", "item/persimmon_sign");
+       //trapdoor
+       withExistingParent("persimmon_trapdoor_item", modLoc("block/persimmon_trapdoor_trapdoor_bottom"));
+       //lamp
+       withExistingParent("persimmon_lamp_item", modLoc("block/persimmon_lamp"));
+       //carpet
+       ResourceLocation persimmon_carpet_texture = modLoc("block/persimmon_carpet");
+       carpet("persimmon_carpet_item", persimmon_carpet_texture);
+       //lantern
+        //regular
+        withExistingParent("persimmon_lantern_item", modLoc("block/persimmon_lantern"));
+        //soul
+          withExistingParent("persimmon_soul_lantern_item", modLoc("block/persimmon_soul_lantern"));
+       //chain
+       withExistingParent("persimmon_chain_item", modLoc("block/persimmon_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
+       //ladder
+       withExistingParent("persimmon_ladder_item", modLoc("block/persimmon_ladder"));
+       //table
+       withExistingParent("persimmon_table_item", modLoc("block/persimmon_table"));
+       //torches
+        //regular
+        withExistingParent("persimmon_torch_item", modLoc("block/persimmon_torch"));
+        //redstone
+          withExistingParent("persimmon_redstone_torch_item", modLoc("block/persimmon_redstone_torch"));
+        //soul
+          withExistingParent("persimmon_soul_torch_item", modLoc("block/persimmon_soul_torch"));
+       //furnaces
+       withExistingParent("persimmon_furnace_item", modLoc("block/persimmon_furnace_model_unlit"));
+       //paths
+       withExistingParent("persimmon_stone_path_item", modLoc("block/persimmon_stone_path"));
+       //barrel
+       withExistingParent("persimmon_barrel_item", modLoc("block/persimmon_barrel_model_closed"));
+       //chair
+       withExistingParent("persimmon_chair_item", modLoc("block/persimmon_chair"));
+       //bed
+       withExistingParent("persimmon_bed_item", modLoc("block/persimmon_bed"));
+       //cabinet
+       withExistingParent("small_persimmon_cabinet_item", modLoc("block/persimmon_cabinet"));
+       withExistingParent("medium_persimmon_cabinet_item", modLoc("block/medium_persimmon_cabinet"));
+    //==============================================================================================================================================
     //|                                                              Lemon                                                                        |
     //==============================================================================================================================================
        //mush

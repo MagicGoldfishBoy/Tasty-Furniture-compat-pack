@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "goldfishmod03tastyfurniturecompataddon:block/persimmon_slab"
+    },
+    "type=double": {
+      "model": "goldfishmod03tastyfurniturecompataddon:block/persimmon_block"
+    },
+    "type=top": {
+      "model": "goldfishmod03tastyfurniturecompataddon:block/persimmon_slab_top"
+    }
+  }
+}
