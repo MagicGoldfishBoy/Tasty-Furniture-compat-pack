@@ -115,6 +115,11 @@ public class foodmaterialtypecompatregistry {
         "persimmon_wood_mat", 
         PLANT) 
     );
+    public static final WoodType SATSUMAWOODMAT = WoodType.register(
+     new WoodType(
+        "satsuma_wood_mat", 
+        PLANT) 
+    );
     public static final WoodType CORNWOODMAT = WoodType.register(
      new WoodType(
         "corn_wood_mat", 

@@ -643,6 +643,84 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("small_persimmon_cabinet_item", modLoc("block/persimmon_cabinet"));
        withExistingParent("medium_persimmon_cabinet_item", modLoc("block/medium_persimmon_cabinet"));
     //==============================================================================================================================================
+    //|                                                              Satsuma                                                                        |
+    //==============================================================================================================================================
+       //mush
+        withExistingParent("satsuma_mush", mcLoc("item/generated")).texture("layer0", "item/satsuma_mush");
+       //ingot
+        withExistingParent("satsuma_ingot", mcLoc("item/generated")).texture("layer0", "item/satsuma_ingot");
+       //nugget
+        withExistingParent("satsuma_nugget", mcLoc("item/generated")).texture("layer0", "item/satsuma_nugget");
+       //block
+        withExistingParent("satsuma_block_item", modLoc("block/satsuma_block"));
+       //bricks block
+        withExistingParent("satsuma_bricks_block_item", modLoc("block/satsuma_bricks_block"));
+       //chiseled block
+        withExistingParent("satsuma_chiseled_block_item", modLoc("block/satsuma_chiseled_block"));
+       //tiles block
+        withExistingParent("satsuma_tiles_block_item", modLoc("block/satsuma_tiles_block"));
+       //slab
+        slab("satsuma_slab_item", modLoc("block/satsuma_block"), modLoc("block/satsuma_block"), modLoc("block/satsuma_block"));
+       //bricks slab
+        slab("satsuma_bricks_slab_item", modLoc("block/satsuma_bricks_block"), modLoc("block/satsuma_bricks_block"), modLoc("block/satsuma_bricks_block"));
+       //stairs
+        stairs("satsuma_stairs_item", modLoc("block/satsuma_block"), modLoc("block/satsuma_block"), modLoc("block/satsuma_block"));
+       //bricks stairs
+        stairs("satsuma_bricks_stairs_item", modLoc("block/satsuma_bricks_block"), modLoc("block/satsuma_bricks_block"), modLoc("block/satsuma_bricks_block"));
+       //bars
+        withExistingParent("satsuma_bars_item", mcLoc("item/generated")).texture("layer0", "block/satsuma_bars");
+       //doors
+        withExistingParent("satsuma_door_item", mcLoc("item/generated")).texture("layer0", "item/satsuma_door_item");
+       //button
+        buttonInventory("satsuma_button_item", modLoc("block/satsuma_block"));
+       //fence
+        fenceInventory("satsuma_fence_item", modLoc("block/satsuma_block"));
+       //gate
+        withExistingParent("satsuma_gate_item", modLoc("block/satsuma_gate"));
+       //pressure plate
+        pressurePlate("satsuma_pressure_plate_item", modLoc("block/satsuma_block"));
+       //sign
+       withExistingParent("satsuma_sign_item", mcLoc("item/generated")).texture("layer0", "item/satsuma_sign");
+       //trapdoor
+       withExistingParent("satsuma_trapdoor_item", modLoc("block/satsuma_trapdoor_trapdoor_bottom"));
+       //lamp
+       withExistingParent("satsuma_lamp_item", modLoc("block/satsuma_lamp"));
+       //carpet
+       ResourceLocation satsuma_carpet_texture = modLoc("block/satsuma_carpet");
+       carpet("satsuma_carpet_item", satsuma_carpet_texture);
+       //lantern
+        //regular
+        withExistingParent("satsuma_lantern_item", modLoc("block/satsuma_lantern"));
+        //soul
+          withExistingParent("satsuma_soul_lantern_item", modLoc("block/satsuma_soul_lantern"));
+       //chain
+       withExistingParent("satsuma_chain_item", modLoc("block/satsuma_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
+       //ladder
+       withExistingParent("satsuma_ladder_item", modLoc("block/satsuma_ladder"));
+       //table
+       withExistingParent("satsuma_table_item", modLoc("block/satsuma_table"));
+       //torches
+        //regular
+        withExistingParent("satsuma_torch_item", modLoc("block/satsuma_torch"));
+        //redstone
+          withExistingParent("satsuma_redstone_torch_item", modLoc("block/satsuma_redstone_torch"));
+        //soul
+          withExistingParent("satsuma_soul_torch_item", modLoc("block/satsuma_soul_torch"));
+       //furnaces
+       withExistingParent("satsuma_furnace_item", modLoc("block/satsuma_furnace_model_unlit"));
+       //paths
+       withExistingParent("satsuma_stone_path_item", modLoc("block/satsuma_stone_path"));
+       //barrel
+       withExistingParent("satsuma_barrel_item", modLoc("block/satsuma_barrel_model_closed"));
+       //chair
+       withExistingParent("satsuma_chair_item", modLoc("block/satsuma_chair"));
+       //bed
+       withExistingParent("satsuma_bed_item", modLoc("block/satsuma_bed"));
+       //cabinet
+       withExistingParent("small_satsuma_cabinet_item", modLoc("block/satsuma_cabinet"));
+       withExistingParent("medium_satsuma_cabinet_item", modLoc("block/medium_satsuma_cabinet"));
+    //==============================================================================================================================================
     //|                                                              Lemon                                                                        |
     //==============================================================================================================================================
        //mush
