@@ -120,6 +120,11 @@ public class foodmaterialtypecompatregistry {
         "satsuma_wood_mat", 
         PLANT) 
     );
+    public static final WoodType MANDARINWOODMAT = WoodType.register(
+     new WoodType(
+        "mandarin_wood_mat", 
+        PLANT) 
+    );
     public static final WoodType CORNWOODMAT = WoodType.register(
      new WoodType(
         "corn_wood_mat", 

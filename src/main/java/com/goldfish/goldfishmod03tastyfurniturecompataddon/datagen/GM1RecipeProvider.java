@@ -76,6 +76,10 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         Registries.ITEM,
         ResourceLocation.fromNamespaceAndPath("goldfishmod03tastyfurniturecompataddon", "satsumas")
         );
+       public static final TagKey<Item> MANDARIN_TAG = TagKey.create(
+        Registries.ITEM,
+        ResourceLocation.fromNamespaceAndPath("goldfishmod03tastyfurniturecompataddon", "mandarins")
+        );
        public static final TagKey<Item> LEMON_TAG = TagKey.create(
         Registries.ITEM,
         ResourceLocation.fromNamespaceAndPath("goldfishmod03tastyfurniturecompataddon", "lemons")
@@ -490,6 +494,43 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', SATSUMA_TAG)
             .unlockedBy("has_mush_hammer", has(mushregistry.most_advanced_mushhammer.get()))
             .save(output, "satsuma_mush_from_most_advanced_mushhammer");
+  //----------------------------------------------------------------------------------------Mandarin-----------------------------------------------------------------------------------------------
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.MANDARIN_MUSH.get(), 1)
+            .pattern("ABB")
+            .pattern("BB ")
+            .pattern("   ")
+            .define('A', mushregistry.mushhammer.get())
+            .define('B', MANDARIN_TAG)
+            .unlockedBy("has_mush_hammer", has(mushregistry.mushhammer.get()))
+            .save(output);
+          //advanced
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.MANDARIN_MUSH.get(), 2)
+            .pattern("ABB")
+            .pattern("BB ")
+            .pattern("   ")
+            .define('A', mushregistry.advanced_mushhammer.get())
+            .define('B', MANDARIN_TAG)
+            .unlockedBy("has_mush_hammer", has(mushregistry.advanced_mushhammer.get()))
+            .save(output, "mandarin_mush_from_advanced_mushhammer");
+          //more advanced
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.MANDARIN_MUSH.get(), 4)
+            .pattern("ABB")
+            .pattern("BB ")
+            .pattern("   ")
+            .define('A', mushregistry.more_advanced_mushhammer.get())
+            .define('B', MANDARIN_TAG)
+            .unlockedBy("has_mush_hammer", has(mushregistry.more_advanced_mushhammer.get()))
+            .save(output, "mandarin_mush_from_more_advanced_mushhammer");
+          //most advanced
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.MANDARIN_MUSH.get(), 8)
+            .pattern("ABB")
+            .pattern("BB ")
+            .pattern("   ")
+            .define('A', mushregistry.most_advanced_mushhammer.get())
+            .define('B', MANDARIN_TAG)
+            .unlockedBy("has_mush_hammer", has(mushregistry.most_advanced_mushhammer.get()))
+            .save(output, "mandarin_mush_from_most_advanced_mushhammer");
   //----------------------------------------------------------------------------------------Lemon-----------------------------------------------------------------------------------------------
           //regular
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.LEMON_MUSH.get(), 1)
@@ -1187,6 +1228,38 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .requires(foodblockcompatitemregistry.SATSUMA_BLOCK_ITEM.get())
             .unlockedBy("has_satsuma_block", has(foodblockcompatitemregistry.SATSUMA_BLOCK_ITEM.get()))
             .save(output, "satsuma_ingot_from_unpacking");
+  //----------------------------------------------------------------------------------------Mandarin-----------------------------------------------------------------------------------------------
+          //crafting
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotcompatregistry.MANDARIN_INGOT.get(), 1)
+            .pattern("AAA")
+            .pattern("AAA")
+            .pattern("AAA")
+            .define('A', nuggetcompatregistry.MANDARIN_NUGGET.get())
+            .unlockedBy("has_mandarin_nugget", has(nuggetcompatregistry.MANDARIN_NUGGET.get()))
+            .save(output, "mandarin_ingot_from_crafting");
+          //smelting
+            SimpleCookingRecipeBuilder.smelting(Ingredient.of(mushcompatregistry.MANDARIN_MUSH.get()),
+            RecipeCategory.MISC,
+            ingotcompatregistry.MANDARIN_INGOT.get(),
+            1.0f,
+            200
+            )
+            .unlockedBy("has_mandarin_mush", has(mushcompatregistry.MANDARIN_MUSH.get()))
+            .save(output, "mandarin_ingot_from_smelting");
+          //blasting
+            SimpleCookingRecipeBuilder.blasting(Ingredient.of(mushcompatregistry.MANDARIN_MUSH.get()),
+            RecipeCategory.MISC,
+            ingotcompatregistry.MANDARIN_INGOT.get(),
+            1.0f,
+            100
+            )
+            .unlockedBy("has_mandarin_mush", has(mushcompatregistry.MANDARIN_MUSH.get()))
+            .save(output, "mandarin_ingot_from_blasting");
+          //unpacking
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotcompatregistry.MANDARIN_INGOT.get(), 9)
+            .requires(foodblockcompatitemregistry.MANDARIN_BLOCK_ITEM.get())
+            .unlockedBy("has_mandarin_block", has(foodblockcompatitemregistry.MANDARIN_BLOCK_ITEM.get()))
+            .save(output, "mandarin_ingot_from_unpacking");
   //----------------------------------------------------------------------------------------Lemon-----------------------------------------------------------------------------------------------
           //crafting
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotcompatregistry.LEMON_INGOT.get(), 1)
@@ -1585,6 +1658,11 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, nuggetcompatregistry.SATSUMA_NUGGET.get(), 9)
         .requires(ingotcompatregistry.SATSUMA_INGOT.get())
         .unlockedBy("has_satsuma_ingot", has(ingotcompatregistry.SATSUMA_INGOT.get()))
+        .save(output);
+  //----------------------------------------------------------------------------------------Mandarin-----------------------------------------------------------------------------------------------
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, nuggetcompatregistry.MANDARIN_NUGGET.get(), 9)
+        .requires(ingotcompatregistry.MANDARIN_INGOT.get())
+        .unlockedBy("has_mandarin_ingot", has(ingotcompatregistry.MANDARIN_INGOT.get()))
         .save(output);
   //----------------------------------------------------------------------------------------Lemon-----------------------------------------------------------------------------------------------
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, nuggetcompatregistry.LEMON_NUGGET.get(), 9)
@@ -2093,6 +2171,56 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.SATSUMA_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockcompatitemregistry.SATSUMA_TILES_BLOCK_ITEM.get())
           .unlockedBy("has_satsuma_block", has(foodblockcompatitemregistry.SATSUMA_BLOCK_ITEM.get()))
           .save(output, "satsuma_tiles_block_from_satsuma_block_stonecutting");
+  //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+        //plain
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.MANDARIN_BLOCK_ITEM.get(), 1)
+          .pattern("AAA")
+          .pattern("AAA")
+          .pattern("AAA")
+          .define('A', ingotcompatregistry.MANDARIN_INGOT.get())
+          .unlockedBy("has_mandarin_ingot", has(ingotcompatregistry.MANDARIN_INGOT.get()))
+          .save(output); 
+        //bricks
+         //crafting
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.MANDARIN_BRICKS_BLOCK_ITEM.get(), 4)
+          .pattern("AA ")
+          .pattern("AA ")
+          .pattern("   ")
+          .define('A', foodblockcompatitemregistry.MANDARIN_BLOCK_ITEM.get())
+          .unlockedBy("has_mandarin_block", has(foodblockcompatitemregistry.MANDARIN_BLOCK_ITEM.get()))
+          .save(output); 
+         //stonecutting     
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.MANDARIN_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockcompatitemregistry.MANDARIN_BRICKS_BLOCK_ITEM.get())
+          .unlockedBy("has_mandarin_block", has(foodblockcompatitemregistry.MANDARIN_BLOCK_ITEM.get()))
+          .save(output, "mandarin_bricks_block_from_mandarin_block_stonecutting");
+
+        //chiseled
+         //crafting
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.MANDARIN_CHISELED_BLOCK_ITEM.get())
+          .pattern("   ")
+          .pattern(" A ")
+          .pattern(" A ")
+          .define('A', foodblockcompatitemregistry.MANDARIN_SLAB_ITEM.get())
+          .unlockedBy("has_mandarin_slab", has(foodblockcompatitemregistry.MANDARIN_SLAB_ITEM.get()))
+          .save(output);
+         //stonecutting     
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.MANDARIN_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockcompatitemregistry.MANDARIN_CHISELED_BLOCK_ITEM.get())
+          .unlockedBy("has_mandarin_block", has(foodblockcompatitemregistry.MANDARIN_BLOCK_ITEM.get()))
+          .save(output, "mandarin_chiseled_block_from_mandarin_block_stonecutting");
+
+        //tiles
+         //crafting
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.MANDARIN_TILES_BLOCK_ITEM.get(),2)
+          .pattern("   ")
+          .pattern("AA ")
+          .pattern("AA ")
+          .define('A', foodblockcompatitemregistry.MANDARIN_SLAB_ITEM.get())
+          .unlockedBy("has_mandarin_slab", has(foodblockcompatitemregistry.MANDARIN_SLAB_ITEM.get()))
+          .save(output);
+         //stonecutting     
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.MANDARIN_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockcompatitemregistry.MANDARIN_TILES_BLOCK_ITEM.get())
+          .unlockedBy("has_mandarin_block", has(foodblockcompatitemregistry.MANDARIN_BLOCK_ITEM.get()))
+          .save(output, "mandarin_tiles_block_from_mandarin_block_stonecutting");
   //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
         //plain
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.LEMON_BLOCK_ITEM.get(), 1)
@@ -2771,6 +2899,20 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           foodblockcompatitemregistry.SATSUMA_BRICKS_SLAB_ITEM.get(), 2)
           .unlockedBy("has_satsuma_bricks_block", has(foodblockcompatitemregistry.SATSUMA_BRICKS_BLOCK_ITEM.get()))
           .save(output, "satsuma_bricks_slab_from_satsuma_bricks_block_stonecutting");
+  //----------------------------------------------------------------------------------------Mandarin-----------------------------------------------------------------------------------------------
+        //plain
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.MANDARIN_SLAB_ITEM.get())
+          .pattern("   ")
+          .pattern("   ")
+          .pattern("AAA")
+          .define('A', ingotcompatregistry.MANDARIN_INGOT.get())
+          .unlockedBy("has_mandarin_ingot", has(ingotcompatregistry.MANDARIN_INGOT.get()))
+          .save(output);
+        //bricks
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.MANDARIN_BRICKS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, 
+          foodblockcompatitemregistry.MANDARIN_BRICKS_SLAB_ITEM.get(), 2)
+          .unlockedBy("has_mandarin_bricks_block", has(foodblockcompatitemregistry.MANDARIN_BRICKS_BLOCK_ITEM.get()))
+          .save(output, "mandarin_bricks_slab_from_mandarin_bricks_block_stonecutting");
   //----------------------------------------------------------------------------------------Lemon-----------------------------------------------------------------------------------------------
         //plain
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.LEMON_SLAB_ITEM.get())
@@ -3053,6 +3195,20 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           foodblockcompatitemregistry.SATSUMA_BRICKS_STAIRS_ITEM.get(), 1)
           .unlockedBy("has_satsuma_bricks_block", has(foodblockcompatitemregistry.SATSUMA_BRICKS_BLOCK_ITEM.get()))
           .save(output, "satsuma_bricks_stairs_from_satsuma_bricks_block_stonecutting");
+  //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+        //plain
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.MANDARIN_STAIRS_ITEM.get())
+          .pattern("A  ")
+          .pattern("AA ")
+          .pattern("AAA")
+          .define('A', ingotcompatregistry.MANDARIN_INGOT.get())
+          .unlockedBy("has_mandarin_ingot", has(ingotcompatregistry.MANDARIN_INGOT.get()))
+          .save(output);
+        //bricks
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.MANDARIN_BRICKS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, 
+          foodblockcompatitemregistry.MANDARIN_BRICKS_STAIRS_ITEM.get(), 1)
+          .unlockedBy("has_mandarin_bricks_block", has(foodblockcompatitemregistry.MANDARIN_BRICKS_BLOCK_ITEM.get()))
+          .save(output, "mandarin_bricks_stairs_from_mandarin_bricks_block_stonecutting");
   //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
         //plain
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.LEMON_STAIRS_ITEM.get())
@@ -3281,6 +3437,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', nuggetcompatregistry.SATSUMA_NUGGET.get())
          .unlockedBy("has_satsuma_nugget", has(nuggetcompatregistry.SATSUMA_NUGGET.get()))
          .save(output);
+  //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.MANDARIN_BARS_ITEM.get(), 8)
+         .pattern("   ")
+         .pattern("AAA")
+         .pattern("AAA")
+         .define('A', nuggetcompatregistry.MANDARIN_NUGGET.get())
+         .unlockedBy("has_mandarin_nugget", has(nuggetcompatregistry.MANDARIN_NUGGET.get()))
+         .save(output);
   //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.LEMON_BARS_ITEM.get(), 8)
          .pattern("   ")
@@ -3443,6 +3607,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', ingotcompatregistry.SATSUMA_INGOT.get())
          .unlockedBy("has_satsuma_nugget", has(ingotcompatregistry.SATSUMA_INGOT.get()))
          .save(output);
+  //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.MANDARIN_DOOR_ITEM.get(), 3)
+         .pattern("AA ")
+         .pattern("AA ")
+         .pattern("AA ")
+         .define('A', ingotcompatregistry.MANDARIN_INGOT.get())
+         .unlockedBy("has_mandarin_nugget", has(ingotcompatregistry.MANDARIN_INGOT.get()))
+         .save(output);
   //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.LEMON_DOOR_ITEM.get(), 3)
          .pattern("AA ")
@@ -3577,6 +3749,11 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.SATSUMA_BUTTON_ITEM.get(), 1)
        .requires(nuggetcompatregistry.SATSUMA_NUGGET.get())
        .unlockedBy("has_satsuma_nugget", has(nuggetcompatregistry.SATSUMA_NUGGET.get()))
+       .save(output);
+  //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+       ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.MANDARIN_BUTTON_ITEM.get(), 1)
+       .requires(nuggetcompatregistry.MANDARIN_NUGGET.get())
+       .unlockedBy("has_mandarin_nugget", has(nuggetcompatregistry.MANDARIN_NUGGET.get()))
        .save(output);
   //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.LEMON_BUTTON_ITEM.get(), 1)
@@ -3805,6 +3982,25 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .define('A', ingotcompatregistry.SATSUMA_INGOT.get())
           .define('B', Items.STICK)
           .unlockedBy("has_satsuma_ingot", has(ingotcompatregistry.SATSUMA_INGOT.get()))
+          .save(output);        
+  //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+        //fence
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.MANDARIN_FENCE_ITEM.get(), 3)
+          .pattern("ABA")
+          .pattern("ABA")
+          .pattern("   ")
+          .define('A', ingotcompatregistry.MANDARIN_INGOT.get())
+          .define('B', Items.STICK)
+          .unlockedBy("has_mandarin_ingot", has(ingotcompatregistry.MANDARIN_INGOT.get()))
+          .save(output);        
+        //gate
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.MANDARIN_GATE_ITEM.get(), 1)
+          .pattern("BAB")
+          .pattern("BAB")
+          .pattern("   ")
+          .define('A', ingotcompatregistry.MANDARIN_INGOT.get())
+          .define('B', Items.STICK)
+          .unlockedBy("has_mandarin_ingot", has(ingotcompatregistry.MANDARIN_INGOT.get()))
           .save(output);        
   //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
         //fence
@@ -4089,6 +4285,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', foodblockcompatitemregistry.SATSUMA_BLOCK_ITEM.get())
         .unlockedBy("has_satsuma_block",  has(foodblockcompatitemregistry.SATSUMA_BLOCK_ITEM.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.MANDARIN_PRESSURE_PLATE_ITEM.get())
+        .pattern("   ")
+        .pattern("AA ")
+        .pattern("   ")
+        .define('A', foodblockcompatitemregistry.MANDARIN_BLOCK_ITEM.get())
+        .unlockedBy("has_mandarin_block",  has(foodblockcompatitemregistry.MANDARIN_BLOCK_ITEM.get()))
+        .save(output);
   //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.LEMON_PRESSURE_PLATE_ITEM.get())
         .pattern("   ")
@@ -4259,6 +4463,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', ingotcompatregistry.SATSUMA_INGOT.get())
         .define('B', Items.STICK)
         .unlockedBy("has_satsuma_ingot",  has(ingotcompatregistry.SATSUMA_INGOT.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.MANDARIN_SIGN_ITEM.get(), 3)
+        .pattern("AAA")
+        .pattern("AAA")
+        .pattern(" B ")
+        .define('A', ingotcompatregistry.MANDARIN_INGOT.get())
+        .define('B', Items.STICK)
+        .unlockedBy("has_mandarin_ingot",  has(ingotcompatregistry.MANDARIN_INGOT.get()))
         .save(output);
   //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.LEMON_SIGN_ITEM.get(), 3)
@@ -4433,6 +4646,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', ingotcompatregistry.SATSUMA_INGOT.get())
         .unlockedBy("has_satsuma_ingot", has(ingotcompatregistry.SATSUMA_INGOT.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.MANDARIN_TRAPDOOR_ITEM.get())
+        .pattern("   ")
+        .pattern("AAA")
+        .pattern("AAA")
+        .define('A', ingotcompatregistry.MANDARIN_INGOT.get())
+        .unlockedBy("has_mandarin_ingot", has(ingotcompatregistry.MANDARIN_INGOT.get()))
+        .save(output);
   //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.LEMON_TRAPDOOR_ITEM.get())
         .pattern("   ")
@@ -4601,6 +4822,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .pattern("ABA")
         .pattern("AAA")
         .define('A', ingotcompatregistry.SATSUMA_INGOT.get())
+        .define('B', foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get())
+        .unlockedBy("has_glow_berry_block", has(foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.MANDARIN_LAMP_ITEM.get())
+        .pattern("AAA")
+        .pattern("ABA")
+        .pattern("AAA")
+        .define('A', ingotcompatregistry.MANDARIN_INGOT.get())
         .define('B', foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get())
         .unlockedBy("has_glow_berry_block", has(foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get()))
         .save(output);
@@ -4776,6 +5006,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .pattern("AA ")
         .define('A', nuggetcompatregistry.SATSUMA_NUGGET.get())
         .unlockedBy("has_satsuma_nugget", has(nuggetcompatregistry.SATSUMA_NUGGET.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.MANDARIN_CARPET_ITEM.get(), 3)
+        .pattern("   ")
+        .pattern("AA ")
+        .pattern("AA ")
+        .define('A', nuggetcompatregistry.MANDARIN_NUGGET.get())
+        .unlockedBy("has_mandarin_nugget", has(nuggetcompatregistry.MANDARIN_NUGGET.get()))
         .save(output);
   //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.LEMON_CARPET_ITEM.get(), 3)
@@ -5037,6 +5275,25 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('A', nuggetcompatregistry.SATSUMA_NUGGET.get())
             .define('B', Items.SOUL_TORCH)
             .unlockedBy("has_satsuma_nugget", has(nuggetcompatregistry.SATSUMA_NUGGET.get()))
+            .save(output);
+  //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.MANDARIN_LANTERN_ITEM.get())
+            .pattern("AAA")
+            .pattern("ABA")
+            .pattern("AAA")
+            .define('A', nuggetcompatregistry.MANDARIN_NUGGET.get())
+            .define('B', Items.TORCH)
+            .unlockedBy("has_mandarin_nugget", has(nuggetcompatregistry.MANDARIN_NUGGET.get()))
+            .save(output);
+          //soul
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.MANDARIN_SOUL_LANTERN_ITEM.get())
+            .pattern("AAA")
+            .pattern("ABA")
+            .pattern("AAA")
+            .define('A', nuggetcompatregistry.MANDARIN_NUGGET.get())
+            .define('B', Items.SOUL_TORCH)
+            .unlockedBy("has_mandarin_nugget", has(nuggetcompatregistry.MANDARIN_NUGGET.get()))
             .save(output);
   //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
           //regular
@@ -5330,6 +5587,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('B', ingotcompatregistry.SATSUMA_INGOT.get())
         .unlockedBy("has_satsuma_ingot", has(ingotcompatregistry.SATSUMA_INGOT.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.MANDARIN_CHAIN_ITEM.get())
+        .pattern(" A ")
+        .pattern(" B ")
+        .pattern(" A ")
+        .define('A', nuggetcompatregistry.MANDARIN_NUGGET.get())
+        .define('B', ingotcompatregistry.MANDARIN_INGOT.get())
+        .unlockedBy("has_mandarin_ingot", has(ingotcompatregistry.MANDARIN_INGOT.get()))
+        .save(output);
   //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.LEMON_CHAIN_ITEM.get())
         .pattern(" A ")
@@ -5512,6 +5778,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('B', ingotcompatregistry.SATSUMA_INGOT.get())
         .unlockedBy("has_satsuma_ingot", has(ingotcompatregistry.SATSUMA_INGOT.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.MANDARIN_LADDER_ITEM.get(), 3)
+        .pattern("A A")
+        .pattern("ABA")
+        .pattern("A A")
+        .define('A', Items.STICK)
+        .define('B', ingotcompatregistry.MANDARIN_INGOT.get())
+        .unlockedBy("has_mandarin_ingot", has(ingotcompatregistry.MANDARIN_INGOT.get()))
+        .save(output);
   //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.LEMON_LADDER_ITEM.get(), 3)
         .pattern("A A")
@@ -5693,6 +5968,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', foodblockcompatitemregistry.SATSUMA_SLAB_ITEM.get())
         .define('B', ingotcompatregistry.SATSUMA_INGOT.get())
         .unlockedBy("has_satsuma_ingot", has(ingotcompatregistry.SATSUMA_INGOT.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.MANDARIN_TABLE_ITEM.get())
+        .pattern("AAA")
+        .pattern("B B")
+        .pattern("B B")
+        .define('A', foodblockcompatitemregistry.MANDARIN_SLAB_ITEM.get())
+        .define('B', ingotcompatregistry.MANDARIN_INGOT.get())
+        .unlockedBy("has_mandarin_ingot", has(ingotcompatregistry.MANDARIN_INGOT.get()))
         .save(output);
   //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.LEMON_TABLE_ITEM.get())
@@ -6073,6 +6357,37 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', nuggetcompatregistry.SATSUMA_NUGGET.get())
             .define('C', Items.SOUL_SAND)
             .unlockedBy("has_satsuma_nugget", has(nuggetcompatregistry.SATSUMA_NUGGET.get()))
+            .save(output);
+  //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.MANDARIN_TORCH_ITEM.get(), 4)
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetcompatregistry.MANDARIN_NUGGET.get())
+            .define('C', ItemTags.COALS)
+            .unlockedBy("has_mandarin_nugget", has(nuggetcompatregistry.MANDARIN_NUGGET.get()))
+            .save(output);
+          //redstone
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.MANDARIN_REDSTONE_TORCH_ITEM.get())
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetcompatregistry.MANDARIN_NUGGET.get())
+            .define('C', Items.REDSTONE)
+            .unlockedBy("has_mandarin_nugget", has(nuggetcompatregistry.MANDARIN_NUGGET.get()))
+            .save(output);
+          //soul
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.MANDARIN_SOUL_TORCH_ITEM.get(), 4)
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetcompatregistry.MANDARIN_NUGGET.get())
+            .define('C', Items.SOUL_SAND)
+            .unlockedBy("has_mandarin_nugget", has(nuggetcompatregistry.MANDARIN_NUGGET.get()))
             .save(output);
   //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
           //regular
@@ -6498,6 +6813,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('B', Items.COBBLESTONE)
         .unlockedBy("has_satsuma_ingot", has(ingotcompatregistry.SATSUMA_INGOT.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.MANDARIN_FURNACE_ITEM.get())
+        .pattern("ABA")
+        .pattern("B B")
+        .pattern("ABA")
+        .define('A', ingotcompatregistry.MANDARIN_INGOT.get())
+        .define('B', Items.COBBLESTONE)
+        .unlockedBy("has_mandarin_ingot", has(ingotcompatregistry.MANDARIN_INGOT.get()))
+        .save(output);
   //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.LEMON_FURNACE_ITEM.get())
         .pattern("ABA")
@@ -6647,6 +6971,12 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .requires(Items.STONE)
         .unlockedBy("has_satsuma_block", has(foodblockcompatitemregistry.SATSUMA_BLOCK_ITEM.get()))
         .save(output);        
+  //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.MANDARIN_STONE_PATH_ITEM.get(), 6)
+        .requires(foodblockcompatitemregistry.MANDARIN_BLOCK_ITEM.get())
+        .requires(Items.STONE)
+        .unlockedBy("has_mandarin_block", has(foodblockcompatitemregistry.MANDARIN_BLOCK_ITEM.get()))
+        .save(output);        
   //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.LEMON_STONE_PATH_ITEM.get(), 6)
         .requires(foodblockcompatitemregistry.LEMON_BLOCK_ITEM.get())
@@ -6795,6 +7125,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', foodblockcompatitemregistry.SATSUMA_BLOCK_ITEM.get())
         .define('B', foodblockcompatitemregistry.SATSUMA_SLAB_ITEM.get())
         .unlockedBy("has_satsuma_block", has(foodblockcompatitemregistry.SATSUMA_BLOCK_ITEM.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.MANDARIN_BARREL_ITEM.get())
+        .pattern("ABA")
+        .pattern("A A")
+        .pattern("ABA")
+        .define('A', foodblockcompatitemregistry.MANDARIN_BLOCK_ITEM.get())
+        .define('B', foodblockcompatitemregistry.MANDARIN_SLAB_ITEM.get())
+        .unlockedBy("has_mandarin_block", has(foodblockcompatitemregistry.MANDARIN_BLOCK_ITEM.get()))
         .save(output);
   //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.LEMON_BARREL_ITEM.get())
@@ -6977,6 +7316,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', ingotcompatregistry.SATSUMA_INGOT.get())
         .define('B', foodblockcompatitemregistry.SATSUMA_SLAB_ITEM.get())
         .unlockedBy("has_satsuma_slab", has(foodblockcompatitemregistry.SATSUMA_SLAB_ITEM.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.MANDARIN_CHAIR_ITEM.get())
+        .pattern("AAA")
+        .pattern("BBB")
+        .pattern("A A")
+        .define('A', ingotcompatregistry.MANDARIN_INGOT.get())
+        .define('B', foodblockcompatitemregistry.MANDARIN_SLAB_ITEM.get())
+        .unlockedBy("has_mandarin_slab", has(foodblockcompatitemregistry.MANDARIN_SLAB_ITEM.get()))
         .save(output);
   //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.LEMON_CHAIR_ITEM.get())
@@ -7168,6 +7516,16 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
            .define('B', foodblockcompatitemregistry.SATSUMA_SLAB_ITEM.get())
            .define('C', foodblockcompatitemregistry.SATSUMA_CARPET_ITEM.get())
            .unlockedBy("has_satsuma_ingot", has(ingotcompatregistry.SATSUMA_INGOT.get()))
+           .save(output);
+  //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.MANDARIN_BED_ITEM.get())
+           .pattern("CCC")
+           .pattern("BBB")
+           .pattern("A A")
+           .define('A', ingotcompatregistry.MANDARIN_INGOT.get())
+           .define('B', foodblockcompatitemregistry.MANDARIN_SLAB_ITEM.get())
+           .define('C', foodblockcompatitemregistry.MANDARIN_CARPET_ITEM.get())
+           .unlockedBy("has_mandarin_ingot", has(ingotcompatregistry.MANDARIN_INGOT.get()))
            .save(output);
   //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.LEMON_BED_ITEM.get())
@@ -7460,6 +7818,26 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('B', Items.IRON_INGOT)
          .define('C', foodblockcompatitemregistry.SMALL_SATSUMA_CABINET_ITEM.get())
          .unlockedBy("has_satsuma_slab", has(foodblockcompatitemregistry.SATSUMA_SLAB_ITEM.get()))
+         .save(output);
+  //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+       //small
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.SMALL_MANDARIN_CABINET_ITEM.get())
+         .pattern("AAA")
+         .pattern("B B")
+         .pattern("AAA")
+         .define('A', foodblockcompatitemregistry.MANDARIN_SLAB_ITEM.get())
+         .define('B', Items.IRON_INGOT)
+         .unlockedBy("has_mandarin_slab", has(foodblockcompatitemregistry.MANDARIN_SLAB_ITEM.get()))
+         .save(output);
+       //medium
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.MEDIUM_MANDARIN_CABINET_ITEM.get())
+         .pattern("AAA")
+         .pattern("BCB")
+         .pattern("AAA")
+         .define('A', foodblockcompatitemregistry.MANDARIN_SLAB_ITEM.get())
+         .define('B', Items.IRON_INGOT)
+         .define('C', foodblockcompatitemregistry.SMALL_MANDARIN_CABINET_ITEM.get())
+         .unlockedBy("has_mandarin_slab", has(foodblockcompatitemregistry.MANDARIN_SLAB_ITEM.get()))
          .save(output);
   //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
        //small

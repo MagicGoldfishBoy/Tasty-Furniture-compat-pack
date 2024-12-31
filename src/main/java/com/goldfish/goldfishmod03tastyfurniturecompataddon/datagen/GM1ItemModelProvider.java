@@ -721,6 +721,84 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("small_satsuma_cabinet_item", modLoc("block/satsuma_cabinet"));
        withExistingParent("medium_satsuma_cabinet_item", modLoc("block/medium_satsuma_cabinet"));
     //==============================================================================================================================================
+    //|                                                              Mandarin                                                                        |
+    //==============================================================================================================================================
+       //mush
+        withExistingParent("mandarin_mush", mcLoc("item/generated")).texture("layer0", "item/mandarin_mush");
+       //ingot
+        withExistingParent("mandarin_ingot", mcLoc("item/generated")).texture("layer0", "item/mandarin_ingot");
+       //nugget
+        withExistingParent("mandarin_nugget", mcLoc("item/generated")).texture("layer0", "item/mandarin_nugget");
+       //block
+        withExistingParent("mandarin_block_item", modLoc("block/mandarin_block"));
+       //bricks block
+        withExistingParent("mandarin_bricks_block_item", modLoc("block/mandarin_bricks_block"));
+       //chiseled block
+        withExistingParent("mandarin_chiseled_block_item", modLoc("block/mandarin_chiseled_block"));
+       //tiles block
+        withExistingParent("mandarin_tiles_block_item", modLoc("block/mandarin_tiles_block"));
+       //slab
+        slab("mandarin_slab_item", modLoc("block/mandarin_block"), modLoc("block/mandarin_block"), modLoc("block/mandarin_block"));
+       //bricks slab
+        slab("mandarin_bricks_slab_item", modLoc("block/mandarin_bricks_block"), modLoc("block/mandarin_bricks_block"), modLoc("block/mandarin_bricks_block"));
+       //stairs
+        stairs("mandarin_stairs_item", modLoc("block/mandarin_block"), modLoc("block/mandarin_block"), modLoc("block/mandarin_block"));
+       //bricks stairs
+        stairs("mandarin_bricks_stairs_item", modLoc("block/mandarin_bricks_block"), modLoc("block/mandarin_bricks_block"), modLoc("block/mandarin_bricks_block"));
+       //bars
+        withExistingParent("mandarin_bars_item", mcLoc("item/generated")).texture("layer0", "block/mandarin_bars");
+       //doors
+        withExistingParent("mandarin_door_item", mcLoc("item/generated")).texture("layer0", "item/mandarin_door_item");
+       //button
+        buttonInventory("mandarin_button_item", modLoc("block/mandarin_block"));
+       //fence
+        fenceInventory("mandarin_fence_item", modLoc("block/mandarin_block"));
+       //gate
+        withExistingParent("mandarin_gate_item", modLoc("block/mandarin_gate"));
+       //pressure plate
+        pressurePlate("mandarin_pressure_plate_item", modLoc("block/mandarin_block"));
+       //sign
+       withExistingParent("mandarin_sign_item", mcLoc("item/generated")).texture("layer0", "item/mandarin_sign");
+       //trapdoor
+       withExistingParent("mandarin_trapdoor_item", modLoc("block/mandarin_trapdoor_trapdoor_bottom"));
+       //lamp
+       withExistingParent("mandarin_lamp_item", modLoc("block/mandarin_lamp"));
+       //carpet
+       ResourceLocation mandarin_carpet_texture = modLoc("block/mandarin_carpet");
+       carpet("mandarin_carpet_item", mandarin_carpet_texture);
+       //lantern
+        //regular
+        withExistingParent("mandarin_lantern_item", modLoc("block/mandarin_lantern"));
+        //soul
+          withExistingParent("mandarin_soul_lantern_item", modLoc("block/mandarin_soul_lantern"));
+       //chain
+       withExistingParent("mandarin_chain_item", modLoc("block/mandarin_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
+       //ladder
+       withExistingParent("mandarin_ladder_item", modLoc("block/mandarin_ladder"));
+       //table
+       withExistingParent("mandarin_table_item", modLoc("block/mandarin_table"));
+       //torches
+        //regular
+        withExistingParent("mandarin_torch_item", modLoc("block/mandarin_torch"));
+        //redstone
+          withExistingParent("mandarin_redstone_torch_item", modLoc("block/mandarin_redstone_torch"));
+        //soul
+          withExistingParent("mandarin_soul_torch_item", modLoc("block/mandarin_soul_torch"));
+       //furnaces
+       withExistingParent("mandarin_furnace_item", modLoc("block/mandarin_furnace_model_unlit"));
+       //paths
+       withExistingParent("mandarin_stone_path_item", modLoc("block/mandarin_stone_path"));
+       //barrel
+       withExistingParent("mandarin_barrel_item", modLoc("block/mandarin_barrel_model_closed"));
+       //chair
+       withExistingParent("mandarin_chair_item", modLoc("block/mandarin_chair"));
+       //bed
+       withExistingParent("mandarin_bed_item", modLoc("block/mandarin_bed"));
+       //cabinet
+       withExistingParent("small_mandarin_cabinet_item", modLoc("block/mandarin_cabinet"));
+       withExistingParent("medium_mandarin_cabinet_item", modLoc("block/medium_mandarin_cabinet"));
+    //==============================================================================================================================================
     //|                                                              Lemon                                                                        |
     //==============================================================================================================================================
        //mush

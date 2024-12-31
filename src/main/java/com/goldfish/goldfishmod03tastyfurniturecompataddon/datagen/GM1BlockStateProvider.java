@@ -180,6 +180,19 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........tiles
           net.minecraft.world.level.block.Block satsuma_tiles_block = foodblockcompatregistry.SATSUMA_TILES_BLOCK.get();
           simpleBlock(satsuma_tiles_block);
+     //------------------------------------------------------------mandarin-----------------------------------------------------------------------
+      //.........plain
+          net.minecraft.world.level.block.Block mandarin_block = foodblockcompatregistry.MANDARIN_BLOCK.get();
+          simpleBlock(mandarin_block);
+      //.........bricks
+          net.minecraft.world.level.block.Block mandarin_bricks_block = foodblockcompatregistry.MANDARIN_BRICKS_BLOCK.get();
+          simpleBlock(mandarin_bricks_block);
+      //.........chiseled
+          net.minecraft.world.level.block.Block mandarin_chiseled_block = foodblockcompatregistry.MANDARIN_CHISELED_BLOCK.get();
+          simpleBlock(mandarin_chiseled_block);
+      //.........tiles
+          net.minecraft.world.level.block.Block mandarin_tiles_block = foodblockcompatregistry.MANDARIN_TILES_BLOCK.get();
+          simpleBlock(mandarin_tiles_block);
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
       //.........plain
           net.minecraft.world.level.block.Block lemon_block = foodblockcompatregistry.LEMON_BLOCK.get();
@@ -407,6 +420,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
           SlabBlock satsuma_bricks_slab = foodblockcompatregistry.SATSUMA_BRICKS_SLAB.get();
           ResourceLocation satsuma_bricks_block_texture = modLoc("block/satsuma_bricks_block");
           slabBlock(satsuma_bricks_slab, satsuma_bricks_block_texture, satsuma_bricks_block_texture);
+     //------------------------------------------------------------mandarin-----------------------------------------------------------------------
+      //.........plain
+          SlabBlock mandarin_slab = foodblockcompatregistry.MANDARIN_SLAB.get();
+          ResourceLocation mandarin_block_texture = modLoc("block/mandarin_block");
+          slabBlock(mandarin_slab, mandarin_block_texture, mandarin_block_texture);
+      //.........bricks
+          SlabBlock mandarin_bricks_slab = foodblockcompatregistry.MANDARIN_BRICKS_SLAB.get();
+          ResourceLocation mandarin_bricks_block_texture = modLoc("block/mandarin_bricks_block");
+          slabBlock(mandarin_bricks_slab, mandarin_bricks_block_texture, mandarin_bricks_block_texture);
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
       //.........plain
           SlabBlock lemon_slab = foodblockcompatregistry.LEMON_SLAB.get();
@@ -572,6 +594,13 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........bricks
           StairBlock satsuma_bricks_stairs = foodblockcompatregistry.SATSUMA_BRICKS_STAIRS.get();
           stairsBlock(satsuma_bricks_stairs, satsuma_bricks_block_texture);
+     //------------------------------------------------------------mandarin-----------------------------------------------------------------------
+      //.........plain
+          StairBlock mandarin_stairs = foodblockcompatregistry.MANDARIN_STAIRS.get();
+          stairsBlock(mandarin_stairs, mandarin_block_texture);
+      //.........bricks
+          StairBlock mandarin_bricks_stairs = foodblockcompatregistry.MANDARIN_BRICKS_STAIRS.get();
+          stairsBlock(mandarin_bricks_stairs, mandarin_bricks_block_texture);
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
       //.........plain
           StairBlock lemon_stairs = foodblockcompatregistry.LEMON_STAIRS.get();
@@ -697,6 +726,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation satsuma_bars_texture = modLoc("block/satsuma_bars");
           ResourceLocation satsuma_bars_rim_texture = modLoc("block/satsuma_block");
           paneBlockWithRenderType(satsuma_bars, "satsuma_bars", satsuma_bars_texture, satsuma_bars_rim_texture, "cutout_mipped_all"); 
+     //------------------------------------------------------------mandarin-----------------------------------------------------------------------
+          IronBarsBlock mandarin_bars = foodblockcompatregistry.MANDARIN_BARS.get(); 
+          ResourceLocation mandarin_bars_texture = modLoc("block/mandarin_bars");
+          ResourceLocation mandarin_bars_rim_texture = modLoc("block/mandarin_block");
+          paneBlockWithRenderType(mandarin_bars, "mandarin_bars", mandarin_bars_texture, mandarin_bars_rim_texture, "cutout_mipped_all"); 
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
           IronBarsBlock lemon_bars = foodblockcompatregistry.LEMON_BARS.get(); 
           ResourceLocation lemon_bars_texture = modLoc("block/lemon_bars");
@@ -800,6 +834,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation satsuma_door_top_texture = modLoc("block/satsuma_door_top");
           ResourceLocation satsuma_door_bottom_texture = modLoc("block/satsuma_door_bottom");
           doorBlockWithRenderType(satsuma_door, "satsuma_door", satsuma_door_bottom_texture, satsuma_door_top_texture, "translucent"); 
+     //------------------------------------------------------------mandarin-----------------------------------------------------------------------
+          DoorBlock mandarin_door = foodblockcompatregistry.MANDARIN_DOOR.get(); 
+          ResourceLocation mandarin_door_top_texture = modLoc("block/mandarin_door_top");
+          ResourceLocation mandarin_door_bottom_texture = modLoc("block/mandarin_door_bottom");
+          doorBlockWithRenderType(mandarin_door, "mandarin_door", mandarin_door_bottom_texture, mandarin_door_top_texture, "cutout_mipped_all"); 
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
           DoorBlock lemon_door = foodblockcompatregistry.LEMON_DOOR.get(); 
           ResourceLocation lemon_door_top_texture = modLoc("block/lemon_door_top");
@@ -894,6 +933,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ButtonBlock satsuma_button = foodblockcompatregistry.SATSUMA_BUTTON.get();
           ResourceLocation satsuma_button_texture = modLoc("block/satsuma_block");
           buttonBlock(satsuma_button, satsuma_button_texture);
+     //------------------------------------------------------------mandarin-----------------------------------------------------------------------
+          ButtonBlock mandarin_button = foodblockcompatregistry.MANDARIN_BUTTON.get();
+          ResourceLocation mandarin_button_texture = modLoc("block/mandarin_block");
+          buttonBlock(mandarin_button, mandarin_button_texture);
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
           ButtonBlock lemon_button = foodblockcompatregistry.LEMON_BUTTON.get();
           ResourceLocation lemon_button_texture = modLoc("block/lemon_block");
@@ -1022,6 +1065,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
           FenceGateBlock satsuma_gate = foodblockcompatregistry.SATSUMA_GATE.get();
           ResourceLocation satsuma_gate_texture = modLoc("block/satsuma_block");
           fenceGateBlock(satsuma_gate, satsuma_gate_texture);
+     //------------------------------------------------------------mandarin-----------------------------------------------------------------------
+       //fence
+          FenceBlock mandarin_fence = foodblockcompatregistry.MANDARIN_FENCE.get();
+          ResourceLocation mandarin_fence_texture = modLoc("block/mandarin_block");
+          fenceBlock(mandarin_fence, mandarin_fence_texture);
+       //gate
+          FenceGateBlock mandarin_gate = foodblockcompatregistry.MANDARIN_GATE.get();
+          ResourceLocation mandarin_gate_texture = modLoc("block/mandarin_block");
+          fenceGateBlock(mandarin_gate, mandarin_gate_texture);
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
        //fence
           FenceBlock lemon_fence = foodblockcompatregistry.LEMON_FENCE.get();
@@ -1160,6 +1212,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           PressurePlateBlock satsuma_pressure_plate = foodblockcompatregistry.SATSUMA_PRESSURE_PLATE.get();
           ResourceLocation satsuma_pressure_plate_texture = modLoc("block/satsuma_block");
           pressurePlateBlock(satsuma_pressure_plate, satsuma_pressure_plate_texture);
+     //------------------------------------------------------------mandarin-----------------------------------------------------------------------
+          PressurePlateBlock mandarin_pressure_plate = foodblockcompatregistry.MANDARIN_PRESSURE_PLATE.get();
+          ResourceLocation mandarin_pressure_plate_texture = modLoc("block/mandarin_block");
+          pressurePlateBlock(mandarin_pressure_plate, mandarin_pressure_plate_texture);
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
           PressurePlateBlock lemon_pressure_plate = foodblockcompatregistry.LEMON_PRESSURE_PLATE.get();
           ResourceLocation lemon_pressure_plate_texture = modLoc("block/lemon_block");
@@ -1252,6 +1308,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
            WallSignBlock satsuma_wall_sign = foodblockcompatregistry.SATSUMA_WALL_SIGN.get();
            ResourceLocation satsuma_sign_texture = modLoc("block/satsuma_block");
            signBlock(satsuma_sign, satsuma_wall_sign, satsuma_sign_texture);
+     //------------------------------------------------------------mandarin-----------------------------------------------------------------------
+           StandingSignBlock mandarin_sign = foodblockcompatregistry.MANDARIN_STANDING_SIGN.get();
+           WallSignBlock mandarin_wall_sign = foodblockcompatregistry.MANDARIN_WALL_SIGN.get();
+           ResourceLocation mandarin_sign_texture = modLoc("block/mandarin_block");
+           signBlock(mandarin_sign, mandarin_wall_sign, mandarin_sign_texture);
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
            StandingSignBlock lemon_sign = foodblockcompatregistry.LEMON_STANDING_SIGN.get();
            WallSignBlock lemon_wall_sign = foodblockcompatregistry.LEMON_WALL_SIGN.get();
@@ -1346,6 +1407,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           TrapDoorBlock satsuma_trapdoor = foodblockcompatregistry.SATSUMA_TRAPDOOR.get(); 
           ResourceLocation satsuma_trapdoor_texture = modLoc("block/satsuma_block");
           trapdoorBlockWithRenderType(satsuma_trapdoor, "satsuma_trapdoor", satsuma_trapdoor_texture, false, satsuma_trapdoor_texture);
+     //------------------------------------------------------------mandarin-----------------------------------------------------------------------
+          TrapDoorBlock mandarin_trapdoor = foodblockcompatregistry.MANDARIN_TRAPDOOR.get(); 
+          ResourceLocation mandarin_trapdoor_texture = modLoc("block/mandarin_block");
+          trapdoorBlockWithRenderType(mandarin_trapdoor, "mandarin_trapdoor", mandarin_trapdoor_texture, false, mandarin_trapdoor_texture);
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
           TrapDoorBlock lemon_trapdoor = foodblockcompatregistry.LEMON_TRAPDOOR.get(); 
           ResourceLocation lemon_trapdoor_texture = modLoc("block/lemon_block");
@@ -1420,6 +1485,9 @@ public class GM1BlockStateProvider extends BlockStateProvider
      //------------------------------------------------------------satsuma-----------------------------------------------------------------------
           Block satsuma_lamp = foodblockcompatregistry.SATSUMA_LAMP.get();
           simpleBlock(satsuma_lamp);
+     //------------------------------------------------------------mandarin-----------------------------------------------------------------------
+          Block mandarin_lamp = foodblockcompatregistry.MANDARIN_LAMP.get();
+          simpleBlock(mandarin_lamp);
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
           Block lemon_lamp = foodblockcompatregistry.LEMON_LAMP.get();
           simpleBlock(lemon_lamp);
@@ -1510,6 +1578,12 @@ public class GM1BlockStateProvider extends BlockStateProvider
           BlockModelBuilder satsuma_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(satsuma_carpet).getPath(), mcLoc("block/carpet"))
           .texture("wool", satsuma_carpet_texture);
           simpleBlock(satsuma_carpet, new ModelFile.UncheckedModelFile(satsuma_carpet_model.getLocation()));
+     //------------------------------------------------------------mandarin-----------------------------------------------------------------------
+          CarpetBlock mandarin_carpet = foodblockcompatregistry.MANDARIN_CARPET.get();
+          ResourceLocation mandarin_carpet_texture = modLoc("block/mandarin_carpet");
+          BlockModelBuilder mandarin_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(mandarin_carpet).getPath(), mcLoc("block/carpet"))
+          .texture("wool", mandarin_carpet_texture);
+          simpleBlock(mandarin_carpet, new ModelFile.UncheckedModelFile(mandarin_carpet_model.getLocation()));
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
           CarpetBlock lemon_carpet = foodblockcompatregistry.LEMON_CARPET.get();
           ResourceLocation lemon_carpet_texture = modLoc("block/lemon_carpet");
@@ -1930,6 +2004,45 @@ public class GM1BlockStateProvider extends BlockStateProvider
              .modelForState().modelFile(hanging_satsuma_soul_lantern_model).addModel()
              .partialState().with(LanternBlock.HANGING, false)
              .modelForState().modelFile(satsuma_soul_lantern_model).addModel();
+     //------------------------------------------------------------mandarin-----------------------------------------------------------------------
+         //regular
+          LanternBlock mandarin_lantern = foodblockcompatregistry.MANDARIN_LANTERN.get();
+          ResourceLocation mandarin_lantern_texture = modLoc("block/mandarin_lantern");
+  
+          BlockModelBuilder mandarin_lantern_model = models()
+              .withExistingParent("mandarin_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", mandarin_lantern_texture);
+  
+          BlockModelBuilder hanging_mandarin_lantern_model = models()
+              .withExistingParent("mandarin_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", mandarin_lantern_texture);
+  
+          getVariantBuilder(mandarin_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_mandarin_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(mandarin_lantern_model).addModel();
+         //soul
+         LanternBlock mandarin_soul_lantern = foodblockcompatregistry.MANDARIN_SOUL_LANTERN.get();
+         ResourceLocation mandarin_soul_lantern_texture = modLoc("block/mandarin_soul_lantern");
+ 
+         BlockModelBuilder mandarin_soul_lantern_model = models()
+             .withExistingParent("mandarin_soul_lantern", mcLoc("block/lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", mandarin_soul_lantern_texture);
+ 
+         BlockModelBuilder hanging_mandarin_soul_lantern_model = models()
+             .withExistingParent("mandarin_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", mandarin_soul_lantern_texture);
+ 
+         getVariantBuilder(mandarin_soul_lantern)
+             .partialState().with(LanternBlock.HANGING, true)
+             .modelForState().modelFile(hanging_mandarin_soul_lantern_model).addModel()
+             .partialState().with(LanternBlock.HANGING, false)
+             .modelForState().modelFile(mandarin_soul_lantern_model).addModel();
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
          //regular
           LanternBlock lemon_lantern = foodblockcompatregistry.LEMON_LANTERN.get();
@@ -2506,6 +2619,22 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .modelForState().modelFile(satsuma_chain_model).rotationX(90).rotationY(90).addModel()
           .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
           .modelForState().modelFile(satsuma_chain_model).rotationX(90).addModel(); 
+     //------------------------------------------------------------mandarin-----------------------------------------------------------------------
+         ChainBlock mandarin_chain = foodblockcompatregistry.MANDARIN_CHAIN.get();
+         ResourceLocation mandarin_chain_texture = modLoc("block/mandarin_chain");
+         BlockModelBuilder mandarin_chain_model = models()
+          .withExistingParent("mandarin_chain", mcLoc("block/chain"))
+          .renderType("cutout_mipped_all")
+          .texture("all", mandarin_chain_texture)
+          .texture("particle", mandarin_chain_texture);
+
+          getVariantBuilder(mandarin_chain)
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Y)
+          .modelForState().modelFile(mandarin_chain_model).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.X)
+          .modelForState().modelFile(mandarin_chain_model).rotationX(90).rotationY(90).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
+          .modelForState().modelFile(mandarin_chain_model).rotationX(90).addModel(); 
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
          ChainBlock lemon_chain = foodblockcompatregistry.LEMON_CHAIN.get();
          ResourceLocation lemon_chain_texture = modLoc("block/lemon_chain");
@@ -2868,6 +2997,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/satsuma_ladder");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------mandarin-----------------------------------------------------------------------
+          LadderBlock mandarinladder = foodblockcompatregistry.MANDARIN_LADDER.get();
+
+          getVariantBuilder(mandarinladder)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/mandarin_ladder");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -3291,6 +3441,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/satsuma_table");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------mandarin-----------------------------------------------------------------------
+          HorizontalDirectionalBlock mandarintable = foodblockcompatregistry.MANDARIN_TABLE.get();
+
+          getVariantBuilder(mandarintable)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/mandarin_table");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -4572,6 +4743,122 @@ public class GM1BlockStateProvider extends BlockStateProvider
                     .renderType("cutout_mipped_all")
                     .texture("torch", satsuma_soul_wall_torch_texture)
                     .texture("particle", satsuma_soul_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+     //------------------------------------------------------------mandarin-----------------------------------------------------------------------
+       //regular
+        TorchBlock mandarin_torch = foodblockcompatregistry.MANDARIN_TORCH.get();
+        ResourceLocation mandarin_torch_texture = modLoc("block/mandarin_torch");
+        BlockModelBuilder mandarin_torch_model = models()
+        .withExistingParent("mandarin_torch", mcLoc("block/torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", mandarin_torch_texture)
+        .texture("particle", mandarin_torch_texture);
+
+        simpleBlock(mandarin_torch, mandarin_torch_model);
+
+        TorchBlock mandarin_wall_torch = foodblockcompatregistry.MANDARIN_WALL_TORCH.get();
+        BlockModelBuilder mandarin_wall_torch_model = models()
+        .withExistingParent("mandarin_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", mandarin_torch_texture)
+        .texture("particle", mandarin_torch_texture);
+        getVariantBuilder(mandarin_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("mandarin_wall_torch", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", mandarin_torch_texture)
+                    .texture("particle", mandarin_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //redstone
+        RedstoneTorchBlock mandarin_redstone_torch = foodblockcompatregistry.MANDARIN_REDSTONE_TORCH.get();
+        ResourceLocation mandarin_redstone_torch_texture = modLoc("block/mandarin_redstone_torch");
+        BlockModelBuilder mandarin_redstone_torch_model = models()
+        .withExistingParent("mandarin_redstone_torch", mcLoc("block/redstone_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", mandarin_redstone_torch_texture)
+        .texture("particle", mandarin_redstone_torch_texture);
+        
+
+        simpleBlock(mandarin_redstone_torch, mandarin_redstone_torch_model);
+
+        ResourceLocation mandarin_redstone_wall_torch_texture = modLoc("block/mandarin_redstone_torch");
+
+        RedstoneTorchBlock mandarin_redstone_wall_torch = foodblockcompatregistry.MANDARIN_REDSTONE_WALL_TORCH.get();
+        BlockModelBuilder mandarin_redstone_wall_torch_model = models()
+        .withExistingParent("mandarin_redstone_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", mandarin_redstone_wall_torch_texture)
+        .texture("particle", mandarin_redstone_wall_torch_texture);
+        getVariantBuilder(mandarin_redstone_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("mandarin_redstone_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", mandarin_redstone_wall_torch_texture)
+                    .texture("particle", mandarin_redstone_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //soul
+        TorchBlock mandarin_soul_torch = foodblockcompatregistry.MANDARIN_SOUL_TORCH.get();
+        ResourceLocation mandarin_soul_torch_texture = modLoc("block/mandarin_soul_torch");
+        BlockModelBuilder mandarin_soul_torch_model = models()
+        .withExistingParent("mandarin_soul_torch", mcLoc("block/soul_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", mandarin_soul_torch_texture)
+        .texture("particle", mandarin_soul_torch_texture);
+        
+
+        simpleBlock(mandarin_soul_torch, mandarin_soul_torch_model);
+
+        ResourceLocation mandarin_soul_wall_torch_texture = modLoc("block/mandarin_soul_torch");
+        TorchBlock mandarin_soul_wall_torch = foodblockcompatregistry.MANDARIN_SOUL_WALL_TORCH.get();
+        BlockModelBuilder mandarin_soul_wall_torch_model = models()
+        .withExistingParent("mandarin_soul_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", mandarin_soul_wall_torch_texture)
+        .texture("particle", mandarin_soul_wall_torch_texture);
+        getVariantBuilder(mandarin_soul_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("mandarin_soul_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", mandarin_soul_wall_torch_texture)
+                    .texture("particle", mandarin_soul_wall_torch_texture))
                 .rotationY(rotation)
                 .build();
             });
@@ -6250,6 +6537,50 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationY(rotation)
                       .build();
               });
+     //------------------------------------------------------------mandarin-----------------------------------------------------------------------
+          FurnaceBlock mandarin_furnace = foodblockcompatregistry.MANDARIN_FURNACE.get();
+          ResourceLocation mandarin_furnace_unlit_texture = modLoc("block/mandarin_furnace");
+          ResourceLocation mandarin_furnace_lit_texture = modLoc("block/mandarin_furnace_lit");
+          ResourceLocation mandarin_furnace_side = modLoc("block/mandarin_block");
+          
+          // Define the model for the unlit state
+          BlockModelBuilder mandarin_furnace_model_unlit = models()
+              .withExistingParent("mandarin_furnace_model_unlit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", mandarin_furnace_side)
+              .texture("top", mandarin_furnace_side)
+              .texture("front", mandarin_furnace_unlit_texture)
+              .texture("particle", mandarin_furnace_side);
+          
+          // Define the model for the lit state
+          BlockModelBuilder mandarin_furnace_model_lit = models()
+              .withExistingParent("mandarin_furnace_model_lit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", mandarin_furnace_side)
+              .texture("top", mandarin_furnace_side)
+              .texture("front", mandarin_furnace_lit_texture)
+              .texture("particle", mandarin_furnace_side);
+          
+          // Configure variants for the mandarin_furnace block
+          getVariantBuilder(mandarin_furnace)
+              .forAllStates(state -> {
+                  Boolean lit = state.getValue(BlockStateProperties.LIT);
+                  Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                  int rotation = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+
+                  ResourceLocation modelLocation = lit ? modLoc("block/mandarin_furnace_model_lit") : modLoc("block/mandarin_furnace_model_unlit");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotation)
+                      .build();
+              });
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
           FurnaceBlock lemon_furnace = foodblockcompatregistry.LEMON_FURNACE.get();
           ResourceLocation lemon_furnace_unlit_texture = modLoc("block/lemon_furnace");
@@ -6834,6 +7165,18 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .modelFile(models().getExistingFile(modelLocation))
                   .build();
           });
+     //------------------------------------------------------------mandarin-----------------------------------------------------------------------
+          foodpathtypeminislab mandarin_stone_path = foodblockcompatregistry.MANDARIN_STONE_PATH.get();
+
+          getVariantBuilder(mandarin_stone_path)
+          .forAllStates(state -> {
+
+              ResourceLocation modelLocation = modLoc("block/mandarin_stone_path");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .build();
+          });
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
           foodpathtypeminislab lemon_stone_path = foodblockcompatregistry.LEMON_STONE_PATH.get();
 
@@ -7394,6 +7737,54 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   };
 
                   ResourceLocation modelLocation = open ? modLoc("block/satsuma_barrel_model_open") : modLoc("block/satsuma_barrel_model_closed");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotationY)
+                      .rotationX(rotationX)
+                      .build();
+              });
+     //------------------------------------------------------------mandarin-----------------------------------------------------------------------
+          foodBarrel mandarin_barrel = foodblockcompatregistry.MANDARIN_BARREL.get();
+          ResourceLocation mandarin_barrel_closed_texture = modLoc("block/mandarin_barrel_top_closed");
+          ResourceLocation mandarin_barrel_open_texture = modLoc("block/mandarin_barrel_top_open");
+          ResourceLocation mandarin_barrel_side = modLoc("block/mandarin_barrel_side");
+          ResourceLocation mandarin_barrel_bottom = modLoc("block/mandarin_barrel_bottom");
+          
+          BlockModelBuilder mandarin_barrel_model_closed = models()
+              .withExistingParent("mandarin_barrel_model_closed", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", mandarin_barrel_side)
+              .texture("bottom", mandarin_barrel_bottom)
+              .texture("top", mandarin_barrel_closed_texture)
+              .texture("particle", mandarin_barrel_side);
+          
+          BlockModelBuilder mandarin_barrel_model_open = models()
+              .withExistingParent("mandarin_barrel_model_open", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", mandarin_barrel_side)
+              .texture("bottom", mandarin_barrel_bottom)
+              .texture("top", mandarin_barrel_open_texture)
+              .texture("particle", mandarin_barrel_side);
+          
+          getVariantBuilder(mandarin_barrel)
+              .forAllStates(state -> {
+                  Boolean open = state.getValue(BlockStateProperties.OPEN);
+                  Direction facing = state.getValue(BlockStateProperties.FACING);
+                  int rotationY = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+                  int rotationX = switch (facing) {
+                      case UP -> 0;
+                      case DOWN -> 180;
+                      default -> 90;
+                  };
+
+                  ResourceLocation modelLocation = open ? modLoc("block/mandarin_barrel_model_open") : modLoc("block/mandarin_barrel_model_closed");
               
                   return ConfiguredModel.builder()
                       .modelFile(models().getExistingFile(modelLocation))
@@ -8121,6 +8512,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .rotationY(rotationY)
                   .build();
           });
+     //------------------------------------------------------------mandarin-----------------------------------------------------------------------
+          foodChairBlock mandarinChair = foodblockcompatregistry.MANDARIN_CHAIR.get();
+
+          getVariantBuilder(mandarinChair)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/mandarin_chair");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
           foodChairBlock lemonChair = foodblockcompatregistry.LEMON_CHAIR.get();
 
@@ -8538,6 +8950,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/satsuma_bed");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------mandarin-----------------------------------------------------------------------
+          foodBed mandarinBed = foodblockcompatregistry.MANDARIN_BED.get();
+
+          getVariantBuilder(mandarinBed)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/mandarin_bed");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -9177,6 +9610,51 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = open ? modLoc("block/medium_satsuma_cabinet_open") : modLoc("block/medium_satsuma_cabinet");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------mandarin-----------------------------------------------------------------------
+         //small
+          smallFoodCabinet mandarinCabinet = foodblockcompatregistry.SMALL_MANDARIN_CABINET.get();
+
+          getVariantBuilder(mandarinCabinet)
+          .forAllStates(state -> {
+              Boolean open = state.getValue(BlockStateProperties.OPEN);
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = open ? modLoc("block/mandarin_cabinet_open") : modLoc("block/mandarin_cabinet");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+         //medium
+          mediumFoodCabinet mandarinMediumCabinet = foodblockcompatregistry.MEDIUM_MANDARIN_CABINET.get();
+
+          getVariantBuilder(mandarinMediumCabinet)
+          .forAllStates(state -> {
+              Boolean open = state.getValue(BlockStateProperties.OPEN);
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = open ? modLoc("block/medium_mandarin_cabinet_open") : modLoc("block/medium_mandarin_cabinet");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))

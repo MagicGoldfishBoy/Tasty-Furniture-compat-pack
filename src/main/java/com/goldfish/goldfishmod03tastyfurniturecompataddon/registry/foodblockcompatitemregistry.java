@@ -136,6 +136,19 @@ public class foodblockcompatitemregistry {
   //.........tiles
      public static final DeferredHolder<Item, BlockItem> SATSUMA_TILES_BLOCK_ITEM = FOODBLOCKITEM.register("satsuma_tiles_block_item",
      () -> new BlockItem(foodblockcompatregistry.SATSUMA_TILES_BLOCK.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+  //.........plain
+     public static final DeferredHolder<Item, BlockItem> MANDARIN_BLOCK_ITEM = FOODBLOCKITEM.register("mandarin_block_item",
+     () -> new BlockItem(foodblockcompatregistry.MANDARIN_BLOCK.get(), new BlockItem.Properties()));
+  //.........bricks
+     public static final DeferredHolder<Item, BlockItem> MANDARIN_BRICKS_BLOCK_ITEM = FOODBLOCKITEM.register("mandarin_bricks_block_item",
+     () -> new BlockItem(foodblockcompatregistry.MANDARIN_BRICKS_BLOCK.get(), new BlockItem.Properties()));
+  //.........chiseled
+     public static final DeferredHolder<Item, BlockItem> MANDARIN_CHISELED_BLOCK_ITEM = FOODBLOCKITEM.register("mandarin_chiseled_block_item",
+     () -> new BlockItem(foodblockcompatregistry.MANDARIN_CHISELED_BLOCK.get(), new BlockItem.Properties()));
+  //.........tiles
+     public static final DeferredHolder<Item, BlockItem> MANDARIN_TILES_BLOCK_ITEM = FOODBLOCKITEM.register("mandarin_tiles_block_item",
+     () -> new BlockItem(foodblockcompatregistry.MANDARIN_TILES_BLOCK.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
   //.........plain
      public static final DeferredHolder<Item, BlockItem> LEMON_BLOCK_ITEM = FOODBLOCKITEM.register("lemon_block_item",
@@ -345,6 +358,13 @@ public class foodblockcompatitemregistry {
   //.........bricks
    public static final DeferredHolder<Item, BlockItem> SATSUMA_BRICKS_SLAB_ITEM = FOODBLOCKITEM.register("satsuma_bricks_slab_item",
    () -> new BlockItem(foodblockcompatregistry.SATSUMA_BRICKS_SLAB.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+  //.........plain
+   public static final DeferredHolder<Item, BlockItem> MANDARIN_SLAB_ITEM = FOODBLOCKITEM.register("mandarin_slab_item",
+   () -> new BlockItem(foodblockcompatregistry.MANDARIN_SLAB.get(), new BlockItem.Properties()));
+  //.........bricks
+   public static final DeferredHolder<Item, BlockItem> MANDARIN_BRICKS_SLAB_ITEM = FOODBLOCKITEM.register("mandarin_bricks_slab_item",
+   () -> new BlockItem(foodblockcompatregistry.MANDARIN_BRICKS_SLAB.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
   //.........plain
    public static final DeferredHolder<Item, BlockItem> LEMON_SLAB_ITEM = FOODBLOCKITEM.register("lemon_slab_item",
@@ -488,6 +508,13 @@ public class foodblockcompatitemregistry {
   //.........bricks
    public static final DeferredHolder<Item, BlockItem> SATSUMA_BRICKS_STAIRS_ITEM = FOODBLOCKITEM.register("satsuma_bricks_stairs_item",
    () -> new BlockItem(foodblockcompatregistry.SATSUMA_BRICKS_STAIRS.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+  //.........plain
+   public static final DeferredHolder<Item, BlockItem> MANDARIN_STAIRS_ITEM = FOODBLOCKITEM.register("mandarin_stairs_item",
+   () -> new BlockItem(foodblockcompatregistry.MANDARIN_STAIRS.get(), new BlockItem.Properties()));
+  //.........bricks
+   public static final DeferredHolder<Item, BlockItem> MANDARIN_BRICKS_STAIRS_ITEM = FOODBLOCKITEM.register("mandarin_bricks_stairs_item",
+   () -> new BlockItem(foodblockcompatregistry.MANDARIN_BRICKS_STAIRS.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
   //.........plain
    public static final DeferredHolder<Item, BlockItem> LEMON_STAIRS_ITEM = FOODBLOCKITEM.register("lemon_stairs_item",
@@ -595,6 +622,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Satsuma---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> SATSUMA_BARS_ITEM = FOODBLOCKITEM.register("satsuma_bars_item",
    () -> new BlockItem(foodblockcompatregistry.SATSUMA_BARS.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, BlockItem> MANDARIN_BARS_ITEM = FOODBLOCKITEM.register("mandarin_bars_item",
+   () -> new BlockItem(foodblockcompatregistry.MANDARIN_BARS.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> LEMON_BARS_ITEM = FOODBLOCKITEM.register("lemon_bars_item",
    () -> new BlockItem(foodblockcompatregistry.LEMON_BARS.get(), new BlockItem.Properties()));
@@ -658,6 +688,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Satsuma---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> SATSUMA_DOOR_ITEM = FOODBLOCKITEM.register("satsuma_door_item",
    () -> new BlockItem(foodblockcompatregistry.SATSUMA_DOOR.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, BlockItem> MANDARIN_DOOR_ITEM = FOODBLOCKITEM.register("mandarin_door_item",
+   () -> new BlockItem(foodblockcompatregistry.MANDARIN_DOOR.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> LEMON_DOOR_ITEM = FOODBLOCKITEM.register("lemon_door_item",
    () -> new BlockItem(foodblockcompatregistry.LEMON_DOOR.get(), new BlockItem.Properties()));
@@ -721,6 +754,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Satsuma---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> SATSUMA_BUTTON_ITEM = FOODBLOCKITEM.register("satsuma_button_item",
    () -> new BlockItem(foodblockcompatregistry.SATSUMA_BUTTON.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, BlockItem> MANDARIN_BUTTON_ITEM = FOODBLOCKITEM.register("mandarin_button_item",
+   () -> new BlockItem(foodblockcompatregistry.MANDARIN_BUTTON.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> LEMON_BUTTON_ITEM = FOODBLOCKITEM.register("lemon_button_item",
    () -> new BlockItem(foodblockcompatregistry.LEMON_BUTTON.get(), new BlockItem.Properties()));
@@ -784,6 +820,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Satsuma---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> SATSUMA_FENCE_ITEM = FOODBLOCKITEM.register("satsuma_fence_item",
    () -> new BlockItem(foodblockcompatregistry.SATSUMA_FENCE.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, BlockItem> MANDARIN_FENCE_ITEM = FOODBLOCKITEM.register("mandarin_fence_item",
+   () -> new BlockItem(foodblockcompatregistry.MANDARIN_FENCE.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> LEMON_FENCE_ITEM = FOODBLOCKITEM.register("lemon_fence_item",
    () -> new BlockItem(foodblockcompatregistry.LEMON_FENCE.get(), new BlockItem.Properties()));
@@ -847,6 +886,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Satsuma---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> SATSUMA_GATE_ITEM = FOODBLOCKITEM.register("satsuma_gate_item",
    () -> new BlockItem(foodblockcompatregistry.SATSUMA_GATE.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, BlockItem> MANDARIN_GATE_ITEM = FOODBLOCKITEM.register("mandarin_gate_item",
+   () -> new BlockItem(foodblockcompatregistry.MANDARIN_GATE.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> LEMON_GATE_ITEM = FOODBLOCKITEM.register("lemon_gate_item",
    () -> new BlockItem(foodblockcompatregistry.LEMON_GATE.get(), new BlockItem.Properties()));
@@ -910,6 +952,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Satsuma---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> SATSUMA_PRESSURE_PLATE_ITEM = FOODBLOCKITEM.register("satsuma_pressure_plate_item",
    () -> new BlockItem(foodblockcompatregistry.SATSUMA_PRESSURE_PLATE.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, BlockItem> MANDARIN_PRESSURE_PLATE_ITEM = FOODBLOCKITEM.register("mandarin_pressure_plate_item",
+   () -> new BlockItem(foodblockcompatregistry.MANDARIN_PRESSURE_PLATE.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> LEMON_PRESSURE_PLATE_ITEM = FOODBLOCKITEM.register("lemon_pressure_plate_item",
    () -> new BlockItem(foodblockcompatregistry.LEMON_PRESSURE_PLATE.get(), new BlockItem.Properties()));
@@ -973,6 +1018,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Satsuma---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, SignItem> SATSUMA_SIGN_ITEM = FOODBLOCKITEM.register("satsuma_sign_item",
    () -> new SignItem(new SignItem.Properties(), foodblockcompatregistry.SATSUMA_STANDING_SIGN.get(), foodblockcompatregistry.SATSUMA_WALL_SIGN.get()));
+ //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, SignItem> MANDARIN_SIGN_ITEM = FOODBLOCKITEM.register("mandarin_sign_item",
+   () -> new SignItem(new SignItem.Properties(), foodblockcompatregistry.MANDARIN_STANDING_SIGN.get(), foodblockcompatregistry.MANDARIN_WALL_SIGN.get()));
  //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, SignItem> LEMON_SIGN_ITEM = FOODBLOCKITEM.register("lemon_sign_item",
    () -> new SignItem(new SignItem.Properties(), foodblockcompatregistry.LEMON_STANDING_SIGN.get(), foodblockcompatregistry.LEMON_WALL_SIGN.get()));
@@ -1036,6 +1084,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Satsuma---------------------------------------------------------------------------------------------
      public static final DeferredHolder<Item, BlockItem> SATSUMA_TRAPDOOR_ITEM = FOODBLOCKITEM.register("satsuma_trapdoor_item",
      () -> new BlockItem(foodblockcompatregistry.SATSUMA_TRAPDOOR.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+     public static final DeferredHolder<Item, BlockItem> MANDARIN_TRAPDOOR_ITEM = FOODBLOCKITEM.register("mandarin_trapdoor_item",
+     () -> new BlockItem(foodblockcompatregistry.MANDARIN_TRAPDOOR.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
      public static final DeferredHolder<Item, BlockItem> LEMON_TRAPDOOR_ITEM = FOODBLOCKITEM.register("lemon_trapdoor_item",
      () -> new BlockItem(foodblockcompatregistry.LEMON_TRAPDOOR.get(), new BlockItem.Properties()));
@@ -1099,6 +1150,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Satsuma---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> SATSUMA_LAMP_ITEM = FOODBLOCKITEM.register("satsuma_lamp_item",
     () -> new BlockItem(foodblockcompatregistry.SATSUMA_LAMP.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> MANDARIN_LAMP_ITEM = FOODBLOCKITEM.register("mandarin_lamp_item",
+    () -> new BlockItem(foodblockcompatregistry.MANDARIN_LAMP.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> LEMON_LAMP_ITEM = FOODBLOCKITEM.register("lemon_lamp_item",
     () -> new BlockItem(foodblockcompatregistry.LEMON_LAMP.get(), new BlockItem.Properties()));
@@ -1162,6 +1216,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Satsuma---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> SATSUMA_CARPET_ITEM = FOODBLOCKITEM.register("satsuma_carpet_item",
     () -> new BlockItem(foodblockcompatregistry.SATSUMA_CARPET.get(), new BlockItem.Properties())); 
+ //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> MANDARIN_CARPET_ITEM = FOODBLOCKITEM.register("mandarin_carpet_item",
+    () -> new BlockItem(foodblockcompatregistry.MANDARIN_CARPET.get(), new BlockItem.Properties())); 
  //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> LEMON_CARPET_ITEM = FOODBLOCKITEM.register("lemon_carpet_item",
     () -> new BlockItem(foodblockcompatregistry.LEMON_CARPET.get(), new BlockItem.Properties())); 
@@ -1261,6 +1318,13 @@ public class foodblockcompatitemregistry {
     //soul
       public static final DeferredHolder<Item, BlockItem> SATSUMA_SOUL_LANTERN_ITEM = FOODBLOCKITEM.register("satsuma_soul_lantern_item",
       () -> new BlockItem(foodblockcompatregistry.SATSUMA_SOUL_LANTERN.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+    //regular
+      public static final DeferredHolder<Item, BlockItem> MANDARIN_LANTERN_ITEM = FOODBLOCKITEM.register("mandarin_lantern_item",
+      () -> new BlockItem(foodblockcompatregistry.MANDARIN_LANTERN.get(), new BlockItem.Properties()));
+    //soul
+      public static final DeferredHolder<Item, BlockItem> MANDARIN_SOUL_LANTERN_ITEM = FOODBLOCKITEM.register("mandarin_soul_lantern_item",
+      () -> new BlockItem(foodblockcompatregistry.MANDARIN_SOUL_LANTERN.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
     //regular
       public static final DeferredHolder<Item, BlockItem> LEMON_LANTERN_ITEM = FOODBLOCKITEM.register("lemon_lantern_item",
@@ -1368,6 +1432,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Satsuma---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> SATSUMA_CHAIN_ITEM = FOODBLOCKITEM.register("satsuma_chain_item",
     () -> new BlockItem(foodblockcompatregistry.SATSUMA_CHAIN.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> MANDARIN_CHAIN_ITEM = FOODBLOCKITEM.register("mandarin_chain_item",
+    () -> new BlockItem(foodblockcompatregistry.MANDARIN_CHAIN.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> LEMON_CHAIN_ITEM = FOODBLOCKITEM.register("lemon_chain_item",
     () -> new BlockItem(foodblockcompatregistry.LEMON_CHAIN.get(), new BlockItem.Properties()));
@@ -1431,6 +1498,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Satsuma---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> SATSUMA_LADDER_ITEM =  FOODBLOCKITEM.register("satsuma_ladder_item",
     () -> new BlockItem(foodblockcompatregistry.SATSUMA_LADDER.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> MANDARIN_LADDER_ITEM =  FOODBLOCKITEM.register("mandarin_ladder_item",
+    () -> new BlockItem(foodblockcompatregistry.MANDARIN_LADDER.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> LEMON_LADDER_ITEM =  FOODBLOCKITEM.register("lemon_ladder_item",
     () -> new BlockItem(foodblockcompatregistry.LEMON_LADDER.get(), new BlockItem.Properties()));
@@ -1494,6 +1564,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Satsuma---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> SATSUMA_TABLE_ITEM =  FOODBLOCKITEM.register("satsuma_table_item",
     () -> new BlockItem(foodblockcompatregistry.SATSUMA_TABLE.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> MANDARIN_TABLE_ITEM =  FOODBLOCKITEM.register("mandarin_table_item",
+    () -> new BlockItem(foodblockcompatregistry.MANDARIN_TABLE.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> LEMON_TABLE_ITEM =  FOODBLOCKITEM.register("lemon_table_item",
     () -> new BlockItem(foodblockcompatregistry.LEMON_TABLE.get(), new BlockItem.Properties()));
@@ -1620,6 +1693,16 @@ public class foodblockcompatitemregistry {
     //soul
       public static final DeferredHolder<Item, StandingAndWallBlockItem> SATSUMA_SOUL_TORCH_ITEM =  FOODBLOCKITEM.register("satsuma_soul_torch_item",
       () -> new StandingAndWallBlockItem(foodblockcompatregistry.SATSUMA_SOUL_TORCH.get(), foodblockcompatregistry.SATSUMA_SOUL_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
+ //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+    //regular
+      public static final DeferredHolder<Item, StandingAndWallBlockItem> MANDARIN_TORCH_ITEM = FOODBLOCKITEM.register("mandarin_torch_item", 
+      () -> new StandingAndWallBlockItem(foodblockcompatregistry.MANDARIN_TORCH.get(), foodblockcompatregistry.MANDARIN_WALL_TORCH.get(), new Item.Properties(), Direction.NORTH));
+    //redstone
+      public static final DeferredHolder<Item, StandingAndWallBlockItem> MANDARIN_REDSTONE_TORCH_ITEM =  FOODBLOCKITEM.register("mandarin_redstone_torch_item",
+      () -> new StandingAndWallBlockItem(foodblockcompatregistry.MANDARIN_REDSTONE_TORCH.get(), foodblockcompatregistry.MANDARIN_REDSTONE_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
+    //soul
+      public static final DeferredHolder<Item, StandingAndWallBlockItem> MANDARIN_SOUL_TORCH_ITEM =  FOODBLOCKITEM.register("mandarin_soul_torch_item",
+      () -> new StandingAndWallBlockItem(foodblockcompatregistry.MANDARIN_SOUL_TORCH.get(), foodblockcompatregistry.MANDARIN_SOUL_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
  //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
     //regular
       public static final DeferredHolder<Item, StandingAndWallBlockItem> LEMON_TORCH_ITEM = FOODBLOCKITEM.register("lemon_torch_item", 
@@ -1760,6 +1843,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Satsuma---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> SATSUMA_FURNACE_ITEM = FOODBLOCKITEM.register("satsuma_furnace_item", 
     () -> new BlockItem(foodblockcompatregistry.SATSUMA_FURNACE.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> MANDARIN_FURNACE_ITEM = FOODBLOCKITEM.register("mandarin_furnace_item", 
+    () -> new BlockItem(foodblockcompatregistry.MANDARIN_FURNACE.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> LEMON_FURNACE_ITEM = FOODBLOCKITEM.register("lemon_furnace_item", 
     () -> new BlockItem(foodblockcompatregistry.LEMON_FURNACE.get(), new BlockItem.Properties()));
@@ -1823,6 +1909,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Satsuma---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> SATSUMA_STONE_PATH_ITEM = FOODBLOCKITEM.register("satsuma_stone_path_item", 
     () -> new BlockItem(foodblockcompatregistry.SATSUMA_STONE_PATH.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> MANDARIN_STONE_PATH_ITEM = FOODBLOCKITEM.register("mandarin_stone_path_item", 
+    () -> new BlockItem(foodblockcompatregistry.MANDARIN_STONE_PATH.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> LEMON_STONE_PATH_ITEM = FOODBLOCKITEM.register("lemon_stone_path_item", 
     () -> new BlockItem(foodblockcompatregistry.LEMON_STONE_PATH.get(), new BlockItem.Properties()));
@@ -1894,6 +1983,10 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Satsuma---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> SATSUMA_BARREL_ITEM = FOODBLOCKITEM.register("satsuma_barrel_item", 
     () -> new BlockItem(foodblockcompatregistry.SATSUMA_BARREL.get(),
+    new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> MANDARIN_BARREL_ITEM = FOODBLOCKITEM.register("mandarin_barrel_item", 
+    () -> new BlockItem(foodblockcompatregistry.MANDARIN_BARREL.get(),
     new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> LEMON_BARREL_ITEM = FOODBLOCKITEM.register("lemon_barrel_item", 
@@ -1969,6 +2062,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Satsuma---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> SATSUMA_CHAIR_ITEM = FOODBLOCKITEM.register("satsuma_chair_item", () -> new BlockItem(foodblockcompatregistry.SATSUMA_CHAIR.get(),
     new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> MANDARIN_CHAIR_ITEM = FOODBLOCKITEM.register("mandarin_chair_item", () -> new BlockItem(foodblockcompatregistry.MANDARIN_CHAIR.get(),
+    new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> LEMON_CHAIR_ITEM = FOODBLOCKITEM.register("lemon_chair_item", () -> new BlockItem(foodblockcompatregistry.LEMON_CHAIR.get(),
     new BlockItem.Properties()));
@@ -2031,6 +2127,9 @@ public class foodblockcompatitemregistry {
     new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Satsuma---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> SATSUMA_BED_ITEM = FOODBLOCKITEM.register("satsuma_bed_item", () -> new BlockItem(foodblockcompatregistry.SATSUMA_BED.get(),
+    new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> MANDARIN_BED_ITEM = FOODBLOCKITEM.register("mandarin_bed_item", () -> new BlockItem(foodblockcompatregistry.MANDARIN_BED.get(),
     new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> LEMON_BED_ITEM = FOODBLOCKITEM.register("lemon_bed_item", () -> new BlockItem(foodblockcompatregistry.LEMON_BED.get(),
@@ -2148,6 +2247,15 @@ public class foodblockcompatitemregistry {
     //medium
       public static final DeferredHolder<Item, BlockItem> MEDIUM_SATSUMA_CABINET_ITEM = FOODBLOCKITEM.register("medium_satsuma_cabinet_item", 
       () -> new BlockItem(foodblockcompatregistry.MEDIUM_SATSUMA_CABINET.get(),
+      new BlockItem.Properties()));
+ //----------------------------------------------------------------------------------------Mandarin-----------------------------------------------------------------------------------------------
+    //small
+      public static final DeferredHolder<Item, BlockItem> SMALL_MANDARIN_CABINET_ITEM = FOODBLOCKITEM.register("small_mandarin_cabinet_item", 
+      () -> new BlockItem(foodblockcompatregistry.SMALL_MANDARIN_CABINET.get(),
+      new BlockItem.Properties()));
+    //medium
+      public static final DeferredHolder<Item, BlockItem> MEDIUM_MANDARIN_CABINET_ITEM = FOODBLOCKITEM.register("medium_mandarin_cabinet_item", 
+      () -> new BlockItem(foodblockcompatregistry.MEDIUM_MANDARIN_CABINET.get(),
       new BlockItem.Properties()));
  //----------------------------------------------------------------------------------------Lemon-----------------------------------------------------------------------------------------------
     //small

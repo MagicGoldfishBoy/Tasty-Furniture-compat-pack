@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "goldfishmod03tastyfurniturecompataddon:block/mandarin_slab"
+    },
+    "type=double": {
+      "model": "goldfishmod03tastyfurniturecompataddon:block/mandarin_block"
+    },
+    "type=top": {
+      "model": "goldfishmod03tastyfurniturecompataddon:block/mandarin_slab_top"
+    }
+  }
+}
