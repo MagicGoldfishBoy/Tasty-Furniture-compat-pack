@@ -180,5 +180,10 @@ public class foodmaterialtypecompatregistry {
         "grapefruit_wood_mat", 
         PLANT) 
     );
+    public static final WoodType POMELOWOODMAT = WoodType.register(
+     new WoodType(
+        "pomelo_wood_mat", 
+        PLANT) 
+    );
 
 }

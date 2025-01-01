@@ -66,6 +66,9 @@ import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.pecanWallSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.persimmonFurnace;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.persimmonSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.persimmonWallSign;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.pomeloFurnace;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.pomeloSign;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.pomeloWallSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.satsumaFurnace;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.satsumaSign;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.satsumaWallSign;
@@ -111,6 +114,8 @@ import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.pecanFur
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.pecanSignEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.persimmonFurnaceEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.persimmonSignEntity;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.pomeloFurnaceEntity;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.pomeloSignEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.satsumaFurnaceEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.satsumaSignEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.tangerineFurnaceEntity;
@@ -558,6 +563,31 @@ public class foodblockcompatregistry {
          .explosionResistance(10.0f)
          .sound(SoundType.MUD_BRICKS)
          ));
+ //--------------------------------------------------------------------------------------Pomelo---------------------------------------------------------------------------------------------
+  //.........plain
+    public static final DeferredHolder<Block, Block> POMELO_BLOCK = FOODBLOCK.register("pomelo_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.MUD_BRICKS)
+         ));
+  //.........bricks
+    public static final DeferredHolder<Block, Block> POMELO_BRICKS_BLOCK = FOODBLOCK.register("pomelo_bricks_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.MUD_BRICKS)
+         ));
+  //.........chiseled
+    public static final DeferredHolder<Block, Block> POMELO_CHISELED_BLOCK = FOODBLOCK.register("pomelo_chiseled_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.MUD_BRICKS)
+         ));
+  //.........tiles
+    public static final DeferredHolder<Block, Block> POMELO_TILES_BLOCK = FOODBLOCK.register("pomelo_tiles_block", () -> new Block(BlockBehaviour.Properties.of()
+         .destroyTime(2.0f)
+         .explosionResistance(10.0f)
+         .sound(SoundType.MUD_BRICKS)
+         ));
  //-----------------------------------------------------------------------------------------Corn------------------------------------------------------------------------------------------------
   //.........plain
     public static final DeferredHolder<Block, Block> CORN_BLOCK = FOODBLOCK.register("corn_block", () -> new Block(BlockBehaviour.Properties.of()
@@ -895,6 +925,19 @@ public class foodblockcompatregistry {
      .explosionResistance(9.5f)
      .sound(SoundType.MUD_BRICKS)
      ));
+ //--------------------------------------------------------------------------------------Pomelo---------------------------------------------------------------------------------------------
+  //.........plain
+     public static final DeferredHolder<Block, SlabBlock> POMELO_SLAB = FOODBLOCK.register("pomelo_slab", () -> new SlabBlock(BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     ));
+  //.........bricks
+     public static final DeferredHolder<Block, SlabBlock> POMELO_BRICKS_SLAB = FOODBLOCK.register("pomelo_bricks_slab", () -> new SlabBlock(BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     ));
  //-----------------------------------------------------------------------------------------Corn------------------------------------------------------------------------------------------------
   //.........plain
      public static final DeferredHolder<Block, SlabBlock> CORN_SLAB = FOODBLOCK.register("corn_slab", () -> new SlabBlock(BlockBehaviour.Properties.of()
@@ -1203,6 +1246,21 @@ public class foodblockcompatregistry {
      .explosionResistance(9.5f)
      .sound(SoundType.MUD_BRICKS)
      )); 
+ //--------------------------------------------------------------------------------------Pomelo---------------------------------------------------------------------------------------------
+  //.........plain
+     public static final DeferredHolder<Block, StairBlock> POMELO_STAIRS = FOODBLOCK.register("pomelo_stairs", 
+     () -> new StairBlock(POMELO_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
+     .destroyTime(1.5f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     )); 
+  //.........bricks
+     public static final DeferredHolder<Block, StairBlock> POMELO_BRICKS_STAIRS = FOODBLOCK.register("pomelo_bricks_stairs", 
+     () -> new StairBlock(POMELO_BRICKS_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of()
+     .destroyTime(1.5f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     )); 
  //-----------------------------------------------------------------------------------------Corn------------------------------------------------------------------------------------------------
   //.........plain
      public static final DeferredHolder<Block, StairBlock> CORN_STAIRS = FOODBLOCK.register("corn_stairs", 
@@ -1361,6 +1419,11 @@ public class foodblockcompatregistry {
    .strength(0.25F, 0.25F)
    .sound(SoundType.MUD_BRICKS)
    .noOcclusion()));
+ //-------------------------------------------------------------------------------------Pomelo----------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Block, IronBarsBlock> POMELO_BARS = FOODBLOCK.register("pomelo_bars", () -> new IronBarsBlock(BlockBehaviour.Properties.of()
+   .strength(0.25F, 0.25F)
+   .sound(SoundType.MUD_BRICKS)
+   .noOcclusion()));
  //-----------------------------------------------------------------------------------------Corn------------------------------------------------------------------------------------------------
    public static final DeferredHolder<Block, IronBarsBlock> CORN_BARS = FOODBLOCK.register("corn_bars", () -> new IronBarsBlock(BlockBehaviour.Properties.of()
    .strength(0.25F, 0.25F)
@@ -1469,6 +1532,11 @@ public class foodblockcompatregistry {
   .strength(0.25F, 0.25F)
   .sound(SoundType.MUD_BRICKS)
   .noOcclusion()));
+ //----------------------------------------------------------------------------------------Pomelo-------------------------------------------------------------------------------------------------
+  public static final DeferredHolder<Block, DoorBlock> POMELO_DOOR = FOODBLOCK.register("pomelo_door", () -> new DoorBlock(foodmaterialtypecompatregistry.PLANT, BlockBehaviour.Properties.of()
+  .strength(0.25F, 0.25F)
+  .sound(SoundType.MUD_BRICKS)
+  .noOcclusion()));
  //-----------------------------------------------------------------------------------------Corn------------------------------------------------------------------------------------------------
   public static final DeferredHolder<Block, DoorBlock> CORN_DOOR = FOODBLOCK.register("corn_door", () -> new DoorBlock(foodmaterialtypecompatregistry.PLANT, BlockBehaviour.Properties.of()
   .strength(0.25F, 0.25F)
@@ -1559,6 +1627,10 @@ public class foodblockcompatregistry {
   .sound(SoundType.MUD_BRICKS)));
  //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
   public static final DeferredHolder<Block, ButtonBlock> GRAPEFRUIT_BUTTON = FOODBLOCK.register("grapefruit_button", () -> new ButtonBlock(BlockSetType.CRIMSON, 20, 
+  BlockBehaviour.Properties.of()
+  .sound(SoundType.MUD_BRICKS)));
+ //--------------------------------------------------------------------------------------Pomelo---------------------------------------------------------------------------------------------
+  public static final DeferredHolder<Block, ButtonBlock> POMELO_BUTTON = FOODBLOCK.register("pomelo_button", () -> new ButtonBlock(BlockSetType.CRIMSON, 20, 
   BlockBehaviour.Properties.of()
   .sound(SoundType.MUD_BRICKS)));
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
@@ -1691,6 +1763,13 @@ public class foodblockcompatregistry {
   ));
  //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
   public static final DeferredHolder<Block, FenceBlock> GRAPEFRUIT_FENCE = FOODBLOCK.register("grapefruit_fence", () -> new FenceBlock(BlockBehaviour.Properties.of()
+  .destroyTime(1.75f)
+  .explosionResistance(9.0f)
+  .sound(SoundType.MUD_BRICKS)
+  .noOcclusion()
+  ));
+ //--------------------------------------------------------------------------------------Pomelo---------------------------------------------------------------------------------------------
+  public static final DeferredHolder<Block, FenceBlock> POMELO_FENCE = FOODBLOCK.register("pomelo_fence", () -> new FenceBlock(BlockBehaviour.Properties.of()
   .destroyTime(1.75f)
   .explosionResistance(9.0f)
   .sound(SoundType.MUD_BRICKS)
@@ -1878,6 +1957,15 @@ public class foodblockcompatregistry {
             .destroyTime(1.5f)
             .explosionResistance(8.0f)
     ));
+ //--------------------------------------------------------------------------------------Pomelo---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, FenceGateBlock> POMELO_GATE = FOODBLOCK.register("pomelo_gate", 
+    () -> new FenceGateBlock(
+            foodmaterialtypecompatregistry.POMELOWOODMAT, 
+            BlockBehaviour.Properties.of()
+            .sound(SoundType.ROOTED_DIRT)
+            .destroyTime(1.5f)
+            .explosionResistance(8.0f)
+    ));
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, FenceGateBlock> CORN_GATE = FOODBLOCK.register("corn_gate", 
     () -> new FenceGateBlock(
@@ -2033,6 +2121,13 @@ public class foodblockcompatregistry {
     ));
  //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, PressurePlateBlock> GRAPEFRUIT_PRESSURE_PLATE = FOODBLOCK.register("grapefruit_pressure_plate", 
+    () -> new PressurePlateBlock(foodmaterialtypecompatregistry.PLANT, BlockBehaviour.Properties.of()
+    .sound(SoundType.ROOTED_DIRT)
+    .destroyTime(0.5f)
+    .explosionResistance(4.0f)
+    ));
+ //--------------------------------------------------------------------------------------Pomelo---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, PressurePlateBlock> POMELO_PRESSURE_PLATE = FOODBLOCK.register("pomelo_pressure_plate", 
     () -> new PressurePlateBlock(foodmaterialtypecompatregistry.PLANT, BlockBehaviour.Properties.of()
     .sound(SoundType.ROOTED_DIRT)
     .destroyTime(0.5f)
@@ -2796,6 +2891,51 @@ public class foodblockcompatregistry {
          foodblockcompatregistry.GRAPEFRUIT_STANDING_SIGN.get()
      ).build(null)
    );
+ //--------------------------------------------------------------------------------------Pomelo---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Block, pomeloSign> POMELO_SIGN = FOODBLOCK.register("pomelo_sign",
+   () -> new pomeloSign(
+     BlockBehaviour.Properties.of()
+         .mapColor(MapColor.WOOD)
+         .forceSolidOn()
+         .instrument(NoteBlockInstrument.BASS)
+         .noCollission()
+         .strength(1.0F)
+         .ignitedByLava(),
+         foodmaterialtypecompatregistry.POMELOWOODMAT
+   ));
+      public static final DeferredHolder<Block, pomeloWallSign> POMELO_WALL_SIGN = FOODBLOCK.register("pomelo_wall_sign",
+   () -> new pomeloWallSign(
+       BlockBehaviour.Properties.of()
+       .mapColor(MapColor.WOOD)
+       .forceSolidOn()
+       .instrument(NoteBlockInstrument.BASS)
+       .noCollission()
+       .strength(1.0F)
+       .ignitedByLava()
+       .randomTicks(),
+       foodmaterialtypecompatregistry.POMELOWOODMAT
+   ));
+   public static final DeferredHolder<Block, pomeloSign> POMELO_STANDING_SIGN = FOODBLOCK.register("pomelo_standing_sign",
+   () -> new pomeloSign(
+       BlockBehaviour.Properties.of()
+       .mapColor(MapColor.WOOD)
+       .forceSolidOn()
+       .instrument(NoteBlockInstrument.BASS)
+       .noCollission()
+       .strength(1.0F)
+       .ignitedByLava()
+       .randomTicks(),
+       foodmaterialtypecompatregistry.POMELOWOODMAT
+   ));
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<pomeloSignEntity>> POMELO_SIGN_ENTITY = FOODBLOCKENTITY.register(
+     "pomelo_sign_entity",
+     () -> BlockEntityType.Builder.of(
+         pomeloSignEntity::new,
+         foodblockcompatregistry.POMELO_SIGN.get(),
+         foodblockcompatregistry.POMELO_WALL_SIGN.get(),
+         foodblockcompatregistry.POMELO_STANDING_SIGN.get()
+     ).build(null)
+   );
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Block, cornSign> CORN_SIGN = FOODBLOCK.register("corn_sign",
    () -> new cornSign(
@@ -3136,6 +3276,13 @@ public class foodblockcompatregistry {
      .explosionResistance(9.5f)
      .sound(SoundType.MUD_BRICKS)
      ));
+ //----------------------------------------------------------------------------------------Pomelo-----------------------------------------------------------------------------------------------
+     public static final DeferredHolder<Block, TrapDoorBlock> POMELO_TRAPDOOR = FOODBLOCK.register("pomelo_trapdoor", () -> new TrapDoorBlock(foodmaterialtypecompatregistry.PLANT, 
+     BlockBehaviour.Properties.of()
+     .destroyTime(1.75f)
+     .explosionResistance(9.5f)
+     .sound(SoundType.MUD_BRICKS)
+     ));
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
      public static final DeferredHolder<Block, TrapDoorBlock> CORN_TRAPDOOR = FOODBLOCK.register("corn_trapdoor", () -> new TrapDoorBlock(foodmaterialtypecompatregistry.PLANT, 
      BlockBehaviour.Properties.of()
@@ -3281,6 +3428,13 @@ public class foodblockcompatregistry {
      ));
  //----------------------------------------------------------------------------------------Grapefruit------------------------------------------------------------------------------------------------
      public static final DeferredHolder<Block, Block> GRAPEFRUIT_LAMP = FOODBLOCK.register("grapefruit_lamp", () -> new Block(BlockBehaviour.Properties.of()
+     .destroyTime(1.5f)
+     .explosionResistance(10.0f)
+     .sound(SoundType.FROGLIGHT)
+     .lightLevel(state -> 15)
+     ));
+ //----------------------------------------------------------------------------------------Pomelo------------------------------------------------------------------------------------------------
+     public static final DeferredHolder<Block, Block> POMELO_LAMP = FOODBLOCK.register("pomelo_lamp", () -> new Block(BlockBehaviour.Properties.of()
      .destroyTime(1.5f)
      .explosionResistance(10.0f)
      .sound(SoundType.FROGLIGHT)
@@ -3446,6 +3600,14 @@ public class foodblockcompatregistry {
       ));
  //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, CarpetBlock> GRAPEFRUIT_CARPET = FOODBLOCK.register("grapefruit_carpet", () -> new CarpetBlock(BlockBehaviour.Properties.of()
+      .destroyTime(0.5f)
+      .explosionResistance(0.5f)
+      .sound(SoundType.MOSS_CARPET)
+      .friction(0.3f)
+      .ignitedByLava()
+      ));
+ //--------------------------------------------------------------------------------------Pomelo---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, CarpetBlock> POMELO_CARPET = FOODBLOCK.register("pomelo_carpet", () -> new CarpetBlock(BlockBehaviour.Properties.of()
       .destroyTime(0.5f)
       .explosionResistance(0.5f)
       .sound(SoundType.MOSS_CARPET)
@@ -3767,6 +3929,23 @@ public class foodblockcompatregistry {
       .lightLevel(state  -> 10)
       .noOcclusion()
       ));
+ //--------------------------------------------------------------------------------------Pomelo---------------------------------------------------------------------------------------------
+    //regular
+      public static final DeferredHolder<Block, LanternBlock> POMELO_LANTERN = FOODBLOCK.register("pomelo_lantern", () -> new LanternBlock(BlockBehaviour.Properties.of()
+      .destroyTime(0.5f)
+      .explosionResistance(0.5f)
+      .sound(SoundType.SHROOMLIGHT)
+      .lightLevel(state  -> 15)
+      .noOcclusion()
+      ));
+    //soul
+      public static final DeferredHolder<Block, LanternBlock> POMELO_SOUL_LANTERN = FOODBLOCK.register("pomelo_soul_lantern", () -> new LanternBlock(BlockBehaviour.Properties.of()
+      .destroyTime(0.5f)
+      .explosionResistance(0.5f)
+      .sound(SoundType.SHROOMLIGHT)
+      .lightLevel(state  -> 10)
+      .noOcclusion()
+      ));
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
     //regular
       public static final DeferredHolder<Block, LanternBlock> CORN_LANTERN = FOODBLOCK.register("corn_lantern", () -> new LanternBlock(BlockBehaviour.Properties.of()
@@ -3967,6 +4146,13 @@ public class foodblockcompatregistry {
     .sound(SoundType.CHAIN)
     .noOcclusion()
     ));
+ //--------------------------------------------------------------------------------------Pomelo---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, ChainBlock> POMELO_CHAIN = FOODBLOCK.register("pomelo_chain", () -> new ChainBlock(BlockBehaviour.Properties.of()
+    .destroyTime(0.5f)
+    .explosionResistance(0.5f)
+    .sound(SoundType.CHAIN)
+    .noOcclusion()
+    ));
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, ChainBlock> CORN_CHAIN = FOODBLOCK.register("corn_chain", () -> new ChainBlock(BlockBehaviour.Properties.of()
     .destroyTime(0.5f)
@@ -4123,6 +4309,13 @@ public class foodblockcompatregistry {
     .sound(plant_ladder_sound)
     .noOcclusion()
    )); 
+ //-----------------------------------------------------------------------------------------Pomelo------------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, LadderBlock> POMELO_LADDER = FOODBLOCK.register("pomelo_ladder", () -> new LadderBlock(BlockBehaviour.Properties.of()
+    .destroyTime(ladder_destroy_time)
+    .explosionResistance(ladder_explosion_resistance)
+    .sound(plant_ladder_sound)
+    .noOcclusion()
+   )); 
  //-----------------------------------------------------------------------------------------Corn------------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, LadderBlock> CORN_LADDER = FOODBLOCK.register("corn_ladder", () -> new LadderBlock(BlockBehaviour.Properties.of()
     .destroyTime(ladder_destroy_time)
@@ -4268,6 +4461,13 @@ public class foodblockcompatregistry {
     ));
  //-----------------------------------------------------------------------------------------Grapefruit------------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, HorizontalDirectionalBlock> GRAPEFRUIT_TABLE = FOODBLOCK.register("grapefruit_table", () -> new foodtable(BlockBehaviour.Properties.of()
+    .destroyTime(1.5f)
+    .explosionResistance(1.5f)
+    .sound(SoundType.MUD_BRICKS)
+    .noOcclusion()
+    ));
+ //-----------------------------------------------------------------------------------------Pomelo------------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, HorizontalDirectionalBlock> POMELO_TABLE = FOODBLOCK.register("pomelo_table", () -> new foodtable(BlockBehaviour.Properties.of()
     .destroyTime(1.5f)
     .explosionResistance(1.5f)
     .sound(SoundType.MUD_BRICKS)
@@ -4647,6 +4847,27 @@ public class foodblockcompatregistry {
 
      public static final DeferredHolder<Block, WallTorchBlock> GRAPEFRUIT_SOUL_WALL_TORCH = FOODBLOCK.register("grapefruit_soul_wall_torch", 
      () -> new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_WALL_TORCH)));
+ //--------------------------------------------------------------------------------------Pomelo---------------------------------------------------------------------------------------------
+    //regular
+     public static final DeferredHolder<Block, TorchBlock> POMELO_TORCH = FOODBLOCK.register("pomelo_torch", 
+     () -> new TorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH)));
+
+     public static final DeferredHolder<Block, WallTorchBlock> POMELO_WALL_TORCH = FOODBLOCK.register("pomelo_wall_torch", 
+     () -> new WallTorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH)));
+
+    //redstone
+     public static final DeferredHolder<Block, RedstoneTorchBlock> POMELO_REDSTONE_TORCH = FOODBLOCK.register("pomelo_redstone_torch", 
+     () -> new RedstoneTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_TORCH)));
+
+     public static final DeferredHolder<Block, RedstoneWallTorchBlock> POMELO_REDSTONE_WALL_TORCH = FOODBLOCK.register("pomelo_redstone_wall_torch", 
+     () -> new RedstoneWallTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_WALL_TORCH)));
+
+    //soul
+     public static final DeferredHolder<Block, TorchBlock> POMELO_SOUL_TORCH = FOODBLOCK.register("pomelo_soul_torch", 
+     () -> new TorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_TORCH)));
+
+     public static final DeferredHolder<Block, WallTorchBlock> POMELO_SOUL_WALL_TORCH = FOODBLOCK.register("pomelo_soul_wall_torch", 
+     () -> new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_WALL_TORCH)));
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
     //regular
      public static final DeferredHolder<Block, TorchBlock> CORN_TORCH = FOODBLOCK.register("corn_torch", 
@@ -4851,6 +5072,12 @@ public class foodblockcompatregistry {
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<grapefruitFurnaceEntity>> GRAPEFRUIT_FURNACE_ENTITY = FOODBLOCKENTITY.register("grapefruit_furnace", 
     () -> BlockEntityType.Builder.of(grapefruitFurnaceEntity::new, GRAPEFRUIT_FURNACE.get()).build(null));
+ //----------------------------------------------------------------------------------------Pomelo-----------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, pomeloFurnace> POMELO_FURNACE = FOODBLOCK.register("pomelo_furnace", 
+    () -> new pomeloFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<pomeloFurnaceEntity>> POMELO_FURNACE_ENTITY = FOODBLOCKENTITY.register("pomelo_furnace", 
+    () -> BlockEntityType.Builder.of(pomeloFurnaceEntity::new, POMELO_FURNACE.get()).build(null));
  //----------------------------------------------------------------------------------------Corn-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, cornFurnace> CORN_FURNACE = FOODBLOCK.register("corn_furnace", 
     () -> new cornFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
@@ -5012,6 +5239,14 @@ public class foodblockcompatregistry {
     .sound(SoundType.MUD_BRICKS)
     .noOcclusion()
     ));
+ //--------------------------------------------------------------------------------------Pomelo---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, foodpathtypeminislab> POMELO_STONE_PATH = FOODBLOCK.register("pomelo_stone_path", 
+    () -> new foodpathtypeminislab(BlockBehaviour.Properties.of()
+    .destroyTime(1.5f)
+    .explosionResistance(1.5f)
+    .sound(SoundType.MUD_BRICKS)
+    .noOcclusion()
+    ));
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, foodpathtypeminislab> CORN_STONE_PATH = FOODBLOCK.register("corn_stone_path", 
     () -> new foodpathtypeminislab(BlockBehaviour.Properties.of()
@@ -5156,6 +5391,12 @@ public class foodblockcompatregistry {
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
      ));
+ //--------------------------------------------------------------------------------------Pomelo---------------------------------------------------------------------------------------------
+     public static final DeferredHolder<Block, foodBarrel> POMELO_BARREL = FOODBLOCK.register("pomelo_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
+     .sound(plant_barrel_sound)
+     .destroyTime(barrel_destroy_time)
+     .explosionResistance(barrel_explosion_resistance)
+     ));
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
      public static final DeferredHolder<Block, foodBarrel> CORN_BARREL = FOODBLOCK.register("corn_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
      .sound(plant_barrel_sound)
@@ -5193,8 +5434,8 @@ public class foodblockcompatregistry {
      foodblockcompatregistry.BLACKCHERRY_BARREL.get(),foodblockcompatregistry.COCONUT_BARREL.get(),foodblockcompatregistry.ORANGE_BARREL.get(),foodblockcompatregistry.TANGERINE_BARREL.get(),
      foodblockcompatregistry.PERSIMMON_BARREL.get(),foodblockcompatregistry.SATSUMA_BARREL.get(),foodblockcompatregistry.MANDARIN_BARREL.get(),foodblockcompatregistry.LEMON_BARREL.get(),
      foodblockcompatregistry.BUDDHASHAND_BARREL.get(),foodblockcompatregistry.LIME_BARREL.get(),foodblockcompatregistry.KEYLIME_BARREL.get(),foodblockcompatregistry.FINGERLIME_BARREL.get(),
-     foodblockcompatregistry.GRAPEFRUIT_BARREL.get(),foodblockcompatregistry.CORN_BARREL.get(),foodblockcompatregistry.ONION_BARREL.get(),foodblockcompatregistry.TOMATO_BARREL.get(),
-     foodblockcompatregistry.PECAN_BARREL.get(),foodblockcompatregistry.ALMOND_BARREL.get()).build(null));
+     foodblockcompatregistry.GRAPEFRUIT_BARREL.get(),foodblockcompatregistry.POMELO_BARREL.get(),foodblockcompatregistry.CORN_BARREL.get(),foodblockcompatregistry.ONION_BARREL.get(),
+     foodblockcompatregistry.TOMATO_BARREL.get(),foodblockcompatregistry.PECAN_BARREL.get(),foodblockcompatregistry.ALMOND_BARREL.get()).build(null));
 //==============================================================================================================================================================================================
 //                                                                                         Chairs
 //==============================================================================================================================================================================================
@@ -5310,6 +5551,13 @@ public class foodblockcompatregistry {
      ));
  //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
      public static final DeferredHolder<Block, foodChairBlock> GRAPEFRUIT_CHAIR = FOODBLOCK.register("grapefruit_chair", () -> new foodChairBlock(BlockBehaviour.Properties.of()
+     .sound(plant_chair_sound)
+     .destroyTime(chair_destroy_time)
+     .explosionResistance(chair_explosion_resistance)
+     .noOcclusion()
+     ));
+ //--------------------------------------------------------------------------------------Pomelo---------------------------------------------------------------------------------------------
+     public static final DeferredHolder<Block, foodChairBlock> POMELO_CHAIR = FOODBLOCK.register("pomelo_chair", () -> new foodChairBlock(BlockBehaviour.Properties.of()
      .sound(plant_chair_sound)
      .destroyTime(chair_destroy_time)
      .explosionResistance(chair_explosion_resistance)
@@ -5470,6 +5718,13 @@ public class foodblockcompatregistry {
      .explosionResistance(bed_explosion_resistance)
      .noOcclusion()
      ));
+ //--------------------------------------------------------------------------------------Pomelo---------------------------------------------------------------------------------------------
+     public static final DeferredHolder<Block, foodBed> POMELO_BED = FOODBLOCK.register("pomelo_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     .sound(plant_bed_sound)
+     .destroyTime(bed_destroy_time)
+     .explosionResistance(bed_explosion_resistance)
+     .noOcclusion()
+     ));
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
      public static final DeferredHolder<Block, foodBed> CORN_BED = FOODBLOCK.register("corn_bed", () -> new foodBed(BlockBehaviour.Properties.of()
      .sound(plant_bed_sound)
@@ -5509,7 +5764,7 @@ public class foodblockcompatregistry {
  //.........entity
      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<bedEntity>> FOOD_BED_ENTITY = FOODBLOCKENTITY.register("food_bed_entity",
      () -> BlockEntityType.Builder.of(bedEntity::new, ELDERBERRY_BED.get(), JUNIPER_BED.get(), CHERRY_BED.get(), COCONUT_BED.get(), ORANGE_BED.get(), TANGERINE_BED.get(), PERSIMMON_BED.get(),  
-     LEMON_BED.get(), LIME_BED.get(), KEYLIME_BED.get(), FINGERLIME_BED.get(), GRAPEFRUIT_BED.get(), CORN_BED.get(), ONION_BED.get(), TOMATO_BED.get(), PECAN_BED.get(), 
+     LEMON_BED.get(), LIME_BED.get(), KEYLIME_BED.get(), FINGERLIME_BED.get(), GRAPEFRUIT_BED.get(),POMELO_BED.get(),CORN_BED.get(), ONION_BED.get(), TOMATO_BED.get(), PECAN_BED.get(), 
      SATSUMA_BED.get(),MANDARIN_BED.get(),ALMOND_BED.get()).build(null));
 
 //==============================================================================================================================================================================================
@@ -5760,6 +6015,21 @@ public class foodblockcompatregistry {
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
+ //--------------------------------------------------------------------------------------Pomelo---------------------------------------------------------------------------------------------
+     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_POMELO_CABINET = FOODBLOCK.register("small_pomelo_cabinet", 
+     () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
+     .sound(plant_cabinet_sound)
+     .destroyTime(cabinet_destroy_time)
+     .explosionResistance(cabinet_explosion_resistance)
+     .noOcclusion()
+     ));
+    //medium
+     public static final DeferredHolder<Block, mediumFoodCabinet> MEDIUM_POMELO_CABINET = FOODBLOCK.register("medium_pomelo_cabinet", () -> new mediumFoodCabinet(BlockBehaviour.Properties.of()
+     .sound(plant_cabinet_sound)
+     .destroyTime(cabinet_destroy_time)
+     .explosionResistance(cabinet_explosion_resistance)
+     .noOcclusion()
+     ));
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
      public static final DeferredHolder<Block, smallFoodCabinet> SMALL_CORN_CABINET = FOODBLOCK.register("small_corn_cabinet", 
      () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
@@ -5841,12 +6111,12 @@ public class foodblockcompatregistry {
      () -> BlockEntityType.Builder.of(smallFoodContainerEntity::new, SMALL_ELDERBERRY_CABINET.get(), SMALL_JUNIPER_CABINET.get(), SMALL_CHERRY_CABINET.get(), SMALL_BLACKCHERRY_CABINET.get(),
      SMALL_COCONUT_CABINET.get(), SMALL_ORANGE_CABINET.get(), SMALL_TANGERINE_CABINET.get(), SMALL_PERSIMMON_CABINET.get(), SMALL_SATSUMA_CABINET.get(), SMALL_MANDARIN_CABINET.get(), 
      SMALL_LEMON_CABINET.get(), SMALL_BUDDHASHAND_CABINET.get(), SMALL_LIME_CABINET.get(), SMALL_KEYLIME_CABINET.get(), SMALL_FINGERLIME_CABINET.get(), SMALL_GRAPEFRUIT_CABINET.get(), 
-     SMALL_CORN_CABINET.get(), SMALL_ONION_CABINET.get(), SMALL_TOMATO_CABINET.get(), SMALL_PECAN_CABINET.get(), SMALL_ALMOND_CABINET.get()).build(null));
+     SMALL_POMELO_CABINET.get(),SMALL_CORN_CABINET.get(), SMALL_ONION_CABINET.get(), SMALL_TOMATO_CABINET.get(), SMALL_PECAN_CABINET.get(), SMALL_ALMOND_CABINET.get()).build(null));
     //medium
      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<mediumFoodContainerEntity>> MEDIUM_CABINET_ENTITY = FOODBLOCKENTITY.register("medium_cabinet_entity",
      () -> BlockEntityType.Builder.of(mediumFoodContainerEntity::new, MEDIUM_ELDERBERRY_CABINET.get(), MEDIUM_JUNIPER_CABINET.get(), MEDIUM_CHERRY_CABINET.get(), MEDIUM_BLACKCHERRY_CABINET.get(), 
      MEDIUM_COCONUT_CABINET.get(), MEDIUM_ORANGE_CABINET.get(), MEDIUM_TANGERINE_CABINET.get(), MEDIUM_PERSIMMON_CABINET.get(), MEDIUM_SATSUMA_CABINET.get(), MEDIUM_MANDARIN_CABINET.get(), 
      MEDIUM_LEMON_CABINET.get(), MEDIUM_BUDDHASHAND_CABINET.get(), MEDIUM_LIME_CABINET.get(), MEDIUM_KEYLIME_CABINET.get(), MEDIUM_FINGERLIME_CABINET.get(), MEDIUM_GRAPEFRUIT_CABINET.get(), 
-     MEDIUM_CORN_CABINET.get(), MEDIUM_ONION_CABINET.get(), MEDIUM_TOMATO_CABINET.get(), MEDIUM_PECAN_CABINET.get(), MEDIUM_ALMOND_CABINET.get()).build(null));
+     MEDIUM_POMELO_CABINET.get(),  MEDIUM_CORN_CABINET.get(), MEDIUM_ONION_CABINET.get(), MEDIUM_TOMATO_CABINET.get(), MEDIUM_PECAN_CABINET.get(), MEDIUM_ALMOND_CABINET.get()).build(null));
 
 }

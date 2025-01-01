@@ -271,6 +271,19 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........tiles
           net.minecraft.world.level.block.Block grapefruit_tiles_block = foodblockcompatregistry.GRAPEFRUIT_TILES_BLOCK.get();
           simpleBlock(grapefruit_tiles_block);
+     //------------------------------------------------------------pomelo-----------------------------------------------------------------------
+      //.........plain
+          net.minecraft.world.level.block.Block pomelo_block = foodblockcompatregistry.POMELO_BLOCK.get();
+          simpleBlock(pomelo_block);
+      //.........bricks
+          net.minecraft.world.level.block.Block pomelo_bricks_block = foodblockcompatregistry.POMELO_BRICKS_BLOCK.get();
+          simpleBlock(pomelo_bricks_block);
+      //.........chiseled
+          net.minecraft.world.level.block.Block pomelo_chiseled_block = foodblockcompatregistry.POMELO_CHISELED_BLOCK.get();
+          simpleBlock(pomelo_chiseled_block);
+      //.........tiles
+          net.minecraft.world.level.block.Block pomelo_tiles_block = foodblockcompatregistry.POMELO_TILES_BLOCK.get();
+          simpleBlock(pomelo_tiles_block);
      //------------------------------------------------------------corn-----------------------------------------------------------------------
       //.........plain
           net.minecraft.world.level.block.Block corn_block = foodblockcompatregistry.CORN_BLOCK.get();
@@ -483,6 +496,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
           SlabBlock grapefruit_bricks_slab = foodblockcompatregistry.GRAPEFRUIT_BRICKS_SLAB.get();
           ResourceLocation grapefruit_bricks_block_texture = modLoc("block/grapefruit_bricks_block");
           slabBlock(grapefruit_bricks_slab, grapefruit_bricks_block_texture, grapefruit_bricks_block_texture);
+     //------------------------------------------------------------pomelo-----------------------------------------------------------------------
+      //.........plain
+          SlabBlock pomelo_slab = foodblockcompatregistry.POMELO_SLAB.get();
+          ResourceLocation pomelo_block_texture = modLoc("block/pomelo_block");
+          slabBlock(pomelo_slab, pomelo_block_texture, pomelo_block_texture);
+      //.........bricks
+          SlabBlock pomelo_bricks_slab = foodblockcompatregistry.POMELO_BRICKS_SLAB.get();
+          ResourceLocation pomelo_bricks_block_texture = modLoc("block/pomelo_bricks_block");
+          slabBlock(pomelo_bricks_slab, pomelo_bricks_block_texture, pomelo_bricks_block_texture);
      //------------------------------------------------------------corn-----------------------------------------------------------------------
       //.........plain
           SlabBlock corn_slab = foodblockcompatregistry.CORN_SLAB.get();
@@ -643,6 +665,13 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........bricks
           StairBlock grapefruit_bricks_stairs = foodblockcompatregistry.GRAPEFRUIT_BRICKS_STAIRS.get();
           stairsBlock(grapefruit_bricks_stairs, grapefruit_bricks_block_texture);
+     //------------------------------------------------------------pomelo-----------------------------------------------------------------------
+      //.........plain
+          StairBlock pomelo_stairs = foodblockcompatregistry.POMELO_STAIRS.get();
+          stairsBlock(pomelo_stairs, pomelo_block_texture);
+      //.........bricks
+          StairBlock pomelo_bricks_stairs = foodblockcompatregistry.POMELO_BRICKS_STAIRS.get();
+          stairsBlock(pomelo_bricks_stairs, pomelo_bricks_block_texture);
      //------------------------------------------------------------corn-----------------------------------------------------------------------
       //.........plain
           StairBlock corn_stairs = foodblockcompatregistry.CORN_STAIRS.get();
@@ -761,6 +790,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation grapefruit_bars_texture = modLoc("block/grapefruit_bars");
           ResourceLocation grapefruit_bars_rim_texture = modLoc("block/grapefruit_block");
           paneBlockWithRenderType(grapefruit_bars, "grapefruit_bars", grapefruit_bars_texture, grapefruit_bars_rim_texture, "cutout_mipped_all"); 
+     //------------------------------------------------------------pomelo-----------------------------------------------------------------------
+          IronBarsBlock pomelo_bars = foodblockcompatregistry.POMELO_BARS.get(); 
+          ResourceLocation pomelo_bars_texture = modLoc("block/pomelo_bars");
+          ResourceLocation pomelo_bars_rim_texture = modLoc("block/pomelo_block");
+          paneBlockWithRenderType(pomelo_bars, "pomelo_bars", pomelo_bars_texture, pomelo_bars_rim_texture, "cutout_mipped_all"); 
      //------------------------------------------------------------corn-----------------------------------------------------------------------
           IronBarsBlock corn_bars = foodblockcompatregistry.CORN_BARS.get(); 
           ResourceLocation corn_bars_texture = modLoc("block/corn_bars");
@@ -868,7 +902,12 @@ public class GM1BlockStateProvider extends BlockStateProvider
           DoorBlock grapefruit_door = foodblockcompatregistry.GRAPEFRUIT_DOOR.get(); 
           ResourceLocation grapefruit_door_top_texture = modLoc("block/grapefruit_door_top");
           ResourceLocation grapefruit_door_bottom_texture = modLoc("block/grapefruit_door_bottom");
-          doorBlockWithRenderType(grapefruit_door, "grapefruit_door", grapefruit_door_bottom_texture, grapefruit_door_top_texture, "translucent"); 
+          doorBlockWithRenderType(grapefruit_door, "grapefruit_door", grapefruit_door_bottom_texture, grapefruit_door_top_texture, "cutout_mipped_all"); 
+     //------------------------------------------------------------pomelo-----------------------------------------------------------------------
+          DoorBlock pomelo_door = foodblockcompatregistry.POMELO_DOOR.get(); 
+          ResourceLocation pomelo_door_top_texture = modLoc("block/pomelo_door_top");
+          ResourceLocation pomelo_door_bottom_texture = modLoc("block/pomelo_door_bottom");
+          doorBlockWithRenderType(pomelo_door, "pomelo_door", pomelo_door_bottom_texture, pomelo_door_top_texture, "cutout_mipped_all"); 
      //------------------------------------------------------------corn-----------------------------------------------------------------------
           DoorBlock corn_door = foodblockcompatregistry.CORN_DOOR.get(); 
           ResourceLocation corn_door_top_texture = modLoc("block/corn_door_top");
@@ -961,6 +1000,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ButtonBlock grapefruit_button = foodblockcompatregistry.GRAPEFRUIT_BUTTON.get();
           ResourceLocation grapefruit_button_texture = modLoc("block/grapefruit_block");
           buttonBlock(grapefruit_button, grapefruit_button_texture);
+     //------------------------------------------------------------pomelo-----------------------------------------------------------------------
+          ButtonBlock pomelo_button = foodblockcompatregistry.POMELO_BUTTON.get();
+          ResourceLocation pomelo_button_texture = modLoc("block/pomelo_block");
+          buttonBlock(pomelo_button, pomelo_button_texture);
      //------------------------------------------------------------corn-----------------------------------------------------------------------
           ButtonBlock corn_button = foodblockcompatregistry.CORN_BUTTON.get();
           ResourceLocation corn_button_texture = modLoc("block/corn_block");
@@ -1128,6 +1171,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
           FenceGateBlock grapefruit_gate = foodblockcompatregistry.GRAPEFRUIT_GATE.get();
           ResourceLocation grapefruit_gate_texture = modLoc("block/grapefruit_block");
           fenceGateBlock(grapefruit_gate, grapefruit_gate_texture);
+     //------------------------------------------------------------pomelo-----------------------------------------------------------------------
+       //fence
+          FenceBlock pomelo_fence = foodblockcompatregistry.POMELO_FENCE.get();
+          ResourceLocation pomelo_fence_texture = modLoc("block/pomelo_block");
+          fenceBlock(pomelo_fence, pomelo_fence_texture);
+       //gate
+          FenceGateBlock pomelo_gate = foodblockcompatregistry.POMELO_GATE.get();
+          ResourceLocation pomelo_gate_texture = modLoc("block/pomelo_block");
+          fenceGateBlock(pomelo_gate, pomelo_gate_texture);
      //------------------------------------------------------------corn-----------------------------------------------------------------------
        //fence
           FenceBlock corn_fence = foodblockcompatregistry.CORN_FENCE.get();
@@ -1240,6 +1292,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           PressurePlateBlock grapefruit_pressure_plate = foodblockcompatregistry.GRAPEFRUIT_PRESSURE_PLATE.get();
           ResourceLocation grapefruit_pressure_plate_texture = modLoc("block/grapefruit_block");
           pressurePlateBlock(grapefruit_pressure_plate, grapefruit_pressure_plate_texture);
+     //------------------------------------------------------------pomelo-----------------------------------------------------------------------
+          PressurePlateBlock pomelo_pressure_plate = foodblockcompatregistry.POMELO_PRESSURE_PLATE.get();
+          ResourceLocation pomelo_pressure_plate_texture = modLoc("block/pomelo_block");
+          pressurePlateBlock(pomelo_pressure_plate, pomelo_pressure_plate_texture);
      //------------------------------------------------------------corn-----------------------------------------------------------------------
           PressurePlateBlock corn_pressure_plate = foodblockcompatregistry.CORN_PRESSURE_PLATE.get();
           ResourceLocation corn_pressure_plate_texture = modLoc("block/corn_block");
@@ -1343,6 +1399,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
            WallSignBlock grapefruit_wall_sign = foodblockcompatregistry.GRAPEFRUIT_WALL_SIGN.get();
            ResourceLocation grapefruit_sign_texture = modLoc("block/grapefruit_block");
            signBlock(grapefruit_sign, grapefruit_wall_sign, grapefruit_sign_texture);
+     //------------------------------------------------------------pomelo-----------------------------------------------------------------------
+           StandingSignBlock pomelo_sign = foodblockcompatregistry.POMELO_STANDING_SIGN.get();
+           WallSignBlock pomelo_wall_sign = foodblockcompatregistry.POMELO_WALL_SIGN.get();
+           ResourceLocation pomelo_sign_texture = modLoc("block/pomelo_block");
+           signBlock(pomelo_sign, pomelo_wall_sign, pomelo_sign_texture);
      //------------------------------------------------------------corn-----------------------------------------------------------------------
            StandingSignBlock corn_sign = foodblockcompatregistry.CORN_STANDING_SIGN.get();
            WallSignBlock corn_wall_sign = foodblockcompatregistry.CORN_WALL_SIGN.get();
@@ -1435,6 +1496,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           TrapDoorBlock grapefruit_trapdoor = foodblockcompatregistry.GRAPEFRUIT_TRAPDOOR.get(); 
           ResourceLocation grapefruit_trapdoor_texture = modLoc("block/grapefruit_block");
           trapdoorBlockWithRenderType(grapefruit_trapdoor, "grapefruit_trapdoor", grapefruit_trapdoor_texture, false, grapefruit_trapdoor_texture);
+     //------------------------------------------------------------pomelo-----------------------------------------------------------------------
+          TrapDoorBlock pomelo_trapdoor = foodblockcompatregistry.POMELO_TRAPDOOR.get(); 
+          ResourceLocation pomelo_trapdoor_texture = modLoc("block/pomelo_block");
+          trapdoorBlockWithRenderType(pomelo_trapdoor, "pomelo_trapdoor", pomelo_trapdoor_texture, false, pomelo_trapdoor_texture);
      //------------------------------------------------------------corn-----------------------------------------------------------------------
           TrapDoorBlock corn_trapdoor = foodblockcompatregistry.CORN_TRAPDOOR.get(); 
           ResourceLocation corn_trapdoor_texture = modLoc("block/corn_block");
@@ -1506,6 +1571,9 @@ public class GM1BlockStateProvider extends BlockStateProvider
      //------------------------------------------------------------grapefruit-----------------------------------------------------------------------
           Block grapefruit_lamp = foodblockcompatregistry.GRAPEFRUIT_LAMP.get();
           simpleBlock(grapefruit_lamp);
+     //------------------------------------------------------------pomelo-----------------------------------------------------------------------
+          Block pomelo_lamp = foodblockcompatregistry.POMELO_LAMP.get();
+          simpleBlock(pomelo_lamp);
      //------------------------------------------------------------corn-----------------------------------------------------------------------
           Block corn_lamp = foodblockcompatregistry.CORN_LAMP.get();
           simpleBlock(corn_lamp);
@@ -1620,6 +1688,12 @@ public class GM1BlockStateProvider extends BlockStateProvider
           BlockModelBuilder grapefruit_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(grapefruit_carpet).getPath(), mcLoc("block/carpet"))
           .texture("wool", grapefruit_carpet_texture);
           simpleBlock(grapefruit_carpet, new ModelFile.UncheckedModelFile(grapefruit_carpet_model.getLocation()));
+     //------------------------------------------------------------pomelo-----------------------------------------------------------------------
+          CarpetBlock pomelo_carpet = foodblockcompatregistry.POMELO_CARPET.get();
+          ResourceLocation pomelo_carpet_texture = modLoc("block/pomelo_carpet");
+          BlockModelBuilder pomelo_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(pomelo_carpet).getPath(), mcLoc("block/carpet"))
+          .texture("wool", pomelo_carpet_texture);
+          simpleBlock(pomelo_carpet, new ModelFile.UncheckedModelFile(pomelo_carpet_model.getLocation()));
      //------------------------------------------------------------corn-----------------------------------------------------------------------
           CarpetBlock corn_carpet = foodblockcompatregistry.CORN_CARPET.get();
           ResourceLocation corn_carpet_texture = modLoc("block/corn_carpet");
@@ -2277,6 +2351,45 @@ public class GM1BlockStateProvider extends BlockStateProvider
              .modelForState().modelFile(hanging_grapefruit_soul_lantern_model).addModel()
              .partialState().with(LanternBlock.HANGING, false)
              .modelForState().modelFile(grapefruit_soul_lantern_model).addModel();
+     //------------------------------------------------------------pomelo-----------------------------------------------------------------------
+         //regular
+          LanternBlock pomelo_lantern = foodblockcompatregistry.POMELO_LANTERN.get();
+          ResourceLocation pomelo_lantern_texture = modLoc("block/pomelo_lantern");
+  
+          BlockModelBuilder pomelo_lantern_model = models()
+              .withExistingParent("pomelo_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", pomelo_lantern_texture);
+  
+          BlockModelBuilder hanging_pomelo_lantern_model = models()
+              .withExistingParent("pomelo_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", pomelo_lantern_texture);
+  
+          getVariantBuilder(pomelo_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_pomelo_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(pomelo_lantern_model).addModel();
+         //soul
+         LanternBlock pomelo_soul_lantern = foodblockcompatregistry.POMELO_SOUL_LANTERN.get();
+         ResourceLocation pomelo_soul_lantern_texture = modLoc("block/pomelo_soul_lantern");
+ 
+         BlockModelBuilder pomelo_soul_lantern_model = models()
+             .withExistingParent("pomelo_soul_lantern", mcLoc("block/lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", pomelo_soul_lantern_texture);
+ 
+         BlockModelBuilder hanging_pomelo_soul_lantern_model = models()
+             .withExistingParent("pomelo_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", pomelo_soul_lantern_texture);
+ 
+         getVariantBuilder(pomelo_soul_lantern)
+             .partialState().with(LanternBlock.HANGING, true)
+             .modelForState().modelFile(hanging_pomelo_soul_lantern_model).addModel()
+             .partialState().with(LanternBlock.HANGING, false)
+             .modelForState().modelFile(pomelo_soul_lantern_model).addModel();
      //------------------------------------------------------------corn-----------------------------------------------------------------------
          //regular
           LanternBlock corn_lantern = foodblockcompatregistry.CORN_LANTERN.get();
@@ -2731,6 +2844,22 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .modelForState().modelFile(grapefruit_chain_model).rotationX(90).rotationY(90).addModel()
           .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
           .modelForState().modelFile(grapefruit_chain_model).rotationX(90).addModel(); 
+     //------------------------------------------------------------pomelo-----------------------------------------------------------------------
+         ChainBlock pomelo_chain = foodblockcompatregistry.POMELO_CHAIN.get();
+         ResourceLocation pomelo_chain_texture = modLoc("block/pomelo_chain");
+         BlockModelBuilder pomelo_chain_model = models()
+          .withExistingParent("pomelo_chain", mcLoc("block/chain"))
+          .renderType("cutout_mipped_all")
+          .texture("all", pomelo_chain_texture)
+          .texture("particle", pomelo_chain_texture);
+
+          getVariantBuilder(pomelo_chain)
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Y)
+          .modelForState().modelFile(pomelo_chain_model).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.X)
+          .modelForState().modelFile(pomelo_chain_model).rotationX(90).rotationY(90).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
+          .modelForState().modelFile(pomelo_chain_model).rotationX(90).addModel(); 
      //------------------------------------------------------------corn-----------------------------------------------------------------------
          ChainBlock corn_chain = foodblockcompatregistry.CORN_CHAIN.get();
          ResourceLocation corn_chain_texture = modLoc("block/corn_chain");
@@ -3144,6 +3273,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/grapefruit_ladder");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------pomelo-----------------------------------------------------------------------
+          LadderBlock pomeloladder = foodblockcompatregistry.POMELO_LADDER.get();
+
+          getVariantBuilder(pomeloladder)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/pomelo_ladder");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -3588,6 +3738,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/grapefruit_table");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------pomelo-----------------------------------------------------------------------
+          HorizontalDirectionalBlock pomelotable = foodblockcompatregistry.POMELO_TABLE.get();
+
+          getVariantBuilder(pomelotable)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/pomelo_table");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -5558,6 +5729,122 @@ public class GM1BlockStateProvider extends BlockStateProvider
                 .rotationY(rotation)
                 .build();
             });
+     //------------------------------------------------------------pomelo-----------------------------------------------------------------------
+       //regular
+        TorchBlock pomelo_torch = foodblockcompatregistry.POMELO_TORCH.get();
+        ResourceLocation pomelo_torch_texture = modLoc("block/pomelo_torch");
+        BlockModelBuilder pomelo_torch_model = models()
+        .withExistingParent("pomelo_torch", mcLoc("block/torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", pomelo_torch_texture)
+        .texture("particle", pomelo_torch_texture);
+
+        simpleBlock(pomelo_torch, pomelo_torch_model);
+
+        TorchBlock pomelo_wall_torch = foodblockcompatregistry.POMELO_WALL_TORCH.get();
+        BlockModelBuilder pomelo_wall_torch_model = models()
+        .withExistingParent("pomelo_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", pomelo_torch_texture)
+        .texture("particle", pomelo_torch_texture);
+        getVariantBuilder(pomelo_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("pomelo_wall_torch", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", pomelo_torch_texture)
+                    .texture("particle", pomelo_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //redstone
+        RedstoneTorchBlock pomelo_redstone_torch = foodblockcompatregistry.POMELO_REDSTONE_TORCH.get();
+        ResourceLocation pomelo_redstone_torch_texture = modLoc("block/pomelo_redstone_torch");
+        BlockModelBuilder pomelo_redstone_torch_model = models()
+        .withExistingParent("pomelo_redstone_torch", mcLoc("block/redstone_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", pomelo_redstone_torch_texture)
+        .texture("particle", pomelo_redstone_torch_texture);
+        
+
+        simpleBlock(pomelo_redstone_torch, pomelo_redstone_torch_model);
+
+        ResourceLocation pomelo_redstone_wall_torch_texture = modLoc("block/pomelo_redstone_torch");
+
+        RedstoneTorchBlock pomelo_redstone_wall_torch = foodblockcompatregistry.POMELO_REDSTONE_WALL_TORCH.get();
+        BlockModelBuilder pomelo_redstone_wall_torch_model = models()
+        .withExistingParent("pomelo_redstone_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", pomelo_redstone_wall_torch_texture)
+        .texture("particle", pomelo_redstone_wall_torch_texture);
+        getVariantBuilder(pomelo_redstone_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("pomelo_redstone_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", pomelo_redstone_wall_torch_texture)
+                    .texture("particle", pomelo_redstone_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //soul
+        TorchBlock pomelo_soul_torch = foodblockcompatregistry.POMELO_SOUL_TORCH.get();
+        ResourceLocation pomelo_soul_torch_texture = modLoc("block/pomelo_soul_torch");
+        BlockModelBuilder pomelo_soul_torch_model = models()
+        .withExistingParent("pomelo_soul_torch", mcLoc("block/soul_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", pomelo_soul_torch_texture)
+        .texture("particle", pomelo_soul_torch_texture);
+        
+
+        simpleBlock(pomelo_soul_torch, pomelo_soul_torch_model);
+
+        ResourceLocation pomelo_soul_wall_torch_texture = modLoc("block/pomelo_soul_torch");
+        TorchBlock pomelo_soul_wall_torch = foodblockcompatregistry.POMELO_SOUL_WALL_TORCH.get();
+        BlockModelBuilder pomelo_soul_wall_torch_model = models()
+        .withExistingParent("pomelo_soul_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", pomelo_soul_wall_torch_texture)
+        .texture("particle", pomelo_soul_wall_torch_texture);
+        getVariantBuilder(pomelo_soul_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("pomelo_soul_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", pomelo_soul_wall_torch_texture)
+                    .texture("particle", pomelo_soul_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
      //------------------------------------------------------------corn-----------------------------------------------------------------------
        //regular
         TorchBlock corn_torch = foodblockcompatregistry.CORN_TORCH.get();
@@ -6842,6 +7129,50 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationY(rotation)
                       .build();
               });
+     //------------------------------------------------------------pomelo-----------------------------------------------------------------------
+          FurnaceBlock pomelo_furnace = foodblockcompatregistry.POMELO_FURNACE.get();
+          ResourceLocation pomelo_furnace_unlit_texture = modLoc("block/pomelo_furnace");
+          ResourceLocation pomelo_furnace_lit_texture = modLoc("block/pomelo_furnace_lit");
+          ResourceLocation pomelo_furnace_side = modLoc("block/pomelo_block");
+          
+          // Define the model for the unlit state
+          BlockModelBuilder pomelo_furnace_model_unlit = models()
+              .withExistingParent("pomelo_furnace_model_unlit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", pomelo_furnace_side)
+              .texture("top", pomelo_furnace_side)
+              .texture("front", pomelo_furnace_unlit_texture)
+              .texture("particle", pomelo_furnace_side);
+          
+          // Define the model for the lit state
+          BlockModelBuilder pomelo_furnace_model_lit = models()
+              .withExistingParent("pomelo_furnace_model_lit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", pomelo_furnace_side)
+              .texture("top", pomelo_furnace_side)
+              .texture("front", pomelo_furnace_lit_texture)
+              .texture("particle", pomelo_furnace_side);
+          
+          // Configure variants for the pomelo_furnace block
+          getVariantBuilder(pomelo_furnace)
+              .forAllStates(state -> {
+                  Boolean lit = state.getValue(BlockStateProperties.LIT);
+                  Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                  int rotation = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+
+                  ResourceLocation modelLocation = lit ? modLoc("block/pomelo_furnace_model_lit") : modLoc("block/pomelo_furnace_model_unlit");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotation)
+                      .build();
+              });
      //------------------------------------------------------------corn-----------------------------------------------------------------------
           FurnaceBlock corn_furnace = foodblockcompatregistry.CORN_FURNACE.get();
           ResourceLocation corn_furnace_unlit_texture = modLoc("block/corn_furnace");
@@ -7244,6 +7575,18 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .forAllStates(state -> {
 
               ResourceLocation modelLocation = modLoc("block/grapefruit_stone_path");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .build();
+          });
+     //------------------------------------------------------------pomelo-----------------------------------------------------------------------
+          foodpathtypeminislab pomelo_stone_path = foodblockcompatregistry.POMELO_STONE_PATH.get();
+
+          getVariantBuilder(pomelo_stone_path)
+          .forAllStates(state -> {
+
+              ResourceLocation modelLocation = modLoc("block/pomelo_stone_path");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -8080,6 +8423,54 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationX(rotationX)
                       .build();
               });
+     //------------------------------------------------------------pomelo-----------------------------------------------------------------------
+          foodBarrel pomelo_barrel = foodblockcompatregistry.POMELO_BARREL.get();
+          ResourceLocation pomelo_barrel_closed_texture = modLoc("block/pomelo_barrel_top_closed");
+          ResourceLocation pomelo_barrel_open_texture = modLoc("block/pomelo_barrel_top_open");
+          ResourceLocation pomelo_barrel_side = modLoc("block/pomelo_barrel_side");
+          ResourceLocation pomelo_barrel_bottom = modLoc("block/pomelo_barrel_bottom");
+          
+          BlockModelBuilder pomelo_barrel_model_closed = models()
+              .withExistingParent("pomelo_barrel_model_closed", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", pomelo_barrel_side)
+              .texture("bottom", pomelo_barrel_bottom)
+              .texture("top", pomelo_barrel_closed_texture)
+              .texture("particle", pomelo_barrel_side);
+          
+          BlockModelBuilder pomelo_barrel_model_open = models()
+              .withExistingParent("pomelo_barrel_model_open", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", pomelo_barrel_side)
+              .texture("bottom", pomelo_barrel_bottom)
+              .texture("top", pomelo_barrel_open_texture)
+              .texture("particle", pomelo_barrel_side);
+          
+          getVariantBuilder(pomelo_barrel)
+              .forAllStates(state -> {
+                  Boolean open = state.getValue(BlockStateProperties.OPEN);
+                  Direction facing = state.getValue(BlockStateProperties.FACING);
+                  int rotationY = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+                  int rotationX = switch (facing) {
+                      case UP -> 0;
+                      case DOWN -> 180;
+                      default -> 90;
+                  };
+
+                  ResourceLocation modelLocation = open ? modLoc("block/pomelo_barrel_model_open") : modLoc("block/pomelo_barrel_model_closed");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotationY)
+                      .rotationX(rotationX)
+                      .build();
+              });
      //------------------------------------------------------------corn-----------------------------------------------------------------------
           foodBarrel corn_barrel = foodblockcompatregistry.CORN_BARREL.get();
           ResourceLocation corn_barrel_closed_texture = modLoc("block/corn_barrel_top_closed");
@@ -8659,6 +9050,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .rotationY(rotationY)
                   .build();
           });
+     //------------------------------------------------------------pomelo-----------------------------------------------------------------------
+          foodChairBlock pomeloChair = foodblockcompatregistry.POMELO_CHAIR.get();
+
+          getVariantBuilder(pomeloChair)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/pomelo_chair");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
      //------------------------------------------------------------corn-----------------------------------------------------------------------
           foodChairBlock cornChair = foodblockcompatregistry.CORN_CHAIR.get();
 
@@ -9097,6 +9509,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/grapefruit_bed");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------pomelo-----------------------------------------------------------------------
+          foodBed pomeloBed = foodblockcompatregistry.POMELO_BED.get();
+
+          getVariantBuilder(pomeloBed)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/pomelo_bed");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -9925,6 +10358,51 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = open ? modLoc("block/medium_grapefruit_cabinet_open") : modLoc("block/medium_grapefruit_cabinet");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------pomelo-----------------------------------------------------------------------
+         //small
+          smallFoodCabinet pomeloCabinet = foodblockcompatregistry.SMALL_POMELO_CABINET.get();
+
+          getVariantBuilder(pomeloCabinet)
+          .forAllStates(state -> {
+              Boolean open = state.getValue(BlockStateProperties.OPEN);
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = open ? modLoc("block/pomelo_cabinet_open") : modLoc("block/pomelo_cabinet");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+         //medium
+          mediumFoodCabinet pomeloMediumCabinet = foodblockcompatregistry.MEDIUM_POMELO_CABINET.get();
+
+          getVariantBuilder(pomeloMediumCabinet)
+          .forAllStates(state -> {
+              Boolean open = state.getValue(BlockStateProperties.OPEN);
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = open ? modLoc("block/medium_pomelo_cabinet_open") : modLoc("block/medium_pomelo_cabinet");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))

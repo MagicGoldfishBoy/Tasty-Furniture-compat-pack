@@ -1267,6 +1267,84 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("small_grapefruit_cabinet_item", modLoc("block/grapefruit_cabinet"));
        withExistingParent("medium_grapefruit_cabinet_item", modLoc("block/medium_grapefruit_cabinet"));
     //==============================================================================================================================================
+    //|                                                            Pomelo                                                                      |
+    //==============================================================================================================================================
+       //mush
+        withExistingParent("pomelo_mush", mcLoc("item/generated")).texture("layer0", "item/pomelo_mush");
+       //ingot
+        withExistingParent("pomelo_ingot", mcLoc("item/generated")).texture("layer0", "item/pomelo_ingot");
+       //nugget
+        withExistingParent("pomelo_nugget", mcLoc("item/generated")).texture("layer0", "item/pomelo_nugget");
+       //block
+        withExistingParent("pomelo_block_item", modLoc("block/pomelo_block"));
+       //bricks block
+        withExistingParent("pomelo_bricks_block_item", modLoc("block/pomelo_bricks_block"));
+       //chiseled block
+        withExistingParent("pomelo_chiseled_block_item", modLoc("block/pomelo_chiseled_block"));
+       //tiles block
+        withExistingParent("pomelo_tiles_block_item", modLoc("block/pomelo_tiles_block"));
+       //slab
+        slab("pomelo_slab_item", modLoc("block/pomelo_block"), modLoc("block/pomelo_block"), modLoc("block/pomelo_block"));
+       //bricks slab
+        slab("pomelo_bricks_slab_item", modLoc("block/pomelo_bricks_block"), modLoc("block/pomelo_bricks_block"), modLoc("block/pomelo_bricks_block"));
+       //stairs
+        stairs("pomelo_stairs_item", modLoc("block/pomelo_block"), modLoc("block/pomelo_block"), modLoc("block/pomelo_block"));
+       //bricks stairs
+        stairs("pomelo_bricks_stairs_item", modLoc("block/pomelo_bricks_block"), modLoc("block/pomelo_bricks_block"), modLoc("block/pomelo_bricks_block"));
+       //bars
+        withExistingParent("pomelo_bars_item", mcLoc("item/generated")).texture("layer0", "block/pomelo_bars");
+       //doors
+        withExistingParent("pomelo_door_item", mcLoc("item/generated")).texture("layer0", "item/pomelo_door_item");
+       //button
+        buttonInventory("pomelo_button_item", modLoc("block/pomelo_block"));
+       //fence
+        fenceInventory("pomelo_fence_item", modLoc("block/pomelo_block"));
+       //gate
+        withExistingParent("pomelo_gate_item", modLoc("block/pomelo_gate"));
+       //pressure plate
+        pressurePlate("pomelo_pressure_plate_item", modLoc("block/pomelo_block"));
+       //sign
+        withExistingParent("pomelo_sign_item", mcLoc("item/generated")).texture("layer0", "item/pomelo_sign");
+       //trapdoor
+       withExistingParent("pomelo_trapdoor_item", modLoc("block/pomelo_trapdoor_trapdoor_bottom"));
+       //lamp
+       withExistingParent("pomelo_lamp_item", modLoc("block/pomelo_lamp"));
+       //carpet
+       ResourceLocation pomelo_carpet_texture = modLoc("block/pomelo_carpet");
+       carpet("pomelo_carpet_item", pomelo_carpet_texture);
+       //lantern
+        //regular
+        withExistingParent("pomelo_lantern_item", modLoc("block/pomelo_lantern"));
+        //soul
+          withExistingParent("pomelo_soul_lantern_item", modLoc("block/pomelo_soul_lantern"));
+       //chain
+       withExistingParent("pomelo_chain_item", modLoc("block/pomelo_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
+       //ladder
+       withExistingParent("pomelo_ladder_item", modLoc("block/pomelo_ladder"));
+       //table
+       withExistingParent("pomelo_table_item", modLoc("block/pomelo_table"));
+       //torches
+        //regular
+        withExistingParent("pomelo_torch_item", modLoc("block/pomelo_torch"));
+        //redstone
+          withExistingParent("pomelo_redstone_torch_item", modLoc("block/pomelo_redstone_torch"));
+        //soul
+          withExistingParent("pomelo_soul_torch_item", modLoc("block/pomelo_soul_torch"));
+       //furnaces
+       withExistingParent("pomelo_furnace_item", modLoc("block/pomelo_furnace_model_unlit"));
+       //paths
+       withExistingParent("pomelo_stone_path_item", modLoc("block/pomelo_stone_path"));
+       //barrel
+       withExistingParent("pomelo_barrel_item", modLoc("block/pomelo_barrel_model_closed"));
+       //chair
+       withExistingParent("pomelo_chair_item", modLoc("block/pomelo_chair"));
+       //bed
+       withExistingParent("pomelo_bed_item", modLoc("block/pomelo_bed"));
+       //cabinet
+       withExistingParent("small_pomelo_cabinet_item", modLoc("block/pomelo_cabinet"));
+       withExistingParent("medium_pomelo_cabinet_item", modLoc("block/medium_pomelo_cabinet"));
+    //==============================================================================================================================================
     //|                                                              Corn                                                                        |
     //==============================================================================================================================================
        //mush

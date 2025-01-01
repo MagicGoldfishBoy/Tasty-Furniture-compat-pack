@@ -227,6 +227,19 @@ public class foodblockcompatitemregistry {
   //.........tiles
      public static final DeferredHolder<Item, BlockItem> GRAPEFRUIT_TILES_BLOCK_ITEM = FOODBLOCKITEM.register("grapefruit_tiles_block_item",
      () -> new BlockItem(foodblockcompatregistry.GRAPEFRUIT_TILES_BLOCK.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Pomelo---------------------------------------------------------------------------------------------
+  //.........plain
+     public static final DeferredHolder<Item, BlockItem> POMELO_BLOCK_ITEM = FOODBLOCKITEM.register("pomelo_block_item",
+     () -> new BlockItem(foodblockcompatregistry.POMELO_BLOCK.get(), new BlockItem.Properties()));
+  //.........bricks
+     public static final DeferredHolder<Item, BlockItem> POMELO_BRICKS_BLOCK_ITEM = FOODBLOCKITEM.register("pomelo_bricks_block_item",
+     () -> new BlockItem(foodblockcompatregistry.POMELO_BRICKS_BLOCK.get(), new BlockItem.Properties()));
+  //.........chiseled
+     public static final DeferredHolder<Item, BlockItem> POMELO_CHISELED_BLOCK_ITEM = FOODBLOCKITEM.register("pomelo_chiseled_block_item",
+     () -> new BlockItem(foodblockcompatregistry.POMELO_CHISELED_BLOCK.get(), new BlockItem.Properties()));
+  //.........tiles
+     public static final DeferredHolder<Item, BlockItem> POMELO_TILES_BLOCK_ITEM = FOODBLOCKITEM.register("pomelo_tiles_block_item",
+     () -> new BlockItem(foodblockcompatregistry.POMELO_TILES_BLOCK.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
   //.........plain
      public static final DeferredHolder<Item, BlockItem> CORN_BLOCK_ITEM = FOODBLOCKITEM.register("corn_block_item",
@@ -407,6 +420,13 @@ public class foodblockcompatitemregistry {
   //.........bricks
    public static final DeferredHolder<Item, BlockItem> GRAPEFRUIT_BRICKS_SLAB_ITEM = FOODBLOCKITEM.register("grapefruit_bricks_slab_item",
    () -> new BlockItem(foodblockcompatregistry.GRAPEFRUIT_BRICKS_SLAB.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Pomelo---------------------------------------------------------------------------------------------
+  //.........plain
+   public static final DeferredHolder<Item, BlockItem> POMELO_SLAB_ITEM = FOODBLOCKITEM.register("pomelo_slab_item",
+   () -> new BlockItem(foodblockcompatregistry.POMELO_SLAB.get(), new BlockItem.Properties()));
+  //.........bricks
+   public static final DeferredHolder<Item, BlockItem> POMELO_BRICKS_SLAB_ITEM = FOODBLOCKITEM.register("pomelo_bricks_slab_item",
+   () -> new BlockItem(foodblockcompatregistry.POMELO_BRICKS_SLAB.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
   //.........plain
    public static final DeferredHolder<Item, BlockItem> CORN_SLAB_ITEM = FOODBLOCKITEM.register("corn_slab_item",
@@ -557,6 +577,13 @@ public class foodblockcompatitemregistry {
   //.........bricks
    public static final DeferredHolder<Item, BlockItem> GRAPEFRUIT_BRICKS_STAIRS_ITEM = FOODBLOCKITEM.register("grapefruit_bricks_stairs_item",
    () -> new BlockItem(foodblockcompatregistry.GRAPEFRUIT_BRICKS_STAIRS.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Pomelo---------------------------------------------------------------------------------------------
+  //.........plain
+   public static final DeferredHolder<Item, BlockItem> POMELO_STAIRS_ITEM = FOODBLOCKITEM.register("pomelo_stairs_item",
+   () -> new BlockItem(foodblockcompatregistry.POMELO_STAIRS.get(), new BlockItem.Properties()));
+  //.........bricks
+   public static final DeferredHolder<Item, BlockItem> POMELO_BRICKS_STAIRS_ITEM = FOODBLOCKITEM.register("pomelo_bricks_stairs_item",
+   () -> new BlockItem(foodblockcompatregistry.POMELO_BRICKS_STAIRS.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
   //.........plain
    public static final DeferredHolder<Item, BlockItem> CORN_STAIRS_ITEM = FOODBLOCKITEM.register("corn_stairs_item",
@@ -643,6 +670,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> GRAPEFRUIT_BARS_ITEM = FOODBLOCKITEM.register("grapefruit_bars_item",
    () -> new BlockItem(foodblockcompatregistry.GRAPEFRUIT_BARS.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Pomelo---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, BlockItem> POMELO_BARS_ITEM = FOODBLOCKITEM.register("pomelo_bars_item",
+   () -> new BlockItem(foodblockcompatregistry.POMELO_BARS.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> CORN_BARS_ITEM = FOODBLOCKITEM.register("corn_bars_item",
    () -> new BlockItem(foodblockcompatregistry.CORN_BARS.get(), new BlockItem.Properties()));
@@ -709,6 +739,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> GRAPEFRUIT_DOOR_ITEM = FOODBLOCKITEM.register("grapefruit_door_item",
    () -> new BlockItem(foodblockcompatregistry.GRAPEFRUIT_DOOR.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Pomelo---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, BlockItem> POMELO_DOOR_ITEM = FOODBLOCKITEM.register("pomelo_door_item",
+   () -> new BlockItem(foodblockcompatregistry.POMELO_DOOR.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> CORN_DOOR_ITEM = FOODBLOCKITEM.register("corn_door_item",
    () -> new BlockItem(foodblockcompatregistry.CORN_DOOR.get(), new BlockItem.Properties()));
@@ -775,6 +808,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> GRAPEFRUIT_BUTTON_ITEM = FOODBLOCKITEM.register("grapefruit_button_item",
    () -> new BlockItem(foodblockcompatregistry.GRAPEFRUIT_BUTTON.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Pomelo---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, BlockItem> POMELO_BUTTON_ITEM = FOODBLOCKITEM.register("pomelo_button_item",
+   () -> new BlockItem(foodblockcompatregistry.POMELO_BUTTON.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> CORN_BUTTON_ITEM = FOODBLOCKITEM.register("corn_button_item",
    () -> new BlockItem(foodblockcompatregistry.CORN_BUTTON.get(), new BlockItem.Properties()));
@@ -841,6 +877,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> GRAPEFRUIT_FENCE_ITEM = FOODBLOCKITEM.register("grapefruit_fence_item",
    () -> new BlockItem(foodblockcompatregistry.GRAPEFRUIT_FENCE.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Pomelo---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, BlockItem> POMELO_FENCE_ITEM = FOODBLOCKITEM.register("pomelo_fence_item",
+   () -> new BlockItem(foodblockcompatregistry.POMELO_FENCE.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> CORN_FENCE_ITEM = FOODBLOCKITEM.register("corn_fence_item",
    () -> new BlockItem(foodblockcompatregistry.CORN_FENCE.get(), new BlockItem.Properties()));
@@ -907,6 +946,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> GRAPEFRUIT_GATE_ITEM = FOODBLOCKITEM.register("grapefruit_gate_item",
    () -> new BlockItem(foodblockcompatregistry.GRAPEFRUIT_GATE.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Pomelo---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, BlockItem> POMELO_GATE_ITEM = FOODBLOCKITEM.register("pomelo_gate_item",
+   () -> new BlockItem(foodblockcompatregistry.POMELO_GATE.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> CORN_GATE_ITEM = FOODBLOCKITEM.register("corn_gate_item",
    () -> new BlockItem(foodblockcompatregistry.CORN_GATE.get(), new BlockItem.Properties()));
@@ -973,6 +1015,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> GRAPEFRUIT_PRESSURE_PLATE_ITEM = FOODBLOCKITEM.register("grapefruit_pressure_plate_item",
    () -> new BlockItem(foodblockcompatregistry.GRAPEFRUIT_PRESSURE_PLATE.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Pomelo---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, BlockItem> POMELO_PRESSURE_PLATE_ITEM = FOODBLOCKITEM.register("pomelo_pressure_plate_item",
+   () -> new BlockItem(foodblockcompatregistry.POMELO_PRESSURE_PLATE.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, BlockItem> CORN_PRESSURE_PLATE_ITEM = FOODBLOCKITEM.register("corn_pressure_plate_item",
    () -> new BlockItem(foodblockcompatregistry.CORN_PRESSURE_PLATE.get(), new BlockItem.Properties()));
@@ -1039,6 +1084,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, SignItem> GRAPEFRUIT_SIGN_ITEM = FOODBLOCKITEM.register("grapefruit_sign_item",
    () -> new SignItem(new SignItem.Properties(), foodblockcompatregistry.GRAPEFRUIT_STANDING_SIGN.get(), foodblockcompatregistry.GRAPEFRUIT_WALL_SIGN.get()));
+ //--------------------------------------------------------------------------------------Pomelo---------------------------------------------------------------------------------------------
+   public static final DeferredHolder<Item, SignItem> POMELO_SIGN_ITEM = FOODBLOCKITEM.register("pomelo_sign_item",
+   () -> new SignItem(new SignItem.Properties(), foodblockcompatregistry.POMELO_STANDING_SIGN.get(), foodblockcompatregistry.POMELO_WALL_SIGN.get()));
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
    public static final DeferredHolder<Item, SignItem> CORN_SIGN_ITEM = FOODBLOCKITEM.register("corn_sign_item",
    () -> new SignItem(new SignItem.Properties(), foodblockcompatregistry.CORN_STANDING_SIGN.get(), foodblockcompatregistry.CORN_WALL_SIGN.get()));
@@ -1105,6 +1153,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
      public static final DeferredHolder<Item, BlockItem> GRAPEFRUIT_TRAPDOOR_ITEM = FOODBLOCKITEM.register("grapefruit_trapdoor_item",
      () -> new BlockItem(foodblockcompatregistry.GRAPEFRUIT_TRAPDOOR.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Pomelo---------------------------------------------------------------------------------------------
+     public static final DeferredHolder<Item, BlockItem> POMELO_TRAPDOOR_ITEM = FOODBLOCKITEM.register("pomelo_trapdoor_item",
+     () -> new BlockItem(foodblockcompatregistry.POMELO_TRAPDOOR.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
      public static final DeferredHolder<Item, BlockItem> CORN_TRAPDOOR_ITEM = FOODBLOCKITEM.register("corn_trapdoor_item",
      () -> new BlockItem(foodblockcompatregistry.CORN_TRAPDOOR.get(), new BlockItem.Properties()));
@@ -1171,6 +1222,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> GRAPEFRUIT_LAMP_ITEM = FOODBLOCKITEM.register("grapefruit_lamp_item",
     () -> new BlockItem(foodblockcompatregistry.GRAPEFRUIT_LAMP.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Pomelo---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> POMELO_LAMP_ITEM = FOODBLOCKITEM.register("pomelo_lamp_item",
+    () -> new BlockItem(foodblockcompatregistry.POMELO_LAMP.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> CORN_LAMP_ITEM = FOODBLOCKITEM.register("corn_lamp_item",
     () -> new BlockItem(foodblockcompatregistry.CORN_LAMP.get(), new BlockItem.Properties()));
@@ -1237,6 +1291,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> GRAPEFRUIT_CARPET_ITEM = FOODBLOCKITEM.register("grapefruit_carpet_item",
     () -> new BlockItem(foodblockcompatregistry.GRAPEFRUIT_CARPET.get(), new BlockItem.Properties())); 
+ //--------------------------------------------------------------------------------------Pomelo---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> POMELO_CARPET_ITEM = FOODBLOCKITEM.register("pomelo_carpet_item",
+    () -> new BlockItem(foodblockcompatregistry.POMELO_CARPET.get(), new BlockItem.Properties())); 
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> CORN_CARPET_ITEM = FOODBLOCKITEM.register("corn_carpet_item",
     () -> new BlockItem(foodblockcompatregistry.CORN_CARPET.get(), new BlockItem.Properties())); 
@@ -1367,6 +1424,13 @@ public class foodblockcompatitemregistry {
     //soul
       public static final DeferredHolder<Item, BlockItem> GRAPEFRUIT_SOUL_LANTERN_ITEM = FOODBLOCKITEM.register("grapefruit_soul_lantern_item",
       () -> new BlockItem(foodblockcompatregistry.GRAPEFRUIT_SOUL_LANTERN.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Pomelo---------------------------------------------------------------------------------------------
+    //regular
+      public static final DeferredHolder<Item, BlockItem> POMELO_LANTERN_ITEM = FOODBLOCKITEM.register("pomelo_lantern_item",
+      () -> new BlockItem(foodblockcompatregistry.POMELO_LANTERN.get(), new BlockItem.Properties()));
+    //soul
+      public static final DeferredHolder<Item, BlockItem> POMELO_SOUL_LANTERN_ITEM = FOODBLOCKITEM.register("pomelo_soul_lantern_item",
+      () -> new BlockItem(foodblockcompatregistry.POMELO_SOUL_LANTERN.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
     //regular
       public static final DeferredHolder<Item, BlockItem> CORN_LANTERN_ITEM = FOODBLOCKITEM.register("corn_lantern_item",
@@ -1453,6 +1517,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> GRAPEFRUIT_CHAIN_ITEM = FOODBLOCKITEM.register("grapefruit_chain_item",
     () -> new BlockItem(foodblockcompatregistry.GRAPEFRUIT_CHAIN.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Pomelo---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> POMELO_CHAIN_ITEM = FOODBLOCKITEM.register("pomelo_chain_item",
+    () -> new BlockItem(foodblockcompatregistry.POMELO_CHAIN.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> CORN_CHAIN_ITEM = FOODBLOCKITEM.register("corn_chain_item",
     () -> new BlockItem(foodblockcompatregistry.CORN_CHAIN.get(), new BlockItem.Properties()));
@@ -1519,6 +1586,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> GRAPEFRUIT_LADDER_ITEM =  FOODBLOCKITEM.register("grapefruit_ladder_item",
     () -> new BlockItem(foodblockcompatregistry.GRAPEFRUIT_LADDER.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Pomelo---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> POMELO_LADDER_ITEM =  FOODBLOCKITEM.register("pomelo_ladder_item",
+    () -> new BlockItem(foodblockcompatregistry.POMELO_LADDER.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> CORN_LADDER_ITEM =  FOODBLOCKITEM.register("corn_ladder_item",
     () -> new BlockItem(foodblockcompatregistry.CORN_LADDER.get(), new BlockItem.Properties()));
@@ -1585,6 +1655,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> GRAPEFRUIT_TABLE_ITEM =  FOODBLOCKITEM.register("grapefruit_table_item",
     () -> new BlockItem(foodblockcompatregistry.GRAPEFRUIT_TABLE.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Pomelo---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> POMELO_TABLE_ITEM =  FOODBLOCKITEM.register("pomelo_table_item",
+    () -> new BlockItem(foodblockcompatregistry.POMELO_TABLE.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> CORN_TABLE_ITEM =  FOODBLOCKITEM.register("corn_table_item",
     () -> new BlockItem(foodblockcompatregistry.CORN_TABLE.get(), new BlockItem.Properties()));
@@ -1763,6 +1836,16 @@ public class foodblockcompatitemregistry {
     //soul
       public static final DeferredHolder<Item, StandingAndWallBlockItem> GRAPEFRUIT_SOUL_TORCH_ITEM =  FOODBLOCKITEM.register("grapefruit_soul_torch_item",
       () -> new StandingAndWallBlockItem(foodblockcompatregistry.GRAPEFRUIT_SOUL_TORCH.get(), foodblockcompatregistry.GRAPEFRUIT_SOUL_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
+ //--------------------------------------------------------------------------------------Pomelo---------------------------------------------------------------------------------------------
+    //regular
+      public static final DeferredHolder<Item, StandingAndWallBlockItem> POMELO_TORCH_ITEM = FOODBLOCKITEM.register("pomelo_torch_item", 
+      () -> new StandingAndWallBlockItem(foodblockcompatregistry.POMELO_TORCH.get(), foodblockcompatregistry.POMELO_WALL_TORCH.get(), new Item.Properties(), Direction.NORTH));
+    //redstone
+      public static final DeferredHolder<Item, StandingAndWallBlockItem> POMELO_REDSTONE_TORCH_ITEM =  FOODBLOCKITEM.register("pomelo_redstone_torch_item",
+      () -> new StandingAndWallBlockItem(foodblockcompatregistry.POMELO_REDSTONE_TORCH.get(), foodblockcompatregistry.POMELO_REDSTONE_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
+    //soul
+      public static final DeferredHolder<Item, StandingAndWallBlockItem> POMELO_SOUL_TORCH_ITEM =  FOODBLOCKITEM.register("pomelo_soul_torch_item",
+      () -> new StandingAndWallBlockItem(foodblockcompatregistry.POMELO_SOUL_TORCH.get(), foodblockcompatregistry.POMELO_SOUL_WALL_TORCH.get(), new BlockItem.Properties(), Direction.NORTH));
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
     //regular
       public static final DeferredHolder<Item, StandingAndWallBlockItem> CORN_TORCH_ITEM = FOODBLOCKITEM.register("corn_torch_item", 
@@ -1864,6 +1947,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> GRAPEFRUIT_FURNACE_ITEM = FOODBLOCKITEM.register("grapefruit_furnace_item", 
     () -> new BlockItem(foodblockcompatregistry.GRAPEFRUIT_FURNACE.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Pomelo---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> POMELO_FURNACE_ITEM = FOODBLOCKITEM.register("pomelo_furnace_item", 
+    () -> new BlockItem(foodblockcompatregistry.POMELO_FURNACE.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> CORN_FURNACE_ITEM = FOODBLOCKITEM.register("corn_furnace_item", 
     () -> new BlockItem(foodblockcompatregistry.CORN_FURNACE.get(), new BlockItem.Properties()));
@@ -1930,6 +2016,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> GRAPEFRUIT_STONE_PATH_ITEM = FOODBLOCKITEM.register("grapefruit_stone_path_item", 
     () -> new BlockItem(foodblockcompatregistry.GRAPEFRUIT_STONE_PATH.get(), new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Pomelo---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> POMELO_STONE_PATH_ITEM = FOODBLOCKITEM.register("pomelo_stone_path_item", 
+    () -> new BlockItem(foodblockcompatregistry.POMELO_STONE_PATH.get(), new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> CORN_STONE_PATH_ITEM = FOODBLOCKITEM.register("corn_stone_path_item", 
     () -> new BlockItem(foodblockcompatregistry.CORN_STONE_PATH.get(), new BlockItem.Properties()));
@@ -2012,6 +2101,10 @@ public class foodblockcompatitemregistry {
     public static final DeferredHolder<Item, BlockItem> GRAPEFRUIT_BARREL_ITEM = FOODBLOCKITEM.register("grapefruit_barrel_item", 
     () -> new BlockItem(foodblockcompatregistry.GRAPEFRUIT_BARREL.get(),
     new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Pomelo---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> POMELO_BARREL_ITEM = FOODBLOCKITEM.register("pomelo_barrel_item", 
+    () -> new BlockItem(foodblockcompatregistry.POMELO_BARREL.get(),
+    new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> CORN_BARREL_ITEM = FOODBLOCKITEM.register("corn_barrel_item", 
     () -> new BlockItem(foodblockcompatregistry.CORN_BARREL.get(),
@@ -2083,6 +2176,9 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> GRAPEFRUIT_CHAIR_ITEM = FOODBLOCKITEM.register("grapefruit_chair_item", () -> new BlockItem(foodblockcompatregistry.GRAPEFRUIT_CHAIR.get(),
     new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Pomelo---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> POMELO_CHAIR_ITEM = FOODBLOCKITEM.register("pomelo_chair_item", () -> new BlockItem(foodblockcompatregistry.POMELO_CHAIR.get(),
+    new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> CORN_CHAIR_ITEM = FOODBLOCKITEM.register("corn_chair_item", () -> new BlockItem(foodblockcompatregistry.CORN_CHAIR.get(),
     new BlockItem.Properties()));
@@ -2148,6 +2244,9 @@ public class foodblockcompatitemregistry {
     new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> GRAPEFRUIT_BED_ITEM = FOODBLOCKITEM.register("grapefruit_bed_item", () -> new BlockItem(foodblockcompatregistry.GRAPEFRUIT_BED.get(),
+    new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Pomelo---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> POMELO_BED_ITEM = FOODBLOCKITEM.register("pomelo_bed_item", () -> new BlockItem(foodblockcompatregistry.POMELO_BED.get(),
     new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> CORN_BED_ITEM = FOODBLOCKITEM.register("corn_bed_item", () -> new BlockItem(foodblockcompatregistry.CORN_BED.get(),
@@ -2310,6 +2409,15 @@ public class foodblockcompatitemregistry {
     //medium
       public static final DeferredHolder<Item, BlockItem> MEDIUM_GRAPEFRUIT_CABINET_ITEM = FOODBLOCKITEM.register("medium_grapefruit_cabinet_item", 
       () -> new BlockItem(foodblockcompatregistry.MEDIUM_GRAPEFRUIT_CABINET.get(),
+      new BlockItem.Properties()));
+ //----------------------------------------------------------------------------------------Pomelo-----------------------------------------------------------------------------------------------
+    //small
+      public static final DeferredHolder<Item, BlockItem> SMALL_POMELO_CABINET_ITEM = FOODBLOCKITEM.register("small_pomelo_cabinet_item", 
+      () -> new BlockItem(foodblockcompatregistry.SMALL_POMELO_CABINET.get(),
+      new BlockItem.Properties()));
+    //medium
+      public static final DeferredHolder<Item, BlockItem> MEDIUM_POMELO_CABINET_ITEM = FOODBLOCKITEM.register("medium_pomelo_cabinet_item", 
+      () -> new BlockItem(foodblockcompatregistry.MEDIUM_POMELO_CABINET.get(),
       new BlockItem.Properties()));
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
     //small
