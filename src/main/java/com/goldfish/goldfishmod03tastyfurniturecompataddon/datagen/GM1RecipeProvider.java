@@ -68,6 +68,10 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         Registries.ITEM,
         ResourceLocation.fromNamespaceAndPath("goldfishmod03tastyfurniturecompataddon", "tangerines")
         );
+       public static final TagKey<Item> KUMQUAT_TAG = TagKey.create(
+        Registries.ITEM,
+        ResourceLocation.fromNamespaceAndPath("goldfishmod03tastyfurniturecompataddon", "kumquats")
+        );
        public static final TagKey<Item> PERSIMMON_TAG = TagKey.create(
         Registries.ITEM,
         ResourceLocation.fromNamespaceAndPath("goldfishmod03tastyfurniturecompataddon", "persimmons")
@@ -424,6 +428,43 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', TANGERINE_TAG)
             .unlockedBy("has_mush_hammer", has(mushregistry.most_advanced_mushhammer.get()))
             .save(output, "tangerine_mush_from_most_advanced_mushhammer");
+  //----------------------------------------------------------------------------------------Kumquat-----------------------------------------------------------------------------------------------
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.KUMQUAT_MUSH.get(), 1)
+            .pattern("ABB")
+            .pattern("BB ")
+            .pattern("   ")
+            .define('A', mushregistry.mushhammer.get())
+            .define('B', KUMQUAT_TAG)
+            .unlockedBy("has_mush_hammer", has(mushregistry.mushhammer.get()))
+            .save(output);
+          //advanced
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.KUMQUAT_MUSH.get(), 2)
+            .pattern("ABB")
+            .pattern("BB ")
+            .pattern("   ")
+            .define('A', mushregistry.advanced_mushhammer.get())
+            .define('B', KUMQUAT_TAG)
+            .unlockedBy("has_mush_hammer", has(mushregistry.advanced_mushhammer.get()))
+            .save(output, "kumquat_mush_from_advanced_mushhammer");
+          //more advanced
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.KUMQUAT_MUSH.get(), 4)
+            .pattern("ABB")
+            .pattern("BB ")
+            .pattern("   ")
+            .define('A', mushregistry.more_advanced_mushhammer.get())
+            .define('B', KUMQUAT_TAG)
+            .unlockedBy("has_mush_hammer", has(mushregistry.more_advanced_mushhammer.get()))
+            .save(output, "kumquat_mush_from_more_advanced_mushhammer");
+          //most advanced
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.KUMQUAT_MUSH.get(), 8)
+            .pattern("ABB")
+            .pattern("BB ")
+            .pattern("   ")
+            .define('A', mushregistry.most_advanced_mushhammer.get())
+            .define('B', KUMQUAT_TAG)
+            .unlockedBy("has_mush_hammer", has(mushregistry.most_advanced_mushhammer.get()))
+            .save(output, "kumquat_mush_from_most_advanced_mushhammer");
   //----------------------------------------------------------------------------------------Persimmon-----------------------------------------------------------------------------------------------
           //regular
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.PERSIMMON_MUSH.get(), 1)
@@ -1205,6 +1246,38 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .requires(foodblockcompatitemregistry.TANGERINE_BLOCK_ITEM.get())
             .unlockedBy("has_tangerine_block", has(foodblockcompatitemregistry.TANGERINE_BLOCK_ITEM.get()))
             .save(output, "tangerine_ingot_from_unpacking");
+  //----------------------------------------------------------------------------------------Kumquat-----------------------------------------------------------------------------------------------
+          //crafting
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotcompatregistry.KUMQUAT_INGOT.get(), 1)
+            .pattern("AAA")
+            .pattern("AAA")
+            .pattern("AAA")
+            .define('A', nuggetcompatregistry.KUMQUAT_NUGGET.get())
+            .unlockedBy("has_kumquat_nugget", has(nuggetcompatregistry.KUMQUAT_NUGGET.get()))
+            .save(output, "kumquat_ingot_from_crafting");
+          //smelting
+            SimpleCookingRecipeBuilder.smelting(Ingredient.of(mushcompatregistry.KUMQUAT_MUSH.get()),
+            RecipeCategory.MISC,
+            ingotcompatregistry.KUMQUAT_INGOT.get(),
+            1.0f,
+            200
+            )
+            .unlockedBy("has_kumquat_mush", has(mushcompatregistry.KUMQUAT_MUSH.get()))
+            .save(output, "kumquat_ingot_from_smelting");
+          //blasting
+            SimpleCookingRecipeBuilder.blasting(Ingredient.of(mushcompatregistry.KUMQUAT_MUSH.get()),
+            RecipeCategory.MISC,
+            ingotcompatregistry.KUMQUAT_INGOT.get(),
+            1.0f,
+            100
+            )
+            .unlockedBy("has_kumquat_mush", has(mushcompatregistry.KUMQUAT_MUSH.get()))
+            .save(output, "kumquat_ingot_from_blasting");
+          //unpacking
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotcompatregistry.KUMQUAT_INGOT.get(), 9)
+            .requires(foodblockcompatitemregistry.KUMQUAT_BLOCK_ITEM.get())
+            .unlockedBy("has_kumquat_block", has(foodblockcompatitemregistry.KUMQUAT_BLOCK_ITEM.get()))
+            .save(output, "kumquat_ingot_from_unpacking");
   //----------------------------------------------------------------------------------------Persimmon-----------------------------------------------------------------------------------------------
           //crafting
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotcompatregistry.PERSIMMON_INGOT.get(), 1)
@@ -1722,6 +1795,11 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .requires(ingotcompatregistry.TANGERINE_INGOT.get())
         .unlockedBy("has_tangerine_ingot", has(ingotcompatregistry.TANGERINE_INGOT.get()))
         .save(output);
+  //----------------------------------------------------------------------------------------Kumquat-----------------------------------------------------------------------------------------------
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, nuggetcompatregistry.KUMQUAT_NUGGET.get(), 9)
+        .requires(ingotcompatregistry.KUMQUAT_INGOT.get())
+        .unlockedBy("has_kumquat_ingot", has(ingotcompatregistry.KUMQUAT_INGOT.get()))
+        .save(output);
   //----------------------------------------------------------------------------------------Persimmon-----------------------------------------------------------------------------------------------
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, nuggetcompatregistry.PERSIMMON_NUGGET.get(), 9)
         .requires(ingotcompatregistry.PERSIMMON_INGOT.get())
@@ -2149,6 +2227,56 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.TANGERINE_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockcompatitemregistry.TANGERINE_TILES_BLOCK_ITEM.get())
           .unlockedBy("has_tangerine_block", has(foodblockcompatitemregistry.TANGERINE_BLOCK_ITEM.get()))
           .save(output, "tangerine_tiles_block_from_tangerine_block_stonecutting");
+  //--------------------------------------------------------------------------------------Kumquat---------------------------------------------------------------------------------------------
+        //plain
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.KUMQUAT_BLOCK_ITEM.get(), 1)
+          .pattern("AAA")
+          .pattern("AAA")
+          .pattern("AAA")
+          .define('A', ingotcompatregistry.KUMQUAT_INGOT.get())
+          .unlockedBy("has_kumquat_ingot", has(ingotcompatregistry.KUMQUAT_INGOT.get()))
+          .save(output); 
+        //bricks
+         //crafting
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.KUMQUAT_BRICKS_BLOCK_ITEM.get(), 4)
+          .pattern("AA ")
+          .pattern("AA ")
+          .pattern("   ")
+          .define('A', foodblockcompatitemregistry.KUMQUAT_BLOCK_ITEM.get())
+          .unlockedBy("has_kumquat_block", has(foodblockcompatitemregistry.KUMQUAT_BLOCK_ITEM.get()))
+          .save(output); 
+         //stonecutting     
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.KUMQUAT_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockcompatitemregistry.KUMQUAT_BRICKS_BLOCK_ITEM.get())
+          .unlockedBy("has_kumquat_block", has(foodblockcompatitemregistry.KUMQUAT_BLOCK_ITEM.get()))
+          .save(output, "kumquat_bricks_block_from_kumquat_block_stonecutting");
+
+        //chiseled
+         //crafting
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.KUMQUAT_CHISELED_BLOCK_ITEM.get())
+          .pattern("   ")
+          .pattern(" A ")
+          .pattern(" A ")
+          .define('A', foodblockcompatitemregistry.KUMQUAT_SLAB_ITEM.get())
+          .unlockedBy("has_kumquat_slab", has(foodblockcompatitemregistry.KUMQUAT_SLAB_ITEM.get()))
+          .save(output);
+         //stonecutting     
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.KUMQUAT_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockcompatitemregistry.KUMQUAT_CHISELED_BLOCK_ITEM.get())
+          .unlockedBy("has_kumquat_block", has(foodblockcompatitemregistry.KUMQUAT_BLOCK_ITEM.get()))
+          .save(output, "kumquat_chiseled_block_from_kumquat_block_stonecutting");
+
+        //tiles
+         //crafting
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.KUMQUAT_TILES_BLOCK_ITEM.get(),2)
+          .pattern("   ")
+          .pattern("AA ")
+          .pattern("AA ")
+          .define('A', foodblockcompatitemregistry.KUMQUAT_SLAB_ITEM.get())
+          .unlockedBy("has_kumquat_slab", has(foodblockcompatitemregistry.KUMQUAT_SLAB_ITEM.get()))
+          .save(output);
+         //stonecutting     
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.KUMQUAT_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockcompatitemregistry.KUMQUAT_TILES_BLOCK_ITEM.get())
+          .unlockedBy("has_kumquat_block", has(foodblockcompatitemregistry.KUMQUAT_BLOCK_ITEM.get()))
+          .save(output, "kumquat_tiles_block_from_kumquat_block_stonecutting");
   //--------------------------------------------------------------------------------------Persimmon---------------------------------------------------------------------------------------------
         //plain
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.PERSIMMON_BLOCK_ITEM.get(), 1)
@@ -2999,6 +3127,20 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           foodblockcompatitemregistry.TANGERINE_BRICKS_SLAB_ITEM.get(), 2)
           .unlockedBy("has_tangerine_bricks_block", has(foodblockcompatitemregistry.TANGERINE_BRICKS_BLOCK_ITEM.get()))
           .save(output, "tangerine_bricks_slab_from_tangerine_bricks_block_stonecutting");
+  //----------------------------------------------------------------------------------------Kumquat-----------------------------------------------------------------------------------------------
+        //plain
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.KUMQUAT_SLAB_ITEM.get())
+          .pattern("   ")
+          .pattern("   ")
+          .pattern("AAA")
+          .define('A', ingotcompatregistry.KUMQUAT_INGOT.get())
+          .unlockedBy("has_kumquat_ingot", has(ingotcompatregistry.KUMQUAT_INGOT.get()))
+          .save(output);
+        //bricks
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.KUMQUAT_BRICKS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, 
+          foodblockcompatitemregistry.KUMQUAT_BRICKS_SLAB_ITEM.get(), 2)
+          .unlockedBy("has_kumquat_bricks_block", has(foodblockcompatitemregistry.KUMQUAT_BRICKS_BLOCK_ITEM.get()))
+          .save(output, "kumquat_bricks_slab_from_kumquat_bricks_block_stonecutting");
   //----------------------------------------------------------------------------------------Persimmon-----------------------------------------------------------------------------------------------
         //plain
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.PERSIMMON_SLAB_ITEM.get())
@@ -3309,6 +3451,20 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           foodblockcompatitemregistry.TANGERINE_BRICKS_STAIRS_ITEM.get(), 1)
           .unlockedBy("has_tangerine_bricks_block", has(foodblockcompatitemregistry.TANGERINE_BRICKS_BLOCK_ITEM.get()))
           .save(output, "tangerine_bricks_stairs_from_tangerine_bricks_block_stonecutting");
+  //--------------------------------------------------------------------------------------Kumquat---------------------------------------------------------------------------------------------
+        //plain
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.KUMQUAT_STAIRS_ITEM.get())
+          .pattern("A  ")
+          .pattern("AA ")
+          .pattern("AAA")
+          .define('A', ingotcompatregistry.KUMQUAT_INGOT.get())
+          .unlockedBy("has_kumquat_ingot", has(ingotcompatregistry.KUMQUAT_INGOT.get()))
+          .save(output);
+        //bricks
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.KUMQUAT_BRICKS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, 
+          foodblockcompatitemregistry.KUMQUAT_BRICKS_STAIRS_ITEM.get(), 1)
+          .unlockedBy("has_kumquat_bricks_block", has(foodblockcompatitemregistry.KUMQUAT_BRICKS_BLOCK_ITEM.get()))
+          .save(output, "kumquat_bricks_stairs_from_kumquat_bricks_block_stonecutting");
   //--------------------------------------------------------------------------------------Persimmon---------------------------------------------------------------------------------------------
         //plain
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.PERSIMMON_STAIRS_ITEM.get())
@@ -3577,6 +3733,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', nuggetcompatregistry.TANGERINE_NUGGET.get())
          .unlockedBy("has_tangerine_nugget", has(nuggetcompatregistry.TANGERINE_NUGGET.get()))
          .save(output);
+  //--------------------------------------------------------------------------------------Kumquat---------------------------------------------------------------------------------------------
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.KUMQUAT_BARS_ITEM.get(), 8)
+         .pattern("   ")
+         .pattern("AAA")
+         .pattern("AAA")
+         .define('A', nuggetcompatregistry.KUMQUAT_NUGGET.get())
+         .unlockedBy("has_kumquat_nugget", has(nuggetcompatregistry.KUMQUAT_NUGGET.get()))
+         .save(output);
   //--------------------------------------------------------------------------------------Persimmon---------------------------------------------------------------------------------------------
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.PERSIMMON_BARS_ITEM.get(), 8)
          .pattern("   ")
@@ -3755,6 +3919,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', ingotcompatregistry.TANGERINE_INGOT.get())
          .unlockedBy("has_tangerine_nugget", has(ingotcompatregistry.TANGERINE_INGOT.get()))
          .save(output);
+  //--------------------------------------------------------------------------------------Kumquat---------------------------------------------------------------------------------------------
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.KUMQUAT_DOOR_ITEM.get(), 3)
+         .pattern("AA ")
+         .pattern("AA ")
+         .pattern("AA ")
+         .define('A', ingotcompatregistry.KUMQUAT_INGOT.get())
+         .unlockedBy("has_kumquat_nugget", has(ingotcompatregistry.KUMQUAT_INGOT.get()))
+         .save(output);
   //--------------------------------------------------------------------------------------Persimmon---------------------------------------------------------------------------------------------
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.PERSIMMON_DOOR_ITEM.get(), 3)
          .pattern("AA ")
@@ -3911,6 +4083,11 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.TANGERINE_BUTTON_ITEM.get(), 1)
        .requires(nuggetcompatregistry.TANGERINE_NUGGET.get())
        .unlockedBy("has_tangerine_nugget", has(nuggetcompatregistry.TANGERINE_NUGGET.get()))
+       .save(output);
+  //--------------------------------------------------------------------------------------Kumquat---------------------------------------------------------------------------------------------
+       ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.KUMQUAT_BUTTON_ITEM.get(), 1)
+       .requires(nuggetcompatregistry.KUMQUAT_NUGGET.get())
+       .unlockedBy("has_kumquat_nugget", has(nuggetcompatregistry.KUMQUAT_NUGGET.get()))
        .save(output);
   //--------------------------------------------------------------------------------------Persimmon---------------------------------------------------------------------------------------------
        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.PERSIMMON_BUTTON_ITEM.get(), 1)
@@ -4121,6 +4298,25 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .define('A', ingotcompatregistry.TANGERINE_INGOT.get())
           .define('B', Items.STICK)
           .unlockedBy("has_tangerine_ingot", has(ingotcompatregistry.TANGERINE_INGOT.get()))
+          .save(output);        
+  //--------------------------------------------------------------------------------------Kumquat---------------------------------------------------------------------------------------------
+        //fence
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.KUMQUAT_FENCE_ITEM.get(), 3)
+          .pattern("ABA")
+          .pattern("ABA")
+          .pattern("   ")
+          .define('A', ingotcompatregistry.KUMQUAT_INGOT.get())
+          .define('B', Items.STICK)
+          .unlockedBy("has_kumquat_ingot", has(ingotcompatregistry.KUMQUAT_INGOT.get()))
+          .save(output);        
+        //gate
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.KUMQUAT_GATE_ITEM.get(), 1)
+          .pattern("BAB")
+          .pattern("BAB")
+          .pattern("   ")
+          .define('A', ingotcompatregistry.KUMQUAT_INGOT.get())
+          .define('B', Items.STICK)
+          .unlockedBy("has_kumquat_ingot", has(ingotcompatregistry.KUMQUAT_INGOT.get()))
           .save(output);        
   //--------------------------------------------------------------------------------------Persimmon---------------------------------------------------------------------------------------------
         //fence
@@ -4465,6 +4661,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', foodblockcompatitemregistry.TANGERINE_BLOCK_ITEM.get())
         .unlockedBy("has_tangerine_block",  has(foodblockcompatitemregistry.TANGERINE_BLOCK_ITEM.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Kumquat---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.KUMQUAT_PRESSURE_PLATE_ITEM.get())
+        .pattern("   ")
+        .pattern("AA ")
+        .pattern("   ")
+        .define('A', foodblockcompatitemregistry.KUMQUAT_BLOCK_ITEM.get())
+        .unlockedBy("has_kumquat_block",  has(foodblockcompatitemregistry.KUMQUAT_BLOCK_ITEM.get()))
+        .save(output);
   //--------------------------------------------------------------------------------------Persimmon---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.PERSIMMON_PRESSURE_PLATE_ITEM.get())
         .pattern("   ")
@@ -4649,6 +4853,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', ingotcompatregistry.TANGERINE_INGOT.get())
         .define('B', Items.STICK)
         .unlockedBy("has_tangerine_ingot",  has(ingotcompatregistry.TANGERINE_INGOT.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Kumquat---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.KUMQUAT_SIGN_ITEM.get(), 3)
+        .pattern("AAA")
+        .pattern("AAA")
+        .pattern(" B ")
+        .define('A', ingotcompatregistry.KUMQUAT_INGOT.get())
+        .define('B', Items.STICK)
+        .unlockedBy("has_kumquat_ingot",  has(ingotcompatregistry.KUMQUAT_INGOT.get()))
         .save(output);
   //--------------------------------------------------------------------------------------Persimmon---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.PERSIMMON_SIGN_ITEM.get(), 3)
@@ -4843,6 +5056,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', ingotcompatregistry.TANGERINE_INGOT.get())
         .unlockedBy("has_tangerine_ingot", has(ingotcompatregistry.TANGERINE_INGOT.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Kumquat---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.KUMQUAT_TRAPDOOR_ITEM.get())
+        .pattern("   ")
+        .pattern("AAA")
+        .pattern("AAA")
+        .define('A', ingotcompatregistry.KUMQUAT_INGOT.get())
+        .unlockedBy("has_kumquat_ingot", has(ingotcompatregistry.KUMQUAT_INGOT.get()))
+        .save(output);
   //--------------------------------------------------------------------------------------Persimmon---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.PERSIMMON_TRAPDOOR_ITEM.get())
         .pattern("   ")
@@ -5025,6 +5246,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .pattern("ABA")
         .pattern("AAA")
         .define('A', ingotcompatregistry.TANGERINE_INGOT.get())
+        .define('B', foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get())
+        .unlockedBy("has_glow_berry_block", has(foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Kumquat---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.KUMQUAT_LAMP_ITEM.get())
+        .pattern("AAA")
+        .pattern("ABA")
+        .pattern("AAA")
+        .define('A', ingotcompatregistry.KUMQUAT_INGOT.get())
         .define('B', foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get())
         .unlockedBy("has_glow_berry_block", has(foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get()))
         .save(output);
@@ -5220,6 +5450,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .pattern("AA ")
         .define('A', nuggetcompatregistry.TANGERINE_NUGGET.get())
         .unlockedBy("has_tangerine_nugget", has(nuggetcompatregistry.TANGERINE_NUGGET.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Kumquat---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.KUMQUAT_CARPET_ITEM.get(), 3)
+        .pattern("   ")
+        .pattern("AA ")
+        .pattern("AA ")
+        .define('A', nuggetcompatregistry.KUMQUAT_NUGGET.get())
+        .unlockedBy("has_kumquat_nugget", has(nuggetcompatregistry.KUMQUAT_NUGGET.get()))
         .save(output);
   //--------------------------------------------------------------------------------------Persimmon---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.PERSIMMON_CARPET_ITEM.get(), 3)
@@ -5475,6 +5713,25 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('A', nuggetcompatregistry.TANGERINE_NUGGET.get())
             .define('B', Items.SOUL_TORCH)
             .unlockedBy("has_tangerine_nugget", has(nuggetcompatregistry.TANGERINE_NUGGET.get()))
+            .save(output);
+  //--------------------------------------------------------------------------------------Kumquat---------------------------------------------------------------------------------------------
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.KUMQUAT_LANTERN_ITEM.get())
+            .pattern("AAA")
+            .pattern("ABA")
+            .pattern("AAA")
+            .define('A', nuggetcompatregistry.KUMQUAT_NUGGET.get())
+            .define('B', Items.TORCH)
+            .unlockedBy("has_kumquat_nugget", has(nuggetcompatregistry.KUMQUAT_NUGGET.get()))
+            .save(output);
+          //soul
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.KUMQUAT_SOUL_LANTERN_ITEM.get())
+            .pattern("AAA")
+            .pattern("ABA")
+            .pattern("AAA")
+            .define('A', nuggetcompatregistry.KUMQUAT_NUGGET.get())
+            .define('B', Items.SOUL_TORCH)
+            .unlockedBy("has_kumquat_nugget", has(nuggetcompatregistry.KUMQUAT_NUGGET.get()))
             .save(output);
   //--------------------------------------------------------------------------------------Persimmon---------------------------------------------------------------------------------------------
           //regular
@@ -5826,6 +6083,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('B', ingotcompatregistry.TANGERINE_INGOT.get())
         .unlockedBy("has_tangerine_ingot", has(ingotcompatregistry.TANGERINE_INGOT.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Kumquat---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.KUMQUAT_CHAIN_ITEM.get())
+        .pattern(" A ")
+        .pattern(" B ")
+        .pattern(" A ")
+        .define('A', nuggetcompatregistry.KUMQUAT_NUGGET.get())
+        .define('B', ingotcompatregistry.KUMQUAT_INGOT.get())
+        .unlockedBy("has_kumquat_ingot", has(ingotcompatregistry.KUMQUAT_INGOT.get()))
+        .save(output);
   //--------------------------------------------------------------------------------------Persimmon---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.PERSIMMON_CHAIN_ITEM.get())
         .pattern(" A ")
@@ -6026,6 +6292,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('B', ingotcompatregistry.TANGERINE_INGOT.get())
         .unlockedBy("has_tangerine_ingot", has(ingotcompatregistry.TANGERINE_INGOT.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Kumquat---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.KUMQUAT_LADDER_ITEM.get(), 3)
+        .pattern("A A")
+        .pattern("ABA")
+        .pattern("A A")
+        .define('A', Items.STICK)
+        .define('B', ingotcompatregistry.KUMQUAT_INGOT.get())
+        .unlockedBy("has_kumquat_ingot", has(ingotcompatregistry.KUMQUAT_INGOT.get()))
+        .save(output);
   //--------------------------------------------------------------------------------------Persimmon---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.PERSIMMON_LADDER_ITEM.get(), 3)
         .pattern("A A")
@@ -6225,6 +6500,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', foodblockcompatitemregistry.TANGERINE_SLAB_ITEM.get())
         .define('B', ingotcompatregistry.TANGERINE_INGOT.get())
         .unlockedBy("has_tangerine_ingot", has(ingotcompatregistry.TANGERINE_INGOT.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Kumquat---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.KUMQUAT_TABLE_ITEM.get())
+        .pattern("AAA")
+        .pattern("B B")
+        .pattern("B B")
+        .define('A', foodblockcompatitemregistry.KUMQUAT_SLAB_ITEM.get())
+        .define('B', ingotcompatregistry.KUMQUAT_INGOT.get())
+        .unlockedBy("has_kumquat_ingot", has(ingotcompatregistry.KUMQUAT_INGOT.get()))
         .save(output);
   //--------------------------------------------------------------------------------------Persimmon---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.PERSIMMON_TABLE_ITEM.get())
@@ -6579,6 +6863,37 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', nuggetcompatregistry.TANGERINE_NUGGET.get())
             .define('C', Items.SOUL_SAND)
             .unlockedBy("has_tangerine_nugget", has(nuggetcompatregistry.TANGERINE_NUGGET.get()))
+            .save(output);
+  //--------------------------------------------------------------------------------------Kumquat---------------------------------------------------------------------------------------------
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.KUMQUAT_TORCH_ITEM.get(), 4)
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetcompatregistry.KUMQUAT_NUGGET.get())
+            .define('C', ItemTags.COALS)
+            .unlockedBy("has_kumquat_nugget", has(nuggetcompatregistry.KUMQUAT_NUGGET.get()))
+            .save(output);
+          //redstone
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.KUMQUAT_REDSTONE_TORCH_ITEM.get())
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetcompatregistry.KUMQUAT_NUGGET.get())
+            .define('C', Items.REDSTONE)
+            .unlockedBy("has_kumquat_nugget", has(nuggetcompatregistry.KUMQUAT_NUGGET.get()))
+            .save(output);
+          //soul
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.KUMQUAT_SOUL_TORCH_ITEM.get(), 4)
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetcompatregistry.KUMQUAT_NUGGET.get())
+            .define('C', Items.SOUL_SAND)
+            .unlockedBy("has_kumquat_nugget", has(nuggetcompatregistry.KUMQUAT_NUGGET.get()))
             .save(output);
   //--------------------------------------------------------------------------------------Persimmon---------------------------------------------------------------------------------------------
           //regular
@@ -7110,6 +7425,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('B', Items.COBBLESTONE)
         .unlockedBy("has_tangerine_ingot", has(ingotcompatregistry.TANGERINE_INGOT.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Kumquat---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.KUMQUAT_FURNACE_ITEM.get())
+        .pattern("ABA")
+        .pattern("B B")
+        .pattern("ABA")
+        .define('A', ingotcompatregistry.KUMQUAT_INGOT.get())
+        .define('B', Items.COBBLESTONE)
+        .unlockedBy("has_kumquat_ingot", has(ingotcompatregistry.KUMQUAT_INGOT.get()))
+        .save(output);
   //--------------------------------------------------------------------------------------Persimmon---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.PERSIMMON_FURNACE_ITEM.get())
         .pattern("ABA")
@@ -7283,6 +7607,12 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .requires(Items.STONE)
         .unlockedBy("has_tangerine_block", has(foodblockcompatitemregistry.TANGERINE_BLOCK_ITEM.get()))
         .save(output);        
+  //--------------------------------------------------------------------------------------Kumquat---------------------------------------------------------------------------------------------
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.KUMQUAT_STONE_PATH_ITEM.get(), 6)
+        .requires(foodblockcompatitemregistry.KUMQUAT_BLOCK_ITEM.get())
+        .requires(Items.STONE)
+        .unlockedBy("has_kumquat_block", has(foodblockcompatitemregistry.KUMQUAT_BLOCK_ITEM.get()))
+        .save(output);        
   //--------------------------------------------------------------------------------------Persimmon---------------------------------------------------------------------------------------------
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.PERSIMMON_STONE_PATH_ITEM.get(), 6)
         .requires(foodblockcompatitemregistry.PERSIMMON_BLOCK_ITEM.get())
@@ -7437,6 +7767,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', foodblockcompatitemregistry.TANGERINE_BLOCK_ITEM.get())
         .define('B', foodblockcompatitemregistry.TANGERINE_SLAB_ITEM.get())
         .unlockedBy("has_tangerine_block", has(foodblockcompatitemregistry.TANGERINE_BLOCK_ITEM.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Kumquat---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.KUMQUAT_BARREL_ITEM.get())
+        .pattern("ABA")
+        .pattern("A A")
+        .pattern("ABA")
+        .define('A', foodblockcompatitemregistry.KUMQUAT_BLOCK_ITEM.get())
+        .define('B', foodblockcompatitemregistry.KUMQUAT_SLAB_ITEM.get())
+        .unlockedBy("has_kumquat_block", has(foodblockcompatitemregistry.KUMQUAT_BLOCK_ITEM.get()))
         .save(output);
   //--------------------------------------------------------------------------------------Persimmon---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.PERSIMMON_BARREL_ITEM.get())
@@ -7637,6 +7976,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', ingotcompatregistry.TANGERINE_INGOT.get())
         .define('B', foodblockcompatitemregistry.TANGERINE_SLAB_ITEM.get())
         .unlockedBy("has_tangerine_slab", has(foodblockcompatitemregistry.TANGERINE_SLAB_ITEM.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Kumquat---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.KUMQUAT_CHAIR_ITEM.get())
+        .pattern("AAA")
+        .pattern("BBB")
+        .pattern("A A")
+        .define('A', ingotcompatregistry.KUMQUAT_INGOT.get())
+        .define('B', foodblockcompatitemregistry.KUMQUAT_SLAB_ITEM.get())
+        .unlockedBy("has_kumquat_slab", has(foodblockcompatitemregistry.KUMQUAT_SLAB_ITEM.get()))
         .save(output);
   //--------------------------------------------------------------------------------------Persimmon---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.PERSIMMON_CHAIR_ITEM.get())
@@ -7844,6 +8192,16 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
            .define('B', foodblockcompatitemregistry.TANGERINE_SLAB_ITEM.get())
            .define('C', foodblockcompatitemregistry.TANGERINE_CARPET_ITEM.get())
            .unlockedBy("has_tangerine_ingot", has(ingotcompatregistry.TANGERINE_INGOT.get()))
+           .save(output);
+  //--------------------------------------------------------------------------------------Kumquat---------------------------------------------------------------------------------------------
+           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.KUMQUAT_BED_ITEM.get())
+           .pattern("CCC")
+           .pattern("BBB")
+           .pattern("A A")
+           .define('A', ingotcompatregistry.KUMQUAT_INGOT.get())
+           .define('B', foodblockcompatitemregistry.KUMQUAT_SLAB_ITEM.get())
+           .define('C', foodblockcompatitemregistry.KUMQUAT_CARPET_ITEM.get())
+           .unlockedBy("has_kumquat_ingot", has(ingotcompatregistry.KUMQUAT_INGOT.get()))
            .save(output);
   //--------------------------------------------------------------------------------------Persimmon---------------------------------------------------------------------------------------------
            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.PERSIMMON_BED_ITEM.get())
@@ -8136,6 +8494,26 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('B', Items.IRON_INGOT)
          .define('C', foodblockcompatitemregistry.SMALL_TANGERINE_CABINET_ITEM.get())
          .unlockedBy("has_tangerine_slab", has(foodblockcompatitemregistry.TANGERINE_SLAB_ITEM.get()))
+         .save(output);
+  //--------------------------------------------------------------------------------------Kumquat---------------------------------------------------------------------------------------------
+       //small
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.SMALL_KUMQUAT_CABINET_ITEM.get())
+         .pattern("AAA")
+         .pattern("B B")
+         .pattern("AAA")
+         .define('A', foodblockcompatitemregistry.KUMQUAT_SLAB_ITEM.get())
+         .define('B', Items.IRON_INGOT)
+         .unlockedBy("has_kumquat_slab", has(foodblockcompatitemregistry.KUMQUAT_SLAB_ITEM.get()))
+         .save(output);
+       //medium
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.MEDIUM_KUMQUAT_CABINET_ITEM.get())
+         .pattern("AAA")
+         .pattern("BCB")
+         .pattern("AAA")
+         .define('A', foodblockcompatitemregistry.KUMQUAT_SLAB_ITEM.get())
+         .define('B', Items.IRON_INGOT)
+         .define('C', foodblockcompatitemregistry.SMALL_KUMQUAT_CABINET_ITEM.get())
+         .unlockedBy("has_kumquat_slab", has(foodblockcompatitemregistry.KUMQUAT_SLAB_ITEM.get()))
          .save(output);
   //--------------------------------------------------------------------------------------Persimmon---------------------------------------------------------------------------------------------
        //small

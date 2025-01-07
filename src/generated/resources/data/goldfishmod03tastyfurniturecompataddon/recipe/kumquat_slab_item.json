@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "goldfishmod03tastyfurniturecompataddon:kumquat_ingot"
+    }
+  },
+  "pattern": [
+    "   ",
+    "   ",
+    "AAA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "goldfishmod03tastyfurniturecompataddon:kumquat_slab_item"
+  }
+}

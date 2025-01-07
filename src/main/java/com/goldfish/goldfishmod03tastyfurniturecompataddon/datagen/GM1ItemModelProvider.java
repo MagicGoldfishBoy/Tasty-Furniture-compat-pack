@@ -565,6 +565,84 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("small_tangerine_cabinet_item", modLoc("block/tangerine_cabinet"));
        withExistingParent("medium_tangerine_cabinet_item", modLoc("block/medium_tangerine_cabinet"));
     //==============================================================================================================================================
+    //|                                                              Kumquat                                                                        |
+    //==============================================================================================================================================
+       //mush
+        withExistingParent("kumquat_mush", mcLoc("item/generated")).texture("layer0", "item/kumquat_mush");
+       //ingot
+        withExistingParent("kumquat_ingot", mcLoc("item/generated")).texture("layer0", "item/kumquat_ingot");
+       //nugget
+        withExistingParent("kumquat_nugget", mcLoc("item/generated")).texture("layer0", "item/kumquat_nugget");
+       //block
+        withExistingParent("kumquat_block_item", modLoc("block/kumquat_block"));
+       //bricks block
+        withExistingParent("kumquat_bricks_block_item", modLoc("block/kumquat_bricks_block"));
+       //chiseled block
+        withExistingParent("kumquat_chiseled_block_item", modLoc("block/kumquat_chiseled_block"));
+       //tiles block
+        withExistingParent("kumquat_tiles_block_item", modLoc("block/kumquat_tiles_block"));
+       //slab
+        slab("kumquat_slab_item", modLoc("block/kumquat_block"), modLoc("block/kumquat_block"), modLoc("block/kumquat_block"));
+       //bricks slab
+        slab("kumquat_bricks_slab_item", modLoc("block/kumquat_bricks_block"), modLoc("block/kumquat_bricks_block"), modLoc("block/kumquat_bricks_block"));
+       //stairs
+        stairs("kumquat_stairs_item", modLoc("block/kumquat_block"), modLoc("block/kumquat_block"), modLoc("block/kumquat_block"));
+       //bricks stairs
+        stairs("kumquat_bricks_stairs_item", modLoc("block/kumquat_bricks_block"), modLoc("block/kumquat_bricks_block"), modLoc("block/kumquat_bricks_block"));
+       //bars
+        withExistingParent("kumquat_bars_item", mcLoc("item/generated")).texture("layer0", "block/kumquat_bars");
+       //doors
+        withExistingParent("kumquat_door_item", mcLoc("item/generated")).texture("layer0", "item/kumquat_door_item");
+       //button
+        buttonInventory("kumquat_button_item", modLoc("block/kumquat_block"));
+       //fence
+        fenceInventory("kumquat_fence_item", modLoc("block/kumquat_block"));
+       //gate
+        withExistingParent("kumquat_gate_item", modLoc("block/kumquat_gate"));
+       //pressure plate
+        pressurePlate("kumquat_pressure_plate_item", modLoc("block/kumquat_block"));
+       //sign
+       withExistingParent("kumquat_sign_item", mcLoc("item/generated")).texture("layer0", "item/kumquat_sign");
+       //trapdoor
+       withExistingParent("kumquat_trapdoor_item", modLoc("block/kumquat_trapdoor_trapdoor_bottom"));
+       //lamp
+       withExistingParent("kumquat_lamp_item", modLoc("block/kumquat_lamp"));
+       //carpet
+       ResourceLocation kumquat_carpet_texture = modLoc("block/kumquat_carpet");
+       carpet("kumquat_carpet_item", kumquat_carpet_texture);
+       //lantern
+        //regular
+        withExistingParent("kumquat_lantern_item", modLoc("block/kumquat_lantern"));
+        //soul
+          withExistingParent("kumquat_soul_lantern_item", modLoc("block/kumquat_soul_lantern"));
+       //chain
+       withExistingParent("kumquat_chain_item", modLoc("block/kumquat_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
+       //ladder
+       withExistingParent("kumquat_ladder_item", modLoc("block/kumquat_ladder"));
+       //table
+       withExistingParent("kumquat_table_item", modLoc("block/kumquat_table"));
+       //torches
+        //regular
+        withExistingParent("kumquat_torch_item", modLoc("block/kumquat_torch"));
+        //redstone
+          withExistingParent("kumquat_redstone_torch_item", modLoc("block/kumquat_redstone_torch"));
+        //soul
+          withExistingParent("kumquat_soul_torch_item", modLoc("block/kumquat_soul_torch"));
+       //furnaces
+       withExistingParent("kumquat_furnace_item", modLoc("block/kumquat_furnace_model_unlit"));
+       //paths
+       withExistingParent("kumquat_stone_path_item", modLoc("block/kumquat_stone_path"));
+       //barrel
+       withExistingParent("kumquat_barrel_item", modLoc("block/kumquat_barrel_model_closed"));
+       //chair
+       withExistingParent("kumquat_chair_item", modLoc("block/kumquat_chair"));
+       //bed
+       withExistingParent("kumquat_bed_item", modLoc("block/kumquat_bed"));
+       //cabinet
+       withExistingParent("small_kumquat_cabinet_item", modLoc("block/kumquat_cabinet"));
+       withExistingParent("medium_kumquat_cabinet_item", modLoc("block/medium_kumquat_cabinet"));
+    //==============================================================================================================================================
     //|                                                              Persimmon                                                                        |
     //==============================================================================================================================================
        //mush

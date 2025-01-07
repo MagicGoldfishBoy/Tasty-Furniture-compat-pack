@@ -154,6 +154,19 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........tiles
           net.minecraft.world.level.block.Block tangerine_tiles_block = foodblockcompatregistry.TANGERINE_TILES_BLOCK.get();
           simpleBlock(tangerine_tiles_block);
+     //------------------------------------------------------------kumquat-----------------------------------------------------------------------
+      //.........plain
+          net.minecraft.world.level.block.Block kumquat_block = foodblockcompatregistry.KUMQUAT_BLOCK.get();
+          simpleBlock(kumquat_block);
+      //.........bricks
+          net.minecraft.world.level.block.Block kumquat_bricks_block = foodblockcompatregistry.KUMQUAT_BRICKS_BLOCK.get();
+          simpleBlock(kumquat_bricks_block);
+      //.........chiseled
+          net.minecraft.world.level.block.Block kumquat_chiseled_block = foodblockcompatregistry.KUMQUAT_CHISELED_BLOCK.get();
+          simpleBlock(kumquat_chiseled_block);
+      //.........tiles
+          net.minecraft.world.level.block.Block kumquat_tiles_block = foodblockcompatregistry.KUMQUAT_TILES_BLOCK.get();
+          simpleBlock(kumquat_tiles_block);
      //------------------------------------------------------------persimmon-----------------------------------------------------------------------
       //.........plain
           net.minecraft.world.level.block.Block persimmon_block = foodblockcompatregistry.PERSIMMON_BLOCK.get();
@@ -415,6 +428,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
           SlabBlock tangerine_bricks_slab = foodblockcompatregistry.TANGERINE_BRICKS_SLAB.get();
           ResourceLocation tangerine_bricks_block_texture = modLoc("block/tangerine_bricks_block");
           slabBlock(tangerine_bricks_slab, tangerine_bricks_block_texture, tangerine_bricks_block_texture);
+     //------------------------------------------------------------kumquat-----------------------------------------------------------------------
+      //.........plain
+          SlabBlock kumquat_slab = foodblockcompatregistry.KUMQUAT_SLAB.get();
+          ResourceLocation kumquat_block_texture = modLoc("block/kumquat_block");
+          slabBlock(kumquat_slab, kumquat_block_texture, kumquat_block_texture);
+      //.........bricks
+          SlabBlock kumquat_bricks_slab = foodblockcompatregistry.KUMQUAT_BRICKS_SLAB.get();
+          ResourceLocation kumquat_bricks_block_texture = modLoc("block/kumquat_bricks_block");
+          slabBlock(kumquat_bricks_slab, kumquat_bricks_block_texture, kumquat_bricks_block_texture);
      //------------------------------------------------------------persimmon-----------------------------------------------------------------------
       //.........plain
           SlabBlock persimmon_slab = foodblockcompatregistry.PERSIMMON_SLAB.get();
@@ -602,6 +624,13 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........bricks
           StairBlock tangerine_bricks_stairs = foodblockcompatregistry.TANGERINE_BRICKS_STAIRS.get();
           stairsBlock(tangerine_bricks_stairs, tangerine_bricks_block_texture);
+     //------------------------------------------------------------kumquat-----------------------------------------------------------------------
+      //.........plain
+          StairBlock kumquat_stairs = foodblockcompatregistry.KUMQUAT_STAIRS.get();
+          stairsBlock(kumquat_stairs, kumquat_block_texture);
+      //.........bricks
+          StairBlock kumquat_bricks_stairs = foodblockcompatregistry.KUMQUAT_BRICKS_STAIRS.get();
+          stairsBlock(kumquat_bricks_stairs, kumquat_bricks_block_texture);
      //------------------------------------------------------------persimmon-----------------------------------------------------------------------
       //.........plain
           StairBlock persimmon_stairs = foodblockcompatregistry.PERSIMMON_STAIRS.get();
@@ -745,6 +774,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation tangerine_bars_texture = modLoc("block/tangerine_bars");
           ResourceLocation tangerine_bars_rim_texture = modLoc("block/tangerine_block");
           paneBlockWithRenderType(tangerine_bars, "tangerine_bars", tangerine_bars_texture, tangerine_bars_rim_texture, "cutout_mipped_all"); 
+     //------------------------------------------------------------kumquat-----------------------------------------------------------------------
+          IronBarsBlock kumquat_bars = foodblockcompatregistry.KUMQUAT_BARS.get(); 
+          ResourceLocation kumquat_bars_texture = modLoc("block/kumquat_bars");
+          ResourceLocation kumquat_bars_rim_texture = modLoc("block/kumquat_block");
+          paneBlockWithRenderType(kumquat_bars, "kumquat_bars", kumquat_bars_texture, kumquat_bars_rim_texture, "cutout_mipped_all"); 
      //------------------------------------------------------------persimmon-----------------------------------------------------------------------
           IronBarsBlock persimmon_bars = foodblockcompatregistry.PERSIMMON_BARS.get(); 
           ResourceLocation persimmon_bars_texture = modLoc("block/persimmon_bars");
@@ -858,6 +892,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation tangerine_door_top_texture = modLoc("block/tangerine_door_top");
           ResourceLocation tangerine_door_bottom_texture = modLoc("block/tangerine_door_bottom");
           doorBlockWithRenderType(tangerine_door, "tangerine_door", tangerine_door_bottom_texture, tangerine_door_top_texture, "cutout_mipped_all"); 
+     //------------------------------------------------------------kumquat-----------------------------------------------------------------------
+          DoorBlock kumquat_door = foodblockcompatregistry.KUMQUAT_DOOR.get(); 
+          ResourceLocation kumquat_door_top_texture = modLoc("block/kumquat_door_top");
+          ResourceLocation kumquat_door_bottom_texture = modLoc("block/kumquat_door_bottom");
+          doorBlockWithRenderType(kumquat_door, "kumquat_door", kumquat_door_bottom_texture, kumquat_door_top_texture, "cutout_mipped_all"); 
      //------------------------------------------------------------persimmon-----------------------------------------------------------------------
           DoorBlock persimmon_door = foodblockcompatregistry.PERSIMMON_DOOR.get(); 
           ResourceLocation persimmon_door_top_texture = modLoc("block/persimmon_door_top");
@@ -964,6 +1003,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ButtonBlock tangerine_button = foodblockcompatregistry.TANGERINE_BUTTON.get();
           ResourceLocation tangerine_button_texture = modLoc("block/tangerine_block");
           buttonBlock(tangerine_button, tangerine_button_texture);
+     //------------------------------------------------------------kumquat-----------------------------------------------------------------------
+          ButtonBlock kumquat_button = foodblockcompatregistry.KUMQUAT_BUTTON.get();
+          ResourceLocation kumquat_button_texture = modLoc("block/kumquat_block");
+          buttonBlock(kumquat_button, kumquat_button_texture);
      //------------------------------------------------------------persimmon-----------------------------------------------------------------------
           ButtonBlock persimmon_button = foodblockcompatregistry.PERSIMMON_BUTTON.get();
           ResourceLocation persimmon_button_texture = modLoc("block/persimmon_block");
@@ -1090,6 +1133,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
           FenceGateBlock tangerine_gate = foodblockcompatregistry.TANGERINE_GATE.get();
           ResourceLocation tangerine_gate_texture = modLoc("block/tangerine_block");
           fenceGateBlock(tangerine_gate, tangerine_gate_texture);
+     //------------------------------------------------------------kumquat-----------------------------------------------------------------------
+       //fence
+          FenceBlock kumquat_fence = foodblockcompatregistry.KUMQUAT_FENCE.get();
+          ResourceLocation kumquat_fence_texture = modLoc("block/kumquat_block");
+          fenceBlock(kumquat_fence, kumquat_fence_texture);
+       //gate
+          FenceGateBlock kumquat_gate = foodblockcompatregistry.KUMQUAT_GATE.get();
+          ResourceLocation kumquat_gate_texture = modLoc("block/kumquat_block");
+          fenceGateBlock(kumquat_gate, kumquat_gate_texture);
      //------------------------------------------------------------persimmon-----------------------------------------------------------------------
        //fence
           FenceBlock persimmon_fence = foodblockcompatregistry.PERSIMMON_FENCE.get();
@@ -1256,6 +1308,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           PressurePlateBlock tangerine_pressure_plate = foodblockcompatregistry.TANGERINE_PRESSURE_PLATE.get();
           ResourceLocation tangerine_pressure_plate_texture = modLoc("block/tangerine_block");
           pressurePlateBlock(tangerine_pressure_plate, tangerine_pressure_plate_texture);
+     //------------------------------------------------------------kumquat-----------------------------------------------------------------------
+          PressurePlateBlock kumquat_pressure_plate = foodblockcompatregistry.KUMQUAT_PRESSURE_PLATE.get();
+          ResourceLocation kumquat_pressure_plate_texture = modLoc("block/kumquat_block");
+          pressurePlateBlock(kumquat_pressure_plate, kumquat_pressure_plate_texture);
      //------------------------------------------------------------persimmon-----------------------------------------------------------------------
           PressurePlateBlock persimmon_pressure_plate = foodblockcompatregistry.PERSIMMON_PRESSURE_PLATE.get();
           ResourceLocation persimmon_pressure_plate_texture = modLoc("block/persimmon_block");
@@ -1354,6 +1410,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
            WallSignBlock tangerine_wall_sign = foodblockcompatregistry.TANGERINE_WALL_SIGN.get();
            ResourceLocation tangerine_sign_texture = modLoc("block/tangerine_block");
            signBlock(tangerine_sign, tangerine_wall_sign, tangerine_sign_texture);
+     //------------------------------------------------------------kumquat-----------------------------------------------------------------------
+           StandingSignBlock kumquat_sign = foodblockcompatregistry.KUMQUAT_STANDING_SIGN.get();
+           WallSignBlock kumquat_wall_sign = foodblockcompatregistry.KUMQUAT_WALL_SIGN.get();
+           ResourceLocation kumquat_sign_texture = modLoc("block/kumquat_block");
+           signBlock(kumquat_sign, kumquat_wall_sign, kumquat_sign_texture);
      //------------------------------------------------------------persimmon-----------------------------------------------------------------------
            StandingSignBlock persimmon_sign = foodblockcompatregistry.PERSIMMON_STANDING_SIGN.get();
            WallSignBlock persimmon_wall_sign = foodblockcompatregistry.PERSIMMON_WALL_SIGN.get();
@@ -1460,6 +1521,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           TrapDoorBlock tangerine_trapdoor = foodblockcompatregistry.TANGERINE_TRAPDOOR.get(); 
           ResourceLocation tangerine_trapdoor_texture = modLoc("block/tangerine_block");
           trapdoorBlockWithRenderType(tangerine_trapdoor, "tangerine_trapdoor", tangerine_trapdoor_texture, false, tangerine_trapdoor_texture);
+     //------------------------------------------------------------kumquat-----------------------------------------------------------------------
+          TrapDoorBlock kumquat_trapdoor = foodblockcompatregistry.KUMQUAT_TRAPDOOR.get(); 
+          ResourceLocation kumquat_trapdoor_texture = modLoc("block/kumquat_block");
+          trapdoorBlockWithRenderType(kumquat_trapdoor, "kumquat_trapdoor", kumquat_trapdoor_texture, false, kumquat_trapdoor_texture);
      //------------------------------------------------------------persimmon-----------------------------------------------------------------------
           TrapDoorBlock persimmon_trapdoor = foodblockcompatregistry.PERSIMMON_TRAPDOOR.get(); 
           ResourceLocation persimmon_trapdoor_texture = modLoc("block/persimmon_block");
@@ -1544,6 +1609,9 @@ public class GM1BlockStateProvider extends BlockStateProvider
      //------------------------------------------------------------tangerine-----------------------------------------------------------------------
           Block tangerine_lamp = foodblockcompatregistry.TANGERINE_LAMP.get();
           simpleBlock(tangerine_lamp);
+     //------------------------------------------------------------kumquat-----------------------------------------------------------------------
+          Block kumquat_lamp = foodblockcompatregistry.KUMQUAT_LAMP.get();
+          simpleBlock(kumquat_lamp);
      //------------------------------------------------------------persimmon-----------------------------------------------------------------------
           Block persimmon_lamp = foodblockcompatregistry.PERSIMMON_LAMP.get();
           simpleBlock(persimmon_lamp);
@@ -1634,6 +1702,12 @@ public class GM1BlockStateProvider extends BlockStateProvider
           BlockModelBuilder tangerine_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(tangerine_carpet).getPath(), mcLoc("block/carpet"))
           .texture("wool", tangerine_carpet_texture);
           simpleBlock(tangerine_carpet, new ModelFile.UncheckedModelFile(tangerine_carpet_model.getLocation()));
+     //------------------------------------------------------------kumquat-----------------------------------------------------------------------
+          CarpetBlock kumquat_carpet = foodblockcompatregistry.KUMQUAT_CARPET.get();
+          ResourceLocation kumquat_carpet_texture = modLoc("block/kumquat_carpet");
+          BlockModelBuilder kumquat_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(kumquat_carpet).getPath(), mcLoc("block/carpet"))
+          .texture("wool", kumquat_carpet_texture);
+          simpleBlock(kumquat_carpet, new ModelFile.UncheckedModelFile(kumquat_carpet_model.getLocation()));
      //------------------------------------------------------------persimmon-----------------------------------------------------------------------
           CarpetBlock persimmon_carpet = foodblockcompatregistry.PERSIMMON_CARPET.get();
           ResourceLocation persimmon_carpet_texture = modLoc("block/persimmon_carpet");
@@ -2000,6 +2074,45 @@ public class GM1BlockStateProvider extends BlockStateProvider
              .modelForState().modelFile(hanging_tangerine_soul_lantern_model).addModel()
              .partialState().with(LanternBlock.HANGING, false)
              .modelForState().modelFile(tangerine_soul_lantern_model).addModel();
+     //------------------------------------------------------------kumquat-----------------------------------------------------------------------
+         //regular
+          LanternBlock kumquat_lantern = foodblockcompatregistry.KUMQUAT_LANTERN.get();
+          ResourceLocation kumquat_lantern_texture = modLoc("block/kumquat_lantern");
+  
+          BlockModelBuilder kumquat_lantern_model = models()
+              .withExistingParent("kumquat_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", kumquat_lantern_texture);
+  
+          BlockModelBuilder hanging_kumquat_lantern_model = models()
+              .withExistingParent("kumquat_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", kumquat_lantern_texture);
+  
+          getVariantBuilder(kumquat_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_kumquat_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(kumquat_lantern_model).addModel();
+         //soul
+         LanternBlock kumquat_soul_lantern = foodblockcompatregistry.KUMQUAT_SOUL_LANTERN.get();
+         ResourceLocation kumquat_soul_lantern_texture = modLoc("block/kumquat_soul_lantern");
+ 
+         BlockModelBuilder kumquat_soul_lantern_model = models()
+             .withExistingParent("kumquat_soul_lantern", mcLoc("block/lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", kumquat_soul_lantern_texture);
+ 
+         BlockModelBuilder hanging_kumquat_soul_lantern_model = models()
+             .withExistingParent("kumquat_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", kumquat_soul_lantern_texture);
+ 
+         getVariantBuilder(kumquat_soul_lantern)
+             .partialState().with(LanternBlock.HANGING, true)
+             .modelForState().modelFile(hanging_kumquat_soul_lantern_model).addModel()
+             .partialState().with(LanternBlock.HANGING, false)
+             .modelForState().modelFile(kumquat_soul_lantern_model).addModel();
      //------------------------------------------------------------persimmon-----------------------------------------------------------------------
          //regular
           LanternBlock persimmon_lantern = foodblockcompatregistry.PERSIMMON_LANTERN.get();
@@ -2700,6 +2813,22 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .modelForState().modelFile(tangerine_chain_model).rotationX(90).rotationY(90).addModel()
           .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
           .modelForState().modelFile(tangerine_chain_model).rotationX(90).addModel(); 
+     //------------------------------------------------------------kumquat-----------------------------------------------------------------------
+         ChainBlock kumquat_chain = foodblockcompatregistry.KUMQUAT_CHAIN.get();
+         ResourceLocation kumquat_chain_texture = modLoc("block/kumquat_chain");
+         BlockModelBuilder kumquat_chain_model = models()
+          .withExistingParent("kumquat_chain", mcLoc("block/chain"))
+          .renderType("cutout_mipped_all")
+          .texture("all", kumquat_chain_texture)
+          .texture("particle", kumquat_chain_texture);
+
+          getVariantBuilder(kumquat_chain)
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Y)
+          .modelForState().modelFile(kumquat_chain_model).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.X)
+          .modelForState().modelFile(kumquat_chain_model).rotationX(90).rotationY(90).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
+          .modelForState().modelFile(kumquat_chain_model).rotationX(90).addModel(); 
      //------------------------------------------------------------persimmon-----------------------------------------------------------------------
          ChainBlock persimmon_chain = foodblockcompatregistry.PERSIMMON_CHAIN.get();
          ResourceLocation persimmon_chain_texture = modLoc("block/persimmon_chain");
@@ -3084,6 +3213,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/tangerine_ladder");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------kumquat-----------------------------------------------------------------------
+          LadderBlock kumquatladder = foodblockcompatregistry.KUMQUAT_LADDER.get();
+
+          getVariantBuilder(kumquatladder)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/kumquat_ladder");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -3549,6 +3699,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/tangerine_table");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------kumquat-----------------------------------------------------------------------
+          HorizontalDirectionalBlock kumquattable = foodblockcompatregistry.KUMQUAT_TABLE.get();
+
+          getVariantBuilder(kumquattable)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/kumquat_table");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -4682,6 +4853,122 @@ public class GM1BlockStateProvider extends BlockStateProvider
                     .renderType("cutout_mipped_all")
                     .texture("torch", tangerine_soul_wall_torch_texture)
                     .texture("particle", tangerine_soul_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+     //------------------------------------------------------------kumquat-----------------------------------------------------------------------
+       //regular
+        TorchBlock kumquat_torch = foodblockcompatregistry.KUMQUAT_TORCH.get();
+        ResourceLocation kumquat_torch_texture = modLoc("block/kumquat_torch");
+        BlockModelBuilder kumquat_torch_model = models()
+        .withExistingParent("kumquat_torch", mcLoc("block/torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", kumquat_torch_texture)
+        .texture("particle", kumquat_torch_texture);
+
+        simpleBlock(kumquat_torch, kumquat_torch_model);
+
+        TorchBlock kumquat_wall_torch = foodblockcompatregistry.KUMQUAT_WALL_TORCH.get();
+        BlockModelBuilder kumquat_wall_torch_model = models()
+        .withExistingParent("kumquat_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", kumquat_torch_texture)
+        .texture("particle", kumquat_torch_texture);
+        getVariantBuilder(kumquat_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("kumquat_wall_torch", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", kumquat_torch_texture)
+                    .texture("particle", kumquat_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //redstone
+        RedstoneTorchBlock kumquat_redstone_torch = foodblockcompatregistry.KUMQUAT_REDSTONE_TORCH.get();
+        ResourceLocation kumquat_redstone_torch_texture = modLoc("block/kumquat_redstone_torch");
+        BlockModelBuilder kumquat_redstone_torch_model = models()
+        .withExistingParent("kumquat_redstone_torch", mcLoc("block/redstone_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", kumquat_redstone_torch_texture)
+        .texture("particle", kumquat_redstone_torch_texture);
+        
+
+        simpleBlock(kumquat_redstone_torch, kumquat_redstone_torch_model);
+
+        ResourceLocation kumquat_redstone_wall_torch_texture = modLoc("block/kumquat_redstone_torch");
+
+        RedstoneTorchBlock kumquat_redstone_wall_torch = foodblockcompatregistry.KUMQUAT_REDSTONE_WALL_TORCH.get();
+        BlockModelBuilder kumquat_redstone_wall_torch_model = models()
+        .withExistingParent("kumquat_redstone_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", kumquat_redstone_wall_torch_texture)
+        .texture("particle", kumquat_redstone_wall_torch_texture);
+        getVariantBuilder(kumquat_redstone_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("kumquat_redstone_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", kumquat_redstone_wall_torch_texture)
+                    .texture("particle", kumquat_redstone_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //soul
+        TorchBlock kumquat_soul_torch = foodblockcompatregistry.KUMQUAT_SOUL_TORCH.get();
+        ResourceLocation kumquat_soul_torch_texture = modLoc("block/kumquat_soul_torch");
+        BlockModelBuilder kumquat_soul_torch_model = models()
+        .withExistingParent("kumquat_soul_torch", mcLoc("block/soul_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", kumquat_soul_torch_texture)
+        .texture("particle", kumquat_soul_torch_texture);
+        
+
+        simpleBlock(kumquat_soul_torch, kumquat_soul_torch_model);
+
+        ResourceLocation kumquat_soul_wall_torch_texture = modLoc("block/kumquat_soul_torch");
+        TorchBlock kumquat_soul_wall_torch = foodblockcompatregistry.KUMQUAT_SOUL_WALL_TORCH.get();
+        BlockModelBuilder kumquat_soul_wall_torch_model = models()
+        .withExistingParent("kumquat_soul_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", kumquat_soul_wall_torch_texture)
+        .texture("particle", kumquat_soul_wall_torch_texture);
+        getVariantBuilder(kumquat_soul_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("kumquat_soul_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", kumquat_soul_wall_torch_texture)
+                    .texture("particle", kumquat_soul_wall_torch_texture))
                 .rotationY(rotation)
                 .build();
             });
@@ -6736,6 +7023,50 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationY(rotation)
                       .build();
               });
+     //------------------------------------------------------------kumquat-----------------------------------------------------------------------
+          FurnaceBlock kumquat_furnace = foodblockcompatregistry.KUMQUAT_FURNACE.get();
+          ResourceLocation kumquat_furnace_unlit_texture = modLoc("block/kumquat_furnace");
+          ResourceLocation kumquat_furnace_lit_texture = modLoc("block/kumquat_furnace_lit");
+          ResourceLocation kumquat_furnace_side = modLoc("block/kumquat_block");
+          
+          // Define the model for the unlit state
+          BlockModelBuilder kumquat_furnace_model_unlit = models()
+              .withExistingParent("kumquat_furnace_model_unlit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", kumquat_furnace_side)
+              .texture("top", kumquat_furnace_side)
+              .texture("front", kumquat_furnace_unlit_texture)
+              .texture("particle", kumquat_furnace_side);
+          
+          // Define the model for the lit state
+          BlockModelBuilder kumquat_furnace_model_lit = models()
+              .withExistingParent("kumquat_furnace_model_lit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", kumquat_furnace_side)
+              .texture("top", kumquat_furnace_side)
+              .texture("front", kumquat_furnace_lit_texture)
+              .texture("particle", kumquat_furnace_side);
+          
+          // Configure variants for the kumquat_furnace block
+          getVariantBuilder(kumquat_furnace)
+              .forAllStates(state -> {
+                  Boolean lit = state.getValue(BlockStateProperties.LIT);
+                  Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                  int rotation = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+
+                  ResourceLocation modelLocation = lit ? modLoc("block/kumquat_furnace_model_lit") : modLoc("block/kumquat_furnace_model_unlit");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotation)
+                      .build();
+              });
      //------------------------------------------------------------persimmon-----------------------------------------------------------------------
           FurnaceBlock persimmon_furnace = foodblockcompatregistry.PERSIMMON_FURNACE.get();
           ResourceLocation persimmon_furnace_unlit_texture = modLoc("block/persimmon_furnace");
@@ -7472,6 +7803,18 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .modelFile(models().getExistingFile(modelLocation))
                   .build();
           });
+     //------------------------------------------------------------kumquat-----------------------------------------------------------------------
+          foodpathtypeminislab kumquat_stone_path = foodblockcompatregistry.KUMQUAT_STONE_PATH.get();
+
+          getVariantBuilder(kumquat_stone_path)
+          .forAllStates(state -> {
+
+              ResourceLocation modelLocation = modLoc("block/kumquat_stone_path");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .build();
+          });
      //------------------------------------------------------------persimmon-----------------------------------------------------------------------
           foodpathtypeminislab persimmon_stone_path = foodblockcompatregistry.PERSIMMON_STONE_PATH.get();
 
@@ -7984,6 +8327,54 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   };
 
                   ResourceLocation modelLocation = open ? modLoc("block/tangerine_barrel_model_open") : modLoc("block/tangerine_barrel_model_closed");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotationY)
+                      .rotationX(rotationX)
+                      .build();
+              });
+     //------------------------------------------------------------kumquat-----------------------------------------------------------------------
+          foodBarrel kumquat_barrel = foodblockcompatregistry.KUMQUAT_BARREL.get();
+          ResourceLocation kumquat_barrel_closed_texture = modLoc("block/kumquat_barrel_top_closed");
+          ResourceLocation kumquat_barrel_open_texture = modLoc("block/kumquat_barrel_top_open");
+          ResourceLocation kumquat_barrel_side = modLoc("block/kumquat_barrel_side");
+          ResourceLocation kumquat_barrel_bottom = modLoc("block/kumquat_barrel_bottom");
+          
+          BlockModelBuilder kumquat_barrel_model_closed = models()
+              .withExistingParent("kumquat_barrel_model_closed", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", kumquat_barrel_side)
+              .texture("bottom", kumquat_barrel_bottom)
+              .texture("top", kumquat_barrel_closed_texture)
+              .texture("particle", kumquat_barrel_side);
+          
+          BlockModelBuilder kumquat_barrel_model_open = models()
+              .withExistingParent("kumquat_barrel_model_open", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", kumquat_barrel_side)
+              .texture("bottom", kumquat_barrel_bottom)
+              .texture("top", kumquat_barrel_open_texture)
+              .texture("particle", kumquat_barrel_side);
+          
+          getVariantBuilder(kumquat_barrel)
+              .forAllStates(state -> {
+                  Boolean open = state.getValue(BlockStateProperties.OPEN);
+                  Direction facing = state.getValue(BlockStateProperties.FACING);
+                  int rotationY = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+                  int rotationX = switch (facing) {
+                      case UP -> 0;
+                      case DOWN -> 180;
+                      default -> 90;
+                  };
+
+                  ResourceLocation modelLocation = open ? modLoc("block/kumquat_barrel_model_open") : modLoc("block/kumquat_barrel_model_closed");
               
                   return ConfiguredModel.builder()
                       .modelFile(models().getExistingFile(modelLocation))
@@ -8861,6 +9252,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .rotationY(rotationY)
                   .build();
           });
+     //------------------------------------------------------------kumquat-----------------------------------------------------------------------
+          foodChairBlock kumquatChair = foodblockcompatregistry.KUMQUAT_CHAIR.get();
+
+          getVariantBuilder(kumquatChair)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/kumquat_chair");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
      //------------------------------------------------------------persimmon-----------------------------------------------------------------------
           foodChairBlock persimmonChair = foodblockcompatregistry.PERSIMMON_CHAIR.get();
 
@@ -9320,6 +9732,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/tangerine_bed");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------kumquat-----------------------------------------------------------------------
+          foodBed kumquatBed = foodblockcompatregistry.KUMQUAT_BED.get();
+
+          getVariantBuilder(kumquatBed)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/kumquat_bed");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -9953,6 +10386,51 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = open ? modLoc("block/medium_tangerine_cabinet_open") : modLoc("block/medium_tangerine_cabinet");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------kumquat-----------------------------------------------------------------------
+         //small
+          smallFoodCabinet kumquatCabinet = foodblockcompatregistry.SMALL_KUMQUAT_CABINET.get();
+
+          getVariantBuilder(kumquatCabinet)
+          .forAllStates(state -> {
+              Boolean open = state.getValue(BlockStateProperties.OPEN);
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = open ? modLoc("block/kumquat_cabinet_open") : modLoc("block/kumquat_cabinet");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+         //medium
+          mediumFoodCabinet kumquatMediumCabinet = foodblockcompatregistry.MEDIUM_KUMQUAT_CABINET.get();
+
+          getVariantBuilder(kumquatMediumCabinet)
+          .forAllStates(state -> {
+              Boolean open = state.getValue(BlockStateProperties.OPEN);
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = open ? modLoc("block/medium_kumquat_cabinet_open") : modLoc("block/medium_kumquat_cabinet");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
