@@ -219,6 +219,19 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........tiles
           net.minecraft.world.level.block.Block lemon_tiles_block = foodblockcompatregistry.LEMON_TILES_BLOCK.get();
           simpleBlock(lemon_tiles_block);
+     //------------------------------------------------------------citron-----------------------------------------------------------------------
+      //.........plain
+          net.minecraft.world.level.block.Block citron_block = foodblockcompatregistry.CITRON_BLOCK.get();
+          simpleBlock(citron_block);
+      //.........bricks
+          net.minecraft.world.level.block.Block citron_bricks_block = foodblockcompatregistry.CITRON_BRICKS_BLOCK.get();
+          simpleBlock(citron_bricks_block);
+      //.........chiseled
+          net.minecraft.world.level.block.Block citron_chiseled_block = foodblockcompatregistry.CITRON_CHISELED_BLOCK.get();
+          simpleBlock(citron_chiseled_block);
+      //.........tiles
+          net.minecraft.world.level.block.Block citron_tiles_block = foodblockcompatregistry.CITRON_TILES_BLOCK.get();
+          simpleBlock(citron_tiles_block);
      //------------------------------------------------------------buddhashand-----------------------------------------------------------------------
       //.........plain
           net.minecraft.world.level.block.Block buddhashand_block = foodblockcompatregistry.BUDDHASHAND_BLOCK.get();
@@ -473,6 +486,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
           SlabBlock lemon_bricks_slab = foodblockcompatregistry.LEMON_BRICKS_SLAB.get();
           ResourceLocation lemon_bricks_block_texture = modLoc("block/lemon_bricks_block");
           slabBlock(lemon_bricks_slab, lemon_bricks_block_texture, lemon_bricks_block_texture);
+     //------------------------------------------------------------citron-----------------------------------------------------------------------
+      //.........plain
+          SlabBlock citron_slab = foodblockcompatregistry.CITRON_SLAB.get();
+          ResourceLocation citron_block_texture = modLoc("block/citron_block");
+          slabBlock(citron_slab, citron_block_texture, citron_block_texture);
+      //.........bricks
+          SlabBlock citron_bricks_slab = foodblockcompatregistry.CITRON_BRICKS_SLAB.get();
+          ResourceLocation citron_bricks_block_texture = modLoc("block/citron_bricks_block");
+          slabBlock(citron_bricks_slab, citron_bricks_block_texture, citron_bricks_block_texture);
      //------------------------------------------------------------buddhashand-----------------------------------------------------------------------
       //.........plain
           SlabBlock buddhashand_slab = foodblockcompatregistry.BUDDHASHAND_SLAB.get();
@@ -659,6 +681,13 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........bricks
           StairBlock lemon_bricks_stairs = foodblockcompatregistry.LEMON_BRICKS_STAIRS.get();
           stairsBlock(lemon_bricks_stairs, lemon_bricks_block_texture);
+     //------------------------------------------------------------citron-----------------------------------------------------------------------
+      //.........plain
+          StairBlock citron_stairs = foodblockcompatregistry.CITRON_STAIRS.get();
+          stairsBlock(citron_stairs, citron_block_texture);
+      //.........bricks
+          StairBlock citron_bricks_stairs = foodblockcompatregistry.CITRON_BRICKS_STAIRS.get();
+          stairsBlock(citron_bricks_stairs, citron_bricks_block_texture);
      //------------------------------------------------------------buddhashand-----------------------------------------------------------------------
       //.........plain
           StairBlock buddhashand_stairs = foodblockcompatregistry.BUDDHASHAND_STAIRS.get();
@@ -799,6 +828,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation lemon_bars_texture = modLoc("block/lemon_bars");
           ResourceLocation lemon_bars_rim_texture = modLoc("block/lemon_block");
           paneBlockWithRenderType(lemon_bars, "lemon_bars", lemon_bars_texture, lemon_bars_rim_texture, "cutout_mipped_all"); 
+     //------------------------------------------------------------citron-----------------------------------------------------------------------
+          IronBarsBlock citron_bars = foodblockcompatregistry.CITRON_BARS.get(); 
+          ResourceLocation citron_bars_texture = modLoc("block/citron_bars");
+          ResourceLocation citron_bars_rim_texture = modLoc("block/citron_block");
+          paneBlockWithRenderType(citron_bars, "citron_bars", citron_bars_texture, citron_bars_rim_texture, "cutout_mipped_all"); 
      //------------------------------------------------------------buddhashand-----------------------------------------------------------------------
           IronBarsBlock buddhashand_bars = foodblockcompatregistry.BUDDHASHAND_BARS.get(); 
           ResourceLocation buddhashand_bars_texture = modLoc("block/buddhashand_bars");
@@ -917,6 +951,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation lemon_door_top_texture = modLoc("block/lemon_door_top");
           ResourceLocation lemon_door_bottom_texture = modLoc("block/lemon_door_bottom");
           doorBlockWithRenderType(lemon_door, "lemon_door", lemon_door_bottom_texture, lemon_door_top_texture, "translucent"); 
+     //------------------------------------------------------------citron-----------------------------------------------------------------------
+          DoorBlock citron_door = foodblockcompatregistry.CITRON_DOOR.get(); 
+          ResourceLocation citron_door_top_texture = modLoc("block/citron_door_top");
+          ResourceLocation citron_door_bottom_texture = modLoc("block/citron_door_bottom");
+          doorBlockWithRenderType(citron_door, "citron_door", citron_door_bottom_texture, citron_door_top_texture, "translucent"); 
      //------------------------------------------------------------buddhashand-----------------------------------------------------------------------
           DoorBlock buddhashand_door = foodblockcompatregistry.BUDDHASHAND_DOOR.get(); 
           ResourceLocation buddhashand_door_top_texture = modLoc("block/buddhashand_door_top");
@@ -1023,6 +1062,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ButtonBlock lemon_button = foodblockcompatregistry.LEMON_BUTTON.get();
           ResourceLocation lemon_button_texture = modLoc("block/lemon_block");
           buttonBlock(lemon_button, lemon_button_texture);
+     //------------------------------------------------------------citron-----------------------------------------------------------------------
+          ButtonBlock citron_button = foodblockcompatregistry.CITRON_BUTTON.get();
+          ResourceLocation citron_button_texture = modLoc("block/citron_block");
+          buttonBlock(citron_button, citron_button_texture);
      //------------------------------------------------------------buddhashand-----------------------------------------------------------------------
           ButtonBlock buddhashand_button = foodblockcompatregistry.BUDDHASHAND_BUTTON.get();
           ResourceLocation buddhashand_button_texture = modLoc("block/buddhashand_block");
@@ -1178,6 +1221,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
           FenceGateBlock lemon_gate = foodblockcompatregistry.LEMON_GATE.get();
           ResourceLocation lemon_gate_texture = modLoc("block/lemon_block");
           fenceGateBlock(lemon_gate, lemon_gate_texture);
+     //------------------------------------------------------------citron-----------------------------------------------------------------------
+       //fence
+          FenceBlock citron_fence = foodblockcompatregistry.CITRON_FENCE.get();
+          ResourceLocation citron_fence_texture = modLoc("block/citron_block");
+          fenceBlock(citron_fence, citron_fence_texture);
+       //gate
+          FenceGateBlock citron_gate = foodblockcompatregistry.CITRON_GATE.get();
+          ResourceLocation citron_gate_texture = modLoc("block/citron_block");
+          fenceGateBlock(citron_gate, citron_gate_texture);
      //------------------------------------------------------------buddhashand-----------------------------------------------------------------------
        //fence
           FenceBlock buddhashand_fence = foodblockcompatregistry.BUDDHASHAND_FENCE.get();
@@ -1328,6 +1380,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           PressurePlateBlock lemon_pressure_plate = foodblockcompatregistry.LEMON_PRESSURE_PLATE.get();
           ResourceLocation lemon_pressure_plate_texture = modLoc("block/lemon_block");
           pressurePlateBlock(lemon_pressure_plate, lemon_pressure_plate_texture);
+     //------------------------------------------------------------citron-----------------------------------------------------------------------
+          PressurePlateBlock citron_pressure_plate = foodblockcompatregistry.CITRON_PRESSURE_PLATE.get();
+          ResourceLocation citron_pressure_plate_texture = modLoc("block/citron_block");
+          pressurePlateBlock(citron_pressure_plate, citron_pressure_plate_texture);
      //------------------------------------------------------------buddhashand-----------------------------------------------------------------------
           PressurePlateBlock buddhashand_pressure_plate = foodblockcompatregistry.BUDDHASHAND_PRESSURE_PLATE.get();
           ResourceLocation buddhashand_pressure_plate_texture = modLoc("block/buddhashand_block");
@@ -1435,6 +1491,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
            WallSignBlock lemon_wall_sign = foodblockcompatregistry.LEMON_WALL_SIGN.get();
            ResourceLocation lemon_sign_texture = modLoc("block/lemon_block");
            signBlock(lemon_sign, lemon_wall_sign, lemon_sign_texture);
+     //------------------------------------------------------------citron-----------------------------------------------------------------------
+           StandingSignBlock citron_sign = foodblockcompatregistry.CITRON_STANDING_SIGN.get();
+           WallSignBlock citron_wall_sign = foodblockcompatregistry.CITRON_WALL_SIGN.get();
+           ResourceLocation citron_sign_texture = modLoc("block/citron_block");
+           signBlock(citron_sign, citron_wall_sign, citron_sign_texture);
      //------------------------------------------------------------buddhashand-----------------------------------------------------------------------
            StandingSignBlock buddhashand_sign = foodblockcompatregistry.BUDDHASHAND_STANDING_SIGN.get();
            WallSignBlock buddhashand_wall_sign = foodblockcompatregistry.BUDDHASHAND_WALL_SIGN.get();
@@ -1541,6 +1602,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           TrapDoorBlock lemon_trapdoor = foodblockcompatregistry.LEMON_TRAPDOOR.get(); 
           ResourceLocation lemon_trapdoor_texture = modLoc("block/lemon_block");
           trapdoorBlockWithRenderType(lemon_trapdoor, "lemon_trapdoor", lemon_trapdoor_texture, false, lemon_trapdoor_texture);
+     //------------------------------------------------------------citron-----------------------------------------------------------------------
+          TrapDoorBlock citron_trapdoor = foodblockcompatregistry.CITRON_TRAPDOOR.get(); 
+          ResourceLocation citron_trapdoor_texture = modLoc("block/citron_block");
+          trapdoorBlockWithRenderType(citron_trapdoor, "citron_trapdoor", citron_trapdoor_texture, false, citron_trapdoor_texture);
      //------------------------------------------------------------buddhashand-----------------------------------------------------------------------
           TrapDoorBlock buddhashand_trapdoor = foodblockcompatregistry.BUDDHASHAND_TRAPDOOR.get(); 
           ResourceLocation buddhashand_trapdoor_texture = modLoc("block/buddhashand_block");
@@ -1624,6 +1689,9 @@ public class GM1BlockStateProvider extends BlockStateProvider
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
           Block lemon_lamp = foodblockcompatregistry.LEMON_LAMP.get();
           simpleBlock(lemon_lamp);
+     //------------------------------------------------------------citron-----------------------------------------------------------------------
+          Block citron_lamp = foodblockcompatregistry.CITRON_LAMP.get();
+          simpleBlock(citron_lamp);
      //------------------------------------------------------------buddhashand-----------------------------------------------------------------------
           Block buddhashand_lamp = foodblockcompatregistry.BUDDHASHAND_LAMP.get();
           simpleBlock(buddhashand_lamp);
@@ -1732,6 +1800,12 @@ public class GM1BlockStateProvider extends BlockStateProvider
           BlockModelBuilder lemon_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(lemon_carpet).getPath(), mcLoc("block/carpet"))
           .texture("wool", lemon_carpet_texture);
           simpleBlock(lemon_carpet, new ModelFile.UncheckedModelFile(lemon_carpet_model.getLocation()));
+     //------------------------------------------------------------citron-----------------------------------------------------------------------
+          CarpetBlock citron_carpet = foodblockcompatregistry.CITRON_CARPET.get();
+          ResourceLocation citron_carpet_texture = modLoc("block/citron_carpet");
+          BlockModelBuilder citron_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(citron_carpet).getPath(), mcLoc("block/carpet"))
+          .texture("wool", citron_carpet_texture);
+          simpleBlock(citron_carpet, new ModelFile.UncheckedModelFile(citron_carpet_model.getLocation()));
      //------------------------------------------------------------buddhashand-----------------------------------------------------------------------
           CarpetBlock buddhashand_carpet = foodblockcompatregistry.BUDDHASHAND_CARPET.get();
           ResourceLocation buddhashand_carpet_texture = modLoc("block/buddhashand_carpet");
@@ -2269,6 +2343,45 @@ public class GM1BlockStateProvider extends BlockStateProvider
              .modelForState().modelFile(hanging_lemon_soul_lantern_model).addModel()
              .partialState().with(LanternBlock.HANGING, false)
              .modelForState().modelFile(lemon_soul_lantern_model).addModel();
+     //------------------------------------------------------------citron-----------------------------------------------------------------------
+         //regular
+          LanternBlock citron_lantern = foodblockcompatregistry.CITRON_LANTERN.get();
+          ResourceLocation citron_lantern_texture = modLoc("block/citron_lantern");
+  
+          BlockModelBuilder citron_lantern_model = models()
+              .withExistingParent("citron_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", citron_lantern_texture);
+  
+          BlockModelBuilder hanging_citron_lantern_model = models()
+              .withExistingParent("citron_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", citron_lantern_texture);
+  
+          getVariantBuilder(citron_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_citron_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(citron_lantern_model).addModel();
+         //soul
+         LanternBlock citron_soul_lantern = foodblockcompatregistry.CITRON_SOUL_LANTERN.get();
+         ResourceLocation citron_soul_lantern_texture = modLoc("block/citron_soul_lantern");
+ 
+         BlockModelBuilder citron_soul_lantern_model = models()
+             .withExistingParent("citron_soul_lantern", mcLoc("block/lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", citron_soul_lantern_texture);
+ 
+         BlockModelBuilder hanging_citron_soul_lantern_model = models()
+             .withExistingParent("citron_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", citron_soul_lantern_texture);
+ 
+         getVariantBuilder(citron_soul_lantern)
+             .partialState().with(LanternBlock.HANGING, true)
+             .modelForState().modelFile(hanging_citron_soul_lantern_model).addModel()
+             .partialState().with(LanternBlock.HANGING, false)
+             .modelForState().modelFile(citron_soul_lantern_model).addModel();
      //------------------------------------------------------------buddhashand-----------------------------------------------------------------------
          //regular
           LanternBlock buddhashand_lantern = foodblockcompatregistry.BUDDHASHAND_LANTERN.get();
@@ -2893,6 +3006,22 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .modelForState().modelFile(lemon_chain_model).rotationX(90).rotationY(90).addModel()
           .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
           .modelForState().modelFile(lemon_chain_model).rotationX(90).addModel(); 
+     //------------------------------------------------------------citron-----------------------------------------------------------------------
+         ChainBlock citron_chain = foodblockcompatregistry.CITRON_CHAIN.get();
+         ResourceLocation citron_chain_texture = modLoc("block/citron_chain");
+         BlockModelBuilder citron_chain_model = models()
+          .withExistingParent("citron_chain", mcLoc("block/chain"))
+          .renderType("cutout_mipped_all")
+          .texture("all", citron_chain_texture)
+          .texture("particle", citron_chain_texture);
+
+          getVariantBuilder(citron_chain)
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Y)
+          .modelForState().modelFile(citron_chain_model).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.X)
+          .modelForState().modelFile(citron_chain_model).rotationX(90).rotationY(90).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
+          .modelForState().modelFile(citron_chain_model).rotationX(90).addModel(); 
      //------------------------------------------------------------buddhashand-----------------------------------------------------------------------
          ChainBlock buddhashand_chain = foodblockcompatregistry.BUDDHASHAND_CHAIN.get();
          ResourceLocation buddhashand_chain_texture = modLoc("block/buddhashand_chain");
@@ -3318,6 +3447,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/lemon_ladder");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------citron-----------------------------------------------------------------------
+          LadderBlock citronladder = foodblockcompatregistry.CITRON_LADDER.get();
+
+          getVariantBuilder(citronladder)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/citron_ladder");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -3804,6 +3954,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/lemon_table");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------citron-----------------------------------------------------------------------
+          HorizontalDirectionalBlock citrontable = foodblockcompatregistry.CITRON_TABLE.get();
+
+          getVariantBuilder(citrontable)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/citron_table");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -5436,6 +5607,122 @@ public class GM1BlockStateProvider extends BlockStateProvider
                 .rotationY(rotation)
                 .build();
             });
+     //------------------------------------------------------------citron-----------------------------------------------------------------------
+       //regular
+        TorchBlock citron_torch = foodblockcompatregistry.CITRON_TORCH.get();
+        ResourceLocation citron_torch_texture = modLoc("block/citron_torch");
+        BlockModelBuilder citron_torch_model = models()
+        .withExistingParent("citron_torch", mcLoc("block/torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", citron_torch_texture)
+        .texture("particle", citron_torch_texture);
+
+        simpleBlock(citron_torch, citron_torch_model);
+
+        TorchBlock citron_wall_torch = foodblockcompatregistry.CITRON_WALL_TORCH.get();
+        BlockModelBuilder citron_wall_torch_model = models()
+        .withExistingParent("citron_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", citron_torch_texture)
+        .texture("particle", citron_torch_texture);
+        getVariantBuilder(citron_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("citron_wall_torch", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", citron_torch_texture)
+                    .texture("particle", citron_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //redstone
+        RedstoneTorchBlock citron_redstone_torch = foodblockcompatregistry.CITRON_REDSTONE_TORCH.get();
+        ResourceLocation citron_redstone_torch_texture = modLoc("block/citron_redstone_torch");
+        BlockModelBuilder citron_redstone_torch_model = models()
+        .withExistingParent("citron_redstone_torch", mcLoc("block/redstone_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", citron_redstone_torch_texture)
+        .texture("particle", citron_redstone_torch_texture);
+        
+
+        simpleBlock(citron_redstone_torch, citron_redstone_torch_model);
+
+        ResourceLocation citron_redstone_wall_torch_texture = modLoc("block/citron_redstone_torch");
+
+        RedstoneTorchBlock citron_redstone_wall_torch = foodblockcompatregistry.CITRON_REDSTONE_WALL_TORCH.get();
+        BlockModelBuilder citron_redstone_wall_torch_model = models()
+        .withExistingParent("citron_redstone_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", citron_redstone_wall_torch_texture)
+        .texture("particle", citron_redstone_wall_torch_texture);
+        getVariantBuilder(citron_redstone_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("citron_redstone_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", citron_redstone_wall_torch_texture)
+                    .texture("particle", citron_redstone_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //soul
+        TorchBlock citron_soul_torch = foodblockcompatregistry.CITRON_SOUL_TORCH.get();
+        ResourceLocation citron_soul_torch_texture = modLoc("block/citron_soul_torch");
+        BlockModelBuilder citron_soul_torch_model = models()
+        .withExistingParent("citron_soul_torch", mcLoc("block/soul_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", citron_soul_torch_texture)
+        .texture("particle", citron_soul_torch_texture);
+        
+
+        simpleBlock(citron_soul_torch, citron_soul_torch_model);
+
+        ResourceLocation citron_soul_wall_torch_texture = modLoc("block/citron_soul_torch");
+        TorchBlock citron_soul_wall_torch = foodblockcompatregistry.CITRON_SOUL_WALL_TORCH.get();
+        BlockModelBuilder citron_soul_wall_torch_model = models()
+        .withExistingParent("citron_soul_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", citron_soul_wall_torch_texture)
+        .texture("particle", citron_soul_wall_torch_texture);
+        getVariantBuilder(citron_soul_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("citron_soul_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", citron_soul_wall_torch_texture)
+                    .texture("particle", citron_soul_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
      //------------------------------------------------------------buddhashand-----------------------------------------------------------------------
        //regular
         TorchBlock buddhashand_torch = foodblockcompatregistry.BUDDHASHAND_TORCH.get();
@@ -7028,8 +7315,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation kumquat_furnace_unlit_texture = modLoc("block/kumquat_furnace");
           ResourceLocation kumquat_furnace_lit_texture = modLoc("block/kumquat_furnace_lit");
           ResourceLocation kumquat_furnace_side = modLoc("block/kumquat_block");
-          
-          // Define the model for the unlit state
+
           BlockModelBuilder kumquat_furnace_model_unlit = models()
               .withExistingParent("kumquat_furnace_model_unlit", mcLoc("block/furnace"))
               .renderType("cutout_mipped_all")
@@ -7038,7 +7324,6 @@ public class GM1BlockStateProvider extends BlockStateProvider
               .texture("front", kumquat_furnace_unlit_texture)
               .texture("particle", kumquat_furnace_side);
           
-          // Define the model for the lit state
           BlockModelBuilder kumquat_furnace_model_lit = models()
               .withExistingParent("kumquat_furnace_model_lit", mcLoc("block/furnace"))
               .renderType("cutout_mipped_all")
@@ -7047,7 +7332,6 @@ public class GM1BlockStateProvider extends BlockStateProvider
               .texture("front", kumquat_furnace_lit_texture)
               .texture("particle", kumquat_furnace_side);
           
-          // Configure variants for the kumquat_furnace block
           getVariantBuilder(kumquat_furnace)
               .forAllStates(state -> {
                   Boolean lit = state.getValue(BlockStateProperties.LIT);
@@ -7205,7 +7489,6 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation lemon_furnace_lit_texture = modLoc("block/lemon_furnace_lit");
           ResourceLocation lemon_furnace_side = modLoc("block/lemon_block");
           
-          // Define the model for the unlit state
           BlockModelBuilder lemon_furnace_model_unlit = models()
               .withExistingParent("lemon_furnace_model_unlit", mcLoc("block/furnace"))
               .renderType("cutout_mipped_all")
@@ -7214,7 +7497,6 @@ public class GM1BlockStateProvider extends BlockStateProvider
               .texture("front", lemon_furnace_unlit_texture)
               .texture("particle", lemon_furnace_side);
           
-          // Define the model for the lit state
           BlockModelBuilder lemon_furnace_model_lit = models()
               .withExistingParent("lemon_furnace_model_lit", mcLoc("block/furnace"))
               .renderType("cutout_mipped_all")
@@ -7223,7 +7505,6 @@ public class GM1BlockStateProvider extends BlockStateProvider
               .texture("front", lemon_furnace_lit_texture)
               .texture("particle", lemon_furnace_side);
           
-          // Configure variants for the lemon_furnace block
           getVariantBuilder(lemon_furnace)
               .forAllStates(state -> {
                   Boolean lit = state.getValue(BlockStateProperties.LIT);
@@ -7237,6 +7518,47 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   };
 
                   ResourceLocation modelLocation = lit ? modLoc("block/lemon_furnace_model_lit") : modLoc("block/lemon_furnace_model_unlit");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotation)
+                      .build();
+              });
+     //------------------------------------------------------------citron-----------------------------------------------------------------------
+          FurnaceBlock citron_furnace = foodblockcompatregistry.CITRON_FURNACE.get();
+          ResourceLocation citron_furnace_unlit_texture = modLoc("block/citron_furnace");
+          ResourceLocation citron_furnace_lit_texture = modLoc("block/citron_furnace_lit");
+          ResourceLocation citron_furnace_side = modLoc("block/citron_block");
+          
+          BlockModelBuilder citron_furnace_model_unlit = models()
+              .withExistingParent("citron_furnace_model_unlit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", citron_furnace_side)
+              .texture("top", citron_furnace_side)
+              .texture("front", citron_furnace_unlit_texture)
+              .texture("particle", citron_furnace_side);
+          
+          BlockModelBuilder citron_furnace_model_lit = models()
+              .withExistingParent("citron_furnace_model_lit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", citron_furnace_side)
+              .texture("top", citron_furnace_side)
+              .texture("front", citron_furnace_lit_texture)
+              .texture("particle", citron_furnace_side);
+          
+          getVariantBuilder(citron_furnace)
+              .forAllStates(state -> {
+                  Boolean lit = state.getValue(BlockStateProperties.LIT);
+                  Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                  int rotation = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+
+                  ResourceLocation modelLocation = lit ? modLoc("block/citron_furnace_model_lit") : modLoc("block/citron_furnace_model_unlit");
               
                   return ConfiguredModel.builder()
                       .modelFile(models().getExistingFile(modelLocation))
@@ -7858,6 +8180,18 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .forAllStates(state -> {
 
               ResourceLocation modelLocation = modLoc("block/lemon_stone_path");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .build();
+          });
+     //------------------------------------------------------------citron-----------------------------------------------------------------------
+          foodpathtypeminislab citron_stone_path = foodblockcompatregistry.CITRON_STONE_PATH.get();
+
+          getVariantBuilder(citron_stone_path)
+          .forAllStates(state -> {
+
+              ResourceLocation modelLocation = modLoc("block/citron_stone_path");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -8567,6 +8901,54 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   };
 
                   ResourceLocation modelLocation = open ? modLoc("block/lemon_barrel_model_open") : modLoc("block/lemon_barrel_model_closed");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotationY)
+                      .rotationX(rotationX)
+                      .build();
+              });
+     //------------------------------------------------------------citron-----------------------------------------------------------------------
+          foodBarrel citron_barrel = foodblockcompatregistry.CITRON_BARREL.get();
+          ResourceLocation citron_barrel_closed_texture = modLoc("block/citron_barrel_top_closed");
+          ResourceLocation citron_barrel_open_texture = modLoc("block/citron_barrel_top_open");
+          ResourceLocation citron_barrel_side = modLoc("block/citron_barrel_side");
+          ResourceLocation citron_barrel_bottom = modLoc("block/citron_barrel_bottom");
+          
+          BlockModelBuilder citron_barrel_model_closed = models()
+              .withExistingParent("citron_barrel_model_closed", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", citron_barrel_side)
+              .texture("bottom", citron_barrel_bottom)
+              .texture("top", citron_barrel_closed_texture)
+              .texture("particle", citron_barrel_side);
+          
+          BlockModelBuilder citron_barrel_model_open = models()
+              .withExistingParent("citron_barrel_model_open", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", citron_barrel_side)
+              .texture("bottom", citron_barrel_bottom)
+              .texture("top", citron_barrel_open_texture)
+              .texture("particle", citron_barrel_side);
+          
+          getVariantBuilder(citron_barrel)
+              .forAllStates(state -> {
+                  Boolean open = state.getValue(BlockStateProperties.OPEN);
+                  Direction facing = state.getValue(BlockStateProperties.FACING);
+                  int rotationY = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+                  int rotationX = switch (facing) {
+                      case UP -> 0;
+                      case DOWN -> 180;
+                      default -> 90;
+                  };
+
+                  ResourceLocation modelLocation = open ? modLoc("block/citron_barrel_model_open") : modLoc("block/citron_barrel_model_closed");
               
                   return ConfiguredModel.builder()
                       .modelFile(models().getExistingFile(modelLocation))
@@ -9357,6 +9739,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .rotationY(rotationY)
                   .build();
           });
+     //------------------------------------------------------------citron-----------------------------------------------------------------------
+          foodChairBlock citronChair = foodblockcompatregistry.CITRON_CHAIR.get();
+
+          getVariantBuilder(citronChair)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/citron_chair");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
      //------------------------------------------------------------buddhashand-----------------------------------------------------------------------
           foodChairBlock buddhashandChair = foodblockcompatregistry.BUDDHASHAND_CHAIR.get();
 
@@ -9837,6 +10240,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/lemon_bed");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------citron-----------------------------------------------------------------------
+          foodBed citronBed = foodblockcompatregistry.CITRON_BED.get();
+
+          getVariantBuilder(citronBed)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/citron_bed");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -10611,6 +11035,51 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = open ? modLoc("block/medium_lemon_cabinet_open") : modLoc("block/medium_lemon_cabinet");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------citron-----------------------------------------------------------------------
+         //small
+          smallFoodCabinet citronCabinet = foodblockcompatregistry.SMALL_CITRON_CABINET.get();
+
+          getVariantBuilder(citronCabinet)
+          .forAllStates(state -> {
+              Boolean open = state.getValue(BlockStateProperties.OPEN);
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = open ? modLoc("block/citron_cabinet_open") : modLoc("block/citron_cabinet");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+         //medium
+          mediumFoodCabinet citronMediumCabinet = foodblockcompatregistry.MEDIUM_CITRON_CABINET.get();
+
+          getVariantBuilder(citronMediumCabinet)
+          .forAllStates(state -> {
+              Boolean open = state.getValue(BlockStateProperties.OPEN);
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = open ? modLoc("block/medium_citron_cabinet_open") : modLoc("block/medium_citron_cabinet");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))

@@ -88,6 +88,10 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         Registries.ITEM,
         ResourceLocation.fromNamespaceAndPath("goldfishmod03tastyfurniturecompataddon", "lemons")
         );
+       public static final TagKey<Item> CITRON_TAG = TagKey.create(
+        Registries.ITEM,
+        ResourceLocation.fromNamespaceAndPath("goldfishmod03tastyfurniturecompataddon", "citrons")
+        );
        public static final TagKey<Item> BUDDHASHAND_TAG = TagKey.create(
         Registries.ITEM,
         ResourceLocation.fromNamespaceAndPath("goldfishmod03tastyfurniturecompataddon", "buddhashands")
@@ -613,6 +617,43 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', LEMON_TAG)
             .unlockedBy("has_mush_hammer", has(mushregistry.most_advanced_mushhammer.get()))
             .save(output, "lemon_mush_from_most_advanced_mushhammer");
+  //----------------------------------------------------------------------------------------Citron-----------------------------------------------------------------------------------------------
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.CITRON_MUSH.get(), 1)
+            .pattern("ABB")
+            .pattern("BB ")
+            .pattern("   ")
+            .define('A', mushregistry.mushhammer.get())
+            .define('B', CITRON_TAG)
+            .unlockedBy("has_mush_hammer", has(mushregistry.mushhammer.get()))
+            .save(output);
+          //advanced
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.CITRON_MUSH.get(), 2)
+            .pattern("ABB")
+            .pattern("BB ")
+            .pattern("   ")
+            .define('A', mushregistry.advanced_mushhammer.get())
+            .define('B', CITRON_TAG)
+            .unlockedBy("has_mush_hammer", has(mushregistry.advanced_mushhammer.get()))
+            .save(output, "citron_mush_from_advanced_mushhammer");
+          //more advanced
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.CITRON_MUSH.get(), 4)
+            .pattern("ABB")
+            .pattern("BB ")
+            .pattern("   ")
+            .define('A', mushregistry.more_advanced_mushhammer.get())
+            .define('B', CITRON_TAG)
+            .unlockedBy("has_mush_hammer", has(mushregistry.more_advanced_mushhammer.get()))
+            .save(output, "citron_mush_from_more_advanced_mushhammer");
+          //most advanced
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.CITRON_MUSH.get(), 8)
+            .pattern("ABB")
+            .pattern("BB ")
+            .pattern("   ")
+            .define('A', mushregistry.most_advanced_mushhammer.get())
+            .define('B', CITRON_TAG)
+            .unlockedBy("has_mush_hammer", has(mushregistry.most_advanced_mushhammer.get()))
+            .save(output, "citron_mush_from_most_advanced_mushhammer");
   //----------------------------------------------------------------------------------------Buddhashand-----------------------------------------------------------------------------------------------
           //regular
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.BUDDHASHAND_MUSH.get(), 1)
@@ -1406,6 +1447,38 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .requires(foodblockcompatitemregistry.LEMON_BLOCK_ITEM.get())
             .unlockedBy("has_lemon_block", has(foodblockcompatitemregistry.LEMON_BLOCK_ITEM.get()))
             .save(output, "lemon_ingot_from_unpacking");
+  //----------------------------------------------------------------------------------------Citron-----------------------------------------------------------------------------------------------
+          //crafting
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotcompatregistry.CITRON_INGOT.get(), 1)
+            .pattern("AAA")
+            .pattern("AAA")
+            .pattern("AAA")
+            .define('A', nuggetcompatregistry.CITRON_NUGGET.get())
+            .unlockedBy("has_citron_nugget", has(nuggetcompatregistry.CITRON_NUGGET.get()))
+            .save(output, "citron_ingot_from_crafting");
+          //smelting
+            SimpleCookingRecipeBuilder.smelting(Ingredient.of(mushcompatregistry.CITRON_MUSH.get()),
+            RecipeCategory.MISC,
+            ingotcompatregistry.CITRON_INGOT.get(),
+            1.0f,
+            200
+            )
+            .unlockedBy("has_citron_mush", has(mushcompatregistry.CITRON_MUSH.get()))
+            .save(output, "citron_ingot_from_smelting");
+          //blasting
+            SimpleCookingRecipeBuilder.blasting(Ingredient.of(mushcompatregistry.CITRON_MUSH.get()),
+            RecipeCategory.MISC,
+            ingotcompatregistry.CITRON_INGOT.get(),
+            1.0f,
+            100
+            )
+            .unlockedBy("has_citron_mush", has(mushcompatregistry.CITRON_MUSH.get()))
+            .save(output, "citron_ingot_from_blasting");
+          //unpacking
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotcompatregistry.CITRON_INGOT.get(), 9)
+            .requires(foodblockcompatitemregistry.CITRON_BLOCK_ITEM.get())
+            .unlockedBy("has_citron_block", has(foodblockcompatitemregistry.CITRON_BLOCK_ITEM.get()))
+            .save(output, "citron_ingot_from_unpacking");
   //----------------------------------------------------------------------------------------Buddhashand-----------------------------------------------------------------------------------------------
           //crafting
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotcompatregistry.BUDDHASHAND_INGOT.get(), 1)
@@ -1819,6 +1892,11 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, nuggetcompatregistry.LEMON_NUGGET.get(), 9)
         .requires(ingotcompatregistry.LEMON_INGOT.get())
         .unlockedBy("has_lemon_ingot", has(ingotcompatregistry.LEMON_INGOT.get()))
+        .save(output);
+  //----------------------------------------------------------------------------------------Citron-----------------------------------------------------------------------------------------------
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, nuggetcompatregistry.CITRON_NUGGET.get(), 9)
+        .requires(ingotcompatregistry.CITRON_INGOT.get())
+        .unlockedBy("has_citron_ingot", has(ingotcompatregistry.CITRON_INGOT.get()))
         .save(output);
   //----------------------------------------------------------------------------------------Buddhashand-----------------------------------------------------------------------------------------------
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, nuggetcompatregistry.BUDDHASHAND_NUGGET.get(), 9)
@@ -2477,6 +2555,56 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.LEMON_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockcompatitemregistry.LEMON_TILES_BLOCK_ITEM.get())
           .unlockedBy("has_lemon_block", has(foodblockcompatitemregistry.LEMON_BLOCK_ITEM.get()))
           .save(output, "lemon_tiles_block_from_lemon_block_stonecutting");
+  //--------------------------------------------------------------------------------------Citron---------------------------------------------------------------------------------------------
+        //plain
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CITRON_BLOCK_ITEM.get(), 1)
+          .pattern("AAA")
+          .pattern("AAA")
+          .pattern("AAA")
+          .define('A', ingotcompatregistry.CITRON_INGOT.get())
+          .unlockedBy("has_citron_ingot", has(ingotcompatregistry.CITRON_INGOT.get()))
+          .save(output); 
+        //bricks
+         //crafting
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CITRON_BRICKS_BLOCK_ITEM.get(), 4)
+          .pattern("AA ")
+          .pattern("AA ")
+          .pattern("   ")
+          .define('A', foodblockcompatitemregistry.CITRON_BLOCK_ITEM.get())
+          .unlockedBy("has_citron_block", has(foodblockcompatitemregistry.CITRON_BLOCK_ITEM.get()))
+          .save(output); 
+         //stonecutting     
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.CITRON_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockcompatitemregistry.CITRON_BRICKS_BLOCK_ITEM.get())
+          .unlockedBy("has_citron_block", has(foodblockcompatitemregistry.CITRON_BLOCK_ITEM.get()))
+          .save(output, "citron_bricks_block_from_citron_block_stonecutting");
+
+        //chiseled
+         //crafting
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CITRON_CHISELED_BLOCK_ITEM.get())
+          .pattern("   ")
+          .pattern(" A ")
+          .pattern(" A ")
+          .define('A', foodblockcompatitemregistry.CITRON_SLAB_ITEM.get())
+          .unlockedBy("has_citron_slab", has(foodblockcompatitemregistry.CITRON_SLAB_ITEM.get()))
+          .save(output);
+         //stonecutting     
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.CITRON_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockcompatitemregistry.CITRON_CHISELED_BLOCK_ITEM.get())
+          .unlockedBy("has_citron_block", has(foodblockcompatitemregistry.CITRON_BLOCK_ITEM.get()))
+          .save(output, "citron_chiseled_block_from_citron_block_stonecutting");
+
+        //tiles
+         //crafting
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CITRON_TILES_BLOCK_ITEM.get(),2)
+          .pattern("   ")
+          .pattern("AA ")
+          .pattern("AA ")
+          .define('A', foodblockcompatitemregistry.CITRON_SLAB_ITEM.get())
+          .unlockedBy("has_citron_slab", has(foodblockcompatitemregistry.CITRON_SLAB_ITEM.get()))
+          .save(output);
+         //stonecutting     
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.CITRON_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockcompatitemregistry.CITRON_TILES_BLOCK_ITEM.get())
+          .unlockedBy("has_citron_block", has(foodblockcompatitemregistry.CITRON_BLOCK_ITEM.get()))
+          .save(output, "citron_tiles_block_from_citron_block_stonecutting");
   //--------------------------------------------------------------------------------------Buddhashand---------------------------------------------------------------------------------------------
         //plain
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BUDDHASHAND_BLOCK_ITEM.get(), 1)
@@ -3197,6 +3325,20 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           foodblockcompatitemregistry.LEMON_BRICKS_SLAB_ITEM.get(), 2)
           .unlockedBy("has_lemon_bricks_block", has(foodblockcompatitemregistry.LEMON_BRICKS_BLOCK_ITEM.get()))
           .save(output, "lemon_bricks_slab_from_lemon_bricks_block_stonecutting");
+  //----------------------------------------------------------------------------------------Citron-----------------------------------------------------------------------------------------------
+        //plain
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CITRON_SLAB_ITEM.get())
+          .pattern("   ")
+          .pattern("   ")
+          .pattern("AAA")
+          .define('A', ingotcompatregistry.CITRON_INGOT.get())
+          .unlockedBy("has_citron_ingot", has(ingotcompatregistry.CITRON_INGOT.get()))
+          .save(output);
+        //bricks
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.CITRON_BRICKS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, 
+          foodblockcompatitemregistry.CITRON_BRICKS_SLAB_ITEM.get(), 2)
+          .unlockedBy("has_citron_bricks_block", has(foodblockcompatitemregistry.CITRON_BRICKS_BLOCK_ITEM.get()))
+          .save(output, "citron_bricks_slab_from_citron_bricks_block_stonecutting");
   //----------------------------------------------------------------------------------------Buddhashand-----------------------------------------------------------------------------------------------
         //plain
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BUDDHASHAND_SLAB_ITEM.get())
@@ -3521,6 +3663,20 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           foodblockcompatitemregistry.LEMON_BRICKS_STAIRS_ITEM.get(), 1)
           .unlockedBy("has_lemon_bricks_block", has(foodblockcompatitemregistry.LEMON_BRICKS_BLOCK_ITEM.get()))
           .save(output, "lemon_bricks_stairs_from_lemon_bricks_block_stonecutting");
+  //--------------------------------------------------------------------------------------Citron---------------------------------------------------------------------------------------------
+        //plain
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CITRON_STAIRS_ITEM.get())
+          .pattern("A  ")
+          .pattern("AA ")
+          .pattern("AAA")
+          .define('A', ingotcompatregistry.CITRON_INGOT.get())
+          .unlockedBy("has_citron_ingot", has(ingotcompatregistry.CITRON_INGOT.get()))
+          .save(output);
+        //bricks
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.CITRON_BRICKS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, 
+          foodblockcompatitemregistry.CITRON_BRICKS_STAIRS_ITEM.get(), 1)
+          .unlockedBy("has_citron_bricks_block", has(foodblockcompatitemregistry.CITRON_BRICKS_BLOCK_ITEM.get()))
+          .save(output, "citron_bricks_stairs_from_citron_bricks_block_stonecutting");
   //--------------------------------------------------------------------------------------Buddhashand---------------------------------------------------------------------------------------------
         //plain
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BUDDHASHAND_STAIRS_ITEM.get())
@@ -3773,6 +3929,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', nuggetcompatregistry.LEMON_NUGGET.get())
          .unlockedBy("has_lemon_nugget", has(nuggetcompatregistry.LEMON_NUGGET.get()))
          .save(output);
+  //--------------------------------------------------------------------------------------Citron---------------------------------------------------------------------------------------------
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CITRON_BARS_ITEM.get(), 8)
+         .pattern("   ")
+         .pattern("AAA")
+         .pattern("AAA")
+         .define('A', nuggetcompatregistry.CITRON_NUGGET.get())
+         .unlockedBy("has_citron_nugget", has(nuggetcompatregistry.CITRON_NUGGET.get()))
+         .save(output);
   //--------------------------------------------------------------------------------------Buddhashand---------------------------------------------------------------------------------------------
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BUDDHASHAND_BARS_ITEM.get(), 8)
          .pattern("   ")
@@ -3959,6 +4123,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', ingotcompatregistry.LEMON_INGOT.get())
          .unlockedBy("has_lemon_nugget", has(ingotcompatregistry.LEMON_INGOT.get()))
          .save(output);
+  //--------------------------------------------------------------------------------------Citron---------------------------------------------------------------------------------------------
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CITRON_DOOR_ITEM.get(), 3)
+         .pattern("AA ")
+         .pattern("AA ")
+         .pattern("AA ")
+         .define('A', ingotcompatregistry.CITRON_INGOT.get())
+         .unlockedBy("has_citron_nugget", has(ingotcompatregistry.CITRON_INGOT.get()))
+         .save(output);
   //--------------------------------------------------------------------------------------Buddhashand---------------------------------------------------------------------------------------------
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BUDDHASHAND_DOOR_ITEM.get(), 3)
          .pattern("AA ")
@@ -4108,6 +4280,11 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.LEMON_BUTTON_ITEM.get(), 1)
        .requires(nuggetcompatregistry.LEMON_NUGGET.get())
        .unlockedBy("has_lemon_nugget", has(nuggetcompatregistry.LEMON_NUGGET.get()))
+       .save(output);
+  //--------------------------------------------------------------------------------------Citron---------------------------------------------------------------------------------------------
+       ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.CITRON_BUTTON_ITEM.get(), 1)
+       .requires(nuggetcompatregistry.CITRON_NUGGET.get())
+       .unlockedBy("has_citron_nugget", has(nuggetcompatregistry.CITRON_NUGGET.get()))
        .save(output);
   //--------------------------------------------------------------------------------------Buddhashand---------------------------------------------------------------------------------------------
        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.BUDDHASHAND_BUTTON_ITEM.get(), 1)
@@ -4393,6 +4570,25 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .define('A', ingotcompatregistry.LEMON_INGOT.get())
           .define('B', Items.STICK)
           .unlockedBy("has_lemon_ingot", has(ingotcompatregistry.LEMON_INGOT.get()))
+          .save(output);        
+  //--------------------------------------------------------------------------------------Citron---------------------------------------------------------------------------------------------
+        //fence
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CITRON_FENCE_ITEM.get(), 3)
+          .pattern("ABA")
+          .pattern("ABA")
+          .pattern("   ")
+          .define('A', ingotcompatregistry.CITRON_INGOT.get())
+          .define('B', Items.STICK)
+          .unlockedBy("has_citron_ingot", has(ingotcompatregistry.CITRON_INGOT.get()))
+          .save(output);        
+        //gate
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CITRON_GATE_ITEM.get(), 1)
+          .pattern("BAB")
+          .pattern("BAB")
+          .pattern("   ")
+          .define('A', ingotcompatregistry.CITRON_INGOT.get())
+          .define('B', Items.STICK)
+          .unlockedBy("has_citron_ingot", has(ingotcompatregistry.CITRON_INGOT.get()))
           .save(output);        
   //--------------------------------------------------------------------------------------Buddhashand---------------------------------------------------------------------------------------------
         //fence
@@ -4701,6 +4897,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', foodblockcompatitemregistry.LEMON_BLOCK_ITEM.get())
         .unlockedBy("has_lemon_block",  has(foodblockcompatitemregistry.LEMON_BLOCK_ITEM.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Citron---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CITRON_PRESSURE_PLATE_ITEM.get())
+        .pattern("   ")
+        .pattern("AA ")
+        .pattern("   ")
+        .define('A', foodblockcompatitemregistry.CITRON_BLOCK_ITEM.get())
+        .unlockedBy("has_citron_block",  has(foodblockcompatitemregistry.CITRON_BLOCK_ITEM.get()))
+        .save(output);
   //--------------------------------------------------------------------------------------Buddhashand---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BUDDHASHAND_PRESSURE_PLATE_ITEM.get())
         .pattern("   ")
@@ -4899,6 +5103,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('B', Items.STICK)
         .unlockedBy("has_lemon_ingot",  has(ingotcompatregistry.LEMON_INGOT.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Citron---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CITRON_SIGN_ITEM.get(), 3)
+        .pattern("AAA")
+        .pattern("AAA")
+        .pattern(" B ")
+        .define('A', ingotcompatregistry.CITRON_INGOT.get())
+        .define('B', Items.STICK)
+        .unlockedBy("has_citron_ingot",  has(ingotcompatregistry.CITRON_INGOT.get()))
+        .save(output);
   //--------------------------------------------------------------------------------------Buddhashand---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BUDDHASHAND_SIGN_ITEM.get(), 3)
         .pattern("AAA")
@@ -5095,6 +5308,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .pattern("AAA")
         .define('A', ingotcompatregistry.LEMON_INGOT.get())
         .unlockedBy("has_lemon_ingot", has(ingotcompatregistry.LEMON_INGOT.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Citron---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CITRON_TRAPDOOR_ITEM.get())
+        .pattern("   ")
+        .pattern("AAA")
+        .pattern("AAA")
+        .define('A', ingotcompatregistry.CITRON_INGOT.get())
+        .unlockedBy("has_citron_ingot", has(ingotcompatregistry.CITRON_INGOT.get()))
         .save(output);
   //--------------------------------------------------------------------------------------Buddhashand---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BUDDHASHAND_TRAPDOOR_ITEM.get())
@@ -5294,6 +5515,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('B', foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get())
         .unlockedBy("has_glow_berry_block", has(foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Citron---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CITRON_LAMP_ITEM.get())
+        .pattern("AAA")
+        .pattern("ABA")
+        .pattern("AAA")
+        .define('A', ingotcompatregistry.CITRON_INGOT.get())
+        .define('B', foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get())
+        .unlockedBy("has_glow_berry_block", has(foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get()))
+        .save(output);
   //--------------------------------------------------------------------------------------Buddhashand---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BUDDHASHAND_LAMP_ITEM.get())
         .pattern("AAA")
@@ -5490,6 +5720,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .pattern("AA ")
         .define('A', nuggetcompatregistry.LEMON_NUGGET.get())
         .unlockedBy("has_lemon_nugget", has(nuggetcompatregistry.LEMON_NUGGET.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Citron---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CITRON_CARPET_ITEM.get(), 3)
+        .pattern("   ")
+        .pattern("AA ")
+        .pattern("AA ")
+        .define('A', nuggetcompatregistry.CITRON_NUGGET.get())
+        .unlockedBy("has_citron_nugget", has(nuggetcompatregistry.CITRON_NUGGET.get()))
         .save(output);
   //--------------------------------------------------------------------------------------Buddhashand---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BUDDHASHAND_CARPET_ITEM.get(), 3)
@@ -5808,6 +6046,25 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('A', nuggetcompatregistry.LEMON_NUGGET.get())
             .define('B', Items.SOUL_TORCH)
             .unlockedBy("has_lemon_nugget", has(nuggetcompatregistry.LEMON_NUGGET.get()))
+            .save(output);
+  //--------------------------------------------------------------------------------------Citron---------------------------------------------------------------------------------------------
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CITRON_LANTERN_ITEM.get())
+            .pattern("AAA")
+            .pattern("ABA")
+            .pattern("AAA")
+            .define('A', nuggetcompatregistry.CITRON_NUGGET.get())
+            .define('B', Items.TORCH)
+            .unlockedBy("has_citron_nugget", has(nuggetcompatregistry.CITRON_NUGGET.get()))
+            .save(output);
+          //soul
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CITRON_SOUL_LANTERN_ITEM.get())
+            .pattern("AAA")
+            .pattern("ABA")
+            .pattern("AAA")
+            .define('A', nuggetcompatregistry.CITRON_NUGGET.get())
+            .define('B', Items.SOUL_TORCH)
+            .unlockedBy("has_citron_nugget", has(nuggetcompatregistry.CITRON_NUGGET.get()))
             .save(output);
   //--------------------------------------------------------------------------------------Buddhashand---------------------------------------------------------------------------------------------
           //regular
@@ -6128,6 +6385,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('B', ingotcompatregistry.LEMON_INGOT.get())
         .unlockedBy("has_lemon_ingot", has(ingotcompatregistry.LEMON_INGOT.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Citron---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CITRON_CHAIN_ITEM.get())
+        .pattern(" A ")
+        .pattern(" B ")
+        .pattern(" A ")
+        .define('A', nuggetcompatregistry.CITRON_NUGGET.get())
+        .define('B', ingotcompatregistry.CITRON_INGOT.get())
+        .unlockedBy("has_citron_ingot", has(ingotcompatregistry.CITRON_INGOT.get()))
+        .save(output);
   //--------------------------------------------------------------------------------------Buddhashand---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BUDDHASHAND_CHAIN_ITEM.get())
         .pattern(" A ")
@@ -6337,6 +6603,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('B', ingotcompatregistry.LEMON_INGOT.get())
         .unlockedBy("has_lemon_ingot", has(ingotcompatregistry.LEMON_INGOT.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Citron---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CITRON_LADDER_ITEM.get(), 3)
+        .pattern("A A")
+        .pattern("ABA")
+        .pattern("A A")
+        .define('A', Items.STICK)
+        .define('B', ingotcompatregistry.CITRON_INGOT.get())
+        .unlockedBy("has_citron_ingot", has(ingotcompatregistry.CITRON_INGOT.get()))
+        .save(output);
   //--------------------------------------------------------------------------------------Buddhashand---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BUDDHASHAND_LADDER_ITEM.get(), 3)
         .pattern("A A")
@@ -6545,6 +6820,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', foodblockcompatitemregistry.LEMON_SLAB_ITEM.get())
         .define('B', ingotcompatregistry.LEMON_INGOT.get())
         .unlockedBy("has_lemon_ingot", has(ingotcompatregistry.LEMON_INGOT.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Citron---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CITRON_TABLE_ITEM.get())
+        .pattern("AAA")
+        .pattern("B B")
+        .pattern("B B")
+        .define('A', foodblockcompatitemregistry.CITRON_SLAB_ITEM.get())
+        .define('B', ingotcompatregistry.CITRON_INGOT.get())
+        .unlockedBy("has_citron_ingot", has(ingotcompatregistry.CITRON_INGOT.get()))
         .save(output);
   //--------------------------------------------------------------------------------------Buddhashand---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BUDDHASHAND_TABLE_ITEM.get())
@@ -7019,6 +7303,37 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('C', Items.SOUL_SAND)
             .unlockedBy("has_lemon_nugget", has(nuggetcompatregistry.LEMON_NUGGET.get()))
             .save(output);
+  //--------------------------------------------------------------------------------------Citron---------------------------------------------------------------------------------------------
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CITRON_TORCH_ITEM.get(), 4)
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetcompatregistry.CITRON_NUGGET.get())
+            .define('C', ItemTags.COALS)
+            .unlockedBy("has_citron_nugget", has(nuggetcompatregistry.CITRON_NUGGET.get()))
+            .save(output);
+          //redstone
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CITRON_REDSTONE_TORCH_ITEM.get())
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetcompatregistry.CITRON_NUGGET.get())
+            .define('C', Items.REDSTONE)
+            .unlockedBy("has_citron_nugget", has(nuggetcompatregistry.CITRON_NUGGET.get()))
+            .save(output);
+          //soul
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CITRON_SOUL_TORCH_ITEM.get(), 4)
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetcompatregistry.CITRON_NUGGET.get())
+            .define('C', Items.SOUL_SAND)
+            .unlockedBy("has_citron_nugget", has(nuggetcompatregistry.CITRON_NUGGET.get()))
+            .save(output);
   //--------------------------------------------------------------------------------------Buddhashand---------------------------------------------------------------------------------------------
           //regular
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BUDDHASHAND_TORCH_ITEM.get(), 4)
@@ -7470,6 +7785,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('B', Items.COBBLESTONE)
         .unlockedBy("has_lemon_ingot", has(ingotcompatregistry.LEMON_INGOT.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Citron---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CITRON_FURNACE_ITEM.get())
+        .pattern("ABA")
+        .pattern("B B")
+        .pattern("ABA")
+        .define('A', ingotcompatregistry.CITRON_INGOT.get())
+        .define('B', Items.COBBLESTONE)
+        .unlockedBy("has_citron_ingot", has(ingotcompatregistry.CITRON_INGOT.get()))
+        .save(output);
   //--------------------------------------------------------------------------------------Buddhashand---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BUDDHASHAND_FURNACE_ITEM.get())
         .pattern("ABA")
@@ -7636,6 +7960,12 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .requires(foodblockcompatitemregistry.LEMON_BLOCK_ITEM.get())
         .requires(Items.STONE)
         .unlockedBy("has_lemon_block", has(foodblockcompatitemregistry.LEMON_BLOCK_ITEM.get()))
+        .save(output);        
+  //--------------------------------------------------------------------------------------Citron---------------------------------------------------------------------------------------------
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.CITRON_STONE_PATH_ITEM.get(), 6)
+        .requires(foodblockcompatitemregistry.CITRON_BLOCK_ITEM.get())
+        .requires(Items.STONE)
+        .unlockedBy("has_citron_block", has(foodblockcompatitemregistry.CITRON_BLOCK_ITEM.get()))
         .save(output);        
   //--------------------------------------------------------------------------------------Buddhashand---------------------------------------------------------------------------------------------
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.BUDDHASHAND_STONE_PATH_ITEM.get(), 6)
@@ -7812,6 +8142,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', foodblockcompatitemregistry.LEMON_BLOCK_ITEM.get())
         .define('B', foodblockcompatitemregistry.LEMON_SLAB_ITEM.get())
         .unlockedBy("has_lemon_block", has(foodblockcompatitemregistry.LEMON_BLOCK_ITEM.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Citron---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CITRON_BARREL_ITEM.get())
+        .pattern("ABA")
+        .pattern("A A")
+        .pattern("ABA")
+        .define('A', foodblockcompatitemregistry.CITRON_BLOCK_ITEM.get())
+        .define('B', foodblockcompatitemregistry.CITRON_SLAB_ITEM.get())
+        .unlockedBy("has_citron_block", has(foodblockcompatitemregistry.CITRON_BLOCK_ITEM.get()))
         .save(output);
   //--------------------------------------------------------------------------------------Buddhashand---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BUDDHASHAND_BARREL_ITEM.get())
@@ -8021,6 +8360,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', ingotcompatregistry.LEMON_INGOT.get())
         .define('B', foodblockcompatitemregistry.LEMON_SLAB_ITEM.get())
         .unlockedBy("has_lemon_slab", has(foodblockcompatitemregistry.LEMON_SLAB_ITEM.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Citron---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CITRON_CHAIR_ITEM.get())
+        .pattern("AAA")
+        .pattern("BBB")
+        .pattern("A A")
+        .define('A', ingotcompatregistry.CITRON_INGOT.get())
+        .define('B', foodblockcompatitemregistry.CITRON_SLAB_ITEM.get())
+        .unlockedBy("has_citron_slab", has(foodblockcompatitemregistry.CITRON_SLAB_ITEM.get()))
         .save(output);
   //--------------------------------------------------------------------------------------Buddhashand---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BUDDHASHAND_CHAIR_ITEM.get())
@@ -8242,6 +8590,16 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
            .define('B', foodblockcompatitemregistry.LEMON_SLAB_ITEM.get())
            .define('C', foodblockcompatitemregistry.LEMON_CARPET_ITEM.get())
            .unlockedBy("has_lemon_ingot", has(ingotcompatregistry.LEMON_INGOT.get()))
+           .save(output);
+  //--------------------------------------------------------------------------------------Citron---------------------------------------------------------------------------------------------
+           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CITRON_BED_ITEM.get())
+           .pattern("CCC")
+           .pattern("BBB")
+           .pattern("A A")
+           .define('A', ingotcompatregistry.CITRON_INGOT.get())
+           .define('B', foodblockcompatitemregistry.CITRON_SLAB_ITEM.get())
+           .define('C', foodblockcompatitemregistry.CITRON_CARPET_ITEM.get())
+           .unlockedBy("has_citron_ingot", has(ingotcompatregistry.CITRON_INGOT.get()))
            .save(output);
   //--------------------------------------------------------------------------------------Buddhashand---------------------------------------------------------------------------------------------
            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BUDDHASHAND_BED_ITEM.get())
@@ -8594,6 +8952,26 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('B', Items.IRON_INGOT)
          .define('C', foodblockcompatitemregistry.SMALL_LEMON_CABINET_ITEM.get())
          .unlockedBy("has_lemon_slab", has(foodblockcompatitemregistry.LEMON_SLAB_ITEM.get()))
+         .save(output);
+  //--------------------------------------------------------------------------------------Citron---------------------------------------------------------------------------------------------
+       //small
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.SMALL_CITRON_CABINET_ITEM.get())
+         .pattern("AAA")
+         .pattern("B B")
+         .pattern("AAA")
+         .define('A', foodblockcompatitemregistry.CITRON_SLAB_ITEM.get())
+         .define('B', Items.IRON_INGOT)
+         .unlockedBy("has_citron_slab", has(foodblockcompatitemregistry.CITRON_SLAB_ITEM.get()))
+         .save(output);
+       //medium
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.MEDIUM_CITRON_CABINET_ITEM.get())
+         .pattern("AAA")
+         .pattern("BCB")
+         .pattern("AAA")
+         .define('A', foodblockcompatitemregistry.CITRON_SLAB_ITEM.get())
+         .define('B', Items.IRON_INGOT)
+         .define('C', foodblockcompatitemregistry.SMALL_CITRON_CABINET_ITEM.get())
+         .unlockedBy("has_citron_slab", has(foodblockcompatitemregistry.CITRON_SLAB_ITEM.get()))
          .save(output);
   //--------------------------------------------------------------------------------------Buddhashand---------------------------------------------------------------------------------------------
        //small

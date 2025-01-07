@@ -955,6 +955,84 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("small_lemon_cabinet_item", modLoc("block/lemon_cabinet"));
        withExistingParent("medium_lemon_cabinet_item", modLoc("block/medium_lemon_cabinet"));
     //==============================================================================================================================================
+    //|                                                              Citron                                                                        |
+    //==============================================================================================================================================
+       //mush
+        withExistingParent("citron_mush", mcLoc("item/generated")).texture("layer0", "item/citron_mush");
+       //ingot
+        withExistingParent("citron_ingot", mcLoc("item/generated")).texture("layer0", "item/citron_ingot");
+       //nugget
+        withExistingParent("citron_nugget", mcLoc("item/generated")).texture("layer0", "item/citron_nugget");
+       //block
+        withExistingParent("citron_block_item", modLoc("block/citron_block"));
+       //bricks block
+        withExistingParent("citron_bricks_block_item", modLoc("block/citron_bricks_block"));
+       //chiseled block
+        withExistingParent("citron_chiseled_block_item", modLoc("block/citron_chiseled_block"));
+       //tiles block
+        withExistingParent("citron_tiles_block_item", modLoc("block/citron_tiles_block"));
+       //slab
+        slab("citron_slab_item", modLoc("block/citron_block"), modLoc("block/citron_block"), modLoc("block/citron_block"));
+       //bricks slab
+        slab("citron_bricks_slab_item", modLoc("block/citron_bricks_block"), modLoc("block/citron_bricks_block"), modLoc("block/citron_bricks_block"));
+       //stairs
+        stairs("citron_stairs_item", modLoc("block/citron_block"), modLoc("block/citron_block"), modLoc("block/citron_block"));
+       //bricks stairs
+        stairs("citron_bricks_stairs_item", modLoc("block/citron_bricks_block"), modLoc("block/citron_bricks_block"), modLoc("block/citron_bricks_block"));
+       //bars
+        withExistingParent("citron_bars_item", mcLoc("item/generated")).texture("layer0", "block/citron_bars");
+       //doors
+        withExistingParent("citron_door_item", mcLoc("item/generated")).texture("layer0", "item/citron_door_item");
+       //button
+        buttonInventory("citron_button_item", modLoc("block/citron_block"));
+       //fence
+        fenceInventory("citron_fence_item", modLoc("block/citron_block"));
+       //gate
+        withExistingParent("citron_gate_item", modLoc("block/citron_gate"));
+       //pressure plate
+        pressurePlate("citron_pressure_plate_item", modLoc("block/citron_block"));
+       //sign
+       withExistingParent("citron_sign_item", mcLoc("item/generated")).texture("layer0", "item/citron_sign");
+       //trapdoor
+       withExistingParent("citron_trapdoor_item", modLoc("block/citron_trapdoor_trapdoor_bottom"));
+       //lamp
+       withExistingParent("citron_lamp_item", modLoc("block/citron_lamp"));
+       //carpet
+       ResourceLocation citron_carpet_texture = modLoc("block/citron_carpet");
+       carpet("citron_carpet_item", citron_carpet_texture);
+       //lantern
+        //regular
+        withExistingParent("citron_lantern_item", modLoc("block/citron_lantern"));
+        //soul
+          withExistingParent("citron_soul_lantern_item", modLoc("block/citron_soul_lantern"));
+       //chain
+       withExistingParent("citron_chain_item", modLoc("block/citron_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
+       //ladder
+       withExistingParent("citron_ladder_item", modLoc("block/citron_ladder"));
+       //table
+       withExistingParent("citron_table_item", modLoc("block/citron_table"));
+       //torches
+        //regular
+        withExistingParent("citron_torch_item", modLoc("block/citron_torch"));
+        //redstone
+          withExistingParent("citron_redstone_torch_item", modLoc("block/citron_redstone_torch"));
+        //soul
+          withExistingParent("citron_soul_torch_item", modLoc("block/citron_soul_torch"));
+       //furnaces
+       withExistingParent("citron_furnace_item", modLoc("block/citron_furnace_model_unlit"));
+       //paths
+       withExistingParent("citron_stone_path_item", modLoc("block/citron_stone_path"));
+       //barrel
+       withExistingParent("citron_barrel_item", modLoc("block/citron_barrel_model_closed"));
+       //chair
+       withExistingParent("citron_chair_item", modLoc("block/citron_chair"));
+       //bed
+       withExistingParent("citron_bed_item", modLoc("block/citron_bed"));
+       //cabinet
+       withExistingParent("small_citron_cabinet_item", modLoc("block/citron_cabinet"));
+       withExistingParent("medium_citron_cabinet_item", modLoc("block/medium_citron_cabinet"));
+    //==============================================================================================================================================
     //|                                                              Buddhashand                                                                        |
     //==============================================================================================================================================
        //mush
