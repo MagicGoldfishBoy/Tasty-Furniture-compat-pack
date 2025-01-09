@@ -95,6 +95,11 @@ public class foodmaterialtypecompatregistry {
         "blackcherry_wood_mat", 
         PLANT) 
     );
+    public static final WoodType PEACHWOODMAT = WoodType.register(
+     new WoodType(
+        "peach_wood_mat", 
+        PLANT) 
+    );
     public static final WoodType COCONUTWOODMAT = WoodType.register(
      new WoodType(
         "coconut_wood_mat", 

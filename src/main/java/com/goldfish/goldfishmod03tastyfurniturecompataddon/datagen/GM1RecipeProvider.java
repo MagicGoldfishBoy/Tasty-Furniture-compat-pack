@@ -56,6 +56,10 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         Registries.ITEM,
         ResourceLocation.fromNamespaceAndPath("goldfishmod03tastyfurniturecompataddon", "blackcherries")
         );
+       public static final TagKey<Item> PEACH_TAG = TagKey.create(
+        Registries.ITEM,
+        ResourceLocation.fromNamespaceAndPath("goldfishmod03tastyfurniturecompataddon", "peaches")
+        );
        public static final TagKey<Item> COCONUT_TAG = TagKey.create(
         Registries.ITEM,
         ResourceLocation.fromNamespaceAndPath("goldfishmod03tastyfurniturecompataddon", "coconuts")
@@ -321,6 +325,43 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', BLACKCHERRY_TAG)
             .unlockedBy("has_mush_hammer", has(mushregistry.most_advanced_mushhammer.get()))
             .save(output, "blackcherry_mush_from_most_advanced_mushhammer");
+  //----------------------------------------------------------------------------------------Peach-----------------------------------------------------------------------------------------------
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.PEACH_MUSH.get(), 1)
+            .pattern("ABB")
+            .pattern("BB ")
+            .pattern("   ")
+            .define('A', mushregistry.mushhammer.get())
+            .define('B', PEACH_TAG)
+            .unlockedBy("has_mush_hammer", has(mushregistry.mushhammer.get()))
+            .save(output);
+          //advanced
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.PEACH_MUSH.get(), 2)
+            .pattern("ABB")
+            .pattern("BB ")
+            .pattern("   ")
+            .define('A', mushregistry.advanced_mushhammer.get())
+            .define('B', PEACH_TAG)
+            .unlockedBy("has_mush_hammer", has(mushregistry.advanced_mushhammer.get()))
+            .save(output, "peach_mush_from_advanced_mushhammer");
+          //more advanced
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.PEACH_MUSH.get(), 4)
+            .pattern("ABB")
+            .pattern("BB ")
+            .pattern("   ")
+            .define('A', mushregistry.more_advanced_mushhammer.get())
+            .define('B', PEACH_TAG)
+            .unlockedBy("has_mush_hammer", has(mushregistry.more_advanced_mushhammer.get()))
+            .save(output, "peach_mush_from_more_advanced_mushhammer");
+          //most advanced
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.PEACH_MUSH.get(), 8)
+            .pattern("ABB")
+            .pattern("BB ")
+            .pattern("   ")
+            .define('A', mushregistry.most_advanced_mushhammer.get())
+            .define('B', PEACH_TAG)
+            .unlockedBy("has_mush_hammer", has(mushregistry.most_advanced_mushhammer.get()))
+            .save(output, "peach_mush_from_most_advanced_mushhammer");
   //----------------------------------------------------------------------------------------Coconut-----------------------------------------------------------------------------------------------
           //regular
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.COCONUT_MUSH.get(), 1)

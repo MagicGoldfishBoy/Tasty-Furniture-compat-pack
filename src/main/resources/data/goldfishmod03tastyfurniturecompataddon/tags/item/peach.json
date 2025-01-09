@@ -1,0 +1,15 @@
+{
+    "replace": false,
+    "values": [
+        {"id":"productivetrees:peach",
+        "required": false},
+        {"id":"c:peaches",
+        "required": false},
+        {"id":"harvestcraft:peachitem",
+        "required": false},
+        {"id":"pamhc2trees:peachitem",
+        "required": false},
+        {"id":"fruitsdelight:peach",
+        "required": false}
+    ]
+  }

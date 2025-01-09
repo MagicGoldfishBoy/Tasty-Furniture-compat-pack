@@ -171,11 +171,28 @@ public class TastyFurnitureCompatAddon
 
         @SubscribeEvent(priority = EventPriority.LOWEST)
             public static void onRegisterRenderers(EntityRenderersEvent.RegisterRenderers event) {
+                //berries
                 event.registerBlockEntityRenderer(foodblockcompatregistry.ELDERBERRY_SIGN_ENTITY.get(), SignRenderer::new);
                 event.registerBlockEntityRenderer(foodblockcompatregistry.JUNIPER_SIGN_ENTITY.get(), SignRenderer::new);
+                 //banana
+                 //gooseberry
+                 //blueberries
+                 //cranberries
+                //aggregate fruits
+                 //blackberries
+                 //raspberries
+                 //strawberries
+                //multiple fruits
+                 //pinneapple
+                 //osage orange
+                //drupes
                 event.registerBlockEntityRenderer(foodblockcompatregistry.CHERRY_SIGN_ENTITY.get(), SignRenderer::new);
                 event.registerBlockEntityRenderer(foodblockcompatregistry.BLACKCHERRY_SIGN_ENTITY.get(), SignRenderer::new);
+                event.registerBlockEntityRenderer(foodblockcompatregistry.PEACH_SIGN_ENTITY.get(), SignRenderer::new);
+                 //plum
+                 //nectarine
                 event.registerBlockEntityRenderer(foodblockcompatregistry.COCONUT_SIGN_ENTITY.get(), SignRenderer::new);
+                //citrus
                 event.registerBlockEntityRenderer(foodblockcompatregistry.ORANGE_SIGN_ENTITY.get(), SignRenderer::new);
                 event.registerBlockEntityRenderer(foodblockcompatregistry.TANGERINE_SIGN_ENTITY.get(), SignRenderer::new);
                 event.registerBlockEntityRenderer(foodblockcompatregistry.KUMQUAT_SIGN_ENTITY.get(), SignRenderer::new);
@@ -190,9 +207,16 @@ public class TastyFurnitureCompatAddon
                 event.registerBlockEntityRenderer(foodblockcompatregistry.FINGERLIME_SIGN_ENTITY.get(), SignRenderer::new);
                 event.registerBlockEntityRenderer(foodblockcompatregistry.GRAPEFRUIT_SIGN_ENTITY.get(), SignRenderer::new);
                 event.registerBlockEntityRenderer(foodblockcompatregistry.POMELO_SIGN_ENTITY.get(), SignRenderer::new);
+                //grains
                 event.registerBlockEntityRenderer(foodblockcompatregistry.CORN_SIGN_ENTITY.get(), SignRenderer::new);
                 event.registerBlockEntityRenderer(foodblockcompatregistry.ONION_SIGN_ENTITY.get(), SignRenderer::new);
+                //culinary vegetables
                 event.registerBlockEntityRenderer(foodblockcompatregistry.TOMATO_SIGN_ENTITY.get(), SignRenderer::new);
+                 //cucumbers
+                 //peppers
+                 //bell peppers
+                 //eggplants
+                 //avocados
                 event.registerBlockEntityRenderer(foodblockcompatregistry.PECAN_SIGN_ENTITY.get(), SignRenderer::new);
                 event.registerBlockEntityRenderer(foodblockcompatregistry.ALMOND_SIGN_ENTITY.get(), SignRenderer::new);
                 event.registerEntityRenderer(foodEntityRegistry.CHAIR_ENTITY.get(), foodChairEntityRenderer::new);
