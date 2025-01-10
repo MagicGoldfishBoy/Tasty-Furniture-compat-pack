@@ -115,6 +115,19 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........tiles
           net.minecraft.world.level.block.Block blackcherry_tiles_block = foodblockcompatregistry.BLACKCHERRY_TILES_BLOCK.get();
           simpleBlock(blackcherry_tiles_block);
+     //------------------------------------------------------------peach-----------------------------------------------------------------------
+      //.........plain
+          net.minecraft.world.level.block.Block peach_block = foodblockcompatregistry.PEACH_BLOCK.get();
+          simpleBlock(peach_block);
+      //.........bricks
+          net.minecraft.world.level.block.Block peach_bricks_block = foodblockcompatregistry.PEACH_BRICKS_BLOCK.get();
+          simpleBlock(peach_bricks_block);
+      //.........chiseled
+          net.minecraft.world.level.block.Block peach_chiseled_block = foodblockcompatregistry.PEACH_CHISELED_BLOCK.get();
+          simpleBlock(peach_chiseled_block);
+      //.........tiles
+          net.minecraft.world.level.block.Block peach_tiles_block = foodblockcompatregistry.PEACH_TILES_BLOCK.get();
+          simpleBlock(peach_tiles_block);
      //------------------------------------------------------------coconut-----------------------------------------------------------------------
       //.........plain
           net.minecraft.world.level.block.Block coconut_block = foodblockcompatregistry.COCONUT_BLOCK.get();
@@ -414,6 +427,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
           SlabBlock blackcherry_bricks_slab = foodblockcompatregistry.BLACKCHERRY_BRICKS_SLAB.get();
           ResourceLocation blackcherry_bricks_block_texture = modLoc("block/blackcherry_bricks_block");
           slabBlock(blackcherry_bricks_slab, blackcherry_bricks_block_texture, blackcherry_bricks_block_texture);
+     //------------------------------------------------------------peach-----------------------------------------------------------------------
+      //.........plain
+          SlabBlock peach_slab = foodblockcompatregistry.PEACH_SLAB.get();
+          ResourceLocation peach_block_texture = modLoc("block/peach_block");
+          slabBlock(peach_slab, peach_block_texture, peach_block_texture);
+      //.........bricks
+          SlabBlock peach_bricks_slab = foodblockcompatregistry.PEACH_BRICKS_SLAB.get();
+          ResourceLocation peach_bricks_block_texture = modLoc("block/peach_bricks_block");
+          slabBlock(peach_bricks_slab, peach_bricks_block_texture, peach_bricks_block_texture);
      //------------------------------------------------------------coconut-----------------------------------------------------------------------
       //.........plain
           SlabBlock coconut_slab = foodblockcompatregistry.COCONUT_SLAB.get();
@@ -625,6 +647,13 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........bricks
           StairBlock blackcherry_bricks_stairs = foodblockcompatregistry.BLACKCHERRY_BRICKS_STAIRS.get();
           stairsBlock(blackcherry_bricks_stairs, blackcherry_bricks_block_texture);
+     //------------------------------------------------------------peach-----------------------------------------------------------------------
+      //.........plain
+          StairBlock peach_stairs = foodblockcompatregistry.PEACH_STAIRS.get();
+          stairsBlock(peach_stairs, peach_block_texture);
+      //.........bricks
+          StairBlock peach_bricks_stairs = foodblockcompatregistry.PEACH_BRICKS_STAIRS.get();
+          stairsBlock(peach_bricks_stairs, peach_bricks_block_texture);
      //------------------------------------------------------------coconut-----------------------------------------------------------------------
       //.........plain
           StairBlock coconut_stairs = foodblockcompatregistry.COCONUT_STAIRS.get();
@@ -788,6 +817,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation blackcherry_bars_texture = modLoc("block/blackcherry_bars");
           ResourceLocation blackcherry_bars_rim_texture = modLoc("block/blackcherry_block");
           paneBlockWithRenderType(blackcherry_bars, "blackcherry_bars", blackcherry_bars_texture, blackcherry_bars_rim_texture, "cutout_mipped_all"); 
+     //------------------------------------------------------------peach-----------------------------------------------------------------------
+          IronBarsBlock peach_bars = foodblockcompatregistry.PEACH_BARS.get(); 
+          ResourceLocation peach_bars_texture = modLoc("block/peach_bars");
+          ResourceLocation peach_bars_rim_texture = modLoc("block/peach_block");
+          paneBlockWithRenderType(peach_bars, "peach_bars", peach_bars_texture, peach_bars_rim_texture, "cutout_mipped_all"); 
      //------------------------------------------------------------coconut-----------------------------------------------------------------------
           IronBarsBlock coconut_bars = foodblockcompatregistry.COCONUT_BARS.get(); 
           ResourceLocation coconut_bars_texture = modLoc("block/coconut_bars");
@@ -911,6 +945,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation blackcherry_door_top_texture = modLoc("block/blackcherry_door_top");
           ResourceLocation blackcherry_door_bottom_texture = modLoc("block/blackcherry_door_bottom");
           doorBlockWithRenderType(blackcherry_door, "blackcherry_door", blackcherry_door_bottom_texture, blackcherry_door_top_texture, "cutout_mipped_all"); 
+     //------------------------------------------------------------peach-----------------------------------------------------------------------
+          DoorBlock peach_door = foodblockcompatregistry.PEACH_DOOR.get(); 
+          ResourceLocation peach_door_top_texture = modLoc("block/peach_door_top");
+          ResourceLocation peach_door_bottom_texture = modLoc("block/peach_door_bottom");
+          doorBlockWithRenderType(peach_door, "peach_door", peach_door_bottom_texture, peach_door_top_texture, "cutout_mipped_all"); 
      //------------------------------------------------------------coconut-----------------------------------------------------------------------
           DoorBlock coconut_door = foodblockcompatregistry.COCONUT_DOOR.get(); 
           ResourceLocation coconut_door_top_texture = modLoc("block/coconut_door_top");
@@ -1030,6 +1069,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ButtonBlock blackcherry_button = foodblockcompatregistry.BLACKCHERRY_BUTTON.get();
           ResourceLocation blackcherry_button_texture = modLoc("block/blackcherry_block");
           buttonBlock(blackcherry_button, blackcherry_button_texture);
+     //------------------------------------------------------------peach-----------------------------------------------------------------------
+          ButtonBlock peach_button = foodblockcompatregistry.PEACH_BUTTON.get();
+          ResourceLocation peach_button_texture = modLoc("block/peach_block");
+          buttonBlock(peach_button, peach_button_texture);
      //------------------------------------------------------------coconut-----------------------------------------------------------------------
           ButtonBlock coconut_button = foodblockcompatregistry.COCONUT_BUTTON.get();
           ResourceLocation coconut_button_texture = modLoc("block/coconut_block");
@@ -1149,6 +1192,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
           FenceGateBlock blackcherry_gate = foodblockcompatregistry.BLACKCHERRY_GATE.get();
           ResourceLocation blackcherry_gate_texture = modLoc("block/blackcherry_block");
           fenceGateBlock(blackcherry_gate, blackcherry_gate_texture);
+     //------------------------------------------------------------peach-----------------------------------------------------------------------
+       //fence
+          FenceBlock peach_fence = foodblockcompatregistry.PEACH_FENCE.get();
+          ResourceLocation peach_fence_texture = modLoc("block/peach_block");
+          fenceBlock(peach_fence, peach_fence_texture);
+       //gate
+          FenceGateBlock peach_gate = foodblockcompatregistry.PEACH_GATE.get();
+          ResourceLocation peach_gate_texture = modLoc("block/peach_block");
+          fenceGateBlock(peach_gate, peach_gate_texture);
      //------------------------------------------------------------coconut-----------------------------------------------------------------------
        //fence
           FenceBlock coconut_fence = foodblockcompatregistry.COCONUT_FENCE.get();
@@ -1348,6 +1400,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           PressurePlateBlock blackcherry_pressure_plate = foodblockcompatregistry.BLACKCHERRY_PRESSURE_PLATE.get();
           ResourceLocation blackcherry_pressure_plate_texture = modLoc("block/blackcherry_block");
           pressurePlateBlock(blackcherry_pressure_plate, blackcherry_pressure_plate_texture);
+     //------------------------------------------------------------peach-----------------------------------------------------------------------
+          PressurePlateBlock peach_pressure_plate = foodblockcompatregistry.PEACH_PRESSURE_PLATE.get();
+          ResourceLocation peach_pressure_plate_texture = modLoc("block/peach_block");
+          pressurePlateBlock(peach_pressure_plate, peach_pressure_plate_texture);
      //------------------------------------------------------------coconut-----------------------------------------------------------------------
           PressurePlateBlock coconut_pressure_plate = foodblockcompatregistry.COCONUT_PRESSURE_PLATE.get();
           ResourceLocation coconut_pressure_plate_texture = modLoc("block/coconut_block");
@@ -1451,6 +1507,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
            WallSignBlock blackcherry_wall_sign = foodblockcompatregistry.BLACKCHERRY_WALL_SIGN.get();
            ResourceLocation blackcherry_sign_texture = modLoc("block/blackcherry_block");
            signBlock(blackcherry_sign, blackcherry_wall_sign, blackcherry_sign_texture);
+     //------------------------------------------------------------peach-----------------------------------------------------------------------
+           StandingSignBlock peach_sign = foodblockcompatregistry.PEACH_STANDING_SIGN.get();
+           WallSignBlock peach_wall_sign = foodblockcompatregistry.PEACH_WALL_SIGN.get();
+           ResourceLocation peach_sign_texture = modLoc("block/peach_block");
+           signBlock(peach_sign, peach_wall_sign, peach_sign_texture);
      //------------------------------------------------------------coconut-----------------------------------------------------------------------
            StandingSignBlock coconut_sign = foodblockcompatregistry.COCONUT_STANDING_SIGN.get();
            WallSignBlock coconut_wall_sign = foodblockcompatregistry.COCONUT_WALL_SIGN.get();
@@ -1570,6 +1631,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           TrapDoorBlock blackcherry_trapdoor = foodblockcompatregistry.BLACKCHERRY_TRAPDOOR.get(); 
           ResourceLocation blackcherry_trapdoor_texture = modLoc("block/blackcherry_block");
           trapdoorBlockWithRenderType(blackcherry_trapdoor, "blackcherry_trapdoor", blackcherry_trapdoor_texture, false, blackcherry_trapdoor_texture);
+     //------------------------------------------------------------peach-----------------------------------------------------------------------
+          TrapDoorBlock peach_trapdoor = foodblockcompatregistry.PEACH_TRAPDOOR.get(); 
+          ResourceLocation peach_trapdoor_texture = modLoc("block/peach_block");
+          trapdoorBlockWithRenderType(peach_trapdoor, "peach_trapdoor", peach_trapdoor_texture, false, peach_trapdoor_texture);
      //------------------------------------------------------------coconut-----------------------------------------------------------------------
           TrapDoorBlock coconut_trapdoor = foodblockcompatregistry.COCONUT_TRAPDOOR.get(); 
           ResourceLocation coconut_trapdoor_texture = modLoc("block/coconut_block");
@@ -1665,6 +1730,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
      //------------------------------------------------------------blackcherry-----------------------------------------------------------------------
           Block blackcherry_lamp = foodblockcompatregistry.BLACKCHERRY_LAMP.get();
           simpleBlock(blackcherry_lamp);
+     //------------------------------------------------------------peach-----------------------------------------------------------------------
+          Block peach_lamp = foodblockcompatregistry.PEACH_LAMP.get();
+          ResourceLocation peach_lamp_texture = modLoc("block/peach_lamp");
+          horizontalBlock(peach_lamp, peach_lamp_texture, peach_lamp_texture, peach_lamp_texture);
+
      //------------------------------------------------------------coconut-----------------------------------------------------------------------
           Block coconut_lamp = foodblockcompatregistry.COCONUT_LAMP.get();
           simpleBlock(coconut_lamp);
@@ -1752,6 +1822,12 @@ public class GM1BlockStateProvider extends BlockStateProvider
           BlockModelBuilder blackcherry_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(blackcherry_carpet).getPath(), mcLoc("block/carpet"))
           .texture("wool", blackcherry_carpet_texture);
           simpleBlock(blackcherry_carpet, new ModelFile.UncheckedModelFile(blackcherry_carpet_model.getLocation()));
+     //------------------------------------------------------------peach-----------------------------------------------------------------------
+          CarpetBlock peach_carpet = foodblockcompatregistry.PEACH_CARPET.get();
+          ResourceLocation peach_carpet_texture = modLoc("block/peach_carpet");
+          BlockModelBuilder peach_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(peach_carpet).getPath(), mcLoc("block/carpet"))
+          .texture("wool", peach_carpet_texture);
+          simpleBlock(peach_carpet, new ModelFile.UncheckedModelFile(peach_carpet_model.getLocation()));
      //------------------------------------------------------------coconut-----------------------------------------------------------------------
           CarpetBlock coconut_carpet = foodblockcompatregistry.COCONUT_CARPET.get();
           ResourceLocation coconut_carpet_texture = modLoc("block/coconut_carpet");
@@ -2031,6 +2107,45 @@ public class GM1BlockStateProvider extends BlockStateProvider
              .modelForState().modelFile(hanging_blackcherry_soul_lantern_model).addModel()
              .partialState().with(LanternBlock.HANGING, false)
              .modelForState().modelFile(blackcherry_soul_lantern_model).addModel();
+     //------------------------------------------------------------peach-----------------------------------------------------------------------
+         //regular
+          LanternBlock peach_lantern = foodblockcompatregistry.PEACH_LANTERN.get();
+          ResourceLocation peach_lantern_texture = modLoc("block/peach_lantern");
+  
+          BlockModelBuilder peach_lantern_model = models()
+              .withExistingParent("peach_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", peach_lantern_texture);
+  
+          BlockModelBuilder hanging_peach_lantern_model = models()
+              .withExistingParent("peach_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", peach_lantern_texture);
+  
+          getVariantBuilder(peach_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_peach_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(peach_lantern_model).addModel();
+         //soul
+         LanternBlock peach_soul_lantern = foodblockcompatregistry.PEACH_SOUL_LANTERN.get();
+         ResourceLocation peach_soul_lantern_texture = modLoc("block/peach_soul_lantern");
+ 
+         BlockModelBuilder peach_soul_lantern_model = models()
+             .withExistingParent("peach_soul_lantern", mcLoc("block/lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", peach_soul_lantern_texture);
+ 
+         BlockModelBuilder hanging_peach_soul_lantern_model = models()
+             .withExistingParent("peach_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", peach_soul_lantern_texture);
+ 
+         getVariantBuilder(peach_soul_lantern)
+             .partialState().with(LanternBlock.HANGING, true)
+             .modelForState().modelFile(hanging_peach_soul_lantern_model).addModel()
+             .partialState().with(LanternBlock.HANGING, false)
+             .modelForState().modelFile(peach_soul_lantern_model).addModel();
      //------------------------------------------------------------coconut-----------------------------------------------------------------------
          //regular
           LanternBlock coconut_lantern = foodblockcompatregistry.COCONUT_LANTERN.get();
@@ -2878,6 +2993,22 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .modelForState().modelFile(blackcherry_chain_model).rotationX(90).rotationY(90).addModel()
           .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
           .modelForState().modelFile(blackcherry_chain_model).rotationX(90).addModel(); 
+     //------------------------------------------------------------peach-----------------------------------------------------------------------
+         ChainBlock peach_chain = foodblockcompatregistry.PEACH_CHAIN.get();
+         ResourceLocation peach_chain_texture = modLoc("block/peach_chain");
+         BlockModelBuilder peach_chain_model = models()
+          .withExistingParent("peach_chain", mcLoc("block/chain"))
+          .renderType("cutout_mipped_all")
+          .texture("all", peach_chain_texture)
+          .texture("particle", peach_chain_texture);
+
+          getVariantBuilder(peach_chain)
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Y)
+          .modelForState().modelFile(peach_chain_model).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.X)
+          .modelForState().modelFile(peach_chain_model).rotationX(90).rotationY(90).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
+          .modelForState().modelFile(peach_chain_model).rotationX(90).addModel(); 
      //------------------------------------------------------------coconut-----------------------------------------------------------------------
          ChainBlock coconut_chain = foodblockcompatregistry.COCONUT_CHAIN.get();
          ResourceLocation coconut_chain_texture = modLoc("block/coconut_chain");
@@ -3279,6 +3410,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/blackcherry_ladder");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------peach-----------------------------------------------------------------------
+          LadderBlock peachladder = foodblockcompatregistry.PEACH_LADDER.get();
+
+          getVariantBuilder(peachladder)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/peach_ladder");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -3786,6 +3938,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/blackcherry_table");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------peach-----------------------------------------------------------------------
+          HorizontalDirectionalBlock peachtable = foodblockcompatregistry.PEACH_TABLE.get();
+
+          getVariantBuilder(peachtable)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/peach_table");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -4676,6 +4849,122 @@ public class GM1BlockStateProvider extends BlockStateProvider
                     .renderType("cutout_mipped_all")
                     .texture("torch", blackcherry_soul_wall_torch_texture)
                     .texture("particle", blackcherry_soul_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+     //------------------------------------------------------------peach-----------------------------------------------------------------------
+       //regular
+        TorchBlock peach_torch = foodblockcompatregistry.PEACH_TORCH.get();
+        ResourceLocation peach_torch_texture = modLoc("block/peach_torch");
+        BlockModelBuilder peach_torch_model = models()
+        .withExistingParent("peach_torch", mcLoc("block/torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", peach_torch_texture)
+        .texture("particle", peach_torch_texture);
+
+        simpleBlock(peach_torch, peach_torch_model);
+
+        TorchBlock peach_wall_torch = foodblockcompatregistry.PEACH_WALL_TORCH.get();
+        BlockModelBuilder peach_wall_torch_model = models()
+        .withExistingParent("peach_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", peach_torch_texture)
+        .texture("particle", peach_torch_texture);
+        getVariantBuilder(peach_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("peach_wall_torch", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", peach_torch_texture)
+                    .texture("particle", peach_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //redstone
+        RedstoneTorchBlock peach_redstone_torch = foodblockcompatregistry.PEACH_REDSTONE_TORCH.get();
+        ResourceLocation peach_redstone_torch_texture = modLoc("block/peach_redstone_torch");
+        BlockModelBuilder peach_redstone_torch_model = models()
+        .withExistingParent("peach_redstone_torch", mcLoc("block/redstone_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", peach_redstone_torch_texture)
+        .texture("particle", peach_redstone_torch_texture);
+        
+
+        simpleBlock(peach_redstone_torch, peach_redstone_torch_model);
+
+        ResourceLocation peach_redstone_wall_torch_texture = modLoc("block/peach_redstone_torch");
+
+        RedstoneTorchBlock peach_redstone_wall_torch = foodblockcompatregistry.PEACH_REDSTONE_WALL_TORCH.get();
+        BlockModelBuilder peach_redstone_wall_torch_model = models()
+        .withExistingParent("peach_redstone_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", peach_redstone_wall_torch_texture)
+        .texture("particle", peach_redstone_wall_torch_texture);
+        getVariantBuilder(peach_redstone_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("peach_redstone_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", peach_redstone_wall_torch_texture)
+                    .texture("particle", peach_redstone_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //soul
+        TorchBlock peach_soul_torch = foodblockcompatregistry.PEACH_SOUL_TORCH.get();
+        ResourceLocation peach_soul_torch_texture = modLoc("block/peach_soul_torch");
+        BlockModelBuilder peach_soul_torch_model = models()
+        .withExistingParent("peach_soul_torch", mcLoc("block/soul_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", peach_soul_torch_texture)
+        .texture("particle", peach_soul_torch_texture);
+        
+
+        simpleBlock(peach_soul_torch, peach_soul_torch_model);
+
+        ResourceLocation peach_soul_wall_torch_texture = modLoc("block/peach_soul_torch");
+        TorchBlock peach_soul_wall_torch = foodblockcompatregistry.PEACH_SOUL_WALL_TORCH.get();
+        BlockModelBuilder peach_soul_wall_torch_model = models()
+        .withExistingParent("peach_soul_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", peach_soul_wall_torch_texture)
+        .texture("particle", peach_soul_wall_torch_texture);
+        getVariantBuilder(peach_soul_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("peach_soul_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", peach_soul_wall_torch_texture)
+                    .texture("particle", peach_soul_wall_torch_texture))
                 .rotationY(rotation)
                 .build();
             });
@@ -7178,6 +7467,50 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationY(rotation)
                       .build();
               });
+     //------------------------------------------------------------peach-----------------------------------------------------------------------
+          FurnaceBlock peach_furnace = foodblockcompatregistry.PEACH_FURNACE.get();
+          ResourceLocation peach_furnace_unlit_texture = modLoc("block/peach_furnace");
+          ResourceLocation peach_furnace_lit_texture = modLoc("block/peach_furnace_lit");
+          ResourceLocation peach_furnace_side = modLoc("block/peach_block");
+          
+          // Define the model for the unlit state
+          BlockModelBuilder peach_furnace_model_unlit = models()
+              .withExistingParent("peach_furnace_model_unlit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", peach_furnace_side)
+              .texture("top", peach_furnace_side)
+              .texture("front", peach_furnace_unlit_texture)
+              .texture("particle", peach_furnace_side);
+          
+          // Define the model for the lit state
+          BlockModelBuilder peach_furnace_model_lit = models()
+              .withExistingParent("peach_furnace_model_lit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", peach_furnace_side)
+              .texture("top", peach_furnace_side)
+              .texture("front", peach_furnace_lit_texture)
+              .texture("particle", peach_furnace_side);
+          
+          // Configure variants for the peach_furnace block
+          getVariantBuilder(peach_furnace)
+              .forAllStates(state -> {
+                  Boolean lit = state.getValue(BlockStateProperties.LIT);
+                  Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                  int rotation = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+
+                  ResourceLocation modelLocation = lit ? modLoc("block/peach_furnace_model_lit") : modLoc("block/peach_furnace_model_unlit");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotation)
+                      .build();
+              });
      //------------------------------------------------------------coconut-----------------------------------------------------------------------
           FurnaceBlock coconut_furnace = foodblockcompatregistry.COCONUT_FURNACE.get();
           ResourceLocation coconut_furnace_unlit_texture = modLoc("block/coconut_furnace");
@@ -8089,6 +8422,18 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .modelFile(models().getExistingFile(modelLocation))
                   .build();
           });
+     //------------------------------------------------------------peach-----------------------------------------------------------------------
+          foodpathtypeminislab peach_stone_path = foodblockcompatregistry.PEACH_STONE_PATH.get();
+
+          getVariantBuilder(peach_stone_path)
+          .forAllStates(state -> {
+
+              ResourceLocation modelLocation = modLoc("block/peach_stone_path");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .build();
+          });
      //------------------------------------------------------------coconut-----------------------------------------------------------------------
           foodpathtypeminislab coconut_stone_path = foodblockcompatregistry.COCONUT_STONE_PATH.get();
 
@@ -8517,6 +8862,54 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   };
 
                   ResourceLocation modelLocation = open ? modLoc("block/blackcherry_barrel_model_open") : modLoc("block/blackcherry_barrel_model_closed");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotationY)
+                      .rotationX(rotationX)
+                      .build();
+              });
+     //------------------------------------------------------------peach-----------------------------------------------------------------------
+          foodBarrel peach_barrel = foodblockcompatregistry.PEACH_BARREL.get();
+          ResourceLocation peach_barrel_closed_texture = modLoc("block/peach_barrel_top_closed");
+          ResourceLocation peach_barrel_open_texture = modLoc("block/peach_barrel_top_open");
+          ResourceLocation peach_barrel_side = modLoc("block/peach_barrel_side");
+          ResourceLocation peach_barrel_bottom = modLoc("block/peach_barrel_bottom");
+          
+          BlockModelBuilder peach_barrel_model_closed = models()
+              .withExistingParent("peach_barrel_model_closed", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", peach_barrel_side)
+              .texture("bottom", peach_barrel_bottom)
+              .texture("top", peach_barrel_closed_texture)
+              .texture("particle", peach_barrel_side);
+          
+          BlockModelBuilder peach_barrel_model_open = models()
+              .withExistingParent("peach_barrel_model_open", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", peach_barrel_side)
+              .texture("bottom", peach_barrel_bottom)
+              .texture("top", peach_barrel_open_texture)
+              .texture("particle", peach_barrel_side);
+          
+          getVariantBuilder(peach_barrel)
+              .forAllStates(state -> {
+                  Boolean open = state.getValue(BlockStateProperties.OPEN);
+                  Direction facing = state.getValue(BlockStateProperties.FACING);
+                  int rotationY = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+                  int rotationX = switch (facing) {
+                      case UP -> 0;
+                      case DOWN -> 180;
+                      default -> 90;
+                  };
+
+                  ResourceLocation modelLocation = open ? modLoc("block/peach_barrel_model_open") : modLoc("block/peach_barrel_model_closed");
               
                   return ConfiguredModel.builder()
                       .modelFile(models().getExistingFile(modelLocation))
@@ -9571,6 +9964,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .rotationY(rotationY)
                   .build();
           });
+     //------------------------------------------------------------peach-----------------------------------------------------------------------
+          foodChairBlock peachChair = foodblockcompatregistry.PEACH_CHAIR.get();
+
+          getVariantBuilder(peachChair)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/peach_chair");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
      //------------------------------------------------------------coconut-----------------------------------------------------------------------
           foodChairBlock coconutChair = foodblockcompatregistry.COCONUT_CHAIR.get();
 
@@ -10072,6 +10486,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/blackcherry_bed");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------peach-----------------------------------------------------------------------
+          foodBed peachBed = foodblockcompatregistry.PEACH_BED.get();
+
+          getVariantBuilder(peachBed)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/peach_bed");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -10675,6 +11110,51 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = open ? modLoc("block/medium_blackcherry_cabinet_open") : modLoc("block/medium_blackcherry_cabinet");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------peach-----------------------------------------------------------------------
+         //small
+          smallFoodCabinet peachCabinet = foodblockcompatregistry.SMALL_PEACH_CABINET.get();
+
+          getVariantBuilder(peachCabinet)
+          .forAllStates(state -> {
+              Boolean open = state.getValue(BlockStateProperties.OPEN);
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = open ? modLoc("block/peach_cabinet_open") : modLoc("block/peach_cabinet");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+         //medium
+          mediumFoodCabinet peachMediumCabinet = foodblockcompatregistry.MEDIUM_PEACH_CABINET.get();
+
+          getVariantBuilder(peachMediumCabinet)
+          .forAllStates(state -> {
+              Boolean open = state.getValue(BlockStateProperties.OPEN);
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = open ? modLoc("block/medium_peach_cabinet_open") : modLoc("block/medium_peach_cabinet");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))

@@ -1,7 +1,30 @@
 {
     "replace": false,
     "values": [
-    "goldfishmod02tastyfurniture:apple_sign_item",
-    "goldfishmod02tastyfurniture:potato_sign_item"
+      "goldfishmod03tastyfurniturecompataddon:elderberry_sign_item",
+      "goldfishmod03tastyfurniturecompataddon:juniper_sign_item",
+      "goldfishmod03tastyfurniturecompataddon:cherry_sign_item",
+      "goldfishmod03tastyfurniturecompataddon:blackcherry_sign_item",
+      "goldfishmod03tastyfurniturecompataddon:peach_sign_item",
+      "goldfishmod03tastyfurniturecompataddon:coconut_sign_item",
+      "goldfishmod03tastyfurniturecompataddon:orange_sign_item",
+      "goldfishmod03tastyfurniturecompataddon:tangerine_sign_item",
+      "goldfishmod03tastyfurniturecompataddon:kumquat_sign_item",
+      "goldfishmod03tastyfurniturecompataddon:persimmon_sign_item",
+      "goldfishmod03tastyfurniturecompataddon:satsuma_sign_item",
+      "goldfishmod03tastyfurniturecompataddon:mandarin_sign_item",
+      "goldfishmod03tastyfurniturecompataddon:lemon_sign_item",
+      "goldfishmod03tastyfurniturecompataddon:citron_sign_item",
+      "goldfishmod03tastyfurniturecompataddon:buddhashand_sign_item",
+      "goldfishmod03tastyfurniturecompataddon:lime_sign_item",
+      "goldfishmod03tastyfurniturecompataddon:keylime_sign_item",
+      "goldfishmod03tastyfurniturecompataddon:fingerlime_sign_item",
+      "goldfishmod03tastyfurniturecompataddon:grapefruit_sign_item",
+      "goldfishmod03tastyfurniturecompataddon:pomelo_sign_item",
+      "goldfishmod03tastyfurniturecompataddon:corn_sign_item",
+      "goldfishmod03tastyfurniturecompataddon:onion_sign_item",
+      "goldfishmod03tastyfurniturecompataddon:tomato_sign_item",
+      "goldfishmod03tastyfurniturecompataddon:pecan_sign_item",
+      "goldfishmod03tastyfurniturecompataddon:almond_sign_item"
     ]
   }

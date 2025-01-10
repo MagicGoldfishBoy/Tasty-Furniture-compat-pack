@@ -10,6 +10,8 @@
         {"id":"pamhc2trees:peachitem",
         "required": false},
         {"id":"fruitsdelight:peach",
+        "required": false},
+        {"id":"croptopia:peach",
         "required": false}
     ]
   }

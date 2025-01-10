@@ -331,6 +331,88 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("small_blackcherry_cabinet_item", modLoc("block/blackcherry_cabinet"));
        withExistingParent("medium_blackcherry_cabinet_item", modLoc("block/medium_blackcherry_cabinet"));
     //==============================================================================================================================================
+    //|                                                            Peach                                                                     |
+    //==============================================================================================================================================
+       //mush
+        withExistingParent("peach_mush", mcLoc("item/generated")).texture("layer0", "item/peach_mush");
+       //ingot
+        withExistingParent("peach_ingot", mcLoc("item/generated")).texture("layer0", "item/peach_ingot");
+       //nugget
+        withExistingParent("peach_nugget", mcLoc("item/generated")).texture("layer0", "item/peach_nugget");
+       //block
+        withExistingParent("peach_block_item", modLoc("block/peach_block"));
+       //bricks block
+        withExistingParent("peach_bricks_block_item", modLoc("block/peach_bricks_block"));
+       //chiseled block
+        withExistingParent("peach_chiseled_block_item", modLoc("block/peach_chiseled_block"));
+       //tiles block
+        withExistingParent("peach_tiles_block_item", modLoc("block/peach_tiles_block"));
+       //slab
+       slab("peach_slab_item", modLoc("block/peach_block"), modLoc("block/peach_block"), 
+       modLoc("block/peach_block"));
+       //bricks slab
+       slab("peach_bricks_slab_item", modLoc("block/peach_bricks_block"), modLoc("block/peach_bricks_block"), 
+       modLoc("block/peach_bricks_block"));
+       //stairs
+       stairs("peach_stairs_item", modLoc("block/peach_block"), modLoc("block/peach_block"), 
+       modLoc("block/peach_block"));
+       //bricks stairs
+       stairs("peach_bricks_stairs_item", modLoc("block/peach_bricks_block"), modLoc("block/peach_bricks_block"), 
+       modLoc("block/peach_bricks_block"));
+       //bars
+       withExistingParent("peach_bars_item", mcLoc("item/generated")).texture("layer0", "block/peach_bars");
+       //doors
+       withExistingParent("peach_door_item", mcLoc("item/generated")).texture("layer0", "item/peach_door_item");
+       //button
+       buttonInventory("peach_button_item", modLoc("block/peach_block"));
+       //fence
+       fenceInventory("peach_fence_item", modLoc("block/peach_block"));
+       //gate
+       withExistingParent("peach_gate_item", modLoc("block/peach_gate"));
+       //pressure plate
+       pressurePlate("peach_pressure_plate_item", modLoc("block/peach_block"));
+       //sign
+       withExistingParent("peach_sign_item", mcLoc("item/generated")).texture("layer0", "item/peach_sign");
+       //trapdoor
+       withExistingParent("peach_trapdoor_item", modLoc("block/peach_trapdoor_trapdoor_bottom"));
+       //lamp
+       withExistingParent("peach_lamp_item", modLoc("block/peach_lamp"));
+       //carpet
+       ResourceLocation peach_carpet_texture = modLoc("block/peach_carpet");
+       carpet("peach_carpet_item", peach_carpet_texture);
+       //lantern
+        //regular
+          withExistingParent("peach_lantern_item", modLoc("block/peach_lantern"));
+        //soul
+          withExistingParent("peach_soul_lantern_item", modLoc("block/peach_soul_lantern"));
+       //chain
+       withExistingParent("peach_chain_item", modLoc("block/peach_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
+       //ladder
+       withExistingParent("peach_ladder_item", modLoc("block/peach_ladder"));
+       //table
+       withExistingParent("peach_table_item", modLoc("block/peach_table"));
+       //torches
+        //regular
+        withExistingParent("peach_torch_item", modLoc("block/peach_torch"));
+        //redstone
+          withExistingParent("peach_redstone_torch_item", modLoc("block/peach_redstone_torch"));
+        //soul
+          withExistingParent("peach_soul_torch_item", modLoc("block/peach_soul_torch"));
+       //furnaces
+       withExistingParent("peach_furnace_item", modLoc("block/peach_furnace_model_unlit"));
+       //paths
+       withExistingParent("peach_stone_path_item", modLoc("block/peach_stone_path"));
+       //barrel
+       withExistingParent("peach_barrel_item", modLoc("block/peach_barrel_model_closed"));
+       //chair
+       withExistingParent("peach_chair_item", modLoc("block/peach_chair"));
+       //bed
+       withExistingParent("peach_bed_item", modLoc("block/peach_bed"));
+       //cabinet
+       withExistingParent("small_peach_cabinet_item", modLoc("block/peach_cabinet"));
+       withExistingParent("medium_peach_cabinet_item", modLoc("block/medium_peach_cabinet"));
+    //==============================================================================================================================================
     //|                                                              Coconut                                                                       |
     //==============================================================================================================================================
        //mush
