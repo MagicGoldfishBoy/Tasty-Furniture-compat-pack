@@ -1,0 +1,13 @@
+{
+    "replace": false,
+    "values": [
+        {"id":"c:blackberries",
+        "required": false},
+        {"id":"harvestcraft:blackberryitem",
+        "required": false},
+        {"id":"croptopia:blackberry",
+        "required": false},
+        {"id":"pamhc2crops:blackberryitem",
+        "required": false}
+    ]
+  }

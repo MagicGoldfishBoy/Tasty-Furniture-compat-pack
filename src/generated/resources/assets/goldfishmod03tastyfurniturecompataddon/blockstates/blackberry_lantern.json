@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "goldfishmod03tastyfurniturecompataddon:block/blackberry_lantern"
+    },
+    "hanging=true": {
+      "model": "goldfishmod03tastyfurniturecompataddon:block/blackberry_hanging_lantern"
+    }
+  }
+}

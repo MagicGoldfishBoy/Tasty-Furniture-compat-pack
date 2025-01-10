@@ -48,6 +48,10 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         Registries.ITEM,
         ResourceLocation.fromNamespaceAndPath("goldfishmod03tastyfurniturecompataddon", "juniper_berries")
         );
+       public static final TagKey<Item> BLACKBERRY_TAG = TagKey.create(
+        Registries.ITEM,
+        ResourceLocation.fromNamespaceAndPath("goldfishmod03tastyfurniturecompataddon", "blackberries")
+        );
        public static final TagKey<Item> CHERRY_TAG = TagKey.create(
         Registries.ITEM,
         ResourceLocation.fromNamespaceAndPath("goldfishmod03tastyfurniturecompataddon", "cherries")
@@ -214,7 +218,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', ELDERBERRY_TAG)
             .unlockedBy("has_mush_hammer", has(mushregistry.most_advanced_mushhammer.get()))
             .save(output, "elderberry_mush_from_most_advanced_mushhammer");
-  //--------------------------------------------------------------------------------------Juniper---------------------------------------------------------------------------------------------
+  //---------------------------------------------------------------------------------------Juniper-----------------------------------------------------------------------------------------------
           //regular
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.JUNIPER_MUSH.get(), 1)
             .pattern("ABB")
@@ -251,6 +255,43 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', JUNIPER_TAG)
             .unlockedBy("has_mush_hammer", has(mushregistry.most_advanced_mushhammer.get()))
             .save(output, "juniper_mush_from_most_advanced_mushhammer");
+  //--------------------------------------------------------------------------------------Blackberry---------------------------------------------------------------------------------------------
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.BLACKBERRY_MUSH.get(), 1)
+            .pattern("ABB")
+            .pattern("BB ")
+            .pattern("   ")
+            .define('A', mushregistry.mushhammer.get())
+            .define('B', BLACKBERRY_TAG)
+            .unlockedBy("has_mush_hammer", has(mushregistry.mushhammer.get()))
+            .save(output);
+          //advanced
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.BLACKBERRY_MUSH.get(), 2)
+            .pattern("ABB")
+            .pattern("BB ")
+            .pattern("   ")
+            .define('A', mushregistry.advanced_mushhammer.get())
+            .define('B', BLACKBERRY_TAG)
+            .unlockedBy("has_mush_hammer", has(mushregistry.advanced_mushhammer.get()))
+            .save(output, "blackberry_mush_from_advanced_mushhammer");
+          //more advanced
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.BLACKBERRY_MUSH.get(), 4)
+            .pattern("ABB")
+            .pattern("BB ")
+            .pattern("   ")
+            .define('A', mushregistry.more_advanced_mushhammer.get())
+            .define('B', BLACKBERRY_TAG)
+            .unlockedBy("has_mush_hammer", has(mushregistry.more_advanced_mushhammer.get()))
+            .save(output, "blackberry_mush_from_more_advanced_mushhammer");
+          //most advanced
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.BLACKBERRY_MUSH.get(), 8)
+            .pattern("ABB")
+            .pattern("BB ")
+            .pattern("   ")
+            .define('A', mushregistry.most_advanced_mushhammer.get())
+            .define('B', BLACKBERRY_TAG)
+            .unlockedBy("has_mush_hammer", has(mushregistry.most_advanced_mushhammer.get()))
+            .save(output, "blackberry_mush_from_most_advanced_mushhammer");
   //----------------------------------------------------------------------------------------Cherry-----------------------------------------------------------------------------------------------
           //regular
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.CHERRY_MUSH.get(), 1)
@@ -288,7 +329,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', CHERRY_TAG)
             .unlockedBy("has_mush_hammer", has(mushregistry.most_advanced_mushhammer.get()))
             .save(output, "cherry_mush_from_most_advanced_mushhammer");
-  //----------------------------------------------------------------------------------------Blackcherry-----------------------------------------------------------------------------------------------
+  //--------------------------------------------------------------------------------------Blackcherry--------------------------------------------------------------------------------------------
           //regular
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.BLACKCHERRY_MUSH.get(), 1)
             .pattern("ABB")
@@ -325,7 +366,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', BLACKCHERRY_TAG)
             .unlockedBy("has_mush_hammer", has(mushregistry.most_advanced_mushhammer.get()))
             .save(output, "blackcherry_mush_from_most_advanced_mushhammer");
-  //----------------------------------------------------------------------------------------Peach-----------------------------------------------------------------------------------------------
+  //----------------------------------------------------------------------------------------Peach------------------------------------------------------------------------------------------------
           //regular
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.PEACH_MUSH.get(), 1)
             .pattern("ABB")
@@ -362,7 +403,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', PEACH_TAG)
             .unlockedBy("has_mush_hammer", has(mushregistry.most_advanced_mushhammer.get()))
             .save(output, "peach_mush_from_most_advanced_mushhammer");
-  //----------------------------------------------------------------------------------------Coconut-----------------------------------------------------------------------------------------------
+  //----------------------------------------------------------------------------------------Coconut----------------------------------------------------------------------------------------------
           //regular
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.COCONUT_MUSH.get(), 1)
             .pattern("ABB")
@@ -436,7 +477,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', ORANGE_TAG)
             .unlockedBy("has_mush_hammer", has(mushregistry.most_advanced_mushhammer.get()))
             .save(output, "orange_mush_from_most_advanced_mushhammer");
-  //----------------------------------------------------------------------------------------Tangerine-----------------------------------------------------------------------------------------------
+  //---------------------------------------------------------------------------------------Tangerine---------------------------------------------------------------------------------------------
           //regular
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.TANGERINE_MUSH.get(), 1)
             .pattern("ABB")
@@ -473,7 +514,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', TANGERINE_TAG)
             .unlockedBy("has_mush_hammer", has(mushregistry.most_advanced_mushhammer.get()))
             .save(output, "tangerine_mush_from_most_advanced_mushhammer");
-  //----------------------------------------------------------------------------------------Kumquat-----------------------------------------------------------------------------------------------
+  //----------------------------------------------------------------------------------------Kumquat----------------------------------------------------------------------------------------------
           //regular
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.KUMQUAT_MUSH.get(), 1)
             .pattern("ABB")
@@ -510,7 +551,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', KUMQUAT_TAG)
             .unlockedBy("has_mush_hammer", has(mushregistry.most_advanced_mushhammer.get()))
             .save(output, "kumquat_mush_from_most_advanced_mushhammer");
-  //----------------------------------------------------------------------------------------Persimmon-----------------------------------------------------------------------------------------------
+  //---------------------------------------------------------------------------------------Persimmon---------------------------------------------------------------------------------------------
           //regular
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.PERSIMMON_MUSH.get(), 1)
             .pattern("ABB")
@@ -547,7 +588,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', PERSIMMON_TAG)
             .unlockedBy("has_mush_hammer", has(mushregistry.most_advanced_mushhammer.get()))
             .save(output, "persimmon_mush_from_most_advanced_mushhammer");
-  //----------------------------------------------------------------------------------------Satsuma-----------------------------------------------------------------------------------------------
+  //----------------------------------------------------------------------------------------Satsuma----------------------------------------------------------------------------------------------
           //regular
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.SATSUMA_MUSH.get(), 1)
             .pattern("ABB")
@@ -584,7 +625,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', SATSUMA_TAG)
             .unlockedBy("has_mush_hammer", has(mushregistry.most_advanced_mushhammer.get()))
             .save(output, "satsuma_mush_from_most_advanced_mushhammer");
-  //----------------------------------------------------------------------------------------Mandarin-----------------------------------------------------------------------------------------------
+  //---------------------------------------------------------------------------------------Mandarin----------------------------------------------------------------------------------------------
           //regular
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.MANDARIN_MUSH.get(), 1)
             .pattern("ABB")
@@ -621,7 +662,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', MANDARIN_TAG)
             .unlockedBy("has_mush_hammer", has(mushregistry.most_advanced_mushhammer.get()))
             .save(output, "mandarin_mush_from_most_advanced_mushhammer");
-  //----------------------------------------------------------------------------------------Lemon-----------------------------------------------------------------------------------------------
+  //----------------------------------------------------------------------------------------Lemon------------------------------------------------------------------------------------------------
           //regular
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.LEMON_MUSH.get(), 1)
             .pattern("ABB")
@@ -695,7 +736,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', CITRON_TAG)
             .unlockedBy("has_mush_hammer", has(mushregistry.most_advanced_mushhammer.get()))
             .save(output, "citron_mush_from_most_advanced_mushhammer");
-  //----------------------------------------------------------------------------------------Buddhashand-----------------------------------------------------------------------------------------------
+  //--------------------------------------------------------------------------------------Buddhashand--------------------------------------------------------------------------------------------
           //regular
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.BUDDHASHAND_MUSH.get(), 1)
             .pattern("ABB")
@@ -732,7 +773,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', BUDDHASHAND_TAG)
             .unlockedBy("has_mush_hammer", has(mushregistry.most_advanced_mushhammer.get()))
             .save(output, "buddhashand_mush_from_most_advanced_mushhammer");
-  //----------------------------------------------------------------------------------------Lime-----------------------------------------------------------------------------------------------
+  //-----------------------------------------------------------------------------------------Lime------------------------------------------------------------------------------------------------
           //regular
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.LIME_MUSH.get(), 1)
             .pattern("ABB")
@@ -769,7 +810,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', LIME_TAG)
             .unlockedBy("has_mush_hammer", has(mushregistry.most_advanced_mushhammer.get()))
             .save(output, "lime_mush_from_most_advanced_mushhammer");
-  //----------------------------------------------------------------------------------------Keylime-----------------------------------------------------------------------------------------------
+  //----------------------------------------------------------------------------------------Keylime----------------------------------------------------------------------------------------------
           //regular
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.KEYLIME_MUSH.get(), 1)
             .pattern("ABB")
@@ -806,7 +847,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', KEYLIME_TAG)
             .unlockedBy("has_mush_hammer", has(mushregistry.most_advanced_mushhammer.get()))
             .save(output, "keylime_mush_from_most_advanced_mushhammer");
-  //----------------------------------------------------------------------------------------Fingerlime-----------------------------------------------------------------------------------------------
+  //--------------------------------------------------------------------------------------Fingerlime---------------------------------------------------------------------------------------------
           //regular
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.FINGERLIME_MUSH.get(), 1)
             .pattern("ABB")
@@ -843,7 +884,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', FINGERLIME_TAG)
             .unlockedBy("has_mush_hammer", has(mushregistry.most_advanced_mushhammer.get()))
             .save(output, "fingerlime_mush_from_most_advanced_mushhammer");
-  //----------------------------------------------------------------------------------------Grapefruit-----------------------------------------------------------------------------------------------
+  //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
           //regular
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.GRAPEFRUIT_MUSH.get(), 1)
             .pattern("ABB")
@@ -917,7 +958,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', POMELO_TAG)
             .unlockedBy("has_mush_hammer", has(mushregistry.most_advanced_mushhammer.get()))
             .save(output, "pomelo_mush_from_most_advanced_mushhammer");
-  //----------------------------------------------------------------------------------------Corn-----------------------------------------------------------------------------------------------
+  //-----------------------------------------------------------------------------------------Corn------------------------------------------------------------------------------------------------
           //regular
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.CORN_MUSH.get(), 1)
             .pattern("ABB")
@@ -954,7 +995,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', CORN_TAG)
             .unlockedBy("has_mush_hammer", has(mushregistry.most_advanced_mushhammer.get()))
             .save(output, "corn_mush_from_most_advanced_mushhammer");
-  //----------------------------------------------------------------------------------------Onion-----------------------------------------------------------------------------------------------
+  //----------------------------------------------------------------------------------------Onion------------------------------------------------------------------------------------------------
           //regular
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.ONION_MUSH.get(), 1)
             .pattern("ABB")
@@ -1028,7 +1069,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', TOMATO_TAG)
             .unlockedBy("has_mush_hammer", has(mushregistry.most_advanced_mushhammer.get()))
             .save(output, "tomato_mush_from_most_advanced_mushhammer");
-  //----------------------------------------------------------------------------------------Pecan-----------------------------------------------------------------------------------------------
+  //----------------------------------------------------------------------------------------Pecan------------------------------------------------------------------------------------------------
           //regular
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.PECAN_MUSH.get(), 1)
             .pattern("ABB")
@@ -1136,7 +1177,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .requires(foodblockcompatitemregistry.ELDERBERRY_BLOCK_ITEM.get())
             .unlockedBy("has_elderberry_block", has(foodblockcompatitemregistry.ELDERBERRY_BLOCK_ITEM.get()))
             .save(output, "elderberry_ingot_from_unpacking");
-  //--------------------------------------------------------------------------------------Juniper---------------------------------------------------------------------------------------------
+  //---------------------------------------------------------------------------------------Juniper-----------------------------------------------------------------------------------------------
           //crafting
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotcompatregistry.JUNIPER_INGOT.get(), 1)
             .pattern("AAA")
@@ -1168,6 +1209,38 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .requires(foodblockcompatitemregistry.JUNIPER_BLOCK_ITEM.get())
             .unlockedBy("has_juniper_block", has(foodblockcompatitemregistry.JUNIPER_BLOCK_ITEM.get()))
             .save(output, "juniper_ingot_from_unpacking");
+  //--------------------------------------------------------------------------------------Blackberry---------------------------------------------------------------------------------------------
+          //crafting
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotcompatregistry.BLACKBERRY_INGOT.get(), 1)
+            .pattern("AAA")
+            .pattern("AAA")
+            .pattern("AAA")
+            .define('A', nuggetcompatregistry.BLACKBERRY_NUGGET.get())
+            .unlockedBy("has_blackberry_nugget", has(nuggetcompatregistry.BLACKBERRY_NUGGET.get()))
+            .save(output, "blackberry_ingot_from_crafting");
+          //smelting
+            SimpleCookingRecipeBuilder.smelting(Ingredient.of(mushcompatregistry.BLACKBERRY_MUSH.get()),
+            RecipeCategory.MISC,
+            ingotcompatregistry.BLACKBERRY_INGOT.get(),
+            1.0f,
+            200
+            )
+            .unlockedBy("has_blackberry_mush", has(mushcompatregistry.BLACKBERRY_MUSH.get()))
+            .save(output, "blackberry_ingot_from_smelting");
+          //blasting
+            SimpleCookingRecipeBuilder.blasting(Ingredient.of(mushcompatregistry.BLACKBERRY_MUSH.get()),
+            RecipeCategory.MISC,
+            ingotcompatregistry.BLACKBERRY_INGOT.get(),
+            1.0f,
+            100
+            )
+            .unlockedBy("has_blackberry_mush", has(mushcompatregistry.BLACKBERRY_MUSH.get()))
+            .save(output, "blackberry_ingot_from_blasting");
+          //unpacking
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotcompatregistry.BLACKBERRY_INGOT.get(), 9)
+            .requires(foodblockcompatitemregistry.BLACKBERRY_BLOCK_ITEM.get())
+            .unlockedBy("has_blackberry_block", has(foodblockcompatitemregistry.BLACKBERRY_BLOCK_ITEM.get()))
+            .save(output, "blackberry_ingot_from_unpacking");
   //----------------------------------------------------------------------------------------Cherry-----------------------------------------------------------------------------------------------
           //crafting
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotcompatregistry.CHERRY_INGOT.get(), 1)
@@ -1916,6 +1989,11 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .requires(ingotcompatregistry.JUNIPER_INGOT.get())
         .unlockedBy("has_juniper_ingot", has(ingotcompatregistry.JUNIPER_INGOT.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Blackberry---------------------------------------------------------------------------------------------
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, nuggetcompatregistry.BLACKBERRY_NUGGET.get(), 9)
+        .requires(ingotcompatregistry.BLACKBERRY_INGOT.get())
+        .unlockedBy("has_blackberry_ingot", has(ingotcompatregistry.BLACKBERRY_INGOT.get()))
+        .save(output);
   //----------------------------------------------------------------------------------------Cherry-----------------------------------------------------------------------------------------------
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, nuggetcompatregistry.CHERRY_NUGGET.get(), 9)
         .requires(ingotcompatregistry.CHERRY_INGOT.get())
@@ -2133,6 +2211,56 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.JUNIPER_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockcompatitemregistry.JUNIPER_TILES_BLOCK_ITEM.get())
           .unlockedBy("has_juniper_block", has(foodblockcompatitemregistry.JUNIPER_BLOCK_ITEM.get()))
           .save(output, "juniper_tiles_block_from_juniper_block_stonecutting");
+  //--------------------------------------------------------------------------------------Blackberry---------------------------------------------------------------------------------------------
+        //plain
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BLACKBERRY_BLOCK_ITEM.get(), 1)
+          .pattern("AAA")
+          .pattern("AAA")
+          .pattern("AAA")
+          .define('A', ingotcompatregistry.BLACKBERRY_INGOT.get())
+          .unlockedBy("has_blackberry_ingot", has(ingotcompatregistry.BLACKBERRY_INGOT.get()))
+          .save(output); 
+        //bricks
+         //crafting
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BLACKBERRY_BRICKS_BLOCK_ITEM.get(), 4)
+          .pattern("AA ")
+          .pattern("AA ")
+          .pattern("   ")
+          .define('A', foodblockcompatitemregistry.BLACKBERRY_BLOCK_ITEM.get())
+          .unlockedBy("has_blackberry_block", has(foodblockcompatitemregistry.BLACKBERRY_BLOCK_ITEM.get()))
+          .save(output); 
+         //stonecutting     
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.BLACKBERRY_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockcompatitemregistry.BLACKBERRY_BRICKS_BLOCK_ITEM.get())
+          .unlockedBy("has_blackberry_block", has(foodblockcompatitemregistry.BLACKBERRY_BLOCK_ITEM.get()))
+          .save(output, "blackberry_bricks_block_from_blackberry_block_stonecutting");
+
+        //chiseled
+         //crafting
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BLACKBERRY_CHISELED_BLOCK_ITEM.get())
+          .pattern("   ")
+          .pattern(" A ")
+          .pattern(" A ")
+          .define('A', foodblockcompatitemregistry.BLACKBERRY_SLAB_ITEM.get())
+          .unlockedBy("has_blackberry_slab", has(foodblockcompatitemregistry.BLACKBERRY_SLAB_ITEM.get()))
+          .save(output);
+         //stonecutting     
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.BLACKBERRY_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockcompatitemregistry.BLACKBERRY_CHISELED_BLOCK_ITEM.get())
+          .unlockedBy("has_blackberry_block", has(foodblockcompatitemregistry.BLACKBERRY_BLOCK_ITEM.get()))
+          .save(output, "blackberry_chiseled_block_from_blackberry_block_stonecutting");
+
+        //tiles
+         //crafting
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BLACKBERRY_TILES_BLOCK_ITEM.get(),2)
+          .pattern("   ")
+          .pattern("AA ")
+          .pattern("AA ")
+          .define('A', foodblockcompatitemregistry.BLACKBERRY_SLAB_ITEM.get())
+          .unlockedBy("has_blackberry_slab", has(foodblockcompatitemregistry.BLACKBERRY_SLAB_ITEM.get()))
+          .save(output);
+         //stonecutting     
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.BLACKBERRY_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockcompatitemregistry.BLACKBERRY_TILES_BLOCK_ITEM.get())
+          .unlockedBy("has_blackberry_block", has(foodblockcompatitemregistry.BLACKBERRY_BLOCK_ITEM.get()))
+          .save(output, "blackberry_tiles_block_from_blackberry_block_stonecutting");
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
         //plain
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_BLOCK_ITEM.get(), 1)
@@ -3313,6 +3441,20 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           foodblockcompatitemregistry.JUNIPER_BRICKS_SLAB_ITEM.get(), 2)
           .unlockedBy("has_juniper_bricks_block", has(foodblockcompatitemregistry.JUNIPER_BRICKS_BLOCK_ITEM.get()))
           .save(output, "juniper_bricks_slab_from_juniper_bricks_block_stonecutting");
+  //--------------------------------------------------------------------------------------Blackberry---------------------------------------------------------------------------------------------
+        //plain
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BLACKBERRY_SLAB_ITEM.get())
+          .pattern("   ")
+          .pattern("   ")
+          .pattern("AAA")
+          .define('A', ingotcompatregistry.BLACKBERRY_INGOT.get())
+          .unlockedBy("has_blackberry_ingot", has(ingotcompatregistry.BLACKBERRY_INGOT.get()))
+          .save(output);
+        //bricks
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.BLACKBERRY_BRICKS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, 
+          foodblockcompatitemregistry.BLACKBERRY_BRICKS_SLAB_ITEM.get(), 2)
+          .unlockedBy("has_blackberry_bricks_block", has(foodblockcompatitemregistry.BLACKBERRY_BRICKS_BLOCK_ITEM.get()))
+          .save(output, "blackberry_bricks_slab_from_blackberry_bricks_block_stonecutting");
   //----------------------------------------------------------------------------------------Cherry-----------------------------------------------------------------------------------------------
         //plain
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_SLAB_ITEM.get())
@@ -3665,6 +3807,20 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           foodblockcompatitemregistry.JUNIPER_BRICKS_STAIRS_ITEM.get(), 1)
           .unlockedBy("has_juniper_bricks_block", has(foodblockcompatitemregistry.JUNIPER_BRICKS_BLOCK_ITEM.get()))
           .save(output, "juniper_bricks_stairs_from_juniper_bricks_block_stonecutting");
+  //--------------------------------------------------------------------------------------Blackberry---------------------------------------------------------------------------------------------
+        //plain
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BLACKBERRY_STAIRS_ITEM.get())
+          .pattern("A  ")
+          .pattern("AA ")
+          .pattern("AAA")
+          .define('A', ingotcompatregistry.BLACKBERRY_INGOT.get())
+          .unlockedBy("has_blackberry_ingot", has(ingotcompatregistry.BLACKBERRY_INGOT.get()))
+          .save(output);
+        //bricks
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.BLACKBERRY_BRICKS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, 
+          foodblockcompatitemregistry.BLACKBERRY_BRICKS_STAIRS_ITEM.get(), 1)
+          .unlockedBy("has_blackberry_bricks_block", has(foodblockcompatitemregistry.BLACKBERRY_BRICKS_BLOCK_ITEM.get()))
+          .save(output, "blackberry_bricks_stairs_from_blackberry_bricks_block_stonecutting");
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
         //plain
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_STAIRS_ITEM.get())
@@ -4005,6 +4161,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', nuggetcompatregistry.JUNIPER_NUGGET.get())
          .unlockedBy("has_juniper_nugget", has(nuggetcompatregistry.JUNIPER_NUGGET.get()))
          .save(output);
+  //--------------------------------------------------------------------------------------Blackberry---------------------------------------------------------------------------------------------
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BLACKBERRY_BARS_ITEM.get(), 8)
+         .pattern("   ")
+         .pattern("AAA")
+         .pattern("AAA")
+         .define('A', nuggetcompatregistry.BLACKBERRY_NUGGET.get())
+         .unlockedBy("has_blackberry_nugget", has(nuggetcompatregistry.BLACKBERRY_NUGGET.get()))
+         .save(output);
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_BARS_ITEM.get(), 8)
          .pattern("   ")
@@ -4207,6 +4371,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', ingotcompatregistry.JUNIPER_INGOT.get())
          .unlockedBy("has_juniper_nugget", has(ingotcompatregistry.JUNIPER_INGOT.get()))
          .save(output);
+  //--------------------------------------------------------------------------------------Blackberry---------------------------------------------------------------------------------------------
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BLACKBERRY_DOOR_ITEM.get(), 3)
+         .pattern("AA ")
+         .pattern("AA ")
+         .pattern("AA ")
+         .define('A', ingotcompatregistry.BLACKBERRY_INGOT.get())
+         .unlockedBy("has_blackberry_nugget", has(ingotcompatregistry.BLACKBERRY_INGOT.get()))
+         .save(output);
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_DOOR_ITEM.get(), 3)
          .pattern("AA ")
@@ -4403,6 +4575,11 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
        .requires(nuggetcompatregistry.JUNIPER_NUGGET.get())
        .unlockedBy("has_juniper_nugget", has(nuggetcompatregistry.JUNIPER_NUGGET.get()))
        .save(output);
+  //--------------------------------------------------------------------------------------Blackberry---------------------------------------------------------------------------------------------
+       ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.BLACKBERRY_BUTTON_ITEM.get(), 1)
+       .requires(nuggetcompatregistry.BLACKBERRY_NUGGET.get())
+       .unlockedBy("has_blackberry_nugget", has(nuggetcompatregistry.BLACKBERRY_NUGGET.get()))
+       .save(output);
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_BUTTON_ITEM.get(), 1)
        .requires(nuggetcompatregistry.CHERRY_NUGGET.get())
@@ -4557,6 +4734,25 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .define('A', ingotcompatregistry.JUNIPER_INGOT.get())
           .define('B', Items.STICK)
           .unlockedBy("has_juniper_ingot", has(ingotcompatregistry.JUNIPER_INGOT.get()))
+          .save(output);        
+  //--------------------------------------------------------------------------------------Blackberry---------------------------------------------------------------------------------------------
+        //fence
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BLACKBERRY_FENCE_ITEM.get(), 3)
+          .pattern("ABA")
+          .pattern("ABA")
+          .pattern("   ")
+          .define('A', ingotcompatregistry.BLACKBERRY_INGOT.get())
+          .define('B', Items.STICK)
+          .unlockedBy("has_blackberry_ingot", has(ingotcompatregistry.BLACKBERRY_INGOT.get()))
+          .save(output);        
+        //gate
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BLACKBERRY_GATE_ITEM.get(), 1)
+          .pattern("BAB")
+          .pattern("BAB")
+          .pattern("   ")
+          .define('A', ingotcompatregistry.BLACKBERRY_INGOT.get())
+          .define('B', Items.STICK)
+          .unlockedBy("has_blackberry_ingot", has(ingotcompatregistry.BLACKBERRY_INGOT.get()))
           .save(output);        
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
         //fence
@@ -5013,6 +5209,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', foodblockcompatitemregistry.JUNIPER_BLOCK_ITEM.get())
         .unlockedBy("has_juniper_block",  has(foodblockcompatitemregistry.JUNIPER_BLOCK_ITEM.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Blackberry---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BLACKBERRY_PRESSURE_PLATE_ITEM.get())
+        .pattern("   ")
+        .pattern("AA ")
+        .pattern("   ")
+        .define('A', foodblockcompatitemregistry.BLACKBERRY_BLOCK_ITEM.get())
+        .unlockedBy("has_blackberry_block",  has(foodblockcompatitemregistry.BLACKBERRY_BLOCK_ITEM.get()))
+        .save(output);
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_PRESSURE_PLATE_ITEM.get())
         .pattern("   ")
@@ -5216,6 +5420,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', ingotcompatregistry.JUNIPER_INGOT.get())
         .define('B', Items.STICK)
         .unlockedBy("has_juniper_ingot",  has(ingotcompatregistry.JUNIPER_INGOT.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Blackberry---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BLACKBERRY_SIGN_ITEM.get(), 3)
+        .pattern("AAA")
+        .pattern("AAA")
+        .pattern(" B ")
+        .define('A', ingotcompatregistry.BLACKBERRY_INGOT.get())
+        .define('B', Items.STICK)
+        .unlockedBy("has_blackberry_ingot",  has(ingotcompatregistry.BLACKBERRY_INGOT.get()))
         .save(output);
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_SIGN_ITEM.get(), 3)
@@ -5442,6 +5655,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', ingotcompatregistry.JUNIPER_INGOT.get())
         .unlockedBy("has_juniper_ingot", has(ingotcompatregistry.JUNIPER_INGOT.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Blackberry---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BLACKBERRY_TRAPDOOR_ITEM.get())
+        .pattern("   ")
+        .pattern("AAA")
+        .pattern("AAA")
+        .define('A', ingotcompatregistry.BLACKBERRY_INGOT.get())
+        .unlockedBy("has_blackberry_ingot", has(ingotcompatregistry.BLACKBERRY_INGOT.get()))
+        .save(output);
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_TRAPDOOR_ITEM.get())
         .pattern("   ")
@@ -5643,6 +5864,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .pattern("ABA")
         .pattern("AAA")
         .define('A', ingotcompatregistry.JUNIPER_INGOT.get())
+        .define('B', foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get())
+        .unlockedBy("has_glow_berry_block", has(foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Blackberry---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BLACKBERRY_LAMP_ITEM.get())
+        .pattern("AAA")
+        .pattern("ABA")
+        .pattern("AAA")
+        .define('A', ingotcompatregistry.BLACKBERRY_INGOT.get())
         .define('B', foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get())
         .unlockedBy("has_glow_berry_block", has(foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get()))
         .save(output);
@@ -5871,6 +6101,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', nuggetcompatregistry.JUNIPER_NUGGET.get())
         .unlockedBy("has_juniper_nugget", has(nuggetcompatregistry.JUNIPER_NUGGET.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Blackberry---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BLACKBERRY_CARPET_ITEM.get(), 3)
+        .pattern("   ")
+        .pattern("AA ")
+        .pattern("AA ")
+        .define('A', nuggetcompatregistry.BLACKBERRY_NUGGET.get())
+        .unlockedBy("has_blackberry_nugget", has(nuggetcompatregistry.BLACKBERRY_NUGGET.get()))
+        .save(output);
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_CARPET_ITEM.get(), 3)
         .pattern("   ")
@@ -6094,6 +6332,25 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('A', nuggetcompatregistry.JUNIPER_NUGGET.get())
             .define('B', Items.SOUL_TORCH)
             .unlockedBy("has_juniper_nugget", has(nuggetcompatregistry.JUNIPER_NUGGET.get()))
+            .save(output);
+  //--------------------------------------------------------------------------------------Blackberry---------------------------------------------------------------------------------------------
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BLACKBERRY_LANTERN_ITEM.get())
+            .pattern("AAA")
+            .pattern("ABA")
+            .pattern("AAA")
+            .define('A', nuggetcompatregistry.BLACKBERRY_NUGGET.get())
+            .define('B', Items.TORCH)
+            .unlockedBy("has_blackberry_nugget", has(nuggetcompatregistry.BLACKBERRY_NUGGET.get()))
+            .save(output);
+          //soul
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BLACKBERRY_SOUL_LANTERN_ITEM.get())
+            .pattern("AAA")
+            .pattern("ABA")
+            .pattern("AAA")
+            .define('A', nuggetcompatregistry.BLACKBERRY_NUGGET.get())
+            .define('B', Items.SOUL_TORCH)
+            .unlockedBy("has_blackberry_nugget", has(nuggetcompatregistry.BLACKBERRY_NUGGET.get()))
             .save(output);
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
           //regular
@@ -6552,6 +6809,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('B', ingotcompatregistry.JUNIPER_INGOT.get())
         .unlockedBy("has_juniper_ingot", has(ingotcompatregistry.JUNIPER_INGOT.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Blackberry---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BLACKBERRY_CHAIN_ITEM.get())
+        .pattern(" A ")
+        .pattern(" B ")
+        .pattern(" A ")
+        .define('A', nuggetcompatregistry.BLACKBERRY_NUGGET.get())
+        .define('B', ingotcompatregistry.BLACKBERRY_INGOT.get())
+        .unlockedBy("has_blackberry_ingot", has(ingotcompatregistry.BLACKBERRY_INGOT.get()))
+        .save(output);
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_CHAIN_ITEM.get())
         .pattern(" A ")
@@ -6779,6 +7045,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('B', ingotcompatregistry.JUNIPER_INGOT.get())
         .unlockedBy("has_juniper_ingot", has(ingotcompatregistry.JUNIPER_INGOT.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Blackberry---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BLACKBERRY_LADDER_ITEM.get(), 3)
+        .pattern("A A")
+        .pattern("ABA")
+        .pattern("A A")
+        .define('A', Items.STICK)
+        .define('B', ingotcompatregistry.BLACKBERRY_INGOT.get())
+        .unlockedBy("has_blackberry_ingot", has(ingotcompatregistry.BLACKBERRY_INGOT.get()))
+        .save(output);
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_LADDER_ITEM.get(), 3)
         .pattern("A A")
@@ -7005,6 +7280,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', foodblockcompatitemregistry.JUNIPER_SLAB_ITEM.get())
         .define('B', ingotcompatregistry.JUNIPER_INGOT.get())
         .unlockedBy("has_juniper_ingot", has(ingotcompatregistry.JUNIPER_INGOT.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Blackberry---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BLACKBERRY_TABLE_ITEM.get())
+        .pattern("AAA")
+        .pattern("B B")
+        .pattern("B B")
+        .define('A', foodblockcompatitemregistry.BLACKBERRY_SLAB_ITEM.get())
+        .define('B', ingotcompatregistry.BLACKBERRY_INGOT.get())
+        .unlockedBy("has_blackberry_ingot", has(ingotcompatregistry.BLACKBERRY_INGOT.get()))
         .save(output);
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_TABLE_ITEM.get())
@@ -7276,6 +7560,37 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', nuggetcompatregistry.JUNIPER_NUGGET.get())
             .define('C', Items.SOUL_SAND)
             .unlockedBy("has_juniper_nugget", has(nuggetcompatregistry.JUNIPER_NUGGET.get()))
+            .save(output);
+  //--------------------------------------------------------------------------------------Blackberry---------------------------------------------------------------------------------------------
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BLACKBERRY_TORCH_ITEM.get(), 4)
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetcompatregistry.BLACKBERRY_NUGGET.get())
+            .define('C', ItemTags.COALS)
+            .unlockedBy("has_blackberry_nugget", has(nuggetcompatregistry.BLACKBERRY_NUGGET.get()))
+            .save(output);
+          //redstone
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BLACKBERRY_REDSTONE_TORCH_ITEM.get())
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetcompatregistry.BLACKBERRY_NUGGET.get())
+            .define('C', Items.REDSTONE)
+            .unlockedBy("has_blackberry_nugget", has(nuggetcompatregistry.BLACKBERRY_NUGGET.get()))
+            .save(output);
+          //soul
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BLACKBERRY_SOUL_TORCH_ITEM.get(), 4)
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetcompatregistry.BLACKBERRY_NUGGET.get())
+            .define('C', Items.SOUL_SAND)
+            .unlockedBy("has_blackberry_nugget", has(nuggetcompatregistry.BLACKBERRY_NUGGET.get()))
             .save(output);
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
           //regular
@@ -8010,6 +8325,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('B', Items.COBBLESTONE)
         .unlockedBy("has_juniper_ingot", has(ingotcompatregistry.JUNIPER_INGOT.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Blackberry---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BLACKBERRY_FURNACE_ITEM.get())
+        .pattern("ABA")
+        .pattern("B B")
+        .pattern("ABA")
+        .define('A', ingotcompatregistry.BLACKBERRY_INGOT.get())
+        .define('B', Items.COBBLESTONE)
+        .unlockedBy("has_blackberry_ingot", has(ingotcompatregistry.BLACKBERRY_INGOT.get()))
+        .save(output);
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_FURNACE_ITEM.get())
         .pattern("ABA")
@@ -8231,6 +8555,12 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .requires(Items.STONE)
         .unlockedBy("has_juniper_block", has(foodblockcompatitemregistry.JUNIPER_BLOCK_ITEM.get()))
         .save(output);        
+  //--------------------------------------------------------------------------------------Blackberry---------------------------------------------------------------------------------------------
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.BLACKBERRY_STONE_PATH_ITEM.get(), 6)
+        .requires(foodblockcompatitemregistry.BLACKBERRY_BLOCK_ITEM.get())
+        .requires(Items.STONE)
+        .unlockedBy("has_blackberry_block", has(foodblockcompatitemregistry.BLACKBERRY_BLOCK_ITEM.get()))
+        .save(output);        
   //--------------------------------------------------------------------------------------Blackcherry---------------------------------------------------------------------------------------------
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.BLACKCHERRY_STONE_PATH_ITEM.get(), 6)
         .requires(foodblockcompatitemregistry.BLACKCHERRY_BLOCK_ITEM.get())
@@ -8382,6 +8712,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', foodblockcompatitemregistry.JUNIPER_BLOCK_ITEM.get())
         .define('B', foodblockcompatitemregistry.JUNIPER_SLAB_ITEM.get())
         .unlockedBy("has_juniper_block", has(foodblockcompatitemregistry.JUNIPER_BLOCK_ITEM.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Blackberry---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BLACKBERRY_BARREL_ITEM.get())
+        .pattern("ABA")
+        .pattern("A A")
+        .pattern("ABA")
+        .define('A', foodblockcompatitemregistry.BLACKBERRY_BLOCK_ITEM.get())
+        .define('B', foodblockcompatitemregistry.BLACKBERRY_SLAB_ITEM.get())
+        .unlockedBy("has_blackberry_block", has(foodblockcompatitemregistry.BLACKBERRY_BLOCK_ITEM.get()))
         .save(output);
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_BARREL_ITEM.get())
@@ -8609,6 +8948,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', ingotcompatregistry.JUNIPER_INGOT.get())
         .define('B', foodblockcompatitemregistry.JUNIPER_SLAB_ITEM.get())
         .unlockedBy("has_juniper_slab", has(foodblockcompatitemregistry.JUNIPER_SLAB_ITEM.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Blackberry---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BLACKBERRY_CHAIR_ITEM.get())
+        .pattern("AAA")
+        .pattern("BBB")
+        .pattern("A A")
+        .define('A', ingotcompatregistry.BLACKBERRY_INGOT.get())
+        .define('B', foodblockcompatitemregistry.BLACKBERRY_SLAB_ITEM.get())
+        .unlockedBy("has_blackberry_slab", has(foodblockcompatitemregistry.BLACKBERRY_SLAB_ITEM.get()))
         .save(output);
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_CHAIR_ITEM.get())
@@ -8838,6 +9186,16 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
            .define('B', foodblockcompatitemregistry.JUNIPER_SLAB_ITEM.get())
            .define('C', foodblockcompatitemregistry.JUNIPER_CARPET_ITEM.get())
            .unlockedBy("has_juniper_ingot", has(ingotcompatregistry.JUNIPER_INGOT.get()))
+           .save(output);
+  //--------------------------------------------------------------------------------------Blackberry---------------------------------------------------------------------------------------------
+           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BLACKBERRY_BED_ITEM.get())
+           .pattern("CCC")
+           .pattern("BBB")
+           .pattern("A A")
+           .define('A', ingotcompatregistry.BLACKBERRY_INGOT.get())
+           .define('B', foodblockcompatitemregistry.BLACKBERRY_SLAB_ITEM.get())
+           .define('C', foodblockcompatitemregistry.BLACKBERRY_CARPET_ITEM.get())
+           .unlockedBy("has_blackberry_ingot", has(ingotcompatregistry.BLACKBERRY_INGOT.get()))
            .save(output);
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_BED_ITEM.get())
@@ -9110,6 +9468,26 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('B', Items.IRON_INGOT)
          .define('C', foodblockcompatitemregistry.SMALL_JUNIPER_CABINET_ITEM.get())
          .unlockedBy("has_juniper_slab", has(foodblockcompatitemregistry.JUNIPER_SLAB_ITEM.get()))
+         .save(output);
+  //--------------------------------------------------------------------------------------Blackberry---------------------------------------------------------------------------------------------
+       //small
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.SMALL_BLACKBERRY_CABINET_ITEM.get())
+         .pattern("AAA")
+         .pattern("B B")
+         .pattern("AAA")
+         .define('A', foodblockcompatitemregistry.BLACKBERRY_SLAB_ITEM.get())
+         .define('B', Items.IRON_INGOT)
+         .unlockedBy("has_blackberry_slab", has(foodblockcompatitemregistry.BLACKBERRY_SLAB_ITEM.get()))
+         .save(output);
+       //medium
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.MEDIUM_BLACKBERRY_CABINET_ITEM.get())
+         .pattern("AAA")
+         .pattern("BCB")
+         .pattern("AAA")
+         .define('A', foodblockcompatitemregistry.BLACKBERRY_SLAB_ITEM.get())
+         .define('B', Items.IRON_INGOT)
+         .define('C', foodblockcompatitemregistry.SMALL_BLACKBERRY_CABINET_ITEM.get())
+         .unlockedBy("has_blackberry_slab", has(foodblockcompatitemregistry.BLACKBERRY_SLAB_ITEM.get()))
          .save(output);
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
        //small

@@ -89,6 +89,19 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........tiles
           net.minecraft.world.level.block.Block juniper_tiles_block = foodblockcompatregistry.JUNIPER_TILES_BLOCK.get();
           simpleBlock(juniper_tiles_block);
+     //------------------------------------------------------------blackberry-----------------------------------------------------------------------
+      //.........plain
+          net.minecraft.world.level.block.Block blackberry_block = foodblockcompatregistry.BLACKBERRY_BLOCK.get();
+          simpleBlock(blackberry_block);
+      //.........bricks
+          net.minecraft.world.level.block.Block blackberry_bricks_block = foodblockcompatregistry.BLACKBERRY_BRICKS_BLOCK.get();
+          simpleBlock(blackberry_bricks_block);
+      //.........chiseled
+          net.minecraft.world.level.block.Block blackberry_chiseled_block = foodblockcompatregistry.BLACKBERRY_CHISELED_BLOCK.get();
+          simpleBlock(blackberry_chiseled_block);
+      //.........tiles
+          net.minecraft.world.level.block.Block blackberry_tiles_block = foodblockcompatregistry.BLACKBERRY_TILES_BLOCK.get();
+          simpleBlock(blackberry_tiles_block);
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
       //.........plain
           net.minecraft.world.level.block.Block cherry_block = foodblockcompatregistry.CHERRY_BLOCK.get();
@@ -409,6 +422,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
           SlabBlock juniper_bricks_slab = foodblockcompatregistry.JUNIPER_BRICKS_SLAB.get();
           ResourceLocation juniper_bricks_block_texture = modLoc("block/juniper_bricks_block");
           slabBlock(juniper_bricks_slab, juniper_bricks_block_texture, juniper_bricks_block_texture);
+     //------------------------------------------------------------blackberry-----------------------------------------------------------------------
+      //.........plain
+          SlabBlock blackberry_slab = foodblockcompatregistry.BLACKBERRY_SLAB.get();
+          ResourceLocation blackberry_block_texture = modLoc("block/blackberry_block");
+          slabBlock(blackberry_slab, blackberry_block_texture, blackberry_block_texture);
+      //.........bricks
+          SlabBlock blackberry_bricks_slab = foodblockcompatregistry.BLACKBERRY_BRICKS_SLAB.get();
+          ResourceLocation blackberry_bricks_block_texture = modLoc("block/blackberry_bricks_block");
+          slabBlock(blackberry_bricks_slab, blackberry_bricks_block_texture, blackberry_bricks_block_texture);
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
       //.........plain
           SlabBlock cherry_slab = foodblockcompatregistry.CHERRY_SLAB.get();
@@ -633,6 +655,13 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........bricks
           StairBlock juniper_bricks_stairs = foodblockcompatregistry.JUNIPER_BRICKS_STAIRS.get();
           stairsBlock(juniper_bricks_stairs, juniper_bricks_block_texture);
+     //------------------------------------------------------------blackberry-----------------------------------------------------------------------
+      //.........plain
+          StairBlock blackberry_stairs = foodblockcompatregistry.BLACKBERRY_STAIRS.get();
+          stairsBlock(blackberry_stairs, blackberry_block_texture);
+      //.........bricks
+          StairBlock blackberry_bricks_stairs = foodblockcompatregistry.BLACKBERRY_BRICKS_STAIRS.get();
+          stairsBlock(blackberry_bricks_stairs, blackberry_bricks_block_texture);
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
       //.........plain
           StairBlock cherry_stairs = foodblockcompatregistry.CHERRY_STAIRS.get();
@@ -807,6 +836,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation juniper_bars_texture = modLoc("block/juniper_bars");
           ResourceLocation juniper_bars_rim_texture = modLoc("block/juniper_block");
           paneBlockWithRenderType(juniper_bars, "juniper_bars", juniper_bars_texture, juniper_bars_rim_texture, "cutout_mipped_all"); 
+     //------------------------------------------------------------blackberry-----------------------------------------------------------------------
+          IronBarsBlock blackberry_bars = foodblockcompatregistry.BLACKBERRY_BARS.get(); 
+          ResourceLocation blackberry_bars_texture = modLoc("block/blackberry_bars");
+          ResourceLocation blackberry_bars_rim_texture = modLoc("block/blackberry_block");
+          paneBlockWithRenderType(blackberry_bars, "blackberry_bars", blackberry_bars_texture, blackberry_bars_rim_texture, "cutout_mipped_all"); 
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           IronBarsBlock cherry_bars = foodblockcompatregistry.CHERRY_BARS.get(); 
           ResourceLocation cherry_bars_texture = modLoc("block/cherry_bars");
@@ -935,6 +969,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation juniper_door_top_texture = modLoc("block/juniper_door_top");
           ResourceLocation juniper_door_bottom_texture = modLoc("block/juniper_door_bottom");
           doorBlockWithRenderType(juniper_door, "juniper_door", juniper_door_bottom_texture, juniper_door_top_texture, "translucent"); 
+     //------------------------------------------------------------blackberry-----------------------------------------------------------------------
+          DoorBlock blackberry_door = foodblockcompatregistry.BLACKBERRY_DOOR.get(); 
+          ResourceLocation blackberry_door_top_texture = modLoc("block/blackberry_door_top");
+          ResourceLocation blackberry_door_bottom_texture = modLoc("block/blackberry_door_bottom");
+          doorBlockWithRenderType(blackberry_door, "blackberry_door", blackberry_door_bottom_texture, blackberry_door_top_texture, "translucent"); 
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           DoorBlock cherry_door = foodblockcompatregistry.CHERRY_DOOR.get(); 
           ResourceLocation cherry_door_top_texture = modLoc("block/cherry_door_top");
@@ -1061,6 +1100,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ButtonBlock juniper_button = foodblockcompatregistry.JUNIPER_BUTTON.get();
           ResourceLocation juniper_button_texture = modLoc("block/juniper_block");
           buttonBlock(juniper_button, juniper_button_texture);
+     //------------------------------------------------------------blackberry-----------------------------------------------------------------------
+          ButtonBlock blackberry_button = foodblockcompatregistry.BLACKBERRY_BUTTON.get();
+          ResourceLocation blackberry_button_texture = modLoc("block/blackberry_block");
+          buttonBlock(blackberry_button, blackberry_button_texture);
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           ButtonBlock cherry_button = foodblockcompatregistry.CHERRY_BUTTON.get();
           ResourceLocation cherry_button_texture = modLoc("block/cherry_block");
@@ -1174,6 +1217,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
           FenceGateBlock juniper_gate = foodblockcompatregistry.JUNIPER_GATE.get();
           ResourceLocation juniper_gate_texture = modLoc("block/juniper_block");
           fenceGateBlock(juniper_gate, juniper_gate_texture);
+     //------------------------------------------------------------blackberry-----------------------------------------------------------------------
+       //fence
+          FenceBlock blackberry_fence = foodblockcompatregistry.BLACKBERRY_FENCE.get();
+          ResourceLocation blackberry_fence_texture = modLoc("block/blackberry_block");
+          fenceBlock(blackberry_fence, blackberry_fence_texture);
+       //gate
+          FenceGateBlock blackberry_gate = foodblockcompatregistry.BLACKBERRY_GATE.get();
+          ResourceLocation blackberry_gate_texture = modLoc("block/blackberry_block");
+          fenceGateBlock(blackberry_gate, blackberry_gate_texture);
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
        //fence
           FenceBlock cherry_fence = foodblockcompatregistry.CHERRY_FENCE.get();
@@ -1392,6 +1444,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           PressurePlateBlock juniper_pressure_plate = foodblockcompatregistry.JUNIPER_PRESSURE_PLATE.get();
           ResourceLocation juniper_pressure_plate_texture = modLoc("block/juniper_block");
           pressurePlateBlock(juniper_pressure_plate, juniper_pressure_plate_texture);
+     //------------------------------------------------------------blackberry-----------------------------------------------------------------------
+          PressurePlateBlock blackberry_pressure_plate = foodblockcompatregistry.BLACKBERRY_PRESSURE_PLATE.get();
+          ResourceLocation blackberry_pressure_plate_texture = modLoc("block/blackberry_block");
+          pressurePlateBlock(blackberry_pressure_plate, blackberry_pressure_plate_texture);
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           PressurePlateBlock cherry_pressure_plate = foodblockcompatregistry.CHERRY_PRESSURE_PLATE.get();
           ResourceLocation cherry_pressure_plate_texture = modLoc("block/cherry_block");
@@ -1497,6 +1553,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
            WallSignBlock juniper_wall_sign = foodblockcompatregistry.JUNIPER_WALL_SIGN.get();
            ResourceLocation juniper_sign_texture = modLoc("block/juniper_block");
            signBlock(juniper_sign, juniper_wall_sign, juniper_sign_texture);
+     //------------------------------------------------------------blackberry-----------------------------------------------------------------------
+           StandingSignBlock blackberry_sign = foodblockcompatregistry.BLACKBERRY_STANDING_SIGN.get();
+           WallSignBlock blackberry_wall_sign = foodblockcompatregistry.BLACKBERRY_WALL_SIGN.get();
+           ResourceLocation blackberry_sign_texture = modLoc("block/blackberry_block");
+           signBlock(blackberry_sign, blackberry_wall_sign, blackberry_sign_texture);
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
            StandingSignBlock cherry_sign = foodblockcompatregistry.CHERRY_STANDING_SIGN.get();
            WallSignBlock cherry_wall_sign = foodblockcompatregistry.CHERRY_WALL_SIGN.get();
@@ -1623,6 +1684,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           TrapDoorBlock juniper_trapdoor = foodblockcompatregistry.JUNIPER_TRAPDOOR.get(); 
           ResourceLocation juniper_trapdoor_texture = modLoc("block/juniper_block");
           trapdoorBlockWithRenderType(juniper_trapdoor, "juniper_trapdoor", juniper_trapdoor_texture, false, juniper_trapdoor_texture);
+     //------------------------------------------------------------blackberry-----------------------------------------------------------------------
+          TrapDoorBlock blackberry_trapdoor = foodblockcompatregistry.BLACKBERRY_TRAPDOOR.get(); 
+          ResourceLocation blackberry_trapdoor_texture = modLoc("block/blackberry_block");
+          trapdoorBlockWithRenderType(blackberry_trapdoor, "blackberry_trapdoor", blackberry_trapdoor_texture, false, blackberry_trapdoor_texture);
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           TrapDoorBlock cherry_trapdoor = foodblockcompatregistry.CHERRY_TRAPDOOR.get(); 
           ResourceLocation cherry_trapdoor_texture = modLoc("block/cherry_block");
@@ -1724,6 +1789,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
      //------------------------------------------------------------juniper-----------------------------------------------------------------------
           Block juniper_lamp = foodblockcompatregistry.JUNIPER_LAMP.get();
           simpleBlock(juniper_lamp);
+     //------------------------------------------------------------blackberry-----------------------------------------------------------------------
+          Block blackberry_lamp = foodblockcompatregistry.BLACKBERRY_LAMP.get();
+          ResourceLocation blackberry_lamp_texture = modLoc("block/blackberry_lamp");
+          horizontalBlock(blackberry_lamp, blackberry_lamp_texture, blackberry_lamp_texture, blackberry_lamp_texture);
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           Block cherry_lamp = foodblockcompatregistry.CHERRY_LAMP.get();
           simpleBlock(cherry_lamp);
@@ -1810,6 +1879,12 @@ public class GM1BlockStateProvider extends BlockStateProvider
           BlockModelBuilder juniper_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(juniper_carpet).getPath(), mcLoc("block/carpet"))
           .texture("wool", juniper_carpet_texture);
           simpleBlock(juniper_carpet, new ModelFile.UncheckedModelFile(juniper_carpet_model.getLocation()));
+     //------------------------------------------------------------blackberry-----------------------------------------------------------------------
+          CarpetBlock blackberry_carpet = foodblockcompatregistry.BLACKBERRY_CARPET.get();
+          ResourceLocation blackberry_carpet_texture = modLoc("block/blackberry_carpet");
+          BlockModelBuilder blackberry_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(blackberry_carpet).getPath(), mcLoc("block/carpet"))
+          .texture("wool", blackberry_carpet_texture);
+          simpleBlock(blackberry_carpet, new ModelFile.UncheckedModelFile(blackberry_carpet_model.getLocation()));
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           CarpetBlock cherry_carpet = foodblockcompatregistry.CHERRY_CARPET.get();
           ResourceLocation cherry_carpet_texture = modLoc("block/cherry_carpet");
@@ -2029,6 +2104,45 @@ public class GM1BlockStateProvider extends BlockStateProvider
              .modelForState().modelFile(hanging_juniper_soul_lantern_model).addModel()
              .partialState().with(LanternBlock.HANGING, false)
              .modelForState().modelFile(juniper_soul_lantern_model).addModel();
+     //------------------------------------------------------------blackberry-----------------------------------------------------------------------
+         //regular
+          LanternBlock blackberry_lantern = foodblockcompatregistry.BLACKBERRY_LANTERN.get();
+          ResourceLocation blackberry_lantern_texture = modLoc("block/blackberry_lantern");
+  
+          BlockModelBuilder blackberry_lantern_model = models()
+              .withExistingParent("blackberry_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", blackberry_lantern_texture);
+  
+          BlockModelBuilder hanging_blackberry_lantern_model = models()
+              .withExistingParent("blackberry_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", blackberry_lantern_texture);
+  
+          getVariantBuilder(blackberry_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_blackberry_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(blackberry_lantern_model).addModel();
+         //soul
+         LanternBlock blackberry_soul_lantern = foodblockcompatregistry.BLACKBERRY_SOUL_LANTERN.get();
+         ResourceLocation blackberry_soul_lantern_texture = modLoc("block/blackberry_soul_lantern");
+ 
+         BlockModelBuilder blackberry_soul_lantern_model = models()
+             .withExistingParent("blackberry_soul_lantern", mcLoc("block/lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", blackberry_soul_lantern_texture);
+ 
+         BlockModelBuilder hanging_blackberry_soul_lantern_model = models()
+             .withExistingParent("blackberry_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", blackberry_soul_lantern_texture);
+ 
+         getVariantBuilder(blackberry_soul_lantern)
+             .partialState().with(LanternBlock.HANGING, true)
+             .modelForState().modelFile(hanging_blackberry_soul_lantern_model).addModel()
+             .partialState().with(LanternBlock.HANGING, false)
+             .modelForState().modelFile(blackberry_soul_lantern_model).addModel();
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
          //regular
           LanternBlock cherry_lantern = foodblockcompatregistry.CHERRY_LANTERN.get();
@@ -2961,6 +3075,22 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .modelForState().modelFile(juniper_chain_model).rotationX(90).rotationY(90).addModel()
           .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
           .modelForState().modelFile(juniper_chain_model).rotationX(90).addModel(); 
+     //------------------------------------------------------------blackberry-----------------------------------------------------------------------
+         ChainBlock blackberry_chain = foodblockcompatregistry.BLACKBERRY_CHAIN.get();
+         ResourceLocation blackberry_chain_texture = modLoc("block/blackberry_chain");
+         BlockModelBuilder blackberry_chain_model = models()
+          .withExistingParent("blackberry_chain", mcLoc("block/chain"))
+          .renderType("cutout_mipped_all")
+          .texture("all", blackberry_chain_texture)
+          .texture("particle", blackberry_chain_texture);
+
+          getVariantBuilder(blackberry_chain)
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Y)
+          .modelForState().modelFile(blackberry_chain_model).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.X)
+          .modelForState().modelFile(blackberry_chain_model).rotationX(90).rotationY(90).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
+          .modelForState().modelFile(blackberry_chain_model).rotationX(90).addModel(); 
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
          ChainBlock cherry_chain = foodblockcompatregistry.CHERRY_CHAIN.get();
          ResourceLocation cherry_chain_texture = modLoc("block/cherry_chain");
@@ -3368,6 +3498,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/juniper_ladder");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------blackberry-----------------------------------------------------------------------
+          LadderBlock blackberryladder = foodblockcompatregistry.BLACKBERRY_LADDER.get();
+
+          getVariantBuilder(blackberryladder)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/blackberry_ladder");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -3896,6 +4047,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/juniper_table");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------blackberry-----------------------------------------------------------------------
+          HorizontalDirectionalBlock blackberrytable = foodblockcompatregistry.BLACKBERRY_TABLE.get();
+
+          getVariantBuilder(blackberrytable)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/blackberry_table");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -4617,6 +4789,122 @@ public class GM1BlockStateProvider extends BlockStateProvider
                     .renderType("cutout_mipped_all")
                     .texture("torch", juniper_soul_wall_torch_texture)
                     .texture("particle", juniper_soul_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+     //------------------------------------------------------------blackberry-----------------------------------------------------------------------
+       //regular
+        TorchBlock blackberry_torch = foodblockcompatregistry.BLACKBERRY_TORCH.get();
+        ResourceLocation blackberry_torch_texture = modLoc("block/blackberry_torch");
+        BlockModelBuilder blackberry_torch_model = models()
+        .withExistingParent("blackberry_torch", mcLoc("block/torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", blackberry_torch_texture)
+        .texture("particle", blackberry_torch_texture);
+
+        simpleBlock(blackberry_torch, blackberry_torch_model);
+
+        TorchBlock blackberry_wall_torch = foodblockcompatregistry.BLACKBERRY_WALL_TORCH.get();
+        BlockModelBuilder blackberry_wall_torch_model = models()
+        .withExistingParent("blackberry_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", blackberry_torch_texture)
+        .texture("particle", blackberry_torch_texture);
+        getVariantBuilder(blackberry_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("blackberry_wall_torch", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", blackberry_torch_texture)
+                    .texture("particle", blackberry_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //redstone
+        RedstoneTorchBlock blackberry_redstone_torch = foodblockcompatregistry.BLACKBERRY_REDSTONE_TORCH.get();
+        ResourceLocation blackberry_redstone_torch_texture = modLoc("block/blackberry_redstone_torch");
+        BlockModelBuilder blackberry_redstone_torch_model = models()
+        .withExistingParent("blackberry_redstone_torch", mcLoc("block/redstone_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", blackberry_redstone_torch_texture)
+        .texture("particle", blackberry_redstone_torch_texture);
+        
+
+        simpleBlock(blackberry_redstone_torch, blackberry_redstone_torch_model);
+
+        ResourceLocation blackberry_redstone_wall_torch_texture = modLoc("block/blackberry_redstone_torch");
+
+        RedstoneTorchBlock blackberry_redstone_wall_torch = foodblockcompatregistry.BLACKBERRY_REDSTONE_WALL_TORCH.get();
+        BlockModelBuilder blackberry_redstone_wall_torch_model = models()
+        .withExistingParent("blackberry_redstone_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", blackberry_redstone_wall_torch_texture)
+        .texture("particle", blackberry_redstone_wall_torch_texture);
+        getVariantBuilder(blackberry_redstone_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("blackberry_redstone_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", blackberry_redstone_wall_torch_texture)
+                    .texture("particle", blackberry_redstone_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //soul
+        TorchBlock blackberry_soul_torch = foodblockcompatregistry.BLACKBERRY_SOUL_TORCH.get();
+        ResourceLocation blackberry_soul_torch_texture = modLoc("block/blackberry_soul_torch");
+        BlockModelBuilder blackberry_soul_torch_model = models()
+        .withExistingParent("blackberry_soul_torch", mcLoc("block/soul_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", blackberry_soul_torch_texture)
+        .texture("particle", blackberry_soul_torch_texture);
+        
+
+        simpleBlock(blackberry_soul_torch, blackberry_soul_torch_model);
+
+        ResourceLocation blackberry_soul_wall_torch_texture = modLoc("block/blackberry_soul_torch");
+        TorchBlock blackberry_soul_wall_torch = foodblockcompatregistry.BLACKBERRY_SOUL_WALL_TORCH.get();
+        BlockModelBuilder blackberry_soul_wall_torch_model = models()
+        .withExistingParent("blackberry_soul_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", blackberry_soul_wall_torch_texture)
+        .texture("particle", blackberry_soul_wall_torch_texture);
+        getVariantBuilder(blackberry_soul_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("blackberry_soul_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", blackberry_soul_wall_torch_texture)
+                    .texture("particle", blackberry_soul_wall_torch_texture))
                 .rotationY(rotation)
                 .build();
             });
@@ -7379,6 +7667,50 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationY(rotation)
                       .build();
               });
+     //------------------------------------------------------------blackberry-----------------------------------------------------------------------
+          FurnaceBlock blackberry_furnace = foodblockcompatregistry.BLACKBERRY_FURNACE.get();
+          ResourceLocation blackberry_furnace_unlit_texture = modLoc("block/blackberry_furnace");
+          ResourceLocation blackberry_furnace_lit_texture = modLoc("block/blackberry_furnace_lit");
+          ResourceLocation blackberry_furnace_side = modLoc("block/blackberry_block");
+          
+          // Define the model for the unlit state
+          BlockModelBuilder blackberry_furnace_model_unlit = models()
+              .withExistingParent("blackberry_furnace_model_unlit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", blackberry_furnace_side)
+              .texture("top", blackberry_furnace_side)
+              .texture("front", blackberry_furnace_unlit_texture)
+              .texture("particle", blackberry_furnace_side);
+          
+          // Define the model for the lit state
+          BlockModelBuilder blackberry_furnace_model_lit = models()
+              .withExistingParent("blackberry_furnace_model_lit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", blackberry_furnace_side)
+              .texture("top", blackberry_furnace_side)
+              .texture("front", blackberry_furnace_lit_texture)
+              .texture("particle", blackberry_furnace_side);
+          
+          // Configure variants for the blackberry_furnace block
+          getVariantBuilder(blackberry_furnace)
+              .forAllStates(state -> {
+                  Boolean lit = state.getValue(BlockStateProperties.LIT);
+                  Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                  int rotation = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+
+                  ResourceLocation modelLocation = lit ? modLoc("block/blackberry_furnace_model_lit") : modLoc("block/blackberry_furnace_model_unlit");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotation)
+                      .build();
+              });
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           FurnaceBlock cherry_furnace = foodblockcompatregistry.CHERRY_FURNACE.get();
           ResourceLocation cherry_furnace_unlit_texture = modLoc("block/cherry_furnace");
@@ -8398,6 +8730,18 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .modelFile(models().getExistingFile(modelLocation))
                   .build();
           });
+     //------------------------------------------------------------blackberry-----------------------------------------------------------------------
+          foodpathtypeminislab blackberry_stone_path = foodblockcompatregistry.BLACKBERRY_STONE_PATH.get();
+
+          getVariantBuilder(blackberry_stone_path)
+          .forAllStates(state -> {
+
+              ResourceLocation modelLocation = modLoc("block/blackberry_stone_path");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .build();
+          });
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           foodpathtypeminislab cherry_stone_path = foodblockcompatregistry.CHERRY_STONE_PATH.get();
 
@@ -8766,6 +9110,54 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   };
 
                   ResourceLocation modelLocation = open ? modLoc("block/juniper_barrel_model_open") : modLoc("block/juniper_barrel_model_closed");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotationY)
+                      .rotationX(rotationX)
+                      .build();
+              });
+     //------------------------------------------------------------blackberry-----------------------------------------------------------------------
+          foodBarrel blackberry_barrel = foodblockcompatregistry.BLACKBERRY_BARREL.get();
+          ResourceLocation blackberry_barrel_closed_texture = modLoc("block/blackberry_barrel_top_closed");
+          ResourceLocation blackberry_barrel_open_texture = modLoc("block/blackberry_barrel_top_open");
+          ResourceLocation blackberry_barrel_side = modLoc("block/blackberry_barrel_side");
+          ResourceLocation blackberry_barrel_bottom = modLoc("block/blackberry_barrel_bottom");
+          
+          BlockModelBuilder blackberry_barrel_model_closed = models()
+              .withExistingParent("blackberry_barrel_model_closed", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", blackberry_barrel_side)
+              .texture("bottom", blackberry_barrel_bottom)
+              .texture("top", blackberry_barrel_closed_texture)
+              .texture("particle", blackberry_barrel_side);
+          
+          BlockModelBuilder blackberry_barrel_model_open = models()
+              .withExistingParent("blackberry_barrel_model_open", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", blackberry_barrel_side)
+              .texture("bottom", blackberry_barrel_bottom)
+              .texture("top", blackberry_barrel_open_texture)
+              .texture("particle", blackberry_barrel_side);
+          
+          getVariantBuilder(blackberry_barrel)
+              .forAllStates(state -> {
+                  Boolean open = state.getValue(BlockStateProperties.OPEN);
+                  Direction facing = state.getValue(BlockStateProperties.FACING);
+                  int rotationY = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+                  int rotationX = switch (facing) {
+                      case UP -> 0;
+                      case DOWN -> 180;
+                      default -> 90;
+                  };
+
+                  ResourceLocation modelLocation = open ? modLoc("block/blackberry_barrel_model_open") : modLoc("block/blackberry_barrel_model_closed");
               
                   return ConfiguredModel.builder()
                       .modelFile(models().getExistingFile(modelLocation))
@@ -9922,6 +10314,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .rotationY(rotationY)
                   .build();
           });
+     //------------------------------------------------------------blackberry-----------------------------------------------------------------------
+          foodChairBlock blackberryChair = foodblockcompatregistry.BLACKBERRY_CHAIR.get();
+
+          getVariantBuilder(blackberryChair)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/blackberry_chair");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           foodChairBlock cherryChair = foodblockcompatregistry.CHERRY_CHAIR.get();
 
@@ -10444,6 +10857,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/juniper_bed");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------blackberry-----------------------------------------------------------------------
+          foodBed blackberryBed = foodblockcompatregistry.BLACKBERRY_BED.get();
+
+          getVariantBuilder(blackberryBed)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/blackberry_bed");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -11020,6 +11454,51 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = open ? modLoc("block/medium_juniper_cabinet_open") : modLoc("block/medium_juniper_cabinet");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------blackberry-----------------------------------------------------------------------
+         //small
+          smallFoodCabinet blackberryCabinet = foodblockcompatregistry.SMALL_BLACKBERRY_CABINET.get();
+
+          getVariantBuilder(blackberryCabinet)
+          .forAllStates(state -> {
+              Boolean open = state.getValue(BlockStateProperties.OPEN);
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = open ? modLoc("block/blackberry_cabinet_open") : modLoc("block/blackberry_cabinet");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+         //medium
+          mediumFoodCabinet blackberryMediumCabinet = foodblockcompatregistry.MEDIUM_BLACKBERRY_CABINET.get();
+
+          getVariantBuilder(blackberryMediumCabinet)
+          .forAllStates(state -> {
+              Boolean open = state.getValue(BlockStateProperties.OPEN);
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = open ? modLoc("block/medium_blackberry_cabinet_open") : modLoc("block/medium_blackberry_cabinet");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))

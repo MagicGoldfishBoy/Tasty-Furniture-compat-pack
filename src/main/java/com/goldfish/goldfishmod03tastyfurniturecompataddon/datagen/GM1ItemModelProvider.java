@@ -171,6 +171,84 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("small_juniper_cabinet_item", modLoc("block/juniper_cabinet"));
        withExistingParent("medium_juniper_cabinet_item", modLoc("block/medium_juniper_cabinet"));
     //==============================================================================================================================================
+    //|                                                            Blackberry                                                                      |
+    //==============================================================================================================================================
+       //mush
+       withExistingParent("blackberry_mush", mcLoc("item/generated")).texture("layer0", "item/blackberry_mush");
+       //ingot
+        withExistingParent("blackberry_ingot", mcLoc("item/generated")).texture("layer0", "item/blackberry_ingot");
+       //nugget
+        withExistingParent("blackberry_nugget", mcLoc("item/generated")).texture("layer0", "item/blackberry_nugget");
+       //block
+        withExistingParent("blackberry_block_item", modLoc("block/blackberry_block"));
+       //bricks block
+        withExistingParent("blackberry_bricks_block_item", modLoc("block/blackberry_bricks_block"));
+       //chiseled block
+        withExistingParent("blackberry_chiseled_block_item", modLoc("block/blackberry_chiseled_block"));
+       //tiles block
+        withExistingParent("blackberry_tiles_block_item", modLoc("block/blackberry_tiles_block"));
+       //slab
+       slab("blackberry_slab_item", modLoc("block/blackberry_block"), modLoc("block/blackberry_block"), modLoc("block/blackberry_block"));
+       //bricks slab
+       slab("blackberry_bricks_slab_item", modLoc("block/blackberry_bricks_block"), modLoc("block/blackberry_bricks_block"), modLoc("block/blackberry_bricks_block"));
+       //stairs
+       stairs("blackberry_stairs_item", modLoc("block/blackberry_block"), modLoc("block/blackberry_block"), modLoc("block/blackberry_block"));
+       //bricks stairs
+       stairs("blackberry_bricks_stairs_item", modLoc("block/blackberry_bricks_block"), modLoc("block/blackberry_bricks_block"), modLoc("block/blackberry_bricks_block"));
+       //bars
+       withExistingParent("blackberry_bars_item", mcLoc("item/generated")).texture("layer0", "block/blackberry_bars");
+       //doors
+       withExistingParent("blackberry_door_item", mcLoc("item/generated")).texture("layer0", "item/blackberry_door_item");
+       //button
+       buttonInventory("blackberry_button_item", modLoc("block/blackberry_block"));
+       //fence
+       fenceInventory("blackberry_fence_item", modLoc("block/blackberry_block"));
+       //gate
+       withExistingParent("blackberry_gate_item", modLoc("block/blackberry_gate"));
+       //pressure plate
+       pressurePlate("blackberry_pressure_plate_item", modLoc("block/blackberry_block"));
+       //sign
+       withExistingParent("blackberry_sign_item", mcLoc("item/generated")).texture("layer0", "item/blackberry_sign");
+       //trapdoor
+       withExistingParent("blackberry_trapdoor_item", modLoc("block/blackberry_trapdoor_trapdoor_bottom"));
+       //lamp
+       withExistingParent("blackberry_lamp_item", modLoc("block/blackberry_lamp"));
+       //carpet
+       ResourceLocation blackberry_carpet_texture = modLoc("block/blackberry_carpet");
+       carpet("blackberry_carpet_item", blackberry_carpet_texture);
+       //lantern
+        //regular
+        withExistingParent("blackberry_lantern_item", modLoc("block/blackberry_lantern"));
+        //soul
+          withExistingParent("blackberry_soul_lantern_item", modLoc("block/blackberry_soul_lantern"));
+       //chain
+       withExistingParent("blackberry_chain_item", modLoc("block/blackberry_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
+       //ladder
+       withExistingParent("blackberry_ladder_item", modLoc("block/blackberry_ladder"));
+       //table
+       withExistingParent("blackberry_table_item", modLoc("block/blackberry_table"));
+       //torches
+        //regular
+        withExistingParent("blackberry_torch_item", modLoc("block/blackberry_torch"));
+        //redstone
+          withExistingParent("blackberry_redstone_torch_item", modLoc("block/blackberry_redstone_torch"));
+        //soul
+          withExistingParent("blackberry_soul_torch_item", modLoc("block/blackberry_soul_torch"));
+       //furnaces
+       withExistingParent("blackberry_furnace_item", modLoc("block/blackberry_furnace_model_unlit"));
+       //paths
+       withExistingParent("blackberry_stone_path_item", modLoc("block/blackberry_stone_path"));
+       //barrel
+       withExistingParent("blackberry_barrel_item", modLoc("block/blackberry_barrel_model_closed"));
+       //chair
+       withExistingParent("blackberry_chair_item", modLoc("block/blackberry_chair"));
+       //bed
+       withExistingParent("blackberry_bed_item", modLoc("block/blackberry_bed"));
+       //cabinet
+       withExistingParent("small_blackberry_cabinet_item", modLoc("block/blackberry_cabinet"));
+       withExistingParent("medium_blackberry_cabinet_item", modLoc("block/medium_blackberry_cabinet"));
+    //==============================================================================================================================================
     //|                                                              Cherry                                                                        |
     //==============================================================================================================================================
        //mush
@@ -348,8 +426,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //tiles block
         withExistingParent("peach_tiles_block_item", modLoc("block/peach_tiles_block"));
        //slab
-       slab("peach_slab_item", modLoc("block/peach_block"), modLoc("block/peach_block"), 
-       modLoc("block/peach_block"));
+        slab("peach_slab_item", modLoc("block/peach_block"), modLoc("block/peach_block"), 
+        modLoc("block/peach_block"));
        //bricks slab
        slab("peach_bricks_slab_item", modLoc("block/peach_bricks_block"), modLoc("block/peach_bricks_block"), 
        modLoc("block/peach_bricks_block"));
