@@ -3,7 +3,7 @@
 	"ambientocclusion": false,
 	"textures": {
 		"20": "goldfishmod03tastyfurniturecompataddon:block/blackberry_chiseled_block",
-		"particle": "goldfishmod03tastyfurniturecompataddon:block/blackberry_barrel_top_top"
+		"particle": "goldfishmod03tastyfurniturecompataddon:block/blackberry_chiseled_block"
 	},
 	"elements": [
 		{

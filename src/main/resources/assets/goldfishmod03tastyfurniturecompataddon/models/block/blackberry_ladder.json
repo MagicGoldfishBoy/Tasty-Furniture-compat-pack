@@ -4,7 +4,7 @@
 	"textures": {
 		"4": "goldfishmod03tastyfurniturecompataddon:block/blackberry_bars",
 		"8": "goldfishmod03tastyfurniturecompataddon:block/blackberry_door_top",
-		"particle": "goldfishmod03tastyfurniturecompataddon:block/blackberry_barrel_top_top"
+		"particle": "goldfishmod03tastyfurniturecompataddon:block/blackberry_door_top"
 	},
 	"elements": [
 		{

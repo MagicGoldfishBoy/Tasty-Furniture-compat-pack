@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "goldfishmod03tastyfurniturecompataddon:block/raspberry_pressure_plate"
+    },
+    "powered=true": {
+      "model": "goldfishmod03tastyfurniturecompataddon:block/raspberry_pressure_plate_down"
+    }
+  }
+}

@@ -59,7 +59,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
 
      @Override
      public void registerStatesAndModels() {
-
+      buildCabinetModels();
     //==============================================================================================================================================
     //|                                                              Blocks                                                                        |
     //==============================================================================================================================================
@@ -102,6 +102,19 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........tiles
           net.minecraft.world.level.block.Block blackberry_tiles_block = foodblockcompatregistry.BLACKBERRY_TILES_BLOCK.get();
           simpleBlock(blackberry_tiles_block);
+     //------------------------------------------------------------raspberry-----------------------------------------------------------------------
+      //.........plain
+          net.minecraft.world.level.block.Block raspberry_block = foodblockcompatregistry.RASPBERRY_BLOCK.get();
+          simpleBlock(raspberry_block);
+      //.........bricks
+          net.minecraft.world.level.block.Block raspberry_bricks_block = foodblockcompatregistry.RASPBERRY_BRICKS_BLOCK.get();
+          simpleBlock(raspberry_bricks_block);
+      //.........chiseled
+          net.minecraft.world.level.block.Block raspberry_chiseled_block = foodblockcompatregistry.RASPBERRY_CHISELED_BLOCK.get();
+          simpleBlock(raspberry_chiseled_block);
+      //.........tiles
+          net.minecraft.world.level.block.Block raspberry_tiles_block = foodblockcompatregistry.RASPBERRY_TILES_BLOCK.get();
+          simpleBlock(raspberry_tiles_block);
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
       //.........plain
           net.minecraft.world.level.block.Block cherry_block = foodblockcompatregistry.CHERRY_BLOCK.get();
@@ -431,6 +444,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
           SlabBlock blackberry_bricks_slab = foodblockcompatregistry.BLACKBERRY_BRICKS_SLAB.get();
           ResourceLocation blackberry_bricks_block_texture = modLoc("block/blackberry_bricks_block");
           slabBlock(blackberry_bricks_slab, blackberry_bricks_block_texture, blackberry_bricks_block_texture);
+     //------------------------------------------------------------raspberry-----------------------------------------------------------------------
+      //.........plain
+          SlabBlock raspberry_slab = foodblockcompatregistry.RASPBERRY_SLAB.get();
+          ResourceLocation raspberry_block_texture = modLoc("block/raspberry_block");
+          slabBlock(raspberry_slab, raspberry_block_texture, raspberry_block_texture);
+      //.........bricks
+          SlabBlock raspberry_bricks_slab = foodblockcompatregistry.RASPBERRY_BRICKS_SLAB.get();
+          ResourceLocation raspberry_bricks_block_texture = modLoc("block/raspberry_bricks_block");
+          slabBlock(raspberry_bricks_slab, raspberry_bricks_block_texture, raspberry_bricks_block_texture);
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
       //.........plain
           SlabBlock cherry_slab = foodblockcompatregistry.CHERRY_SLAB.get();
@@ -662,6 +684,13 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........bricks
           StairBlock blackberry_bricks_stairs = foodblockcompatregistry.BLACKBERRY_BRICKS_STAIRS.get();
           stairsBlock(blackberry_bricks_stairs, blackberry_bricks_block_texture);
+     //------------------------------------------------------------raspberry-----------------------------------------------------------------------
+      //.........plain
+          StairBlock raspberry_stairs = foodblockcompatregistry.RASPBERRY_STAIRS.get();
+          stairsBlock(raspberry_stairs, raspberry_block_texture);
+      //.........bricks
+          StairBlock raspberry_bricks_stairs = foodblockcompatregistry.RASPBERRY_BRICKS_STAIRS.get();
+          stairsBlock(raspberry_bricks_stairs, raspberry_bricks_block_texture);
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
       //.........plain
           StairBlock cherry_stairs = foodblockcompatregistry.CHERRY_STAIRS.get();
@@ -841,6 +870,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation blackberry_bars_texture = modLoc("block/blackberry_bars");
           ResourceLocation blackberry_bars_rim_texture = modLoc("block/blackberry_block");
           paneBlockWithRenderType(blackberry_bars, "blackberry_bars", blackberry_bars_texture, blackberry_bars_rim_texture, "cutout_mipped_all"); 
+     //------------------------------------------------------------raspberry-----------------------------------------------------------------------
+          IronBarsBlock raspberry_bars = foodblockcompatregistry.RASPBERRY_BARS.get(); 
+          ResourceLocation raspberry_bars_texture = modLoc("block/raspberry_bars");
+          ResourceLocation raspberry_bars_rim_texture = modLoc("block/raspberry_block");
+          paneBlockWithRenderType(raspberry_bars, "raspberry_bars", raspberry_bars_texture, raspberry_bars_rim_texture, "cutout_mipped_all"); 
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           IronBarsBlock cherry_bars = foodblockcompatregistry.CHERRY_BARS.get(); 
           ResourceLocation cherry_bars_texture = modLoc("block/cherry_bars");
@@ -974,6 +1008,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation blackberry_door_top_texture = modLoc("block/blackberry_door_top");
           ResourceLocation blackberry_door_bottom_texture = modLoc("block/blackberry_door_bottom");
           doorBlockWithRenderType(blackberry_door, "blackberry_door", blackberry_door_bottom_texture, blackberry_door_top_texture, "translucent"); 
+     //------------------------------------------------------------raspberry-----------------------------------------------------------------------
+          DoorBlock raspberry_door = foodblockcompatregistry.RASPBERRY_DOOR.get(); 
+          ResourceLocation raspberry_door_top_texture = modLoc("block/raspberry_door_top");
+          ResourceLocation raspberry_door_bottom_texture = modLoc("block/raspberry_door_bottom");
+          doorBlockWithRenderType(raspberry_door, "raspberry_door", raspberry_door_bottom_texture, raspberry_door_top_texture, "translucent"); 
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           DoorBlock cherry_door = foodblockcompatregistry.CHERRY_DOOR.get(); 
           ResourceLocation cherry_door_top_texture = modLoc("block/cherry_door_top");
@@ -1104,6 +1143,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ButtonBlock blackberry_button = foodblockcompatregistry.BLACKBERRY_BUTTON.get();
           ResourceLocation blackberry_button_texture = modLoc("block/blackberry_block");
           buttonBlock(blackberry_button, blackberry_button_texture);
+     //------------------------------------------------------------raspberry-----------------------------------------------------------------------
+          ButtonBlock raspberry_button = foodblockcompatregistry.RASPBERRY_BUTTON.get();
+          ResourceLocation raspberry_button_texture = modLoc("block/raspberry_block");
+          buttonBlock(raspberry_button, raspberry_button_texture);
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           ButtonBlock cherry_button = foodblockcompatregistry.CHERRY_BUTTON.get();
           ResourceLocation cherry_button_texture = modLoc("block/cherry_block");
@@ -1226,6 +1269,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
           FenceGateBlock blackberry_gate = foodblockcompatregistry.BLACKBERRY_GATE.get();
           ResourceLocation blackberry_gate_texture = modLoc("block/blackberry_block");
           fenceGateBlock(blackberry_gate, blackberry_gate_texture);
+     //------------------------------------------------------------raspberry-----------------------------------------------------------------------
+       //fence
+          FenceBlock raspberry_fence = foodblockcompatregistry.RASPBERRY_FENCE.get();
+          ResourceLocation raspberry_fence_texture = modLoc("block/raspberry_block");
+          fenceBlock(raspberry_fence, raspberry_fence_texture);
+       //gate
+          FenceGateBlock raspberry_gate = foodblockcompatregistry.RASPBERRY_GATE.get();
+          ResourceLocation raspberry_gate_texture = modLoc("block/raspberry_block");
+          fenceGateBlock(raspberry_gate, raspberry_gate_texture);
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
        //fence
           FenceBlock cherry_fence = foodblockcompatregistry.CHERRY_FENCE.get();
@@ -1448,6 +1500,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           PressurePlateBlock blackberry_pressure_plate = foodblockcompatregistry.BLACKBERRY_PRESSURE_PLATE.get();
           ResourceLocation blackberry_pressure_plate_texture = modLoc("block/blackberry_block");
           pressurePlateBlock(blackberry_pressure_plate, blackberry_pressure_plate_texture);
+     //------------------------------------------------------------raspberry-----------------------------------------------------------------------
+          PressurePlateBlock raspberry_pressure_plate = foodblockcompatregistry.RASPBERRY_PRESSURE_PLATE.get();
+          ResourceLocation raspberry_pressure_plate_texture = modLoc("block/raspberry_block");
+          pressurePlateBlock(raspberry_pressure_plate, raspberry_pressure_plate_texture);
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           PressurePlateBlock cherry_pressure_plate = foodblockcompatregistry.CHERRY_PRESSURE_PLATE.get();
           ResourceLocation cherry_pressure_plate_texture = modLoc("block/cherry_block");
@@ -1558,6 +1614,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
            WallSignBlock blackberry_wall_sign = foodblockcompatregistry.BLACKBERRY_WALL_SIGN.get();
            ResourceLocation blackberry_sign_texture = modLoc("block/blackberry_block");
            signBlock(blackberry_sign, blackberry_wall_sign, blackberry_sign_texture);
+     //------------------------------------------------------------raspberry-----------------------------------------------------------------------
+           StandingSignBlock raspberry_sign = foodblockcompatregistry.RASPBERRY_STANDING_SIGN.get();
+           WallSignBlock raspberry_wall_sign = foodblockcompatregistry.RASPBERRY_WALL_SIGN.get();
+           ResourceLocation raspberry_sign_texture = modLoc("block/raspberry_block");
+           signBlock(raspberry_sign, raspberry_wall_sign, raspberry_sign_texture);
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
            StandingSignBlock cherry_sign = foodblockcompatregistry.CHERRY_STANDING_SIGN.get();
            WallSignBlock cherry_wall_sign = foodblockcompatregistry.CHERRY_WALL_SIGN.get();
@@ -1688,6 +1749,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           TrapDoorBlock blackberry_trapdoor = foodblockcompatregistry.BLACKBERRY_TRAPDOOR.get(); 
           ResourceLocation blackberry_trapdoor_texture = modLoc("block/blackberry_block");
           trapdoorBlockWithRenderType(blackberry_trapdoor, "blackberry_trapdoor", blackberry_trapdoor_texture, false, blackberry_trapdoor_texture);
+     //------------------------------------------------------------raspberry-----------------------------------------------------------------------
+          TrapDoorBlock raspberry_trapdoor = foodblockcompatregistry.RASPBERRY_TRAPDOOR.get(); 
+          ResourceLocation raspberry_trapdoor_texture = modLoc("block/raspberry_block");
+          trapdoorBlockWithRenderType(raspberry_trapdoor, "raspberry_trapdoor", raspberry_trapdoor_texture, false, raspberry_trapdoor_texture);
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           TrapDoorBlock cherry_trapdoor = foodblockcompatregistry.CHERRY_TRAPDOOR.get(); 
           ResourceLocation cherry_trapdoor_texture = modLoc("block/cherry_block");
@@ -1793,6 +1858,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           Block blackberry_lamp = foodblockcompatregistry.BLACKBERRY_LAMP.get();
           ResourceLocation blackberry_lamp_texture = modLoc("block/blackberry_lamp");
           horizontalBlock(blackberry_lamp, blackberry_lamp_texture, blackberry_lamp_texture, blackberry_lamp_texture);
+     //------------------------------------------------------------raspberry-----------------------------------------------------------------------
+          Block raspberry_lamp = foodblockcompatregistry.RASPBERRY_LAMP.get();
+          ResourceLocation raspberry_lamp_texture = modLoc("block/raspberry_lamp");
+          horizontalBlock(raspberry_lamp, raspberry_lamp_texture, raspberry_lamp_texture, raspberry_lamp_texture);
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           Block cherry_lamp = foodblockcompatregistry.CHERRY_LAMP.get();
           simpleBlock(cherry_lamp);
@@ -1882,9 +1951,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
      //------------------------------------------------------------blackberry-----------------------------------------------------------------------
           CarpetBlock blackberry_carpet = foodblockcompatregistry.BLACKBERRY_CARPET.get();
           ResourceLocation blackberry_carpet_texture = modLoc("block/blackberry_carpet");
-          BlockModelBuilder blackberry_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(blackberry_carpet).getPath(), mcLoc("block/carpet"))
-          .texture("wool", blackberry_carpet_texture);
+          BlockModelBuilder blackberry_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(blackberry_carpet).getPath(), 
+          mcLoc("block/carpet")).texture("wool", blackberry_carpet_texture);
           simpleBlock(blackberry_carpet, new ModelFile.UncheckedModelFile(blackberry_carpet_model.getLocation()));
+     //------------------------------------------------------------raspberry-----------------------------------------------------------------------
+          CarpetBlock raspberry_carpet = foodblockcompatregistry.RASPBERRY_CARPET.get();
+          ResourceLocation raspberry_carpet_texture = modLoc("block/raspberry_carpet");
+          BlockModelBuilder raspberry_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(raspberry_carpet).getPath(), 
+          mcLoc("block/carpet")).texture("wool", raspberry_carpet_texture);
+          simpleBlock(raspberry_carpet, new ModelFile.UncheckedModelFile(raspberry_carpet_model.getLocation()));
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           CarpetBlock cherry_carpet = foodblockcompatregistry.CHERRY_CARPET.get();
           ResourceLocation cherry_carpet_texture = modLoc("block/cherry_carpet");
@@ -2143,6 +2218,45 @@ public class GM1BlockStateProvider extends BlockStateProvider
              .modelForState().modelFile(hanging_blackberry_soul_lantern_model).addModel()
              .partialState().with(LanternBlock.HANGING, false)
              .modelForState().modelFile(blackberry_soul_lantern_model).addModel();
+     //------------------------------------------------------------raspberry-----------------------------------------------------------------------
+         //regular
+          LanternBlock raspberry_lantern = foodblockcompatregistry.RASPBERRY_LANTERN.get();
+          ResourceLocation raspberry_lantern_texture = modLoc("block/raspberry_lantern");
+  
+          BlockModelBuilder raspberry_lantern_model = models()
+              .withExistingParent("raspberry_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", raspberry_lantern_texture);
+  
+          BlockModelBuilder hanging_raspberry_lantern_model = models()
+              .withExistingParent("raspberry_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", raspberry_lantern_texture);
+  
+          getVariantBuilder(raspberry_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_raspberry_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(raspberry_lantern_model).addModel();
+         //soul
+         LanternBlock raspberry_soul_lantern = foodblockcompatregistry.RASPBERRY_SOUL_LANTERN.get();
+         ResourceLocation raspberry_soul_lantern_texture = modLoc("block/raspberry_soul_lantern");
+ 
+         BlockModelBuilder raspberry_soul_lantern_model = models()
+             .withExistingParent("raspberry_soul_lantern", mcLoc("block/lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", raspberry_soul_lantern_texture);
+ 
+         BlockModelBuilder hanging_raspberry_soul_lantern_model = models()
+             .withExistingParent("raspberry_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", raspberry_soul_lantern_texture);
+ 
+         getVariantBuilder(raspberry_soul_lantern)
+             .partialState().with(LanternBlock.HANGING, true)
+             .modelForState().modelFile(hanging_raspberry_soul_lantern_model).addModel()
+             .partialState().with(LanternBlock.HANGING, false)
+             .modelForState().modelFile(raspberry_soul_lantern_model).addModel();
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
          //regular
           LanternBlock cherry_lantern = foodblockcompatregistry.CHERRY_LANTERN.get();
@@ -3091,6 +3205,22 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .modelForState().modelFile(blackberry_chain_model).rotationX(90).rotationY(90).addModel()
           .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
           .modelForState().modelFile(blackberry_chain_model).rotationX(90).addModel(); 
+     //------------------------------------------------------------raspberry-----------------------------------------------------------------------
+         ChainBlock raspberry_chain = foodblockcompatregistry.RASPBERRY_CHAIN.get();
+         ResourceLocation raspberry_chain_texture = modLoc("block/raspberry_chain");
+         BlockModelBuilder raspberry_chain_model = models()
+          .withExistingParent("raspberry_chain", mcLoc("block/chain"))
+          .renderType("cutout_mipped_all")
+          .texture("all", raspberry_chain_texture)
+          .texture("particle", raspberry_chain_texture);
+
+          getVariantBuilder(raspberry_chain)
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Y)
+          .modelForState().modelFile(raspberry_chain_model).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.X)
+          .modelForState().modelFile(raspberry_chain_model).rotationX(90).rotationY(90).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
+          .modelForState().modelFile(raspberry_chain_model).rotationX(90).addModel(); 
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
          ChainBlock cherry_chain = foodblockcompatregistry.CHERRY_CHAIN.get();
          ResourceLocation cherry_chain_texture = modLoc("block/cherry_chain");
@@ -3519,6 +3649,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/blackberry_ladder");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------raspberry-----------------------------------------------------------------------
+          LadderBlock raspberryladder = foodblockcompatregistry.RASPBERRY_LADDER.get();
+
+          getVariantBuilder(raspberryladder)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/raspberry_ladder");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -4068,6 +4219,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/blackberry_table");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------raspberry-----------------------------------------------------------------------
+          HorizontalDirectionalBlock raspberrytable = foodblockcompatregistry.RASPBERRY_TABLE.get();
+
+          getVariantBuilder(raspberrytable)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/raspberry_table");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -4905,6 +5077,122 @@ public class GM1BlockStateProvider extends BlockStateProvider
                     .renderType("cutout_mipped_all")
                     .texture("torch", blackberry_soul_wall_torch_texture)
                     .texture("particle", blackberry_soul_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+     //------------------------------------------------------------raspberry-----------------------------------------------------------------------
+       //regular
+        TorchBlock raspberry_torch = foodblockcompatregistry.RASPBERRY_TORCH.get();
+        ResourceLocation raspberry_torch_texture = modLoc("block/raspberry_torch");
+        BlockModelBuilder raspberry_torch_model = models()
+        .withExistingParent("raspberry_torch", mcLoc("block/torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", raspberry_torch_texture)
+        .texture("particle", raspberry_torch_texture);
+
+        simpleBlock(raspberry_torch, raspberry_torch_model);
+
+        TorchBlock raspberry_wall_torch = foodblockcompatregistry.RASPBERRY_WALL_TORCH.get();
+        BlockModelBuilder raspberry_wall_torch_model = models()
+        .withExistingParent("raspberry_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", raspberry_torch_texture)
+        .texture("particle", raspberry_torch_texture);
+        getVariantBuilder(raspberry_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("raspberry_wall_torch", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", raspberry_torch_texture)
+                    .texture("particle", raspberry_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //redstone
+        RedstoneTorchBlock raspberry_redstone_torch = foodblockcompatregistry.RASPBERRY_REDSTONE_TORCH.get();
+        ResourceLocation raspberry_redstone_torch_texture = modLoc("block/raspberry_redstone_torch");
+        BlockModelBuilder raspberry_redstone_torch_model = models()
+        .withExistingParent("raspberry_redstone_torch", mcLoc("block/redstone_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", raspberry_redstone_torch_texture)
+        .texture("particle", raspberry_redstone_torch_texture);
+        
+
+        simpleBlock(raspberry_redstone_torch, raspberry_redstone_torch_model);
+
+        ResourceLocation raspberry_redstone_wall_torch_texture = modLoc("block/raspberry_redstone_torch");
+
+        RedstoneTorchBlock raspberry_redstone_wall_torch = foodblockcompatregistry.RASPBERRY_REDSTONE_WALL_TORCH.get();
+        BlockModelBuilder raspberry_redstone_wall_torch_model = models()
+        .withExistingParent("raspberry_redstone_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", raspberry_redstone_wall_torch_texture)
+        .texture("particle", raspberry_redstone_wall_torch_texture);
+        getVariantBuilder(raspberry_redstone_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("raspberry_redstone_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", raspberry_redstone_wall_torch_texture)
+                    .texture("particle", raspberry_redstone_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //soul
+        TorchBlock raspberry_soul_torch = foodblockcompatregistry.RASPBERRY_SOUL_TORCH.get();
+        ResourceLocation raspberry_soul_torch_texture = modLoc("block/raspberry_soul_torch");
+        BlockModelBuilder raspberry_soul_torch_model = models()
+        .withExistingParent("raspberry_soul_torch", mcLoc("block/soul_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", raspberry_soul_torch_texture)
+        .texture("particle", raspberry_soul_torch_texture);
+        
+
+        simpleBlock(raspberry_soul_torch, raspberry_soul_torch_model);
+
+        ResourceLocation raspberry_soul_wall_torch_texture = modLoc("block/raspberry_soul_torch");
+        TorchBlock raspberry_soul_wall_torch = foodblockcompatregistry.RASPBERRY_SOUL_WALL_TORCH.get();
+        BlockModelBuilder raspberry_soul_wall_torch_model = models()
+        .withExistingParent("raspberry_soul_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", raspberry_soul_wall_torch_texture)
+        .texture("particle", raspberry_soul_wall_torch_texture);
+        getVariantBuilder(raspberry_soul_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("raspberry_soul_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", raspberry_soul_wall_torch_texture)
+                    .texture("particle", raspberry_soul_wall_torch_texture))
                 .rotationY(rotation)
                 .build();
             });
@@ -7711,6 +7999,50 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationY(rotation)
                       .build();
               });
+     //------------------------------------------------------------raspberry-----------------------------------------------------------------------
+          FurnaceBlock raspberry_furnace = foodblockcompatregistry.RASPBERRY_FURNACE.get();
+          ResourceLocation raspberry_furnace_unlit_texture = modLoc("block/raspberry_furnace");
+          ResourceLocation raspberry_furnace_lit_texture = modLoc("block/raspberry_furnace_lit");
+          ResourceLocation raspberry_furnace_side = modLoc("block/raspberry_block");
+          
+          // Define the model for the unlit state
+          BlockModelBuilder raspberry_furnace_model_unlit = models()
+              .withExistingParent("raspberry_furnace_model_unlit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", raspberry_furnace_side)
+              .texture("top", raspberry_furnace_side)
+              .texture("front", raspberry_furnace_unlit_texture)
+              .texture("particle", raspberry_furnace_side);
+          
+          // Define the model for the lit state
+          BlockModelBuilder raspberry_furnace_model_lit = models()
+              .withExistingParent("raspberry_furnace_model_lit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", raspberry_furnace_side)
+              .texture("top", raspberry_furnace_side)
+              .texture("front", raspberry_furnace_lit_texture)
+              .texture("particle", raspberry_furnace_side);
+          
+          // Configure variants for the raspberry_furnace block
+          getVariantBuilder(raspberry_furnace)
+              .forAllStates(state -> {
+                  Boolean lit = state.getValue(BlockStateProperties.LIT);
+                  Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                  int rotation = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+
+                  ResourceLocation modelLocation = lit ? modLoc("block/raspberry_furnace_model_lit") : modLoc("block/raspberry_furnace_model_unlit");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotation)
+                      .build();
+              });
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           FurnaceBlock cherry_furnace = foodblockcompatregistry.CHERRY_FURNACE.get();
           ResourceLocation cherry_furnace_unlit_texture = modLoc("block/cherry_furnace");
@@ -8742,6 +9074,18 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .modelFile(models().getExistingFile(modelLocation))
                   .build();
           });
+     //------------------------------------------------------------raspberry-----------------------------------------------------------------------
+          foodpathtypeminislab raspberry_stone_path = foodblockcompatregistry.RASPBERRY_STONE_PATH.get();
+
+          getVariantBuilder(raspberry_stone_path)
+          .forAllStates(state -> {
+
+              ResourceLocation modelLocation = modLoc("block/raspberry_stone_path");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .build();
+          });
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           foodpathtypeminislab cherry_stone_path = foodblockcompatregistry.CHERRY_STONE_PATH.get();
 
@@ -9158,6 +9502,54 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   };
 
                   ResourceLocation modelLocation = open ? modLoc("block/blackberry_barrel_model_open") : modLoc("block/blackberry_barrel_model_closed");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotationY)
+                      .rotationX(rotationX)
+                      .build();
+              });
+     //------------------------------------------------------------raspberry-----------------------------------------------------------------------
+          foodBarrel raspberry_barrel = foodblockcompatregistry.RASPBERRY_BARREL.get();
+          ResourceLocation raspberry_barrel_closed_texture = modLoc("block/raspberry_barrel_top_closed");
+          ResourceLocation raspberry_barrel_open_texture = modLoc("block/raspberry_barrel_top_open");
+          ResourceLocation raspberry_barrel_side = modLoc("block/raspberry_barrel_side");
+          ResourceLocation raspberry_barrel_bottom = modLoc("block/raspberry_barrel_bottom");
+          
+          BlockModelBuilder raspberry_barrel_model_closed = models()
+              .withExistingParent("raspberry_barrel_model_closed", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", raspberry_barrel_side)
+              .texture("bottom", raspberry_barrel_bottom)
+              .texture("top", raspberry_barrel_closed_texture)
+              .texture("particle", raspberry_barrel_side);
+          
+          BlockModelBuilder raspberry_barrel_model_open = models()
+              .withExistingParent("raspberry_barrel_model_open", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", raspberry_barrel_side)
+              .texture("bottom", raspberry_barrel_bottom)
+              .texture("top", raspberry_barrel_open_texture)
+              .texture("particle", raspberry_barrel_side);
+          
+          getVariantBuilder(raspberry_barrel)
+              .forAllStates(state -> {
+                  Boolean open = state.getValue(BlockStateProperties.OPEN);
+                  Direction facing = state.getValue(BlockStateProperties.FACING);
+                  int rotationY = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+                  int rotationX = switch (facing) {
+                      case UP -> 0;
+                      case DOWN -> 180;
+                      default -> 90;
+                  };
+
+                  ResourceLocation modelLocation = open ? modLoc("block/raspberry_barrel_model_open") : modLoc("block/raspberry_barrel_model_closed");
               
                   return ConfiguredModel.builder()
                       .modelFile(models().getExistingFile(modelLocation))
@@ -10335,6 +10727,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .rotationY(rotationY)
                   .build();
           });
+     //------------------------------------------------------------raspberry-----------------------------------------------------------------------
+          foodChairBlock raspberryChair = foodblockcompatregistry.RASPBERRY_CHAIR.get();
+
+          getVariantBuilder(raspberryChair)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/raspberry_chair");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           foodChairBlock cherryChair = foodblockcompatregistry.CHERRY_CHAIR.get();
 
@@ -10884,6 +11297,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .rotationY(rotationY)
                   .build();
           });
+     //------------------------------------------------------------raspberry-----------------------------------------------------------------------
+          foodBed raspberryBed = foodblockcompatregistry.RASPBERRY_BED.get();
+
+          getVariantBuilder(raspberryBed)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/raspberry_bed");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           foodBed cherryBed = foodblockcompatregistry.CHERRY_BED.get();
 
@@ -11367,1180 +11801,1229 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .rotationY(rotationY)
                   .build();
           });
+
+   };
     //==============================================================================================================================================
     //|                                                             Cabinet                                                                        |
     //==============================================================================================================================================
+    public void buildCabinetModels() {
      //------------------------------------------------------------elderberry-----------------------------------------------------------------------
          //small
-          smallFoodCabinet elderberryCabinet = foodblockcompatregistry.SMALL_ELDERBERRY_CABINET.get();
+         smallFoodCabinet elderberryCabinet = foodblockcompatregistry.SMALL_ELDERBERRY_CABINET.get();
 
-          getVariantBuilder(elderberryCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(elderberryCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/elderberry_cabinet_open") : modLoc("block/elderberry_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
-         //medium
-          mediumFoodCabinet elderberryMediumCabinet = foodblockcompatregistry.MEDIUM_ELDERBERRY_CABINET.get();
+             ResourceLocation modelLocation = open ? modLoc("block/elderberry_cabinet_open") : modLoc("block/elderberry_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
+        //medium
+         mediumFoodCabinet elderberryMediumCabinet = foodblockcompatregistry.MEDIUM_ELDERBERRY_CABINET.get();
 
-          getVariantBuilder(elderberryMediumCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(elderberryMediumCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/medium_elderberry_cabinet_open") : modLoc("block/medium_elderberry_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
+             ResourceLocation modelLocation = open ? modLoc("block/medium_elderberry_cabinet_open") : modLoc("block/medium_elderberry_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
      //------------------------------------------------------------juniper-----------------------------------------------------------------------
-         //small
-          smallFoodCabinet juniperCabinet = foodblockcompatregistry.SMALL_JUNIPER_CABINET.get();
+        //small
+         smallFoodCabinet juniperCabinet = foodblockcompatregistry.SMALL_JUNIPER_CABINET.get();
 
-          getVariantBuilder(juniperCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(juniperCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/juniper_cabinet_open") : modLoc("block/juniper_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
-         //medium
-          mediumFoodCabinet juniperMediumCabinet = foodblockcompatregistry.MEDIUM_JUNIPER_CABINET.get();
+             ResourceLocation modelLocation = open ? modLoc("block/juniper_cabinet_open") : modLoc("block/juniper_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
+        //medium
+         mediumFoodCabinet juniperMediumCabinet = foodblockcompatregistry.MEDIUM_JUNIPER_CABINET.get();
 
-          getVariantBuilder(juniperMediumCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(juniperMediumCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/medium_juniper_cabinet_open") : modLoc("block/medium_juniper_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
+             ResourceLocation modelLocation = open ? modLoc("block/medium_juniper_cabinet_open") : modLoc("block/medium_juniper_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
      //------------------------------------------------------------blackberry-----------------------------------------------------------------------
-         //small
-          smallFoodCabinet blackberryCabinet = foodblockcompatregistry.SMALL_BLACKBERRY_CABINET.get();
+        //small
+         smallFoodCabinet blackberryCabinet = foodblockcompatregistry.SMALL_BLACKBERRY_CABINET.get();
 
-          getVariantBuilder(blackberryCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(blackberryCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/blackberry_cabinet_open") : modLoc("block/blackberry_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
-         //medium
-          mediumFoodCabinet blackberryMediumCabinet = foodblockcompatregistry.MEDIUM_BLACKBERRY_CABINET.get();
+             ResourceLocation modelLocation = open ? modLoc("block/blackberry_cabinet_open") : modLoc("block/blackberry_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
+        //medium
+         mediumFoodCabinet blackberryMediumCabinet = foodblockcompatregistry.MEDIUM_BLACKBERRY_CABINET.get();
 
-          getVariantBuilder(blackberryMediumCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(blackberryMediumCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/medium_blackberry_cabinet_open") : modLoc("block/medium_blackberry_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
+             ResourceLocation modelLocation = open ? modLoc("block/medium_blackberry_cabinet_open") : modLoc("block/medium_blackberry_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
+     //------------------------------------------------------------raspberry-----------------------------------------------------------------------
+        //small
+         smallFoodCabinet raspberryCabinet = foodblockcompatregistry.SMALL_RASPBERRY_CABINET.get();
+
+         getVariantBuilder(raspberryCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
+
+             ResourceLocation modelLocation = open ? modLoc("block/raspberry_cabinet_open") : modLoc("block/raspberry_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
+        //medium
+         mediumFoodCabinet raspberryMediumCabinet = foodblockcompatregistry.MEDIUM_RASPBERRY_CABINET.get();
+
+         getVariantBuilder(raspberryMediumCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
+
+             ResourceLocation modelLocation = open ? modLoc("block/medium_raspberry_cabinet_open") : modLoc("block/medium_raspberry_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
-         //small
-          smallFoodCabinet cherryCabinet = foodblockcompatregistry.SMALL_CHERRY_CABINET.get();
+        //small
+         smallFoodCabinet cherryCabinet = foodblockcompatregistry.SMALL_CHERRY_CABINET.get();
 
-          getVariantBuilder(cherryCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(cherryCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/cherry_cabinet_open") : modLoc("block/cherry_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
-         //medium
-          mediumFoodCabinet cherryMediumCabinet = foodblockcompatregistry.MEDIUM_CHERRY_CABINET.get();
+             ResourceLocation modelLocation = open ? modLoc("block/cherry_cabinet_open") : modLoc("block/cherry_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
+        //medium
+         mediumFoodCabinet cherryMediumCabinet = foodblockcompatregistry.MEDIUM_CHERRY_CABINET.get();
 
-          getVariantBuilder(cherryMediumCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(cherryMediumCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/medium_cherry_cabinet_open") : modLoc("block/medium_cherry_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
+             ResourceLocation modelLocation = open ? modLoc("block/medium_cherry_cabinet_open") : modLoc("block/medium_cherry_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
      //------------------------------------------------------------blackcherry-----------------------------------------------------------------------
-         //small
-          smallFoodCabinet blackcherryCabinet = foodblockcompatregistry.SMALL_BLACKCHERRY_CABINET.get();
+        //small
+         smallFoodCabinet blackcherryCabinet = foodblockcompatregistry.SMALL_BLACKCHERRY_CABINET.get();
 
-          getVariantBuilder(blackcherryCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(blackcherryCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/blackcherry_cabinet_open") : modLoc("block/blackcherry_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
-         //medium
-          mediumFoodCabinet blackcherryMediumCabinet = foodblockcompatregistry.MEDIUM_BLACKCHERRY_CABINET.get();
+             ResourceLocation modelLocation = open ? modLoc("block/blackcherry_cabinet_open") : modLoc("block/blackcherry_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
+        //medium
+         mediumFoodCabinet blackcherryMediumCabinet = foodblockcompatregistry.MEDIUM_BLACKCHERRY_CABINET.get();
 
-          getVariantBuilder(blackcherryMediumCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(blackcherryMediumCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/medium_blackcherry_cabinet_open") : modLoc("block/medium_blackcherry_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
+             ResourceLocation modelLocation = open ? modLoc("block/medium_blackcherry_cabinet_open") : modLoc("block/medium_blackcherry_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
      //------------------------------------------------------------peach-----------------------------------------------------------------------
-         //small
-          smallFoodCabinet peachCabinet = foodblockcompatregistry.SMALL_PEACH_CABINET.get();
+        //small
+         smallFoodCabinet peachCabinet = foodblockcompatregistry.SMALL_PEACH_CABINET.get();
 
-          getVariantBuilder(peachCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(peachCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/peach_cabinet_open") : modLoc("block/peach_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
-         //medium
-          mediumFoodCabinet peachMediumCabinet = foodblockcompatregistry.MEDIUM_PEACH_CABINET.get();
+             ResourceLocation modelLocation = open ? modLoc("block/peach_cabinet_open") : modLoc("block/peach_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
+        //medium
+         mediumFoodCabinet peachMediumCabinet = foodblockcompatregistry.MEDIUM_PEACH_CABINET.get();
 
-          getVariantBuilder(peachMediumCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(peachMediumCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/medium_peach_cabinet_open") : modLoc("block/medium_peach_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
+             ResourceLocation modelLocation = open ? modLoc("block/medium_peach_cabinet_open") : modLoc("block/medium_peach_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
      //------------------------------------------------------------coconut-----------------------------------------------------------------------
-         //small
-          smallFoodCabinet coconutCabinet = foodblockcompatregistry.SMALL_COCONUT_CABINET.get();
+        //small
+         smallFoodCabinet coconutCabinet = foodblockcompatregistry.SMALL_COCONUT_CABINET.get();
 
-          getVariantBuilder(coconutCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(coconutCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/coconut_cabinet_open") : modLoc("block/coconut_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
-         //medium
-          mediumFoodCabinet coconutMediumCabinet = foodblockcompatregistry.MEDIUM_COCONUT_CABINET.get();
+             ResourceLocation modelLocation = open ? modLoc("block/coconut_cabinet_open") : modLoc("block/coconut_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
+        //medium
+         mediumFoodCabinet coconutMediumCabinet = foodblockcompatregistry.MEDIUM_COCONUT_CABINET.get();
 
-          getVariantBuilder(coconutMediumCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(coconutMediumCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/medium_coconut_cabinet_open") : modLoc("block/medium_coconut_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
+             ResourceLocation modelLocation = open ? modLoc("block/medium_coconut_cabinet_open") : modLoc("block/medium_coconut_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
      //------------------------------------------------------------orange-----------------------------------------------------------------------
-         //small
-          smallFoodCabinet orangeCabinet = foodblockcompatregistry.SMALL_ORANGE_CABINET.get();
+        //small
+         smallFoodCabinet orangeCabinet = foodblockcompatregistry.SMALL_ORANGE_CABINET.get();
 
-          getVariantBuilder(orangeCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(orangeCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/orange_cabinet_open") : modLoc("block/orange_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
-         //medium
-          mediumFoodCabinet orangeMediumCabinet = foodblockcompatregistry.MEDIUM_ORANGE_CABINET.get();
+             ResourceLocation modelLocation = open ? modLoc("block/orange_cabinet_open") : modLoc("block/orange_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
+        //medium
+         mediumFoodCabinet orangeMediumCabinet = foodblockcompatregistry.MEDIUM_ORANGE_CABINET.get();
 
-          getVariantBuilder(orangeMediumCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(orangeMediumCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/medium_orange_cabinet_open") : modLoc("block/medium_orange_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
+             ResourceLocation modelLocation = open ? modLoc("block/medium_orange_cabinet_open") : modLoc("block/medium_orange_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
      //------------------------------------------------------------tangerine-----------------------------------------------------------------------
-         //small
-          smallFoodCabinet tangerineCabinet = foodblockcompatregistry.SMALL_TANGERINE_CABINET.get();
+        //small
+         smallFoodCabinet tangerineCabinet = foodblockcompatregistry.SMALL_TANGERINE_CABINET.get();
 
-          getVariantBuilder(tangerineCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(tangerineCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/tangerine_cabinet_open") : modLoc("block/tangerine_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
-         //medium
-          mediumFoodCabinet tangerineMediumCabinet = foodblockcompatregistry.MEDIUM_TANGERINE_CABINET.get();
+             ResourceLocation modelLocation = open ? modLoc("block/tangerine_cabinet_open") : modLoc("block/tangerine_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
+        //medium
+         mediumFoodCabinet tangerineMediumCabinet = foodblockcompatregistry.MEDIUM_TANGERINE_CABINET.get();
 
-          getVariantBuilder(tangerineMediumCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(tangerineMediumCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/medium_tangerine_cabinet_open") : modLoc("block/medium_tangerine_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
+             ResourceLocation modelLocation = open ? modLoc("block/medium_tangerine_cabinet_open") : modLoc("block/medium_tangerine_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
      //------------------------------------------------------------kumquat-----------------------------------------------------------------------
-         //small
-          smallFoodCabinet kumquatCabinet = foodblockcompatregistry.SMALL_KUMQUAT_CABINET.get();
+        //small
+         smallFoodCabinet kumquatCabinet = foodblockcompatregistry.SMALL_KUMQUAT_CABINET.get();
 
-          getVariantBuilder(kumquatCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(kumquatCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/kumquat_cabinet_open") : modLoc("block/kumquat_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
-         //medium
-          mediumFoodCabinet kumquatMediumCabinet = foodblockcompatregistry.MEDIUM_KUMQUAT_CABINET.get();
+             ResourceLocation modelLocation = open ? modLoc("block/kumquat_cabinet_open") : modLoc("block/kumquat_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
+        //medium
+         mediumFoodCabinet kumquatMediumCabinet = foodblockcompatregistry.MEDIUM_KUMQUAT_CABINET.get();
 
-          getVariantBuilder(kumquatMediumCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(kumquatMediumCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/medium_kumquat_cabinet_open") : modLoc("block/medium_kumquat_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
+             ResourceLocation modelLocation = open ? modLoc("block/medium_kumquat_cabinet_open") : modLoc("block/medium_kumquat_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
      //------------------------------------------------------------persimmon-----------------------------------------------------------------------
-         //small
-          smallFoodCabinet persimmonCabinet = foodblockcompatregistry.SMALL_PERSIMMON_CABINET.get();
+        //small
+         smallFoodCabinet persimmonCabinet = foodblockcompatregistry.SMALL_PERSIMMON_CABINET.get();
 
-          getVariantBuilder(persimmonCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(persimmonCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/persimmon_cabinet_open") : modLoc("block/persimmon_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
-         //medium
-          mediumFoodCabinet persimmonMediumCabinet = foodblockcompatregistry.MEDIUM_PERSIMMON_CABINET.get();
+             ResourceLocation modelLocation = open ? modLoc("block/persimmon_cabinet_open") : modLoc("block/persimmon_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
+        //medium
+         mediumFoodCabinet persimmonMediumCabinet = foodblockcompatregistry.MEDIUM_PERSIMMON_CABINET.get();
 
-          getVariantBuilder(persimmonMediumCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(persimmonMediumCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/medium_persimmon_cabinet_open") : modLoc("block/medium_persimmon_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
+             ResourceLocation modelLocation = open ? modLoc("block/medium_persimmon_cabinet_open") : modLoc("block/medium_persimmon_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
      //------------------------------------------------------------satsuma-----------------------------------------------------------------------
-         //small
-          smallFoodCabinet satsumaCabinet = foodblockcompatregistry.SMALL_SATSUMA_CABINET.get();
+        //small
+         smallFoodCabinet satsumaCabinet = foodblockcompatregistry.SMALL_SATSUMA_CABINET.get();
 
-          getVariantBuilder(satsumaCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(satsumaCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/satsuma_cabinet_open") : modLoc("block/satsuma_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
-         //medium
-          mediumFoodCabinet satsumaMediumCabinet = foodblockcompatregistry.MEDIUM_SATSUMA_CABINET.get();
+             ResourceLocation modelLocation = open ? modLoc("block/satsuma_cabinet_open") : modLoc("block/satsuma_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
+        //medium
+         mediumFoodCabinet satsumaMediumCabinet = foodblockcompatregistry.MEDIUM_SATSUMA_CABINET.get();
 
-          getVariantBuilder(satsumaMediumCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(satsumaMediumCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/medium_satsuma_cabinet_open") : modLoc("block/medium_satsuma_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
+             ResourceLocation modelLocation = open ? modLoc("block/medium_satsuma_cabinet_open") : modLoc("block/medium_satsuma_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
      //------------------------------------------------------------mandarin-----------------------------------------------------------------------
-         //small
-          smallFoodCabinet mandarinCabinet = foodblockcompatregistry.SMALL_MANDARIN_CABINET.get();
+        //small
+         smallFoodCabinet mandarinCabinet = foodblockcompatregistry.SMALL_MANDARIN_CABINET.get();
 
-          getVariantBuilder(mandarinCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(mandarinCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/mandarin_cabinet_open") : modLoc("block/mandarin_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
-         //medium
-          mediumFoodCabinet mandarinMediumCabinet = foodblockcompatregistry.MEDIUM_MANDARIN_CABINET.get();
+             ResourceLocation modelLocation = open ? modLoc("block/mandarin_cabinet_open") : modLoc("block/mandarin_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
+        //medium
+         mediumFoodCabinet mandarinMediumCabinet = foodblockcompatregistry.MEDIUM_MANDARIN_CABINET.get();
 
-          getVariantBuilder(mandarinMediumCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(mandarinMediumCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/medium_mandarin_cabinet_open") : modLoc("block/medium_mandarin_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
+             ResourceLocation modelLocation = open ? modLoc("block/medium_mandarin_cabinet_open") : modLoc("block/medium_mandarin_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
-         //small
-          smallFoodCabinet lemonCabinet = foodblockcompatregistry.SMALL_LEMON_CABINET.get();
+        //small
+         smallFoodCabinet lemonCabinet = foodblockcompatregistry.SMALL_LEMON_CABINET.get();
 
-          getVariantBuilder(lemonCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(lemonCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/lemon_cabinet_open") : modLoc("block/lemon_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
-         //medium
-          mediumFoodCabinet lemonMediumCabinet = foodblockcompatregistry.MEDIUM_LEMON_CABINET.get();
+             ResourceLocation modelLocation = open ? modLoc("block/lemon_cabinet_open") : modLoc("block/lemon_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
+        //medium
+         mediumFoodCabinet lemonMediumCabinet = foodblockcompatregistry.MEDIUM_LEMON_CABINET.get();
 
-          getVariantBuilder(lemonMediumCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(lemonMediumCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/medium_lemon_cabinet_open") : modLoc("block/medium_lemon_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
+             ResourceLocation modelLocation = open ? modLoc("block/medium_lemon_cabinet_open") : modLoc("block/medium_lemon_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
      //------------------------------------------------------------citron-----------------------------------------------------------------------
-         //small
-          smallFoodCabinet citronCabinet = foodblockcompatregistry.SMALL_CITRON_CABINET.get();
+        //small
+         smallFoodCabinet citronCabinet = foodblockcompatregistry.SMALL_CITRON_CABINET.get();
 
-          getVariantBuilder(citronCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(citronCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/citron_cabinet_open") : modLoc("block/citron_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
-         //medium
-          mediumFoodCabinet citronMediumCabinet = foodblockcompatregistry.MEDIUM_CITRON_CABINET.get();
+             ResourceLocation modelLocation = open ? modLoc("block/citron_cabinet_open") : modLoc("block/citron_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
+        //medium
+         mediumFoodCabinet citronMediumCabinet = foodblockcompatregistry.MEDIUM_CITRON_CABINET.get();
 
-          getVariantBuilder(citronMediumCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(citronMediumCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/medium_citron_cabinet_open") : modLoc("block/medium_citron_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
+             ResourceLocation modelLocation = open ? modLoc("block/medium_citron_cabinet_open") : modLoc("block/medium_citron_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
      //------------------------------------------------------------buddhashand-----------------------------------------------------------------------
-         //small
-          smallFoodCabinet buddhashandCabinet = foodblockcompatregistry.SMALL_BUDDHASHAND_CABINET.get();
+        //small
+         smallFoodCabinet buddhashandCabinet = foodblockcompatregistry.SMALL_BUDDHASHAND_CABINET.get();
 
-          getVariantBuilder(buddhashandCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(buddhashandCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/buddhashand_cabinet_open") : modLoc("block/buddhashand_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
-         //medium
-          mediumFoodCabinet buddhashandMediumCabinet = foodblockcompatregistry.MEDIUM_BUDDHASHAND_CABINET.get();
+             ResourceLocation modelLocation = open ? modLoc("block/buddhashand_cabinet_open") : modLoc("block/buddhashand_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
+        //medium
+         mediumFoodCabinet buddhashandMediumCabinet = foodblockcompatregistry.MEDIUM_BUDDHASHAND_CABINET.get();
 
-          getVariantBuilder(buddhashandMediumCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(buddhashandMediumCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/medium_buddhashand_cabinet_open") : modLoc("block/medium_buddhashand_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
+             ResourceLocation modelLocation = open ? modLoc("block/medium_buddhashand_cabinet_open") : modLoc("block/medium_buddhashand_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
      //------------------------------------------------------------lime-----------------------------------------------------------------------
-         //small
-          smallFoodCabinet limeCabinet = foodblockcompatregistry.SMALL_LIME_CABINET.get();
+        //small
+         smallFoodCabinet limeCabinet = foodblockcompatregistry.SMALL_LIME_CABINET.get();
 
-          getVariantBuilder(limeCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(limeCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/lime_cabinet_open") : modLoc("block/lime_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
-         //medium
-          mediumFoodCabinet limeMediumCabinet = foodblockcompatregistry.MEDIUM_LIME_CABINET.get();
+             ResourceLocation modelLocation = open ? modLoc("block/lime_cabinet_open") : modLoc("block/lime_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
+        //medium
+         mediumFoodCabinet limeMediumCabinet = foodblockcompatregistry.MEDIUM_LIME_CABINET.get();
 
-          getVariantBuilder(limeMediumCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(limeMediumCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/medium_lime_cabinet_open") : modLoc("block/medium_lime_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
+             ResourceLocation modelLocation = open ? modLoc("block/medium_lime_cabinet_open") : modLoc("block/medium_lime_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
      //------------------------------------------------------------keylime-----------------------------------------------------------------------
-         //small
-          smallFoodCabinet keylimeCabinet = foodblockcompatregistry.SMALL_KEYLIME_CABINET.get();
+        //small
+         smallFoodCabinet keylimeCabinet = foodblockcompatregistry.SMALL_KEYLIME_CABINET.get();
 
-          getVariantBuilder(keylimeCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(keylimeCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/keylime_cabinet_open") : modLoc("block/keylime_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
-         //medium
-          mediumFoodCabinet keylimeMediumCabinet = foodblockcompatregistry.MEDIUM_KEYLIME_CABINET.get();
+             ResourceLocation modelLocation = open ? modLoc("block/keylime_cabinet_open") : modLoc("block/keylime_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
+        //medium
+         mediumFoodCabinet keylimeMediumCabinet = foodblockcompatregistry.MEDIUM_KEYLIME_CABINET.get();
 
-          getVariantBuilder(keylimeMediumCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(keylimeMediumCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/medium_keylime_cabinet_open") : modLoc("block/medium_keylime_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
+             ResourceLocation modelLocation = open ? modLoc("block/medium_keylime_cabinet_open") : modLoc("block/medium_keylime_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
      //------------------------------------------------------------fingerlime-----------------------------------------------------------------------
-         //small
-          smallFoodCabinet fingerlimeCabinet = foodblockcompatregistry.SMALL_FINGERLIME_CABINET.get();
+        //small
+         smallFoodCabinet fingerlimeCabinet = foodblockcompatregistry.SMALL_FINGERLIME_CABINET.get();
 
-          getVariantBuilder(fingerlimeCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(fingerlimeCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/fingerlime_cabinet_open") : modLoc("block/fingerlime_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
-         //medium
-          mediumFoodCabinet fingerlimeMediumCabinet = foodblockcompatregistry.MEDIUM_FINGERLIME_CABINET.get();
+             ResourceLocation modelLocation = open ? modLoc("block/fingerlime_cabinet_open") : modLoc("block/fingerlime_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
+        //medium
+         mediumFoodCabinet fingerlimeMediumCabinet = foodblockcompatregistry.MEDIUM_FINGERLIME_CABINET.get();
 
-          getVariantBuilder(fingerlimeMediumCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(fingerlimeMediumCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/medium_fingerlime_cabinet_open") : modLoc("block/medium_fingerlime_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
+             ResourceLocation modelLocation = open ? modLoc("block/medium_fingerlime_cabinet_open") : modLoc("block/medium_fingerlime_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
      //------------------------------------------------------------grapefruit-----------------------------------------------------------------------
-         //small
-          smallFoodCabinet grapefruitCabinet = foodblockcompatregistry.SMALL_GRAPEFRUIT_CABINET.get();
+        //small
+         smallFoodCabinet grapefruitCabinet = foodblockcompatregistry.SMALL_GRAPEFRUIT_CABINET.get();
 
-          getVariantBuilder(grapefruitCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(grapefruitCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/grapefruit_cabinet_open") : modLoc("block/grapefruit_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
-         //medium
-          mediumFoodCabinet grapefruitMediumCabinet = foodblockcompatregistry.MEDIUM_GRAPEFRUIT_CABINET.get();
+             ResourceLocation modelLocation = open ? modLoc("block/grapefruit_cabinet_open") : modLoc("block/grapefruit_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
+        //medium
+         mediumFoodCabinet grapefruitMediumCabinet = foodblockcompatregistry.MEDIUM_GRAPEFRUIT_CABINET.get();
 
-          getVariantBuilder(grapefruitMediumCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(grapefruitMediumCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/medium_grapefruit_cabinet_open") : modLoc("block/medium_grapefruit_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
+             ResourceLocation modelLocation = open ? modLoc("block/medium_grapefruit_cabinet_open") : modLoc("block/medium_grapefruit_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
      //------------------------------------------------------------pomelo-----------------------------------------------------------------------
-         //small
-          smallFoodCabinet pomeloCabinet = foodblockcompatregistry.SMALL_POMELO_CABINET.get();
+        //small
+         smallFoodCabinet pomeloCabinet = foodblockcompatregistry.SMALL_POMELO_CABINET.get();
 
-          getVariantBuilder(pomeloCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(pomeloCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/pomelo_cabinet_open") : modLoc("block/pomelo_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
-         //medium
-          mediumFoodCabinet pomeloMediumCabinet = foodblockcompatregistry.MEDIUM_POMELO_CABINET.get();
+             ResourceLocation modelLocation = open ? modLoc("block/pomelo_cabinet_open") : modLoc("block/pomelo_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
+        //medium
+         mediumFoodCabinet pomeloMediumCabinet = foodblockcompatregistry.MEDIUM_POMELO_CABINET.get();
 
-          getVariantBuilder(pomeloMediumCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(pomeloMediumCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/medium_pomelo_cabinet_open") : modLoc("block/medium_pomelo_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
+             ResourceLocation modelLocation = open ? modLoc("block/medium_pomelo_cabinet_open") : modLoc("block/medium_pomelo_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
      //------------------------------------------------------------corn-----------------------------------------------------------------------
-         //small
-          smallFoodCabinet cornCabinet = foodblockcompatregistry.SMALL_CORN_CABINET.get();
+        //small
+         smallFoodCabinet cornCabinet = foodblockcompatregistry.SMALL_CORN_CABINET.get();
 
-          getVariantBuilder(cornCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(cornCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/corn_cabinet_open") : modLoc("block/corn_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
-         //medium
-          mediumFoodCabinet cornMediumCabinet = foodblockcompatregistry.MEDIUM_CORN_CABINET.get();
+             ResourceLocation modelLocation = open ? modLoc("block/corn_cabinet_open") : modLoc("block/corn_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
+        //medium
+         mediumFoodCabinet cornMediumCabinet = foodblockcompatregistry.MEDIUM_CORN_CABINET.get();
 
-          getVariantBuilder(cornMediumCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(cornMediumCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/medium_corn_cabinet_open") : modLoc("block/medium_corn_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
+             ResourceLocation modelLocation = open ? modLoc("block/medium_corn_cabinet_open") : modLoc("block/medium_corn_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
      //------------------------------------------------------------onion-----------------------------------------------------------------------
-         //small
-          smallFoodCabinet onionCabinet = foodblockcompatregistry.SMALL_ONION_CABINET.get();
+        //small
+         smallFoodCabinet onionCabinet = foodblockcompatregistry.SMALL_ONION_CABINET.get();
 
-          getVariantBuilder(onionCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(onionCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/onion_cabinet_open") : modLoc("block/onion_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
-         //medium
-          mediumFoodCabinet onionMediumCabinet = foodblockcompatregistry.MEDIUM_ONION_CABINET.get();
+             ResourceLocation modelLocation = open ? modLoc("block/onion_cabinet_open") : modLoc("block/onion_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
+        //medium
+         mediumFoodCabinet onionMediumCabinet = foodblockcompatregistry.MEDIUM_ONION_CABINET.get();
 
-          getVariantBuilder(onionMediumCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(onionMediumCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/medium_onion_cabinet_open") : modLoc("block/medium_onion_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
+             ResourceLocation modelLocation = open ? modLoc("block/medium_onion_cabinet_open") : modLoc("block/medium_onion_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
      //------------------------------------------------------------tomato-----------------------------------------------------------------------
-         //small
-          smallFoodCabinet tomatoCabinet = foodblockcompatregistry.SMALL_TOMATO_CABINET.get();
+        //small
+         smallFoodCabinet tomatoCabinet = foodblockcompatregistry.SMALL_TOMATO_CABINET.get();
 
-          getVariantBuilder(tomatoCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(tomatoCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/tomato_cabinet_open") : modLoc("block/tomato_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
-         //medium
-          mediumFoodCabinet tomatoMediumCabinet = foodblockcompatregistry.MEDIUM_TOMATO_CABINET.get();
+             ResourceLocation modelLocation = open ? modLoc("block/tomato_cabinet_open") : modLoc("block/tomato_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
+        //medium
+         mediumFoodCabinet tomatoMediumCabinet = foodblockcompatregistry.MEDIUM_TOMATO_CABINET.get();
 
-          getVariantBuilder(tomatoMediumCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(tomatoMediumCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/medium_tomato_cabinet_open") : modLoc("block/medium_tomato_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
+             ResourceLocation modelLocation = open ? modLoc("block/medium_tomato_cabinet_open") : modLoc("block/medium_tomato_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
      //------------------------------------------------------------pecan-----------------------------------------------------------------------
-         //small
-          smallFoodCabinet pecanCabinet = foodblockcompatregistry.SMALL_PECAN_CABINET.get();
+        //small
+         smallFoodCabinet pecanCabinet = foodblockcompatregistry.SMALL_PECAN_CABINET.get();
 
-          getVariantBuilder(pecanCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(pecanCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/pecan_cabinet_open") : modLoc("block/pecan_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
-         //medium
-          mediumFoodCabinet pecanMediumCabinet = foodblockcompatregistry.MEDIUM_PECAN_CABINET.get();
+             ResourceLocation modelLocation = open ? modLoc("block/pecan_cabinet_open") : modLoc("block/pecan_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
+        //medium
+         mediumFoodCabinet pecanMediumCabinet = foodblockcompatregistry.MEDIUM_PECAN_CABINET.get();
 
-          getVariantBuilder(pecanMediumCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(pecanMediumCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/medium_pecan_cabinet_open") : modLoc("block/medium_pecan_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
+             ResourceLocation modelLocation = open ? modLoc("block/medium_pecan_cabinet_open") : modLoc("block/medium_pecan_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
      //------------------------------------------------------------almond-----------------------------------------------------------------------
-         //small
-          smallFoodCabinet almondCabinet = foodblockcompatregistry.SMALL_ALMOND_CABINET.get();
+        //small
+         smallFoodCabinet almondCabinet = foodblockcompatregistry.SMALL_ALMOND_CABINET.get();
 
-          getVariantBuilder(almondCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(almondCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/almond_cabinet_open") : modLoc("block/almond_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
-         //medium
-          mediumFoodCabinet almondMediumCabinet = foodblockcompatregistry.MEDIUM_ALMOND_CABINET.get();
+             ResourceLocation modelLocation = open ? modLoc("block/almond_cabinet_open") : modLoc("block/almond_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
+        //medium
+         mediumFoodCabinet almondMediumCabinet = foodblockcompatregistry.MEDIUM_ALMOND_CABINET.get();
 
-          getVariantBuilder(almondMediumCabinet)
-          .forAllStates(state -> {
-              Boolean open = state.getValue(BlockStateProperties.OPEN);
-              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-              int rotationY = switch (facing) {
-                  case NORTH -> 180;
-                  case EAST -> 270;
-                  case SOUTH -> 0;
-                  case WEST -> 90;
-                  default -> 180;
-              };
+         getVariantBuilder(almondMediumCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
 
-              ResourceLocation modelLocation = open ? modLoc("block/medium_almond_cabinet_open") : modLoc("block/medium_almond_cabinet");
-          
-              return ConfiguredModel.builder()
-                  .modelFile(models().getExistingFile(modelLocation))
-                  .rotationY(rotationY)
-                  .build();
-          });
-   };
+             ResourceLocation modelLocation = open ? modLoc("block/medium_almond_cabinet_open") : modLoc("block/medium_almond_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
+
+};
 
 }
     

@@ -52,6 +52,10 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         Registries.ITEM,
         ResourceLocation.fromNamespaceAndPath("goldfishmod03tastyfurniturecompataddon", "blackberries")
         );
+       public static final TagKey<Item> RASPBERRY_TAG = TagKey.create(
+        Registries.ITEM,
+        ResourceLocation.fromNamespaceAndPath("goldfishmod03tastyfurniturecompataddon", "raspberries")
+        );
        public static final TagKey<Item> CHERRY_TAG = TagKey.create(
         Registries.ITEM,
         ResourceLocation.fromNamespaceAndPath("goldfishmod03tastyfurniturecompataddon", "cherries")
@@ -292,6 +296,43 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', BLACKBERRY_TAG)
             .unlockedBy("has_mush_hammer", has(mushregistry.most_advanced_mushhammer.get()))
             .save(output, "blackberry_mush_from_most_advanced_mushhammer");
+  //--------------------------------------------------------------------------------------Raspberry---------------------------------------------------------------------------------------------
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.RASPBERRY_MUSH.get(), 1)
+            .pattern("ABB")
+            .pattern("BB ")
+            .pattern("   ")
+            .define('A', mushregistry.mushhammer.get())
+            .define('B', RASPBERRY_TAG)
+            .unlockedBy("has_mush_hammer", has(mushregistry.mushhammer.get()))
+            .save(output);
+          //advanced
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.RASPBERRY_MUSH.get(), 2)
+            .pattern("ABB")
+            .pattern("BB ")
+            .pattern("   ")
+            .define('A', mushregistry.advanced_mushhammer.get())
+            .define('B', RASPBERRY_TAG)
+            .unlockedBy("has_mush_hammer", has(mushregistry.advanced_mushhammer.get()))
+            .save(output, "raspberry_mush_from_advanced_mushhammer");
+          //more advanced
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.RASPBERRY_MUSH.get(), 4)
+            .pattern("ABB")
+            .pattern("BB ")
+            .pattern("   ")
+            .define('A', mushregistry.more_advanced_mushhammer.get())
+            .define('B', RASPBERRY_TAG)
+            .unlockedBy("has_mush_hammer", has(mushregistry.more_advanced_mushhammer.get()))
+            .save(output, "raspberry_mush_from_more_advanced_mushhammer");
+          //most advanced
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.RASPBERRY_MUSH.get(), 8)
+            .pattern("ABB")
+            .pattern("BB ")
+            .pattern("   ")
+            .define('A', mushregistry.most_advanced_mushhammer.get())
+            .define('B', RASPBERRY_TAG)
+            .unlockedBy("has_mush_hammer", has(mushregistry.most_advanced_mushhammer.get()))
+            .save(output, "raspberry_mush_from_most_advanced_mushhammer");
   //----------------------------------------------------------------------------------------Cherry-----------------------------------------------------------------------------------------------
           //regular
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mushcompatregistry.CHERRY_MUSH.get(), 1)
@@ -1241,6 +1282,38 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .requires(foodblockcompatitemregistry.BLACKBERRY_BLOCK_ITEM.get())
             .unlockedBy("has_blackberry_block", has(foodblockcompatitemregistry.BLACKBERRY_BLOCK_ITEM.get()))
             .save(output, "blackberry_ingot_from_unpacking");
+  //--------------------------------------------------------------------------------------Raspberry---------------------------------------------------------------------------------------------
+          //crafting
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotcompatregistry.RASPBERRY_INGOT.get(), 1)
+            .pattern("AAA")
+            .pattern("AAA")
+            .pattern("AAA")
+            .define('A', nuggetcompatregistry.RASPBERRY_NUGGET.get())
+            .unlockedBy("has_raspberry_nugget", has(nuggetcompatregistry.RASPBERRY_NUGGET.get()))
+            .save(output, "raspberry_ingot_from_crafting");
+          //smelting
+            SimpleCookingRecipeBuilder.smelting(Ingredient.of(mushcompatregistry.RASPBERRY_MUSH.get()),
+            RecipeCategory.MISC,
+            ingotcompatregistry.RASPBERRY_INGOT.get(),
+            1.0f,
+            200
+            )
+            .unlockedBy("has_raspberry_mush", has(mushcompatregistry.RASPBERRY_MUSH.get()))
+            .save(output, "raspberry_ingot_from_smelting");
+          //blasting
+            SimpleCookingRecipeBuilder.blasting(Ingredient.of(mushcompatregistry.RASPBERRY_MUSH.get()),
+            RecipeCategory.MISC,
+            ingotcompatregistry.RASPBERRY_INGOT.get(),
+            1.0f,
+            100
+            )
+            .unlockedBy("has_raspberry_mush", has(mushcompatregistry.RASPBERRY_MUSH.get()))
+            .save(output, "raspberry_ingot_from_blasting");
+          //unpacking
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ingotcompatregistry.RASPBERRY_INGOT.get(), 9)
+            .requires(foodblockcompatitemregistry.RASPBERRY_BLOCK_ITEM.get())
+            .unlockedBy("has_raspberry_block", has(foodblockcompatitemregistry.RASPBERRY_BLOCK_ITEM.get()))
+            .save(output, "raspberry_ingot_from_unpacking");
   //----------------------------------------------------------------------------------------Cherry-----------------------------------------------------------------------------------------------
           //crafting
             ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotcompatregistry.CHERRY_INGOT.get(), 1)
@@ -1994,6 +2067,11 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .requires(ingotcompatregistry.BLACKBERRY_INGOT.get())
         .unlockedBy("has_blackberry_ingot", has(ingotcompatregistry.BLACKBERRY_INGOT.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Raspberry---------------------------------------------------------------------------------------------
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, nuggetcompatregistry.RASPBERRY_NUGGET.get(), 9)
+        .requires(ingotcompatregistry.RASPBERRY_INGOT.get())
+        .unlockedBy("has_raspberry_ingot", has(ingotcompatregistry.RASPBERRY_INGOT.get()))
+        .save(output);
   //----------------------------------------------------------------------------------------Cherry-----------------------------------------------------------------------------------------------
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, nuggetcompatregistry.CHERRY_NUGGET.get(), 9)
         .requires(ingotcompatregistry.CHERRY_INGOT.get())
@@ -2261,6 +2339,56 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.BLACKBERRY_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockcompatitemregistry.BLACKBERRY_TILES_BLOCK_ITEM.get())
           .unlockedBy("has_blackberry_block", has(foodblockcompatitemregistry.BLACKBERRY_BLOCK_ITEM.get()))
           .save(output, "blackberry_tiles_block_from_blackberry_block_stonecutting");
+  //--------------------------------------------------------------------------------------Raspberry---------------------------------------------------------------------------------------------
+        //plain
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.RASPBERRY_BLOCK_ITEM.get(), 1)
+          .pattern("AAA")
+          .pattern("AAA")
+          .pattern("AAA")
+          .define('A', ingotcompatregistry.RASPBERRY_INGOT.get())
+          .unlockedBy("has_raspberry_ingot", has(ingotcompatregistry.RASPBERRY_INGOT.get()))
+          .save(output); 
+        //bricks
+         //crafting
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.RASPBERRY_BRICKS_BLOCK_ITEM.get(), 4)
+          .pattern("AA ")
+          .pattern("AA ")
+          .pattern("   ")
+          .define('A', foodblockcompatitemregistry.RASPBERRY_BLOCK_ITEM.get())
+          .unlockedBy("has_raspberry_block", has(foodblockcompatitemregistry.RASPBERRY_BLOCK_ITEM.get()))
+          .save(output); 
+         //stonecutting     
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.RASPBERRY_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockcompatitemregistry.RASPBERRY_BRICKS_BLOCK_ITEM.get())
+          .unlockedBy("has_raspberry_block", has(foodblockcompatitemregistry.RASPBERRY_BLOCK_ITEM.get()))
+          .save(output, "raspberry_bricks_block_from_raspberry_block_stonecutting");
+
+        //chiseled
+         //crafting
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.RASPBERRY_CHISELED_BLOCK_ITEM.get())
+          .pattern("   ")
+          .pattern(" A ")
+          .pattern(" A ")
+          .define('A', foodblockcompatitemregistry.RASPBERRY_SLAB_ITEM.get())
+          .unlockedBy("has_raspberry_slab", has(foodblockcompatitemregistry.RASPBERRY_SLAB_ITEM.get()))
+          .save(output);
+         //stonecutting     
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.RASPBERRY_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockcompatitemregistry.RASPBERRY_CHISELED_BLOCK_ITEM.get())
+          .unlockedBy("has_raspberry_block", has(foodblockcompatitemregistry.RASPBERRY_BLOCK_ITEM.get()))
+          .save(output, "raspberry_chiseled_block_from_raspberry_block_stonecutting");
+
+        //tiles
+         //crafting
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.RASPBERRY_TILES_BLOCK_ITEM.get(),2)
+          .pattern("   ")
+          .pattern("AA ")
+          .pattern("AA ")
+          .define('A', foodblockcompatitemregistry.RASPBERRY_SLAB_ITEM.get())
+          .unlockedBy("has_raspberry_slab", has(foodblockcompatitemregistry.RASPBERRY_SLAB_ITEM.get()))
+          .save(output);
+         //stonecutting     
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.RASPBERRY_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, foodblockcompatitemregistry.RASPBERRY_TILES_BLOCK_ITEM.get())
+          .unlockedBy("has_raspberry_block", has(foodblockcompatitemregistry.RASPBERRY_BLOCK_ITEM.get()))
+          .save(output, "raspberry_tiles_block_from_raspberry_block_stonecutting");
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
         //plain
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_BLOCK_ITEM.get(), 1)
@@ -3455,6 +3583,20 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           foodblockcompatitemregistry.BLACKBERRY_BRICKS_SLAB_ITEM.get(), 2)
           .unlockedBy("has_blackberry_bricks_block", has(foodblockcompatitemregistry.BLACKBERRY_BRICKS_BLOCK_ITEM.get()))
           .save(output, "blackberry_bricks_slab_from_blackberry_bricks_block_stonecutting");
+  //--------------------------------------------------------------------------------------Raspberry---------------------------------------------------------------------------------------------
+        //plain
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.RASPBERRY_SLAB_ITEM.get())
+          .pattern("   ")
+          .pattern("   ")
+          .pattern("AAA")
+          .define('A', ingotcompatregistry.RASPBERRY_INGOT.get())
+          .unlockedBy("has_raspberry_ingot", has(ingotcompatregistry.RASPBERRY_INGOT.get()))
+          .save(output);
+        //bricks
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.RASPBERRY_BRICKS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, 
+          foodblockcompatitemregistry.RASPBERRY_BRICKS_SLAB_ITEM.get(), 2)
+          .unlockedBy("has_raspberry_bricks_block", has(foodblockcompatitemregistry.RASPBERRY_BRICKS_BLOCK_ITEM.get()))
+          .save(output, "raspberry_bricks_slab_from_raspberry_bricks_block_stonecutting");
   //----------------------------------------------------------------------------------------Cherry-----------------------------------------------------------------------------------------------
         //plain
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_SLAB_ITEM.get())
@@ -3821,6 +3963,20 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           foodblockcompatitemregistry.BLACKBERRY_BRICKS_STAIRS_ITEM.get(), 1)
           .unlockedBy("has_blackberry_bricks_block", has(foodblockcompatitemregistry.BLACKBERRY_BRICKS_BLOCK_ITEM.get()))
           .save(output, "blackberry_bricks_stairs_from_blackberry_bricks_block_stonecutting");
+  //--------------------------------------------------------------------------------------Raspberry---------------------------------------------------------------------------------------------
+        //plain
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.RASPBERRY_STAIRS_ITEM.get())
+          .pattern("A  ")
+          .pattern("AA ")
+          .pattern("AAA")
+          .define('A', ingotcompatregistry.RASPBERRY_INGOT.get())
+          .unlockedBy("has_raspberry_ingot", has(ingotcompatregistry.RASPBERRY_INGOT.get()))
+          .save(output);
+        //bricks
+          SingleItemRecipeBuilder.stonecutting(Ingredient.of(foodblockcompatitemregistry.RASPBERRY_BRICKS_BLOCK_ITEM.get()), RecipeCategory.BUILDING_BLOCKS, 
+          foodblockcompatitemregistry.RASPBERRY_BRICKS_STAIRS_ITEM.get(), 1)
+          .unlockedBy("has_raspberry_bricks_block", has(foodblockcompatitemregistry.RASPBERRY_BRICKS_BLOCK_ITEM.get()))
+          .save(output, "raspberry_bricks_stairs_from_raspberry_bricks_block_stonecutting");
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
         //plain
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_STAIRS_ITEM.get())
@@ -4169,6 +4325,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', nuggetcompatregistry.BLACKBERRY_NUGGET.get())
          .unlockedBy("has_blackberry_nugget", has(nuggetcompatregistry.BLACKBERRY_NUGGET.get()))
          .save(output);
+  //--------------------------------------------------------------------------------------Raspberry---------------------------------------------------------------------------------------------
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.RASPBERRY_BARS_ITEM.get(), 8)
+         .pattern("   ")
+         .pattern("AAA")
+         .pattern("AAA")
+         .define('A', nuggetcompatregistry.RASPBERRY_NUGGET.get())
+         .unlockedBy("has_raspberry_nugget", has(nuggetcompatregistry.RASPBERRY_NUGGET.get()))
+         .save(output);
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_BARS_ITEM.get(), 8)
          .pattern("   ")
@@ -4379,6 +4543,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('A', ingotcompatregistry.BLACKBERRY_INGOT.get())
          .unlockedBy("has_blackberry_nugget", has(ingotcompatregistry.BLACKBERRY_INGOT.get()))
          .save(output);
+  //--------------------------------------------------------------------------------------Raspberry---------------------------------------------------------------------------------------------
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.RASPBERRY_DOOR_ITEM.get(), 3)
+         .pattern("AA ")
+         .pattern("AA ")
+         .pattern("AA ")
+         .define('A', ingotcompatregistry.RASPBERRY_INGOT.get())
+         .unlockedBy("has_raspberry_nugget", has(ingotcompatregistry.RASPBERRY_INGOT.get()))
+         .save(output);
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_DOOR_ITEM.get(), 3)
          .pattern("AA ")
@@ -4580,6 +4752,11 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
        .requires(nuggetcompatregistry.BLACKBERRY_NUGGET.get())
        .unlockedBy("has_blackberry_nugget", has(nuggetcompatregistry.BLACKBERRY_NUGGET.get()))
        .save(output);
+  //--------------------------------------------------------------------------------------Raspberry---------------------------------------------------------------------------------------------
+       ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.RASPBERRY_BUTTON_ITEM.get(), 1)
+       .requires(nuggetcompatregistry.RASPBERRY_NUGGET.get())
+       .unlockedBy("has_raspberry_nugget", has(nuggetcompatregistry.RASPBERRY_NUGGET.get()))
+       .save(output);
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_BUTTON_ITEM.get(), 1)
        .requires(nuggetcompatregistry.CHERRY_NUGGET.get())
@@ -4753,6 +4930,25 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
           .define('A', ingotcompatregistry.BLACKBERRY_INGOT.get())
           .define('B', Items.STICK)
           .unlockedBy("has_blackberry_ingot", has(ingotcompatregistry.BLACKBERRY_INGOT.get()))
+          .save(output);        
+  //--------------------------------------------------------------------------------------Raspberry---------------------------------------------------------------------------------------------
+        //fence
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.RASPBERRY_FENCE_ITEM.get(), 3)
+          .pattern("ABA")
+          .pattern("ABA")
+          .pattern("   ")
+          .define('A', ingotcompatregistry.RASPBERRY_INGOT.get())
+          .define('B', Items.STICK)
+          .unlockedBy("has_raspberry_ingot", has(ingotcompatregistry.RASPBERRY_INGOT.get()))
+          .save(output);        
+        //gate
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.RASPBERRY_GATE_ITEM.get(), 1)
+          .pattern("BAB")
+          .pattern("BAB")
+          .pattern("   ")
+          .define('A', ingotcompatregistry.RASPBERRY_INGOT.get())
+          .define('B', Items.STICK)
+          .unlockedBy("has_raspberry_ingot", has(ingotcompatregistry.RASPBERRY_INGOT.get()))
           .save(output);        
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
         //fence
@@ -5217,6 +5413,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', foodblockcompatitemregistry.BLACKBERRY_BLOCK_ITEM.get())
         .unlockedBy("has_blackberry_block",  has(foodblockcompatitemregistry.BLACKBERRY_BLOCK_ITEM.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Raspberry---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.RASPBERRY_PRESSURE_PLATE_ITEM.get())
+        .pattern("   ")
+        .pattern("AA ")
+        .pattern("   ")
+        .define('A', foodblockcompatitemregistry.RASPBERRY_BLOCK_ITEM.get())
+        .unlockedBy("has_raspberry_block",  has(foodblockcompatitemregistry.RASPBERRY_BLOCK_ITEM.get()))
+        .save(output);
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_PRESSURE_PLATE_ITEM.get())
         .pattern("   ")
@@ -5429,6 +5633,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', ingotcompatregistry.BLACKBERRY_INGOT.get())
         .define('B', Items.STICK)
         .unlockedBy("has_blackberry_ingot",  has(ingotcompatregistry.BLACKBERRY_INGOT.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Raspberry---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.RASPBERRY_SIGN_ITEM.get(), 3)
+        .pattern("AAA")
+        .pattern("AAA")
+        .pattern(" B ")
+        .define('A', ingotcompatregistry.RASPBERRY_INGOT.get())
+        .define('B', Items.STICK)
+        .unlockedBy("has_raspberry_ingot",  has(ingotcompatregistry.RASPBERRY_INGOT.get()))
         .save(output);
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_SIGN_ITEM.get(), 3)
@@ -5663,6 +5876,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', ingotcompatregistry.BLACKBERRY_INGOT.get())
         .unlockedBy("has_blackberry_ingot", has(ingotcompatregistry.BLACKBERRY_INGOT.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Raspberry---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.RASPBERRY_TRAPDOOR_ITEM.get())
+        .pattern("   ")
+        .pattern("AAA")
+        .pattern("AAA")
+        .define('A', ingotcompatregistry.RASPBERRY_INGOT.get())
+        .unlockedBy("has_raspberry_ingot", has(ingotcompatregistry.RASPBERRY_INGOT.get()))
+        .save(output);
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_TRAPDOOR_ITEM.get())
         .pattern("   ")
@@ -5873,6 +6094,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .pattern("ABA")
         .pattern("AAA")
         .define('A', ingotcompatregistry.BLACKBERRY_INGOT.get())
+        .define('B', foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get())
+        .unlockedBy("has_glow_berry_block", has(foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Raspberry---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.RASPBERRY_LAMP_ITEM.get())
+        .pattern("AAA")
+        .pattern("ABA")
+        .pattern("AAA")
+        .define('A', ingotcompatregistry.RASPBERRY_INGOT.get())
         .define('B', foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get())
         .unlockedBy("has_glow_berry_block", has(foodblockitemregistry.GLOW_BERRY_BLOCK_ITEM.get()))
         .save(output);
@@ -6108,6 +6338,14 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .pattern("AA ")
         .define('A', nuggetcompatregistry.BLACKBERRY_NUGGET.get())
         .unlockedBy("has_blackberry_nugget", has(nuggetcompatregistry.BLACKBERRY_NUGGET.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Raspberry---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.RASPBERRY_CARPET_ITEM.get(), 3)
+        .pattern("   ")
+        .pattern("AA ")
+        .pattern("AA ")
+        .define('A', nuggetcompatregistry.RASPBERRY_NUGGET.get())
+        .unlockedBy("has_raspberry_nugget", has(nuggetcompatregistry.RASPBERRY_NUGGET.get()))
         .save(output);
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_CARPET_ITEM.get(), 3)
@@ -6351,6 +6589,25 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('A', nuggetcompatregistry.BLACKBERRY_NUGGET.get())
             .define('B', Items.SOUL_TORCH)
             .unlockedBy("has_blackberry_nugget", has(nuggetcompatregistry.BLACKBERRY_NUGGET.get()))
+            .save(output);
+  //--------------------------------------------------------------------------------------Raspberry---------------------------------------------------------------------------------------------
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.RASPBERRY_LANTERN_ITEM.get())
+            .pattern("AAA")
+            .pattern("ABA")
+            .pattern("AAA")
+            .define('A', nuggetcompatregistry.RASPBERRY_NUGGET.get())
+            .define('B', Items.TORCH)
+            .unlockedBy("has_raspberry_nugget", has(nuggetcompatregistry.RASPBERRY_NUGGET.get()))
+            .save(output);
+          //soul
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.RASPBERRY_SOUL_LANTERN_ITEM.get())
+            .pattern("AAA")
+            .pattern("ABA")
+            .pattern("AAA")
+            .define('A', nuggetcompatregistry.RASPBERRY_NUGGET.get())
+            .define('B', Items.SOUL_TORCH)
+            .unlockedBy("has_raspberry_nugget", has(nuggetcompatregistry.RASPBERRY_NUGGET.get()))
             .save(output);
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
           //regular
@@ -6818,6 +7075,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('B', ingotcompatregistry.BLACKBERRY_INGOT.get())
         .unlockedBy("has_blackberry_ingot", has(ingotcompatregistry.BLACKBERRY_INGOT.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Raspberry---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.RASPBERRY_CHAIN_ITEM.get())
+        .pattern(" A ")
+        .pattern(" B ")
+        .pattern(" A ")
+        .define('A', nuggetcompatregistry.RASPBERRY_NUGGET.get())
+        .define('B', ingotcompatregistry.RASPBERRY_INGOT.get())
+        .unlockedBy("has_raspberry_ingot", has(ingotcompatregistry.RASPBERRY_INGOT.get()))
+        .save(output);
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_CHAIN_ITEM.get())
         .pattern(" A ")
@@ -7054,6 +7320,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('B', ingotcompatregistry.BLACKBERRY_INGOT.get())
         .unlockedBy("has_blackberry_ingot", has(ingotcompatregistry.BLACKBERRY_INGOT.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Raspberry---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.RASPBERRY_LADDER_ITEM.get(), 3)
+        .pattern("A A")
+        .pattern("ABA")
+        .pattern("A A")
+        .define('A', Items.STICK)
+        .define('B', ingotcompatregistry.RASPBERRY_INGOT.get())
+        .unlockedBy("has_raspberry_ingot", has(ingotcompatregistry.RASPBERRY_INGOT.get()))
+        .save(output);
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_LADDER_ITEM.get(), 3)
         .pattern("A A")
@@ -7289,6 +7564,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', foodblockcompatitemregistry.BLACKBERRY_SLAB_ITEM.get())
         .define('B', ingotcompatregistry.BLACKBERRY_INGOT.get())
         .unlockedBy("has_blackberry_ingot", has(ingotcompatregistry.BLACKBERRY_INGOT.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Raspberry---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.RASPBERRY_TABLE_ITEM.get())
+        .pattern("AAA")
+        .pattern("B B")
+        .pattern("B B")
+        .define('A', foodblockcompatitemregistry.RASPBERRY_SLAB_ITEM.get())
+        .define('B', ingotcompatregistry.RASPBERRY_INGOT.get())
+        .unlockedBy("has_raspberry_ingot", has(ingotcompatregistry.RASPBERRY_INGOT.get()))
         .save(output);
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_TABLE_ITEM.get())
@@ -7591,6 +7875,37 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
             .define('B', nuggetcompatregistry.BLACKBERRY_NUGGET.get())
             .define('C', Items.SOUL_SAND)
             .unlockedBy("has_blackberry_nugget", has(nuggetcompatregistry.BLACKBERRY_NUGGET.get()))
+            .save(output);
+  //--------------------------------------------------------------------------------------Raspberry---------------------------------------------------------------------------------------------
+          //regular
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.RASPBERRY_TORCH_ITEM.get(), 4)
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetcompatregistry.RASPBERRY_NUGGET.get())
+            .define('C', ItemTags.COALS)
+            .unlockedBy("has_raspberry_nugget", has(nuggetcompatregistry.RASPBERRY_NUGGET.get()))
+            .save(output);
+          //redstone
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.RASPBERRY_REDSTONE_TORCH_ITEM.get())
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetcompatregistry.RASPBERRY_NUGGET.get())
+            .define('C', Items.REDSTONE)
+            .unlockedBy("has_raspberry_nugget", has(nuggetcompatregistry.RASPBERRY_NUGGET.get()))
+            .save(output);
+          //soul
+            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.RASPBERRY_SOUL_TORCH_ITEM.get(), 4)
+            .pattern(" C ")
+            .pattern(" B ")
+            .pattern(" A ")
+            .define('A', Items.STICK)
+            .define('B', nuggetcompatregistry.RASPBERRY_NUGGET.get())
+            .define('C', Items.SOUL_SAND)
+            .unlockedBy("has_raspberry_nugget", has(nuggetcompatregistry.RASPBERRY_NUGGET.get()))
             .save(output);
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
           //regular
@@ -8334,6 +8649,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('B', Items.COBBLESTONE)
         .unlockedBy("has_blackberry_ingot", has(ingotcompatregistry.BLACKBERRY_INGOT.get()))
         .save(output);
+  //--------------------------------------------------------------------------------------Raspberry---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.RASPBERRY_FURNACE_ITEM.get())
+        .pattern("ABA")
+        .pattern("B B")
+        .pattern("ABA")
+        .define('A', ingotcompatregistry.RASPBERRY_INGOT.get())
+        .define('B', Items.COBBLESTONE)
+        .unlockedBy("has_raspberry_ingot", has(ingotcompatregistry.RASPBERRY_INGOT.get()))
+        .save(output);
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_FURNACE_ITEM.get())
         .pattern("ABA")
@@ -8561,6 +8885,12 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .requires(Items.STONE)
         .unlockedBy("has_blackberry_block", has(foodblockcompatitemregistry.BLACKBERRY_BLOCK_ITEM.get()))
         .save(output);        
+  //--------------------------------------------------------------------------------------Raspberry---------------------------------------------------------------------------------------------
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.RASPBERRY_STONE_PATH_ITEM.get(), 6)
+        .requires(foodblockcompatitemregistry.RASPBERRY_BLOCK_ITEM.get())
+        .requires(Items.STONE)
+        .unlockedBy("has_raspberry_block", has(foodblockcompatitemregistry.RASPBERRY_BLOCK_ITEM.get()))
+        .save(output);        
   //--------------------------------------------------------------------------------------Blackcherry---------------------------------------------------------------------------------------------
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, foodblockcompatitemregistry.BLACKCHERRY_STONE_PATH_ITEM.get(), 6)
         .requires(foodblockcompatitemregistry.BLACKCHERRY_BLOCK_ITEM.get())
@@ -8721,6 +9051,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', foodblockcompatitemregistry.BLACKBERRY_BLOCK_ITEM.get())
         .define('B', foodblockcompatitemregistry.BLACKBERRY_SLAB_ITEM.get())
         .unlockedBy("has_blackberry_block", has(foodblockcompatitemregistry.BLACKBERRY_BLOCK_ITEM.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Raspberry---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.RASPBERRY_BARREL_ITEM.get())
+        .pattern("ABA")
+        .pattern("A A")
+        .pattern("ABA")
+        .define('A', foodblockcompatitemregistry.RASPBERRY_BLOCK_ITEM.get())
+        .define('B', foodblockcompatitemregistry.RASPBERRY_SLAB_ITEM.get())
+        .unlockedBy("has_raspberry_block", has(foodblockcompatitemregistry.RASPBERRY_BLOCK_ITEM.get()))
         .save(output);
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_BARREL_ITEM.get())
@@ -8957,6 +9296,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
         .define('A', ingotcompatregistry.BLACKBERRY_INGOT.get())
         .define('B', foodblockcompatitemregistry.BLACKBERRY_SLAB_ITEM.get())
         .unlockedBy("has_blackberry_slab", has(foodblockcompatitemregistry.BLACKBERRY_SLAB_ITEM.get()))
+        .save(output);
+  //--------------------------------------------------------------------------------------Raspberry---------------------------------------------------------------------------------------------
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.RASPBERRY_CHAIR_ITEM.get())
+        .pattern("AAA")
+        .pattern("BBB")
+        .pattern("A A")
+        .define('A', ingotcompatregistry.RASPBERRY_INGOT.get())
+        .define('B', foodblockcompatitemregistry.RASPBERRY_SLAB_ITEM.get())
+        .unlockedBy("has_raspberry_slab", has(foodblockcompatitemregistry.RASPBERRY_SLAB_ITEM.get()))
         .save(output);
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_CHAIR_ITEM.get())
@@ -9196,6 +9544,16 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
            .define('B', foodblockcompatitemregistry.BLACKBERRY_SLAB_ITEM.get())
            .define('C', foodblockcompatitemregistry.BLACKBERRY_CARPET_ITEM.get())
            .unlockedBy("has_blackberry_ingot", has(ingotcompatregistry.BLACKBERRY_INGOT.get()))
+           .save(output);
+  //--------------------------------------------------------------------------------------Raspberry---------------------------------------------------------------------------------------------
+           ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.RASPBERRY_BED_ITEM.get())
+           .pattern("CCC")
+           .pattern("BBB")
+           .pattern("A A")
+           .define('A', ingotcompatregistry.RASPBERRY_INGOT.get())
+           .define('B', foodblockcompatitemregistry.RASPBERRY_SLAB_ITEM.get())
+           .define('C', foodblockcompatitemregistry.RASPBERRY_CARPET_ITEM.get())
+           .unlockedBy("has_raspberry_ingot", has(ingotcompatregistry.RASPBERRY_INGOT.get()))
            .save(output);
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_BED_ITEM.get())
@@ -9488,6 +9846,26 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
          .define('B', Items.IRON_INGOT)
          .define('C', foodblockcompatitemregistry.SMALL_BLACKBERRY_CABINET_ITEM.get())
          .unlockedBy("has_blackberry_slab", has(foodblockcompatitemregistry.BLACKBERRY_SLAB_ITEM.get()))
+         .save(output);
+  //--------------------------------------------------------------------------------------Raspberry---------------------------------------------------------------------------------------------
+       //small
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.SMALL_RASPBERRY_CABINET_ITEM.get())
+         .pattern("AAA")
+         .pattern("B B")
+         .pattern("AAA")
+         .define('A', foodblockcompatitemregistry.RASPBERRY_SLAB_ITEM.get())
+         .define('B', Items.IRON_INGOT)
+         .unlockedBy("has_raspberry_slab", has(foodblockcompatitemregistry.RASPBERRY_SLAB_ITEM.get()))
+         .save(output);
+       //medium
+         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.MEDIUM_RASPBERRY_CABINET_ITEM.get())
+         .pattern("AAA")
+         .pattern("BCB")
+         .pattern("AAA")
+         .define('A', foodblockcompatitemregistry.RASPBERRY_SLAB_ITEM.get())
+         .define('B', Items.IRON_INGOT)
+         .define('C', foodblockcompatitemregistry.SMALL_RASPBERRY_CABINET_ITEM.get())
+         .unlockedBy("has_raspberry_slab", has(foodblockcompatitemregistry.RASPBERRY_SLAB_ITEM.get()))
          .save(output);
   //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
        //small

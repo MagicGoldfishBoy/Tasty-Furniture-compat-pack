@@ -7,7 +7,7 @@
 		"6": "goldfishmod03tastyfurniturecompataddon:block/blackberry_quilt_01",
 		"7": "goldfishmod03tastyfurniturecompataddon:block/blackberry_carpet",
 		"22": "goldfishmod03tastyfurniturecompataddon:block/blackberry_block",
-		"particle": "goldfishmod03tastyfurniturecompataddon:block/blackberry_barrel_top_top"
+		"particle": "goldfishmod03tastyfurniturecompataddon:block/blackberry_block"
 	},
 	"elements": [
 		{

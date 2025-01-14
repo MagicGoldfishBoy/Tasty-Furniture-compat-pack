@@ -249,6 +249,84 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("small_blackberry_cabinet_item", modLoc("block/blackberry_cabinet"));
        withExistingParent("medium_blackberry_cabinet_item", modLoc("block/medium_blackberry_cabinet"));
     //==============================================================================================================================================
+    //|                                                            Raspberry                                                                      |
+    //==============================================================================================================================================
+       //mush
+       withExistingParent("raspberry_mush", mcLoc("item/generated")).texture("layer0", "item/raspberry_mush");
+       //ingot
+        withExistingParent("raspberry_ingot", mcLoc("item/generated")).texture("layer0", "item/raspberry_ingot");
+       //nugget
+        withExistingParent("raspberry_nugget", mcLoc("item/generated")).texture("layer0", "item/raspberry_nugget");
+       //block
+        withExistingParent("raspberry_block_item", modLoc("block/raspberry_block"));
+       //bricks block
+        withExistingParent("raspberry_bricks_block_item", modLoc("block/raspberry_bricks_block"));
+       //chiseled block
+        withExistingParent("raspberry_chiseled_block_item", modLoc("block/raspberry_chiseled_block"));
+       //tiles block
+        withExistingParent("raspberry_tiles_block_item", modLoc("block/raspberry_tiles_block"));
+       //slab
+       slab("raspberry_slab_item", modLoc("block/raspberry_block"), modLoc("block/raspberry_block"), modLoc("block/raspberry_block"));
+       //bricks slab
+       slab("raspberry_bricks_slab_item", modLoc("block/raspberry_bricks_block"), modLoc("block/raspberry_bricks_block"), modLoc("block/raspberry_bricks_block"));
+       //stairs
+       stairs("raspberry_stairs_item", modLoc("block/raspberry_block"), modLoc("block/raspberry_block"), modLoc("block/raspberry_block"));
+       //bricks stairs
+       stairs("raspberry_bricks_stairs_item", modLoc("block/raspberry_bricks_block"), modLoc("block/raspberry_bricks_block"), modLoc("block/raspberry_bricks_block"));
+       //bars
+       withExistingParent("raspberry_bars_item", mcLoc("item/generated")).texture("layer0", "block/raspberry_bars");
+       //doors
+       withExistingParent("raspberry_door_item", mcLoc("item/generated")).texture("layer0", "item/raspberry_door_item");
+       //button
+       buttonInventory("raspberry_button_item", modLoc("block/raspberry_block"));
+       //fence
+       fenceInventory("raspberry_fence_item", modLoc("block/raspberry_block"));
+       //gate
+       withExistingParent("raspberry_gate_item", modLoc("block/raspberry_gate"));
+       //pressure plate
+       pressurePlate("raspberry_pressure_plate_item", modLoc("block/raspberry_block"));
+       //sign
+       withExistingParent("raspberry_sign_item", mcLoc("item/generated")).texture("layer0", "item/raspberry_sign");
+       //trapdoor
+       withExistingParent("raspberry_trapdoor_item", modLoc("block/raspberry_trapdoor_trapdoor_bottom"));
+       //lamp
+       withExistingParent("raspberry_lamp_item", modLoc("block/raspberry_lamp"));
+       //carpet
+       ResourceLocation raspberry_carpet_texture = modLoc("block/raspberry_carpet");
+       carpet("raspberry_carpet_item", raspberry_carpet_texture);
+       //lantern
+        //regular
+        withExistingParent("raspberry_lantern_item", modLoc("block/raspberry_lantern"));
+        //soul
+          withExistingParent("raspberry_soul_lantern_item", modLoc("block/raspberry_soul_lantern"));
+       //chain
+       withExistingParent("raspberry_chain_item", modLoc("block/raspberry_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
+       //ladder
+       withExistingParent("raspberry_ladder_item", modLoc("block/raspberry_ladder"));
+       //table
+       withExistingParent("raspberry_table_item", modLoc("block/raspberry_table"));
+       //torches
+        //regular
+        withExistingParent("raspberry_torch_item", modLoc("block/raspberry_torch"));
+        //redstone
+          withExistingParent("raspberry_redstone_torch_item", modLoc("block/raspberry_redstone_torch"));
+        //soul
+          withExistingParent("raspberry_soul_torch_item", modLoc("block/raspberry_soul_torch"));
+       //furnaces
+       withExistingParent("raspberry_furnace_item", modLoc("block/raspberry_furnace_model_unlit"));
+       //paths
+       withExistingParent("raspberry_stone_path_item", modLoc("block/raspberry_stone_path"));
+       //barrel
+       withExistingParent("raspberry_barrel_item", modLoc("block/raspberry_barrel_model_closed"));
+       //chair
+       withExistingParent("raspberry_chair_item", modLoc("block/raspberry_chair"));
+       //bed
+       withExistingParent("raspberry_bed_item", modLoc("block/raspberry_bed"));
+       //cabinet
+       withExistingParent("small_raspberry_cabinet_item", modLoc("block/raspberry_cabinet"));
+       withExistingParent("medium_raspberry_cabinet_item", modLoc("block/medium_raspberry_cabinet"));
+    //==============================================================================================================================================
     //|                                                              Cherry                                                                        |
     //==============================================================================================================================================
        //mush

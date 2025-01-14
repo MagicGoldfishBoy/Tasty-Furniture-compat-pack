@@ -1,0 +1,13 @@
+{
+    "replace": false,
+    "values": [
+        {"id":"c:raspberries",
+        "required": false},
+        {"id":"harvestcraft:raspberryitem",
+        "required": false},
+        {"id":"croptopia:raspberry",
+        "required": false},
+        {"id":"pamhc2crops:raspberryitem",
+        "required": false}
+    ]
+  }

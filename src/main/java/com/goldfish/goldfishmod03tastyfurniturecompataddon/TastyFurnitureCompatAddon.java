@@ -180,7 +180,7 @@ public class TastyFurnitureCompatAddon
                  //cranberries
                //aggregate fruits
                 event.registerBlockEntityRenderer(foodblockcompatregistry.BLACKBERRY_SIGN_ENTITY.get(), SignRenderer::new);
-                 //raspberries
+                event.registerBlockEntityRenderer(foodblockcompatregistry.RASPBERRY_SIGN_ENTITY.get(), SignRenderer::new);
                  //strawberries
                //multiple fruits
                  //pinneapple

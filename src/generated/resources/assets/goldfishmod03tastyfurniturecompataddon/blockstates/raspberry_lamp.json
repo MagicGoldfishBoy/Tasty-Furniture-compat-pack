@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "goldfishmod03tastyfurniturecompataddon:block/raspberry_lamp",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "goldfishmod03tastyfurniturecompataddon:block/raspberry_lamp"
+    },
+    "facing=south": {
+      "model": "goldfishmod03tastyfurniturecompataddon:block/raspberry_lamp",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "goldfishmod03tastyfurniturecompataddon:block/raspberry_lamp",
+      "y": 270
+    }
+  }
+}
