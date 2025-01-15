@@ -95,6 +95,11 @@ public class foodmaterialtypecompatregistry {
         "raspberry_wood_mat", 
         PLANT) 
     );
+    public static final WoodType STRAWBERRYWOODMAT = WoodType.register(
+     new WoodType(
+        "strawberry_wood_mat", 
+        PLANT) 
+    );
     public static final WoodType CHERRYWOODMAT = WoodType.register(
      new WoodType(
         "cherry_wood_mat", 

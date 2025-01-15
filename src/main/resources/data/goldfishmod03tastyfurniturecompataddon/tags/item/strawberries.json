@@ -1,0 +1,15 @@
+{
+    "replace": false,
+    "values": [
+        {"id":"c:strawberries",
+        "required": false},
+        {"id":"harvestcraft:strawberryitem",
+        "required": false},
+        {"id":"croptopia:strawberry",
+        "required": false},
+        {"id":"pamhc2crops:strawberryitem",
+        "required": false},
+        {"id":"berries_and_cherries:strawberries",
+        "required": false}
+    ]
+  }

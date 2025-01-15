@@ -327,6 +327,84 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("small_raspberry_cabinet_item", modLoc("block/raspberry_cabinet"));
        withExistingParent("medium_raspberry_cabinet_item", modLoc("block/medium_raspberry_cabinet"));
     //==============================================================================================================================================
+    //|                                                            Strawberry                                                                      |
+    //==============================================================================================================================================
+       //mush
+       withExistingParent("strawberry_mush", mcLoc("item/generated")).texture("layer0", "item/strawberry_mush");
+       //ingot
+        withExistingParent("strawberry_ingot", mcLoc("item/generated")).texture("layer0", "item/strawberry_ingot");
+       //nugget
+        withExistingParent("strawberry_nugget", mcLoc("item/generated")).texture("layer0", "item/strawberry_nugget");
+       //block
+        withExistingParent("strawberry_block_item", modLoc("block/strawberry_block"));
+       //bricks block
+        withExistingParent("strawberry_bricks_block_item", modLoc("block/strawberry_bricks_block"));
+       //chiseled block
+        withExistingParent("strawberry_chiseled_block_item", modLoc("block/strawberry_chiseled_block"));
+       //tiles block
+        withExistingParent("strawberry_tiles_block_item", modLoc("block/strawberry_tiles_block"));
+       //slab
+       slab("strawberry_slab_item", modLoc("block/strawberry_block"), modLoc("block/strawberry_block"), modLoc("block/strawberry_block"));
+       //bricks slab
+       slab("strawberry_bricks_slab_item", modLoc("block/strawberry_bricks_block"), modLoc("block/strawberry_bricks_block"), modLoc("block/strawberry_bricks_block"));
+       //stairs
+       stairs("strawberry_stairs_item", modLoc("block/strawberry_block"), modLoc("block/strawberry_block"), modLoc("block/strawberry_block"));
+       //bricks stairs
+       stairs("strawberry_bricks_stairs_item", modLoc("block/strawberry_bricks_block"), modLoc("block/strawberry_bricks_block"), modLoc("block/strawberry_bricks_block"));
+       //bars
+       withExistingParent("strawberry_bars_item", mcLoc("item/generated")).texture("layer0", "block/strawberry_bars");
+       //doors
+       withExistingParent("strawberry_door_item", mcLoc("item/generated")).texture("layer0", "item/strawberry_door_item");
+       //button
+       buttonInventory("strawberry_button_item", modLoc("block/strawberry_block"));
+       //fence
+       fenceInventory("strawberry_fence_item", modLoc("block/strawberry_block"));
+       //gate
+       withExistingParent("strawberry_gate_item", modLoc("block/strawberry_gate"));
+       //pressure plate
+       pressurePlate("strawberry_pressure_plate_item", modLoc("block/strawberry_block"));
+       //sign
+       withExistingParent("strawberry_sign_item", mcLoc("item/generated")).texture("layer0", "item/strawberry_sign");
+       //trapdoor
+       withExistingParent("strawberry_trapdoor_item", modLoc("block/strawberry_trapdoor_trapdoor_bottom"));
+       //lamp
+       withExistingParent("strawberry_lamp_item", modLoc("block/strawberry_lamp"));
+       //carpet
+       ResourceLocation strawberry_carpet_texture = modLoc("block/strawberry_carpet");
+       carpet("strawberry_carpet_item", strawberry_carpet_texture);
+       //lantern
+        //regular
+        withExistingParent("strawberry_lantern_item", modLoc("block/strawberry_lantern"));
+        //soul
+          withExistingParent("strawberry_soul_lantern_item", modLoc("block/strawberry_soul_lantern"));
+       //chain
+       withExistingParent("strawberry_chain_item", modLoc("block/strawberry_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
+       //ladder
+       withExistingParent("strawberry_ladder_item", modLoc("block/strawberry_ladder"));
+       //table
+       withExistingParent("strawberry_table_item", modLoc("block/strawberry_table"));
+       //torches
+        //regular
+        withExistingParent("strawberry_torch_item", modLoc("block/strawberry_torch"));
+        //redstone
+          withExistingParent("strawberry_redstone_torch_item", modLoc("block/strawberry_redstone_torch"));
+        //soul
+          withExistingParent("strawberry_soul_torch_item", modLoc("block/strawberry_soul_torch"));
+       //furnaces
+       withExistingParent("strawberry_furnace_item", modLoc("block/strawberry_furnace_model_unlit"));
+       //paths
+       withExistingParent("strawberry_stone_path_item", modLoc("block/strawberry_stone_path"));
+       //barrel
+       withExistingParent("strawberry_barrel_item", modLoc("block/strawberry_barrel_model_closed"));
+       //chair
+       withExistingParent("strawberry_chair_item", modLoc("block/strawberry_chair"));
+       //bed
+       withExistingParent("strawberry_bed_item", modLoc("block/strawberry_bed"));
+       //cabinet
+       withExistingParent("small_strawberry_cabinet_item", modLoc("block/strawberry_cabinet"));
+       withExistingParent("medium_strawberry_cabinet_item", modLoc("block/medium_strawberry_cabinet"));
+    //==============================================================================================================================================
     //|                                                              Cherry                                                                        |
     //==============================================================================================================================================
        //mush

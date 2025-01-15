@@ -6,7 +6,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.CarpetBlock;
 import net.minecraft.world.level.block.ChainBlock;
-import net.minecraft.world.level.block.ChestBlock;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
@@ -56,13 +55,97 @@ public class GM1BlockStateProvider extends BlockStateProvider
      public PackOutput getOutput() {
       return output;
     }
-
-     @Override
+    //textures
+     ResourceLocation elderberry_block_texture = modLoc("block/elderberry_block");
+     ResourceLocation elderberry_bricks_block_texture = modLoc("block/elderberry_bricks_block");
+     ResourceLocation juniper_block_texture = modLoc("block/juniper_block");
+     ResourceLocation juniper_bricks_block_texture = modLoc("block/juniper_bricks_block");
+     ResourceLocation blackberry_block_texture = modLoc("block/blackberry_block");
+     ResourceLocation blackberry_bricks_block_texture = modLoc("block/blackberry_bricks_block");
+     ResourceLocation raspberry_block_texture = modLoc("block/raspberry_block");
+     ResourceLocation raspberry_bricks_block_texture = modLoc("block/raspberry_bricks_block");
+     ResourceLocation strawberry_block_texture = modLoc("block/strawberry_block");
+     ResourceLocation strawberry_bricks_block_texture = modLoc("block/strawberry_bricks_block");
+     ResourceLocation cherry_block_texture = modLoc("block/cherry_block");
+     ResourceLocation cherry_bricks_block_texture = modLoc("block/cherry_bricks_block");
+     ResourceLocation blackcherry_block_texture = modLoc("block/blackcherry_block");
+     ResourceLocation blackcherry_bricks_block_texture = modLoc("block/blackcherry_bricks_block");
+     ResourceLocation peach_block_texture = modLoc("block/peach_block");
+     ResourceLocation peach_bricks_block_texture = modLoc("block/peach_bricks_block");
+     ResourceLocation coconut_block_texture = modLoc("block/coconut_block");
+     ResourceLocation coconut_bricks_block_texture = modLoc("block/coconut_bricks_block");
+     ResourceLocation orange_block_texture = modLoc("block/orange_block");
+     ResourceLocation orange_bricks_block_texture = modLoc("block/orange_bricks_block");
+     ResourceLocation tangerine_block_texture = modLoc("block/tangerine_block");
+     ResourceLocation tangerine_bricks_block_texture = modLoc("block/tangerine_bricks_block");
+     ResourceLocation kumquat_block_texture = modLoc("block/kumquat_block");
+     ResourceLocation kumquat_bricks_block_texture = modLoc("block/kumquat_bricks_block");
+     ResourceLocation persimmon_block_texture = modLoc("block/persimmon_block");
+     ResourceLocation persimmon_bricks_block_texture = modLoc("block/persimmon_bricks_block");
+     ResourceLocation satsuma_block_texture = modLoc("block/satsuma_block");
+     ResourceLocation satsuma_bricks_block_texture = modLoc("block/satsuma_bricks_block");
+     ResourceLocation mandarin_block_texture = modLoc("block/mandarin_block");
+     ResourceLocation mandarin_bricks_block_texture = modLoc("block/mandarin_bricks_block");
+     ResourceLocation lemon_block_texture = modLoc("block/lemon_block");
+     ResourceLocation lemon_bricks_block_texture = modLoc("block/lemon_bricks_block");
+     ResourceLocation citron_block_texture = modLoc("block/citron_block");
+     ResourceLocation citron_bricks_block_texture = modLoc("block/citron_bricks_block");
+     ResourceLocation buddhashand_block_texture = modLoc("block/buddhashand_block");
+     ResourceLocation buddhashand_bricks_block_texture = modLoc("block/buddhashand_bricks_block");
+     ResourceLocation lime_block_texture = modLoc("block/lime_block");
+     ResourceLocation lime_bricks_block_texture = modLoc("block/lime_bricks_block");
+     ResourceLocation keylime_block_texture = modLoc("block/keylime_block");
+     ResourceLocation keylime_bricks_block_texture = modLoc("block/keylime_bricks_block");
+     ResourceLocation fingerlime_block_texture = modLoc("block/fingerlime_block");
+     ResourceLocation fingerlime_bricks_block_texture = modLoc("block/fingerlime_bricks_block");
+     ResourceLocation grapefruit_block_texture = modLoc("block/grapefruit_block");
+     ResourceLocation grapefruit_bricks_block_texture = modLoc("block/grapefruit_bricks_block");
+     ResourceLocation pomelo_block_texture = modLoc("block/pomelo_block");
+     ResourceLocation pomelo_bricks_block_texture = modLoc("block/pomelo_bricks_block");
+     ResourceLocation corn_block_texture = modLoc("block/corn_block");
+     ResourceLocation corn_bricks_block_texture = modLoc("block/corn_bricks_block");
+     ResourceLocation onion_block_texture = modLoc("block/onion_block");
+     ResourceLocation onion_bricks_block_texture = modLoc("block/onion_bricks_block");
+     ResourceLocation tomato_block_texture = modLoc("block/tomato_block");
+     ResourceLocation tomato_bricks_block_texture = modLoc("block/tomato_bricks_block");
+     ResourceLocation pecan_block_texture = modLoc("block/pecan_block");
+     ResourceLocation pecan_bricks_block_texture = modLoc("block/pecan_bricks_block");
+     ResourceLocation almond_block_texture = modLoc("block/almond_block");
+     ResourceLocation almond_bricks_block_texture = modLoc("block/almond_bricks_block");
+    @Override
      public void registerStatesAndModels() {
+      buildBlockModels();
+      buildSlabModels();
+      buildStairsModels();
+      buildBarsModels();
+      buildDoorModels();
+      buildButtonModels();
+      buildFenceAndGateModels();
+      buildPressurePlateModels();
+      buildSignModels();
+      buildTrapdoorModels();
+      buildLampModels();
+      buildCarpetModels();
+      buildLanternModels();
+      buildChainModels();
+      buildLadderModels();
+      buildTableModels();
+      buildTorchModels();
+      buildFurnaceModels();
+      buildPathModels();
+      buildBarrelModels();
+      buildChairModels();
+      buildBedModels();
       buildCabinetModels();
+
+
+
+
+    };
     //==============================================================================================================================================
     //|                                                              Blocks                                                                        |
     //==============================================================================================================================================
+    public void buildBlockModels() {
      //------------------------------------------------------------elderberry-----------------------------------------------------------------------
       //.........plain
           net.minecraft.world.level.block.Block elderberry_block = foodblockcompatregistry.ELDERBERRY_BLOCK.get();
@@ -115,6 +198,19 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........tiles
           net.minecraft.world.level.block.Block raspberry_tiles_block = foodblockcompatregistry.RASPBERRY_TILES_BLOCK.get();
           simpleBlock(raspberry_tiles_block);
+     //------------------------------------------------------------strawberry-----------------------------------------------------------------------
+      //.........plain
+          net.minecraft.world.level.block.Block strawberry_block = foodblockcompatregistry.STRAWBERRY_BLOCK.get();
+          simpleBlock(strawberry_block);
+      //.........bricks
+          net.minecraft.world.level.block.Block strawberry_bricks_block = foodblockcompatregistry.STRAWBERRY_BRICKS_BLOCK.get();
+          simpleBlock(strawberry_bricks_block);
+      //.........chiseled
+          net.minecraft.world.level.block.Block strawberry_chiseled_block = foodblockcompatregistry.STRAWBERRY_CHISELED_BLOCK.get();
+          simpleBlock(strawberry_chiseled_block);
+      //.........tiles
+          net.minecraft.world.level.block.Block strawberry_tiles_block = foodblockcompatregistry.STRAWBERRY_TILES_BLOCK.get();
+          simpleBlock(strawberry_tiles_block);
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
       //.........plain
           net.minecraft.world.level.block.Block cherry_block = foodblockcompatregistry.CHERRY_BLOCK.get();
@@ -414,255 +510,213 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........tiles
           net.minecraft.world.level.block.Block almond_tiles_block = foodblockcompatregistry.ALMOND_TILES_BLOCK.get();
           simpleBlock(almond_tiles_block);
+    };
     //==============================================================================================================================================
     //|                                                              Slabs                                                                        |
     //==============================================================================================================================================
+    public void buildSlabModels() {
      //------------------------------------------------------------elderberry-----------------------------------------------------------------------
       //.........plain
           SlabBlock elderberry_slab = foodblockcompatregistry.ELDERBERRY_SLAB.get();
-          ResourceLocation elderberry_block_texture = modLoc("block/elderberry_block");
           slabBlock(elderberry_slab, elderberry_block_texture, elderberry_block_texture);
       //.........bricks
           SlabBlock elderberry_bricks_slab = foodblockcompatregistry.ELDERBERRY_BRICKS_SLAB.get();
-          ResourceLocation elderberry_bricks_block_texture = modLoc("block/elderberry_bricks_block");
+          
           slabBlock(elderberry_bricks_slab, elderberry_bricks_block_texture, elderberry_bricks_block_texture);
      //------------------------------------------------------------juniper-----------------------------------------------------------------------
       //.........plain
           SlabBlock juniper_slab = foodblockcompatregistry.JUNIPER_SLAB.get();
-          ResourceLocation juniper_block_texture = modLoc("block/juniper_block");
           slabBlock(juniper_slab, juniper_block_texture, juniper_block_texture);
       //.........bricks
           SlabBlock juniper_bricks_slab = foodblockcompatregistry.JUNIPER_BRICKS_SLAB.get();
-          ResourceLocation juniper_bricks_block_texture = modLoc("block/juniper_bricks_block");
           slabBlock(juniper_bricks_slab, juniper_bricks_block_texture, juniper_bricks_block_texture);
      //------------------------------------------------------------blackberry-----------------------------------------------------------------------
       //.........plain
           SlabBlock blackberry_slab = foodblockcompatregistry.BLACKBERRY_SLAB.get();
-          ResourceLocation blackberry_block_texture = modLoc("block/blackberry_block");
           slabBlock(blackberry_slab, blackberry_block_texture, blackberry_block_texture);
       //.........bricks
           SlabBlock blackberry_bricks_slab = foodblockcompatregistry.BLACKBERRY_BRICKS_SLAB.get();
-          ResourceLocation blackberry_bricks_block_texture = modLoc("block/blackberry_bricks_block");
           slabBlock(blackberry_bricks_slab, blackberry_bricks_block_texture, blackberry_bricks_block_texture);
      //------------------------------------------------------------raspberry-----------------------------------------------------------------------
       //.........plain
           SlabBlock raspberry_slab = foodblockcompatregistry.RASPBERRY_SLAB.get();
-          ResourceLocation raspberry_block_texture = modLoc("block/raspberry_block");
           slabBlock(raspberry_slab, raspberry_block_texture, raspberry_block_texture);
       //.........bricks
           SlabBlock raspberry_bricks_slab = foodblockcompatregistry.RASPBERRY_BRICKS_SLAB.get();
-          ResourceLocation raspberry_bricks_block_texture = modLoc("block/raspberry_bricks_block");
           slabBlock(raspberry_bricks_slab, raspberry_bricks_block_texture, raspberry_bricks_block_texture);
+     //------------------------------------------------------------strawberry-----------------------------------------------------------------------
+      //.........plain
+          SlabBlock strawberry_slab = foodblockcompatregistry.STRAWBERRY_SLAB.get();
+          slabBlock(strawberry_slab, strawberry_block_texture, strawberry_block_texture);
+      //.........bricks
+          SlabBlock strawberry_bricks_slab = foodblockcompatregistry.STRAWBERRY_BRICKS_SLAB.get();
+          slabBlock(strawberry_bricks_slab, strawberry_bricks_block_texture, strawberry_bricks_block_texture);
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
       //.........plain
           SlabBlock cherry_slab = foodblockcompatregistry.CHERRY_SLAB.get();
-          ResourceLocation cherry_block_texture = modLoc("block/cherry_block");
           slabBlock(cherry_slab, cherry_block_texture, cherry_block_texture);
       //.........bricks
           SlabBlock cherry_bricks_slab = foodblockcompatregistry.CHERRY_BRICKS_SLAB.get();
-          ResourceLocation cherry_bricks_block_texture = modLoc("block/cherry_bricks_block");
           slabBlock(cherry_bricks_slab, cherry_bricks_block_texture, cherry_bricks_block_texture);
      //------------------------------------------------------------blackcherry-----------------------------------------------------------------------
       //.........plain
           SlabBlock blackcherry_slab = foodblockcompatregistry.BLACKCHERRY_SLAB.get();
-          ResourceLocation blackcherry_block_texture = modLoc("block/blackcherry_block");
           slabBlock(blackcherry_slab, blackcherry_block_texture, blackcherry_block_texture);
       //.........bricks
           SlabBlock blackcherry_bricks_slab = foodblockcompatregistry.BLACKCHERRY_BRICKS_SLAB.get();
-          ResourceLocation blackcherry_bricks_block_texture = modLoc("block/blackcherry_bricks_block");
           slabBlock(blackcherry_bricks_slab, blackcherry_bricks_block_texture, blackcherry_bricks_block_texture);
      //------------------------------------------------------------peach-----------------------------------------------------------------------
       //.........plain
           SlabBlock peach_slab = foodblockcompatregistry.PEACH_SLAB.get();
-          ResourceLocation peach_block_texture = modLoc("block/peach_block");
           slabBlock(peach_slab, peach_block_texture, peach_block_texture);
       //.........bricks
           SlabBlock peach_bricks_slab = foodblockcompatregistry.PEACH_BRICKS_SLAB.get();
-          ResourceLocation peach_bricks_block_texture = modLoc("block/peach_bricks_block");
           slabBlock(peach_bricks_slab, peach_bricks_block_texture, peach_bricks_block_texture);
      //------------------------------------------------------------coconut-----------------------------------------------------------------------
       //.........plain
           SlabBlock coconut_slab = foodblockcompatregistry.COCONUT_SLAB.get();
-          ResourceLocation coconut_block_texture = modLoc("block/coconut_block");
           slabBlock(coconut_slab, coconut_block_texture, coconut_block_texture);
       //.........bricks
           SlabBlock coconut_bricks_slab = foodblockcompatregistry.COCONUT_BRICKS_SLAB.get();
-          ResourceLocation coconut_bricks_block_texture = modLoc("block/coconut_bricks_block");
           slabBlock(coconut_bricks_slab, coconut_bricks_block_texture, coconut_bricks_block_texture);
      //------------------------------------------------------------orange-----------------------------------------------------------------------
       //.........plain
           SlabBlock orange_slab = foodblockcompatregistry.ORANGE_SLAB.get();
-          ResourceLocation orange_block_texture = modLoc("block/orange_block");
           slabBlock(orange_slab, orange_block_texture, orange_block_texture);
       //.........bricks
           SlabBlock orange_bricks_slab = foodblockcompatregistry.ORANGE_BRICKS_SLAB.get();
-          ResourceLocation orange_bricks_block_texture = modLoc("block/orange_bricks_block");
           slabBlock(orange_bricks_slab, orange_bricks_block_texture, orange_bricks_block_texture);
      //------------------------------------------------------------tangerine-----------------------------------------------------------------------
       //.........plain
           SlabBlock tangerine_slab = foodblockcompatregistry.TANGERINE_SLAB.get();
-          ResourceLocation tangerine_block_texture = modLoc("block/tangerine_block");
           slabBlock(tangerine_slab, tangerine_block_texture, tangerine_block_texture);
       //.........bricks
           SlabBlock tangerine_bricks_slab = foodblockcompatregistry.TANGERINE_BRICKS_SLAB.get();
-          ResourceLocation tangerine_bricks_block_texture = modLoc("block/tangerine_bricks_block");
           slabBlock(tangerine_bricks_slab, tangerine_bricks_block_texture, tangerine_bricks_block_texture);
      //------------------------------------------------------------kumquat-----------------------------------------------------------------------
       //.........plain
           SlabBlock kumquat_slab = foodblockcompatregistry.KUMQUAT_SLAB.get();
-          ResourceLocation kumquat_block_texture = modLoc("block/kumquat_block");
           slabBlock(kumquat_slab, kumquat_block_texture, kumquat_block_texture);
       //.........bricks
           SlabBlock kumquat_bricks_slab = foodblockcompatregistry.KUMQUAT_BRICKS_SLAB.get();
-          ResourceLocation kumquat_bricks_block_texture = modLoc("block/kumquat_bricks_block");
           slabBlock(kumquat_bricks_slab, kumquat_bricks_block_texture, kumquat_bricks_block_texture);
      //------------------------------------------------------------persimmon-----------------------------------------------------------------------
       //.........plain
           SlabBlock persimmon_slab = foodblockcompatregistry.PERSIMMON_SLAB.get();
-          ResourceLocation persimmon_block_texture = modLoc("block/persimmon_block");
           slabBlock(persimmon_slab, persimmon_block_texture, persimmon_block_texture);
       //.........bricks
           SlabBlock persimmon_bricks_slab = foodblockcompatregistry.PERSIMMON_BRICKS_SLAB.get();
-          ResourceLocation persimmon_bricks_block_texture = modLoc("block/persimmon_bricks_block");
           slabBlock(persimmon_bricks_slab, persimmon_bricks_block_texture, persimmon_bricks_block_texture);
      //------------------------------------------------------------satsuma-----------------------------------------------------------------------
       //.........plain
           SlabBlock satsuma_slab = foodblockcompatregistry.SATSUMA_SLAB.get();
-          ResourceLocation satsuma_block_texture = modLoc("block/satsuma_block");
           slabBlock(satsuma_slab, satsuma_block_texture, satsuma_block_texture);
       //.........bricks
           SlabBlock satsuma_bricks_slab = foodblockcompatregistry.SATSUMA_BRICKS_SLAB.get();
-          ResourceLocation satsuma_bricks_block_texture = modLoc("block/satsuma_bricks_block");
           slabBlock(satsuma_bricks_slab, satsuma_bricks_block_texture, satsuma_bricks_block_texture);
      //------------------------------------------------------------mandarin-----------------------------------------------------------------------
       //.........plain
           SlabBlock mandarin_slab = foodblockcompatregistry.MANDARIN_SLAB.get();
-          ResourceLocation mandarin_block_texture = modLoc("block/mandarin_block");
           slabBlock(mandarin_slab, mandarin_block_texture, mandarin_block_texture);
       //.........bricks
           SlabBlock mandarin_bricks_slab = foodblockcompatregistry.MANDARIN_BRICKS_SLAB.get();
-          ResourceLocation mandarin_bricks_block_texture = modLoc("block/mandarin_bricks_block");
           slabBlock(mandarin_bricks_slab, mandarin_bricks_block_texture, mandarin_bricks_block_texture);
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
       //.........plain
           SlabBlock lemon_slab = foodblockcompatregistry.LEMON_SLAB.get();
-          ResourceLocation lemon_block_texture = modLoc("block/lemon_block");
           slabBlock(lemon_slab, lemon_block_texture, lemon_block_texture);
       //.........bricks
           SlabBlock lemon_bricks_slab = foodblockcompatregistry.LEMON_BRICKS_SLAB.get();
-          ResourceLocation lemon_bricks_block_texture = modLoc("block/lemon_bricks_block");
           slabBlock(lemon_bricks_slab, lemon_bricks_block_texture, lemon_bricks_block_texture);
      //------------------------------------------------------------citron-----------------------------------------------------------------------
       //.........plain
           SlabBlock citron_slab = foodblockcompatregistry.CITRON_SLAB.get();
-          ResourceLocation citron_block_texture = modLoc("block/citron_block");
           slabBlock(citron_slab, citron_block_texture, citron_block_texture);
       //.........bricks
           SlabBlock citron_bricks_slab = foodblockcompatregistry.CITRON_BRICKS_SLAB.get();
-          ResourceLocation citron_bricks_block_texture = modLoc("block/citron_bricks_block");
           slabBlock(citron_bricks_slab, citron_bricks_block_texture, citron_bricks_block_texture);
      //------------------------------------------------------------buddhashand-----------------------------------------------------------------------
       //.........plain
           SlabBlock buddhashand_slab = foodblockcompatregistry.BUDDHASHAND_SLAB.get();
-          ResourceLocation buddhashand_block_texture = modLoc("block/buddhashand_block");
           slabBlock(buddhashand_slab, buddhashand_block_texture, buddhashand_block_texture);
       //.........bricks
           SlabBlock buddhashand_bricks_slab = foodblockcompatregistry.BUDDHASHAND_BRICKS_SLAB.get();
-          ResourceLocation buddhashand_bricks_block_texture = modLoc("block/buddhashand_bricks_block");
           slabBlock(buddhashand_bricks_slab, buddhashand_bricks_block_texture, buddhashand_bricks_block_texture);
      //------------------------------------------------------------lime-----------------------------------------------------------------------
       //.........plain
           SlabBlock lime_slab = foodblockcompatregistry.LIME_SLAB.get();
-          ResourceLocation lime_block_texture = modLoc("block/lime_block");
           slabBlock(lime_slab, lime_block_texture, lime_block_texture);
       //.........bricks
           SlabBlock lime_bricks_slab = foodblockcompatregistry.LIME_BRICKS_SLAB.get();
-          ResourceLocation lime_bricks_block_texture = modLoc("block/lime_bricks_block");
           slabBlock(lime_bricks_slab, lime_bricks_block_texture, lime_bricks_block_texture);
      //------------------------------------------------------------keylime-----------------------------------------------------------------------
       //.........plain
           SlabBlock keylime_slab = foodblockcompatregistry.KEYLIME_SLAB.get();
-          ResourceLocation keylime_block_texture = modLoc("block/keylime_block");
           slabBlock(keylime_slab, keylime_block_texture, keylime_block_texture);
       //.........bricks
           SlabBlock keylime_bricks_slab = foodblockcompatregistry.KEYLIME_BRICKS_SLAB.get();
-          ResourceLocation keylime_bricks_block_texture = modLoc("block/keylime_bricks_block");
           slabBlock(keylime_bricks_slab, keylime_bricks_block_texture, keylime_bricks_block_texture);
      //------------------------------------------------------------fingerlime-----------------------------------------------------------------------
       //.........plain
           SlabBlock fingerlime_slab = foodblockcompatregistry.FINGERLIME_SLAB.get();
-          ResourceLocation fingerlime_block_texture = modLoc("block/fingerlime_block");
           slabBlock(fingerlime_slab, fingerlime_block_texture, fingerlime_block_texture);
       //.........bricks
           SlabBlock fingerlime_bricks_slab = foodblockcompatregistry.FINGERLIME_BRICKS_SLAB.get();
-          ResourceLocation fingerlime_bricks_block_texture = modLoc("block/fingerlime_bricks_block");
           slabBlock(fingerlime_bricks_slab, fingerlime_bricks_block_texture, fingerlime_bricks_block_texture);
      //------------------------------------------------------------grapefruit-----------------------------------------------------------------------
       //.........plain
           SlabBlock grapefruit_slab = foodblockcompatregistry.GRAPEFRUIT_SLAB.get();
-          ResourceLocation grapefruit_block_texture = modLoc("block/grapefruit_block");
           slabBlock(grapefruit_slab, grapefruit_block_texture, grapefruit_block_texture);
       //.........bricks
           SlabBlock grapefruit_bricks_slab = foodblockcompatregistry.GRAPEFRUIT_BRICKS_SLAB.get();
-          ResourceLocation grapefruit_bricks_block_texture = modLoc("block/grapefruit_bricks_block");
           slabBlock(grapefruit_bricks_slab, grapefruit_bricks_block_texture, grapefruit_bricks_block_texture);
      //------------------------------------------------------------pomelo-----------------------------------------------------------------------
       //.........plain
           SlabBlock pomelo_slab = foodblockcompatregistry.POMELO_SLAB.get();
-          ResourceLocation pomelo_block_texture = modLoc("block/pomelo_block");
           slabBlock(pomelo_slab, pomelo_block_texture, pomelo_block_texture);
       //.........bricks
           SlabBlock pomelo_bricks_slab = foodblockcompatregistry.POMELO_BRICKS_SLAB.get();
-          ResourceLocation pomelo_bricks_block_texture = modLoc("block/pomelo_bricks_block");
           slabBlock(pomelo_bricks_slab, pomelo_bricks_block_texture, pomelo_bricks_block_texture);
      //------------------------------------------------------------corn-----------------------------------------------------------------------
       //.........plain
           SlabBlock corn_slab = foodblockcompatregistry.CORN_SLAB.get();
-          ResourceLocation corn_block_texture = modLoc("block/corn_block");
           slabBlock(corn_slab, corn_block_texture, corn_block_texture);
       //.........bricks
           SlabBlock corn_bricks_slab = foodblockcompatregistry.CORN_BRICKS_SLAB.get();
-          ResourceLocation corn_bricks_block_texture = modLoc("block/corn_bricks_block");
           slabBlock(corn_bricks_slab, corn_bricks_block_texture, corn_bricks_block_texture);
      //------------------------------------------------------------onion-----------------------------------------------------------------------
       //.........plain
           SlabBlock onion_slab = foodblockcompatregistry.ONION_SLAB.get();
-          ResourceLocation onion_block_texture = modLoc("block/onion_block");
           slabBlock(onion_slab, onion_block_texture, onion_block_texture);
       //.........bricks
           SlabBlock onion_bricks_slab = foodblockcompatregistry.ONION_BRICKS_SLAB.get();
-          ResourceLocation onion_bricks_block_texture = modLoc("block/onion_bricks_block");
           slabBlock(onion_bricks_slab, onion_bricks_block_texture, onion_bricks_block_texture);
      //------------------------------------------------------------tomato-----------------------------------------------------------------------
       //.........plain
           SlabBlock tomato_slab = foodblockcompatregistry.TOMATO_SLAB.get();
-          ResourceLocation tomato_block_texture = modLoc("block/tomato_block");
           slabBlock(tomato_slab, tomato_block_texture, tomato_block_texture);
       //.........bricks
           SlabBlock tomato_bricks_slab = foodblockcompatregistry.TOMATO_BRICKS_SLAB.get();
-          ResourceLocation tomato_bricks_block_texture = modLoc("block/tomato_bricks_block");
           slabBlock(tomato_bricks_slab, tomato_bricks_block_texture, tomato_bricks_block_texture);
      //------------------------------------------------------------pecan-----------------------------------------------------------------------
       //.........plain
           SlabBlock pecan_slab = foodblockcompatregistry.PECAN_SLAB.get();
-          ResourceLocation pecan_block_texture = modLoc("block/pecan_block");
           slabBlock(pecan_slab, pecan_block_texture, pecan_block_texture);
       //.........bricks
           SlabBlock pecan_bricks_slab = foodblockcompatregistry.PECAN_BRICKS_SLAB.get();
-          ResourceLocation pecan_bricks_block_texture = modLoc("block/pecan_bricks_block");
           slabBlock(pecan_bricks_slab, pecan_bricks_block_texture, pecan_bricks_block_texture);
      //------------------------------------------------------------almond-----------------------------------------------------------------------
       //.........plain
           SlabBlock almond_slab = foodblockcompatregistry.ALMOND_SLAB.get();
-          ResourceLocation almond_block_texture = modLoc("block/almond_block");
           slabBlock(almond_slab, almond_block_texture, almond_block_texture);
       //.........bricks
           SlabBlock almond_bricks_slab = foodblockcompatregistry.ALMOND_BRICKS_SLAB.get();
-          ResourceLocation almond_bricks_block_texture = modLoc("block/almond_bricks_block");
           slabBlock(almond_bricks_slab, almond_bricks_block_texture, almond_bricks_block_texture);
+    }
     //==============================================================================================================================================
     //|                                                              Stairs                                                                        |
     //==============================================================================================================================================
+    public void buildStairsModels() {
      //------------------------------------------------------------elderberry-----------------------------------------------------------------------
       //.........plain
           StairBlock elderberry_stairs = foodblockcompatregistry.ELDERBERRY_STAIRS.get();
@@ -691,6 +745,13 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........bricks
           StairBlock raspberry_bricks_stairs = foodblockcompatregistry.RASPBERRY_BRICKS_STAIRS.get();
           stairsBlock(raspberry_bricks_stairs, raspberry_bricks_block_texture);
+     //------------------------------------------------------------strawberry-----------------------------------------------------------------------
+      //.........plain
+          StairBlock strawberry_stairs = foodblockcompatregistry.STRAWBERRY_STAIRS.get();
+          stairsBlock(strawberry_stairs, strawberry_block_texture);
+      //.........bricks
+          StairBlock strawberry_bricks_stairs = foodblockcompatregistry.STRAWBERRY_BRICKS_STAIRS.get();
+          stairsBlock(strawberry_bricks_stairs, strawberry_bricks_block_texture);
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
       //.........plain
           StairBlock cherry_stairs = foodblockcompatregistry.CHERRY_STAIRS.get();
@@ -852,9 +913,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........bricks
           StairBlock almond_bricks_stairs = foodblockcompatregistry.ALMOND_BRICKS_STAIRS.get();
           stairsBlock(almond_bricks_stairs, almond_bricks_block_texture);
+    };
     //==============================================================================================================================================
     //|                                                               Bars                                                                         |
     //==============================================================================================================================================
+    public void buildBarsModels() {
      //------------------------------------------------------------elderberry-----------------------------------------------------------------------
           IronBarsBlock elderberry_bars = foodblockcompatregistry.ELDERBERRY_BARS.get(); 
           ResourceLocation elderberry_bars_texture = modLoc("block/elderberry_bars");
@@ -875,6 +938,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation raspberry_bars_texture = modLoc("block/raspberry_bars");
           ResourceLocation raspberry_bars_rim_texture = modLoc("block/raspberry_block");
           paneBlockWithRenderType(raspberry_bars, "raspberry_bars", raspberry_bars_texture, raspberry_bars_rim_texture, "cutout_mipped_all"); 
+     //------------------------------------------------------------strawberry-----------------------------------------------------------------------
+          IronBarsBlock strawberry_bars = foodblockcompatregistry.STRAWBERRY_BARS.get(); 
+          ResourceLocation strawberry_bars_texture = modLoc("block/strawberry_bars");
+          ResourceLocation strawberry_bars_rim_texture = modLoc("block/strawberry_block");
+          paneBlockWithRenderType(strawberry_bars, "strawberry_bars", strawberry_bars_texture, strawberry_bars_rim_texture, "cutout_mipped_all"); 
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           IronBarsBlock cherry_bars = foodblockcompatregistry.CHERRY_BARS.get(); 
           ResourceLocation cherry_bars_texture = modLoc("block/cherry_bars");
@@ -990,9 +1058,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation almond_bars_texture = modLoc("block/almond_bars");
           ResourceLocation almond_bars_rim_texture = modLoc("block/almond_block");
           paneBlockWithRenderType(almond_bars, "almond_bars", almond_bars_texture, almond_bars_rim_texture, "cutout_mipped_all"); 
+    };
     //==============================================================================================================================================
     //|                                                               Door                                                                         |
     //==============================================================================================================================================
+    public void buildDoorModels() {
      //------------------------------------------------------------elderberry-----------------------------------------------------------------------
           DoorBlock elderberry_door = foodblockcompatregistry.ELDERBERRY_DOOR.get(); 
           ResourceLocation elderberry_door_top_texture = modLoc("block/elderberry_door_top");
@@ -1013,6 +1083,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation raspberry_door_top_texture = modLoc("block/raspberry_door_top");
           ResourceLocation raspberry_door_bottom_texture = modLoc("block/raspberry_door_bottom");
           doorBlockWithRenderType(raspberry_door, "raspberry_door", raspberry_door_bottom_texture, raspberry_door_top_texture, "translucent"); 
+     //------------------------------------------------------------strawberry-----------------------------------------------------------------------
+          DoorBlock strawberry_door = foodblockcompatregistry.STRAWBERRY_DOOR.get(); 
+          ResourceLocation strawberry_door_top_texture = modLoc("block/strawberry_door_top");
+          ResourceLocation strawberry_door_bottom_texture = modLoc("block/strawberry_door_bottom");
+          doorBlockWithRenderType(strawberry_door, "strawberry_door", strawberry_door_bottom_texture, strawberry_door_top_texture, "cutout_mipped_all"); 
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           DoorBlock cherry_door = foodblockcompatregistry.CHERRY_DOOR.get(); 
           ResourceLocation cherry_door_top_texture = modLoc("block/cherry_door_top");
@@ -1127,10 +1202,12 @@ public class GM1BlockStateProvider extends BlockStateProvider
           DoorBlock almond_door = foodblockcompatregistry.ALMOND_DOOR.get(); 
           ResourceLocation almond_door_top_texture = modLoc("block/almond_door_top");
           ResourceLocation almond_door_bottom_texture = modLoc("block/almond_door_bottom");
-          doorBlockWithRenderType(almond_door, "almond_door", almond_door_bottom_texture, almond_door_top_texture, "cutout_mipped_all"); 
+          doorBlockWithRenderType(almond_door, "almond_door", almond_door_bottom_texture, almond_door_top_texture, "cutout_mipped_all");
+    };
     //==============================================================================================================================================
     //|                                                              Button                                                                        |
     //==============================================================================================================================================
+    public void buildButtonModels() {
      //------------------------------------------------------------elderberry-----------------------------------------------------------------------
           ButtonBlock elderberry_button = foodblockcompatregistry.ELDERBERRY_BUTTON.get();
           ResourceLocation elderberry_button_texture = modLoc("block/elderberry_block");
@@ -1147,6 +1224,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ButtonBlock raspberry_button = foodblockcompatregistry.RASPBERRY_BUTTON.get();
           ResourceLocation raspberry_button_texture = modLoc("block/raspberry_block");
           buttonBlock(raspberry_button, raspberry_button_texture);
+     //------------------------------------------------------------strawberry-----------------------------------------------------------------------
+          ButtonBlock strawberry_button = foodblockcompatregistry.STRAWBERRY_BUTTON.get();
+          ResourceLocation strawberry_button_texture = modLoc("block/strawberry_block");
+          buttonBlock(strawberry_button, strawberry_button_texture);
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           ButtonBlock cherry_button = foodblockcompatregistry.CHERRY_BUTTON.get();
           ResourceLocation cherry_button_texture = modLoc("block/cherry_block");
@@ -1239,9 +1320,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ButtonBlock almond_button = foodblockcompatregistry.ALMOND_BUTTON.get();
           ResourceLocation almond_button_texture = modLoc("block/almond_block");
           buttonBlock(almond_button, almond_button_texture);
+    };
     //==============================================================================================================================================
     //|                                                              Fences                                                                        |
     //==============================================================================================================================================
+    public void buildFenceAndGateModels() {
      //------------------------------------------------------------elderberry-----------------------------------------------------------------------
        //fence
           FenceBlock elderberry_fence = foodblockcompatregistry.ELDERBERRY_FENCE.get();
@@ -1278,6 +1361,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
           FenceGateBlock raspberry_gate = foodblockcompatregistry.RASPBERRY_GATE.get();
           ResourceLocation raspberry_gate_texture = modLoc("block/raspberry_block");
           fenceGateBlock(raspberry_gate, raspberry_gate_texture);
+     //------------------------------------------------------------strawberry-----------------------------------------------------------------------
+       //fence
+          FenceBlock strawberry_fence = foodblockcompatregistry.STRAWBERRY_FENCE.get();
+          ResourceLocation strawberry_fence_texture = modLoc("block/strawberry_block");
+          fenceBlock(strawberry_fence, strawberry_fence_texture);
+       //gate
+          FenceGateBlock strawberry_gate = foodblockcompatregistry.STRAWBERRY_GATE.get();
+          ResourceLocation strawberry_gate_texture = modLoc("block/strawberry_block");
+          fenceGateBlock(strawberry_gate, strawberry_gate_texture);
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
        //fence
           FenceBlock cherry_fence = foodblockcompatregistry.CHERRY_FENCE.get();
@@ -1485,9 +1577,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           FenceGateBlock almond_gate = foodblockcompatregistry.ALMOND_GATE.get();
           ResourceLocation almond_gate_texture = modLoc("block/almond_block");
           fenceGateBlock(almond_gate, almond_gate_texture);
+    };
     //==============================================================================================================================================
     //|                                                          Pressure Plates                                                                   |
     //==============================================================================================================================================
+    public void buildPressurePlateModels() {
      //------------------------------------------------------------elderberry-----------------------------------------------------------------------
           PressurePlateBlock elderberry_pressure_plate = foodblockcompatregistry.ELDERBERRY_PRESSURE_PLATE.get();
           ResourceLocation elderberry_pressure_plate_texture = modLoc("block/elderberry_block");
@@ -1504,6 +1598,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           PressurePlateBlock raspberry_pressure_plate = foodblockcompatregistry.RASPBERRY_PRESSURE_PLATE.get();
           ResourceLocation raspberry_pressure_plate_texture = modLoc("block/raspberry_block");
           pressurePlateBlock(raspberry_pressure_plate, raspberry_pressure_plate_texture);
+     //------------------------------------------------------------strawberry-----------------------------------------------------------------------
+          PressurePlateBlock strawberry_pressure_plate = foodblockcompatregistry.STRAWBERRY_PRESSURE_PLATE.get();
+          ResourceLocation strawberry_pressure_plate_texture = modLoc("block/strawberry_block");
+          pressurePlateBlock(strawberry_pressure_plate, strawberry_pressure_plate_texture);
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           PressurePlateBlock cherry_pressure_plate = foodblockcompatregistry.CHERRY_PRESSURE_PLATE.get();
           ResourceLocation cherry_pressure_plate_texture = modLoc("block/cherry_block");
@@ -1596,9 +1694,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           PressurePlateBlock almond_pressure_plate = foodblockcompatregistry.ALMOND_PRESSURE_PLATE.get();
           ResourceLocation almond_pressure_plate_texture = modLoc("block/almond_block");
           pressurePlateBlock(almond_pressure_plate, almond_pressure_plate_texture);
+    };
     //==============================================================================================================================================
     //|                                                               Signs                                                                        |
     //==============================================================================================================================================
+    public void buildSignModels() {
      //------------------------------------------------------------elderberry-----------------------------------------------------------------------
            StandingSignBlock elderberry_sign = foodblockcompatregistry.ELDERBERRY_STANDING_SIGN.get();
            WallSignBlock elderberry_wall_sign = foodblockcompatregistry.ELDERBERRY_WALL_SIGN.get();
@@ -1619,6 +1719,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
            WallSignBlock raspberry_wall_sign = foodblockcompatregistry.RASPBERRY_WALL_SIGN.get();
            ResourceLocation raspberry_sign_texture = modLoc("block/raspberry_block");
            signBlock(raspberry_sign, raspberry_wall_sign, raspberry_sign_texture);
+     //------------------------------------------------------------strawberry-----------------------------------------------------------------------
+           StandingSignBlock strawberry_sign = foodblockcompatregistry.STRAWBERRY_STANDING_SIGN.get();
+           WallSignBlock strawberry_wall_sign = foodblockcompatregistry.STRAWBERRY_WALL_SIGN.get();
+           ResourceLocation strawberry_sign_texture = modLoc("block/strawberry_block");
+           signBlock(strawberry_sign, strawberry_wall_sign, strawberry_sign_texture);
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
            StandingSignBlock cherry_sign = foodblockcompatregistry.CHERRY_STANDING_SIGN.get();
            WallSignBlock cherry_wall_sign = foodblockcompatregistry.CHERRY_WALL_SIGN.get();
@@ -1734,9 +1839,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
            WallSignBlock almond_wall_sign = foodblockcompatregistry.ALMOND_WALL_SIGN.get();
            ResourceLocation almond_sign_texture = modLoc("block/almond_block");
            signBlock(almond_sign, almond_wall_sign, almond_sign_texture);
+    };
     //==============================================================================================================================================
     //|                                                            Trap Doors                                                                      |
     //==============================================================================================================================================
+    public void buildTrapdoorModels() {
      //------------------------------------------------------------elderberry-----------------------------------------------------------------------
           TrapDoorBlock elderberry_trapdoor = foodblockcompatregistry.ELDERBERRY_TRAPDOOR.get(); 
           ResourceLocation elderberry_trapdoor_texture = modLoc("block/elderberry_block");
@@ -1753,6 +1860,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           TrapDoorBlock raspberry_trapdoor = foodblockcompatregistry.RASPBERRY_TRAPDOOR.get(); 
           ResourceLocation raspberry_trapdoor_texture = modLoc("block/raspberry_block");
           trapdoorBlockWithRenderType(raspberry_trapdoor, "raspberry_trapdoor", raspberry_trapdoor_texture, false, raspberry_trapdoor_texture);
+     //------------------------------------------------------------strawberry-----------------------------------------------------------------------
+          TrapDoorBlock strawberry_trapdoor = foodblockcompatregistry.STRAWBERRY_TRAPDOOR.get(); 
+          ResourceLocation strawberry_trapdoor_texture = modLoc("block/strawberry_block");
+          trapdoorBlockWithRenderType(strawberry_trapdoor, "strawberry_trapdoor", strawberry_trapdoor_texture, false, strawberry_trapdoor_texture);
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           TrapDoorBlock cherry_trapdoor = foodblockcompatregistry.CHERRY_TRAPDOOR.get(); 
           ResourceLocation cherry_trapdoor_texture = modLoc("block/cherry_block");
@@ -1845,9 +1956,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           TrapDoorBlock almond_trapdoor = foodblockcompatregistry.ALMOND_TRAPDOOR.get(); 
           ResourceLocation almond_trapdoor_texture = modLoc("block/almond_block");
           trapdoorBlockWithRenderType(almond_trapdoor, "almond_trapdoor", almond_trapdoor_texture, false, almond_trapdoor_texture);
+    };
     //==============================================================================================================================================
     //|                                                               Lamps                                                                        |
     //==============================================================================================================================================
+    public void buildLampModels() {
      //------------------------------------------------------------elderberry-----------------------------------------------------------------------
           Block elderberry_lamp = foodblockcompatregistry.ELDERBERRY_LAMP.get();
           simpleBlock(elderberry_lamp);
@@ -1862,6 +1975,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           Block raspberry_lamp = foodblockcompatregistry.RASPBERRY_LAMP.get();
           ResourceLocation raspberry_lamp_texture = modLoc("block/raspberry_lamp");
           horizontalBlock(raspberry_lamp, raspberry_lamp_texture, raspberry_lamp_texture, raspberry_lamp_texture);
+     //------------------------------------------------------------strawberry-----------------------------------------------------------------------
+          Block strawberry_lamp = foodblockcompatregistry.STRAWBERRY_LAMP.get();
+          ResourceLocation strawberry_lamp_texture = modLoc("block/strawberry_lamp");
+          horizontalBlock(strawberry_lamp, strawberry_lamp_texture, strawberry_lamp_texture, strawberry_lamp_texture);
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           Block cherry_lamp = foodblockcompatregistry.CHERRY_LAMP.get();
           simpleBlock(cherry_lamp);
@@ -1933,9 +2050,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
      //------------------------------------------------------------almond-----------------------------------------------------------------------
           Block almond_lamp = foodblockcompatregistry.ALMOND_LAMP.get();
           simpleBlock(almond_lamp);
+    };
     //==============================================================================================================================================
     //|                                                              Carpets                                                                       |
     //==============================================================================================================================================
+    public void buildCarpetModels() {
      //------------------------------------------------------------elderberry-----------------------------------------------------------------------
           CarpetBlock elderberry_carpet = foodblockcompatregistry.ELDERBERRY_CARPET.get();
           ResourceLocation elderberry_carpet_texture = modLoc("block/elderberry_carpet");
@@ -1960,6 +2079,12 @@ public class GM1BlockStateProvider extends BlockStateProvider
           BlockModelBuilder raspberry_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(raspberry_carpet).getPath(), 
           mcLoc("block/carpet")).texture("wool", raspberry_carpet_texture);
           simpleBlock(raspberry_carpet, new ModelFile.UncheckedModelFile(raspberry_carpet_model.getLocation()));
+     //------------------------------------------------------------strawberry-----------------------------------------------------------------------
+          CarpetBlock strawberry_carpet = foodblockcompatregistry.STRAWBERRY_CARPET.get();
+          ResourceLocation strawberry_carpet_texture = modLoc("block/strawberry_carpet");
+          BlockModelBuilder strawberry_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(strawberry_carpet).getPath(), 
+          mcLoc("block/carpet")).texture("wool", strawberry_carpet_texture);
+          simpleBlock(strawberry_carpet, new ModelFile.UncheckedModelFile(strawberry_carpet_model.getLocation()));
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           CarpetBlock cherry_carpet = foodblockcompatregistry.CHERRY_CARPET.get();
           ResourceLocation cherry_carpet_texture = modLoc("block/cherry_carpet");
@@ -2098,9 +2223,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           BlockModelBuilder almond_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(almond_carpet).getPath(), mcLoc("block/carpet"))
           .texture("wool", almond_carpet_texture);
           simpleBlock(almond_carpet, new ModelFile.UncheckedModelFile(almond_carpet_model.getLocation()));
+    };
     //==============================================================================================================================================
     //|                                                             Lanterns                                                                       |
     //==============================================================================================================================================
+    public void buildLanternModels() {
      //------------------------------------------------------------elderberry-----------------------------------------------------------------------
          //regular
           LanternBlock elderberry_lantern = foodblockcompatregistry.ELDERBERRY_LANTERN.get();
@@ -2257,6 +2384,45 @@ public class GM1BlockStateProvider extends BlockStateProvider
              .modelForState().modelFile(hanging_raspberry_soul_lantern_model).addModel()
              .partialState().with(LanternBlock.HANGING, false)
              .modelForState().modelFile(raspberry_soul_lantern_model).addModel();
+     //------------------------------------------------------------strawberry-----------------------------------------------------------------------
+         //regular
+          LanternBlock strawberry_lantern = foodblockcompatregistry.STRAWBERRY_LANTERN.get();
+          ResourceLocation strawberry_lantern_texture = modLoc("block/strawberry_lantern");
+  
+          BlockModelBuilder strawberry_lantern_model = models()
+              .withExistingParent("strawberry_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", strawberry_lantern_texture);
+  
+          BlockModelBuilder hanging_strawberry_lantern_model = models()
+              .withExistingParent("strawberry_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", strawberry_lantern_texture);
+  
+          getVariantBuilder(strawberry_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_strawberry_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(strawberry_lantern_model).addModel();
+         //soul
+         LanternBlock strawberry_soul_lantern = foodblockcompatregistry.STRAWBERRY_SOUL_LANTERN.get();
+         ResourceLocation strawberry_soul_lantern_texture = modLoc("block/strawberry_soul_lantern");
+ 
+         BlockModelBuilder strawberry_soul_lantern_model = models()
+             .withExistingParent("strawberry_soul_lantern", mcLoc("block/lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", strawberry_soul_lantern_texture);
+ 
+         BlockModelBuilder hanging_strawberry_soul_lantern_model = models()
+             .withExistingParent("strawberry_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", strawberry_soul_lantern_texture);
+ 
+         getVariantBuilder(strawberry_soul_lantern)
+             .partialState().with(LanternBlock.HANGING, true)
+             .modelForState().modelFile(hanging_strawberry_soul_lantern_model).addModel()
+             .partialState().with(LanternBlock.HANGING, false)
+             .modelForState().modelFile(strawberry_soul_lantern_model).addModel();
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
          //regular
           LanternBlock cherry_lantern = foodblockcompatregistry.CHERRY_LANTERN.get();
@@ -3154,9 +3320,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
              .modelForState().modelFile(hanging_almond_soul_lantern_model).addModel()
              .partialState().with(LanternBlock.HANGING, false)
              .modelForState().modelFile(almond_soul_lantern_model).addModel();
+    };
     //==============================================================================================================================================
     //|                                                              Chains                                                                        |
     //==============================================================================================================================================
+    public void buildChainModels() {
      //------------------------------------------------------------elderberry-----------------------------------------------------------------------
          ChainBlock elderberry_chain = foodblockcompatregistry.ELDERBERRY_CHAIN.get();
          ResourceLocation elderberry_chain_texture = modLoc("block/elderberry_chain");
@@ -3221,6 +3389,22 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .modelForState().modelFile(raspberry_chain_model).rotationX(90).rotationY(90).addModel()
           .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
           .modelForState().modelFile(raspberry_chain_model).rotationX(90).addModel(); 
+     //------------------------------------------------------------strawberry-----------------------------------------------------------------------
+         ChainBlock strawberry_chain = foodblockcompatregistry.STRAWBERRY_CHAIN.get();
+         ResourceLocation strawberry_chain_texture = modLoc("block/strawberry_chain");
+         BlockModelBuilder strawberry_chain_model = models()
+          .withExistingParent("strawberry_chain", mcLoc("block/chain"))
+          .renderType("cutout_mipped_all")
+          .texture("all", strawberry_chain_texture)
+          .texture("particle", strawberry_chain_texture);
+
+          getVariantBuilder(strawberry_chain)
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Y)
+          .modelForState().modelFile(strawberry_chain_model).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.X)
+          .modelForState().modelFile(strawberry_chain_model).rotationX(90).rotationY(90).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
+          .modelForState().modelFile(strawberry_chain_model).rotationX(90).addModel(); 
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
          ChainBlock cherry_chain = foodblockcompatregistry.CHERRY_CHAIN.get();
          ResourceLocation cherry_chain_texture = modLoc("block/cherry_chain");
@@ -3589,9 +3773,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .modelForState().modelFile(almond_chain_model).rotationX(90).rotationY(90).addModel()
           .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
           .modelForState().modelFile(almond_chain_model).rotationX(90).addModel(); 
+    };
     //==============================================================================================================================================
     //|                                                             Ladders                                                                        |
     //==============================================================================================================================================
+    public void buildLadderModels() {
      //------------------------------------------------------------elderberry-----------------------------------------------------------------------
           LadderBlock elderberryladder = foodblockcompatregistry.ELDERBERRY_LADDER.get();
 
@@ -3670,6 +3856,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/raspberry_ladder");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------strawberry-----------------------------------------------------------------------
+          LadderBlock strawberryladder = foodblockcompatregistry.STRAWBERRY_LADDER.get();
+
+          getVariantBuilder(strawberryladder)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/strawberry_ladder");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -4159,9 +4366,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .rotationY(rotationY)
                   .build();
           });
+    };
     //==============================================================================================================================================
     //|                                                              Tables                                                                        |
     //==============================================================================================================================================
+    public void buildTableModels() {
      //------------------------------------------------------------elderberry-----------------------------------------------------------------------
           HorizontalDirectionalBlock elderberrytable = foodblockcompatregistry.ELDERBERRY_TABLE.get();
 
@@ -4240,6 +4449,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/raspberry_table");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------strawberry-----------------------------------------------------------------------
+          HorizontalDirectionalBlock strawberrytable = foodblockcompatregistry.STRAWBERRY_TABLE.get();
+
+          getVariantBuilder(strawberrytable)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/strawberry_table");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -4729,9 +4959,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .rotationY(rotationY)
                   .build();
           });
+    };
     //==============================================================================================================================================
     //|                                                              Torches                                                                       |
     //==============================================================================================================================================
+    public void buildTorchModels() {
      //------------------------------------------------------------elderberry-----------------------------------------------------------------------
        //regular
         TorchBlock elderberry_torch = foodblockcompatregistry.ELDERBERRY_TORCH.get();
@@ -5193,6 +5425,122 @@ public class GM1BlockStateProvider extends BlockStateProvider
                     .renderType("cutout_mipped_all")
                     .texture("torch", raspberry_soul_wall_torch_texture)
                     .texture("particle", raspberry_soul_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+     //------------------------------------------------------------strawberry-----------------------------------------------------------------------
+       //regular
+        TorchBlock strawberry_torch = foodblockcompatregistry.STRAWBERRY_TORCH.get();
+        ResourceLocation strawberry_torch_texture = modLoc("block/strawberry_torch");
+        BlockModelBuilder strawberry_torch_model = models()
+        .withExistingParent("strawberry_torch", mcLoc("block/torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", strawberry_torch_texture)
+        .texture("particle", strawberry_torch_texture);
+
+        simpleBlock(strawberry_torch, strawberry_torch_model);
+
+        TorchBlock strawberry_wall_torch = foodblockcompatregistry.STRAWBERRY_WALL_TORCH.get();
+        BlockModelBuilder strawberry_wall_torch_model = models()
+        .withExistingParent("strawberry_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", strawberry_torch_texture)
+        .texture("particle", strawberry_torch_texture);
+        getVariantBuilder(strawberry_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("strawberry_wall_torch", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", strawberry_torch_texture)
+                    .texture("particle", strawberry_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //redstone
+        RedstoneTorchBlock strawberry_redstone_torch = foodblockcompatregistry.STRAWBERRY_REDSTONE_TORCH.get();
+        ResourceLocation strawberry_redstone_torch_texture = modLoc("block/strawberry_redstone_torch");
+        BlockModelBuilder strawberry_redstone_torch_model = models()
+        .withExistingParent("strawberry_redstone_torch", mcLoc("block/redstone_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", strawberry_redstone_torch_texture)
+        .texture("particle", strawberry_redstone_torch_texture);
+        
+
+        simpleBlock(strawberry_redstone_torch, strawberry_redstone_torch_model);
+
+        ResourceLocation strawberry_redstone_wall_torch_texture = modLoc("block/strawberry_redstone_torch");
+
+        RedstoneTorchBlock strawberry_redstone_wall_torch = foodblockcompatregistry.STRAWBERRY_REDSTONE_WALL_TORCH.get();
+        BlockModelBuilder strawberry_redstone_wall_torch_model = models()
+        .withExistingParent("strawberry_redstone_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", strawberry_redstone_wall_torch_texture)
+        .texture("particle", strawberry_redstone_wall_torch_texture);
+        getVariantBuilder(strawberry_redstone_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("strawberry_redstone_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", strawberry_redstone_wall_torch_texture)
+                    .texture("particle", strawberry_redstone_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //soul
+        TorchBlock strawberry_soul_torch = foodblockcompatregistry.STRAWBERRY_SOUL_TORCH.get();
+        ResourceLocation strawberry_soul_torch_texture = modLoc("block/strawberry_soul_torch");
+        BlockModelBuilder strawberry_soul_torch_model = models()
+        .withExistingParent("strawberry_soul_torch", mcLoc("block/soul_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", strawberry_soul_torch_texture)
+        .texture("particle", strawberry_soul_torch_texture);
+        
+
+        simpleBlock(strawberry_soul_torch, strawberry_soul_torch_model);
+
+        ResourceLocation strawberry_soul_wall_torch_texture = modLoc("block/strawberry_soul_torch");
+        TorchBlock strawberry_soul_wall_torch = foodblockcompatregistry.STRAWBERRY_SOUL_WALL_TORCH.get();
+        BlockModelBuilder strawberry_soul_wall_torch_model = models()
+        .withExistingParent("strawberry_soul_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", strawberry_soul_wall_torch_texture)
+        .texture("particle", strawberry_soul_wall_torch_texture);
+        getVariantBuilder(strawberry_soul_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("strawberry_soul_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", strawberry_soul_wall_torch_texture)
+                    .texture("particle", strawberry_soul_wall_torch_texture))
                 .rotationY(rotation)
                 .build();
             });
@@ -7864,9 +8212,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
                 .rotationY(rotation)
                 .build();
             });
+    };
     //==============================================================================================================================================
     //|                                                             Furnaces                                                                       |
     //==============================================================================================================================================
+    public void buildFurnaceModels() {
      //------------------------------------------------------------elderberry-----------------------------------------------------------------------
           FurnaceBlock elderberry_furnace = foodblockcompatregistry.ELDERBERRY_FURNACE.get();
           ResourceLocation elderberry_furnace_unlit_texture = modLoc("block/elderberry_furnace");
@@ -8037,6 +8387,49 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   };
 
                   ResourceLocation modelLocation = lit ? modLoc("block/raspberry_furnace_model_lit") : modLoc("block/raspberry_furnace_model_unlit");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotation)
+                      .build();
+              });
+     //------------------------------------------------------------strawberry-----------------------------------------------------------------------
+          FurnaceBlock strawberry_furnace = foodblockcompatregistry.STRAWBERRY_FURNACE.get();
+          ResourceLocation strawberry_furnace_unlit_texture = modLoc("block/strawberry_furnace");
+          ResourceLocation strawberry_furnace_lit_texture = modLoc("block/strawberry_furnace_lit");
+          ResourceLocation strawberry_furnace_side = modLoc("block/strawberry_block");
+          
+          BlockModelBuilder strawberry_furnace_model_unlit = models()
+              .withExistingParent("strawberry_furnace_model_unlit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", strawberry_furnace_side)
+              .texture("top", strawberry_furnace_side)
+              .texture("front", strawberry_furnace_unlit_texture)
+              .texture("particle", strawberry_furnace_side);
+          
+
+          BlockModelBuilder strawberry_furnace_model_lit = models()
+              .withExistingParent("strawberry_furnace_model_lit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", strawberry_furnace_side)
+              .texture("top", strawberry_furnace_side)
+              .texture("front", strawberry_furnace_lit_texture)
+              .texture("particle", strawberry_furnace_side);
+          
+
+          getVariantBuilder(strawberry_furnace)
+              .forAllStates(state -> {
+                  Boolean lit = state.getValue(BlockStateProperties.LIT);
+                  Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                  int rotation = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+
+                  ResourceLocation modelLocation = lit ? modLoc("block/strawberry_furnace_model_lit") : modLoc("block/strawberry_furnace_model_unlit");
               
                   return ConfiguredModel.builder()
                       .modelFile(models().getExistingFile(modelLocation))
@@ -9035,9 +9428,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationY(rotation)
                       .build();
               });
+    };
     //==============================================================================================================================================
     //|                                                               Paths                                                                        |
     //==============================================================================================================================================
+    public void buildPathModels() {
      //------------------------------------------------------------elderberry-----------------------------------------------------------------------
           foodpathtypeminislab elderberry_stone_path = foodblockcompatregistry.ELDERBERRY_STONE_PATH.get();
 
@@ -9081,6 +9476,18 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .forAllStates(state -> {
 
               ResourceLocation modelLocation = modLoc("block/raspberry_stone_path");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .build();
+          });
+     //------------------------------------------------------------strawberry-----------------------------------------------------------------------
+          foodpathtypeminislab strawberry_stone_path = foodblockcompatregistry.STRAWBERRY_STONE_PATH.get();
+
+          getVariantBuilder(strawberry_stone_path)
+          .forAllStates(state -> {
+
+              ResourceLocation modelLocation = modLoc("block/strawberry_stone_path");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -9362,9 +9769,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .modelFile(models().getExistingFile(modelLocation))
                   .build();
           });
+    };
     //==============================================================================================================================================
     //|                                                              Barrels                                                                       |
     //==============================================================================================================================================
+    public void buildBarrelModels() {
      //------------------------------------------------------------elderberry-----------------------------------------------------------------------
           foodBarrel elderberry_barrel = foodblockcompatregistry.ELDERBERRY_BARREL.get();
           ResourceLocation elderberry_barrel_closed_texture = modLoc("block/elderberry_barrel_top_closed");
@@ -9550,6 +9959,54 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   };
 
                   ResourceLocation modelLocation = open ? modLoc("block/raspberry_barrel_model_open") : modLoc("block/raspberry_barrel_model_closed");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotationY)
+                      .rotationX(rotationX)
+                      .build();
+              });
+     //------------------------------------------------------------strawberry-----------------------------------------------------------------------
+          foodBarrel strawberry_barrel = foodblockcompatregistry.STRAWBERRY_BARREL.get();
+          ResourceLocation strawberry_barrel_closed_texture = modLoc("block/strawberry_barrel_top_closed");
+          ResourceLocation strawberry_barrel_open_texture = modLoc("block/strawberry_barrel_top_open");
+          ResourceLocation strawberry_barrel_side = modLoc("block/strawberry_barrel_side");
+          ResourceLocation strawberry_barrel_bottom = modLoc("block/strawberry_barrel_bottom");
+          
+          BlockModelBuilder strawberry_barrel_model_closed = models()
+              .withExistingParent("strawberry_barrel_model_closed", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", strawberry_barrel_side)
+              .texture("bottom", strawberry_barrel_bottom)
+              .texture("top", strawberry_barrel_closed_texture)
+              .texture("particle", strawberry_barrel_side);
+          
+          BlockModelBuilder strawberry_barrel_model_open = models()
+              .withExistingParent("strawberry_barrel_model_open", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", strawberry_barrel_side)
+              .texture("bottom", strawberry_barrel_bottom)
+              .texture("top", strawberry_barrel_open_texture)
+              .texture("particle", strawberry_barrel_side);
+          
+          getVariantBuilder(strawberry_barrel)
+              .forAllStates(state -> {
+                  Boolean open = state.getValue(BlockStateProperties.OPEN);
+                  Direction facing = state.getValue(BlockStateProperties.FACING);
+                  int rotationY = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+                  int rotationX = switch (facing) {
+                      case UP -> 0;
+                      case DOWN -> 180;
+                      default -> 90;
+                  };
+
+                  ResourceLocation modelLocation = open ? modLoc("block/strawberry_barrel_model_open") : modLoc("block/strawberry_barrel_model_closed");
               
                   return ConfiguredModel.builder()
                       .modelFile(models().getExistingFile(modelLocation))
@@ -10661,9 +11118,12 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationX(rotationX)
                       .build();
               });
+
+    };
     //==============================================================================================================================================
     //|                                                              Chairs                                                                       |
     //==============================================================================================================================================
+    public void buildChairModels() {
      //------------------------------------------------------------elderberry-----------------------------------------------------------------------
           foodChairBlock elderberryChair = foodblockcompatregistry.ELDERBERRY_CHAIR.get();
 
@@ -10742,6 +11202,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/raspberry_chair");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------strawberry-----------------------------------------------------------------------
+          foodChairBlock strawberryChair = foodblockcompatregistry.STRAWBERRY_CHAIR.get();
+
+          getVariantBuilder(strawberryChair)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/strawberry_chair");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -11231,9 +11712,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .rotationY(rotationY)
                   .build();
           });
+    };
     //==============================================================================================================================================
     //|                                                               Beds                                                                         |
     //==============================================================================================================================================
+    public void buildBedModels() {
      //------------------------------------------------------------elderberry-----------------------------------------------------------------------
           foodBed elderberryBed = foodblockcompatregistry.ELDERBERRY_BED.get();
 
@@ -11312,6 +11795,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/raspberry_bed");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------strawberry-----------------------------------------------------------------------
+          foodBed strawberryBed = foodblockcompatregistry.STRAWBERRY_BED.get();
+
+          getVariantBuilder(strawberryBed)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/strawberry_bed");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -11802,7 +12306,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .build();
           });
 
-   };
+    };
     //==============================================================================================================================================
     //|                                                             Cabinet                                                                        |
     //==============================================================================================================================================
@@ -11981,6 +12485,51 @@ public class GM1BlockStateProvider extends BlockStateProvider
              };
 
              ResourceLocation modelLocation = open ? modLoc("block/medium_raspberry_cabinet_open") : modLoc("block/medium_raspberry_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
+     //------------------------------------------------------------strawberry-----------------------------------------------------------------------
+        //small
+         smallFoodCabinet strawberryCabinet = foodblockcompatregistry.SMALL_STRAWBERRY_CABINET.get();
+
+         getVariantBuilder(strawberryCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
+
+             ResourceLocation modelLocation = open ? modLoc("block/strawberry_cabinet_open") : modLoc("block/strawberry_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
+        //medium
+         mediumFoodCabinet strawberryMediumCabinet = foodblockcompatregistry.MEDIUM_STRAWBERRY_CABINET.get();
+
+         getVariantBuilder(strawberryMediumCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
+
+             ResourceLocation modelLocation = open ? modLoc("block/medium_strawberry_cabinet_open") : modLoc("block/medium_strawberry_cabinet");
          
              return ConfiguredModel.builder()
                  .modelFile(models().getExistingFile(modelLocation))
@@ -13023,7 +13572,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                  .build();
          });
 
-};
+    };
 
 }
     
