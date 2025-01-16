@@ -9,7 +9,7 @@
         "required": false},
         {"id":"pamhc2crops:strawberryitem",
         "required": false},
-        {"id":"berries_and_cherries:strawberries",
+        {"id":"berries_and_cherries:strawberry",
         "required": false}
     ]
   }

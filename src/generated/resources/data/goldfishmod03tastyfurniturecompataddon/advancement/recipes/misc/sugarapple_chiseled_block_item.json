@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_sugarapple_slab": {
+      "conditions": {
+        "items": [
+          {
+            "items": "goldfishmod03tastyfurniturecompataddon:sugarapple_slab_item"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "goldfishmod03tastyfurniturecompataddon:sugarapple_chiseled_block_item"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_sugarapple_slab"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "goldfishmod03tastyfurniturecompataddon:sugarapple_chiseled_block_item"
+    ]
+  }
+}

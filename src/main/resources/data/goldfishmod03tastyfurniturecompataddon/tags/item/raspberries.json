@@ -8,6 +8,8 @@
         {"id":"croptopia:raspberry",
         "required": false},
         {"id":"pamhc2crops:raspberryitem",
+        "required": false},
+        {"id":"berries_and_cherries:raspberry",
         "required": false}
     ]
   }

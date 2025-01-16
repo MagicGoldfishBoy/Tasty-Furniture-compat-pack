@@ -66,6 +66,8 @@ public class GM1BlockStateProvider extends BlockStateProvider
      ResourceLocation raspberry_bricks_block_texture = modLoc("block/raspberry_bricks_block");
      ResourceLocation strawberry_block_texture = modLoc("block/strawberry_block");
      ResourceLocation strawberry_bricks_block_texture = modLoc("block/strawberry_bricks_block");
+     ResourceLocation sugarapple_block_texture = modLoc("block/sugarapple_block");
+     ResourceLocation sugarapple_bricks_block_texture = modLoc("block/sugarapple_bricks_block");
      ResourceLocation cherry_block_texture = modLoc("block/cherry_block");
      ResourceLocation cherry_bricks_block_texture = modLoc("block/cherry_bricks_block");
      ResourceLocation blackcherry_block_texture = modLoc("block/blackcherry_block");
@@ -211,6 +213,19 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........tiles
           net.minecraft.world.level.block.Block strawberry_tiles_block = foodblockcompatregistry.STRAWBERRY_TILES_BLOCK.get();
           simpleBlock(strawberry_tiles_block);
+     //------------------------------------------------------------sugarapple-----------------------------------------------------------------------
+      //.........plain
+          net.minecraft.world.level.block.Block sugarapple_block = foodblockcompatregistry.SUGARAPPLE_BLOCK.get();
+          simpleBlock(sugarapple_block);
+      //.........bricks
+          net.minecraft.world.level.block.Block sugarapple_bricks_block = foodblockcompatregistry.SUGARAPPLE_BRICKS_BLOCK.get();
+          simpleBlock(sugarapple_bricks_block);
+      //.........chiseled
+          net.minecraft.world.level.block.Block sugarapple_chiseled_block = foodblockcompatregistry.SUGARAPPLE_CHISELED_BLOCK.get();
+          simpleBlock(sugarapple_chiseled_block);
+      //.........tiles
+          net.minecraft.world.level.block.Block sugarapple_tiles_block = foodblockcompatregistry.SUGARAPPLE_TILES_BLOCK.get();
+          simpleBlock(sugarapple_tiles_block);
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
       //.........plain
           net.minecraft.world.level.block.Block cherry_block = foodblockcompatregistry.CHERRY_BLOCK.get();
@@ -551,6 +566,13 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........bricks
           SlabBlock strawberry_bricks_slab = foodblockcompatregistry.STRAWBERRY_BRICKS_SLAB.get();
           slabBlock(strawberry_bricks_slab, strawberry_bricks_block_texture, strawberry_bricks_block_texture);
+     //------------------------------------------------------------sugarapple-----------------------------------------------------------------------
+      //.........plain
+          SlabBlock sugarapple_slab = foodblockcompatregistry.SUGARAPPLE_SLAB.get();
+          slabBlock(sugarapple_slab, sugarapple_block_texture, sugarapple_block_texture);
+      //.........bricks
+          SlabBlock sugarapple_bricks_slab = foodblockcompatregistry.SUGARAPPLE_BRICKS_SLAB.get();
+          slabBlock(sugarapple_bricks_slab, sugarapple_bricks_block_texture, sugarapple_bricks_block_texture);
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
       //.........plain
           SlabBlock cherry_slab = foodblockcompatregistry.CHERRY_SLAB.get();
@@ -752,6 +774,13 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........bricks
           StairBlock strawberry_bricks_stairs = foodblockcompatregistry.STRAWBERRY_BRICKS_STAIRS.get();
           stairsBlock(strawberry_bricks_stairs, strawberry_bricks_block_texture);
+     //------------------------------------------------------------sugarapple-----------------------------------------------------------------------
+      //.........plain
+          StairBlock sugarapple_stairs = foodblockcompatregistry.SUGARAPPLE_STAIRS.get();
+          stairsBlock(sugarapple_stairs, sugarapple_block_texture);
+      //.........bricks
+          StairBlock sugarapple_bricks_stairs = foodblockcompatregistry.SUGARAPPLE_BRICKS_STAIRS.get();
+          stairsBlock(sugarapple_bricks_stairs, sugarapple_bricks_block_texture);
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
       //.........plain
           StairBlock cherry_stairs = foodblockcompatregistry.CHERRY_STAIRS.get();
@@ -943,6 +972,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation strawberry_bars_texture = modLoc("block/strawberry_bars");
           ResourceLocation strawberry_bars_rim_texture = modLoc("block/strawberry_block");
           paneBlockWithRenderType(strawberry_bars, "strawberry_bars", strawberry_bars_texture, strawberry_bars_rim_texture, "cutout_mipped_all"); 
+     //------------------------------------------------------------sugarapple-----------------------------------------------------------------------
+          IronBarsBlock sugarapple_bars = foodblockcompatregistry.SUGARAPPLE_BARS.get(); 
+          ResourceLocation sugarapple_bars_texture = modLoc("block/sugarapple_bars");
+          ResourceLocation sugarapple_bars_rim_texture = modLoc("block/sugarapple_block");
+          paneBlockWithRenderType(sugarapple_bars, "sugarapple_bars", sugarapple_bars_texture, sugarapple_bars_rim_texture, "cutout_mipped_all"); 
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           IronBarsBlock cherry_bars = foodblockcompatregistry.CHERRY_BARS.get(); 
           ResourceLocation cherry_bars_texture = modLoc("block/cherry_bars");
@@ -1088,6 +1122,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation strawberry_door_top_texture = modLoc("block/strawberry_door_top");
           ResourceLocation strawberry_door_bottom_texture = modLoc("block/strawberry_door_bottom");
           doorBlockWithRenderType(strawberry_door, "strawberry_door", strawberry_door_bottom_texture, strawberry_door_top_texture, "cutout_mipped_all"); 
+     //------------------------------------------------------------sugarapple-----------------------------------------------------------------------
+          DoorBlock sugarapple_door = foodblockcompatregistry.SUGARAPPLE_DOOR.get(); 
+          ResourceLocation sugarapple_door_top_texture = modLoc("block/sugarapple_door_top");
+          ResourceLocation sugarapple_door_bottom_texture = modLoc("block/sugarapple_door_bottom");
+          doorBlockWithRenderType(sugarapple_door, "sugarapple_door", sugarapple_door_bottom_texture, sugarapple_door_top_texture, "cutout_mipped_all"); 
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           DoorBlock cherry_door = foodblockcompatregistry.CHERRY_DOOR.get(); 
           ResourceLocation cherry_door_top_texture = modLoc("block/cherry_door_top");
@@ -1228,6 +1267,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ButtonBlock strawberry_button = foodblockcompatregistry.STRAWBERRY_BUTTON.get();
           ResourceLocation strawberry_button_texture = modLoc("block/strawberry_block");
           buttonBlock(strawberry_button, strawberry_button_texture);
+     //------------------------------------------------------------sugarapple-----------------------------------------------------------------------
+          ButtonBlock sugarapple_button = foodblockcompatregistry.SUGARAPPLE_BUTTON.get();
+          ResourceLocation sugarapple_button_texture = modLoc("block/sugarapple_block");
+          buttonBlock(sugarapple_button, sugarapple_button_texture);
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           ButtonBlock cherry_button = foodblockcompatregistry.CHERRY_BUTTON.get();
           ResourceLocation cherry_button_texture = modLoc("block/cherry_block");
@@ -1370,6 +1413,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
           FenceGateBlock strawberry_gate = foodblockcompatregistry.STRAWBERRY_GATE.get();
           ResourceLocation strawberry_gate_texture = modLoc("block/strawberry_block");
           fenceGateBlock(strawberry_gate, strawberry_gate_texture);
+     //------------------------------------------------------------sugarapple-----------------------------------------------------------------------
+       //fence
+          FenceBlock sugarapple_fence = foodblockcompatregistry.SUGARAPPLE_FENCE.get();
+          ResourceLocation sugarapple_fence_texture = modLoc("block/sugarapple_block");
+          fenceBlock(sugarapple_fence, sugarapple_fence_texture);
+       //gate
+          FenceGateBlock sugarapple_gate = foodblockcompatregistry.SUGARAPPLE_GATE.get();
+          ResourceLocation sugarapple_gate_texture = modLoc("block/sugarapple_block");
+          fenceGateBlock(sugarapple_gate, sugarapple_gate_texture);
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
        //fence
           FenceBlock cherry_fence = foodblockcompatregistry.CHERRY_FENCE.get();
@@ -1602,6 +1654,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           PressurePlateBlock strawberry_pressure_plate = foodblockcompatregistry.STRAWBERRY_PRESSURE_PLATE.get();
           ResourceLocation strawberry_pressure_plate_texture = modLoc("block/strawberry_block");
           pressurePlateBlock(strawberry_pressure_plate, strawberry_pressure_plate_texture);
+     //------------------------------------------------------------sugarapple-----------------------------------------------------------------------
+          PressurePlateBlock sugarapple_pressure_plate = foodblockcompatregistry.SUGARAPPLE_PRESSURE_PLATE.get();
+          ResourceLocation sugarapple_pressure_plate_texture = modLoc("block/sugarapple_block");
+          pressurePlateBlock(sugarapple_pressure_plate, sugarapple_pressure_plate_texture);
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           PressurePlateBlock cherry_pressure_plate = foodblockcompatregistry.CHERRY_PRESSURE_PLATE.get();
           ResourceLocation cherry_pressure_plate_texture = modLoc("block/cherry_block");
@@ -1724,6 +1780,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
            WallSignBlock strawberry_wall_sign = foodblockcompatregistry.STRAWBERRY_WALL_SIGN.get();
            ResourceLocation strawberry_sign_texture = modLoc("block/strawberry_block");
            signBlock(strawberry_sign, strawberry_wall_sign, strawberry_sign_texture);
+     //------------------------------------------------------------sugarapple-----------------------------------------------------------------------
+           StandingSignBlock sugarapple_sign = foodblockcompatregistry.SUGARAPPLE_STANDING_SIGN.get();
+           WallSignBlock sugarapple_wall_sign = foodblockcompatregistry.SUGARAPPLE_WALL_SIGN.get();
+           ResourceLocation sugarapple_sign_texture = modLoc("block/sugarapple_block");
+           signBlock(sugarapple_sign, sugarapple_wall_sign, sugarapple_sign_texture);
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
            StandingSignBlock cherry_sign = foodblockcompatregistry.CHERRY_STANDING_SIGN.get();
            WallSignBlock cherry_wall_sign = foodblockcompatregistry.CHERRY_WALL_SIGN.get();
@@ -1864,6 +1925,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           TrapDoorBlock strawberry_trapdoor = foodblockcompatregistry.STRAWBERRY_TRAPDOOR.get(); 
           ResourceLocation strawberry_trapdoor_texture = modLoc("block/strawberry_block");
           trapdoorBlockWithRenderType(strawberry_trapdoor, "strawberry_trapdoor", strawberry_trapdoor_texture, false, strawberry_trapdoor_texture);
+     //------------------------------------------------------------sugarapple-----------------------------------------------------------------------
+          TrapDoorBlock sugarapple_trapdoor = foodblockcompatregistry.SUGARAPPLE_TRAPDOOR.get(); 
+          ResourceLocation sugarapple_trapdoor_texture = modLoc("block/sugarapple_block");
+          trapdoorBlockWithRenderType(sugarapple_trapdoor, "sugarapple_trapdoor", sugarapple_trapdoor_texture, false, sugarapple_trapdoor_texture);
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           TrapDoorBlock cherry_trapdoor = foodblockcompatregistry.CHERRY_TRAPDOOR.get(); 
           ResourceLocation cherry_trapdoor_texture = modLoc("block/cherry_block");
@@ -1979,6 +2044,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           Block strawberry_lamp = foodblockcompatregistry.STRAWBERRY_LAMP.get();
           ResourceLocation strawberry_lamp_texture = modLoc("block/strawberry_lamp");
           horizontalBlock(strawberry_lamp, strawberry_lamp_texture, strawberry_lamp_texture, strawberry_lamp_texture);
+     //------------------------------------------------------------sugarapple-----------------------------------------------------------------------
+          Block sugarapple_lamp = foodblockcompatregistry.SUGARAPPLE_LAMP.get();
+          ResourceLocation sugarapple_lamp_texture = modLoc("block/sugarapple_lamp");
+          horizontalBlock(sugarapple_lamp, sugarapple_lamp_texture, sugarapple_lamp_texture, sugarapple_lamp_texture);
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           Block cherry_lamp = foodblockcompatregistry.CHERRY_LAMP.get();
           simpleBlock(cherry_lamp);
@@ -2085,6 +2154,12 @@ public class GM1BlockStateProvider extends BlockStateProvider
           BlockModelBuilder strawberry_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(strawberry_carpet).getPath(), 
           mcLoc("block/carpet")).texture("wool", strawberry_carpet_texture);
           simpleBlock(strawberry_carpet, new ModelFile.UncheckedModelFile(strawberry_carpet_model.getLocation()));
+     //------------------------------------------------------------sugarapple-----------------------------------------------------------------------
+          CarpetBlock sugarapple_carpet = foodblockcompatregistry.SUGARAPPLE_CARPET.get();
+          ResourceLocation sugarapple_carpet_texture = modLoc("block/sugarapple_carpet");
+          BlockModelBuilder sugarapple_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(sugarapple_carpet).getPath(), 
+          mcLoc("block/carpet")).texture("wool", sugarapple_carpet_texture);
+          simpleBlock(sugarapple_carpet, new ModelFile.UncheckedModelFile(sugarapple_carpet_model.getLocation()));
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           CarpetBlock cherry_carpet = foodblockcompatregistry.CHERRY_CARPET.get();
           ResourceLocation cherry_carpet_texture = modLoc("block/cherry_carpet");
@@ -2423,6 +2498,45 @@ public class GM1BlockStateProvider extends BlockStateProvider
              .modelForState().modelFile(hanging_strawberry_soul_lantern_model).addModel()
              .partialState().with(LanternBlock.HANGING, false)
              .modelForState().modelFile(strawberry_soul_lantern_model).addModel();
+     //------------------------------------------------------------sugarapple-----------------------------------------------------------------------
+         //regular
+          LanternBlock sugarapple_lantern = foodblockcompatregistry.SUGARAPPLE_LANTERN.get();
+          ResourceLocation sugarapple_lantern_texture = modLoc("block/sugarapple_lantern");
+  
+          BlockModelBuilder sugarapple_lantern_model = models()
+              .withExistingParent("sugarapple_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", sugarapple_lantern_texture);
+  
+          BlockModelBuilder hanging_sugarapple_lantern_model = models()
+              .withExistingParent("sugarapple_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", sugarapple_lantern_texture);
+  
+          getVariantBuilder(sugarapple_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_sugarapple_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(sugarapple_lantern_model).addModel();
+         //soul
+         LanternBlock sugarapple_soul_lantern = foodblockcompatregistry.SUGARAPPLE_SOUL_LANTERN.get();
+         ResourceLocation sugarapple_soul_lantern_texture = modLoc("block/sugarapple_soul_lantern");
+ 
+         BlockModelBuilder sugarapple_soul_lantern_model = models()
+             .withExistingParent("sugarapple_soul_lantern", mcLoc("block/lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", sugarapple_soul_lantern_texture);
+ 
+         BlockModelBuilder hanging_sugarapple_soul_lantern_model = models()
+             .withExistingParent("sugarapple_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", sugarapple_soul_lantern_texture);
+ 
+         getVariantBuilder(sugarapple_soul_lantern)
+             .partialState().with(LanternBlock.HANGING, true)
+             .modelForState().modelFile(hanging_sugarapple_soul_lantern_model).addModel()
+             .partialState().with(LanternBlock.HANGING, false)
+             .modelForState().modelFile(sugarapple_soul_lantern_model).addModel();
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
          //regular
           LanternBlock cherry_lantern = foodblockcompatregistry.CHERRY_LANTERN.get();
@@ -3405,6 +3519,22 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .modelForState().modelFile(strawberry_chain_model).rotationX(90).rotationY(90).addModel()
           .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
           .modelForState().modelFile(strawberry_chain_model).rotationX(90).addModel(); 
+     //------------------------------------------------------------sugarapple-----------------------------------------------------------------------
+         ChainBlock sugarapple_chain = foodblockcompatregistry.SUGARAPPLE_CHAIN.get();
+         ResourceLocation sugarapple_chain_texture = modLoc("block/sugarapple_chain");
+         BlockModelBuilder sugarapple_chain_model = models()
+          .withExistingParent("sugarapple_chain", mcLoc("block/chain"))
+          .renderType("cutout_mipped_all")
+          .texture("all", sugarapple_chain_texture)
+          .texture("particle", sugarapple_chain_texture);
+
+          getVariantBuilder(sugarapple_chain)
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Y)
+          .modelForState().modelFile(sugarapple_chain_model).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.X)
+          .modelForState().modelFile(sugarapple_chain_model).rotationX(90).rotationY(90).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
+          .modelForState().modelFile(sugarapple_chain_model).rotationX(90).addModel(); 
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
          ChainBlock cherry_chain = foodblockcompatregistry.CHERRY_CHAIN.get();
          ResourceLocation cherry_chain_texture = modLoc("block/cherry_chain");
@@ -3877,6 +4007,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/strawberry_ladder");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------sugarapple-----------------------------------------------------------------------
+          LadderBlock sugarappleladder = foodblockcompatregistry.SUGARAPPLE_LADDER.get();
+
+          getVariantBuilder(sugarappleladder)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/sugarapple_ladder");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -4470,6 +4621,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/strawberry_table");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------sugarapple-----------------------------------------------------------------------
+          HorizontalDirectionalBlock sugarappletable = foodblockcompatregistry.SUGARAPPLE_TABLE.get();
+
+          getVariantBuilder(sugarappletable)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/sugarapple_table");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -5541,6 +5713,122 @@ public class GM1BlockStateProvider extends BlockStateProvider
                     .renderType("cutout_mipped_all")
                     .texture("torch", strawberry_soul_wall_torch_texture)
                     .texture("particle", strawberry_soul_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+     //------------------------------------------------------------sugarapple-----------------------------------------------------------------------
+       //regular
+        TorchBlock sugarapple_torch = foodblockcompatregistry.SUGARAPPLE_TORCH.get();
+        ResourceLocation sugarapple_torch_texture = modLoc("block/sugarapple_torch");
+        BlockModelBuilder sugarapple_torch_model = models()
+        .withExistingParent("sugarapple_torch", mcLoc("block/torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", sugarapple_torch_texture)
+        .texture("particle", sugarapple_torch_texture);
+
+        simpleBlock(sugarapple_torch, sugarapple_torch_model);
+
+        TorchBlock sugarapple_wall_torch = foodblockcompatregistry.SUGARAPPLE_WALL_TORCH.get();
+        BlockModelBuilder sugarapple_wall_torch_model = models()
+        .withExistingParent("sugarapple_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", sugarapple_torch_texture)
+        .texture("particle", sugarapple_torch_texture);
+        getVariantBuilder(sugarapple_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("sugarapple_wall_torch", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", sugarapple_torch_texture)
+                    .texture("particle", sugarapple_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //redstone
+        RedstoneTorchBlock sugarapple_redstone_torch = foodblockcompatregistry.SUGARAPPLE_REDSTONE_TORCH.get();
+        ResourceLocation sugarapple_redstone_torch_texture = modLoc("block/sugarapple_redstone_torch");
+        BlockModelBuilder sugarapple_redstone_torch_model = models()
+        .withExistingParent("sugarapple_redstone_torch", mcLoc("block/redstone_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", sugarapple_redstone_torch_texture)
+        .texture("particle", sugarapple_redstone_torch_texture);
+        
+
+        simpleBlock(sugarapple_redstone_torch, sugarapple_redstone_torch_model);
+
+        ResourceLocation sugarapple_redstone_wall_torch_texture = modLoc("block/sugarapple_redstone_torch");
+
+        RedstoneTorchBlock sugarapple_redstone_wall_torch = foodblockcompatregistry.SUGARAPPLE_REDSTONE_WALL_TORCH.get();
+        BlockModelBuilder sugarapple_redstone_wall_torch_model = models()
+        .withExistingParent("sugarapple_redstone_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", sugarapple_redstone_wall_torch_texture)
+        .texture("particle", sugarapple_redstone_wall_torch_texture);
+        getVariantBuilder(sugarapple_redstone_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("sugarapple_redstone_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", sugarapple_redstone_wall_torch_texture)
+                    .texture("particle", sugarapple_redstone_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //soul
+        TorchBlock sugarapple_soul_torch = foodblockcompatregistry.SUGARAPPLE_SOUL_TORCH.get();
+        ResourceLocation sugarapple_soul_torch_texture = modLoc("block/sugarapple_soul_torch");
+        BlockModelBuilder sugarapple_soul_torch_model = models()
+        .withExistingParent("sugarapple_soul_torch", mcLoc("block/soul_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", sugarapple_soul_torch_texture)
+        .texture("particle", sugarapple_soul_torch_texture);
+        
+
+        simpleBlock(sugarapple_soul_torch, sugarapple_soul_torch_model);
+
+        ResourceLocation sugarapple_soul_wall_torch_texture = modLoc("block/sugarapple_soul_torch");
+        TorchBlock sugarapple_soul_wall_torch = foodblockcompatregistry.SUGARAPPLE_SOUL_WALL_TORCH.get();
+        BlockModelBuilder sugarapple_soul_wall_torch_model = models()
+        .withExistingParent("sugarapple_soul_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", sugarapple_soul_wall_torch_texture)
+        .texture("particle", sugarapple_soul_wall_torch_texture);
+        getVariantBuilder(sugarapple_soul_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("sugarapple_soul_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", sugarapple_soul_wall_torch_texture)
+                    .texture("particle", sugarapple_soul_wall_torch_texture))
                 .rotationY(rotation)
                 .build();
             });
@@ -8436,6 +8724,49 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationY(rotation)
                       .build();
               });
+     //------------------------------------------------------------sugarapple-----------------------------------------------------------------------
+          FurnaceBlock sugarapple_furnace = foodblockcompatregistry.SUGARAPPLE_FURNACE.get();
+          ResourceLocation sugarapple_furnace_unlit_texture = modLoc("block/sugarapple_furnace");
+          ResourceLocation sugarapple_furnace_lit_texture = modLoc("block/sugarapple_furnace_lit");
+          ResourceLocation sugarapple_furnace_side = modLoc("block/sugarapple_block");
+          
+          BlockModelBuilder sugarapple_furnace_model_unlit = models()
+              .withExistingParent("sugarapple_furnace_model_unlit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", sugarapple_furnace_side)
+              .texture("top", sugarapple_furnace_side)
+              .texture("front", sugarapple_furnace_unlit_texture)
+              .texture("particle", sugarapple_furnace_side);
+          
+
+          BlockModelBuilder sugarapple_furnace_model_lit = models()
+              .withExistingParent("sugarapple_furnace_model_lit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", sugarapple_furnace_side)
+              .texture("top", sugarapple_furnace_side)
+              .texture("front", sugarapple_furnace_lit_texture)
+              .texture("particle", sugarapple_furnace_side);
+          
+
+          getVariantBuilder(sugarapple_furnace)
+              .forAllStates(state -> {
+                  Boolean lit = state.getValue(BlockStateProperties.LIT);
+                  Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                  int rotation = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+
+                  ResourceLocation modelLocation = lit ? modLoc("block/sugarapple_furnace_model_lit") : modLoc("block/sugarapple_furnace_model_unlit");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotation)
+                      .build();
+              });
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           FurnaceBlock cherry_furnace = foodblockcompatregistry.CHERRY_FURNACE.get();
           ResourceLocation cherry_furnace_unlit_texture = modLoc("block/cherry_furnace");
@@ -9493,6 +9824,18 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .modelFile(models().getExistingFile(modelLocation))
                   .build();
           });
+     //------------------------------------------------------------sugarapple-----------------------------------------------------------------------
+          foodpathtypeminislab sugarapple_stone_path = foodblockcompatregistry.SUGARAPPLE_STONE_PATH.get();
+
+          getVariantBuilder(sugarapple_stone_path)
+          .forAllStates(state -> {
+
+              ResourceLocation modelLocation = modLoc("block/sugarapple_stone_path");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .build();
+          });
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           foodpathtypeminislab cherry_stone_path = foodblockcompatregistry.CHERRY_STONE_PATH.get();
 
@@ -10007,6 +10350,54 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   };
 
                   ResourceLocation modelLocation = open ? modLoc("block/strawberry_barrel_model_open") : modLoc("block/strawberry_barrel_model_closed");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotationY)
+                      .rotationX(rotationX)
+                      .build();
+              });
+     //------------------------------------------------------------sugarapple-----------------------------------------------------------------------
+          foodBarrel sugarapple_barrel = foodblockcompatregistry.SUGARAPPLE_BARREL.get();
+          ResourceLocation sugarapple_barrel_closed_texture = modLoc("block/sugarapple_barrel_top_closed");
+          ResourceLocation sugarapple_barrel_open_texture = modLoc("block/sugarapple_barrel_top_open");
+          ResourceLocation sugarapple_barrel_side = modLoc("block/sugarapple_barrel_side");
+          ResourceLocation sugarapple_barrel_bottom = modLoc("block/sugarapple_barrel_bottom");
+          
+          BlockModelBuilder sugarapple_barrel_model_closed = models()
+              .withExistingParent("sugarapple_barrel_model_closed", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", sugarapple_barrel_side)
+              .texture("bottom", sugarapple_barrel_bottom)
+              .texture("top", sugarapple_barrel_closed_texture)
+              .texture("particle", sugarapple_barrel_side);
+          
+          BlockModelBuilder sugarapple_barrel_model_open = models()
+              .withExistingParent("sugarapple_barrel_model_open", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", sugarapple_barrel_side)
+              .texture("bottom", sugarapple_barrel_bottom)
+              .texture("top", sugarapple_barrel_open_texture)
+              .texture("particle", sugarapple_barrel_side);
+          
+          getVariantBuilder(sugarapple_barrel)
+              .forAllStates(state -> {
+                  Boolean open = state.getValue(BlockStateProperties.OPEN);
+                  Direction facing = state.getValue(BlockStateProperties.FACING);
+                  int rotationY = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+                  int rotationX = switch (facing) {
+                      case UP -> 0;
+                      case DOWN -> 180;
+                      default -> 90;
+                  };
+
+                  ResourceLocation modelLocation = open ? modLoc("block/sugarapple_barrel_model_open") : modLoc("block/sugarapple_barrel_model_closed");
               
                   return ConfiguredModel.builder()
                       .modelFile(models().getExistingFile(modelLocation))
@@ -11229,6 +11620,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .rotationY(rotationY)
                   .build();
           });
+     //------------------------------------------------------------sugarapple-----------------------------------------------------------------------
+          foodChairBlock sugarappleChair = foodblockcompatregistry.SUGARAPPLE_CHAIR.get();
+
+          getVariantBuilder(sugarappleChair)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/sugarapple_chair");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
           foodChairBlock cherryChair = foodblockcompatregistry.CHERRY_CHAIR.get();
 
@@ -11816,6 +12228,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/strawberry_bed");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------sugarapple-----------------------------------------------------------------------
+          foodBed sugarappleBed = foodblockcompatregistry.SUGARAPPLE_BED.get();
+
+          getVariantBuilder(sugarappleBed)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/sugarapple_bed");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -12530,6 +12963,51 @@ public class GM1BlockStateProvider extends BlockStateProvider
              };
 
              ResourceLocation modelLocation = open ? modLoc("block/medium_strawberry_cabinet_open") : modLoc("block/medium_strawberry_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
+     //------------------------------------------------------------sugarapple-----------------------------------------------------------------------
+        //small
+         smallFoodCabinet sugarappleCabinet = foodblockcompatregistry.SMALL_SUGARAPPLE_CABINET.get();
+
+         getVariantBuilder(sugarappleCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
+
+             ResourceLocation modelLocation = open ? modLoc("block/sugarapple_cabinet_open") : modLoc("block/sugarapple_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
+        //medium
+         mediumFoodCabinet sugarappleMediumCabinet = foodblockcompatregistry.MEDIUM_SUGARAPPLE_CABINET.get();
+
+         getVariantBuilder(sugarappleMediumCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
+
+             ResourceLocation modelLocation = open ? modLoc("block/medium_sugarapple_cabinet_open") : modLoc("block/medium_sugarapple_cabinet");
          
              return ConfiguredModel.builder()
                  .modelFile(models().getExistingFile(modelLocation))

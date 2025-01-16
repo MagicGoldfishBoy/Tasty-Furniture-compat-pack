@@ -405,6 +405,84 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("small_strawberry_cabinet_item", modLoc("block/strawberry_cabinet"));
        withExistingParent("medium_strawberry_cabinet_item", modLoc("block/medium_strawberry_cabinet"));
     //==============================================================================================================================================
+    //|                                                            Sugarapple                                                                      |
+    //==============================================================================================================================================
+       //mush
+       withExistingParent("sugarapple_mush", mcLoc("item/generated")).texture("layer0", "item/sugarapple_mush");
+       //ingot
+        withExistingParent("sugarapple_ingot", mcLoc("item/generated")).texture("layer0", "item/sugarapple_ingot");
+       //nugget
+        withExistingParent("sugarapple_nugget", mcLoc("item/generated")).texture("layer0", "item/sugarapple_nugget");
+       //block
+        withExistingParent("sugarapple_block_item", modLoc("block/sugarapple_block"));
+       //bricks block
+        withExistingParent("sugarapple_bricks_block_item", modLoc("block/sugarapple_bricks_block"));
+       //chiseled block
+        withExistingParent("sugarapple_chiseled_block_item", modLoc("block/sugarapple_chiseled_block"));
+       //tiles block
+        withExistingParent("sugarapple_tiles_block_item", modLoc("block/sugarapple_tiles_block"));
+       //slab
+       slab("sugarapple_slab_item", modLoc("block/sugarapple_block"), modLoc("block/sugarapple_block"), modLoc("block/sugarapple_block"));
+       //bricks slab
+       slab("sugarapple_bricks_slab_item", modLoc("block/sugarapple_bricks_block"), modLoc("block/sugarapple_bricks_block"), modLoc("block/sugarapple_bricks_block"));
+       //stairs
+       stairs("sugarapple_stairs_item", modLoc("block/sugarapple_block"), modLoc("block/sugarapple_block"), modLoc("block/sugarapple_block"));
+       //bricks stairs
+       stairs("sugarapple_bricks_stairs_item", modLoc("block/sugarapple_bricks_block"), modLoc("block/sugarapple_bricks_block"), modLoc("block/sugarapple_bricks_block"));
+       //bars
+       withExistingParent("sugarapple_bars_item", mcLoc("item/generated")).texture("layer0", "block/sugarapple_bars");
+       //doors
+       withExistingParent("sugarapple_door_item", mcLoc("item/generated")).texture("layer0", "item/sugarapple_door_item");
+       //button
+       buttonInventory("sugarapple_button_item", modLoc("block/sugarapple_block"));
+       //fence
+       fenceInventory("sugarapple_fence_item", modLoc("block/sugarapple_block"));
+       //gate
+       withExistingParent("sugarapple_gate_item", modLoc("block/sugarapple_gate"));
+       //pressure plate
+       pressurePlate("sugarapple_pressure_plate_item", modLoc("block/sugarapple_block"));
+       //sign
+       withExistingParent("sugarapple_sign_item", mcLoc("item/generated")).texture("layer0", "item/sugarapple_sign");
+       //trapdoor
+       withExistingParent("sugarapple_trapdoor_item", modLoc("block/sugarapple_trapdoor_trapdoor_bottom"));
+       //lamp
+       withExistingParent("sugarapple_lamp_item", modLoc("block/sugarapple_lamp"));
+       //carpet
+       ResourceLocation sugarapple_carpet_texture = modLoc("block/sugarapple_carpet");
+       carpet("sugarapple_carpet_item", sugarapple_carpet_texture);
+       //lantern
+        //regular
+        withExistingParent("sugarapple_lantern_item", modLoc("block/sugarapple_lantern"));
+        //soul
+          withExistingParent("sugarapple_soul_lantern_item", modLoc("block/sugarapple_soul_lantern"));
+       //chain
+       withExistingParent("sugarapple_chain_item", modLoc("block/sugarapple_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
+       //ladder
+       withExistingParent("sugarapple_ladder_item", modLoc("block/sugarapple_ladder"));
+       //table
+       withExistingParent("sugarapple_table_item", modLoc("block/sugarapple_table"));
+       //torches
+        //regular
+        withExistingParent("sugarapple_torch_item", modLoc("block/sugarapple_torch"));
+        //redstone
+          withExistingParent("sugarapple_redstone_torch_item", modLoc("block/sugarapple_redstone_torch"));
+        //soul
+          withExistingParent("sugarapple_soul_torch_item", modLoc("block/sugarapple_soul_torch"));
+       //furnaces
+       withExistingParent("sugarapple_furnace_item", modLoc("block/sugarapple_furnace_model_unlit"));
+       //paths
+       withExistingParent("sugarapple_stone_path_item", modLoc("block/sugarapple_stone_path"));
+       //barrel
+       withExistingParent("sugarapple_barrel_item", modLoc("block/sugarapple_barrel_model_closed"));
+       //chair
+       withExistingParent("sugarapple_chair_item", modLoc("block/sugarapple_chair"));
+       //bed
+       withExistingParent("sugarapple_bed_item", modLoc("block/sugarapple_bed"));
+       //cabinet
+       withExistingParent("small_sugarapple_cabinet_item", modLoc("block/sugarapple_cabinet"));
+       withExistingParent("medium_sugarapple_cabinet_item", modLoc("block/medium_sugarapple_cabinet"));
+    //==============================================================================================================================================
     //|                                                              Cherry                                                                        |
     //==============================================================================================================================================
        //mush

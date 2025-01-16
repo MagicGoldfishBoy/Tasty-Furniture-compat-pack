@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_sugarapple_nugget": {
+      "conditions": {
+        "items": [
+          {
+            "items": "goldfishmod03tastyfurniturecompataddon:sugarapple_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "goldfishmod03tastyfurniturecompataddon:sugarapple_door_item"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_sugarapple_nugget"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "goldfishmod03tastyfurniturecompataddon:sugarapple_door_item"
+    ]
+  }
+}
