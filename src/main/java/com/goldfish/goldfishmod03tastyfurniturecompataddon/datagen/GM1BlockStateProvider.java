@@ -30,7 +30,7 @@ import net.neoforged.neoforge.client.model.generators.BlockModelBuilder;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 import com.goldfish.goldfishmod02tastyfurniture.block.foodBarrel;
-import com.goldfish.goldfishmod02tastyfurniture.block.foodBed;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.compatBed;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodChairBlock;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodpathtypeminislab;
 import com.goldfish.goldfishmod02tastyfurniture.block.mediumFoodCabinet;
@@ -12130,7 +12130,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
     //==============================================================================================================================================
     public void buildBedModels() {
      //------------------------------------------------------------elderberry-----------------------------------------------------------------------
-          foodBed elderberryBed = foodblockcompatregistry.ELDERBERRY_BED.get();
+          compatBed elderberryBed = foodblockcompatregistry.ELDERBERRY_BED.get();
 
           getVariantBuilder(elderberryBed)
           .forAllStates(state -> {
@@ -12151,7 +12151,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .build();
           });
      //------------------------------------------------------------juniper-----------------------------------------------------------------------
-          foodBed juniperBed = foodblockcompatregistry.JUNIPER_BED.get();
+          compatBed juniperBed = foodblockcompatregistry.JUNIPER_BED.get();
 
           getVariantBuilder(juniperBed)
           .forAllStates(state -> {
@@ -12172,7 +12172,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .build();
           });
      //------------------------------------------------------------blackberry-----------------------------------------------------------------------
-          foodBed blackberryBed = foodblockcompatregistry.BLACKBERRY_BED.get();
+          compatBed blackberryBed = foodblockcompatregistry.BLACKBERRY_BED.get();
 
           getVariantBuilder(blackberryBed)
           .forAllStates(state -> {
@@ -12193,7 +12193,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .build();
           });
      //------------------------------------------------------------raspberry-----------------------------------------------------------------------
-          foodBed raspberryBed = foodblockcompatregistry.RASPBERRY_BED.get();
+          compatBed raspberryBed = foodblockcompatregistry.RASPBERRY_BED.get();
 
           getVariantBuilder(raspberryBed)
           .forAllStates(state -> {
@@ -12214,7 +12214,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .build();
           });
      //------------------------------------------------------------strawberry-----------------------------------------------------------------------
-          foodBed strawberryBed = foodblockcompatregistry.STRAWBERRY_BED.get();
+          compatBed strawberryBed = foodblockcompatregistry.STRAWBERRY_BED.get();
 
           getVariantBuilder(strawberryBed)
           .forAllStates(state -> {
@@ -12235,7 +12235,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .build();
           });
      //------------------------------------------------------------sugarapple-----------------------------------------------------------------------
-          foodBed sugarappleBed = foodblockcompatregistry.SUGARAPPLE_BED.get();
+          compatBed sugarappleBed = foodblockcompatregistry.SUGARAPPLE_BED.get();
 
           getVariantBuilder(sugarappleBed)
           .forAllStates(state -> {
@@ -12256,7 +12256,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .build();
           });
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
-          foodBed cherryBed = foodblockcompatregistry.CHERRY_BED.get();
+          compatBed cherryBed = foodblockcompatregistry.CHERRY_BED.get();
 
           getVariantBuilder(cherryBed)
           .forAllStates(state -> {
@@ -12277,7 +12277,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .build();
           });
      //------------------------------------------------------------blackcherry-----------------------------------------------------------------------
-          foodBed blackcherryBed = foodblockcompatregistry.BLACKCHERRY_BED.get();
+          compatBed blackcherryBed = foodblockcompatregistry.BLACKCHERRY_BED.get();
 
           getVariantBuilder(blackcherryBed)
           .forAllStates(state -> {
@@ -12298,7 +12298,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .build();
           });
      //------------------------------------------------------------peach-----------------------------------------------------------------------
-          foodBed peachBed = foodblockcompatregistry.PEACH_BED.get();
+          compatBed peachBed = foodblockcompatregistry.PEACH_BED.get();
 
           getVariantBuilder(peachBed)
           .forAllStates(state -> {
@@ -12319,7 +12319,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .build();
           });
      //------------------------------------------------------------coconut-----------------------------------------------------------------------
-          foodBed coconutBed = foodblockcompatregistry.COCONUT_BED.get();
+          compatBed coconutBed = foodblockcompatregistry.COCONUT_BED.get();
 
           getVariantBuilder(coconutBed)
           .forAllStates(state -> {
@@ -12340,7 +12340,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .build();
           });
      //------------------------------------------------------------orange-----------------------------------------------------------------------
-          foodBed orangeBed = foodblockcompatregistry.ORANGE_BED.get();
+          compatBed orangeBed = foodblockcompatregistry.ORANGE_BED.get();
 
           getVariantBuilder(orangeBed)
           .forAllStates(state -> {
@@ -12361,7 +12361,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .build();
           });
      //------------------------------------------------------------tangerine-----------------------------------------------------------------------
-          foodBed tangerineBed = foodblockcompatregistry.TANGERINE_BED.get();
+          compatBed tangerineBed = foodblockcompatregistry.TANGERINE_BED.get();
 
           getVariantBuilder(tangerineBed)
           .forAllStates(state -> {
@@ -12382,7 +12382,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .build();
           });
      //------------------------------------------------------------kumquat-----------------------------------------------------------------------
-          foodBed kumquatBed = foodblockcompatregistry.KUMQUAT_BED.get();
+          compatBed kumquatBed = foodblockcompatregistry.KUMQUAT_BED.get();
 
           getVariantBuilder(kumquatBed)
           .forAllStates(state -> {
@@ -12403,7 +12403,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .build();
           });
      //------------------------------------------------------------persimmon-----------------------------------------------------------------------
-          foodBed persimmonBed = foodblockcompatregistry.PERSIMMON_BED.get();
+          compatBed persimmonBed = foodblockcompatregistry.PERSIMMON_BED.get();
 
           getVariantBuilder(persimmonBed)
           .forAllStates(state -> {
@@ -12424,7 +12424,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .build();
           });
      //------------------------------------------------------------satsuma-----------------------------------------------------------------------
-          foodBed satsumaBed = foodblockcompatregistry.SATSUMA_BED.get();
+          compatBed satsumaBed = foodblockcompatregistry.SATSUMA_BED.get();
 
           getVariantBuilder(satsumaBed)
           .forAllStates(state -> {
@@ -12445,7 +12445,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .build();
           });
      //------------------------------------------------------------mandarin-----------------------------------------------------------------------
-          foodBed mandarinBed = foodblockcompatregistry.MANDARIN_BED.get();
+          compatBed mandarinBed = foodblockcompatregistry.MANDARIN_BED.get();
 
           getVariantBuilder(mandarinBed)
           .forAllStates(state -> {
@@ -12466,7 +12466,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .build();
           });
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
-          foodBed lemonBed = foodblockcompatregistry.LEMON_BED.get();
+          compatBed lemonBed = foodblockcompatregistry.LEMON_BED.get();
 
           getVariantBuilder(lemonBed)
           .forAllStates(state -> {
@@ -12487,7 +12487,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .build();
           });
      //------------------------------------------------------------citron-----------------------------------------------------------------------
-          foodBed citronBed = foodblockcompatregistry.CITRON_BED.get();
+          compatBed citronBed = foodblockcompatregistry.CITRON_BED.get();
 
           getVariantBuilder(citronBed)
           .forAllStates(state -> {
@@ -12508,7 +12508,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .build();
           });
      //------------------------------------------------------------buddhashand-----------------------------------------------------------------------
-          foodBed buddhashandBed = foodblockcompatregistry.BUDDHASHAND_BED.get();
+          compatBed buddhashandBed = foodblockcompatregistry.BUDDHASHAND_BED.get();
 
           getVariantBuilder(buddhashandBed)
           .forAllStates(state -> {
@@ -12529,7 +12529,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .build();
           });
      //------------------------------------------------------------lime-----------------------------------------------------------------------
-          foodBed limeBed = foodblockcompatregistry.LIME_BED.get();
+          compatBed limeBed = foodblockcompatregistry.LIME_BED.get();
 
           getVariantBuilder(limeBed)
           .forAllStates(state -> {
@@ -12550,7 +12550,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .build();
           });
      //------------------------------------------------------------keylime-----------------------------------------------------------------------
-          foodBed keylimeBed = foodblockcompatregistry.KEYLIME_BED.get();
+          compatBed keylimeBed = foodblockcompatregistry.KEYLIME_BED.get();
 
           getVariantBuilder(keylimeBed)
           .forAllStates(state -> {
@@ -12571,7 +12571,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .build();
           });
      //------------------------------------------------------------fingerlime-----------------------------------------------------------------------
-          foodBed fingerlimeBed = foodblockcompatregistry.FINGERLIME_BED.get();
+          compatBed fingerlimeBed = foodblockcompatregistry.FINGERLIME_BED.get();
 
           getVariantBuilder(fingerlimeBed)
           .forAllStates(state -> {
@@ -12592,7 +12592,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .build();
           });
      //------------------------------------------------------------grapefruit-----------------------------------------------------------------------
-          foodBed grapefruitBed = foodblockcompatregistry.GRAPEFRUIT_BED.get();
+          compatBed grapefruitBed = foodblockcompatregistry.GRAPEFRUIT_BED.get();
 
           getVariantBuilder(grapefruitBed)
           .forAllStates(state -> {
@@ -12613,7 +12613,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .build();
           });
      //------------------------------------------------------------pomelo-----------------------------------------------------------------------
-          foodBed pomeloBed = foodblockcompatregistry.POMELO_BED.get();
+          compatBed pomeloBed = foodblockcompatregistry.POMELO_BED.get();
 
           getVariantBuilder(pomeloBed)
           .forAllStates(state -> {
@@ -12634,7 +12634,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .build();
           });
      //------------------------------------------------------------corn-----------------------------------------------------------------------
-          foodBed cornBed = foodblockcompatregistry.CORN_BED.get();
+          compatBed cornBed = foodblockcompatregistry.CORN_BED.get();
 
           getVariantBuilder(cornBed)
           .forAllStates(state -> {
@@ -12655,7 +12655,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .build();
           });
      //------------------------------------------------------------onion-----------------------------------------------------------------------
-          foodBed onionBed = foodblockcompatregistry.ONION_BED.get();
+          compatBed onionBed = foodblockcompatregistry.ONION_BED.get();
 
           getVariantBuilder(onionBed)
           .forAllStates(state -> {
@@ -12676,7 +12676,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .build();
           });
      //------------------------------------------------------------tomato-----------------------------------------------------------------------
-          foodBed tomatoBed = foodblockcompatregistry.TOMATO_BED.get();
+          compatBed tomatoBed = foodblockcompatregistry.TOMATO_BED.get();
 
           getVariantBuilder(tomatoBed)
           .forAllStates(state -> {
@@ -12697,7 +12697,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .build();
           });
      //------------------------------------------------------------pecan-----------------------------------------------------------------------
-          foodBed pecanBed = foodblockcompatregistry.PECAN_BED.get();
+          compatBed pecanBed = foodblockcompatregistry.PECAN_BED.get();
 
           getVariantBuilder(pecanBed)
           .forAllStates(state -> {
@@ -12718,7 +12718,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .build();
           });
      //------------------------------------------------------------almond-----------------------------------------------------------------------
-          foodBed almondBed = foodblockcompatregistry.ALMOND_BED.get();
+          compatBed almondBed = foodblockcompatregistry.ALMOND_BED.get();
 
           getVariantBuilder(almondBed)
           .forAllStates(state -> {

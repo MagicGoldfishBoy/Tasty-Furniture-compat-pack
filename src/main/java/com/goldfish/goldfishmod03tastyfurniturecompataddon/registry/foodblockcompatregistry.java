@@ -1,7 +1,7 @@
 package com.goldfish.goldfishmod03tastyfurniturecompataddon.registry;
 
 import com.goldfish.goldfishmod02tastyfurniture.block.foodBarrel;
-   import com.goldfish.goldfishmod02tastyfurniture.block.foodBed;
+   import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.compatBed;
    import com.goldfish.goldfishmod02tastyfurniture.block.foodChairBlock;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodlamp;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodpathtypeminislab;
@@ -114,7 +114,8 @@ import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.blackche
    import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.citronSignEntity;
    import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.coconutFurnaceEntity;
    import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.coconutSignEntity;
-   import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.cornFurnaceEntity;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.compatBedEntity;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.cornFurnaceEntity;
    import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.cornSignEntity;
    import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.elderberryFurnaceEntity;
    import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.elderberrySignEntity;
@@ -7347,203 +7348,203 @@ public class foodblockcompatregistry {
    static SoundType meat_bed_sound = SoundType.MUD;
    static SoundType crystal_bed_sound = SoundType.BASALT;
  //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBed> ELDERBERRY_BED = FOODBLOCK.register("elderberry_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatBed> ELDERBERRY_BED = FOODBLOCK.register("elderberry_bed", () -> new compatBed(BlockBehaviour.Properties.of()
      .sound(plant_bed_sound)
      .destroyTime(bed_destroy_time)
      .explosionResistance(bed_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Juniper---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBed> JUNIPER_BED = FOODBLOCK.register("juniper_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatBed> JUNIPER_BED = FOODBLOCK.register("juniper_bed", () -> new compatBed(BlockBehaviour.Properties.of()
      .sound(plant_bed_sound)
      .destroyTime(bed_destroy_time)
      .explosionResistance(bed_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Blackberry---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBed> BLACKBERRY_BED = FOODBLOCK.register("blackberry_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatBed> BLACKBERRY_BED = FOODBLOCK.register("blackberry_bed", () -> new compatBed(BlockBehaviour.Properties.of()
      .sound(plant_bed_sound)
      .destroyTime(bed_destroy_time)
      .explosionResistance(bed_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Raspberry---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBed> RASPBERRY_BED = FOODBLOCK.register("raspberry_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatBed> RASPBERRY_BED = FOODBLOCK.register("raspberry_bed", () -> new compatBed(BlockBehaviour.Properties.of()
      .sound(plant_bed_sound)
      .destroyTime(bed_destroy_time)
      .explosionResistance(bed_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Strawberry---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBed> STRAWBERRY_BED = FOODBLOCK.register("strawberry_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatBed> STRAWBERRY_BED = FOODBLOCK.register("strawberry_bed", () -> new compatBed(BlockBehaviour.Properties.of()
      .sound(plant_bed_sound)
      .destroyTime(bed_destroy_time)
      .explosionResistance(bed_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Sugarapple---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBed> SUGARAPPLE_BED = FOODBLOCK.register("sugarapple_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatBed> SUGARAPPLE_BED = FOODBLOCK.register("sugarapple_bed", () -> new compatBed(BlockBehaviour.Properties.of()
      .sound(plant_bed_sound)
      .destroyTime(bed_destroy_time)
      .explosionResistance(bed_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBed> CHERRY_BED = FOODBLOCK.register("cherry_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatBed> CHERRY_BED = FOODBLOCK.register("cherry_bed", () -> new compatBed(BlockBehaviour.Properties.of()
      .sound(plant_bed_sound)
      .destroyTime(bed_destroy_time)
      .explosionResistance(bed_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Blackcherry---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBed> BLACKCHERRY_BED = FOODBLOCK.register("blackcherry_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatBed> BLACKCHERRY_BED = FOODBLOCK.register("blackcherry_bed", () -> new compatBed(BlockBehaviour.Properties.of()
      .sound(plant_bed_sound)
      .destroyTime(bed_destroy_time)
      .explosionResistance(bed_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Peach---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBed> PEACH_BED = FOODBLOCK.register("peach_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatBed> PEACH_BED = FOODBLOCK.register("peach_bed", () -> new compatBed(BlockBehaviour.Properties.of()
      .sound(plant_bed_sound)
      .destroyTime(bed_destroy_time)
      .explosionResistance(bed_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBed> COCONUT_BED = FOODBLOCK.register("coconut_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatBed> COCONUT_BED = FOODBLOCK.register("coconut_bed", () -> new compatBed(BlockBehaviour.Properties.of()
      .sound(plant_bed_sound)
      .destroyTime(bed_destroy_time)
      .explosionResistance(bed_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Orange---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBed> ORANGE_BED = FOODBLOCK.register("orange_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatBed> ORANGE_BED = FOODBLOCK.register("orange_bed", () -> new compatBed(BlockBehaviour.Properties.of()
      .sound(plant_bed_sound)
      .destroyTime(bed_destroy_time)
      .explosionResistance(bed_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Tangerine---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBed> TANGERINE_BED = FOODBLOCK.register("tangerine_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatBed> TANGERINE_BED = FOODBLOCK.register("tangerine_bed", () -> new compatBed(BlockBehaviour.Properties.of()
      .sound(plant_bed_sound)
      .destroyTime(bed_destroy_time)
      .explosionResistance(bed_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Kumquat---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBed> KUMQUAT_BED = FOODBLOCK.register("kumquat_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatBed> KUMQUAT_BED = FOODBLOCK.register("kumquat_bed", () -> new compatBed(BlockBehaviour.Properties.of()
      .sound(plant_bed_sound)
      .destroyTime(bed_destroy_time)
      .explosionResistance(bed_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Persimmon---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBed> PERSIMMON_BED = FOODBLOCK.register("persimmon_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatBed> PERSIMMON_BED = FOODBLOCK.register("persimmon_bed", () -> new compatBed(BlockBehaviour.Properties.of()
      .sound(plant_bed_sound)
      .destroyTime(bed_destroy_time)
      .explosionResistance(bed_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Satsuma---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBed> SATSUMA_BED = FOODBLOCK.register("satsuma_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatBed> SATSUMA_BED = FOODBLOCK.register("satsuma_bed", () -> new compatBed(BlockBehaviour.Properties.of()
      .sound(plant_bed_sound)
      .destroyTime(bed_destroy_time)
      .explosionResistance(bed_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBed> MANDARIN_BED = FOODBLOCK.register("mandarin_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatBed> MANDARIN_BED = FOODBLOCK.register("mandarin_bed", () -> new compatBed(BlockBehaviour.Properties.of()
      .sound(plant_bed_sound)
      .destroyTime(bed_destroy_time)
      .explosionResistance(bed_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBed> LEMON_BED = FOODBLOCK.register("lemon_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatBed> LEMON_BED = FOODBLOCK.register("lemon_bed", () -> new compatBed(BlockBehaviour.Properties.of()
      .sound(plant_bed_sound)
      .destroyTime(bed_destroy_time)
      .explosionResistance(bed_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Citron---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBed> CITRON_BED = FOODBLOCK.register("citron_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatBed> CITRON_BED = FOODBLOCK.register("citron_bed", () -> new compatBed(BlockBehaviour.Properties.of()
      .sound(plant_bed_sound)
      .destroyTime(bed_destroy_time)
      .explosionResistance(bed_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Buddhashand---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBed> BUDDHASHAND_BED = FOODBLOCK.register("buddhashand_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatBed> BUDDHASHAND_BED = FOODBLOCK.register("buddhashand_bed", () -> new compatBed(BlockBehaviour.Properties.of()
      .sound(plant_bed_sound)
      .destroyTime(bed_destroy_time)
      .explosionResistance(bed_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Lime---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBed> LIME_BED = FOODBLOCK.register("lime_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatBed> LIME_BED = FOODBLOCK.register("lime_bed", () -> new compatBed(BlockBehaviour.Properties.of()
      .sound(plant_bed_sound)
      .destroyTime(bed_destroy_time)
      .explosionResistance(bed_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Keylime---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBed> KEYLIME_BED = FOODBLOCK.register("keylime_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatBed> KEYLIME_BED = FOODBLOCK.register("keylime_bed", () -> new compatBed(BlockBehaviour.Properties.of()
      .sound(plant_bed_sound)
      .destroyTime(bed_destroy_time)
      .explosionResistance(bed_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Fingerlime---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBed> FINGERLIME_BED = FOODBLOCK.register("fingerlime_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatBed> FINGERLIME_BED = FOODBLOCK.register("fingerlime_bed", () -> new compatBed(BlockBehaviour.Properties.of()
      .sound(plant_bed_sound)
      .destroyTime(bed_destroy_time)
      .explosionResistance(bed_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBed> GRAPEFRUIT_BED = FOODBLOCK.register("grapefruit_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatBed> GRAPEFRUIT_BED = FOODBLOCK.register("grapefruit_bed", () -> new compatBed(BlockBehaviour.Properties.of()
      .sound(plant_bed_sound)
      .destroyTime(bed_destroy_time)
      .explosionResistance(bed_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Pomelo---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBed> POMELO_BED = FOODBLOCK.register("pomelo_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatBed> POMELO_BED = FOODBLOCK.register("pomelo_bed", () -> new compatBed(BlockBehaviour.Properties.of()
      .sound(plant_bed_sound)
      .destroyTime(bed_destroy_time)
      .explosionResistance(bed_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBed> CORN_BED = FOODBLOCK.register("corn_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatBed> CORN_BED = FOODBLOCK.register("corn_bed", () -> new compatBed(BlockBehaviour.Properties.of()
      .sound(plant_bed_sound)
      .destroyTime(bed_destroy_time)
      .explosionResistance(bed_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBed> ONION_BED = FOODBLOCK.register("onion_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatBed> ONION_BED = FOODBLOCK.register("onion_bed", () -> new compatBed(BlockBehaviour.Properties.of()
      .sound(plant_bed_sound)
      .destroyTime(bed_destroy_time)
      .explosionResistance(bed_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Tomato---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBed> TOMATO_BED = FOODBLOCK.register("tomato_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatBed> TOMATO_BED = FOODBLOCK.register("tomato_bed", () -> new compatBed(BlockBehaviour.Properties.of()
      .sound(plant_bed_sound)
      .destroyTime(bed_destroy_time)
      .explosionResistance(bed_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBed> PECAN_BED = FOODBLOCK.register("pecan_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatBed> PECAN_BED = FOODBLOCK.register("pecan_bed", () -> new compatBed(BlockBehaviour.Properties.of()
      .sound(plant_bed_sound)
      .destroyTime(bed_destroy_time)
      .explosionResistance(bed_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Almond---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBed> ALMOND_BED = FOODBLOCK.register("almond_bed", () -> new foodBed(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatBed> ALMOND_BED = FOODBLOCK.register("almond_bed", () -> new compatBed(BlockBehaviour.Properties.of()
      .sound(plant_bed_sound)
      .destroyTime(bed_destroy_time)
      .explosionResistance(bed_explosion_resistance)
@@ -7551,8 +7552,8 @@ public class foodblockcompatregistry {
      ));
 
  //.........entity
-     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<bedEntity>> FOOD_BED_ENTITY = FOODBLOCKENTITY.register("food_bed_entity",
-     () -> BlockEntityType.Builder.of(bedEntity::new,ELDERBERRY_BED.get(),JUNIPER_BED.get(),BLACKBERRY_BED.get(),RASPBERRY_BED.get(),STRAWBERRY_BED.get(),SUGARAPPLE_BED.get(),CHERRY_BED.get(),
+     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<compatBedEntity>> FOOD_BED_ENTITY = FOODBLOCKENTITY.register("food_bed_entity",
+     () -> BlockEntityType.Builder.of(compatBedEntity::new,ELDERBERRY_BED.get(),JUNIPER_BED.get(),BLACKBERRY_BED.get(),RASPBERRY_BED.get(),STRAWBERRY_BED.get(),SUGARAPPLE_BED.get(),CHERRY_BED.get(),
      COCONUT_BED.get(),
      ORANGE_BED.get(),TANGERINE_BED.get(),KUMQUAT_BED.get(), PERSIMMON_BED.get(),LEMON_BED.get(),CITRON_BED.get(),LIME_BED.get(),KEYLIME_BED.get(),FINGERLIME_BED.get(),GRAPEFRUIT_BED.get(),
      POMELO_BED.get(),CORN_BED.get(),ONION_BED.get(),TOMATO_BED.get(),PECAN_BED.get(),SATSUMA_BED.get(),MANDARIN_BED.get(),ALMOND_BED.get()).build(null));
