@@ -30,11 +30,11 @@ import net.neoforged.neoforge.client.model.generators.BlockModelBuilder;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.compatFoodBarrel;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.compatMediumFoodCabinet;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.compatSmallFoodCabinet;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.compatBed;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodChairBlock;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodpathtypeminislab;
-import com.goldfish.goldfishmod02tastyfurniture.block.mediumFoodCabinet;
-import com.goldfish.goldfishmod02tastyfurniture.block.smallFoodCabinet;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.foodblockcompatregistry;
 
 import net.minecraft.core.Direction;
@@ -12746,7 +12746,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
     public void buildCabinetModels() {
      //------------------------------------------------------------elderberry-----------------------------------------------------------------------
          //small
-         smallFoodCabinet elderberryCabinet = foodblockcompatregistry.SMALL_ELDERBERRY_CABINET.get();
+         compatSmallFoodCabinet elderberryCabinet = foodblockcompatregistry.SMALL_ELDERBERRY_CABINET.get();
 
          getVariantBuilder(elderberryCabinet)
          .forAllStates(state -> {
@@ -12768,7 +12768,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                  .build();
          });
         //medium
-         mediumFoodCabinet elderberryMediumCabinet = foodblockcompatregistry.MEDIUM_ELDERBERRY_CABINET.get();
+         compatMediumFoodCabinet elderberryMediumCabinet = foodblockcompatregistry.MEDIUM_ELDERBERRY_CABINET.get();
 
          getVariantBuilder(elderberryMediumCabinet)
          .forAllStates(state -> {
@@ -12791,7 +12791,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
          });
      //------------------------------------------------------------juniper-----------------------------------------------------------------------
         //small
-         smallFoodCabinet juniperCabinet = foodblockcompatregistry.SMALL_JUNIPER_CABINET.get();
+         compatSmallFoodCabinet juniperCabinet = foodblockcompatregistry.SMALL_JUNIPER_CABINET.get();
 
          getVariantBuilder(juniperCabinet)
          .forAllStates(state -> {
@@ -12813,7 +12813,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                  .build();
          });
         //medium
-         mediumFoodCabinet juniperMediumCabinet = foodblockcompatregistry.MEDIUM_JUNIPER_CABINET.get();
+         compatMediumFoodCabinet juniperMediumCabinet = foodblockcompatregistry.MEDIUM_JUNIPER_CABINET.get();
 
          getVariantBuilder(juniperMediumCabinet)
          .forAllStates(state -> {
@@ -12836,7 +12836,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
          });
      //------------------------------------------------------------blackberry-----------------------------------------------------------------------
         //small
-         smallFoodCabinet blackberryCabinet = foodblockcompatregistry.SMALL_BLACKBERRY_CABINET.get();
+         compatSmallFoodCabinet blackberryCabinet = foodblockcompatregistry.SMALL_BLACKBERRY_CABINET.get();
 
          getVariantBuilder(blackberryCabinet)
          .forAllStates(state -> {
@@ -12858,7 +12858,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                  .build();
          });
         //medium
-         mediumFoodCabinet blackberryMediumCabinet = foodblockcompatregistry.MEDIUM_BLACKBERRY_CABINET.get();
+         compatMediumFoodCabinet blackberryMediumCabinet = foodblockcompatregistry.MEDIUM_BLACKBERRY_CABINET.get();
 
          getVariantBuilder(blackberryMediumCabinet)
          .forAllStates(state -> {
@@ -12881,7 +12881,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
          });
      //------------------------------------------------------------raspberry-----------------------------------------------------------------------
         //small
-         smallFoodCabinet raspberryCabinet = foodblockcompatregistry.SMALL_RASPBERRY_CABINET.get();
+         compatSmallFoodCabinet raspberryCabinet = foodblockcompatregistry.SMALL_RASPBERRY_CABINET.get();
 
          getVariantBuilder(raspberryCabinet)
          .forAllStates(state -> {
@@ -12903,7 +12903,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                  .build();
          });
         //medium
-         mediumFoodCabinet raspberryMediumCabinet = foodblockcompatregistry.MEDIUM_RASPBERRY_CABINET.get();
+         compatMediumFoodCabinet raspberryMediumCabinet = foodblockcompatregistry.MEDIUM_RASPBERRY_CABINET.get();
 
          getVariantBuilder(raspberryMediumCabinet)
          .forAllStates(state -> {
@@ -12926,7 +12926,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
          });
      //------------------------------------------------------------strawberry-----------------------------------------------------------------------
         //small
-         smallFoodCabinet strawberryCabinet = foodblockcompatregistry.SMALL_STRAWBERRY_CABINET.get();
+         compatSmallFoodCabinet strawberryCabinet = foodblockcompatregistry.SMALL_STRAWBERRY_CABINET.get();
 
          getVariantBuilder(strawberryCabinet)
          .forAllStates(state -> {
@@ -12948,7 +12948,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                  .build();
          });
         //medium
-         mediumFoodCabinet strawberryMediumCabinet = foodblockcompatregistry.MEDIUM_STRAWBERRY_CABINET.get();
+         compatMediumFoodCabinet strawberryMediumCabinet = foodblockcompatregistry.MEDIUM_STRAWBERRY_CABINET.get();
 
          getVariantBuilder(strawberryMediumCabinet)
          .forAllStates(state -> {
@@ -12971,7 +12971,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
          });
      //------------------------------------------------------------sugarapple-----------------------------------------------------------------------
         //small
-         smallFoodCabinet sugarappleCabinet = foodblockcompatregistry.SMALL_SUGARAPPLE_CABINET.get();
+         compatSmallFoodCabinet sugarappleCabinet = foodblockcompatregistry.SMALL_SUGARAPPLE_CABINET.get();
 
          getVariantBuilder(sugarappleCabinet)
          .forAllStates(state -> {
@@ -12993,7 +12993,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                  .build();
          });
         //medium
-         mediumFoodCabinet sugarappleMediumCabinet = foodblockcompatregistry.MEDIUM_SUGARAPPLE_CABINET.get();
+         compatMediumFoodCabinet sugarappleMediumCabinet = foodblockcompatregistry.MEDIUM_SUGARAPPLE_CABINET.get();
 
          getVariantBuilder(sugarappleMediumCabinet)
          .forAllStates(state -> {
@@ -13016,7 +13016,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
          });
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
         //small
-         smallFoodCabinet cherryCabinet = foodblockcompatregistry.SMALL_CHERRY_CABINET.get();
+         compatSmallFoodCabinet cherryCabinet = foodblockcompatregistry.SMALL_CHERRY_CABINET.get();
 
          getVariantBuilder(cherryCabinet)
          .forAllStates(state -> {
@@ -13038,7 +13038,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                  .build();
          });
         //medium
-         mediumFoodCabinet cherryMediumCabinet = foodblockcompatregistry.MEDIUM_CHERRY_CABINET.get();
+         compatMediumFoodCabinet cherryMediumCabinet = foodblockcompatregistry.MEDIUM_CHERRY_CABINET.get();
 
          getVariantBuilder(cherryMediumCabinet)
          .forAllStates(state -> {
@@ -13061,7 +13061,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
          });
      //------------------------------------------------------------blackcherry-----------------------------------------------------------------------
         //small
-         smallFoodCabinet blackcherryCabinet = foodblockcompatregistry.SMALL_BLACKCHERRY_CABINET.get();
+         compatSmallFoodCabinet blackcherryCabinet = foodblockcompatregistry.SMALL_BLACKCHERRY_CABINET.get();
 
          getVariantBuilder(blackcherryCabinet)
          .forAllStates(state -> {
@@ -13083,7 +13083,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                  .build();
          });
         //medium
-         mediumFoodCabinet blackcherryMediumCabinet = foodblockcompatregistry.MEDIUM_BLACKCHERRY_CABINET.get();
+         compatMediumFoodCabinet blackcherryMediumCabinet = foodblockcompatregistry.MEDIUM_BLACKCHERRY_CABINET.get();
 
          getVariantBuilder(blackcherryMediumCabinet)
          .forAllStates(state -> {
@@ -13106,7 +13106,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
          });
      //------------------------------------------------------------peach-----------------------------------------------------------------------
         //small
-         smallFoodCabinet peachCabinet = foodblockcompatregistry.SMALL_PEACH_CABINET.get();
+         compatSmallFoodCabinet peachCabinet = foodblockcompatregistry.SMALL_PEACH_CABINET.get();
 
          getVariantBuilder(peachCabinet)
          .forAllStates(state -> {
@@ -13128,7 +13128,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                  .build();
          });
         //medium
-         mediumFoodCabinet peachMediumCabinet = foodblockcompatregistry.MEDIUM_PEACH_CABINET.get();
+         compatMediumFoodCabinet peachMediumCabinet = foodblockcompatregistry.MEDIUM_PEACH_CABINET.get();
 
          getVariantBuilder(peachMediumCabinet)
          .forAllStates(state -> {
@@ -13151,7 +13151,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
          });
      //------------------------------------------------------------coconut-----------------------------------------------------------------------
         //small
-         smallFoodCabinet coconutCabinet = foodblockcompatregistry.SMALL_COCONUT_CABINET.get();
+         compatSmallFoodCabinet coconutCabinet = foodblockcompatregistry.SMALL_COCONUT_CABINET.get();
 
          getVariantBuilder(coconutCabinet)
          .forAllStates(state -> {
@@ -13173,7 +13173,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                  .build();
          });
         //medium
-         mediumFoodCabinet coconutMediumCabinet = foodblockcompatregistry.MEDIUM_COCONUT_CABINET.get();
+         compatMediumFoodCabinet coconutMediumCabinet = foodblockcompatregistry.MEDIUM_COCONUT_CABINET.get();
 
          getVariantBuilder(coconutMediumCabinet)
          .forAllStates(state -> {
@@ -13196,7 +13196,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
          });
      //------------------------------------------------------------orange-----------------------------------------------------------------------
         //small
-         smallFoodCabinet orangeCabinet = foodblockcompatregistry.SMALL_ORANGE_CABINET.get();
+         compatSmallFoodCabinet orangeCabinet = foodblockcompatregistry.SMALL_ORANGE_CABINET.get();
 
          getVariantBuilder(orangeCabinet)
          .forAllStates(state -> {
@@ -13218,7 +13218,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                  .build();
          });
         //medium
-         mediumFoodCabinet orangeMediumCabinet = foodblockcompatregistry.MEDIUM_ORANGE_CABINET.get();
+         compatMediumFoodCabinet orangeMediumCabinet = foodblockcompatregistry.MEDIUM_ORANGE_CABINET.get();
 
          getVariantBuilder(orangeMediumCabinet)
          .forAllStates(state -> {
@@ -13241,7 +13241,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
          });
      //------------------------------------------------------------tangerine-----------------------------------------------------------------------
         //small
-         smallFoodCabinet tangerineCabinet = foodblockcompatregistry.SMALL_TANGERINE_CABINET.get();
+         compatSmallFoodCabinet tangerineCabinet = foodblockcompatregistry.SMALL_TANGERINE_CABINET.get();
 
          getVariantBuilder(tangerineCabinet)
          .forAllStates(state -> {
@@ -13263,7 +13263,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                  .build();
          });
         //medium
-         mediumFoodCabinet tangerineMediumCabinet = foodblockcompatregistry.MEDIUM_TANGERINE_CABINET.get();
+         compatMediumFoodCabinet tangerineMediumCabinet = foodblockcompatregistry.MEDIUM_TANGERINE_CABINET.get();
 
          getVariantBuilder(tangerineMediumCabinet)
          .forAllStates(state -> {
@@ -13286,7 +13286,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
          });
      //------------------------------------------------------------kumquat-----------------------------------------------------------------------
         //small
-         smallFoodCabinet kumquatCabinet = foodblockcompatregistry.SMALL_KUMQUAT_CABINET.get();
+         compatSmallFoodCabinet kumquatCabinet = foodblockcompatregistry.SMALL_KUMQUAT_CABINET.get();
 
          getVariantBuilder(kumquatCabinet)
          .forAllStates(state -> {
@@ -13308,7 +13308,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                  .build();
          });
         //medium
-         mediumFoodCabinet kumquatMediumCabinet = foodblockcompatregistry.MEDIUM_KUMQUAT_CABINET.get();
+         compatMediumFoodCabinet kumquatMediumCabinet = foodblockcompatregistry.MEDIUM_KUMQUAT_CABINET.get();
 
          getVariantBuilder(kumquatMediumCabinet)
          .forAllStates(state -> {
@@ -13331,7 +13331,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
          });
      //------------------------------------------------------------persimmon-----------------------------------------------------------------------
         //small
-         smallFoodCabinet persimmonCabinet = foodblockcompatregistry.SMALL_PERSIMMON_CABINET.get();
+         compatSmallFoodCabinet persimmonCabinet = foodblockcompatregistry.SMALL_PERSIMMON_CABINET.get();
 
          getVariantBuilder(persimmonCabinet)
          .forAllStates(state -> {
@@ -13353,7 +13353,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                  .build();
          });
         //medium
-         mediumFoodCabinet persimmonMediumCabinet = foodblockcompatregistry.MEDIUM_PERSIMMON_CABINET.get();
+         compatMediumFoodCabinet persimmonMediumCabinet = foodblockcompatregistry.MEDIUM_PERSIMMON_CABINET.get();
 
          getVariantBuilder(persimmonMediumCabinet)
          .forAllStates(state -> {
@@ -13376,7 +13376,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
          });
      //------------------------------------------------------------satsuma-----------------------------------------------------------------------
         //small
-         smallFoodCabinet satsumaCabinet = foodblockcompatregistry.SMALL_SATSUMA_CABINET.get();
+         compatSmallFoodCabinet satsumaCabinet = foodblockcompatregistry.SMALL_SATSUMA_CABINET.get();
 
          getVariantBuilder(satsumaCabinet)
          .forAllStates(state -> {
@@ -13398,7 +13398,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                  .build();
          });
         //medium
-         mediumFoodCabinet satsumaMediumCabinet = foodblockcompatregistry.MEDIUM_SATSUMA_CABINET.get();
+         compatMediumFoodCabinet satsumaMediumCabinet = foodblockcompatregistry.MEDIUM_SATSUMA_CABINET.get();
 
          getVariantBuilder(satsumaMediumCabinet)
          .forAllStates(state -> {
@@ -13421,7 +13421,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
          });
      //------------------------------------------------------------mandarin-----------------------------------------------------------------------
         //small
-         smallFoodCabinet mandarinCabinet = foodblockcompatregistry.SMALL_MANDARIN_CABINET.get();
+         compatSmallFoodCabinet mandarinCabinet = foodblockcompatregistry.SMALL_MANDARIN_CABINET.get();
 
          getVariantBuilder(mandarinCabinet)
          .forAllStates(state -> {
@@ -13443,7 +13443,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                  .build();
          });
         //medium
-         mediumFoodCabinet mandarinMediumCabinet = foodblockcompatregistry.MEDIUM_MANDARIN_CABINET.get();
+         compatMediumFoodCabinet mandarinMediumCabinet = foodblockcompatregistry.MEDIUM_MANDARIN_CABINET.get();
 
          getVariantBuilder(mandarinMediumCabinet)
          .forAllStates(state -> {
@@ -13466,7 +13466,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
          });
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
         //small
-         smallFoodCabinet lemonCabinet = foodblockcompatregistry.SMALL_LEMON_CABINET.get();
+         compatSmallFoodCabinet lemonCabinet = foodblockcompatregistry.SMALL_LEMON_CABINET.get();
 
          getVariantBuilder(lemonCabinet)
          .forAllStates(state -> {
@@ -13488,7 +13488,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                  .build();
          });
         //medium
-         mediumFoodCabinet lemonMediumCabinet = foodblockcompatregistry.MEDIUM_LEMON_CABINET.get();
+         compatMediumFoodCabinet lemonMediumCabinet = foodblockcompatregistry.MEDIUM_LEMON_CABINET.get();
 
          getVariantBuilder(lemonMediumCabinet)
          .forAllStates(state -> {
@@ -13511,7 +13511,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
          });
      //------------------------------------------------------------citron-----------------------------------------------------------------------
         //small
-         smallFoodCabinet citronCabinet = foodblockcompatregistry.SMALL_CITRON_CABINET.get();
+         compatSmallFoodCabinet citronCabinet = foodblockcompatregistry.SMALL_CITRON_CABINET.get();
 
          getVariantBuilder(citronCabinet)
          .forAllStates(state -> {
@@ -13533,7 +13533,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                  .build();
          });
         //medium
-         mediumFoodCabinet citronMediumCabinet = foodblockcompatregistry.MEDIUM_CITRON_CABINET.get();
+         compatMediumFoodCabinet citronMediumCabinet = foodblockcompatregistry.MEDIUM_CITRON_CABINET.get();
 
          getVariantBuilder(citronMediumCabinet)
          .forAllStates(state -> {
@@ -13556,7 +13556,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
          });
      //------------------------------------------------------------buddhashand-----------------------------------------------------------------------
         //small
-         smallFoodCabinet buddhashandCabinet = foodblockcompatregistry.SMALL_BUDDHASHAND_CABINET.get();
+         compatSmallFoodCabinet buddhashandCabinet = foodblockcompatregistry.SMALL_BUDDHASHAND_CABINET.get();
 
          getVariantBuilder(buddhashandCabinet)
          .forAllStates(state -> {
@@ -13578,7 +13578,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                  .build();
          });
         //medium
-         mediumFoodCabinet buddhashandMediumCabinet = foodblockcompatregistry.MEDIUM_BUDDHASHAND_CABINET.get();
+         compatMediumFoodCabinet buddhashandMediumCabinet = foodblockcompatregistry.MEDIUM_BUDDHASHAND_CABINET.get();
 
          getVariantBuilder(buddhashandMediumCabinet)
          .forAllStates(state -> {
@@ -13601,7 +13601,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
          });
      //------------------------------------------------------------lime-----------------------------------------------------------------------
         //small
-         smallFoodCabinet limeCabinet = foodblockcompatregistry.SMALL_LIME_CABINET.get();
+         compatSmallFoodCabinet limeCabinet = foodblockcompatregistry.SMALL_LIME_CABINET.get();
 
          getVariantBuilder(limeCabinet)
          .forAllStates(state -> {
@@ -13623,7 +13623,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                  .build();
          });
         //medium
-         mediumFoodCabinet limeMediumCabinet = foodblockcompatregistry.MEDIUM_LIME_CABINET.get();
+         compatMediumFoodCabinet limeMediumCabinet = foodblockcompatregistry.MEDIUM_LIME_CABINET.get();
 
          getVariantBuilder(limeMediumCabinet)
          .forAllStates(state -> {
@@ -13646,7 +13646,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
          });
      //------------------------------------------------------------keylime-----------------------------------------------------------------------
         //small
-         smallFoodCabinet keylimeCabinet = foodblockcompatregistry.SMALL_KEYLIME_CABINET.get();
+         compatSmallFoodCabinet keylimeCabinet = foodblockcompatregistry.SMALL_KEYLIME_CABINET.get();
 
          getVariantBuilder(keylimeCabinet)
          .forAllStates(state -> {
@@ -13668,7 +13668,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                  .build();
          });
         //medium
-         mediumFoodCabinet keylimeMediumCabinet = foodblockcompatregistry.MEDIUM_KEYLIME_CABINET.get();
+         compatMediumFoodCabinet keylimeMediumCabinet = foodblockcompatregistry.MEDIUM_KEYLIME_CABINET.get();
 
          getVariantBuilder(keylimeMediumCabinet)
          .forAllStates(state -> {
@@ -13691,7 +13691,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
          });
      //------------------------------------------------------------fingerlime-----------------------------------------------------------------------
         //small
-         smallFoodCabinet fingerlimeCabinet = foodblockcompatregistry.SMALL_FINGERLIME_CABINET.get();
+         compatSmallFoodCabinet fingerlimeCabinet = foodblockcompatregistry.SMALL_FINGERLIME_CABINET.get();
 
          getVariantBuilder(fingerlimeCabinet)
          .forAllStates(state -> {
@@ -13713,7 +13713,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                  .build();
          });
         //medium
-         mediumFoodCabinet fingerlimeMediumCabinet = foodblockcompatregistry.MEDIUM_FINGERLIME_CABINET.get();
+         compatMediumFoodCabinet fingerlimeMediumCabinet = foodblockcompatregistry.MEDIUM_FINGERLIME_CABINET.get();
 
          getVariantBuilder(fingerlimeMediumCabinet)
          .forAllStates(state -> {
@@ -13736,7 +13736,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
          });
      //------------------------------------------------------------grapefruit-----------------------------------------------------------------------
         //small
-         smallFoodCabinet grapefruitCabinet = foodblockcompatregistry.SMALL_GRAPEFRUIT_CABINET.get();
+         compatSmallFoodCabinet grapefruitCabinet = foodblockcompatregistry.SMALL_GRAPEFRUIT_CABINET.get();
 
          getVariantBuilder(grapefruitCabinet)
          .forAllStates(state -> {
@@ -13758,7 +13758,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                  .build();
          });
         //medium
-         mediumFoodCabinet grapefruitMediumCabinet = foodblockcompatregistry.MEDIUM_GRAPEFRUIT_CABINET.get();
+         compatMediumFoodCabinet grapefruitMediumCabinet = foodblockcompatregistry.MEDIUM_GRAPEFRUIT_CABINET.get();
 
          getVariantBuilder(grapefruitMediumCabinet)
          .forAllStates(state -> {
@@ -13781,7 +13781,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
          });
      //------------------------------------------------------------pomelo-----------------------------------------------------------------------
         //small
-         smallFoodCabinet pomeloCabinet = foodblockcompatregistry.SMALL_POMELO_CABINET.get();
+         compatSmallFoodCabinet pomeloCabinet = foodblockcompatregistry.SMALL_POMELO_CABINET.get();
 
          getVariantBuilder(pomeloCabinet)
          .forAllStates(state -> {
@@ -13803,7 +13803,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                  .build();
          });
         //medium
-         mediumFoodCabinet pomeloMediumCabinet = foodblockcompatregistry.MEDIUM_POMELO_CABINET.get();
+         compatMediumFoodCabinet pomeloMediumCabinet = foodblockcompatregistry.MEDIUM_POMELO_CABINET.get();
 
          getVariantBuilder(pomeloMediumCabinet)
          .forAllStates(state -> {
@@ -13826,7 +13826,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
          });
      //------------------------------------------------------------corn-----------------------------------------------------------------------
         //small
-         smallFoodCabinet cornCabinet = foodblockcompatregistry.SMALL_CORN_CABINET.get();
+         compatSmallFoodCabinet cornCabinet = foodblockcompatregistry.SMALL_CORN_CABINET.get();
 
          getVariantBuilder(cornCabinet)
          .forAllStates(state -> {
@@ -13848,7 +13848,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                  .build();
          });
         //medium
-         mediumFoodCabinet cornMediumCabinet = foodblockcompatregistry.MEDIUM_CORN_CABINET.get();
+         compatMediumFoodCabinet cornMediumCabinet = foodblockcompatregistry.MEDIUM_CORN_CABINET.get();
 
          getVariantBuilder(cornMediumCabinet)
          .forAllStates(state -> {
@@ -13871,7 +13871,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
          });
      //------------------------------------------------------------onion-----------------------------------------------------------------------
         //small
-         smallFoodCabinet onionCabinet = foodblockcompatregistry.SMALL_ONION_CABINET.get();
+         compatSmallFoodCabinet onionCabinet = foodblockcompatregistry.SMALL_ONION_CABINET.get();
 
          getVariantBuilder(onionCabinet)
          .forAllStates(state -> {
@@ -13893,7 +13893,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                  .build();
          });
         //medium
-         mediumFoodCabinet onionMediumCabinet = foodblockcompatregistry.MEDIUM_ONION_CABINET.get();
+         compatMediumFoodCabinet onionMediumCabinet = foodblockcompatregistry.MEDIUM_ONION_CABINET.get();
 
          getVariantBuilder(onionMediumCabinet)
          .forAllStates(state -> {
@@ -13916,7 +13916,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
          });
      //------------------------------------------------------------tomato-----------------------------------------------------------------------
         //small
-         smallFoodCabinet tomatoCabinet = foodblockcompatregistry.SMALL_TOMATO_CABINET.get();
+         compatSmallFoodCabinet tomatoCabinet = foodblockcompatregistry.SMALL_TOMATO_CABINET.get();
 
          getVariantBuilder(tomatoCabinet)
          .forAllStates(state -> {
@@ -13938,7 +13938,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                  .build();
          });
         //medium
-         mediumFoodCabinet tomatoMediumCabinet = foodblockcompatregistry.MEDIUM_TOMATO_CABINET.get();
+         compatMediumFoodCabinet tomatoMediumCabinet = foodblockcompatregistry.MEDIUM_TOMATO_CABINET.get();
 
          getVariantBuilder(tomatoMediumCabinet)
          .forAllStates(state -> {
@@ -13961,7 +13961,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
          });
      //------------------------------------------------------------pecan-----------------------------------------------------------------------
         //small
-         smallFoodCabinet pecanCabinet = foodblockcompatregistry.SMALL_PECAN_CABINET.get();
+         compatSmallFoodCabinet pecanCabinet = foodblockcompatregistry.SMALL_PECAN_CABINET.get();
 
          getVariantBuilder(pecanCabinet)
          .forAllStates(state -> {
@@ -13983,7 +13983,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                  .build();
          });
         //medium
-         mediumFoodCabinet pecanMediumCabinet = foodblockcompatregistry.MEDIUM_PECAN_CABINET.get();
+         compatMediumFoodCabinet pecanMediumCabinet = foodblockcompatregistry.MEDIUM_PECAN_CABINET.get();
 
          getVariantBuilder(pecanMediumCabinet)
          .forAllStates(state -> {
@@ -14006,7 +14006,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
          });
      //------------------------------------------------------------almond-----------------------------------------------------------------------
         //small
-         smallFoodCabinet almondCabinet = foodblockcompatregistry.SMALL_ALMOND_CABINET.get();
+         compatSmallFoodCabinet almondCabinet = foodblockcompatregistry.SMALL_ALMOND_CABINET.get();
 
          getVariantBuilder(almondCabinet)
          .forAllStates(state -> {
@@ -14028,7 +14028,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                  .build();
          });
         //medium
-         mediumFoodCabinet almondMediumCabinet = foodblockcompatregistry.MEDIUM_ALMOND_CABINET.get();
+         compatMediumFoodCabinet almondMediumCabinet = foodblockcompatregistry.MEDIUM_ALMOND_CABINET.get();
 
          getVariantBuilder(almondMediumCabinet)
          .forAllStates(state -> {

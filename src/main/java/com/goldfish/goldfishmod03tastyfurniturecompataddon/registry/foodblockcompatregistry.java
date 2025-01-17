@@ -1,18 +1,13 @@
 package com.goldfish.goldfishmod03tastyfurniturecompataddon.registry;
 
-import com.goldfish.goldfishmod02tastyfurniture.block.foodBarrel;
    import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.compatBed;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.compatFoodBarrel;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.compatMediumFoodCabinet;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.compatSmallFoodCabinet;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodChairBlock;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodlamp;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodpathtypeminislab;
    import com.goldfish.goldfishmod02tastyfurniture.block.foodtable;
-   import com.goldfish.goldfishmod02tastyfurniture.block.mediumFoodCabinet;
-   import com.goldfish.goldfishmod02tastyfurniture.block.smallFoodCabinet;
-   import com.goldfish.goldfishmod02tastyfurniture.block.entity.bedEntity;
-   import com.goldfish.goldfishmod02tastyfurniture.block.entity.foodBarrelEntity;
-   import com.goldfish.goldfishmod02tastyfurniture.block.entity.mediumFoodContainerEntity;
-   import com.goldfish.goldfishmod02tastyfurniture.block.entity.smallFoodContainerEntity;
    import com.goldfish.goldfishmod03tastyfurniturecompataddon.TastyFurnitureCompatAddon;
    import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.almondFurnace;
    import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.almondSign;
@@ -117,6 +112,8 @@ import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.blackche
    import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.coconutSignEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.compatBedEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.compatFoodBarrelEntity;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.compatMediumFoodContainerEntity;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.compatSmallFoodContainerEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.cornFurnaceEntity;
    import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.cornSignEntity;
    import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.elderberryFurnaceEntity;
@@ -7569,435 +7566,435 @@ public class foodblockcompatregistry {
    static SoundType meat_cabinet_sound = SoundType.MUD;
    static SoundType crystal_cabinet_sound = SoundType.BASALT;
  //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_ELDERBERRY_CABINET = FOODBLOCK.register("small_elderberry_cabinet", 
-     () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatSmallFoodCabinet> SMALL_ELDERBERRY_CABINET = FOODBLOCK.register("small_elderberry_cabinet", 
+     () -> new compatSmallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
     //medium
-     public static final DeferredHolder<Block, mediumFoodCabinet> MEDIUM_ELDERBERRY_CABINET = FOODBLOCK.register("medium_elderberry_cabinet", () -> new mediumFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatMediumFoodCabinet> MEDIUM_ELDERBERRY_CABINET = FOODBLOCK.register("medium_elderberry_cabinet", () -> new compatMediumFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Juniper---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_JUNIPER_CABINET = FOODBLOCK.register("small_juniper_cabinet", 
-     () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatSmallFoodCabinet> SMALL_JUNIPER_CABINET = FOODBLOCK.register("small_juniper_cabinet", 
+     () -> new compatSmallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
     //medium
-     public static final DeferredHolder<Block, mediumFoodCabinet> MEDIUM_JUNIPER_CABINET = FOODBLOCK.register("medium_juniper_cabinet", () -> new mediumFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatMediumFoodCabinet> MEDIUM_JUNIPER_CABINET = FOODBLOCK.register("medium_juniper_cabinet", () -> new compatMediumFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Blackberry---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_BLACKBERRY_CABINET = FOODBLOCK.register("small_blackberry_cabinet", 
-     () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatSmallFoodCabinet> SMALL_BLACKBERRY_CABINET = FOODBLOCK.register("small_blackberry_cabinet", 
+     () -> new compatSmallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
     //medium
-     public static final DeferredHolder<Block, mediumFoodCabinet> MEDIUM_BLACKBERRY_CABINET = FOODBLOCK.register("medium_blackberry_cabinet", () -> new mediumFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatMediumFoodCabinet> MEDIUM_BLACKBERRY_CABINET = FOODBLOCK.register("medium_blackberry_cabinet", () -> new compatMediumFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Raspberry---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_RASPBERRY_CABINET = FOODBLOCK.register("small_raspberry_cabinet", 
-     () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatSmallFoodCabinet> SMALL_RASPBERRY_CABINET = FOODBLOCK.register("small_raspberry_cabinet", 
+     () -> new compatSmallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
     //medium
-     public static final DeferredHolder<Block, mediumFoodCabinet> MEDIUM_RASPBERRY_CABINET = FOODBLOCK.register("medium_raspberry_cabinet", () -> new mediumFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatMediumFoodCabinet> MEDIUM_RASPBERRY_CABINET = FOODBLOCK.register("medium_raspberry_cabinet", () -> new compatMediumFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Strawberry---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_STRAWBERRY_CABINET = FOODBLOCK.register("small_strawberry_cabinet", 
-     () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatSmallFoodCabinet> SMALL_STRAWBERRY_CABINET = FOODBLOCK.register("small_strawberry_cabinet", 
+     () -> new compatSmallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
     //medium
-     public static final DeferredHolder<Block, mediumFoodCabinet> MEDIUM_STRAWBERRY_CABINET = FOODBLOCK.register("medium_strawberry_cabinet", () -> new mediumFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatMediumFoodCabinet> MEDIUM_STRAWBERRY_CABINET = FOODBLOCK.register("medium_strawberry_cabinet", () -> new compatMediumFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Sugarapple---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_SUGARAPPLE_CABINET = FOODBLOCK.register("small_sugarapple_cabinet", 
-     () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatSmallFoodCabinet> SMALL_SUGARAPPLE_CABINET = FOODBLOCK.register("small_sugarapple_cabinet", 
+     () -> new compatSmallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
     //medium
-     public static final DeferredHolder<Block, mediumFoodCabinet> MEDIUM_SUGARAPPLE_CABINET = FOODBLOCK.register("medium_sugarapple_cabinet", () -> new mediumFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatMediumFoodCabinet> MEDIUM_SUGARAPPLE_CABINET = FOODBLOCK.register("medium_sugarapple_cabinet", () -> new compatMediumFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_CHERRY_CABINET = FOODBLOCK.register("small_cherry_cabinet", 
-     () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatSmallFoodCabinet> SMALL_CHERRY_CABINET = FOODBLOCK.register("small_cherry_cabinet", 
+     () -> new compatSmallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
     //medium
-     public static final DeferredHolder<Block, mediumFoodCabinet> MEDIUM_CHERRY_CABINET = FOODBLOCK.register("medium_cherry_cabinet", () -> new mediumFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatMediumFoodCabinet> MEDIUM_CHERRY_CABINET = FOODBLOCK.register("medium_cherry_cabinet", () -> new compatMediumFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Blackcherry---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_BLACKCHERRY_CABINET = FOODBLOCK.register("small_blackcherry_cabinet", 
-     () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatSmallFoodCabinet> SMALL_BLACKCHERRY_CABINET = FOODBLOCK.register("small_blackcherry_cabinet", 
+     () -> new compatSmallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
     //medium
-     public static final DeferredHolder<Block, mediumFoodCabinet> MEDIUM_BLACKCHERRY_CABINET = FOODBLOCK.register("medium_blackcherry_cabinet", () -> new mediumFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatMediumFoodCabinet> MEDIUM_BLACKCHERRY_CABINET = FOODBLOCK.register("medium_blackcherry_cabinet", () -> new compatMediumFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Peach---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_PEACH_CABINET = FOODBLOCK.register("small_peach_cabinet", 
-     () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatSmallFoodCabinet> SMALL_PEACH_CABINET = FOODBLOCK.register("small_peach_cabinet", 
+     () -> new compatSmallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
     //medium
-     public static final DeferredHolder<Block, mediumFoodCabinet> MEDIUM_PEACH_CABINET = FOODBLOCK.register("medium_peach_cabinet", () -> new mediumFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatMediumFoodCabinet> MEDIUM_PEACH_CABINET = FOODBLOCK.register("medium_peach_cabinet", () -> new compatMediumFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_COCONUT_CABINET = FOODBLOCK.register("small_coconut_cabinet", 
-     () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatSmallFoodCabinet> SMALL_COCONUT_CABINET = FOODBLOCK.register("small_coconut_cabinet", 
+     () -> new compatSmallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
     //medium
-     public static final DeferredHolder<Block, mediumFoodCabinet> MEDIUM_COCONUT_CABINET = FOODBLOCK.register("medium_coconut_cabinet", () -> new mediumFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatMediumFoodCabinet> MEDIUM_COCONUT_CABINET = FOODBLOCK.register("medium_coconut_cabinet", () -> new compatMediumFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Orange---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_ORANGE_CABINET = FOODBLOCK.register("small_orange_cabinet", 
-     () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatSmallFoodCabinet> SMALL_ORANGE_CABINET = FOODBLOCK.register("small_orange_cabinet", 
+     () -> new compatSmallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
     //medium
-     public static final DeferredHolder<Block, mediumFoodCabinet> MEDIUM_ORANGE_CABINET = FOODBLOCK.register("medium_orange_cabinet", () -> new mediumFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatMediumFoodCabinet> MEDIUM_ORANGE_CABINET = FOODBLOCK.register("medium_orange_cabinet", () -> new compatMediumFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Tangerine---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_TANGERINE_CABINET = FOODBLOCK.register("small_tangerine_cabinet", 
-     () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatSmallFoodCabinet> SMALL_TANGERINE_CABINET = FOODBLOCK.register("small_tangerine_cabinet", 
+     () -> new compatSmallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
     //medium
-     public static final DeferredHolder<Block, mediumFoodCabinet> MEDIUM_TANGERINE_CABINET = FOODBLOCK.register("medium_tangerine_cabinet", () -> new mediumFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatMediumFoodCabinet> MEDIUM_TANGERINE_CABINET = FOODBLOCK.register("medium_tangerine_cabinet", () -> new compatMediumFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Kumquat---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_KUMQUAT_CABINET = FOODBLOCK.register("small_kumquat_cabinet", 
-     () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatSmallFoodCabinet> SMALL_KUMQUAT_CABINET = FOODBLOCK.register("small_kumquat_cabinet", 
+     () -> new compatSmallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
     //medium
-     public static final DeferredHolder<Block, mediumFoodCabinet> MEDIUM_KUMQUAT_CABINET = FOODBLOCK.register("medium_kumquat_cabinet", () -> new mediumFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatMediumFoodCabinet> MEDIUM_KUMQUAT_CABINET = FOODBLOCK.register("medium_kumquat_cabinet", () -> new compatMediumFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Persimmon---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_PERSIMMON_CABINET = FOODBLOCK.register("small_persimmon_cabinet", 
-     () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatSmallFoodCabinet> SMALL_PERSIMMON_CABINET = FOODBLOCK.register("small_persimmon_cabinet", 
+     () -> new compatSmallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
     //medium
-     public static final DeferredHolder<Block, mediumFoodCabinet> MEDIUM_PERSIMMON_CABINET = FOODBLOCK.register("medium_persimmon_cabinet", () -> new mediumFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatMediumFoodCabinet> MEDIUM_PERSIMMON_CABINET = FOODBLOCK.register("medium_persimmon_cabinet", () -> new compatMediumFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Satsuma---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_SATSUMA_CABINET = FOODBLOCK.register("small_satsuma_cabinet", 
-     () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatSmallFoodCabinet> SMALL_SATSUMA_CABINET = FOODBLOCK.register("small_satsuma_cabinet", 
+     () -> new compatSmallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
     //medium
-     public static final DeferredHolder<Block, mediumFoodCabinet> MEDIUM_SATSUMA_CABINET = FOODBLOCK.register("medium_satsuma_cabinet", () -> new mediumFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatMediumFoodCabinet> MEDIUM_SATSUMA_CABINET = FOODBLOCK.register("medium_satsuma_cabinet", () -> new compatMediumFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_MANDARIN_CABINET = FOODBLOCK.register("small_mandarin_cabinet", 
-     () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatSmallFoodCabinet> SMALL_MANDARIN_CABINET = FOODBLOCK.register("small_mandarin_cabinet", 
+     () -> new compatSmallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
     //medium
-     public static final DeferredHolder<Block, mediumFoodCabinet> MEDIUM_MANDARIN_CABINET = FOODBLOCK.register("medium_mandarin_cabinet", () -> new mediumFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatMediumFoodCabinet> MEDIUM_MANDARIN_CABINET = FOODBLOCK.register("medium_mandarin_cabinet", () -> new compatMediumFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_LEMON_CABINET = FOODBLOCK.register("small_lemon_cabinet", 
-     () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatSmallFoodCabinet> SMALL_LEMON_CABINET = FOODBLOCK.register("small_lemon_cabinet", 
+     () -> new compatSmallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
     //medium
-     public static final DeferredHolder<Block, mediumFoodCabinet> MEDIUM_LEMON_CABINET = FOODBLOCK.register("medium_lemon_cabinet", () -> new mediumFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatMediumFoodCabinet> MEDIUM_LEMON_CABINET = FOODBLOCK.register("medium_lemon_cabinet", () -> new compatMediumFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Citron---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_CITRON_CABINET = FOODBLOCK.register("small_citron_cabinet", 
-     () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatSmallFoodCabinet> SMALL_CITRON_CABINET = FOODBLOCK.register("small_citron_cabinet", 
+     () -> new compatSmallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
     //medium
-     public static final DeferredHolder<Block, mediumFoodCabinet> MEDIUM_CITRON_CABINET = FOODBLOCK.register("medium_citron_cabinet", () -> new mediumFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatMediumFoodCabinet> MEDIUM_CITRON_CABINET = FOODBLOCK.register("medium_citron_cabinet", () -> new compatMediumFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Buddhashand---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_BUDDHASHAND_CABINET = FOODBLOCK.register("small_buddhashand_cabinet", 
-     () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatSmallFoodCabinet> SMALL_BUDDHASHAND_CABINET = FOODBLOCK.register("small_buddhashand_cabinet", 
+     () -> new compatSmallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
     //medium
-     public static final DeferredHolder<Block, mediumFoodCabinet> MEDIUM_BUDDHASHAND_CABINET = FOODBLOCK.register("medium_buddhashand_cabinet", () -> new mediumFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatMediumFoodCabinet> MEDIUM_BUDDHASHAND_CABINET = FOODBLOCK.register("medium_buddhashand_cabinet", () -> new compatMediumFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Lime---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_LIME_CABINET = FOODBLOCK.register("small_lime_cabinet", 
-     () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatSmallFoodCabinet> SMALL_LIME_CABINET = FOODBLOCK.register("small_lime_cabinet", 
+     () -> new compatSmallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
     //medium
-     public static final DeferredHolder<Block, mediumFoodCabinet> MEDIUM_LIME_CABINET = FOODBLOCK.register("medium_lime_cabinet", () -> new mediumFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatMediumFoodCabinet> MEDIUM_LIME_CABINET = FOODBLOCK.register("medium_lime_cabinet", () -> new compatMediumFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Keylime---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_KEYLIME_CABINET = FOODBLOCK.register("small_keylime_cabinet", 
-     () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatSmallFoodCabinet> SMALL_KEYLIME_CABINET = FOODBLOCK.register("small_keylime_cabinet", 
+     () -> new compatSmallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
     //medium
-     public static final DeferredHolder<Block, mediumFoodCabinet> MEDIUM_KEYLIME_CABINET = FOODBLOCK.register("medium_keylime_cabinet", () -> new mediumFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatMediumFoodCabinet> MEDIUM_KEYLIME_CABINET = FOODBLOCK.register("medium_keylime_cabinet", () -> new compatMediumFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Fingerlime---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_FINGERLIME_CABINET = FOODBLOCK.register("small_fingerlime_cabinet", 
-     () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatSmallFoodCabinet> SMALL_FINGERLIME_CABINET = FOODBLOCK.register("small_fingerlime_cabinet", 
+     () -> new compatSmallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
     //medium
-     public static final DeferredHolder<Block, mediumFoodCabinet> MEDIUM_FINGERLIME_CABINET = FOODBLOCK.register("medium_fingerlime_cabinet", () -> new mediumFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatMediumFoodCabinet> MEDIUM_FINGERLIME_CABINET = FOODBLOCK.register("medium_fingerlime_cabinet", () -> new compatMediumFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_GRAPEFRUIT_CABINET = FOODBLOCK.register("small_grapefruit_cabinet", 
-     () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatSmallFoodCabinet> SMALL_GRAPEFRUIT_CABINET = FOODBLOCK.register("small_grapefruit_cabinet", 
+     () -> new compatSmallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
     //medium
-     public static final DeferredHolder<Block, mediumFoodCabinet> MEDIUM_GRAPEFRUIT_CABINET = FOODBLOCK.register("medium_grapefruit_cabinet", () -> new mediumFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatMediumFoodCabinet> MEDIUM_GRAPEFRUIT_CABINET = FOODBLOCK.register("medium_grapefruit_cabinet", () -> new compatMediumFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Pomelo---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_POMELO_CABINET = FOODBLOCK.register("small_pomelo_cabinet", 
-     () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatSmallFoodCabinet> SMALL_POMELO_CABINET = FOODBLOCK.register("small_pomelo_cabinet", 
+     () -> new compatSmallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
     //medium
-     public static final DeferredHolder<Block, mediumFoodCabinet> MEDIUM_POMELO_CABINET = FOODBLOCK.register("medium_pomelo_cabinet", () -> new mediumFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatMediumFoodCabinet> MEDIUM_POMELO_CABINET = FOODBLOCK.register("medium_pomelo_cabinet", () -> new compatMediumFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_CORN_CABINET = FOODBLOCK.register("small_corn_cabinet", 
-     () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatSmallFoodCabinet> SMALL_CORN_CABINET = FOODBLOCK.register("small_corn_cabinet", 
+     () -> new compatSmallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
     //medium
-     public static final DeferredHolder<Block, mediumFoodCabinet> MEDIUM_CORN_CABINET = FOODBLOCK.register("medium_corn_cabinet", () -> new mediumFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatMediumFoodCabinet> MEDIUM_CORN_CABINET = FOODBLOCK.register("medium_corn_cabinet", () -> new compatMediumFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_ONION_CABINET = FOODBLOCK.register("small_onion_cabinet", 
-     () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatSmallFoodCabinet> SMALL_ONION_CABINET = FOODBLOCK.register("small_onion_cabinet", 
+     () -> new compatSmallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
     //medium
-     public static final DeferredHolder<Block, mediumFoodCabinet> MEDIUM_ONION_CABINET = FOODBLOCK.register("medium_onion_cabinet", () -> new mediumFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatMediumFoodCabinet> MEDIUM_ONION_CABINET = FOODBLOCK.register("medium_onion_cabinet", () -> new compatMediumFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Tomato---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_TOMATO_CABINET = FOODBLOCK.register("small_tomato_cabinet", 
-     () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatSmallFoodCabinet> SMALL_TOMATO_CABINET = FOODBLOCK.register("small_tomato_cabinet", 
+     () -> new compatSmallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
     //medium
-     public static final DeferredHolder<Block, mediumFoodCabinet> MEDIUM_TOMATO_CABINET = FOODBLOCK.register("medium_tomato_cabinet", () -> new mediumFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatMediumFoodCabinet> MEDIUM_TOMATO_CABINET = FOODBLOCK.register("medium_tomato_cabinet", () -> new compatMediumFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_PECAN_CABINET = FOODBLOCK.register("small_pecan_cabinet", 
-     () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatSmallFoodCabinet> SMALL_PECAN_CABINET = FOODBLOCK.register("small_pecan_cabinet", 
+     () -> new compatSmallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
     //medium
-     public static final DeferredHolder<Block, mediumFoodCabinet> MEDIUM_PECAN_CABINET = FOODBLOCK.register("medium_pecan_cabinet", () -> new mediumFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatMediumFoodCabinet> MEDIUM_PECAN_CABINET = FOODBLOCK.register("medium_pecan_cabinet", () -> new compatMediumFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
  //--------------------------------------------------------------------------------------Almond---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, smallFoodCabinet> SMALL_ALMOND_CABINET = FOODBLOCK.register("small_almond_cabinet", 
-     () -> new smallFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatSmallFoodCabinet> SMALL_ALMOND_CABINET = FOODBLOCK.register("small_almond_cabinet", 
+     () -> new compatSmallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
     //medium
-     public static final DeferredHolder<Block, mediumFoodCabinet> MEDIUM_ALMOND_CABINET = FOODBLOCK.register("medium_almond_cabinet", () -> new mediumFoodCabinet(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatMediumFoodCabinet> MEDIUM_ALMOND_CABINET = FOODBLOCK.register("medium_almond_cabinet", () -> new compatMediumFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
      .destroyTime(cabinet_destroy_time)
      .explosionResistance(cabinet_explosion_resistance)
@@ -8005,16 +8002,16 @@ public class foodblockcompatregistry {
      ));
  //-------------------------------------------------------------------------------------Entity---------------------------------------------------------------------------------------------
     //small
-     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<smallFoodContainerEntity>> SMALL_CABINET_ENTITY = FOODBLOCKENTITY.register("small_cabinet_entity",
-     () -> BlockEntityType.Builder.of(smallFoodContainerEntity::new,SMALL_ELDERBERRY_CABINET.get(),SMALL_JUNIPER_CABINET.get(),SMALL_BLACKBERRY_CABINET.get(),SMALL_RASPBERRY_CABINET.get(),
+     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<compatSmallFoodContainerEntity>> SMALL_CABINET_ENTITY = FOODBLOCKENTITY.register("small_cabinet_entity",
+     () -> BlockEntityType.Builder.of(compatSmallFoodContainerEntity::new,SMALL_ELDERBERRY_CABINET.get(),SMALL_JUNIPER_CABINET.get(),SMALL_BLACKBERRY_CABINET.get(),SMALL_RASPBERRY_CABINET.get(),
      SMALL_STRAWBERRY_CABINET.get(),SMALL_SUGARAPPLE_CABINET.get(),
      SMALL_CHERRY_CABINET.get(),SMALL_BLACKCHERRY_CABINET.get(),SMALL_PEACH_CABINET.get(),SMALL_COCONUT_CABINET.get(),SMALL_ORANGE_CABINET.get(),SMALL_TANGERINE_CABINET.get(),
      SMALL_KUMQUAT_CABINET.get(),SMALL_PERSIMMON_CABINET.get(),SMALL_SATSUMA_CABINET.get(),SMALL_MANDARIN_CABINET.get(),SMALL_LEMON_CABINET.get(),SMALL_CITRON_CABINET.get(),
      SMALL_BUDDHASHAND_CABINET.get(),SMALL_LIME_CABINET.get(),SMALL_KEYLIME_CABINET.get(),SMALL_FINGERLIME_CABINET.get(),SMALL_GRAPEFRUIT_CABINET.get(), SMALL_POMELO_CABINET.get(),
      SMALL_CORN_CABINET.get(),SMALL_ONION_CABINET.get(),SMALL_TOMATO_CABINET.get(),SMALL_PECAN_CABINET.get(),SMALL_ALMOND_CABINET.get()).build(null));
     //medium
-     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<mediumFoodContainerEntity>> MEDIUM_CABINET_ENTITY = FOODBLOCKENTITY.register("medium_cabinet_entity",
-     () -> BlockEntityType.Builder.of(mediumFoodContainerEntity::new,MEDIUM_ELDERBERRY_CABINET.get(),MEDIUM_JUNIPER_CABINET.get(),MEDIUM_BLACKBERRY_CABINET.get(),MEDIUM_RASPBERRY_CABINET.get(),
+     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<compatMediumFoodContainerEntity>> MEDIUM_CABINET_ENTITY = FOODBLOCKENTITY.register("medium_cabinet_entity",
+     () -> BlockEntityType.Builder.of(compatMediumFoodContainerEntity::new,MEDIUM_ELDERBERRY_CABINET.get(),MEDIUM_JUNIPER_CABINET.get(),MEDIUM_BLACKBERRY_CABINET.get(),MEDIUM_RASPBERRY_CABINET.get(),
      MEDIUM_STRAWBERRY_CABINET.get(),MEDIUM_SUGARAPPLE_CABINET.get(),
      MEDIUM_CHERRY_CABINET.get(),MEDIUM_BLACKCHERRY_CABINET.get(),MEDIUM_BLACKCHERRY_CABINET.get(),MEDIUM_COCONUT_CABINET.get(),MEDIUM_ORANGE_CABINET.get(),MEDIUM_TANGERINE_CABINET.get(),
      MEDIUM_KUMQUAT_CABINET.get(),MEDIUM_PERSIMMON_CABINET.get(),MEDIUM_SATSUMA_CABINET.get(),MEDIUM_MANDARIN_CABINET.get(),MEDIUM_LEMON_CABINET.get(),MEDIUM_CITRON_CABINET.get(),
