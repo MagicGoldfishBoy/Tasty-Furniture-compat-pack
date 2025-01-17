@@ -29,7 +29,7 @@ import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.client.model.generators.BlockModelBuilder;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
-import com.goldfish.goldfishmod02tastyfurniture.block.foodBarrel;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.compatFoodBarrel;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.compatBed;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodChairBlock;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodpathtypeminislab;
@@ -10118,7 +10118,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
     //==============================================================================================================================================
     public void buildBarrelModels() {
      //------------------------------------------------------------elderberry-----------------------------------------------------------------------
-          foodBarrel elderberry_barrel = foodblockcompatregistry.ELDERBERRY_BARREL.get();
+          compatFoodBarrel elderberry_barrel = foodblockcompatregistry.ELDERBERRY_BARREL.get();
           ResourceLocation elderberry_barrel_closed_texture = modLoc("block/elderberry_barrel_top_closed");
           ResourceLocation elderberry_barrel_open_texture = modLoc("block/elderberry_barrel_top_open");
           ResourceLocation elderberry_barrel_side = modLoc("block/elderberry_barrel_side");
@@ -10166,7 +10166,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .build();
               });
      //------------------------------------------------------------juniper-----------------------------------------------------------------------
-          foodBarrel juniper_barrel = foodblockcompatregistry.JUNIPER_BARREL.get();
+          compatFoodBarrel juniper_barrel = foodblockcompatregistry.JUNIPER_BARREL.get();
           ResourceLocation juniper_barrel_closed_texture = modLoc("block/juniper_barrel_top_closed");
           ResourceLocation juniper_barrel_open_texture = modLoc("block/juniper_barrel_top_open");
           ResourceLocation juniper_barrel_side = modLoc("block/juniper_barrel_side");
@@ -10214,7 +10214,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .build();
               });
      //------------------------------------------------------------blackberry-----------------------------------------------------------------------
-          foodBarrel blackberry_barrel = foodblockcompatregistry.BLACKBERRY_BARREL.get();
+          compatFoodBarrel blackberry_barrel = foodblockcompatregistry.BLACKBERRY_BARREL.get();
           ResourceLocation blackberry_barrel_closed_texture = modLoc("block/blackberry_barrel_top_closed");
           ResourceLocation blackberry_barrel_open_texture = modLoc("block/blackberry_barrel_top_open");
           ResourceLocation blackberry_barrel_side = modLoc("block/blackberry_barrel_side");
@@ -10262,7 +10262,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .build();
               });
      //------------------------------------------------------------raspberry-----------------------------------------------------------------------
-          foodBarrel raspberry_barrel = foodblockcompatregistry.RASPBERRY_BARREL.get();
+          compatFoodBarrel raspberry_barrel = foodblockcompatregistry.RASPBERRY_BARREL.get();
           ResourceLocation raspberry_barrel_closed_texture = modLoc("block/raspberry_barrel_top_closed");
           ResourceLocation raspberry_barrel_open_texture = modLoc("block/raspberry_barrel_top_open");
           ResourceLocation raspberry_barrel_side = modLoc("block/raspberry_barrel_side");
@@ -10310,7 +10310,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .build();
               });
      //------------------------------------------------------------strawberry-----------------------------------------------------------------------
-          foodBarrel strawberry_barrel = foodblockcompatregistry.STRAWBERRY_BARREL.get();
+          compatFoodBarrel strawberry_barrel = foodblockcompatregistry.STRAWBERRY_BARREL.get();
           ResourceLocation strawberry_barrel_closed_texture = modLoc("block/strawberry_barrel_top_closed");
           ResourceLocation strawberry_barrel_open_texture = modLoc("block/strawberry_barrel_top_open");
           ResourceLocation strawberry_barrel_side = modLoc("block/strawberry_barrel_side");
@@ -10358,7 +10358,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .build();
               });
      //------------------------------------------------------------sugarapple-----------------------------------------------------------------------
-          foodBarrel sugarapple_barrel = foodblockcompatregistry.SUGARAPPLE_BARREL.get();
+          compatFoodBarrel sugarapple_barrel = foodblockcompatregistry.SUGARAPPLE_BARREL.get();
           ResourceLocation sugarapple_barrel_closed_texture = modLoc("block/sugarapple_barrel_top_closed");
           ResourceLocation sugarapple_barrel_open_texture = modLoc("block/sugarapple_barrel_top_open");
           ResourceLocation sugarapple_barrel_side = modLoc("block/sugarapple_barrel_side");
@@ -10406,7 +10406,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .build();
               });
      //------------------------------------------------------------cherry-----------------------------------------------------------------------
-          foodBarrel cherry_barrel = foodblockcompatregistry.CHERRY_BARREL.get();
+          compatFoodBarrel cherry_barrel = foodblockcompatregistry.CHERRY_BARREL.get();
           ResourceLocation cherry_barrel_closed_texture = modLoc("block/cherry_barrel_top_closed");
           ResourceLocation cherry_barrel_open_texture = modLoc("block/cherry_barrel_top_open");
           ResourceLocation cherry_barrel_side = modLoc("block/cherry_barrel_side");
@@ -10454,7 +10454,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .build();
               });
      //------------------------------------------------------------blackcherry-----------------------------------------------------------------------
-          foodBarrel blackcherry_barrel = foodblockcompatregistry.BLACKCHERRY_BARREL.get();
+          compatFoodBarrel blackcherry_barrel = foodblockcompatregistry.BLACKCHERRY_BARREL.get();
           ResourceLocation blackcherry_barrel_closed_texture = modLoc("block/blackcherry_barrel_top_closed");
           ResourceLocation blackcherry_barrel_open_texture = modLoc("block/blackcherry_barrel_top_open");
           ResourceLocation blackcherry_barrel_side = modLoc("block/blackcherry_barrel_side");
@@ -10502,7 +10502,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .build();
               });
      //------------------------------------------------------------peach-----------------------------------------------------------------------
-          foodBarrel peach_barrel = foodblockcompatregistry.PEACH_BARREL.get();
+          compatFoodBarrel peach_barrel = foodblockcompatregistry.PEACH_BARREL.get();
           ResourceLocation peach_barrel_closed_texture = modLoc("block/peach_barrel_top_closed");
           ResourceLocation peach_barrel_open_texture = modLoc("block/peach_barrel_top_open");
           ResourceLocation peach_barrel_side = modLoc("block/peach_barrel_side");
@@ -10550,7 +10550,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .build();
               });
      //------------------------------------------------------------coconut-----------------------------------------------------------------------
-          foodBarrel coconut_barrel = foodblockcompatregistry.COCONUT_BARREL.get();
+          compatFoodBarrel coconut_barrel = foodblockcompatregistry.COCONUT_BARREL.get();
           ResourceLocation coconut_barrel_closed_texture = modLoc("block/coconut_barrel_top_closed");
           ResourceLocation coconut_barrel_open_texture = modLoc("block/coconut_barrel_top_open");
           ResourceLocation coconut_barrel_side = modLoc("block/coconut_barrel_side");
@@ -10598,7 +10598,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .build();
               });
      //------------------------------------------------------------orange-----------------------------------------------------------------------
-          foodBarrel orange_barrel = foodblockcompatregistry.ORANGE_BARREL.get();
+          compatFoodBarrel orange_barrel = foodblockcompatregistry.ORANGE_BARREL.get();
           ResourceLocation orange_barrel_closed_texture = modLoc("block/orange_barrel_top_closed");
           ResourceLocation orange_barrel_open_texture = modLoc("block/orange_barrel_top_open");
           ResourceLocation orange_barrel_side = modLoc("block/orange_barrel_side");
@@ -10646,7 +10646,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .build();
               });
      //------------------------------------------------------------tangerine-----------------------------------------------------------------------
-          foodBarrel tangerine_barrel = foodblockcompatregistry.TANGERINE_BARREL.get();
+          compatFoodBarrel tangerine_barrel = foodblockcompatregistry.TANGERINE_BARREL.get();
           ResourceLocation tangerine_barrel_closed_texture = modLoc("block/tangerine_barrel_top_closed");
           ResourceLocation tangerine_barrel_open_texture = modLoc("block/tangerine_barrel_top_open");
           ResourceLocation tangerine_barrel_side = modLoc("block/tangerine_barrel_side");
@@ -10694,7 +10694,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .build();
               });
      //------------------------------------------------------------kumquat-----------------------------------------------------------------------
-          foodBarrel kumquat_barrel = foodblockcompatregistry.KUMQUAT_BARREL.get();
+          compatFoodBarrel kumquat_barrel = foodblockcompatregistry.KUMQUAT_BARREL.get();
           ResourceLocation kumquat_barrel_closed_texture = modLoc("block/kumquat_barrel_top_closed");
           ResourceLocation kumquat_barrel_open_texture = modLoc("block/kumquat_barrel_top_open");
           ResourceLocation kumquat_barrel_side = modLoc("block/kumquat_barrel_side");
@@ -10742,7 +10742,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .build();
               });
      //------------------------------------------------------------persimmon-----------------------------------------------------------------------
-          foodBarrel persimmon_barrel = foodblockcompatregistry.PERSIMMON_BARREL.get();
+          compatFoodBarrel persimmon_barrel = foodblockcompatregistry.PERSIMMON_BARREL.get();
           ResourceLocation persimmon_barrel_closed_texture = modLoc("block/persimmon_barrel_top_closed");
           ResourceLocation persimmon_barrel_open_texture = modLoc("block/persimmon_barrel_top_open");
           ResourceLocation persimmon_barrel_side = modLoc("block/persimmon_barrel_side");
@@ -10790,7 +10790,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .build();
               });
      //------------------------------------------------------------satsuma-----------------------------------------------------------------------
-          foodBarrel satsuma_barrel = foodblockcompatregistry.SATSUMA_BARREL.get();
+          compatFoodBarrel satsuma_barrel = foodblockcompatregistry.SATSUMA_BARREL.get();
           ResourceLocation satsuma_barrel_closed_texture = modLoc("block/satsuma_barrel_top_closed");
           ResourceLocation satsuma_barrel_open_texture = modLoc("block/satsuma_barrel_top_open");
           ResourceLocation satsuma_barrel_side = modLoc("block/satsuma_barrel_side");
@@ -10838,7 +10838,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .build();
               });
      //------------------------------------------------------------mandarin-----------------------------------------------------------------------
-          foodBarrel mandarin_barrel = foodblockcompatregistry.MANDARIN_BARREL.get();
+          compatFoodBarrel mandarin_barrel = foodblockcompatregistry.MANDARIN_BARREL.get();
           ResourceLocation mandarin_barrel_closed_texture = modLoc("block/mandarin_barrel_top_closed");
           ResourceLocation mandarin_barrel_open_texture = modLoc("block/mandarin_barrel_top_open");
           ResourceLocation mandarin_barrel_side = modLoc("block/mandarin_barrel_side");
@@ -10886,7 +10886,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .build();
               });
      //------------------------------------------------------------lemon-----------------------------------------------------------------------
-          foodBarrel lemon_barrel = foodblockcompatregistry.LEMON_BARREL.get();
+          compatFoodBarrel lemon_barrel = foodblockcompatregistry.LEMON_BARREL.get();
           ResourceLocation lemon_barrel_closed_texture = modLoc("block/lemon_barrel_top_closed");
           ResourceLocation lemon_barrel_open_texture = modLoc("block/lemon_barrel_top_open");
           ResourceLocation lemon_barrel_side = modLoc("block/lemon_barrel_side");
@@ -10934,7 +10934,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .build();
               });
      //------------------------------------------------------------citron-----------------------------------------------------------------------
-          foodBarrel citron_barrel = foodblockcompatregistry.CITRON_BARREL.get();
+          compatFoodBarrel citron_barrel = foodblockcompatregistry.CITRON_BARREL.get();
           ResourceLocation citron_barrel_closed_texture = modLoc("block/citron_barrel_top_closed");
           ResourceLocation citron_barrel_open_texture = modLoc("block/citron_barrel_top_open");
           ResourceLocation citron_barrel_side = modLoc("block/citron_barrel_side");
@@ -10982,7 +10982,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .build();
               });
      //------------------------------------------------------------buddhashand-----------------------------------------------------------------------
-          foodBarrel buddhashand_barrel = foodblockcompatregistry.BUDDHASHAND_BARREL.get();
+          compatFoodBarrel buddhashand_barrel = foodblockcompatregistry.BUDDHASHAND_BARREL.get();
           ResourceLocation buddhashand_barrel_closed_texture = modLoc("block/buddhashand_barrel_top_closed");
           ResourceLocation buddhashand_barrel_open_texture = modLoc("block/buddhashand_barrel_top_open");
           ResourceLocation buddhashand_barrel_side = modLoc("block/buddhashand_barrel_side");
@@ -11030,7 +11030,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .build();
               });
      //------------------------------------------------------------lime-----------------------------------------------------------------------
-          foodBarrel lime_barrel = foodblockcompatregistry.LIME_BARREL.get();
+          compatFoodBarrel lime_barrel = foodblockcompatregistry.LIME_BARREL.get();
           ResourceLocation lime_barrel_closed_texture = modLoc("block/lime_barrel_top_closed");
           ResourceLocation lime_barrel_open_texture = modLoc("block/lime_barrel_top_open");
           ResourceLocation lime_barrel_side = modLoc("block/lime_barrel_side");
@@ -11078,7 +11078,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .build();
               });
      //------------------------------------------------------------keylime-----------------------------------------------------------------------
-          foodBarrel keylime_barrel = foodblockcompatregistry.KEYLIME_BARREL.get();
+          compatFoodBarrel keylime_barrel = foodblockcompatregistry.KEYLIME_BARREL.get();
           ResourceLocation keylime_barrel_closed_texture = modLoc("block/keylime_barrel_top_closed");
           ResourceLocation keylime_barrel_open_texture = modLoc("block/keylime_barrel_top_open");
           ResourceLocation keylime_barrel_side = modLoc("block/keylime_barrel_side");
@@ -11126,7 +11126,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .build();
               });
      //------------------------------------------------------------fingerlime-----------------------------------------------------------------------
-          foodBarrel fingerlime_barrel = foodblockcompatregistry.FINGERLIME_BARREL.get();
+          compatFoodBarrel fingerlime_barrel = foodblockcompatregistry.FINGERLIME_BARREL.get();
           ResourceLocation fingerlime_barrel_closed_texture = modLoc("block/fingerlime_barrel_top_closed");
           ResourceLocation fingerlime_barrel_open_texture = modLoc("block/fingerlime_barrel_top_open");
           ResourceLocation fingerlime_barrel_side = modLoc("block/fingerlime_barrel_side");
@@ -11174,7 +11174,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .build();
               });
      //------------------------------------------------------------grapefruit-----------------------------------------------------------------------
-          foodBarrel grapefruit_barrel = foodblockcompatregistry.GRAPEFRUIT_BARREL.get();
+          compatFoodBarrel grapefruit_barrel = foodblockcompatregistry.GRAPEFRUIT_BARREL.get();
           ResourceLocation grapefruit_barrel_closed_texture = modLoc("block/grapefruit_barrel_top_closed");
           ResourceLocation grapefruit_barrel_open_texture = modLoc("block/grapefruit_barrel_top_open");
           ResourceLocation grapefruit_barrel_side = modLoc("block/grapefruit_barrel_side");
@@ -11222,7 +11222,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .build();
               });
      //------------------------------------------------------------pomelo-----------------------------------------------------------------------
-          foodBarrel pomelo_barrel = foodblockcompatregistry.POMELO_BARREL.get();
+          compatFoodBarrel pomelo_barrel = foodblockcompatregistry.POMELO_BARREL.get();
           ResourceLocation pomelo_barrel_closed_texture = modLoc("block/pomelo_barrel_top_closed");
           ResourceLocation pomelo_barrel_open_texture = modLoc("block/pomelo_barrel_top_open");
           ResourceLocation pomelo_barrel_side = modLoc("block/pomelo_barrel_side");
@@ -11270,7 +11270,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .build();
               });
      //------------------------------------------------------------corn-----------------------------------------------------------------------
-          foodBarrel corn_barrel = foodblockcompatregistry.CORN_BARREL.get();
+          compatFoodBarrel corn_barrel = foodblockcompatregistry.CORN_BARREL.get();
           ResourceLocation corn_barrel_closed_texture = modLoc("block/corn_barrel_top_closed");
           ResourceLocation corn_barrel_open_texture = modLoc("block/corn_barrel_top_open");
           ResourceLocation corn_barrel_side = modLoc("block/corn_barrel_side");
@@ -11318,7 +11318,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .build();
               });
      //------------------------------------------------------------onion-----------------------------------------------------------------------
-          foodBarrel onion_barrel = foodblockcompatregistry.ONION_BARREL.get();
+          compatFoodBarrel onion_barrel = foodblockcompatregistry.ONION_BARREL.get();
           ResourceLocation onion_barrel_closed_texture = modLoc("block/onion_barrel_top_closed");
           ResourceLocation onion_barrel_open_texture = modLoc("block/onion_barrel_top_open");
           ResourceLocation onion_barrel_side = modLoc("block/onion_barrel_side");
@@ -11366,7 +11366,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .build();
               });
      //------------------------------------------------------------tomato-----------------------------------------------------------------------
-          foodBarrel tomato_barrel = foodblockcompatregistry.TOMATO_BARREL.get();
+          compatFoodBarrel tomato_barrel = foodblockcompatregistry.TOMATO_BARREL.get();
           ResourceLocation tomato_barrel_closed_texture = modLoc("block/tomato_barrel_top_closed");
           ResourceLocation tomato_barrel_open_texture = modLoc("block/tomato_barrel_top_open");
           ResourceLocation tomato_barrel_side = modLoc("block/tomato_barrel_side");
@@ -11414,7 +11414,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .build();
               });
      //------------------------------------------------------------pecan-----------------------------------------------------------------------
-          foodBarrel pecan_barrel = foodblockcompatregistry.PECAN_BARREL.get();
+          compatFoodBarrel pecan_barrel = foodblockcompatregistry.PECAN_BARREL.get();
           ResourceLocation pecan_barrel_closed_texture = modLoc("block/pecan_barrel_top_closed");
           ResourceLocation pecan_barrel_open_texture = modLoc("block/pecan_barrel_top_open");
           ResourceLocation pecan_barrel_side = modLoc("block/pecan_barrel_side");
@@ -11462,7 +11462,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .build();
               });
      //------------------------------------------------------------almond-----------------------------------------------------------------------
-          foodBarrel almond_barrel = foodblockcompatregistry.ALMOND_BARREL.get();
+          compatFoodBarrel almond_barrel = foodblockcompatregistry.ALMOND_BARREL.get();
           ResourceLocation almond_barrel_closed_texture = modLoc("block/almond_barrel_top_closed");
           ResourceLocation almond_barrel_open_texture = modLoc("block/almond_barrel_top_open");
           ResourceLocation almond_barrel_side = modLoc("block/almond_barrel_side");

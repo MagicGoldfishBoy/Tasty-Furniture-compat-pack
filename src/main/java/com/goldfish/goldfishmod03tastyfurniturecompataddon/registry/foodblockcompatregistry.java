@@ -2,7 +2,8 @@ package com.goldfish.goldfishmod03tastyfurniturecompataddon.registry;
 
 import com.goldfish.goldfishmod02tastyfurniture.block.foodBarrel;
    import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.compatBed;
-   import com.goldfish.goldfishmod02tastyfurniture.block.foodChairBlock;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.compatFoodBarrel;
+import com.goldfish.goldfishmod02tastyfurniture.block.foodChairBlock;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodlamp;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodpathtypeminislab;
    import com.goldfish.goldfishmod02tastyfurniture.block.foodtable;
@@ -115,6 +116,7 @@ import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.blackche
    import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.coconutFurnaceEntity;
    import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.coconutSignEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.compatBedEntity;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.compatFoodBarrelEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.cornFurnaceEntity;
    import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.cornSignEntity;
    import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.elderberryFurnaceEntity;
@@ -6943,183 +6945,183 @@ public class foodblockcompatregistry {
    static SoundType meat_barrel_sound = SoundType.MUD;
    static SoundType crystal_barrel_sound = SoundType.BASALT;
  //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBarrel> ELDERBERRY_BARREL = FOODBLOCK.register("elderberry_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatFoodBarrel> ELDERBERRY_BARREL = FOODBLOCK.register("elderberry_barrel", () -> new compatFoodBarrel(BlockBehaviour.Properties.of()
      .sound(plant_barrel_sound)
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
      ));
  //--------------------------------------------------------------------------------------Juniper---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBarrel> JUNIPER_BARREL = FOODBLOCK.register("juniper_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatFoodBarrel> JUNIPER_BARREL = FOODBLOCK.register("juniper_barrel", () -> new compatFoodBarrel(BlockBehaviour.Properties.of()
      .sound(plant_barrel_sound)
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
      ));
  //--------------------------------------------------------------------------------------Blackberry---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBarrel> BLACKBERRY_BARREL = FOODBLOCK.register("blackberry_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatFoodBarrel> BLACKBERRY_BARREL = FOODBLOCK.register("blackberry_barrel", () -> new compatFoodBarrel(BlockBehaviour.Properties.of()
      .sound(plant_barrel_sound)
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
      ));
  //--------------------------------------------------------------------------------------Raspberry---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBarrel> RASPBERRY_BARREL = FOODBLOCK.register("raspberry_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatFoodBarrel> RASPBERRY_BARREL = FOODBLOCK.register("raspberry_barrel", () -> new compatFoodBarrel(BlockBehaviour.Properties.of()
      .sound(plant_barrel_sound)
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
      ));
  //--------------------------------------------------------------------------------------Strawberry---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBarrel> STRAWBERRY_BARREL = FOODBLOCK.register("strawberry_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatFoodBarrel> STRAWBERRY_BARREL = FOODBLOCK.register("strawberry_barrel", () -> new compatFoodBarrel(BlockBehaviour.Properties.of()
      .sound(plant_barrel_sound)
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
      ));
  //--------------------------------------------------------------------------------------Sugarapple---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBarrel> SUGARAPPLE_BARREL = FOODBLOCK.register("sugarapple_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatFoodBarrel> SUGARAPPLE_BARREL = FOODBLOCK.register("sugarapple_barrel", () -> new compatFoodBarrel(BlockBehaviour.Properties.of()
      .sound(plant_barrel_sound)
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
      ));
  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBarrel> CHERRY_BARREL = FOODBLOCK.register("cherry_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatFoodBarrel> CHERRY_BARREL = FOODBLOCK.register("cherry_barrel", () -> new compatFoodBarrel(BlockBehaviour.Properties.of()
      .sound(plant_barrel_sound)
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
      ));
  //--------------------------------------------------------------------------------------Blackcherry---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBarrel> BLACKCHERRY_BARREL = FOODBLOCK.register("blackcherry_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatFoodBarrel> BLACKCHERRY_BARREL = FOODBLOCK.register("blackcherry_barrel", () -> new compatFoodBarrel(BlockBehaviour.Properties.of()
      .sound(plant_barrel_sound)
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
      ));
  //--------------------------------------------------------------------------------------Peach---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBarrel> PEACH_BARREL = FOODBLOCK.register("peach_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatFoodBarrel> PEACH_BARREL = FOODBLOCK.register("peach_barrel", () -> new compatFoodBarrel(BlockBehaviour.Properties.of()
      .sound(plant_barrel_sound)
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
      ));
  //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBarrel> COCONUT_BARREL = FOODBLOCK.register("coconut_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatFoodBarrel> COCONUT_BARREL = FOODBLOCK.register("coconut_barrel", () -> new compatFoodBarrel(BlockBehaviour.Properties.of()
      .sound(plant_barrel_sound)
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
      ));
  //--------------------------------------------------------------------------------------Orange---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBarrel> ORANGE_BARREL = FOODBLOCK.register("orange_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatFoodBarrel> ORANGE_BARREL = FOODBLOCK.register("orange_barrel", () -> new compatFoodBarrel(BlockBehaviour.Properties.of()
      .sound(plant_barrel_sound)
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
      ));
  //--------------------------------------------------------------------------------------Tangerine---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBarrel> TANGERINE_BARREL = FOODBLOCK.register("tangerine_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatFoodBarrel> TANGERINE_BARREL = FOODBLOCK.register("tangerine_barrel", () -> new compatFoodBarrel(BlockBehaviour.Properties.of()
      .sound(plant_barrel_sound)
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
      ));
  //--------------------------------------------------------------------------------------Kumquat---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBarrel> KUMQUAT_BARREL = FOODBLOCK.register("kumquat_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatFoodBarrel> KUMQUAT_BARREL = FOODBLOCK.register("kumquat_barrel", () -> new compatFoodBarrel(BlockBehaviour.Properties.of()
      .sound(plant_barrel_sound)
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
      ));
  //--------------------------------------------------------------------------------------Persimmon---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBarrel> PERSIMMON_BARREL = FOODBLOCK.register("persimmon_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatFoodBarrel> PERSIMMON_BARREL = FOODBLOCK.register("persimmon_barrel", () -> new compatFoodBarrel(BlockBehaviour.Properties.of()
      .sound(plant_barrel_sound)
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
      ));
  //--------------------------------------------------------------------------------------Satsuma---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBarrel> SATSUMA_BARREL = FOODBLOCK.register("satsuma_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatFoodBarrel> SATSUMA_BARREL = FOODBLOCK.register("satsuma_barrel", () -> new compatFoodBarrel(BlockBehaviour.Properties.of()
      .sound(plant_barrel_sound)
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
      ));
  //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBarrel> MANDARIN_BARREL = FOODBLOCK.register("mandarin_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatFoodBarrel> MANDARIN_BARREL = FOODBLOCK.register("mandarin_barrel", () -> new compatFoodBarrel(BlockBehaviour.Properties.of()
      .sound(plant_barrel_sound)
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
      ));
  //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBarrel> LEMON_BARREL = FOODBLOCK.register("lemon_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatFoodBarrel> LEMON_BARREL = FOODBLOCK.register("lemon_barrel", () -> new compatFoodBarrel(BlockBehaviour.Properties.of()
      .sound(plant_barrel_sound)
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
      ));
  //--------------------------------------------------------------------------------------Citron---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBarrel> CITRON_BARREL = FOODBLOCK.register("citron_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatFoodBarrel> CITRON_BARREL = FOODBLOCK.register("citron_barrel", () -> new compatFoodBarrel(BlockBehaviour.Properties.of()
      .sound(plant_barrel_sound)
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
      ));
  //--------------------------------------------------------------------------------------Buddhashand---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBarrel> BUDDHASHAND_BARREL = FOODBLOCK.register("buddhashand_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatFoodBarrel> BUDDHASHAND_BARREL = FOODBLOCK.register("buddhashand_barrel", () -> new compatFoodBarrel(BlockBehaviour.Properties.of()
      .sound(plant_barrel_sound)
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
      ));
  //--------------------------------------------------------------------------------------Lime---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBarrel> LIME_BARREL = FOODBLOCK.register("lime_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatFoodBarrel> LIME_BARREL = FOODBLOCK.register("lime_barrel", () -> new compatFoodBarrel(BlockBehaviour.Properties.of()
      .sound(plant_barrel_sound)
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
      ));
  //--------------------------------------------------------------------------------------Keylime---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBarrel> KEYLIME_BARREL = FOODBLOCK.register("keylime_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatFoodBarrel> KEYLIME_BARREL = FOODBLOCK.register("keylime_barrel", () -> new compatFoodBarrel(BlockBehaviour.Properties.of()
      .sound(plant_barrel_sound)
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
      ));
  //--------------------------------------------------------------------------------------Fingerlime---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBarrel> FINGERLIME_BARREL = FOODBLOCK.register("fingerlime_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatFoodBarrel> FINGERLIME_BARREL = FOODBLOCK.register("fingerlime_barrel", () -> new compatFoodBarrel(BlockBehaviour.Properties.of()
      .sound(plant_barrel_sound)
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
      ));
  //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBarrel> GRAPEFRUIT_BARREL = FOODBLOCK.register("grapefruit_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatFoodBarrel> GRAPEFRUIT_BARREL = FOODBLOCK.register("grapefruit_barrel", () -> new compatFoodBarrel(BlockBehaviour.Properties.of()
      .sound(plant_barrel_sound)
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
      ));
  //--------------------------------------------------------------------------------------Pomelo---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBarrel> POMELO_BARREL = FOODBLOCK.register("pomelo_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatFoodBarrel> POMELO_BARREL = FOODBLOCK.register("pomelo_barrel", () -> new compatFoodBarrel(BlockBehaviour.Properties.of()
      .sound(plant_barrel_sound)
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
      ));
  //--------------------------------------------------------------------------------------Corn---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBarrel> CORN_BARREL = FOODBLOCK.register("corn_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatFoodBarrel> CORN_BARREL = FOODBLOCK.register("corn_barrel", () -> new compatFoodBarrel(BlockBehaviour.Properties.of()
      .sound(plant_barrel_sound)
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
      ));
  //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBarrel> ONION_BARREL = FOODBLOCK.register("onion_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatFoodBarrel> ONION_BARREL = FOODBLOCK.register("onion_barrel", () -> new compatFoodBarrel(BlockBehaviour.Properties.of()
      .sound(plant_barrel_sound)
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
      ));
  //--------------------------------------------------------------------------------------Tomato---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBarrel> TOMATO_BARREL = FOODBLOCK.register("tomato_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatFoodBarrel> TOMATO_BARREL = FOODBLOCK.register("tomato_barrel", () -> new compatFoodBarrel(BlockBehaviour.Properties.of()
      .sound(plant_barrel_sound)
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
      ));
  //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBarrel> PECAN_BARREL = FOODBLOCK.register("pecan_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatFoodBarrel> PECAN_BARREL = FOODBLOCK.register("pecan_barrel", () -> new compatFoodBarrel(BlockBehaviour.Properties.of()
      .sound(plant_barrel_sound)
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
      ));
  //--------------------------------------------------------------------------------------Almond---------------------------------------------------------------------------------------------
-     public static final DeferredHolder<Block, foodBarrel> ALMOND_BARREL = FOODBLOCK.register("almond_barrel", () -> new foodBarrel(BlockBehaviour.Properties.of()
+     public static final DeferredHolder<Block, compatFoodBarrel> ALMOND_BARREL = FOODBLOCK.register("almond_barrel", () -> new compatFoodBarrel(BlockBehaviour.Properties.of()
      .sound(plant_barrel_sound)
      .destroyTime(barrel_destroy_time)
      .explosionResistance(barrel_explosion_resistance)
      ));
 
  //------entity
-     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<foodBarrelEntity>> FOOD_BARREL_ENTITY = FOODBLOCKENTITY.register("food_barrel_entity", 
-     () -> BlockEntityType.Builder.of(foodBarrelEntity::new,foodblockcompatregistry.ELDERBERRY_BARREL.get(),foodblockcompatregistry.JUNIPER_BARREL.get(),
+     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<compatFoodBarrelEntity>> FOOD_BARREL_ENTITY = FOODBLOCKENTITY.register("food_barrel_entity", 
+     () -> BlockEntityType.Builder.of(compatFoodBarrelEntity::new,foodblockcompatregistry.ELDERBERRY_BARREL.get(),foodblockcompatregistry.JUNIPER_BARREL.get(),
      foodblockcompatregistry.BLACKBERRY_BARREL.get(),foodblockcompatregistry.RASPBERRY_BARREL.get(),foodblockcompatregistry.STRAWBERRY_BARREL.get(),foodblockcompatregistry.SUGARAPPLE_BARREL.get(),
      foodblockcompatregistry.CHERRY_BARREL.get(), 
      foodblockcompatregistry.BLACKCHERRY_BARREL.get(),foodblockcompatregistry.PEACH_BARREL.get(),foodblockcompatregistry.COCONUT_BARREL.get(),foodblockcompatregistry.ORANGE_BARREL.get(),
