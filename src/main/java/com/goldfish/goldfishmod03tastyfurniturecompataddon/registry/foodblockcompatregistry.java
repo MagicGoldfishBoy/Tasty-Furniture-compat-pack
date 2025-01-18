@@ -2968,6 +2968,7 @@ public class foodblockcompatregistry {
        .randomTicks(),
        foodmaterialtypecompatregistry.ELDERBERRYWOODMAT
    ));
+    @SuppressWarnings("null")
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<elderberrySignEntity>> ELDERBERRY_SIGN_ENTITY = FOODBLOCKENTITY.register(
      "elderberry_sign_entity",
      () -> BlockEntityType.Builder.of(
@@ -8272,6 +8273,7 @@ public class foodblockcompatregistry {
      ));
  //-------------------------------------------------------------------------------------Entity---------------------------------------------------------------------------------------------
     //small
+     @SuppressWarnings("null")
      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<compatSmallFoodContainerEntity>> SMALL_CABINET_ENTITY = FOODBLOCKENTITY.register("small_cabinet_entity",
      () -> BlockEntityType.Builder.of(compatSmallFoodContainerEntity::new,SMALL_ELDERBERRY_CABINET.get(),SMALL_JUNIPER_CABINET.get(),SMALL_BANANA_CABINET.get(),SMALL_BLACKBERRY_CABINET.get(),
      SMALL_RASPBERRY_CABINET.get(),SMALL_STRAWBERRY_CABINET.get(),SMALL_SUGARAPPLE_CABINET.get(),
@@ -8280,6 +8282,7 @@ public class foodblockcompatregistry {
      SMALL_BUDDHASHAND_CABINET.get(),SMALL_LIME_CABINET.get(),SMALL_KEYLIME_CABINET.get(),SMALL_FINGERLIME_CABINET.get(),SMALL_GRAPEFRUIT_CABINET.get(), SMALL_POMELO_CABINET.get(),
      SMALL_CORN_CABINET.get(),SMALL_ONION_CABINET.get(),SMALL_TOMATO_CABINET.get(),SMALL_PECAN_CABINET.get(),SMALL_ALMOND_CABINET.get()).build(null));
     //medium
+     @SuppressWarnings("null")
      public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<compatMediumFoodContainerEntity>> MEDIUM_CABINET_ENTITY = FOODBLOCKENTITY.register("medium_cabinet_entity",
      () -> BlockEntityType.Builder.of(compatMediumFoodContainerEntity::new,MEDIUM_ELDERBERRY_CABINET.get(),MEDIUM_JUNIPER_CABINET.get(),MEDIUM_BANANA_CABINET.get(),
      MEDIUM_BLACKBERRY_CABINET.get(),MEDIUM_RASPBERRY_CABINET.get(),MEDIUM_STRAWBERRY_CABINET.get(),MEDIUM_SUGARAPPLE_CABINET.get(),

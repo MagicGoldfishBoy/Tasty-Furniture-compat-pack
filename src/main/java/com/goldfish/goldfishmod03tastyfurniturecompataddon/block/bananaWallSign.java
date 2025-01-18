@@ -2,12 +2,9 @@ package com.goldfish.goldfishmod03tastyfurniturecompataddon.block;
 
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.entity.bananaSignEntity;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.registry.foodblockcompatregistry;
-import com.mojang.serialization.MapCodec;
-
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.block.BarrelBlock;
 import net.minecraft.world.level.block.WallSignBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;

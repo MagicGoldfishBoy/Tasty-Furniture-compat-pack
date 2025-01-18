@@ -24,6 +24,7 @@ public class bananaFurnaceEntity extends AbstractFurnaceBlockEntity {
         return Component.translatable("container.banana_furnace");
     }
 
+    @SuppressWarnings("null")
     @Override
     protected @NotNull AbstractContainerMenu createMenu(int syncId, @NotNull Inventory playerInventory) {
         return new FurnaceMenu(syncId, playerInventory, this, this.dataAccess);

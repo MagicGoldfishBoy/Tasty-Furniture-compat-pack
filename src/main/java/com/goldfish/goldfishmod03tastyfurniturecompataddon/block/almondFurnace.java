@@ -17,7 +17,6 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.MapColor;
 
@@ -34,12 +33,14 @@ public class almondFurnace extends FurnaceBlock {
         this.type = type;
     }
 
+    @SuppressWarnings("null")
     @Override
     @Nullable
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(@NotNull Level level, @NotNull BlockState state, @NotNull BlockEntityType<T> type) {
         return almondFurnace.createFurnaceTicker(level, type, foodblockcompatregistry.ALMOND_FURNACE_ENTITY.get());
     }
 
+    @SuppressWarnings("null")
     @Override
     protected void openContainer(Level level, @NotNull BlockPos pos, @NotNull Player player) {
         BlockEntity blockEntity = level.getBlockEntity(pos);
@@ -49,6 +50,7 @@ public class almondFurnace extends FurnaceBlock {
         }
     }
 
+    @SuppressWarnings("null")
     @Nullable
     @Override
     public BlockEntity newBlockEntity(@NotNull BlockPos pos, @NotNull BlockState state) {

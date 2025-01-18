@@ -175,9 +175,13 @@ public class TastyFurnitureCompatAddon
                 event.registerBlockEntityRenderer(foodblockcompatregistry.ELDERBERRY_SIGN_ENTITY.get(), SignRenderer::new);
                 event.registerBlockEntityRenderer(foodblockcompatregistry.JUNIPER_SIGN_ENTITY.get(), SignRenderer::new);
                 event.registerBlockEntityRenderer(foodblockcompatregistry.BANANA_SIGN_ENTITY.get(), SignRenderer::new);
+                 //starfruit
+                 //kiwifruit
                  //gooseberry
                  //blueberries
                  //cranberries
+                 //greengrapes
+                 //redgrapes
                //aggregate fruits
                 event.registerBlockEntityRenderer(foodblockcompatregistry.BLACKBERRY_SIGN_ENTITY.get(), SignRenderer::new);
                 event.registerBlockEntityRenderer(foodblockcompatregistry.RASPBERRY_SIGN_ENTITY.get(), SignRenderer::new);
@@ -185,6 +189,7 @@ public class TastyFurnitureCompatAddon
                 event.registerBlockEntityRenderer(foodblockcompatregistry.SUGARAPPLE_SIGN_ENTITY.get(), SignRenderer::new);
                //multiple fruits
                  //pinneapple
+                 //mulberry
                  //osage orange
                //drupes
                 event.registerBlockEntityRenderer(foodblockcompatregistry.CHERRY_SIGN_ENTITY.get(), SignRenderer::new);
@@ -230,7 +235,8 @@ public class TastyFurnitureCompatAddon
 
 
 public class datagathering {
-     @SubscribeEvent
+    @SuppressWarnings("unused")
+    @SubscribeEvent
      public static void onGatherData(GatherDataEvent event) {
 
         try {

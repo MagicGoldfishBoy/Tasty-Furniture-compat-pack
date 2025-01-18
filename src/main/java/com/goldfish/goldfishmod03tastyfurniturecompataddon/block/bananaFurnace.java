@@ -34,12 +34,14 @@ public class bananaFurnace extends FurnaceBlock {
         this.type = type;
     }
 
+    @SuppressWarnings("null")
     @Override
     @Nullable
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(@NotNull Level level, @NotNull BlockState state, @NotNull BlockEntityType<T> type) {
         return bananaFurnace.createFurnaceTicker(level, type, foodblockcompatregistry.BANANA_FURNACE_ENTITY.get());
     }
 
+    @SuppressWarnings("null")
     @Override
     protected void openContainer(Level level, @NotNull BlockPos pos, @NotNull Player player) {
         BlockEntity blockEntity = level.getBlockEntity(pos);
@@ -49,6 +51,7 @@ public class bananaFurnace extends FurnaceBlock {
         }
     }
 
+    @SuppressWarnings("null")
     @Nullable
     @Override
     public BlockEntity newBlockEntity(@NotNull BlockPos pos, @NotNull BlockState state) {

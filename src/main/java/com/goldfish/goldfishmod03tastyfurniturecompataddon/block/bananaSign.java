@@ -19,12 +19,14 @@ public class bananaSign extends StandingSignBlock {
         this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.FALSE));
     }
 
-     @Override
+     @SuppressWarnings("null")
+    @Override
      public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
          return createTickerHelper(type, foodblockcompatregistry.BANANA_SIGN_ENTITY.get(), bananaSignEntity::tick);
      }
 
-     @Override
+     @SuppressWarnings("null")
+    @Override
      public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
           return new bananaSignEntity(pos, state);
      }

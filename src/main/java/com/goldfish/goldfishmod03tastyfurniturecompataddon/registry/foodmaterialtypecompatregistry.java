@@ -1,23 +1,9 @@
 package com.goldfish.goldfishmod03tastyfurniturecompataddon.registry;
 
-import com.goldfish.goldfishmod03tastyfurniturecompataddon.TastyFurnitureCompatAddon;
-
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
-import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.properties.WoodType;
-import net.minecraft.world.level.material.MapColor;
-import net.neoforged.neoforge.client.model.obj.ObjMaterialLibrary.Material;
-import net.neoforged.neoforge.common.SimpleTier;
-import net.neoforged.neoforge.registries.DeferredHolder;
-import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class foodmaterialtypecompatregistry {
 
