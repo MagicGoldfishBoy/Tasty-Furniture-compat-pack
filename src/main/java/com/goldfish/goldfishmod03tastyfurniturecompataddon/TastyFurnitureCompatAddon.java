@@ -174,7 +174,7 @@ public class TastyFurnitureCompatAddon
                //berries
                 event.registerBlockEntityRenderer(foodblockcompatregistry.ELDERBERRY_SIGN_ENTITY.get(), SignRenderer::new);
                 event.registerBlockEntityRenderer(foodblockcompatregistry.JUNIPER_SIGN_ENTITY.get(), SignRenderer::new);
-                 //banana
+                event.registerBlockEntityRenderer(foodblockcompatregistry.BANANA_SIGN_ENTITY.get(), SignRenderer::new);
                  //gooseberry
                  //blueberries
                  //cranberries

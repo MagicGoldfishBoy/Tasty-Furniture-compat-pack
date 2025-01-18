@@ -1,0 +1,15 @@
+{
+    "replace": false,
+    "values": [
+        {"id":"c:bananas",
+        "required": false},
+        {"id":"productivetrees:banana",
+        "required": false},
+        {"id":"harvestcraft:bananaitem",
+        "required": false},
+        {"id":"croptopia:banana",
+        "required": false},
+        {"id":"pamhc2trees:bananaitem",
+        "required": false}
+    ]
+  }

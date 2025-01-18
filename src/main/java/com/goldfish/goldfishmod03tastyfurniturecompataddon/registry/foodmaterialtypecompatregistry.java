@@ -85,6 +85,11 @@ public class foodmaterialtypecompatregistry {
         "juniper_wood_mat", 
         PLANT) 
     );
+    public static final WoodType BANANAWOODMAT = WoodType.register(
+     new WoodType(
+        "banana_wood_mat", 
+        PLANT) 
+    );
     public static final WoodType BLACKBERRYWOODMAT = WoodType.register(
      new WoodType(
         "blackberry_wood_mat", 

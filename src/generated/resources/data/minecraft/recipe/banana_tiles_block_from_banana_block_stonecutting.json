@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "goldfishmod03tastyfurniturecompataddon:banana_block_item"
+  },
+  "result": {
+    "count": 1,
+    "id": "goldfishmod03tastyfurniturecompataddon:banana_tiles_block_item"
+  }
+}

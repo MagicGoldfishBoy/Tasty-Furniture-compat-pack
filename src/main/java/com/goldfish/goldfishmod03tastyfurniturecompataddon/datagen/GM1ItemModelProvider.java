@@ -171,6 +171,84 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("small_juniper_cabinet_item", modLoc("block/juniper_cabinet"));
        withExistingParent("medium_juniper_cabinet_item", modLoc("block/medium_juniper_cabinet"));
     //==============================================================================================================================================
+    //|                                                            Banana                                                                      |
+    //==============================================================================================================================================
+       //mush
+       withExistingParent("banana_mush", mcLoc("item/generated")).texture("layer0", "item/banana_mush");
+       //ingot
+        withExistingParent("banana_ingot", mcLoc("item/generated")).texture("layer0", "item/banana_ingot");
+       //nugget
+        withExistingParent("banana_nugget", mcLoc("item/generated")).texture("layer0", "item/banana_nugget");
+       //block
+        withExistingParent("banana_block_item", modLoc("block/banana_block"));
+       //bricks block
+        withExistingParent("banana_bricks_block_item", modLoc("block/banana_bricks_block"));
+       //chiseled block
+        withExistingParent("banana_chiseled_block_item", modLoc("block/banana_chiseled_block"));
+       //tiles block
+        withExistingParent("banana_tiles_block_item", modLoc("block/banana_tiles_block"));
+       //slab
+       slab("banana_slab_item", modLoc("block/banana_block"), modLoc("block/banana_block"), modLoc("block/banana_block"));
+       //bricks slab
+       slab("banana_bricks_slab_item", modLoc("block/banana_bricks_block"), modLoc("block/banana_bricks_block"), modLoc("block/banana_bricks_block"));
+       //stairs
+       stairs("banana_stairs_item", modLoc("block/banana_block"), modLoc("block/banana_block"), modLoc("block/banana_block"));
+       //bricks stairs
+       stairs("banana_bricks_stairs_item", modLoc("block/banana_bricks_block"), modLoc("block/banana_bricks_block"), modLoc("block/banana_bricks_block"));
+       //bars
+       withExistingParent("banana_bars_item", mcLoc("item/generated")).texture("layer0", "block/banana_bars");
+       //doors
+       withExistingParent("banana_door_item", mcLoc("item/generated")).texture("layer0", "item/banana_door_item");
+       //button
+       buttonInventory("banana_button_item", modLoc("block/banana_block"));
+       //fence
+       fenceInventory("banana_fence_item", modLoc("block/banana_block"));
+       //gate
+       withExistingParent("banana_gate_item", modLoc("block/banana_gate"));
+       //pressure plate
+       pressurePlate("banana_pressure_plate_item", modLoc("block/banana_block"));
+       //sign
+       withExistingParent("banana_sign_item", mcLoc("item/generated")).texture("layer0", "item/banana_sign");
+       //trapdoor
+       withExistingParent("banana_trapdoor_item", modLoc("block/banana_trapdoor_trapdoor_bottom"));
+       //lamp
+       withExistingParent("banana_lamp_item", modLoc("block/banana_lamp"));
+       //carpet
+       ResourceLocation banana_carpet_texture = modLoc("block/banana_carpet");
+       carpet("banana_carpet_item", banana_carpet_texture);
+       //lantern
+        //regular
+        withExistingParent("banana_lantern_item", modLoc("block/banana_lantern"));
+        //soul
+          withExistingParent("banana_soul_lantern_item", modLoc("block/banana_soul_lantern"));
+       //chain
+       withExistingParent("banana_chain_item", modLoc("block/banana_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
+       //ladder
+       withExistingParent("banana_ladder_item", modLoc("block/banana_ladder"));
+       //table
+       withExistingParent("banana_table_item", modLoc("block/banana_table"));
+       //torches
+        //regular
+        withExistingParent("banana_torch_item", modLoc("block/banana_torch"));
+        //redstone
+          withExistingParent("banana_redstone_torch_item", modLoc("block/banana_redstone_torch"));
+        //soul
+          withExistingParent("banana_soul_torch_item", modLoc("block/banana_soul_torch"));
+       //furnaces
+       withExistingParent("banana_furnace_item", modLoc("block/banana_furnace_model_unlit"));
+       //paths
+       withExistingParent("banana_stone_path_item", modLoc("block/banana_stone_path"));
+       //barrel
+       withExistingParent("banana_barrel_item", modLoc("block/banana_barrel_model_closed"));
+       //chair
+       withExistingParent("banana_chair_item", modLoc("block/banana_chair"));
+       //bed
+       withExistingParent("banana_bed_item", modLoc("block/banana_bed"));
+       //cabinet
+       withExistingParent("small_banana_cabinet_item", modLoc("block/banana_cabinet"));
+       withExistingParent("medium_banana_cabinet_item", modLoc("block/medium_banana_cabinet"));
+    //==============================================================================================================================================
     //|                                                            Blackberry                                                                      |
     //==============================================================================================================================================
        //mush
