@@ -1,0 +1,15 @@
+{
+    "replace": false,
+    "values": [
+        {"id":"c:starfruits",
+        "required": false},
+        {"id":"productivetrees:star_fruit",
+        "required": false},
+        {"id":"harvestcraft:starfruititem",
+        "required": false},
+        {"id":"croptopia:starfruit",
+        "required": false},
+        {"id":"pamhc2trees:starfruititem",
+        "required": false}
+    ]
+  }

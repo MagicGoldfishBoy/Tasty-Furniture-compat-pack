@@ -15,12 +15,16 @@ public class mushcompatregistry {
         public static final DeferredHolder<Item, Item> ELDERBERRY_MUSH = MUSH.register("elderberry_mush",
                 () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
                 .alwaysEdible().nutrition(1).saturationModifier(0.3f).build())));
- //--------------------------------------------------------------------------------------Juniper---------------------------------------------------------------------------------------------
+ //---------------------------------------------------------------------------------------Juniper-----------------------------------------------------------------------------------------------
         public static final DeferredHolder<Item, Item> JUNIPER_MUSH = MUSH.register("juniper_mush",
                 () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
                 .alwaysEdible().nutrition(1).saturationModifier(0.3f).build())));
- //--------------------------------------------------------------------------------------Banana---------------------------------------------------------------------------------------------
+ //----------------------------------------------------------------------------------------Banana-----------------------------------------------------------------------------------------------
         public static final DeferredHolder<Item, Item> BANANA_MUSH = MUSH.register("banana_mush",
+                () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
+                .alwaysEdible().nutrition(1).saturationModifier(0.3f).build())));
+ //--------------------------------------------------------------------------------------Starfruit----------------------------------------------------------------------------------------------
+        public static final DeferredHolder<Item, Item> STARFRUIT_MUSH = MUSH.register("starfruit_mush",
                 () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
                 .alwaysEdible().nutrition(1).saturationModifier(0.3f).build())));
  //--------------------------------------------------------------------------------------Blackberry---------------------------------------------------------------------------------------------

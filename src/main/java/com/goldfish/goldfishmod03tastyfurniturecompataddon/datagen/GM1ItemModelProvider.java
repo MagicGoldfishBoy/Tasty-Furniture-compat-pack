@@ -249,6 +249,84 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("small_banana_cabinet_item", modLoc("block/banana_cabinet"));
        withExistingParent("medium_banana_cabinet_item", modLoc("block/medium_banana_cabinet"));
     //==============================================================================================================================================
+    //|                                                            Starfruit                                                                      |
+    //==============================================================================================================================================
+       //mush
+       withExistingParent("starfruit_mush", mcLoc("item/generated")).texture("layer0", "item/starfruit_mush");
+       //ingot
+        withExistingParent("starfruit_ingot", mcLoc("item/generated")).texture("layer0", "item/starfruit_ingot");
+       //nugget
+        withExistingParent("starfruit_nugget", mcLoc("item/generated")).texture("layer0", "item/starfruit_nugget");
+       //block
+        withExistingParent("starfruit_block_item", modLoc("block/starfruit_block"));
+       //bricks block
+        withExistingParent("starfruit_bricks_block_item", modLoc("block/starfruit_bricks_block"));
+       //chiseled block
+        withExistingParent("starfruit_chiseled_block_item", modLoc("block/starfruit_chiseled_block"));
+       //tiles block
+        withExistingParent("starfruit_tiles_block_item", modLoc("block/starfruit_tiles_block"));
+       //slab
+       slab("starfruit_slab_item", modLoc("block/starfruit_block"), modLoc("block/starfruit_block"), modLoc("block/starfruit_block"));
+       //bricks slab
+       slab("starfruit_bricks_slab_item", modLoc("block/starfruit_bricks_block"), modLoc("block/starfruit_bricks_block"), modLoc("block/starfruit_bricks_block"));
+       //stairs
+       stairs("starfruit_stairs_item", modLoc("block/starfruit_block"), modLoc("block/starfruit_block"), modLoc("block/starfruit_block"));
+       //bricks stairs
+       stairs("starfruit_bricks_stairs_item", modLoc("block/starfruit_bricks_block"), modLoc("block/starfruit_bricks_block"), modLoc("block/starfruit_bricks_block"));
+       //bars
+       withExistingParent("starfruit_bars_item", mcLoc("item/generated")).texture("layer0", "block/starfruit_bars");
+       //doors
+       withExistingParent("starfruit_door_item", mcLoc("item/generated")).texture("layer0", "item/starfruit_door_item");
+       //button
+       buttonInventory("starfruit_button_item", modLoc("block/starfruit_block"));
+       //fence
+       fenceInventory("starfruit_fence_item", modLoc("block/starfruit_block"));
+       //gate
+       withExistingParent("starfruit_gate_item", modLoc("block/starfruit_gate"));
+       //pressure plate
+       pressurePlate("starfruit_pressure_plate_item", modLoc("block/starfruit_block"));
+       //sign
+       withExistingParent("starfruit_sign_item", mcLoc("item/generated")).texture("layer0", "item/starfruit_sign");
+       //trapdoor
+       withExistingParent("starfruit_trapdoor_item", modLoc("block/starfruit_trapdoor_trapdoor_bottom"));
+       //lamp
+       withExistingParent("starfruit_lamp_item", modLoc("block/starfruit_lamp"));
+       //carpet
+       ResourceLocation starfruit_carpet_texture = modLoc("block/starfruit_carpet");
+       carpet("starfruit_carpet_item", starfruit_carpet_texture);
+       //lantern
+        //regular
+        withExistingParent("starfruit_lantern_item", modLoc("block/starfruit_lantern"));
+        //soul
+          withExistingParent("starfruit_soul_lantern_item", modLoc("block/starfruit_soul_lantern"));
+       //chain
+       withExistingParent("starfruit_chain_item", modLoc("block/starfruit_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
+       //ladder
+       withExistingParent("starfruit_ladder_item", modLoc("block/starfruit_ladder"));
+       //table
+       withExistingParent("starfruit_table_item", modLoc("block/starfruit_table"));
+       //torches
+        //regular
+        withExistingParent("starfruit_torch_item", modLoc("block/starfruit_torch"));
+        //redstone
+          withExistingParent("starfruit_redstone_torch_item", modLoc("block/starfruit_redstone_torch"));
+        //soul
+          withExistingParent("starfruit_soul_torch_item", modLoc("block/starfruit_soul_torch"));
+       //furnaces
+       withExistingParent("starfruit_furnace_item", modLoc("block/starfruit_furnace_model_unlit"));
+       //paths
+       withExistingParent("starfruit_stone_path_item", modLoc("block/starfruit_stone_path"));
+       //barrel
+       withExistingParent("starfruit_barrel_item", modLoc("block/starfruit_barrel_model_closed"));
+       //chair
+       withExistingParent("starfruit_chair_item", modLoc("block/starfruit_chair"));
+       //bed
+       withExistingParent("starfruit_bed_item", modLoc("block/starfruit_bed"));
+       //cabinet
+       withExistingParent("small_starfruit_cabinet_item", modLoc("block/starfruit_cabinet"));
+       withExistingParent("medium_starfruit_cabinet_item", modLoc("block/medium_starfruit_cabinet"));
+    //==============================================================================================================================================
     //|                                                            Blackberry                                                                      |
     //==============================================================================================================================================
        //mush
