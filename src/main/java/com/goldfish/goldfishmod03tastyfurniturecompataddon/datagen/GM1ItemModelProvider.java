@@ -327,6 +327,84 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("small_starfruit_cabinet_item", modLoc("block/starfruit_cabinet"));
        withExistingParent("medium_starfruit_cabinet_item", modLoc("block/medium_starfruit_cabinet"));
     //==============================================================================================================================================
+    //|                                                            Kiwifruit                                                                      |
+    //==============================================================================================================================================
+       //mush
+       withExistingParent("kiwifruit_mush", mcLoc("item/generated")).texture("layer0", "item/kiwifruit_mush");
+       //ingot
+        withExistingParent("kiwifruit_ingot", mcLoc("item/generated")).texture("layer0", "item/kiwifruit_ingot");
+       //nugget
+        withExistingParent("kiwifruit_nugget", mcLoc("item/generated")).texture("layer0", "item/kiwifruit_nugget");
+       //block
+        withExistingParent("kiwifruit_block_item", modLoc("block/kiwifruit_block"));
+       //bricks block
+        withExistingParent("kiwifruit_bricks_block_item", modLoc("block/kiwifruit_bricks_block"));
+       //chiseled block
+        withExistingParent("kiwifruit_chiseled_block_item", modLoc("block/kiwifruit_chiseled_block"));
+       //tiles block
+        withExistingParent("kiwifruit_tiles_block_item", modLoc("block/kiwifruit_tiles_block"));
+       //slab
+       slab("kiwifruit_slab_item", modLoc("block/kiwifruit_block"), modLoc("block/kiwifruit_block"), modLoc("block/kiwifruit_block"));
+       //bricks slab
+       slab("kiwifruit_bricks_slab_item", modLoc("block/kiwifruit_bricks_block"), modLoc("block/kiwifruit_bricks_block"), modLoc("block/kiwifruit_bricks_block"));
+       //stairs
+       stairs("kiwifruit_stairs_item", modLoc("block/kiwifruit_block"), modLoc("block/kiwifruit_block"), modLoc("block/kiwifruit_block"));
+       //bricks stairs
+       stairs("kiwifruit_bricks_stairs_item", modLoc("block/kiwifruit_bricks_block"), modLoc("block/kiwifruit_bricks_block"), modLoc("block/kiwifruit_bricks_block"));
+       //bars
+       withExistingParent("kiwifruit_bars_item", mcLoc("item/generated")).texture("layer0", "block/kiwifruit_bars");
+       //doors
+       withExistingParent("kiwifruit_door_item", mcLoc("item/generated")).texture("layer0", "item/kiwifruit_door_item");
+       //button
+       buttonInventory("kiwifruit_button_item", modLoc("block/kiwifruit_block"));
+       //fence
+       fenceInventory("kiwifruit_fence_item", modLoc("block/kiwifruit_block"));
+       //gate
+       withExistingParent("kiwifruit_gate_item", modLoc("block/kiwifruit_gate"));
+       //pressure plate
+       pressurePlate("kiwifruit_pressure_plate_item", modLoc("block/kiwifruit_block"));
+       //sign
+       withExistingParent("kiwifruit_sign_item", mcLoc("item/generated")).texture("layer0", "item/kiwifruit_sign");
+       //trapdoor
+       withExistingParent("kiwifruit_trapdoor_item", modLoc("block/kiwifruit_trapdoor_trapdoor_bottom"));
+       //lamp
+       withExistingParent("kiwifruit_lamp_item", modLoc("block/kiwifruit_lamp"));
+       //carpet
+       ResourceLocation kiwifruit_carpet_texture = modLoc("block/kiwifruit_carpet");
+       carpet("kiwifruit_carpet_item", kiwifruit_carpet_texture);
+       //lantern
+        //regular
+        withExistingParent("kiwifruit_lantern_item", modLoc("block/kiwifruit_lantern"));
+        //soul
+          withExistingParent("kiwifruit_soul_lantern_item", modLoc("block/kiwifruit_soul_lantern"));
+       //chain
+       withExistingParent("kiwifruit_chain_item", modLoc("block/kiwifruit_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
+       //ladder
+       withExistingParent("kiwifruit_ladder_item", modLoc("block/kiwifruit_ladder"));
+       //table
+       withExistingParent("kiwifruit_table_item", modLoc("block/kiwifruit_table"));
+       //torches
+        //regular
+        withExistingParent("kiwifruit_torch_item", modLoc("block/kiwifruit_torch"));
+        //redstone
+          withExistingParent("kiwifruit_redstone_torch_item", modLoc("block/kiwifruit_redstone_torch"));
+        //soul
+          withExistingParent("kiwifruit_soul_torch_item", modLoc("block/kiwifruit_soul_torch"));
+       //furnaces
+       withExistingParent("kiwifruit_furnace_item", modLoc("block/kiwifruit_furnace_model_unlit"));
+       //paths
+       withExistingParent("kiwifruit_stone_path_item", modLoc("block/kiwifruit_stone_path"));
+       //barrel
+       withExistingParent("kiwifruit_barrel_item", modLoc("block/kiwifruit_barrel_model_closed"));
+       //chair
+       withExistingParent("kiwifruit_chair_item", modLoc("block/kiwifruit_chair"));
+       //bed
+       withExistingParent("kiwifruit_bed_item", modLoc("block/kiwifruit_bed"));
+       //cabinet
+       withExistingParent("small_kiwifruit_cabinet_item", modLoc("block/kiwifruit_cabinet"));
+       withExistingParent("medium_kiwifruit_cabinet_item", modLoc("block/medium_kiwifruit_cabinet"));
+    //==============================================================================================================================================
     //|                                                            Blackberry                                                                      |
     //==============================================================================================================================================
        //mush

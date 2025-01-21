@@ -65,6 +65,8 @@ public class GM1BlockStateProvider extends BlockStateProvider
      ResourceLocation banana_bricks_block_texture = modLoc("block/banana_bricks_block");
      ResourceLocation starfruit_block_texture = modLoc("block/starfruit_block");
      ResourceLocation starfruit_bricks_block_texture = modLoc("block/starfruit_bricks_block");
+     ResourceLocation kiwifruit_block_texture = modLoc("block/kiwifruit_block");
+     ResourceLocation kiwifruit_bricks_block_texture = modLoc("block/kiwifruit_bricks_block");
      ResourceLocation blackberry_block_texture = modLoc("block/blackberry_block");
      ResourceLocation blackberry_bricks_block_texture = modLoc("block/blackberry_bricks_block");
      ResourceLocation raspberry_block_texture = modLoc("block/raspberry_block");
@@ -205,6 +207,19 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........tiles
           net.minecraft.world.level.block.Block starfruit_tiles_block = foodblockcompatregistry.STARFRUIT_TILES_BLOCK.get();
           simpleBlock(starfruit_tiles_block);
+     //------------------------------------------------------------kiwifruit-----------------------------------------------------------------------
+      //.........plain
+          net.minecraft.world.level.block.Block kiwifruit_block = foodblockcompatregistry.KIWIFRUIT_BLOCK.get();
+          simpleBlock(kiwifruit_block);
+      //.........bricks
+          net.minecraft.world.level.block.Block kiwifruit_bricks_block = foodblockcompatregistry.KIWIFRUIT_BRICKS_BLOCK.get();
+          simpleBlock(kiwifruit_bricks_block);
+      //.........chiseled
+          net.minecraft.world.level.block.Block kiwifruit_chiseled_block = foodblockcompatregistry.KIWIFRUIT_CHISELED_BLOCK.get();
+          simpleBlock(kiwifruit_chiseled_block);
+      //.........tiles
+          net.minecraft.world.level.block.Block kiwifruit_tiles_block = foodblockcompatregistry.KIWIFRUIT_TILES_BLOCK.get();
+          simpleBlock(kiwifruit_tiles_block);
      //------------------------------------------------------------blackberry-----------------------------------------------------------------------
       //.........plain
           net.minecraft.world.level.block.Block blackberry_block = foodblockcompatregistry.BLACKBERRY_BLOCK.get();
@@ -590,6 +605,13 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........bricks
           SlabBlock starfruit_bricks_slab = foodblockcompatregistry.STARFRUIT_BRICKS_SLAB.get();
           slabBlock(starfruit_bricks_slab, starfruit_bricks_block_texture, starfruit_bricks_block_texture);
+     //------------------------------------------------------------kiwifruit-----------------------------------------------------------------------
+      //.........plain
+          SlabBlock kiwifruit_slab = foodblockcompatregistry.KIWIFRUIT_SLAB.get();
+          slabBlock(kiwifruit_slab, kiwifruit_block_texture, kiwifruit_block_texture);
+      //.........bricks
+          SlabBlock kiwifruit_bricks_slab = foodblockcompatregistry.KIWIFRUIT_BRICKS_SLAB.get();
+          slabBlock(kiwifruit_bricks_slab, kiwifruit_bricks_block_texture, kiwifruit_bricks_block_texture);
      //------------------------------------------------------------blackberry-----------------------------------------------------------------------
       //.........plain
           SlabBlock blackberry_slab = foodblockcompatregistry.BLACKBERRY_SLAB.get();
@@ -812,6 +834,13 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........bricks
           StairBlock starfruit_bricks_stairs = foodblockcompatregistry.STARFRUIT_BRICKS_STAIRS.get();
           stairsBlock(starfruit_bricks_stairs, starfruit_bricks_block_texture);
+     //------------------------------------------------------------kiwifruit-----------------------------------------------------------------------
+      //.........plain
+          StairBlock kiwifruit_stairs = foodblockcompatregistry.KIWIFRUIT_STAIRS.get();
+          stairsBlock(kiwifruit_stairs, kiwifruit_block_texture);
+      //.........bricks
+          StairBlock kiwifruit_bricks_stairs = foodblockcompatregistry.KIWIFRUIT_BRICKS_STAIRS.get();
+          stairsBlock(kiwifruit_bricks_stairs, kiwifruit_bricks_block_texture);
      //------------------------------------------------------------blackberry-----------------------------------------------------------------------
       //.........plain
           StairBlock blackberry_stairs = foodblockcompatregistry.BLACKBERRY_STAIRS.get();
@@ -1026,6 +1055,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation starfruit_bars_texture = modLoc("block/starfruit_bars");
           ResourceLocation starfruit_bars_rim_texture = modLoc("block/starfruit_block");
           paneBlockWithRenderType(starfruit_bars, "starfruit_bars", starfruit_bars_texture, starfruit_bars_rim_texture, "cutout_mipped_all"); 
+     //------------------------------------------------------------kiwifruit------------------------------------------------------------------------
+          IronBarsBlock kiwifruit_bars = foodblockcompatregistry.KIWIFRUIT_BARS.get(); 
+          ResourceLocation kiwifruit_bars_texture = modLoc("block/kiwifruit_bars");
+          ResourceLocation kiwifruit_bars_rim_texture = modLoc("block/kiwifruit_block");
+          paneBlockWithRenderType(kiwifruit_bars, "kiwifruit_bars", kiwifruit_bars_texture, kiwifruit_bars_rim_texture, "cutout_mipped_all"); 
      //------------------------------------------------------------blackberry-----------------------------------------------------------------------
           IronBarsBlock blackberry_bars = foodblockcompatregistry.BLACKBERRY_BARS.get(); 
           ResourceLocation blackberry_bars_texture = modLoc("block/blackberry_bars");
@@ -1186,6 +1220,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation starfruit_door_top_texture = modLoc("block/starfruit_door_top");
           ResourceLocation starfruit_door_bottom_texture = modLoc("block/starfruit_door_bottom");
           doorBlockWithRenderType(starfruit_door, "starfruit_door", starfruit_door_bottom_texture, starfruit_door_top_texture, "translucent"); 
+     //------------------------------------------------------------kiwifruit-----------------------------------------------------------------------
+          DoorBlock kiwifruit_door = foodblockcompatregistry.KIWIFRUIT_DOOR.get(); 
+          ResourceLocation kiwifruit_door_top_texture = modLoc("block/kiwifruit_door_top");
+          ResourceLocation kiwifruit_door_bottom_texture = modLoc("block/kiwifruit_door_bottom");
+          doorBlockWithRenderType(kiwifruit_door, "kiwifruit_door", kiwifruit_door_bottom_texture, kiwifruit_door_top_texture, "cutout_mipped_all"); 
      //------------------------------------------------------------blackberry-----------------------------------------------------------------------
           DoorBlock blackberry_door = foodblockcompatregistry.BLACKBERRY_DOOR.get(); 
           ResourceLocation blackberry_door_top_texture = modLoc("block/blackberry_door_top");
@@ -1342,6 +1381,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ButtonBlock starfruit_button = foodblockcompatregistry.STARFRUIT_BUTTON.get();
           ResourceLocation starfruit_button_texture = modLoc("block/starfruit_block");
           buttonBlock(starfruit_button, starfruit_button_texture);
+     //------------------------------------------------------------kiwifruit-----------------------------------------------------------------------
+          ButtonBlock kiwifruit_button = foodblockcompatregistry.KIWIFRUIT_BUTTON.get();
+          ResourceLocation kiwifruit_button_texture = modLoc("block/kiwifruit_block");
+          buttonBlock(kiwifruit_button, kiwifruit_button_texture);
      //------------------------------------------------------------blackberry-----------------------------------------------------------------------
           ButtonBlock blackberry_button = foodblockcompatregistry.BLACKBERRY_BUTTON.get();
           ResourceLocation blackberry_button_texture = modLoc("block/blackberry_block");
@@ -1491,6 +1534,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
           FenceGateBlock starfruit_gate = foodblockcompatregistry.STARFRUIT_GATE.get();
           ResourceLocation starfruit_gate_texture = modLoc("block/starfruit_block");
           fenceGateBlock(starfruit_gate, starfruit_gate_texture);
+     //------------------------------------------------------------kiwifruit-----------------------------------------------------------------------
+       //fence
+          FenceBlock kiwifruit_fence = foodblockcompatregistry.KIWIFRUIT_FENCE.get();
+          ResourceLocation kiwifruit_fence_texture = modLoc("block/kiwifruit_block");
+          fenceBlock(kiwifruit_fence, kiwifruit_fence_texture);
+       //gate
+          FenceGateBlock kiwifruit_gate = foodblockcompatregistry.KIWIFRUIT_GATE.get();
+          ResourceLocation kiwifruit_gate_texture = modLoc("block/kiwifruit_block");
+          fenceGateBlock(kiwifruit_gate, kiwifruit_gate_texture);
      //------------------------------------------------------------blackberry-----------------------------------------------------------------------
        //fence
           FenceBlock blackberry_fence = foodblockcompatregistry.BLACKBERRY_FENCE.get();
@@ -1755,6 +1807,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           PressurePlateBlock starfruit_pressure_plate = foodblockcompatregistry.STARFRUIT_PRESSURE_PLATE.get();
           ResourceLocation starfruit_pressure_plate_texture = modLoc("block/starfruit_block");
           pressurePlateBlock(starfruit_pressure_plate, starfruit_pressure_plate_texture);
+     //------------------------------------------------------------kiwifruit-----------------------------------------------------------------------
+          PressurePlateBlock kiwifruit_pressure_plate = foodblockcompatregistry.KIWIFRUIT_PRESSURE_PLATE.get();
+          ResourceLocation kiwifruit_pressure_plate_texture = modLoc("block/kiwifruit_block");
+          pressurePlateBlock(kiwifruit_pressure_plate, kiwifruit_pressure_plate_texture);
      //------------------------------------------------------------blackberry-----------------------------------------------------------------------
           PressurePlateBlock blackberry_pressure_plate = foodblockcompatregistry.BLACKBERRY_PRESSURE_PLATE.get();
           ResourceLocation blackberry_pressure_plate_texture = modLoc("block/blackberry_block");
@@ -1888,6 +1944,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
            WallSignBlock starfruit_wall_sign = foodblockcompatregistry.STARFRUIT_WALL_SIGN.get();
            ResourceLocation starfruit_sign_texture = modLoc("block/starfruit_block");
            signBlock(starfruit_sign, starfruit_wall_sign, starfruit_sign_texture);
+     //------------------------------------------------------------kiwifruit-----------------------------------------------------------------------
+           StandingSignBlock kiwifruit_sign = foodblockcompatregistry.KIWIFRUIT_STANDING_SIGN.get();
+           WallSignBlock kiwifruit_wall_sign = foodblockcompatregistry.KIWIFRUIT_WALL_SIGN.get();
+           ResourceLocation kiwifruit_sign_texture = modLoc("block/kiwifruit_block");
+           signBlock(kiwifruit_sign, kiwifruit_wall_sign, kiwifruit_sign_texture);
      //------------------------------------------------------------blackberry-----------------------------------------------------------------------
            StandingSignBlock blackberry_sign = foodblockcompatregistry.BLACKBERRY_STANDING_SIGN.get();
            WallSignBlock blackberry_wall_sign = foodblockcompatregistry.BLACKBERRY_WALL_SIGN.get();
@@ -2044,6 +2105,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           TrapDoorBlock starfruit_trapdoor = foodblockcompatregistry.STARFRUIT_TRAPDOOR.get(); 
           ResourceLocation starfruit_trapdoor_texture = modLoc("block/starfruit_block");
           trapdoorBlockWithRenderType(starfruit_trapdoor, "starfruit_trapdoor", starfruit_trapdoor_texture, false, starfruit_trapdoor_texture);
+     //------------------------------------------------------------kiwifruit-----------------------------------------------------------------------
+          TrapDoorBlock kiwifruit_trapdoor = foodblockcompatregistry.KIWIFRUIT_TRAPDOOR.get(); 
+          ResourceLocation kiwifruit_trapdoor_texture = modLoc("block/kiwifruit_block");
+          trapdoorBlockWithRenderType(kiwifruit_trapdoor, "kiwifruit_trapdoor", kiwifruit_trapdoor_texture, false, kiwifruit_trapdoor_texture);
      //------------------------------------------------------------blackberry-----------------------------------------------------------------------
           TrapDoorBlock blackberry_trapdoor = foodblockcompatregistry.BLACKBERRY_TRAPDOOR.get(); 
           ResourceLocation blackberry_trapdoor_texture = modLoc("block/blackberry_block");
@@ -2169,6 +2234,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
      //------------------------------------------------------------starfruit-----------------------------------------------------------------------
           Block starfruit_lamp = foodblockcompatregistry.STARFRUIT_LAMP.get();
           simpleBlock(starfruit_lamp);
+     //------------------------------------------------------------kiwifruit-----------------------------------------------------------------------
+          Block kiwifruit_lamp = foodblockcompatregistry.KIWIFRUIT_LAMP.get();
+          ResourceLocation kiwifruit_lamp_texture = modLoc("block/kiwifruit_lamp");
+          horizontalBlock(kiwifruit_lamp, kiwifruit_lamp_texture, kiwifruit_lamp_texture, kiwifruit_lamp_texture);
      //------------------------------------------------------------blackberry-----------------------------------------------------------------------
           Block blackberry_lamp = foodblockcompatregistry.BLACKBERRY_LAMP.get();
           ResourceLocation blackberry_lamp_texture = modLoc("block/blackberry_lamp");
@@ -2285,6 +2354,12 @@ public class GM1BlockStateProvider extends BlockStateProvider
           BlockModelBuilder starfruit_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(starfruit_carpet).getPath(), mcLoc("block/carpet"))
           .texture("wool", starfruit_carpet_texture);
           simpleBlock(starfruit_carpet, new ModelFile.UncheckedModelFile(starfruit_carpet_model.getLocation()));
+     //------------------------------------------------------------kiwifruit-----------------------------------------------------------------------
+          CarpetBlock kiwifruit_carpet = foodblockcompatregistry.KIWIFRUIT_CARPET.get();
+          ResourceLocation kiwifruit_carpet_texture = modLoc("block/kiwifruit_carpet");
+          BlockModelBuilder kiwifruit_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(kiwifruit_carpet).getPath(), mcLoc("block/carpet"))
+          .texture("wool", kiwifruit_carpet_texture);
+          simpleBlock(kiwifruit_carpet, new ModelFile.UncheckedModelFile(kiwifruit_carpet_model.getLocation()));
      //------------------------------------------------------------blackberry-----------------------------------------------------------------------
           CarpetBlock blackberry_carpet = foodblockcompatregistry.BLACKBERRY_CARPET.get();
           ResourceLocation blackberry_carpet_texture = modLoc("block/blackberry_carpet");
@@ -2608,6 +2683,45 @@ public class GM1BlockStateProvider extends BlockStateProvider
              .modelForState().modelFile(hanging_starfruit_soul_lantern_model).addModel()
              .partialState().with(LanternBlock.HANGING, false)
              .modelForState().modelFile(starfruit_soul_lantern_model).addModel();
+     //------------------------------------------------------------kiwifruit-----------------------------------------------------------------------
+         //regular
+          LanternBlock kiwifruit_lantern = foodblockcompatregistry.KIWIFRUIT_LANTERN.get();
+          ResourceLocation kiwifruit_lantern_texture = modLoc("block/kiwifruit_lantern");
+  
+          BlockModelBuilder kiwifruit_lantern_model = models()
+              .withExistingParent("kiwifruit_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", kiwifruit_lantern_texture);
+  
+          BlockModelBuilder hanging_kiwifruit_lantern_model = models()
+              .withExistingParent("kiwifruit_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", kiwifruit_lantern_texture);
+  
+          getVariantBuilder(kiwifruit_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_kiwifruit_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(kiwifruit_lantern_model).addModel();
+         //soul
+         LanternBlock kiwifruit_soul_lantern = foodblockcompatregistry.KIWIFRUIT_SOUL_LANTERN.get();
+         ResourceLocation kiwifruit_soul_lantern_texture = modLoc("block/kiwifruit_soul_lantern");
+ 
+         BlockModelBuilder kiwifruit_soul_lantern_model = models()
+             .withExistingParent("kiwifruit_soul_lantern", mcLoc("block/lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", kiwifruit_soul_lantern_texture);
+ 
+         BlockModelBuilder hanging_kiwifruit_soul_lantern_model = models()
+             .withExistingParent("kiwifruit_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", kiwifruit_soul_lantern_texture);
+ 
+         getVariantBuilder(kiwifruit_soul_lantern)
+             .partialState().with(LanternBlock.HANGING, true)
+             .modelForState().modelFile(hanging_kiwifruit_soul_lantern_model).addModel()
+             .partialState().with(LanternBlock.HANGING, false)
+             .modelForState().modelFile(kiwifruit_soul_lantern_model).addModel();
      //------------------------------------------------------------blackberry-----------------------------------------------------------------------
          //regular
           LanternBlock blackberry_lantern = foodblockcompatregistry.BLACKBERRY_LANTERN.get();
@@ -3730,6 +3844,22 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .modelForState().modelFile(starfruit_chain_model).rotationX(90).rotationY(90).addModel()
           .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
           .modelForState().modelFile(starfruit_chain_model).rotationX(90).addModel(); 
+     //------------------------------------------------------------kiwifruit-----------------------------------------------------------------------
+         ChainBlock kiwifruit_chain = foodblockcompatregistry.KIWIFRUIT_CHAIN.get();
+         ResourceLocation kiwifruit_chain_texture = modLoc("block/kiwifruit_chain");
+         BlockModelBuilder kiwifruit_chain_model = models()
+          .withExistingParent("kiwifruit_chain", mcLoc("block/chain"))
+          .renderType("cutout_mipped_all")
+          .texture("all", kiwifruit_chain_texture)
+          .texture("particle", kiwifruit_chain_texture);
+
+          getVariantBuilder(kiwifruit_chain)
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Y)
+          .modelForState().modelFile(kiwifruit_chain_model).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.X)
+          .modelForState().modelFile(kiwifruit_chain_model).rotationX(90).rotationY(90).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
+          .modelForState().modelFile(kiwifruit_chain_model).rotationX(90).addModel(); 
      //------------------------------------------------------------blackberry-----------------------------------------------------------------------
          ChainBlock blackberry_chain = foodblockcompatregistry.BLACKBERRY_CHAIN.get();
          ResourceLocation blackberry_chain_texture = modLoc("block/blackberry_chain");
@@ -4245,6 +4375,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/starfruit_ladder");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------kiwifruit-----------------------------------------------------------------------
+          LadderBlock kiwifruitladder = foodblockcompatregistry.KIWIFRUIT_LADDER.get();
+
+          getVariantBuilder(kiwifruitladder)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/kiwifruit_ladder");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -4901,6 +5052,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/starfruit_table");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------kiwifruit-----------------------------------------------------------------------
+          HorizontalDirectionalBlock kiwifruittable = foodblockcompatregistry.KIWIFRUIT_TABLE.get();
+
+          getVariantBuilder(kiwifruittable)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/kiwifruit_table");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -5941,6 +6113,122 @@ public class GM1BlockStateProvider extends BlockStateProvider
                     .renderType("cutout_mipped_all")
                     .texture("torch", starfruit_soul_wall_torch_texture)
                     .texture("particle", starfruit_soul_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+     //------------------------------------------------------------kiwifruit-----------------------------------------------------------------------
+       //regular
+        TorchBlock kiwifruit_torch = foodblockcompatregistry.KIWIFRUIT_TORCH.get();
+        ResourceLocation kiwifruit_torch_texture = modLoc("block/kiwifruit_torch");
+        BlockModelBuilder kiwifruit_torch_model = models()
+        .withExistingParent("kiwifruit_torch", mcLoc("block/torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", kiwifruit_torch_texture)
+        .texture("particle", kiwifruit_torch_texture);
+
+        simpleBlock(kiwifruit_torch, kiwifruit_torch_model);
+
+        TorchBlock kiwifruit_wall_torch = foodblockcompatregistry.KIWIFRUIT_WALL_TORCH.get();
+        BlockModelBuilder kiwifruit_wall_torch_model = models()
+        .withExistingParent("kiwifruit_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", kiwifruit_torch_texture)
+        .texture("particle", kiwifruit_torch_texture);
+        getVariantBuilder(kiwifruit_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("kiwifruit_wall_torch", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", kiwifruit_torch_texture)
+                    .texture("particle", kiwifruit_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //redstone
+        RedstoneTorchBlock kiwifruit_redstone_torch = foodblockcompatregistry.KIWIFRUIT_REDSTONE_TORCH.get();
+        ResourceLocation kiwifruit_redstone_torch_texture = modLoc("block/kiwifruit_redstone_torch");
+        BlockModelBuilder kiwifruit_redstone_torch_model = models()
+        .withExistingParent("kiwifruit_redstone_torch", mcLoc("block/redstone_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", kiwifruit_redstone_torch_texture)
+        .texture("particle", kiwifruit_redstone_torch_texture);
+        
+
+        simpleBlock(kiwifruit_redstone_torch, kiwifruit_redstone_torch_model);
+
+        ResourceLocation kiwifruit_redstone_wall_torch_texture = modLoc("block/kiwifruit_redstone_torch");
+
+        RedstoneTorchBlock kiwifruit_redstone_wall_torch = foodblockcompatregistry.KIWIFRUIT_REDSTONE_WALL_TORCH.get();
+        BlockModelBuilder kiwifruit_redstone_wall_torch_model = models()
+        .withExistingParent("kiwifruit_redstone_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", kiwifruit_redstone_wall_torch_texture)
+        .texture("particle", kiwifruit_redstone_wall_torch_texture);
+        getVariantBuilder(kiwifruit_redstone_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("kiwifruit_redstone_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", kiwifruit_redstone_wall_torch_texture)
+                    .texture("particle", kiwifruit_redstone_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //soul
+        TorchBlock kiwifruit_soul_torch = foodblockcompatregistry.KIWIFRUIT_SOUL_TORCH.get();
+        ResourceLocation kiwifruit_soul_torch_texture = modLoc("block/kiwifruit_soul_torch");
+        BlockModelBuilder kiwifruit_soul_torch_model = models()
+        .withExistingParent("kiwifruit_soul_torch", mcLoc("block/soul_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", kiwifruit_soul_torch_texture)
+        .texture("particle", kiwifruit_soul_torch_texture);
+        
+
+        simpleBlock(kiwifruit_soul_torch, kiwifruit_soul_torch_model);
+
+        ResourceLocation kiwifruit_soul_wall_torch_texture = modLoc("block/kiwifruit_soul_torch");
+        TorchBlock kiwifruit_soul_wall_torch = foodblockcompatregistry.KIWIFRUIT_SOUL_WALL_TORCH.get();
+        BlockModelBuilder kiwifruit_soul_wall_torch_model = models()
+        .withExistingParent("kiwifruit_soul_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", kiwifruit_soul_wall_torch_texture)
+        .texture("particle", kiwifruit_soul_wall_torch_texture);
+        getVariantBuilder(kiwifruit_soul_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("kiwifruit_soul_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", kiwifruit_soul_wall_torch_texture)
+                    .texture("particle", kiwifruit_soul_wall_torch_texture))
                 .rotationY(rotation)
                 .build();
             });
@@ -9250,6 +9538,47 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationY(rotation)
                       .build();
               });
+     //------------------------------------------------------------kiwifruit-----------------------------------------------------------------------
+          FurnaceBlock kiwifruit_furnace = foodblockcompatregistry.KIWIFRUIT_FURNACE.get();
+          ResourceLocation kiwifruit_furnace_unlit_texture = modLoc("block/kiwifruit_furnace");
+          ResourceLocation kiwifruit_furnace_lit_texture = modLoc("block/kiwifruit_furnace_lit");
+          ResourceLocation kiwifruit_furnace_side = modLoc("block/kiwifruit_block");
+          
+          BlockModelBuilder kiwifruit_furnace_model_unlit = models()
+              .withExistingParent("kiwifruit_furnace_model_unlit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", kiwifruit_furnace_side)
+              .texture("top", kiwifruit_furnace_side)
+              .texture("front", kiwifruit_furnace_unlit_texture)
+              .texture("particle", kiwifruit_furnace_side);
+          
+          BlockModelBuilder kiwifruit_furnace_model_lit = models()
+              .withExistingParent("kiwifruit_furnace_model_lit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", kiwifruit_furnace_side)
+              .texture("top", kiwifruit_furnace_side)
+              .texture("front", kiwifruit_furnace_lit_texture)
+              .texture("particle", kiwifruit_furnace_side);
+          
+          getVariantBuilder(kiwifruit_furnace)
+              .forAllStates(state -> {
+                  Boolean lit = state.getValue(BlockStateProperties.LIT);
+                  Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                  int rotation = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+
+                  ResourceLocation modelLocation = lit ? modLoc("block/kiwifruit_furnace_model_lit") : modLoc("block/kiwifruit_furnace_model_unlit");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotation)
+                      .build();
+              });
      //------------------------------------------------------------blackberry-----------------------------------------------------------------------
           FurnaceBlock blackberry_furnace = foodblockcompatregistry.BLACKBERRY_FURNACE.get();
           ResourceLocation blackberry_furnace_unlit_texture = modLoc("block/blackberry_furnace");
@@ -10469,6 +10798,18 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .modelFile(models().getExistingFile(modelLocation))
                   .build();
           });
+     //------------------------------------------------------------kiwifruit-----------------------------------------------------------------------
+          foodpathtypeminislab kiwifruit_stone_path = foodblockcompatregistry.KIWIFRUIT_STONE_PATH.get();
+
+          getVariantBuilder(kiwifruit_stone_path)
+          .forAllStates(state -> {
+
+              ResourceLocation modelLocation = modLoc("block/kiwifruit_stone_path");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .build();
+          });
      //------------------------------------------------------------blackberry-----------------------------------------------------------------------
           foodpathtypeminislab blackberry_stone_path = foodblockcompatregistry.BLACKBERRY_STONE_PATH.get();
 
@@ -10984,6 +11325,54 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   };
 
                   ResourceLocation modelLocation = open ? modLoc("block/starfruit_barrel_model_open") : modLoc("block/starfruit_barrel_model_closed");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotationY)
+                      .rotationX(rotationX)
+                      .build();
+              });
+     //------------------------------------------------------------kiwifruit-----------------------------------------------------------------------
+          compatFoodBarrel kiwifruit_barrel = foodblockcompatregistry.KIWIFRUIT_BARREL.get();
+          ResourceLocation kiwifruit_barrel_closed_texture = modLoc("block/kiwifruit_barrel_top_closed");
+          ResourceLocation kiwifruit_barrel_open_texture = modLoc("block/kiwifruit_barrel_top_open");
+          ResourceLocation kiwifruit_barrel_side = modLoc("block/kiwifruit_barrel_side");
+          ResourceLocation kiwifruit_barrel_bottom = modLoc("block/kiwifruit_barrel_bottom");
+          
+          BlockModelBuilder kiwifruit_barrel_model_closed = models()
+              .withExistingParent("kiwifruit_barrel_model_closed", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", kiwifruit_barrel_side)
+              .texture("bottom", kiwifruit_barrel_bottom)
+              .texture("top", kiwifruit_barrel_closed_texture)
+              .texture("particle", kiwifruit_barrel_side);
+          
+          BlockModelBuilder kiwifruit_barrel_model_open = models()
+              .withExistingParent("kiwifruit_barrel_model_open", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", kiwifruit_barrel_side)
+              .texture("bottom", kiwifruit_barrel_bottom)
+              .texture("top", kiwifruit_barrel_open_texture)
+              .texture("particle", kiwifruit_barrel_side);
+          
+          getVariantBuilder(kiwifruit_barrel)
+              .forAllStates(state -> {
+                  Boolean open = state.getValue(BlockStateProperties.OPEN);
+                  Direction facing = state.getValue(BlockStateProperties.FACING);
+                  int rotationY = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+                  int rotationX = switch (facing) {
+                      case UP -> 0;
+                      case DOWN -> 180;
+                      default -> 90;
+                  };
+
+                  ResourceLocation modelLocation = open ? modLoc("block/kiwifruit_barrel_model_open") : modLoc("block/kiwifruit_barrel_model_closed");
               
                   return ConfiguredModel.builder()
                       .modelFile(models().getExistingFile(modelLocation))
@@ -12377,6 +12766,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .rotationY(rotationY)
                   .build();
           });
+     //------------------------------------------------------------kiwifruit-----------------------------------------------------------------------
+          foodChairBlock kiwifruitChair = foodblockcompatregistry.KIWIFRUIT_CHAIR.get();
+
+          getVariantBuilder(kiwifruitChair)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/kiwifruit_chair");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
      //------------------------------------------------------------blackberry-----------------------------------------------------------------------
           foodChairBlock blackberryChair = foodblockcompatregistry.BLACKBERRY_CHAIR.get();
 
@@ -13027,6 +13437,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/starfruit_bed");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------kiwifruit-----------------------------------------------------------------------
+          compatBed kiwifruitBed = foodblockcompatregistry.KIWIFRUIT_BED.get();
+
+          getVariantBuilder(kiwifruitBed)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/kiwifruit_bed");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -13780,6 +14211,51 @@ public class GM1BlockStateProvider extends BlockStateProvider
              };
 
              ResourceLocation modelLocation = open ? modLoc("block/medium_starfruit_cabinet_open") : modLoc("block/medium_starfruit_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
+     //------------------------------------------------------------kiwifruit-----------------------------------------------------------------------
+        //small
+         compatSmallFoodCabinet kiwifruitCabinet = foodblockcompatregistry.SMALL_KIWIFRUIT_CABINET.get();
+
+         getVariantBuilder(kiwifruitCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
+
+             ResourceLocation modelLocation = open ? modLoc("block/kiwifruit_cabinet_open") : modLoc("block/kiwifruit_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
+        //medium
+         compatMediumFoodCabinet kiwifruitMediumCabinet = foodblockcompatregistry.MEDIUM_KIWIFRUIT_CABINET.get();
+
+         getVariantBuilder(kiwifruitMediumCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
+
+             ResourceLocation modelLocation = open ? modLoc("block/medium_kiwifruit_cabinet_open") : modLoc("block/medium_kiwifruit_cabinet");
          
              return ConfiguredModel.builder()
                  .modelFile(models().getExistingFile(modelLocation))

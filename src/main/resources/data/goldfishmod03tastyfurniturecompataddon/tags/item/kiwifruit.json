@@ -1,0 +1,15 @@
+{
+    "replace": false,
+    "values": [
+        {"id":"c:kiwis",
+        "required": false},
+        {"id":"fruitsdelight:kiwi",
+        "required": false},
+        {"id":"harvestcraft:kiwiitem",
+        "required": false},
+        {"id":"croptopia:kiwi",
+        "required": false},
+        {"id":"pamhc2crops:kiwiitem",
+        "required": false}
+    ]
+  }
