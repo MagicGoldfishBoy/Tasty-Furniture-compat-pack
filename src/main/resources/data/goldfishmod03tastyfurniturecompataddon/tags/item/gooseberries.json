@@ -1,0 +1,11 @@
+{
+    "replace": false,
+    "values": [
+        {"id":"c:foods/gooseberries",
+        "required": false},
+        {"id":"harvestcraft:gooseberryitem",
+        "required": false},
+        {"id":"pamhc2trees:gooseberryitem",
+        "required": false}
+    ]
+  }

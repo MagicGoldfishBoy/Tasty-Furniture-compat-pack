@@ -67,6 +67,8 @@ public class GM1BlockStateProvider extends BlockStateProvider
      ResourceLocation starfruit_bricks_block_texture = modLoc("block/starfruit_bricks_block");
      ResourceLocation kiwifruit_block_texture = modLoc("block/kiwifruit_block");
      ResourceLocation kiwifruit_bricks_block_texture = modLoc("block/kiwifruit_bricks_block");
+     ResourceLocation gooseberry_block_texture = modLoc("block/gooseberry_block");
+     ResourceLocation gooseberry_bricks_block_texture = modLoc("block/gooseberry_bricks_block");
      ResourceLocation blackberry_block_texture = modLoc("block/blackberry_block");
      ResourceLocation blackberry_bricks_block_texture = modLoc("block/blackberry_bricks_block");
      ResourceLocation raspberry_block_texture = modLoc("block/raspberry_block");
@@ -220,6 +222,19 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........tiles
           net.minecraft.world.level.block.Block kiwifruit_tiles_block = foodblockcompatregistry.KIWIFRUIT_TILES_BLOCK.get();
           simpleBlock(kiwifruit_tiles_block);
+     //------------------------------------------------------------gooseberry-----------------------------------------------------------------------
+      //.........plain
+          net.minecraft.world.level.block.Block gooseberry_block = foodblockcompatregistry.GOOSEBERRY_BLOCK.get();
+          simpleBlock(gooseberry_block);
+      //.........bricks
+          net.minecraft.world.level.block.Block gooseberry_bricks_block = foodblockcompatregistry.GOOSEBERRY_BRICKS_BLOCK.get();
+          simpleBlock(gooseberry_bricks_block);
+      //.........chiseled
+          net.minecraft.world.level.block.Block gooseberry_chiseled_block = foodblockcompatregistry.GOOSEBERRY_CHISELED_BLOCK.get();
+          simpleBlock(gooseberry_chiseled_block);
+      //.........tiles
+          net.minecraft.world.level.block.Block gooseberry_tiles_block = foodblockcompatregistry.GOOSEBERRY_TILES_BLOCK.get();
+          simpleBlock(gooseberry_tiles_block);
      //------------------------------------------------------------blackberry-----------------------------------------------------------------------
       //.........plain
           net.minecraft.world.level.block.Block blackberry_block = foodblockcompatregistry.BLACKBERRY_BLOCK.get();
@@ -612,6 +627,13 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........bricks
           SlabBlock kiwifruit_bricks_slab = foodblockcompatregistry.KIWIFRUIT_BRICKS_SLAB.get();
           slabBlock(kiwifruit_bricks_slab, kiwifruit_bricks_block_texture, kiwifruit_bricks_block_texture);
+     //------------------------------------------------------------gooseberry-----------------------------------------------------------------------
+      //.........plain
+          SlabBlock gooseberry_slab = foodblockcompatregistry.GOOSEBERRY_SLAB.get();
+          slabBlock(gooseberry_slab, gooseberry_block_texture, gooseberry_block_texture);
+      //.........bricks
+          SlabBlock gooseberry_bricks_slab = foodblockcompatregistry.GOOSEBERRY_BRICKS_SLAB.get();
+          slabBlock(gooseberry_bricks_slab, gooseberry_bricks_block_texture, gooseberry_bricks_block_texture);
      //------------------------------------------------------------blackberry-----------------------------------------------------------------------
       //.........plain
           SlabBlock blackberry_slab = foodblockcompatregistry.BLACKBERRY_SLAB.get();
@@ -841,6 +863,13 @@ public class GM1BlockStateProvider extends BlockStateProvider
       //.........bricks
           StairBlock kiwifruit_bricks_stairs = foodblockcompatregistry.KIWIFRUIT_BRICKS_STAIRS.get();
           stairsBlock(kiwifruit_bricks_stairs, kiwifruit_bricks_block_texture);
+     //------------------------------------------------------------gooseberry-----------------------------------------------------------------------
+      //.........plain
+          StairBlock gooseberry_stairs = foodblockcompatregistry.GOOSEBERRY_STAIRS.get();
+          stairsBlock(gooseberry_stairs, gooseberry_block_texture);
+      //.........bricks
+          StairBlock gooseberry_bricks_stairs = foodblockcompatregistry.GOOSEBERRY_BRICKS_STAIRS.get();
+          stairsBlock(gooseberry_bricks_stairs, gooseberry_bricks_block_texture);
      //------------------------------------------------------------blackberry-----------------------------------------------------------------------
       //.........plain
           StairBlock blackberry_stairs = foodblockcompatregistry.BLACKBERRY_STAIRS.get();
@@ -1060,6 +1089,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation kiwifruit_bars_texture = modLoc("block/kiwifruit_bars");
           ResourceLocation kiwifruit_bars_rim_texture = modLoc("block/kiwifruit_block");
           paneBlockWithRenderType(kiwifruit_bars, "kiwifruit_bars", kiwifruit_bars_texture, kiwifruit_bars_rim_texture, "cutout_mipped_all"); 
+     //------------------------------------------------------------gooseberry------------------------------------------------------------------------
+          IronBarsBlock gooseberry_bars = foodblockcompatregistry.GOOSEBERRY_BARS.get(); 
+          ResourceLocation gooseberry_bars_texture = modLoc("block/gooseberry_bars");
+          ResourceLocation gooseberry_bars_rim_texture = modLoc("block/gooseberry_block");
+          paneBlockWithRenderType(gooseberry_bars, "gooseberry_bars", gooseberry_bars_texture, gooseberry_bars_rim_texture, "cutout_mipped_all"); 
      //------------------------------------------------------------blackberry-----------------------------------------------------------------------
           IronBarsBlock blackberry_bars = foodblockcompatregistry.BLACKBERRY_BARS.get(); 
           ResourceLocation blackberry_bars_texture = modLoc("block/blackberry_bars");
@@ -1225,6 +1259,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ResourceLocation kiwifruit_door_top_texture = modLoc("block/kiwifruit_door_top");
           ResourceLocation kiwifruit_door_bottom_texture = modLoc("block/kiwifruit_door_bottom");
           doorBlockWithRenderType(kiwifruit_door, "kiwifruit_door", kiwifruit_door_bottom_texture, kiwifruit_door_top_texture, "cutout_mipped_all"); 
+     //------------------------------------------------------------gooseberry-----------------------------------------------------------------------
+          DoorBlock gooseberry_door = foodblockcompatregistry.GOOSEBERRY_DOOR.get(); 
+          ResourceLocation gooseberry_door_top_texture = modLoc("block/gooseberry_door_top");
+          ResourceLocation gooseberry_door_bottom_texture = modLoc("block/gooseberry_door_bottom");
+          doorBlockWithRenderType(gooseberry_door, "gooseberry_door", gooseberry_door_bottom_texture, gooseberry_door_top_texture, "cutout_mipped_all"); 
      //------------------------------------------------------------blackberry-----------------------------------------------------------------------
           DoorBlock blackberry_door = foodblockcompatregistry.BLACKBERRY_DOOR.get(); 
           ResourceLocation blackberry_door_top_texture = modLoc("block/blackberry_door_top");
@@ -1385,6 +1424,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           ButtonBlock kiwifruit_button = foodblockcompatregistry.KIWIFRUIT_BUTTON.get();
           ResourceLocation kiwifruit_button_texture = modLoc("block/kiwifruit_block");
           buttonBlock(kiwifruit_button, kiwifruit_button_texture);
+     //------------------------------------------------------------gooseberry-----------------------------------------------------------------------
+          ButtonBlock gooseberry_button = foodblockcompatregistry.GOOSEBERRY_BUTTON.get();
+          ResourceLocation gooseberry_button_texture = modLoc("block/gooseberry_block");
+          buttonBlock(gooseberry_button, gooseberry_button_texture);
      //------------------------------------------------------------blackberry-----------------------------------------------------------------------
           ButtonBlock blackberry_button = foodblockcompatregistry.BLACKBERRY_BUTTON.get();
           ResourceLocation blackberry_button_texture = modLoc("block/blackberry_block");
@@ -1543,6 +1586,15 @@ public class GM1BlockStateProvider extends BlockStateProvider
           FenceGateBlock kiwifruit_gate = foodblockcompatregistry.KIWIFRUIT_GATE.get();
           ResourceLocation kiwifruit_gate_texture = modLoc("block/kiwifruit_block");
           fenceGateBlock(kiwifruit_gate, kiwifruit_gate_texture);
+     //------------------------------------------------------------gooseberry-----------------------------------------------------------------------
+       //fence
+          FenceBlock gooseberry_fence = foodblockcompatregistry.GOOSEBERRY_FENCE.get();
+          ResourceLocation gooseberry_fence_texture = modLoc("block/gooseberry_block");
+          fenceBlock(gooseberry_fence, gooseberry_fence_texture);
+       //gate
+          FenceGateBlock gooseberry_gate = foodblockcompatregistry.GOOSEBERRY_GATE.get();
+          ResourceLocation gooseberry_gate_texture = modLoc("block/gooseberry_block");
+          fenceGateBlock(gooseberry_gate, gooseberry_gate_texture);
      //------------------------------------------------------------blackberry-----------------------------------------------------------------------
        //fence
           FenceBlock blackberry_fence = foodblockcompatregistry.BLACKBERRY_FENCE.get();
@@ -1811,6 +1863,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           PressurePlateBlock kiwifruit_pressure_plate = foodblockcompatregistry.KIWIFRUIT_PRESSURE_PLATE.get();
           ResourceLocation kiwifruit_pressure_plate_texture = modLoc("block/kiwifruit_block");
           pressurePlateBlock(kiwifruit_pressure_plate, kiwifruit_pressure_plate_texture);
+     //------------------------------------------------------------gooseberry-----------------------------------------------------------------------
+          PressurePlateBlock gooseberry_pressure_plate = foodblockcompatregistry.GOOSEBERRY_PRESSURE_PLATE.get();
+          ResourceLocation gooseberry_pressure_plate_texture = modLoc("block/gooseberry_block");
+          pressurePlateBlock(gooseberry_pressure_plate, gooseberry_pressure_plate_texture);
      //------------------------------------------------------------blackberry-----------------------------------------------------------------------
           PressurePlateBlock blackberry_pressure_plate = foodblockcompatregistry.BLACKBERRY_PRESSURE_PLATE.get();
           ResourceLocation blackberry_pressure_plate_texture = modLoc("block/blackberry_block");
@@ -1949,6 +2005,11 @@ public class GM1BlockStateProvider extends BlockStateProvider
            WallSignBlock kiwifruit_wall_sign = foodblockcompatregistry.KIWIFRUIT_WALL_SIGN.get();
            ResourceLocation kiwifruit_sign_texture = modLoc("block/kiwifruit_block");
            signBlock(kiwifruit_sign, kiwifruit_wall_sign, kiwifruit_sign_texture);
+     //------------------------------------------------------------gooseberry-----------------------------------------------------------------------
+           StandingSignBlock gooseberry_sign = foodblockcompatregistry.GOOSEBERRY_STANDING_SIGN.get();
+           WallSignBlock gooseberry_wall_sign = foodblockcompatregistry.GOOSEBERRY_WALL_SIGN.get();
+           ResourceLocation gooseberry_sign_texture = modLoc("block/gooseberry_block");
+           signBlock(gooseberry_sign, gooseberry_wall_sign, gooseberry_sign_texture);
      //------------------------------------------------------------blackberry-----------------------------------------------------------------------
            StandingSignBlock blackberry_sign = foodblockcompatregistry.BLACKBERRY_STANDING_SIGN.get();
            WallSignBlock blackberry_wall_sign = foodblockcompatregistry.BLACKBERRY_WALL_SIGN.get();
@@ -2109,6 +2170,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           TrapDoorBlock kiwifruit_trapdoor = foodblockcompatregistry.KIWIFRUIT_TRAPDOOR.get(); 
           ResourceLocation kiwifruit_trapdoor_texture = modLoc("block/kiwifruit_block");
           trapdoorBlockWithRenderType(kiwifruit_trapdoor, "kiwifruit_trapdoor", kiwifruit_trapdoor_texture, false, kiwifruit_trapdoor_texture);
+     //------------------------------------------------------------gooseberry-----------------------------------------------------------------------
+          TrapDoorBlock gooseberry_trapdoor = foodblockcompatregistry.GOOSEBERRY_TRAPDOOR.get(); 
+          ResourceLocation gooseberry_trapdoor_texture = modLoc("block/gooseberry_block");
+          trapdoorBlockWithRenderType(gooseberry_trapdoor, "gooseberry_trapdoor", gooseberry_trapdoor_texture, false, gooseberry_trapdoor_texture);
      //------------------------------------------------------------blackberry-----------------------------------------------------------------------
           TrapDoorBlock blackberry_trapdoor = foodblockcompatregistry.BLACKBERRY_TRAPDOOR.get(); 
           ResourceLocation blackberry_trapdoor_texture = modLoc("block/blackberry_block");
@@ -2238,6 +2303,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
           Block kiwifruit_lamp = foodblockcompatregistry.KIWIFRUIT_LAMP.get();
           ResourceLocation kiwifruit_lamp_texture = modLoc("block/kiwifruit_lamp");
           horizontalBlock(kiwifruit_lamp, kiwifruit_lamp_texture, kiwifruit_lamp_texture, kiwifruit_lamp_texture);
+     //------------------------------------------------------------gooseberry-----------------------------------------------------------------------
+          Block gooseberry_lamp = foodblockcompatregistry.GOOSEBERRY_LAMP.get();
+          ResourceLocation gooseberry_lamp_texture = modLoc("block/gooseberry_lamp");
+          horizontalBlock(gooseberry_lamp, gooseberry_lamp_texture, gooseberry_lamp_texture, gooseberry_lamp_texture);
      //------------------------------------------------------------blackberry-----------------------------------------------------------------------
           Block blackberry_lamp = foodblockcompatregistry.BLACKBERRY_LAMP.get();
           ResourceLocation blackberry_lamp_texture = modLoc("block/blackberry_lamp");
@@ -2360,6 +2429,12 @@ public class GM1BlockStateProvider extends BlockStateProvider
           BlockModelBuilder kiwifruit_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(kiwifruit_carpet).getPath(), mcLoc("block/carpet"))
           .texture("wool", kiwifruit_carpet_texture);
           simpleBlock(kiwifruit_carpet, new ModelFile.UncheckedModelFile(kiwifruit_carpet_model.getLocation()));
+     //------------------------------------------------------------gooseberry-----------------------------------------------------------------------
+          CarpetBlock gooseberry_carpet = foodblockcompatregistry.GOOSEBERRY_CARPET.get();
+          ResourceLocation gooseberry_carpet_texture = modLoc("block/gooseberry_carpet");
+          BlockModelBuilder gooseberry_carpet_model = models().withExistingParent(BuiltInRegistries.BLOCK.getKey(gooseberry_carpet).getPath(), mcLoc("block/carpet"))
+          .texture("wool", gooseberry_carpet_texture);
+          simpleBlock(gooseberry_carpet, new ModelFile.UncheckedModelFile(gooseberry_carpet_model.getLocation()));
      //------------------------------------------------------------blackberry-----------------------------------------------------------------------
           CarpetBlock blackberry_carpet = foodblockcompatregistry.BLACKBERRY_CARPET.get();
           ResourceLocation blackberry_carpet_texture = modLoc("block/blackberry_carpet");
@@ -2722,6 +2797,45 @@ public class GM1BlockStateProvider extends BlockStateProvider
              .modelForState().modelFile(hanging_kiwifruit_soul_lantern_model).addModel()
              .partialState().with(LanternBlock.HANGING, false)
              .modelForState().modelFile(kiwifruit_soul_lantern_model).addModel();
+     //------------------------------------------------------------gooseberry-----------------------------------------------------------------------
+         //regular
+          LanternBlock gooseberry_lantern = foodblockcompatregistry.GOOSEBERRY_LANTERN.get();
+          ResourceLocation gooseberry_lantern_texture = modLoc("block/gooseberry_lantern");
+  
+          BlockModelBuilder gooseberry_lantern_model = models()
+              .withExistingParent("gooseberry_lantern", mcLoc("block/lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", gooseberry_lantern_texture);
+  
+          BlockModelBuilder hanging_gooseberry_lantern_model = models()
+              .withExistingParent("gooseberry_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+              .renderType("cutout_mipped_all")
+              .texture("lantern", gooseberry_lantern_texture);
+  
+          getVariantBuilder(gooseberry_lantern)
+              .partialState().with(LanternBlock.HANGING, true)
+              .modelForState().modelFile(hanging_gooseberry_lantern_model).addModel()
+              .partialState().with(LanternBlock.HANGING, false)
+              .modelForState().modelFile(gooseberry_lantern_model).addModel();
+         //soul
+         LanternBlock gooseberry_soul_lantern = foodblockcompatregistry.GOOSEBERRY_SOUL_LANTERN.get();
+         ResourceLocation gooseberry_soul_lantern_texture = modLoc("block/gooseberry_soul_lantern");
+ 
+         BlockModelBuilder gooseberry_soul_lantern_model = models()
+             .withExistingParent("gooseberry_soul_lantern", mcLoc("block/lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", gooseberry_soul_lantern_texture);
+ 
+         BlockModelBuilder hanging_gooseberry_soul_lantern_model = models()
+             .withExistingParent("gooseberry_soul_hanging_lantern", mcLoc("block/template_hanging_lantern"))
+             .renderType("cutout_mipped_all")
+             .texture("lantern", gooseberry_soul_lantern_texture);
+ 
+         getVariantBuilder(gooseberry_soul_lantern)
+             .partialState().with(LanternBlock.HANGING, true)
+             .modelForState().modelFile(hanging_gooseberry_soul_lantern_model).addModel()
+             .partialState().with(LanternBlock.HANGING, false)
+             .modelForState().modelFile(gooseberry_soul_lantern_model).addModel();
      //------------------------------------------------------------blackberry-----------------------------------------------------------------------
          //regular
           LanternBlock blackberry_lantern = foodblockcompatregistry.BLACKBERRY_LANTERN.get();
@@ -3860,6 +3974,22 @@ public class GM1BlockStateProvider extends BlockStateProvider
           .modelForState().modelFile(kiwifruit_chain_model).rotationX(90).rotationY(90).addModel()
           .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
           .modelForState().modelFile(kiwifruit_chain_model).rotationX(90).addModel(); 
+     //------------------------------------------------------------gooseberry-----------------------------------------------------------------------
+         ChainBlock gooseberry_chain = foodblockcompatregistry.GOOSEBERRY_CHAIN.get();
+         ResourceLocation gooseberry_chain_texture = modLoc("block/gooseberry_chain");
+         BlockModelBuilder gooseberry_chain_model = models()
+          .withExistingParent("gooseberry_chain", mcLoc("block/chain"))
+          .renderType("cutout_mipped_all")
+          .texture("all", gooseberry_chain_texture)
+          .texture("particle", gooseberry_chain_texture);
+
+          getVariantBuilder(gooseberry_chain)
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Y)
+          .modelForState().modelFile(gooseberry_chain_model).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.X)
+          .modelForState().modelFile(gooseberry_chain_model).rotationX(90).rotationY(90).addModel()
+          .partialState().with(BlockStateProperties.AXIS, Direction.Axis.Z)
+          .modelForState().modelFile(gooseberry_chain_model).rotationX(90).addModel(); 
      //------------------------------------------------------------blackberry-----------------------------------------------------------------------
          ChainBlock blackberry_chain = foodblockcompatregistry.BLACKBERRY_CHAIN.get();
          ResourceLocation blackberry_chain_texture = modLoc("block/blackberry_chain");
@@ -4396,6 +4526,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/kiwifruit_ladder");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------gooseberry-----------------------------------------------------------------------
+          LadderBlock gooseberryladder = foodblockcompatregistry.GOOSEBERRY_LADDER.get();
+
+          getVariantBuilder(gooseberryladder)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/gooseberry_ladder");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -5073,6 +5224,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/kiwifruit_table");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------gooseberry-----------------------------------------------------------------------
+          HorizontalDirectionalBlock gooseberrytable = foodblockcompatregistry.GOOSEBERRY_TABLE.get();
+
+          getVariantBuilder(gooseberrytable)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/gooseberry_table");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -6229,6 +6401,122 @@ public class GM1BlockStateProvider extends BlockStateProvider
                     .renderType("cutout_mipped_all")
                     .texture("torch", kiwifruit_soul_wall_torch_texture)
                     .texture("particle", kiwifruit_soul_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+     //------------------------------------------------------------gooseberry-----------------------------------------------------------------------
+       //regular
+        TorchBlock gooseberry_torch = foodblockcompatregistry.GOOSEBERRY_TORCH.get();
+        ResourceLocation gooseberry_torch_texture = modLoc("block/gooseberry_torch");
+        BlockModelBuilder gooseberry_torch_model = models()
+        .withExistingParent("gooseberry_torch", mcLoc("block/torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", gooseberry_torch_texture)
+        .texture("particle", gooseberry_torch_texture);
+
+        simpleBlock(gooseberry_torch, gooseberry_torch_model);
+
+        TorchBlock gooseberry_wall_torch = foodblockcompatregistry.GOOSEBERRY_WALL_TORCH.get();
+        BlockModelBuilder gooseberry_wall_torch_model = models()
+        .withExistingParent("gooseberry_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", gooseberry_torch_texture)
+        .texture("particle", gooseberry_torch_texture);
+        getVariantBuilder(gooseberry_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("gooseberry_wall_torch", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", gooseberry_torch_texture)
+                    .texture("particle", gooseberry_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //redstone
+        RedstoneTorchBlock gooseberry_redstone_torch = foodblockcompatregistry.GOOSEBERRY_REDSTONE_TORCH.get();
+        ResourceLocation gooseberry_redstone_torch_texture = modLoc("block/gooseberry_redstone_torch");
+        BlockModelBuilder gooseberry_redstone_torch_model = models()
+        .withExistingParent("gooseberry_redstone_torch", mcLoc("block/redstone_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", gooseberry_redstone_torch_texture)
+        .texture("particle", gooseberry_redstone_torch_texture);
+        
+
+        simpleBlock(gooseberry_redstone_torch, gooseberry_redstone_torch_model);
+
+        ResourceLocation gooseberry_redstone_wall_torch_texture = modLoc("block/gooseberry_redstone_torch");
+
+        RedstoneTorchBlock gooseberry_redstone_wall_torch = foodblockcompatregistry.GOOSEBERRY_REDSTONE_WALL_TORCH.get();
+        BlockModelBuilder gooseberry_redstone_wall_torch_model = models()
+        .withExistingParent("gooseberry_redstone_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", gooseberry_redstone_wall_torch_texture)
+        .texture("particle", gooseberry_redstone_wall_torch_texture);
+        getVariantBuilder(gooseberry_redstone_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("gooseberry_redstone_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", gooseberry_redstone_wall_torch_texture)
+                    .texture("particle", gooseberry_redstone_wall_torch_texture))
+                .rotationY(rotation)
+                .build();
+            });
+
+       //soul
+        TorchBlock gooseberry_soul_torch = foodblockcompatregistry.GOOSEBERRY_SOUL_TORCH.get();
+        ResourceLocation gooseberry_soul_torch_texture = modLoc("block/gooseberry_soul_torch");
+        BlockModelBuilder gooseberry_soul_torch_model = models()
+        .withExistingParent("gooseberry_soul_torch", mcLoc("block/soul_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", gooseberry_soul_torch_texture)
+        .texture("particle", gooseberry_soul_torch_texture);
+        
+
+        simpleBlock(gooseberry_soul_torch, gooseberry_soul_torch_model);
+
+        ResourceLocation gooseberry_soul_wall_torch_texture = modLoc("block/gooseberry_soul_torch");
+        TorchBlock gooseberry_soul_wall_torch = foodblockcompatregistry.GOOSEBERRY_SOUL_WALL_TORCH.get();
+        BlockModelBuilder gooseberry_soul_wall_torch_model = models()
+        .withExistingParent("gooseberry_soul_wall_torch", mcLoc("block/wall_torch"))
+        .renderType("cutout_mipped_all")
+        .texture("torch", gooseberry_soul_wall_torch_texture)
+        .texture("particle", gooseberry_soul_wall_torch_texture);
+        getVariantBuilder(gooseberry_soul_wall_torch)
+        .forAllStates(state -> {
+            Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            int rotation = switch (facing) {
+                case NORTH -> 270;
+                case EAST -> 0;
+                case SOUTH -> 90;
+                case WEST -> 180;
+                default -> 270;
+            };
+
+            return ConfiguredModel.builder()
+                .modelFile(models().withExistingParent("gooseberry_soul_wall_torch_model", mcLoc("block/wall_torch"))
+                    .renderType("cutout_mipped_all")
+                    .texture("torch", gooseberry_soul_wall_torch_texture)
+                    .texture("particle", gooseberry_soul_wall_torch_texture))
                 .rotationY(rotation)
                 .build();
             });
@@ -9579,6 +9867,47 @@ public class GM1BlockStateProvider extends BlockStateProvider
                       .rotationY(rotation)
                       .build();
               });
+     //------------------------------------------------------------gooseberry-----------------------------------------------------------------------
+          FurnaceBlock gooseberry_furnace = foodblockcompatregistry.GOOSEBERRY_FURNACE.get();
+          ResourceLocation gooseberry_furnace_unlit_texture = modLoc("block/gooseberry_furnace");
+          ResourceLocation gooseberry_furnace_lit_texture = modLoc("block/gooseberry_furnace_lit");
+          ResourceLocation gooseberry_furnace_side = modLoc("block/gooseberry_block");
+          
+          BlockModelBuilder gooseberry_furnace_model_unlit = models()
+              .withExistingParent("gooseberry_furnace_model_unlit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", gooseberry_furnace_side)
+              .texture("top", gooseberry_furnace_side)
+              .texture("front", gooseberry_furnace_unlit_texture)
+              .texture("particle", gooseberry_furnace_side);
+          
+          BlockModelBuilder gooseberry_furnace_model_lit = models()
+              .withExistingParent("gooseberry_furnace_model_lit", mcLoc("block/furnace"))
+              .renderType("cutout_mipped_all")
+              .texture("side", gooseberry_furnace_side)
+              .texture("top", gooseberry_furnace_side)
+              .texture("front", gooseberry_furnace_lit_texture)
+              .texture("particle", gooseberry_furnace_side);
+          
+          getVariantBuilder(gooseberry_furnace)
+              .forAllStates(state -> {
+                  Boolean lit = state.getValue(BlockStateProperties.LIT);
+                  Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+                  int rotation = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+
+                  ResourceLocation modelLocation = lit ? modLoc("block/gooseberry_furnace_model_lit") : modLoc("block/gooseberry_furnace_model_unlit");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotation)
+                      .build();
+              });
      //------------------------------------------------------------blackberry-----------------------------------------------------------------------
           FurnaceBlock blackberry_furnace = foodblockcompatregistry.BLACKBERRY_FURNACE.get();
           ResourceLocation blackberry_furnace_unlit_texture = modLoc("block/blackberry_furnace");
@@ -10810,6 +11139,18 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .modelFile(models().getExistingFile(modelLocation))
                   .build();
           });
+     //------------------------------------------------------------gooseberry-----------------------------------------------------------------------
+          foodpathtypeminislab gooseberry_stone_path = foodblockcompatregistry.GOOSEBERRY_STONE_PATH.get();
+
+          getVariantBuilder(gooseberry_stone_path)
+          .forAllStates(state -> {
+
+              ResourceLocation modelLocation = modLoc("block/gooseberry_stone_path");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .build();
+          });
      //------------------------------------------------------------blackberry-----------------------------------------------------------------------
           foodpathtypeminislab blackberry_stone_path = foodblockcompatregistry.BLACKBERRY_STONE_PATH.get();
 
@@ -11373,6 +11714,54 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   };
 
                   ResourceLocation modelLocation = open ? modLoc("block/kiwifruit_barrel_model_open") : modLoc("block/kiwifruit_barrel_model_closed");
+              
+                  return ConfiguredModel.builder()
+                      .modelFile(models().getExistingFile(modelLocation))
+                      .rotationY(rotationY)
+                      .rotationX(rotationX)
+                      .build();
+              });
+     //------------------------------------------------------------gooseberry-----------------------------------------------------------------------
+          compatFoodBarrel gooseberry_barrel = foodblockcompatregistry.GOOSEBERRY_BARREL.get();
+          ResourceLocation gooseberry_barrel_closed_texture = modLoc("block/gooseberry_barrel_top_closed");
+          ResourceLocation gooseberry_barrel_open_texture = modLoc("block/gooseberry_barrel_top_open");
+          ResourceLocation gooseberry_barrel_side = modLoc("block/gooseberry_barrel_side");
+          ResourceLocation gooseberry_barrel_bottom = modLoc("block/gooseberry_barrel_bottom");
+          
+          BlockModelBuilder gooseberry_barrel_model_closed = models()
+              .withExistingParent("gooseberry_barrel_model_closed", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", gooseberry_barrel_side)
+              .texture("bottom", gooseberry_barrel_bottom)
+              .texture("top", gooseberry_barrel_closed_texture)
+              .texture("particle", gooseberry_barrel_side);
+          
+          BlockModelBuilder gooseberry_barrel_model_open = models()
+              .withExistingParent("gooseberry_barrel_model_open", mcLoc("block/barrel"))
+              .renderType("cutout_mipped_all")
+              .texture("side", gooseberry_barrel_side)
+              .texture("bottom", gooseberry_barrel_bottom)
+              .texture("top", gooseberry_barrel_open_texture)
+              .texture("particle", gooseberry_barrel_side);
+          
+          getVariantBuilder(gooseberry_barrel)
+              .forAllStates(state -> {
+                  Boolean open = state.getValue(BlockStateProperties.OPEN);
+                  Direction facing = state.getValue(BlockStateProperties.FACING);
+                  int rotationY = switch (facing) {
+                      case NORTH -> 0;
+                      case EAST -> 90;
+                      case SOUTH -> 180;
+                      case WEST -> 270;
+                      default -> 0;
+                  };
+                  int rotationX = switch (facing) {
+                      case UP -> 0;
+                      case DOWN -> 180;
+                      default -> 90;
+                  };
+
+                  ResourceLocation modelLocation = open ? modLoc("block/gooseberry_barrel_model_open") : modLoc("block/gooseberry_barrel_model_closed");
               
                   return ConfiguredModel.builder()
                       .modelFile(models().getExistingFile(modelLocation))
@@ -12787,6 +13176,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
                   .rotationY(rotationY)
                   .build();
           });
+     //------------------------------------------------------------gooseberry-----------------------------------------------------------------------
+          foodChairBlock gooseberryChair = foodblockcompatregistry.GOOSEBERRY_CHAIR.get();
+
+          getVariantBuilder(gooseberryChair)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/gooseberry_chair");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
      //------------------------------------------------------------blackberry-----------------------------------------------------------------------
           foodChairBlock blackberryChair = foodblockcompatregistry.BLACKBERRY_CHAIR.get();
 
@@ -13458,6 +13868,27 @@ public class GM1BlockStateProvider extends BlockStateProvider
               };
 
               ResourceLocation modelLocation = modLoc("block/kiwifruit_bed");
+          
+              return ConfiguredModel.builder()
+                  .modelFile(models().getExistingFile(modelLocation))
+                  .rotationY(rotationY)
+                  .build();
+          });
+     //------------------------------------------------------------gooseberry-----------------------------------------------------------------------
+          compatBed gooseberryBed = foodblockcompatregistry.GOOSEBERRY_BED.get();
+
+          getVariantBuilder(gooseberryBed)
+          .forAllStates(state -> {
+              Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+              int rotationY = switch (facing) {
+                  case NORTH -> 180;
+                  case EAST -> 270;
+                  case SOUTH -> 0;
+                  case WEST -> 90;
+                  default -> 180;
+              };
+
+              ResourceLocation modelLocation = modLoc("block/gooseberry_bed");
           
               return ConfiguredModel.builder()
                   .modelFile(models().getExistingFile(modelLocation))
@@ -14256,6 +14687,51 @@ public class GM1BlockStateProvider extends BlockStateProvider
              };
 
              ResourceLocation modelLocation = open ? modLoc("block/medium_kiwifruit_cabinet_open") : modLoc("block/medium_kiwifruit_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
+     //------------------------------------------------------------gooseberry-----------------------------------------------------------------------
+        //small
+         compatSmallFoodCabinet gooseberryCabinet = foodblockcompatregistry.SMALL_GOOSEBERRY_CABINET.get();
+
+         getVariantBuilder(gooseberryCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
+
+             ResourceLocation modelLocation = open ? modLoc("block/gooseberry_cabinet_open") : modLoc("block/gooseberry_cabinet");
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });
+        //medium
+         compatMediumFoodCabinet gooseberryMediumCabinet = foodblockcompatregistry.MEDIUM_GOOSEBERRY_CABINET.get();
+
+         getVariantBuilder(gooseberryMediumCabinet)
+         .forAllStates(state -> {
+             Boolean open = state.getValue(BlockStateProperties.OPEN);
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
+
+             ResourceLocation modelLocation = open ? modLoc("block/medium_gooseberry_cabinet_open") : modLoc("block/medium_gooseberry_cabinet");
          
              return ConfiguredModel.builder()
                  .modelFile(models().getExistingFile(modelLocation))

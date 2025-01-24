@@ -405,6 +405,84 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        withExistingParent("small_kiwifruit_cabinet_item", modLoc("block/kiwifruit_cabinet"));
        withExistingParent("medium_kiwifruit_cabinet_item", modLoc("block/medium_kiwifruit_cabinet"));
     //==============================================================================================================================================
+    //|                                                            Gooseberry                                                                      |
+    //==============================================================================================================================================
+       //mush
+       withExistingParent("gooseberry_mush", mcLoc("item/generated")).texture("layer0", "item/gooseberry_mush");
+       //ingot
+        withExistingParent("gooseberry_ingot", mcLoc("item/generated")).texture("layer0", "item/gooseberry_ingot");
+       //nugget
+        withExistingParent("gooseberry_nugget", mcLoc("item/generated")).texture("layer0", "item/gooseberry_nugget");
+       //block
+        withExistingParent("gooseberry_block_item", modLoc("block/gooseberry_block"));
+       //bricks block
+        withExistingParent("gooseberry_bricks_block_item", modLoc("block/gooseberry_bricks_block"));
+       //chiseled block
+        withExistingParent("gooseberry_chiseled_block_item", modLoc("block/gooseberry_chiseled_block"));
+       //tiles block
+        withExistingParent("gooseberry_tiles_block_item", modLoc("block/gooseberry_tiles_block"));
+       //slab
+       slab("gooseberry_slab_item", modLoc("block/gooseberry_block"), modLoc("block/gooseberry_block"), modLoc("block/gooseberry_block"));
+       //bricks slab
+       slab("gooseberry_bricks_slab_item", modLoc("block/gooseberry_bricks_block"), modLoc("block/gooseberry_bricks_block"), modLoc("block/gooseberry_bricks_block"));
+       //stairs
+       stairs("gooseberry_stairs_item", modLoc("block/gooseberry_block"), modLoc("block/gooseberry_block"), modLoc("block/gooseberry_block"));
+       //bricks stairs
+       stairs("gooseberry_bricks_stairs_item", modLoc("block/gooseberry_bricks_block"), modLoc("block/gooseberry_bricks_block"), modLoc("block/gooseberry_bricks_block"));
+       //bars
+       withExistingParent("gooseberry_bars_item", mcLoc("item/generated")).texture("layer0", "block/gooseberry_bars");
+       //doors
+       withExistingParent("gooseberry_door_item", mcLoc("item/generated")).texture("layer0", "item/gooseberry_door_item");
+       //button
+       buttonInventory("gooseberry_button_item", modLoc("block/gooseberry_block"));
+       //fence
+       fenceInventory("gooseberry_fence_item", modLoc("block/gooseberry_block"));
+       //gate
+       withExistingParent("gooseberry_gate_item", modLoc("block/gooseberry_gate"));
+       //pressure plate
+       pressurePlate("gooseberry_pressure_plate_item", modLoc("block/gooseberry_block"));
+       //sign
+       withExistingParent("gooseberry_sign_item", mcLoc("item/generated")).texture("layer0", "item/gooseberry_sign");
+       //trapdoor
+       withExistingParent("gooseberry_trapdoor_item", modLoc("block/gooseberry_trapdoor_trapdoor_bottom"));
+       //lamp
+       withExistingParent("gooseberry_lamp_item", modLoc("block/gooseberry_lamp"));
+       //carpet
+       ResourceLocation gooseberry_carpet_texture = modLoc("block/gooseberry_carpet");
+       carpet("gooseberry_carpet_item", gooseberry_carpet_texture);
+       //lantern
+        //regular
+        withExistingParent("gooseberry_lantern_item", modLoc("block/gooseberry_lantern"));
+        //soul
+          withExistingParent("gooseberry_soul_lantern_item", modLoc("block/gooseberry_soul_lantern"));
+       //chain
+       withExistingParent("gooseberry_chain_item", modLoc("block/gooseberry_chain")).rootTransforms().scale(1.5f).translation(0.25f, 0.25f, 0.25f)
+       .end();
+       //ladder
+       withExistingParent("gooseberry_ladder_item", modLoc("block/gooseberry_ladder"));
+       //table
+       withExistingParent("gooseberry_table_item", modLoc("block/gooseberry_table"));
+       //torches
+        //regular
+        withExistingParent("gooseberry_torch_item", modLoc("block/gooseberry_torch"));
+        //redstone
+          withExistingParent("gooseberry_redstone_torch_item", modLoc("block/gooseberry_redstone_torch"));
+        //soul
+          withExistingParent("gooseberry_soul_torch_item", modLoc("block/gooseberry_soul_torch"));
+       //furnaces
+       withExistingParent("gooseberry_furnace_item", modLoc("block/gooseberry_furnace_model_unlit"));
+       //paths
+       withExistingParent("gooseberry_stone_path_item", modLoc("block/gooseberry_stone_path"));
+       //barrel
+       withExistingParent("gooseberry_barrel_item", modLoc("block/gooseberry_barrel_model_closed"));
+       //chair
+       withExistingParent("gooseberry_chair_item", modLoc("block/gooseberry_chair"));
+       //bed
+       withExistingParent("gooseberry_bed_item", modLoc("block/gooseberry_bed"));
+       //cabinet
+       withExistingParent("small_gooseberry_cabinet_item", modLoc("block/gooseberry_cabinet"));
+       withExistingParent("medium_gooseberry_cabinet_item", modLoc("block/medium_gooseberry_cabinet"));
+    //==============================================================================================================================================
     //|                                                            Blackberry                                                                      |
     //==============================================================================================================================================
        //mush

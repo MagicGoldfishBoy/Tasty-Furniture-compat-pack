@@ -25,6 +25,9 @@ public class nuggetcompatregistry {
  //--------------------------------------------------------------------------------------Kiwifruit---------------------------------------------------------------------------------------------
         public static final DeferredHolder<Item, Item> KIWIFRUIT_NUGGET = FOODNUGGET.register("kiwifruit_nugget",
     () -> new Item(new Item.Properties()));
+ //--------------------------------------------------------------------------------------Gooseberry---------------------------------------------------------------------------------------------
+        public static final DeferredHolder<Item, Item> GOOSEBERRY_NUGGET = FOODNUGGET.register("gooseberry_nugget",
+    () -> new Item(new Item.Properties()));
  //--------------------------------------------------------------------------------------Blackberry---------------------------------------------------------------------------------------------
         public static final DeferredHolder<Item, Item> BLACKBERRY_NUGGET = FOODNUGGET.register("blackberry_nugget",
     () -> new Item(new Item.Properties()));
