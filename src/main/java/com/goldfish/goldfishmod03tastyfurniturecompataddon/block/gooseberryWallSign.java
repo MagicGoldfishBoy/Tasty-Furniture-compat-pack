@@ -19,17 +19,20 @@ public class gooseberryWallSign extends WallSignBlock {
             this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.FALSE));
         }
     
+    @SuppressWarnings("null")
     @Override
    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
         return createTickerHelper(type, foodblockcompatregistry.GOOSEBERRY_SIGN_ENTITY.get(), gooseberrySignEntity::tick);
    }
 
-   @Override
+   @SuppressWarnings("null")
+@Override
    public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
       return new gooseberrySignEntity(pos, state);
     }
 
-   @Override
+   @SuppressWarnings("null")
+@Override
    protected boolean canSurvive(BlockState pState, LevelReader pLevel, BlockPos pPos) {
    return pLevel.getBlockState(pPos.relative(pState.getValue(FACING).getOpposite())) != null;
    }

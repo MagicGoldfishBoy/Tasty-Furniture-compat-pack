@@ -15954,9 +15954,10 @@ public class GM1BlockStateProvider extends BlockStateProvider
 
     };
     //==============================================================================================================================================
-    //|                                                             Cabinet                                                                        |
+    //|                                                              Desks                                                                         |
     //==============================================================================================================================================
     public void buildDeskModels() {
+     //------------------------------------------------------------elderberry-----------------------------------------------------------------------
          foodDeskCompat elderberryDesk = foodblockcompatregistry.ELDERBERRY_DESK.get();
          
          getVariantBuilder(elderberryDesk)

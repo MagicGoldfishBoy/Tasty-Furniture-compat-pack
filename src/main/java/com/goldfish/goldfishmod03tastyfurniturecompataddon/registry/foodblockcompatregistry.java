@@ -3197,7 +3197,8 @@ public class foodblockcompatregistry {
        .randomTicks(),
        foodmaterialtypecompatregistry.JUNIPERWOODMAT
    ));
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<juniperSignEntity>> JUNIPER_SIGN_ENTITY = FOODBLOCKENTITY.register(
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<juniperSignEntity>> JUNIPER_SIGN_ENTITY = FOODBLOCKENTITY.register(
      "juniper_sign_entity",
      () -> BlockEntityType.Builder.of(
          juniperSignEntity::new,
@@ -3242,7 +3243,8 @@ public class foodblockcompatregistry {
        .randomTicks(),
        foodmaterialtypecompatregistry.BANANAWOODMAT
    ));
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<bananaSignEntity>> BANANA_SIGN_ENTITY = FOODBLOCKENTITY.register(
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<bananaSignEntity>> BANANA_SIGN_ENTITY = FOODBLOCKENTITY.register(
      "banana_sign_entity",
      () -> BlockEntityType.Builder.of(
          bananaSignEntity::new,
@@ -3287,7 +3289,8 @@ public class foodblockcompatregistry {
        .randomTicks(),
        foodmaterialtypecompatregistry.STARFRUITWOODMAT
    ));
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<starfruitSignEntity>> STARFRUIT_SIGN_ENTITY = FOODBLOCKENTITY.register(
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<starfruitSignEntity>> STARFRUIT_SIGN_ENTITY = FOODBLOCKENTITY.register(
      "starfruit_sign_entity",
      () -> BlockEntityType.Builder.of(
          starfruitSignEntity::new,
@@ -3332,7 +3335,8 @@ public class foodblockcompatregistry {
        .randomTicks(),
        foodmaterialtypecompatregistry.KIWIFRUITWOODMAT
    ));
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<kiwifruitSignEntity>> KIWIFRUIT_SIGN_ENTITY = FOODBLOCKENTITY.register(
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<kiwifruitSignEntity>> KIWIFRUIT_SIGN_ENTITY = FOODBLOCKENTITY.register(
      "kiwifruit_sign_entity",
      () -> BlockEntityType.Builder.of(
          kiwifruitSignEntity::new,
@@ -3377,7 +3381,8 @@ public class foodblockcompatregistry {
        .randomTicks(),
        foodmaterialtypecompatregistry.GOOSEBERRYWOODMAT
    ));
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<gooseberrySignEntity>> GOOSEBERRY_SIGN_ENTITY = FOODBLOCKENTITY.register(
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<gooseberrySignEntity>> GOOSEBERRY_SIGN_ENTITY = FOODBLOCKENTITY.register(
      "gooseberry_sign_entity",
      () -> BlockEntityType.Builder.of(
          gooseberrySignEntity::new,
@@ -3422,7 +3427,8 @@ public class foodblockcompatregistry {
        .randomTicks(),
        foodmaterialtypecompatregistry.BLACKBERRYWOODMAT
    ));
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<blackberrySignEntity>> BLACKBERRY_SIGN_ENTITY = FOODBLOCKENTITY.register(
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<blackberrySignEntity>> BLACKBERRY_SIGN_ENTITY = FOODBLOCKENTITY.register(
      "blackberry_sign_entity",
      () -> BlockEntityType.Builder.of(
          blackberrySignEntity::new,
@@ -3467,7 +3473,8 @@ public class foodblockcompatregistry {
        .randomTicks(),
        foodmaterialtypecompatregistry.RASPBERRYWOODMAT
    ));
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<raspberrySignEntity>> RASPBERRY_SIGN_ENTITY = FOODBLOCKENTITY.register(
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<raspberrySignEntity>> RASPBERRY_SIGN_ENTITY = FOODBLOCKENTITY.register(
      "raspberry_sign_entity",
      () -> BlockEntityType.Builder.of(
          raspberrySignEntity::new,
@@ -3512,7 +3519,8 @@ public class foodblockcompatregistry {
        .randomTicks(),
        foodmaterialtypecompatregistry.STRAWBERRYWOODMAT
    ));
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<strawberrySignEntity>> STRAWBERRY_SIGN_ENTITY = FOODBLOCKENTITY.register(
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<strawberrySignEntity>> STRAWBERRY_SIGN_ENTITY = FOODBLOCKENTITY.register(
      "strawberry_sign_entity",
      () -> BlockEntityType.Builder.of(
          strawberrySignEntity::new,
@@ -3557,7 +3565,8 @@ public class foodblockcompatregistry {
        .randomTicks(),
        foodmaterialtypecompatregistry.SUGARAPPLEWOODMAT
    ));
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<sugarappleSignEntity>> SUGARAPPLE_SIGN_ENTITY = FOODBLOCKENTITY.register(
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<sugarappleSignEntity>> SUGARAPPLE_SIGN_ENTITY = FOODBLOCKENTITY.register(
      "sugarapple_sign_entity",
      () -> BlockEntityType.Builder.of(
          sugarappleSignEntity::new,
@@ -3602,7 +3611,8 @@ public class foodblockcompatregistry {
        .randomTicks(),
        foodmaterialtypecompatregistry.CHERRYWOODMAT
    ));
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<cherrySignEntity>> CHERRY_SIGN_ENTITY = FOODBLOCKENTITY.register(
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<cherrySignEntity>> CHERRY_SIGN_ENTITY = FOODBLOCKENTITY.register(
      "cherry_sign_entity",
      () -> BlockEntityType.Builder.of(
          cherrySignEntity::new,
@@ -3647,7 +3657,8 @@ public class foodblockcompatregistry {
        .randomTicks(),
        foodmaterialtypecompatregistry.BLACKCHERRYWOODMAT
    ));
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<blackcherrySignEntity>> BLACKCHERRY_SIGN_ENTITY = FOODBLOCKENTITY.register(
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<blackcherrySignEntity>> BLACKCHERRY_SIGN_ENTITY = FOODBLOCKENTITY.register(
      "blackcherry_sign_entity",
      () -> BlockEntityType.Builder.of(
          blackcherrySignEntity::new,
@@ -3692,7 +3703,8 @@ public class foodblockcompatregistry {
        .randomTicks(),
        foodmaterialtypecompatregistry.PEACHWOODMAT
    ));
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<peachSignEntity>> PEACH_SIGN_ENTITY = FOODBLOCKENTITY.register(
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<peachSignEntity>> PEACH_SIGN_ENTITY = FOODBLOCKENTITY.register(
      "peach_sign_entity",
      () -> BlockEntityType.Builder.of(
          peachSignEntity::new,
@@ -3737,7 +3749,8 @@ public class foodblockcompatregistry {
        .randomTicks(),
        foodmaterialtypecompatregistry.COCONUTWOODMAT
    ));
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<coconutSignEntity>> COCONUT_SIGN_ENTITY = FOODBLOCKENTITY.register(
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<coconutSignEntity>> COCONUT_SIGN_ENTITY = FOODBLOCKENTITY.register(
      "coconut_sign_entity",
      () -> BlockEntityType.Builder.of(
          coconutSignEntity::new,
@@ -3782,7 +3795,8 @@ public class foodblockcompatregistry {
        .randomTicks(),
        foodmaterialtypecompatregistry.ORANGEWOODMAT
    ));
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<orangeSignEntity>> ORANGE_SIGN_ENTITY = FOODBLOCKENTITY.register(
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<orangeSignEntity>> ORANGE_SIGN_ENTITY = FOODBLOCKENTITY.register(
      "orange_sign_entity",
      () -> BlockEntityType.Builder.of(
          orangeSignEntity::new,
@@ -3827,7 +3841,8 @@ public class foodblockcompatregistry {
        .randomTicks(),
        foodmaterialtypecompatregistry.TANGERINEWOODMAT
    ));
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<tangerineSignEntity>> TANGERINE_SIGN_ENTITY = FOODBLOCKENTITY.register(
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<tangerineSignEntity>> TANGERINE_SIGN_ENTITY = FOODBLOCKENTITY.register(
      "tangerine_sign_entity",
      () -> BlockEntityType.Builder.of(
          tangerineSignEntity::new,
@@ -3872,7 +3887,8 @@ public class foodblockcompatregistry {
        .randomTicks(),
        foodmaterialtypecompatregistry.KUMQUATWOODMAT
    ));
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<kumquatSignEntity>> KUMQUAT_SIGN_ENTITY = FOODBLOCKENTITY.register(
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<kumquatSignEntity>> KUMQUAT_SIGN_ENTITY = FOODBLOCKENTITY.register(
      "kumquat_sign_entity",
      () -> BlockEntityType.Builder.of(
          kumquatSignEntity::new,
@@ -3917,7 +3933,8 @@ public class foodblockcompatregistry {
        .randomTicks(),
        foodmaterialtypecompatregistry.PERSIMMONWOODMAT
    ));
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<persimmonSignEntity>> PERSIMMON_SIGN_ENTITY = FOODBLOCKENTITY.register(
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<persimmonSignEntity>> PERSIMMON_SIGN_ENTITY = FOODBLOCKENTITY.register(
      "persimmon_sign_entity",
      () -> BlockEntityType.Builder.of(
          persimmonSignEntity::new,
@@ -3962,7 +3979,8 @@ public class foodblockcompatregistry {
        .randomTicks(),
        foodmaterialtypecompatregistry.SATSUMAWOODMAT
    ));
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<satsumaSignEntity>> SATSUMA_SIGN_ENTITY = FOODBLOCKENTITY.register(
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<satsumaSignEntity>> SATSUMA_SIGN_ENTITY = FOODBLOCKENTITY.register(
      "satsuma_sign_entity",
      () -> BlockEntityType.Builder.of(
          satsumaSignEntity::new,
@@ -4007,7 +4025,8 @@ public class foodblockcompatregistry {
        .randomTicks(),
        foodmaterialtypecompatregistry.MANDARINWOODMAT
    ));
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<mandarinSignEntity>> MANDARIN_SIGN_ENTITY = FOODBLOCKENTITY.register(
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<mandarinSignEntity>> MANDARIN_SIGN_ENTITY = FOODBLOCKENTITY.register(
      "mandarin_sign_entity",
      () -> BlockEntityType.Builder.of(
          mandarinSignEntity::new,
@@ -4052,7 +4071,8 @@ public class foodblockcompatregistry {
        .randomTicks(),
        foodmaterialtypecompatregistry.LEMONWOODMAT
    ));
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<lemonSignEntity>> LEMON_SIGN_ENTITY = FOODBLOCKENTITY.register(
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<lemonSignEntity>> LEMON_SIGN_ENTITY = FOODBLOCKENTITY.register(
      "lemon_sign_entity",
      () -> BlockEntityType.Builder.of(
          lemonSignEntity::new,
@@ -4097,7 +4117,8 @@ public class foodblockcompatregistry {
        .randomTicks(),
        foodmaterialtypecompatregistry.CITRONWOODMAT
    ));
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<citronSignEntity>> CITRON_SIGN_ENTITY = FOODBLOCKENTITY.register(
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<citronSignEntity>> CITRON_SIGN_ENTITY = FOODBLOCKENTITY.register(
      "citron_sign_entity",
      () -> BlockEntityType.Builder.of(
          citronSignEntity::new,
@@ -4142,7 +4163,8 @@ public class foodblockcompatregistry {
        .randomTicks(),
        foodmaterialtypecompatregistry.BUDDHASHANDWOODMAT
    ));
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<buddhashandSignEntity>> BUDDHASHAND_SIGN_ENTITY = FOODBLOCKENTITY.register(
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<buddhashandSignEntity>> BUDDHASHAND_SIGN_ENTITY = FOODBLOCKENTITY.register(
      "buddhashand_sign_entity",
      () -> BlockEntityType.Builder.of(
          buddhashandSignEntity::new,
@@ -4187,7 +4209,8 @@ public class foodblockcompatregistry {
        .randomTicks(),
        foodmaterialtypecompatregistry.LIMEWOODMAT
    ));
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<limeSignEntity>> LIME_SIGN_ENTITY = FOODBLOCKENTITY.register(
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<limeSignEntity>> LIME_SIGN_ENTITY = FOODBLOCKENTITY.register(
      "lime_sign_entity",
      () -> BlockEntityType.Builder.of(
          limeSignEntity::new,
@@ -4232,7 +4255,8 @@ public class foodblockcompatregistry {
        .randomTicks(),
        foodmaterialtypecompatregistry.KEYLIMEWOODMAT
    ));
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<keylimeSignEntity>> KEYLIME_SIGN_ENTITY = FOODBLOCKENTITY.register(
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<keylimeSignEntity>> KEYLIME_SIGN_ENTITY = FOODBLOCKENTITY.register(
      "keylime_sign_entity",
      () -> BlockEntityType.Builder.of(
          keylimeSignEntity::new,
@@ -4277,7 +4301,8 @@ public class foodblockcompatregistry {
        .randomTicks(),
        foodmaterialtypecompatregistry.FINGERLIMEWOODMAT
    ));
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<fingerlimeSignEntity>> FINGERLIME_SIGN_ENTITY = FOODBLOCKENTITY.register(
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<fingerlimeSignEntity>> FINGERLIME_SIGN_ENTITY = FOODBLOCKENTITY.register(
      "fingerlime_sign_entity",
      () -> BlockEntityType.Builder.of(
          fingerlimeSignEntity::new,
@@ -4322,7 +4347,8 @@ public class foodblockcompatregistry {
        .randomTicks(),
        foodmaterialtypecompatregistry.GRAPEFRUITWOODMAT
    ));
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<grapefruitSignEntity>> GRAPEFRUIT_SIGN_ENTITY = FOODBLOCKENTITY.register(
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<grapefruitSignEntity>> GRAPEFRUIT_SIGN_ENTITY = FOODBLOCKENTITY.register(
      "grapefruit_sign_entity",
      () -> BlockEntityType.Builder.of(
          grapefruitSignEntity::new,
@@ -4367,7 +4393,8 @@ public class foodblockcompatregistry {
        .randomTicks(),
        foodmaterialtypecompatregistry.POMELOWOODMAT
    ));
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<pomeloSignEntity>> POMELO_SIGN_ENTITY = FOODBLOCKENTITY.register(
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<pomeloSignEntity>> POMELO_SIGN_ENTITY = FOODBLOCKENTITY.register(
      "pomelo_sign_entity",
      () -> BlockEntityType.Builder.of(
          pomeloSignEntity::new,
@@ -4412,7 +4439,8 @@ public class foodblockcompatregistry {
        .randomTicks(),
        foodmaterialtypecompatregistry.CORNWOODMAT
    ));
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<cornSignEntity>> CORN_SIGN_ENTITY = FOODBLOCKENTITY.register(
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<cornSignEntity>> CORN_SIGN_ENTITY = FOODBLOCKENTITY.register(
      "corn_sign_entity",
      () -> BlockEntityType.Builder.of(
          cornSignEntity::new,
@@ -4457,7 +4485,8 @@ public class foodblockcompatregistry {
        .randomTicks(),
        foodmaterialtypecompatregistry.ONIONWOODMAT
    ));
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<onionSignEntity>> ONION_SIGN_ENTITY = FOODBLOCKENTITY.register(
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<onionSignEntity>> ONION_SIGN_ENTITY = FOODBLOCKENTITY.register(
      "onion_sign_entity",
      () -> BlockEntityType.Builder.of(
          onionSignEntity::new,
@@ -4502,7 +4531,8 @@ public class foodblockcompatregistry {
        .randomTicks(),
        foodmaterialtypecompatregistry.TOMATOWOODMAT
    ));
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<tomatoSignEntity>> TOMATO_SIGN_ENTITY = FOODBLOCKENTITY.register(
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<tomatoSignEntity>> TOMATO_SIGN_ENTITY = FOODBLOCKENTITY.register(
      "tomato_sign_entity",
      () -> BlockEntityType.Builder.of(
          tomatoSignEntity::new,
@@ -4547,7 +4577,8 @@ public class foodblockcompatregistry {
        .randomTicks(),
        foodmaterialtypecompatregistry.PECANWOODMAT
    ));
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<pecanSignEntity>> PECAN_SIGN_ENTITY = FOODBLOCKENTITY.register(
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<pecanSignEntity>> PECAN_SIGN_ENTITY = FOODBLOCKENTITY.register(
      "pecan_sign_entity",
      () -> BlockEntityType.Builder.of(
          pecanSignEntity::new,
@@ -4592,7 +4623,8 @@ public class foodblockcompatregistry {
        .randomTicks(),
        foodmaterialtypecompatregistry.ALMONDWOODMAT
    ));
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<almondSignEntity>> ALMOND_SIGN_ENTITY = FOODBLOCKENTITY.register(
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<almondSignEntity>> ALMOND_SIGN_ENTITY = FOODBLOCKENTITY.register(
      "almond_sign_entity",
      () -> BlockEntityType.Builder.of(
          almondSignEntity::new,
@@ -7311,199 +7343,232 @@ public class foodblockcompatregistry {
     public static final DeferredHolder<Block, elderberryFurnace> ELDERBERRY_FURNACE = FOODBLOCK.register("elderberry_furnace", 
     () -> new elderberryFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<elderberryFurnaceEntity>> ELDERBERRY_FURNACE_ENTITY = FOODBLOCKENTITY.register("elderberry_furnace", 
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<elderberryFurnaceEntity>> ELDERBERRY_FURNACE_ENTITY = FOODBLOCKENTITY.register("elderberry_furnace", 
     () -> BlockEntityType.Builder.of(elderberryFurnaceEntity::new, ELDERBERRY_FURNACE.get()).build(null));
  //---------------------------------------------------------------------------------------Juniper-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, juniperFurnace> JUNIPER_FURNACE = FOODBLOCK.register("juniper_furnace", 
     () -> new juniperFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<juniperFurnaceEntity>> JUNIPER_FURNACE_ENTITY = FOODBLOCKENTITY.register("juniper_furnace", 
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<juniperFurnaceEntity>> JUNIPER_FURNACE_ENTITY = FOODBLOCKENTITY.register("juniper_furnace", 
     () -> BlockEntityType.Builder.of(juniperFurnaceEntity::new, JUNIPER_FURNACE.get()).build(null));
  //---------------------------------------------------------------------------------------Banana-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, bananaFurnace> BANANA_FURNACE = FOODBLOCK.register("banana_furnace", 
     () -> new bananaFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<bananaFurnaceEntity>> BANANA_FURNACE_ENTITY = FOODBLOCKENTITY.register("banana_furnace", 
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<bananaFurnaceEntity>> BANANA_FURNACE_ENTITY = FOODBLOCKENTITY.register("banana_furnace", 
     () -> BlockEntityType.Builder.of(bananaFurnaceEntity::new, BANANA_FURNACE.get()).build(null));
  //---------------------------------------------------------------------------------------Starfruit-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, starfruitFurnace> STARFRUIT_FURNACE = FOODBLOCK.register("starfruit_furnace", 
     () -> new starfruitFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<starfruitFurnaceEntity>> STARFRUIT_FURNACE_ENTITY = FOODBLOCKENTITY.register("starfruit_furnace", 
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<starfruitFurnaceEntity>> STARFRUIT_FURNACE_ENTITY = FOODBLOCKENTITY.register("starfruit_furnace", 
     () -> BlockEntityType.Builder.of(starfruitFurnaceEntity::new, STARFRUIT_FURNACE.get()).build(null));
  //---------------------------------------------------------------------------------------Kiwifruit-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, kiwifruitFurnace> KIWIFRUIT_FURNACE = FOODBLOCK.register("kiwifruit_furnace", 
     () -> new kiwifruitFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<kiwifruitFurnaceEntity>> KIWIFRUIT_FURNACE_ENTITY = FOODBLOCKENTITY.register("kiwifruit_furnace", 
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<kiwifruitFurnaceEntity>> KIWIFRUIT_FURNACE_ENTITY = FOODBLOCKENTITY.register("kiwifruit_furnace", 
     () -> BlockEntityType.Builder.of(kiwifruitFurnaceEntity::new, KIWIFRUIT_FURNACE.get()).build(null));
  //---------------------------------------------------------------------------------------Gooseberry-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, gooseberryFurnace> GOOSEBERRY_FURNACE = FOODBLOCK.register("gooseberry_furnace", 
     () -> new gooseberryFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<gooseberryFurnaceEntity>> GOOSEBERRY_FURNACE_ENTITY = FOODBLOCKENTITY.register("gooseberry_furnace", 
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<gooseberryFurnaceEntity>> GOOSEBERRY_FURNACE_ENTITY = FOODBLOCKENTITY.register("gooseberry_furnace", 
     () -> BlockEntityType.Builder.of(gooseberryFurnaceEntity::new, GOOSEBERRY_FURNACE.get()).build(null));
  //---------------------------------------------------------------------------------------Blackberry-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, blackberryFurnace> BLACKBERRY_FURNACE = FOODBLOCK.register("blackberry_furnace", 
     () -> new blackberryFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<blackberryFurnaceEntity>> BLACKBERRY_FURNACE_ENTITY = FOODBLOCKENTITY.register("blackberry_furnace", 
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<blackberryFurnaceEntity>> BLACKBERRY_FURNACE_ENTITY = FOODBLOCKENTITY.register("blackberry_furnace", 
     () -> BlockEntityType.Builder.of(blackberryFurnaceEntity::new, BLACKBERRY_FURNACE.get()).build(null));
  //---------------------------------------------------------------------------------------Raspberry-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, raspberryFurnace> RASPBERRY_FURNACE = FOODBLOCK.register("raspberry_furnace", 
     () -> new raspberryFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<raspberryFurnaceEntity>> RASPBERRY_FURNACE_ENTITY = FOODBLOCKENTITY.register("raspberry_furnace", 
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<raspberryFurnaceEntity>> RASPBERRY_FURNACE_ENTITY = FOODBLOCKENTITY.register("raspberry_furnace", 
     () -> BlockEntityType.Builder.of(raspberryFurnaceEntity::new, RASPBERRY_FURNACE.get()).build(null));
  //---------------------------------------------------------------------------------------Strawberry-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, strawberryFurnace> STRAWBERRY_FURNACE = FOODBLOCK.register("strawberry_furnace", 
     () -> new strawberryFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<strawberryFurnaceEntity>> STRAWBERRY_FURNACE_ENTITY = FOODBLOCKENTITY.register("strawberry_furnace", 
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<strawberryFurnaceEntity>> STRAWBERRY_FURNACE_ENTITY = FOODBLOCKENTITY.register("strawberry_furnace", 
     () -> BlockEntityType.Builder.of(strawberryFurnaceEntity::new, STRAWBERRY_FURNACE.get()).build(null));
  //---------------------------------------------------------------------------------------Sugarapple-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, sugarappleFurnace> SUGARAPPLE_FURNACE = FOODBLOCK.register("sugarapple_furnace", 
     () -> new sugarappleFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<sugarappleFurnaceEntity>> SUGARAPPLE_FURNACE_ENTITY = FOODBLOCKENTITY.register("sugarapple_furnace", 
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<sugarappleFurnaceEntity>> SUGARAPPLE_FURNACE_ENTITY = FOODBLOCKENTITY.register("sugarapple_furnace", 
     () -> BlockEntityType.Builder.of(sugarappleFurnaceEntity::new, SUGARAPPLE_FURNACE.get()).build(null));
  //----------------------------------------------------------------------------------------Cherry-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, cherryFurnace> CHERRY_FURNACE = FOODBLOCK.register("cherry_furnace", 
     () -> new cherryFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<cherryFurnaceEntity>> CHERRY_FURNACE_ENTITY = FOODBLOCKENTITY.register("cherry_furnace", 
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<cherryFurnaceEntity>> CHERRY_FURNACE_ENTITY = FOODBLOCKENTITY.register("cherry_furnace", 
     () -> BlockEntityType.Builder.of(cherryFurnaceEntity::new, CHERRY_FURNACE.get()).build(null));
  //----------------------------------------------------------------------------------------Blackcherry-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, blackcherryFurnace> BLACKCHERRY_FURNACE = FOODBLOCK.register("blackcherry_furnace", 
     () -> new blackcherryFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<blackcherryFurnaceEntity>> BLACKCHERRY_FURNACE_ENTITY = FOODBLOCKENTITY.register("blackcherry_furnace", 
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<blackcherryFurnaceEntity>> BLACKCHERRY_FURNACE_ENTITY = FOODBLOCKENTITY.register("blackcherry_furnace", 
     () -> BlockEntityType.Builder.of(blackcherryFurnaceEntity::new, BLACKCHERRY_FURNACE.get()).build(null));
  //----------------------------------------------------------------------------------------Peach-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, peachFurnace> PEACH_FURNACE = FOODBLOCK.register("peach_furnace", 
     () -> new peachFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<peachFurnaceEntity>> PEACH_FURNACE_ENTITY = FOODBLOCKENTITY.register("peach_furnace", 
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<peachFurnaceEntity>> PEACH_FURNACE_ENTITY = FOODBLOCKENTITY.register("peach_furnace", 
     () -> BlockEntityType.Builder.of(peachFurnaceEntity::new, PEACH_FURNACE.get()).build(null));
  //----------------------------------------------------------------------------------------Coconut-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, coconutFurnace> COCONUT_FURNACE = FOODBLOCK.register("coconut_furnace", 
     () -> new coconutFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<coconutFurnaceEntity>> COCONUT_FURNACE_ENTITY = FOODBLOCKENTITY.register("coconut_furnace", 
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<coconutFurnaceEntity>> COCONUT_FURNACE_ENTITY = FOODBLOCKENTITY.register("coconut_furnace", 
     () -> BlockEntityType.Builder.of(coconutFurnaceEntity::new, COCONUT_FURNACE.get()).build(null));
  //----------------------------------------------------------------------------------------Orange-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, orangeFurnace> ORANGE_FURNACE = FOODBLOCK.register("orange_furnace", 
     () -> new orangeFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<orangeFurnaceEntity>> ORANGE_FURNACE_ENTITY = FOODBLOCKENTITY.register("orange_furnace", 
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<orangeFurnaceEntity>> ORANGE_FURNACE_ENTITY = FOODBLOCKENTITY.register("orange_furnace", 
     () -> BlockEntityType.Builder.of(orangeFurnaceEntity::new, ORANGE_FURNACE.get()).build(null));
  //----------------------------------------------------------------------------------------Tangerine-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, tangerineFurnace> TANGERINE_FURNACE = FOODBLOCK.register("tangerine_furnace", 
     () -> new tangerineFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<tangerineFurnaceEntity>> TANGERINE_FURNACE_ENTITY = FOODBLOCKENTITY.register("tangerine_furnace", 
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<tangerineFurnaceEntity>> TANGERINE_FURNACE_ENTITY = FOODBLOCKENTITY.register("tangerine_furnace", 
     () -> BlockEntityType.Builder.of(tangerineFurnaceEntity::new, TANGERINE_FURNACE.get()).build(null));
  //----------------------------------------------------------------------------------------Kumquat-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, kumquatFurnace> KUMQUAT_FURNACE = FOODBLOCK.register("kumquat_furnace", 
     () -> new kumquatFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<kumquatFurnaceEntity>> KUMQUAT_FURNACE_ENTITY = FOODBLOCKENTITY.register("kumquat_furnace", 
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<kumquatFurnaceEntity>> KUMQUAT_FURNACE_ENTITY = FOODBLOCKENTITY.register("kumquat_furnace", 
     () -> BlockEntityType.Builder.of(kumquatFurnaceEntity::new, KUMQUAT_FURNACE.get()).build(null));
  //----------------------------------------------------------------------------------------Persimmon-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, persimmonFurnace> PERSIMMON_FURNACE = FOODBLOCK.register("persimmon_furnace", 
     () -> new persimmonFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<persimmonFurnaceEntity>> PERSIMMON_FURNACE_ENTITY = FOODBLOCKENTITY.register("persimmon_furnace", 
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<persimmonFurnaceEntity>> PERSIMMON_FURNACE_ENTITY = FOODBLOCKENTITY.register("persimmon_furnace", 
     () -> BlockEntityType.Builder.of(persimmonFurnaceEntity::new, PERSIMMON_FURNACE.get()).build(null));
  //----------------------------------------------------------------------------------------Satsuma-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, satsumaFurnace> SATSUMA_FURNACE = FOODBLOCK.register("satsuma_furnace", 
     () -> new satsumaFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<satsumaFurnaceEntity>> SATSUMA_FURNACE_ENTITY = FOODBLOCKENTITY.register("satsuma_furnace", 
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<satsumaFurnaceEntity>> SATSUMA_FURNACE_ENTITY = FOODBLOCKENTITY.register("satsuma_furnace", 
     () -> BlockEntityType.Builder.of(satsumaFurnaceEntity::new, SATSUMA_FURNACE.get()).build(null));
  //----------------------------------------------------------------------------------------Mandarin-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, mandarinFurnace> MANDARIN_FURNACE = FOODBLOCK.register("mandarin_furnace", 
     () -> new mandarinFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<mandarinFurnaceEntity>> MANDARIN_FURNACE_ENTITY = FOODBLOCKENTITY.register("mandarin_furnace", 
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<mandarinFurnaceEntity>> MANDARIN_FURNACE_ENTITY = FOODBLOCKENTITY.register("mandarin_furnace", 
     () -> BlockEntityType.Builder.of(mandarinFurnaceEntity::new, MANDARIN_FURNACE.get()).build(null));
  //----------------------------------------------------------------------------------------Lemon-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, lemonFurnace> LEMON_FURNACE = FOODBLOCK.register("lemon_furnace", 
     () -> new lemonFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<lemonFurnaceEntity>> LEMON_FURNACE_ENTITY = FOODBLOCKENTITY.register("lemon_furnace", 
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<lemonFurnaceEntity>> LEMON_FURNACE_ENTITY = FOODBLOCKENTITY.register("lemon_furnace", 
     () -> BlockEntityType.Builder.of(lemonFurnaceEntity::new, LEMON_FURNACE.get()).build(null));
  //----------------------------------------------------------------------------------------Citron-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, citronFurnace> CITRON_FURNACE = FOODBLOCK.register("citron_furnace", 
     () -> new citronFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<citronFurnaceEntity>> CITRON_FURNACE_ENTITY = FOODBLOCKENTITY.register("citron_furnace", 
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<citronFurnaceEntity>> CITRON_FURNACE_ENTITY = FOODBLOCKENTITY.register("citron_furnace", 
     () -> BlockEntityType.Builder.of(citronFurnaceEntity::new, CITRON_FURNACE.get()).build(null));
  //----------------------------------------------------------------------------------------Buddhashand-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, buddhashandFurnace> BUDDHASHAND_FURNACE = FOODBLOCK.register("buddhashand_furnace", 
     () -> new buddhashandFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<buddhashandFurnaceEntity>> BUDDHASHAND_FURNACE_ENTITY = FOODBLOCKENTITY.register("buddhashand_furnace", 
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<buddhashandFurnaceEntity>> BUDDHASHAND_FURNACE_ENTITY = FOODBLOCKENTITY.register("buddhashand_furnace", 
     () -> BlockEntityType.Builder.of(buddhashandFurnaceEntity::new, BUDDHASHAND_FURNACE.get()).build(null));
  //----------------------------------------------------------------------------------------Lime-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, limeFurnace> LIME_FURNACE = FOODBLOCK.register("lime_furnace", 
     () -> new limeFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<limeFurnaceEntity>> LIME_FURNACE_ENTITY = FOODBLOCKENTITY.register("lime_furnace", 
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<limeFurnaceEntity>> LIME_FURNACE_ENTITY = FOODBLOCKENTITY.register("lime_furnace", 
     () -> BlockEntityType.Builder.of(limeFurnaceEntity::new, LIME_FURNACE.get()).build(null));
  //----------------------------------------------------------------------------------------Keylime-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, keylimeFurnace> KEYLIME_FURNACE = FOODBLOCK.register("keylime_furnace", 
     () -> new keylimeFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<keylimeFurnaceEntity>> KEYLIME_FURNACE_ENTITY = FOODBLOCKENTITY.register("keylime_furnace", 
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<keylimeFurnaceEntity>> KEYLIME_FURNACE_ENTITY = FOODBLOCKENTITY.register("keylime_furnace", 
     () -> BlockEntityType.Builder.of(keylimeFurnaceEntity::new, KEYLIME_FURNACE.get()).build(null));
  //----------------------------------------------------------------------------------------Fingerlime-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, fingerlimeFurnace> FINGERLIME_FURNACE = FOODBLOCK.register("fingerlime_furnace", 
     () -> new fingerlimeFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<fingerlimeFurnaceEntity>> FINGERLIME_FURNACE_ENTITY = FOODBLOCKENTITY.register("fingerlime_furnace", 
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<fingerlimeFurnaceEntity>> FINGERLIME_FURNACE_ENTITY = FOODBLOCKENTITY.register("fingerlime_furnace", 
     () -> BlockEntityType.Builder.of(fingerlimeFurnaceEntity::new, FINGERLIME_FURNACE.get()).build(null));
  //----------------------------------------------------------------------------------------Grapefruit-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, grapefruitFurnace> GRAPEFRUIT_FURNACE = FOODBLOCK.register("grapefruit_furnace", 
     () -> new grapefruitFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<grapefruitFurnaceEntity>> GRAPEFRUIT_FURNACE_ENTITY = FOODBLOCKENTITY.register("grapefruit_furnace", 
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<grapefruitFurnaceEntity>> GRAPEFRUIT_FURNACE_ENTITY = FOODBLOCKENTITY.register("grapefruit_furnace", 
     () -> BlockEntityType.Builder.of(grapefruitFurnaceEntity::new, GRAPEFRUIT_FURNACE.get()).build(null));
  //----------------------------------------------------------------------------------------Pomelo-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, pomeloFurnace> POMELO_FURNACE = FOODBLOCK.register("pomelo_furnace", 
     () -> new pomeloFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<pomeloFurnaceEntity>> POMELO_FURNACE_ENTITY = FOODBLOCKENTITY.register("pomelo_furnace", 
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<pomeloFurnaceEntity>> POMELO_FURNACE_ENTITY = FOODBLOCKENTITY.register("pomelo_furnace", 
     () -> BlockEntityType.Builder.of(pomeloFurnaceEntity::new, POMELO_FURNACE.get()).build(null));
  //----------------------------------------------------------------------------------------Corn-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, cornFurnace> CORN_FURNACE = FOODBLOCK.register("corn_furnace", 
     () -> new cornFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<cornFurnaceEntity>> CORN_FURNACE_ENTITY = FOODBLOCKENTITY.register("corn_furnace", 
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<cornFurnaceEntity>> CORN_FURNACE_ENTITY = FOODBLOCKENTITY.register("corn_furnace", 
     () -> BlockEntityType.Builder.of(cornFurnaceEntity::new, CORN_FURNACE.get()).build(null));
  //----------------------------------------------------------------------------------------Onion-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, onionFurnace> ONION_FURNACE = FOODBLOCK.register("onion_furnace", 
     () -> new onionFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
-
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<onionFurnaceEntity>> ONION_FURNACE_ENTITY = FOODBLOCKENTITY.register("onion_furnace", 
+   
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<onionFurnaceEntity>> ONION_FURNACE_ENTITY = FOODBLOCKENTITY.register("onion_furnace", 
     () -> BlockEntityType.Builder.of(onionFurnaceEntity::new, ONION_FURNACE.get()).build(null));
  //----------------------------------------------------------------------------------------Tomato-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, tomatoFurnace> TOMATO_FURNACE = FOODBLOCK.register("tomato_furnace", 
     () -> new tomatoFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<tomatoFurnaceEntity>> TOMATO_FURNACE_ENTITY = FOODBLOCKENTITY.register("tomato_furnace", 
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<tomatoFurnaceEntity>> TOMATO_FURNACE_ENTITY = FOODBLOCKENTITY.register("tomato_furnace", 
     () -> BlockEntityType.Builder.of(tomatoFurnaceEntity::new, TOMATO_FURNACE.get()).build(null));
  //----------------------------------------------------------------------------------------Pecan-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, pecanFurnace> PECAN_FURNACE = FOODBLOCK.register("pecan_furnace", 
     () -> new pecanFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<pecanFurnaceEntity>> PECAN_FURNACE_ENTITY = FOODBLOCKENTITY.register("pecan_furnace", 
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<pecanFurnaceEntity>> PECAN_FURNACE_ENTITY = FOODBLOCKENTITY.register("pecan_furnace", 
     () -> BlockEntityType.Builder.of(pecanFurnaceEntity::new, PECAN_FURNACE.get()).build(null));
  //----------------------------------------------------------------------------------------Almond-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, almondFurnace> ALMOND_FURNACE = FOODBLOCK.register("almond_furnace", 
     () -> new almondFurnace(MapColor.DEEPSLATE, SoundType.MUD_BRICKS, 2.5f, "deepslate"));
 
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<almondFurnaceEntity>> ALMOND_FURNACE_ENTITY = FOODBLOCKENTITY.register("almond_furnace", 
+    @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<almondFurnaceEntity>> ALMOND_FURNACE_ENTITY = FOODBLOCKENTITY.register("almond_furnace", 
     () -> BlockEntityType.Builder.of(almondFurnaceEntity::new, ALMOND_FURNACE.get()).build(null));
 //==============================================================================================================================================================================================
 //                                                                                         Paths
@@ -7980,7 +8045,8 @@ public class foodblockcompatregistry {
      ));
 
  //------entity
-     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<compatFoodBarrelEntity>> FOOD_BARREL_ENTITY = FOODBLOCKENTITY.register("food_barrel_entity", 
+     @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<compatFoodBarrelEntity>> FOOD_BARREL_ENTITY = FOODBLOCKENTITY.register("food_barrel_entity", 
      () -> BlockEntityType.Builder.of(compatFoodBarrelEntity::new,foodblockcompatregistry.ELDERBERRY_BARREL.get(),foodblockcompatregistry.JUNIPER_BARREL.get(),
      foodblockcompatregistry.BANANA_BARREL.get(),foodblockcompatregistry.STARFRUIT_BARREL.get(),foodblockcompatregistry.KIWIFRUIT_BARREL.get(),foodblockcompatregistry.GOOSEBERRY_BARREL.get(),
      foodblockcompatregistry.BLACKBERRY_BARREL.get(),
@@ -8471,7 +8537,8 @@ public class foodblockcompatregistry {
      ));
 
  //.........entity
-     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<compatBedEntity>> FOOD_BED_ENTITY = FOODBLOCKENTITY.register("food_bed_entity",
+     @SuppressWarnings("null")
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<compatBedEntity>> FOOD_BED_ENTITY = FOODBLOCKENTITY.register("food_bed_entity",
      () -> BlockEntityType.Builder.of(compatBedEntity::new,ELDERBERRY_BED.get(),JUNIPER_BED.get(),BANANA_BED.get(),BLACKBERRY_BED.get(),RASPBERRY_BED.get(),STRAWBERRY_BED.get(),
      SUGARAPPLE_BED.get(),CHERRY_BED.get(),COCONUT_BED.get(),
      ORANGE_BED.get(),TANGERINE_BED.get(),KUMQUAT_BED.get(), PERSIMMON_BED.get(),LEMON_BED.get(),CITRON_BED.get(),LIME_BED.get(),KEYLIME_BED.get(),FINGERLIME_BED.get(),GRAPEFRUIT_BED.get(),

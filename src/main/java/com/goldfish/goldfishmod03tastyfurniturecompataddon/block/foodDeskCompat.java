@@ -37,17 +37,20 @@ public class foodDeskCompat extends HorizontalDirectionalBlock {
         return CODEC;
     }
 
+    @SuppressWarnings("null")
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         BlockState state = this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
         return updateConnectionState(context.getLevel(), context.getClickedPos(), state);
     }
 
+    @SuppressWarnings("null")
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(FACING, NORTH_CONNECTED, EAST_CONNECTED, SOUTH_CONNECTED, WEST_CONNECTED);
     }
 
+    @SuppressWarnings("null")
     @Override
     public BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor level, BlockPos pos, BlockPos neighborPos) {
         return updateConnectionState(level, pos, state);
