@@ -92,6 +92,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //cabinet
        withExistingParent("small_elderberry_cabinet_item", modLoc("block/elderberry_cabinet"));
        withExistingParent("medium_elderberry_cabinet_item", modLoc("block/medium_elderberry_cabinet"));
+       //desk
+       withExistingParent("elderberry_desk_item", modLoc("block/elderberry_desk_single"));
     //==============================================================================================================================================
     //|                                                            Juniper                                                                      |
     //==============================================================================================================================================

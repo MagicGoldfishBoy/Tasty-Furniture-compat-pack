@@ -32,6 +32,7 @@ import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.compatFoodBarrel;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.compatMediumFoodCabinet;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.compatSmallFoodCabinet;
+import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.foodDeskCompat;
 import com.goldfish.goldfishmod03tastyfurniturecompataddon.block.compatBed;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodChairBlock;
 import com.goldfish.goldfishmod02tastyfurniture.block.foodpathtypeminislab;
@@ -148,10 +149,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
       buildChairModels();
       buildBedModels();
       buildCabinetModels();
-
-
-
-
+      buildDeskModels();
     };
     //==============================================================================================================================================
     //|                                                              Blocks                                                                        |
@@ -15955,6 +15953,42 @@ public class GM1BlockStateProvider extends BlockStateProvider
          });
 
     };
+    //==============================================================================================================================================
+    //|                                                             Cabinet                                                                        |
+    //==============================================================================================================================================
+    public void buildDeskModels() {
+         foodDeskCompat elderberryDesk = foodblockcompatregistry.ELDERBERRY_DESK.get();
+         
+         getVariantBuilder(elderberryDesk)
+         .forAllStates(state -> {
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             Boolean isleft = state.getValue(foodDeskCompat.EAST_CONNECTED);
+             Boolean isright = state.getValue(foodDeskCompat.WEST_CONNECTED);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
+
+             ResourceLocation modelLocation;
+             if (!isleft && !isright) {
+                 modelLocation = modLoc("block/elderberry_desk_single");
+             } else if (isleft && isright) {
+                 modelLocation = modLoc("block/elderberry_desk_triple_center");
+             } else if (isleft && !isright) {
+                 modelLocation = modLoc("block/elderberry_desk_double_left");
+             } else {
+                modelLocation = modLoc("block/elderberry_desk_double_right");
+             }
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });        
+    }
 
 }
     

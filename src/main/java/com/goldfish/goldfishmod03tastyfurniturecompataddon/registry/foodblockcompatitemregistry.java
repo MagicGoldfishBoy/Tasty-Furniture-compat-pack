@@ -8,6 +8,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SignItem;
 import net.minecraft.world.item.StandingAndWallBlockItem;
+import net.minecraft.world.level.block.SoundType;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -3648,4 +3649,11 @@ public class foodblockcompatitemregistry {
       public static final DeferredHolder<Item, BlockItem> MEDIUM_ALMOND_CABINET_ITEM = FOODBLOCKITEM.register("medium_almond_cabinet_item", 
       () -> new BlockItem(foodblockcompatregistry.MEDIUM_ALMOND_CABINET.get(),
       new BlockItem.Properties()));
+//==============================================================================================================================================================================================
+//                                                                                        Desks
+//==============================================================================================================================================================================================
+
+ //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> ELDERBERRY_DESK_ITEM = FOODBLOCKITEM.register("elderberry_desk_item", () -> new BlockItem(foodblockcompatregistry.ELDERBERRY_DESK.get(),
+    new BlockItem.Properties()));
 }

@@ -9000,4 +9000,21 @@ public class foodblockcompatregistry {
      MEDIUM_BUDDHASHAND_CABINET.get(),MEDIUM_LIME_CABINET.get(),MEDIUM_KEYLIME_CABINET.get(),MEDIUM_FINGERLIME_CABINET.get(),MEDIUM_GRAPEFRUIT_CABINET.get(), MEDIUM_POMELO_CABINET.get(),
      MEDIUM_CORN_CABINET.get(),MEDIUM_ONION_CABINET.get(),MEDIUM_TOMATO_CABINET.get(),MEDIUM_PECAN_CABINET.get(),MEDIUM_ALMOND_CABINET.get()).build(null));
 
+//==============================================================================================================================================================================================
+//                                                                                        Desks
+//==============================================================================================================================================================================================
+
+   static float desk_destroy_time = 1.25f;
+   static float desk_explosion_resistance = 0.75f;
+   static SoundType plant_desk_sound = SoundType.MUD_BRICKS;
+   static SoundType meat_desk_sound = SoundType.MUD;
+   static SoundType crystal_desk_sound = SoundType.BASALT;
+
+ //--------------------------------------------------------------------------------------Elderberry---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, foodDeskCompat> ELDERBERRY_DESK = FOODBLOCK.register("elderberry_desk", () -> new foodDeskCompat(BlockBehaviour.Properties.of()
+    .sound(plant_desk_sound)
+    .destroyTime(desk_destroy_time)
+    .explosionResistance(desk_explosion_resistance)
+    .noOcclusion()
+    ));
 }
