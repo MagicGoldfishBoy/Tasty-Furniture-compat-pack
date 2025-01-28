@@ -332,6 +332,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //cabinet
        withExistingParent("small_starfruit_cabinet_item", modLoc("block/starfruit_cabinet"));
        withExistingParent("medium_starfruit_cabinet_item", modLoc("block/medium_starfruit_cabinet"));
+       //desk
+       withExistingParent("starfruit_desk_item", modLoc("block/starfruit_desk_single"));
     //==============================================================================================================================================
     //|                                                            Kiwifruit                                                                      |
     //==============================================================================================================================================
