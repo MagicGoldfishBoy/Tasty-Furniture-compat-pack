@@ -492,6 +492,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //cabinet
        withExistingParent("small_gooseberry_cabinet_item", modLoc("block/gooseberry_cabinet"));
        withExistingParent("medium_gooseberry_cabinet_item", modLoc("block/medium_gooseberry_cabinet"));
+       //desk
+       withExistingParent("gooseberry_desk_item", modLoc("block/gooseberry_desk_single"));
     //==============================================================================================================================================
     //|                                                            Blackberry                                                                      |
     //==============================================================================================================================================

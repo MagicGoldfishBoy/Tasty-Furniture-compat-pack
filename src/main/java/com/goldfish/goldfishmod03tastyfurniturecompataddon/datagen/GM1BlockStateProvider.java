@@ -15989,7 +15989,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                  .rotationY(rotationY)
                  .build();
          });        
-     //------------------------------------------------------------juniper-----------------------------------------------------------------------
+     //-------------------------------------------------------------juniper-------------------------------------------------------------------------
          foodDeskCompat juniperDesk = foodblockcompatregistry.JUNIPER_DESK.get();
          
          getVariantBuilder(juniperDesk)
@@ -16021,7 +16021,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                  .rotationY(rotationY)
                  .build();
          });        
-     //------------------------------------------------------------banana-----------------------------------------------------------------------
+     //--------------------------------------------------------------banana-------------------------------------------------------------------------
          foodDeskCompat bananaDesk = foodblockcompatregistry.BANANA_DESK.get();
          
          getVariantBuilder(bananaDesk)
@@ -16053,7 +16053,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                  .rotationY(rotationY)
                  .build();
          });        
-     //------------------------------------------------------------starfruit-----------------------------------------------------------------------
+     //------------------------------------------------------------starfruit------------------------------------------------------------------------
          foodDeskCompat starfruitDesk = foodblockcompatregistry.STARFRUIT_DESK.get();
          
          getVariantBuilder(starfruitDesk)
@@ -16085,7 +16085,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                  .rotationY(rotationY)
                  .build();
          });        
-     //------------------------------------------------------------kiwifruit-----------------------------------------------------------------------
+     //------------------------------------------------------------kiwifruit------------------------------------------------------------------------
          foodDeskCompat kiwifruitDesk = foodblockcompatregistry.KIWIFRUIT_DESK.get();
          
          getVariantBuilder(kiwifruitDesk)
@@ -16110,6 +16110,38 @@ public class GM1BlockStateProvider extends BlockStateProvider
                  modelLocation = modLoc("block/kiwifruit_desk_double_left");
              } else {
                 modelLocation = modLoc("block/kiwifruit_desk_double_right");
+             }
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });        
+     //------------------------------------------------------------gooseberry-----------------------------------------------------------------------
+         foodDeskCompat gooseberryDesk = foodblockcompatregistry.GOOSEBERRY_DESK.get();
+         
+         getVariantBuilder(gooseberryDesk)
+         .forAllStates(state -> {
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             Boolean isleft = state.getValue(foodDeskCompat.EAST_CONNECTED);
+             Boolean isright = state.getValue(foodDeskCompat.WEST_CONNECTED);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
+
+             ResourceLocation modelLocation;
+             if (!isleft && !isright) {
+                 modelLocation = modLoc("block/gooseberry_desk_single");
+             } else if (isleft && isright) {
+                 modelLocation = modLoc("block/gooseberry_desk_triple_center");
+             } else if (isleft && !isright) {
+                 modelLocation = modLoc("block/gooseberry_desk_double_left");
+             } else {
+                modelLocation = modLoc("block/gooseberry_desk_double_right");
              }
          
              return ConfiguredModel.builder()
