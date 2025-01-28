@@ -16181,7 +16181,7 @@ public class GM1BlockStateProvider extends BlockStateProvider
                  .rotationY(rotationY)
                  .build();
          });        
-     //------------------------------------------------------------raspberry-----------------------------------------------------------------------
+     //------------------------------------------------------------raspberry------------------------------------------------------------------------
          foodDeskCompat raspberryDesk = foodblockcompatregistry.RASPBERRY_DESK.get();
          
          getVariantBuilder(raspberryDesk)
@@ -16238,6 +16238,38 @@ public class GM1BlockStateProvider extends BlockStateProvider
                  modelLocation = modLoc("block/strawberry_desk_double_left");
              } else {
                 modelLocation = modLoc("block/strawberry_desk_double_right");
+             }
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });        
+     //------------------------------------------------------------sugarapple-----------------------------------------------------------------------
+         foodDeskCompat sugarappleDesk = foodblockcompatregistry.SUGARAPPLE_DESK.get();
+         
+         getVariantBuilder(sugarappleDesk)
+         .forAllStates(state -> {
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             Boolean isleft = state.getValue(foodDeskCompat.EAST_CONNECTED);
+             Boolean isright = state.getValue(foodDeskCompat.WEST_CONNECTED);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
+
+             ResourceLocation modelLocation;
+             if (!isleft && !isright) {
+                 modelLocation = modLoc("block/sugarapple_desk_single");
+             } else if (isleft && isright) {
+                 modelLocation = modLoc("block/sugarapple_desk_triple_center");
+             } else if (isleft && !isright) {
+                 modelLocation = modLoc("block/sugarapple_desk_double_left");
+             } else {
+                modelLocation = modLoc("block/sugarapple_desk_double_right");
              }
          
              return ConfiguredModel.builder()

@@ -9126,7 +9126,7 @@ public class foodblockcompatregistry {
     .explosionResistance(desk_explosion_resistance)
     .noOcclusion()
     ));
- //--------------------------------------------------------------------------------------Raspberry---------------------------------------------------------------------------------------------
+ //--------------------------------------------------------------------------------------Raspberry----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, foodDeskCompat> RASPBERRY_DESK = FOODBLOCK.register("raspberry_desk", () -> new foodDeskCompat(BlockBehaviour.Properties.of()
     .sound(plant_desk_sound)
     .destroyTime(desk_destroy_time)
@@ -9135,6 +9135,13 @@ public class foodblockcompatregistry {
     ));
  //--------------------------------------------------------------------------------------Strawberry---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, foodDeskCompat> STRAWBERRY_DESK = FOODBLOCK.register("strawberry_desk", () -> new foodDeskCompat(BlockBehaviour.Properties.of()
+    .sound(plant_desk_sound)
+    .destroyTime(desk_destroy_time)
+    .explosionResistance(desk_explosion_resistance)
+    .noOcclusion()
+    ));
+ //--------------------------------------------------------------------------------------Sugarapple---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, foodDeskCompat> SUGARAPPLE_DESK = FOODBLOCK.register("sugarapple_desk", () -> new foodDeskCompat(BlockBehaviour.Properties.of()
     .sound(plant_desk_sound)
     .destroyTime(desk_destroy_time)
     .explosionResistance(desk_explosion_resistance)
