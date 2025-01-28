@@ -652,6 +652,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //cabinet
        withExistingParent("small_raspberry_cabinet_item", modLoc("block/raspberry_cabinet"));
        withExistingParent("medium_raspberry_cabinet_item", modLoc("block/medium_raspberry_cabinet"));
+       //desk
+       withExistingParent("raspberry_desk_item", modLoc("block/raspberry_desk_single"));
     //==============================================================================================================================================
     //|                                                            Strawberry                                                                      |
     //==============================================================================================================================================

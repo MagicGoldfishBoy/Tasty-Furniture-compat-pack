@@ -9126,4 +9126,11 @@ public class foodblockcompatregistry {
     .explosionResistance(desk_explosion_resistance)
     .noOcclusion()
     ));
+ //--------------------------------------------------------------------------------------Raspberry---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, foodDeskCompat> RASPBERRY_DESK = FOODBLOCK.register("raspberry_desk", () -> new foodDeskCompat(BlockBehaviour.Properties.of()
+    .sound(plant_desk_sound)
+    .destroyTime(desk_destroy_time)
+    .explosionResistance(desk_explosion_resistance)
+    .noOcclusion()
+    ));
 }
