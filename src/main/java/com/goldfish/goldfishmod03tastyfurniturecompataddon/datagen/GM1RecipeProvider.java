@@ -12610,7 +12610,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
       .define('B', nuggetcompatregistry.ELDERBERRY_NUGGET.get())
       .unlockedBy("has_elderberry_slab", has(foodblockcompatitemregistry.ELDERBERRY_SLAB_ITEM.get()))
       .save(output);
-  //--------------------------------------------------------------------------------------Juniper---------------------------------------------------------------------------------------------
+  //---------------------------------------------------------------------------------------Juniper-----------------------------------------------------------------------------------------------
       ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.JUNIPER_DESK_ITEM.get())
       .pattern("AAA")
       .pattern("B B")
@@ -12619,7 +12619,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
       .define('B', nuggetcompatregistry.JUNIPER_NUGGET.get())
       .unlockedBy("has_juniper_slab", has(foodblockcompatitemregistry.JUNIPER_SLAB_ITEM.get()))
       .save(output);
-  //--------------------------------------------------------------------------------------Banana---------------------------------------------------------------------------------------------
+  //----------------------------------------------------------------------------------------Banana-----------------------------------------------------------------------------------------------
       ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BANANA_DESK_ITEM.get())
       .pattern("AAA")
       .pattern("B B")
@@ -12628,7 +12628,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
       .define('B', nuggetcompatregistry.BANANA_NUGGET.get())
       .unlockedBy("has_banana_slab", has(foodblockcompatitemregistry.BANANA_SLAB_ITEM.get()))
       .save(output);
-  //--------------------------------------------------------------------------------------Starfruit---------------------------------------------------------------------------------------------
+  //--------------------------------------------------------------------------------------Starfruit----------------------------------------------------------------------------------------------
       ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.STARFRUIT_DESK_ITEM.get())
       .pattern("AAA")
       .pattern("B B")
@@ -12637,7 +12637,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
       .define('B', nuggetcompatregistry.STARFRUIT_NUGGET.get())
       .unlockedBy("has_starfruit_slab", has(foodblockcompatitemregistry.STARFRUIT_SLAB_ITEM.get()))
       .save(output);
-  //--------------------------------------------------------------------------------------Kiwifruit---------------------------------------------------------------------------------------------
+  //--------------------------------------------------------------------------------------Kiwifruit----------------------------------------------------------------------------------------------
       ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.KIWIFRUIT_DESK_ITEM.get())
       .pattern("AAA")
       .pattern("B B")
@@ -12664,7 +12664,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
       .define('B', nuggetcompatregistry.BLACKBERRY_NUGGET.get())
       .unlockedBy("has_blackberry_slab", has(foodblockcompatitemregistry.BLACKBERRY_SLAB_ITEM.get()))
       .save(output);
-  //--------------------------------------------------------------------------------------Raspberry---------------------------------------------------------------------------------------------
+  //--------------------------------------------------------------------------------------Raspberry----------------------------------------------------------------------------------------------
       ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.RASPBERRY_DESK_ITEM.get())
       .pattern("AAA")
       .pattern("B B")
@@ -12672,6 +12672,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
       .define('A', foodblockcompatitemregistry.RASPBERRY_SLAB_ITEM.get())
       .define('B', nuggetcompatregistry.RASPBERRY_NUGGET.get())
       .unlockedBy("has_raspberry_slab", has(foodblockcompatitemregistry.RASPBERRY_SLAB_ITEM.get()))
+      .save(output);
+  //--------------------------------------------------------------------------------------Strawberry---------------------------------------------------------------------------------------------
+      ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.STRAWBERRY_DESK_ITEM.get())
+      .pattern("AAA")
+      .pattern("B B")
+      .pattern("B B")
+      .define('A', foodblockcompatitemregistry.STRAWBERRY_SLAB_ITEM.get())
+      .define('B', nuggetcompatregistry.STRAWBERRY_NUGGET.get())
+      .unlockedBy("has_strawberry_slab", has(foodblockcompatitemregistry.STRAWBERRY_SLAB_ITEM.get()))
       .save(output);
       }
   }
