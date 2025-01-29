@@ -1540,6 +1540,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //cabinet
        withExistingParent("small_satsuma_cabinet_item", modLoc("block/satsuma_cabinet"));
        withExistingParent("medium_satsuma_cabinet_item", modLoc("block/medium_satsuma_cabinet"));
+       //desk
+       withExistingParent("satsuma_desk_item", modLoc("block/satsuma_desk_single"));
     //==============================================================================================================================================
     //|                                                              Mandarin                                                                        |
     //==============================================================================================================================================

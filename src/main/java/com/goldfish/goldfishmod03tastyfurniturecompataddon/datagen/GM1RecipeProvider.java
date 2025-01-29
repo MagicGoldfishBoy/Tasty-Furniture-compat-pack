@@ -12763,6 +12763,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
       .define('B', nuggetcompatregistry.PERSIMMON_NUGGET.get())
       .unlockedBy("has_persimmon_slab", has(foodblockcompatitemregistry.PERSIMMON_SLAB_ITEM.get()))
       .save(output);
+  //--------------------------------------------------------------------------------------Satsuma---------------------------------------------------------------------------------------------
+      ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.SATSUMA_DESK_ITEM.get())
+      .pattern("AAA")
+      .pattern("B B")
+      .pattern("B B")
+      .define('A', foodblockcompatitemregistry.SATSUMA_SLAB_ITEM.get())
+      .define('B', nuggetcompatregistry.SATSUMA_NUGGET.get())
+      .unlockedBy("has_satsuma_slab", has(foodblockcompatitemregistry.SATSUMA_SLAB_ITEM.get()))
+      .save(output);
       }
   }
 }
