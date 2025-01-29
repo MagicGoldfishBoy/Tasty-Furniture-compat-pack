@@ -8702,7 +8702,7 @@ public class foodblockcompatregistry {
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
- //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
+ //---------------------------------------------------------------------------------------Cherry------------------------------------------------------------------------------------------------
      public static final DeferredHolder<Block, compatSmallFoodCabinet> SMALL_CHERRY_CABINET = FOODBLOCK.register("small_cherry_cabinet", 
      () -> new compatSmallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
@@ -8717,7 +8717,7 @@ public class foodblockcompatregistry {
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
- //--------------------------------------------------------------------------------------Blackcherry---------------------------------------------------------------------------------------------
+ //-------------------------------------------------------------------------------------Blackcherry---------------------------------------------------------------------------------------------
      public static final DeferredHolder<Block, compatSmallFoodCabinet> SMALL_BLACKCHERRY_CABINET = FOODBLOCK.register("small_blackcherry_cabinet", 
      () -> new compatSmallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
@@ -8732,7 +8732,7 @@ public class foodblockcompatregistry {
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
- //--------------------------------------------------------------------------------------Peach---------------------------------------------------------------------------------------------
+ //----------------------------------------------------------------------------------------Peach------------------------------------------------------------------------------------------------
      public static final DeferredHolder<Block, compatSmallFoodCabinet> SMALL_PEACH_CABINET = FOODBLOCK.register("small_peach_cabinet", 
      () -> new compatSmallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
@@ -8747,7 +8747,7 @@ public class foodblockcompatregistry {
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
- //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
+ //---------------------------------------------------------------------------------------Coconut-----------------------------------------------------------------------------------------------
      public static final DeferredHolder<Block, compatSmallFoodCabinet> SMALL_COCONUT_CABINET = FOODBLOCK.register("small_coconut_cabinet", 
      () -> new compatSmallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
@@ -8762,7 +8762,7 @@ public class foodblockcompatregistry {
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
- //--------------------------------------------------------------------------------------Orange---------------------------------------------------------------------------------------------
+ //---------------------------------------------------------------------------------------Orange------------------------------------------------------------------------------------------------
      public static final DeferredHolder<Block, compatSmallFoodCabinet> SMALL_ORANGE_CABINET = FOODBLOCK.register("small_orange_cabinet", 
      () -> new compatSmallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
@@ -9170,6 +9170,13 @@ public class foodblockcompatregistry {
     ));
  //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, foodDeskCompat> COCONUT_DESK = FOODBLOCK.register("coconut_desk", () -> new foodDeskCompat(BlockBehaviour.Properties.of()
+    .sound(plant_desk_sound)
+    .destroyTime(desk_destroy_time)
+    .explosionResistance(desk_explosion_resistance)
+    .noOcclusion()
+    ));
+ //--------------------------------------------------------------------------------------Orange---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, foodDeskCompat> ORANGE_DESK = FOODBLOCK.register("orange_desk", () -> new foodDeskCompat(BlockBehaviour.Properties.of()
     .sound(plant_desk_sound)
     .destroyTime(desk_destroy_time)
     .explosionResistance(desk_explosion_resistance)

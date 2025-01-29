@@ -1220,6 +1220,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //cabinet
        withExistingParent("small_orange_cabinet_item", modLoc("block/orange_cabinet"));
        withExistingParent("medium_orange_cabinet_item", modLoc("block/medium_orange_cabinet"));
+       //desk
+       withExistingParent("orange_desk_item", modLoc("block/orange_desk_single"));
     //==============================================================================================================================================
     //|                                                              Tangerine                                                                        |
     //==============================================================================================================================================
