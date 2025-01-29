@@ -9182,15 +9182,22 @@ public class foodblockcompatregistry {
     .explosionResistance(desk_explosion_resistance)
     .noOcclusion()
     ));
- //----------------------------------------------------------------------------------------Tangerine-----------------------------------------------------------------------------------------------
+ //--------------------------------------------------------------------------------------Tangerine----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, foodDeskCompat> TANGERINE_DESK = FOODBLOCK.register("tangerine_desk", () -> new foodDeskCompat(BlockBehaviour.Properties.of()
     .sound(plant_desk_sound)
     .destroyTime(desk_destroy_time)
     .explosionResistance(desk_explosion_resistance)
     .noOcclusion()
     ));
- //----------------------------------------------------------------------------------------Kumquat-----------------------------------------------------------------------------------------------
+ //---------------------------------------------------------------------------------------Kumquat------------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, foodDeskCompat> KUMQUAT_DESK = FOODBLOCK.register("kumquat_desk", () -> new foodDeskCompat(BlockBehaviour.Properties.of()
+    .sound(plant_desk_sound)
+    .destroyTime(desk_destroy_time)
+    .explosionResistance(desk_explosion_resistance)
+    .noOcclusion()
+    ));
+ //----------------------------------------------------------------------------------------Persimmon-----------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, foodDeskCompat> PERSIMMON_DESK = FOODBLOCK.register("persimmon_desk", () -> new foodDeskCompat(BlockBehaviour.Properties.of()
     .sound(plant_desk_sound)
     .destroyTime(desk_destroy_time)
     .explosionResistance(desk_explosion_resistance)

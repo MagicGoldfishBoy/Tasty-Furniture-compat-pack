@@ -1460,6 +1460,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //cabinet
        withExistingParent("small_persimmon_cabinet_item", modLoc("block/persimmon_cabinet"));
        withExistingParent("medium_persimmon_cabinet_item", modLoc("block/medium_persimmon_cabinet"));
+       //desk
+       withExistingParent("persimmon_desk_item", modLoc("block/persimmon_desk_single"));
     //==============================================================================================================================================
     //|                                                              Satsuma                                                                        |
     //==============================================================================================================================================
