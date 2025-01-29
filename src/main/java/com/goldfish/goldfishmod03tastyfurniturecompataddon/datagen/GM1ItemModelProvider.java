@@ -892,6 +892,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //cabinet
        withExistingParent("small_cherry_cabinet_item", modLoc("block/cherry_cabinet"));
        withExistingParent("medium_cherry_cabinet_item", modLoc("block/medium_cherry_cabinet"));
+       //desk
+       withExistingParent("cherry_desk_item", modLoc("block/cherry_desk_single"));
     //==============================================================================================================================================
     //|                                                            Blackcherry                                                                     |
     //==============================================================================================================================================
