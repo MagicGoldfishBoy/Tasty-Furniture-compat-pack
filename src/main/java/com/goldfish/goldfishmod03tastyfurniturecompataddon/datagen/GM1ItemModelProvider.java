@@ -1060,6 +1060,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //cabinet
        withExistingParent("small_peach_cabinet_item", modLoc("block/peach_cabinet"));
        withExistingParent("medium_peach_cabinet_item", modLoc("block/medium_peach_cabinet"));
+       //desk
+       withExistingParent("peach_desk_item", modLoc("block/peach_desk_single"));
     //==============================================================================================================================================
     //|                                                              Coconut                                                                       |
     //==============================================================================================================================================
