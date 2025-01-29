@@ -9168,4 +9168,11 @@ public class foodblockcompatregistry {
     .explosionResistance(desk_explosion_resistance)
     .noOcclusion()
     ));
+ //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, foodDeskCompat> COCONUT_DESK = FOODBLOCK.register("coconut_desk", () -> new foodDeskCompat(BlockBehaviour.Properties.of()
+    .sound(plant_desk_sound)
+    .destroyTime(desk_destroy_time)
+    .explosionResistance(desk_explosion_resistance)
+    .noOcclusion()
+    ));
 }
