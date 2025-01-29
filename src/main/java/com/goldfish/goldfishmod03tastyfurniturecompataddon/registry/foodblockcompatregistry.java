@@ -9147,36 +9147,43 @@ public class foodblockcompatregistry {
     .explosionResistance(desk_explosion_resistance)
     .noOcclusion()
     ));
- //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
+ //----------------------------------------------------------------------------------------Cherry-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, foodDeskCompat> CHERRY_DESK = FOODBLOCK.register("cherry_desk", () -> new foodDeskCompat(BlockBehaviour.Properties.of()
     .sound(plant_desk_sound)
     .destroyTime(desk_destroy_time)
     .explosionResistance(desk_explosion_resistance)
     .noOcclusion()
     ));
- //--------------------------------------------------------------------------------------Blackcherry---------------------------------------------------------------------------------------------
+ //-------------------------------------------------------------------------------------Blackcherry---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, foodDeskCompat> BLACKCHERRY_DESK = FOODBLOCK.register("blackcherry_desk", () -> new foodDeskCompat(BlockBehaviour.Properties.of()
     .sound(plant_desk_sound)
     .destroyTime(desk_destroy_time)
     .explosionResistance(desk_explosion_resistance)
     .noOcclusion()
     ));
- //--------------------------------------------------------------------------------------Peach---------------------------------------------------------------------------------------------
+ //----------------------------------------------------------------------------------------Peach------------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, foodDeskCompat> PEACH_DESK = FOODBLOCK.register("peach_desk", () -> new foodDeskCompat(BlockBehaviour.Properties.of()
     .sound(plant_desk_sound)
     .destroyTime(desk_destroy_time)
     .explosionResistance(desk_explosion_resistance)
     .noOcclusion()
     ));
- //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
+ //---------------------------------------------------------------------------------------Coconut-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, foodDeskCompat> COCONUT_DESK = FOODBLOCK.register("coconut_desk", () -> new foodDeskCompat(BlockBehaviour.Properties.of()
     .sound(plant_desk_sound)
     .destroyTime(desk_destroy_time)
     .explosionResistance(desk_explosion_resistance)
     .noOcclusion()
     ));
- //--------------------------------------------------------------------------------------Orange---------------------------------------------------------------------------------------------
+ //----------------------------------------------------------------------------------------Orange-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, foodDeskCompat> ORANGE_DESK = FOODBLOCK.register("orange_desk", () -> new foodDeskCompat(BlockBehaviour.Properties.of()
+    .sound(plant_desk_sound)
+    .destroyTime(desk_destroy_time)
+    .explosionResistance(desk_explosion_resistance)
+    .noOcclusion()
+    ));
+ //----------------------------------------------------------------------------------------Tangerine-----------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, foodDeskCompat> TANGERINE_DESK = FOODBLOCK.register("tangerine_desk", () -> new foodDeskCompat(BlockBehaviour.Properties.of()
     .sound(plant_desk_sound)
     .destroyTime(desk_destroy_time)
     .explosionResistance(desk_explosion_resistance)
