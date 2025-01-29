@@ -9203,8 +9203,15 @@ public class foodblockcompatregistry {
     .explosionResistance(desk_explosion_resistance)
     .noOcclusion()
     ));
- //--------------------------------------------------------------------------------------Satsuma----------------------------------------------------------------------------------------------
+ //---------------------------------------------------------------------------------------Satsuma-----------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, foodDeskCompat> SATSUMA_DESK = FOODBLOCK.register("satsuma_desk", () -> new foodDeskCompat(BlockBehaviour.Properties.of()
+    .sound(plant_desk_sound)
+    .destroyTime(desk_destroy_time)
+    .explosionResistance(desk_explosion_resistance)
+    .noOcclusion()
+    ));
+ //---------------------------------------------------------------------------------------Mandarin-----------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, foodDeskCompat> MANDARIN_DESK = FOODBLOCK.register("mandarin_desk", () -> new foodDeskCompat(BlockBehaviour.Properties.of()
     .sound(plant_desk_sound)
     .destroyTime(desk_destroy_time)
     .explosionResistance(desk_explosion_resistance)

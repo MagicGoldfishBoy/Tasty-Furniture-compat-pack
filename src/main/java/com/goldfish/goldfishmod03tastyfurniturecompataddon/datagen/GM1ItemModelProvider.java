@@ -1620,6 +1620,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //cabinet
        withExistingParent("small_mandarin_cabinet_item", modLoc("block/mandarin_cabinet"));
        withExistingParent("medium_mandarin_cabinet_item", modLoc("block/medium_mandarin_cabinet"));
+       //desk
+       withExistingParent("mandarin_desk_item", modLoc("block/mandarin_desk_single"));
     //==============================================================================================================================================
     //|                                                              Lemon                                                                        |
     //==============================================================================================================================================
