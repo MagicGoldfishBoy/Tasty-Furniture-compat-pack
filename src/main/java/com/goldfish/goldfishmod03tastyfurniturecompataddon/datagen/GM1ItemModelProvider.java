@@ -1380,6 +1380,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //cabinet
        withExistingParent("small_kumquat_cabinet_item", modLoc("block/kumquat_cabinet"));
        withExistingParent("medium_kumquat_cabinet_item", modLoc("block/medium_kumquat_cabinet"));
+       //desk
+       withExistingParent("kumquat_desk_item", modLoc("block/kumquat_desk_single"));
     //==============================================================================================================================================
     //|                                                              Persimmon                                                                        |
     //==============================================================================================================================================
