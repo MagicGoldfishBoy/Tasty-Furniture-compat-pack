@@ -9252,8 +9252,15 @@ public class foodblockcompatregistry {
     .explosionResistance(desk_explosion_resistance)
     .noOcclusion()
     ));
- //---------------------------------------------------------------------------------------Fingerlime-----------------------------------------------------------------------------------------------
+ //--------------------------------------------------------------------------------------Fingerlime---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, foodDeskCompat> FINGERLIME_DESK = FOODBLOCK.register("fingerlime_desk", () -> new foodDeskCompat(BlockBehaviour.Properties.of()
+    .sound(plant_desk_sound)
+    .destroyTime(desk_destroy_time)
+    .explosionResistance(desk_explosion_resistance)
+    .noOcclusion()
+    ));
+ //--------------------------------------------------------------------------------------Grapefruit---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, foodDeskCompat> GRAPEFRUIT_DESK = FOODBLOCK.register("grapefruit_desk", () -> new foodDeskCompat(BlockBehaviour.Properties.of()
     .sound(plant_desk_sound)
     .destroyTime(desk_destroy_time)
     .explosionResistance(desk_explosion_resistance)

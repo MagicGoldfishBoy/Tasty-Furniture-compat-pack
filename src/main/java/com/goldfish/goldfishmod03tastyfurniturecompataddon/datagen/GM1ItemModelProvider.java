@@ -2180,6 +2180,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //cabinet
        withExistingParent("small_grapefruit_cabinet_item", modLoc("block/grapefruit_cabinet"));
        withExistingParent("medium_grapefruit_cabinet_item", modLoc("block/medium_grapefruit_cabinet"));
+       //desk
+       withExistingParent("grapefruit_desk_item", modLoc("block/grapefruit_desk_single"));
     //==============================================================================================================================================
     //|                                                            Pomelo                                                                      |
     //==============================================================================================================================================

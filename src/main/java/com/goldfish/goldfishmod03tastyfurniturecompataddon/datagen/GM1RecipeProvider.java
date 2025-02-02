@@ -12835,6 +12835,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
       .define('B', nuggetcompatregistry.FINGERLIME_NUGGET.get())
       .unlockedBy("has_fingerlime_slab", has(foodblockcompatitemregistry.FINGERLIME_SLAB_ITEM.get()))
       .save(output);
+  //-----------------------------------------------------------------------------------------Grapefruit------------------------------------------------------------------------------------------------
+      ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.GRAPEFRUIT_DESK_ITEM.get())
+      .pattern("AAA")
+      .pattern("B B")
+      .pattern("B B")
+      .define('A', foodblockcompatitemregistry.GRAPEFRUIT_SLAB_ITEM.get())
+      .define('B', nuggetcompatregistry.GRAPEFRUIT_NUGGET.get())
+      .unlockedBy("has_grapefruit_slab", has(foodblockcompatitemregistry.GRAPEFRUIT_SLAB_ITEM.get()))
+      .save(output);
       }
   }
 }
