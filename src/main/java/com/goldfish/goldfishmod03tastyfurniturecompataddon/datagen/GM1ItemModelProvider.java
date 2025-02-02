@@ -1940,6 +1940,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //cabinet
        withExistingParent("small_lime_cabinet_item", modLoc("block/lime_cabinet"));
        withExistingParent("medium_lime_cabinet_item", modLoc("block/medium_lime_cabinet"));
+       //desk
+       withExistingParent("lime_desk_item", modLoc("block/lime_desk_single"));
     //==============================================================================================================================================
     //|                                                              Keylime                                                                        |
     //==============================================================================================================================================

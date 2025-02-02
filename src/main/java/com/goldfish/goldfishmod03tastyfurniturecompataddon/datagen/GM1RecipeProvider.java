@@ -12691,7 +12691,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
       .define('B', nuggetcompatregistry.SUGARAPPLE_NUGGET.get())
       .unlockedBy("has_sugarapple_slab", has(foodblockcompatitemregistry.SUGARAPPLE_SLAB_ITEM.get()))
       .save(output);
-  //--------------------------------------------------------------------------------------Cherry---------------------------------------------------------------------------------------------
+  //----------------------------------------------------------------------------------------Cherry-----------------------------------------------------------------------------------------------
       ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CHERRY_DESK_ITEM.get())
       .pattern("AAA")
       .pattern("B B")
@@ -12700,7 +12700,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
       .define('B', nuggetcompatregistry.CHERRY_NUGGET.get())
       .unlockedBy("has_cherry_slab", has(foodblockcompatitemregistry.CHERRY_SLAB_ITEM.get()))
       .save(output);
-  //--------------------------------------------------------------------------------------Blackcherry---------------------------------------------------------------------------------------------
+  //--------------------------------------------------------------------------------------Blackcherry--------------------------------------------------------------------------------------------
       ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BLACKCHERRY_DESK_ITEM.get())
       .pattern("AAA")
       .pattern("B B")
@@ -12709,7 +12709,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
       .define('B', nuggetcompatregistry.BLACKCHERRY_NUGGET.get())
       .unlockedBy("has_blackcherry_slab", has(foodblockcompatitemregistry.BLACKCHERRY_SLAB_ITEM.get()))
       .save(output);
-  //--------------------------------------------------------------------------------------Peach---------------------------------------------------------------------------------------------
+  //----------------------------------------------------------------------------------------Peach------------------------------------------------------------------------------------------------
       ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.PEACH_DESK_ITEM.get())
       .pattern("AAA")
       .pattern("B B")
@@ -12718,7 +12718,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
       .define('B', nuggetcompatregistry.PEACH_NUGGET.get())
       .unlockedBy("has_peach_slab", has(foodblockcompatitemregistry.PEACH_SLAB_ITEM.get()))
       .save(output);
-  //--------------------------------------------------------------------------------------Coconut---------------------------------------------------------------------------------------------
+  //---------------------------------------------------------------------------------------Coconut-----------------------------------------------------------------------------------------------
       ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.COCONUT_DESK_ITEM.get())
       .pattern("AAA")
       .pattern("B B")
@@ -12727,7 +12727,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
       .define('B', nuggetcompatregistry.COCONUT_NUGGET.get())
       .unlockedBy("has_coconut_slab", has(foodblockcompatitemregistry.COCONUT_SLAB_ITEM.get()))
       .save(output);
-  //--------------------------------------------------------------------------------------Orange---------------------------------------------------------------------------------------------
+  //----------------------------------------------------------------------------------------Orange-----------------------------------------------------------------------------------------------
       ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.ORANGE_DESK_ITEM.get())
       .pattern("AAA")
       .pattern("B B")
@@ -12736,7 +12736,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
       .define('B', nuggetcompatregistry.ORANGE_NUGGET.get())
       .unlockedBy("has_orange_slab", has(foodblockcompatitemregistry.ORANGE_SLAB_ITEM.get()))
       .save(output);
-  //--------------------------------------------------------------------------------------Tangerine---------------------------------------------------------------------------------------------
+  //--------------------------------------------------------------------------------------Tangerine----------------------------------------------------------------------------------------------
       ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.TANGERINE_DESK_ITEM.get())
       .pattern("AAA")
       .pattern("B B")
@@ -12745,7 +12745,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
       .define('B', nuggetcompatregistry.TANGERINE_NUGGET.get())
       .unlockedBy("has_tangerine_slab", has(foodblockcompatitemregistry.TANGERINE_SLAB_ITEM.get()))
       .save(output);
-  //--------------------------------------------------------------------------------------Kumquat---------------------------------------------------------------------------------------------
+  //---------------------------------------------------------------------------------------Kumquat-----------------------------------------------------------------------------------------------
       ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.KUMQUAT_DESK_ITEM.get())
       .pattern("AAA")
       .pattern("B B")
@@ -12754,7 +12754,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
       .define('B', nuggetcompatregistry.KUMQUAT_NUGGET.get())
       .unlockedBy("has_kumquat_slab", has(foodblockcompatitemregistry.KUMQUAT_SLAB_ITEM.get()))
       .save(output);
-  //--------------------------------------------------------------------------------------Persimmon---------------------------------------------------------------------------------------------
+  //--------------------------------------------------------------------------------------Persimmon----------------------------------------------------------------------------------------------
       ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.PERSIMMON_DESK_ITEM.get())
       .pattern("AAA")
       .pattern("B B")
@@ -12763,7 +12763,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
       .define('B', nuggetcompatregistry.PERSIMMON_NUGGET.get())
       .unlockedBy("has_persimmon_slab", has(foodblockcompatitemregistry.PERSIMMON_SLAB_ITEM.get()))
       .save(output);
-  //--------------------------------------------------------------------------------------Satsuma---------------------------------------------------------------------------------------------
+  //---------------------------------------------------------------------------------------Satsuma-----------------------------------------------------------------------------------------------
       ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.SATSUMA_DESK_ITEM.get())
       .pattern("AAA")
       .pattern("B B")
@@ -12772,7 +12772,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
       .define('B', nuggetcompatregistry.SATSUMA_NUGGET.get())
       .unlockedBy("has_satsuma_slab", has(foodblockcompatitemregistry.SATSUMA_SLAB_ITEM.get()))
       .save(output);
-  //--------------------------------------------------------------------------------------Mandarin---------------------------------------------------------------------------------------------
+  //---------------------------------------------------------------------------------------Mandarin----------------------------------------------------------------------------------------------
       ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.MANDARIN_DESK_ITEM.get())
       .pattern("AAA")
       .pattern("B B")
@@ -12781,7 +12781,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
       .define('B', nuggetcompatregistry.MANDARIN_NUGGET.get())
       .unlockedBy("has_mandarin_slab", has(foodblockcompatitemregistry.MANDARIN_SLAB_ITEM.get()))
       .save(output);
-  //--------------------------------------------------------------------------------------Lemon---------------------------------------------------------------------------------------------
+  //----------------------------------------------------------------------------------------Lemon------------------------------------------------------------------------------------------------
       ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.LEMON_DESK_ITEM.get())
       .pattern("AAA")
       .pattern("B B")
@@ -12790,7 +12790,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
       .define('B', nuggetcompatregistry.LEMON_NUGGET.get())
       .unlockedBy("has_lemon_slab", has(foodblockcompatitemregistry.LEMON_SLAB_ITEM.get()))
       .save(output);
-  //--------------------------------------------------------------------------------------Citron---------------------------------------------------------------------------------------------
+  //----------------------------------------------------------------------------------------Citron-----------------------------------------------------------------------------------------------
       ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.CITRON_DESK_ITEM.get())
       .pattern("AAA")
       .pattern("B B")
@@ -12799,7 +12799,7 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
       .define('B', nuggetcompatregistry.CITRON_NUGGET.get())
       .unlockedBy("has_citron_slab", has(foodblockcompatitemregistry.CITRON_SLAB_ITEM.get()))
       .save(output);
-  //--------------------------------------------------------------------------------------Buddhashand---------------------------------------------------------------------------------------------
+  //--------------------------------------------------------------------------------------Buddhashand--------------------------------------------------------------------------------------------
       ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.BUDDHASHAND_DESK_ITEM.get())
       .pattern("AAA")
       .pattern("B B")
@@ -12807,6 +12807,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
       .define('A', foodblockcompatitemregistry.BUDDHASHAND_SLAB_ITEM.get())
       .define('B', nuggetcompatregistry.BUDDHASHAND_NUGGET.get())
       .unlockedBy("has_buddhashand_slab", has(foodblockcompatitemregistry.BUDDHASHAND_SLAB_ITEM.get()))
+      .save(output);
+  //-----------------------------------------------------------------------------------------Lime------------------------------------------------------------------------------------------------
+      ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.LIME_DESK_ITEM.get())
+      .pattern("AAA")
+      .pattern("B B")
+      .pattern("B B")
+      .define('A', foodblockcompatitemregistry.LIME_SLAB_ITEM.get())
+      .define('B', nuggetcompatregistry.LIME_NUGGET.get())
+      .unlockedBy("has_lime_slab", has(foodblockcompatitemregistry.LIME_SLAB_ITEM.get()))
       .save(output);
       }
   }
