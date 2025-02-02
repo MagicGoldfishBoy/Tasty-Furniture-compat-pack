@@ -1860,6 +1860,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //cabinet
        withExistingParent("small_buddhashand_cabinet_item", modLoc("block/buddhashand_cabinet"));
        withExistingParent("medium_buddhashand_cabinet_item", modLoc("block/medium_buddhashand_cabinet"));
+       //desk
+       withExistingParent("buddhashand_desk_item", modLoc("block/buddhashand_desk_single"));
     //==============================================================================================================================================
     //|                                                              Lime                                                                        |
     //==============================================================================================================================================
