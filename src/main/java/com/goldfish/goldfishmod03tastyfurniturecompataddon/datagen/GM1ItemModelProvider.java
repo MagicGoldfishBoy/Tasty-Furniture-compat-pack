@@ -2260,6 +2260,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //cabinet
        withExistingParent("small_pomelo_cabinet_item", modLoc("block/pomelo_cabinet"));
        withExistingParent("medium_pomelo_cabinet_item", modLoc("block/medium_pomelo_cabinet"));
+       //desk
+       withExistingParent("pomelo_desk_item", modLoc("block/pomelo_desk_single"));
     //==============================================================================================================================================
     //|                                                              Corn                                                                        |
     //==============================================================================================================================================
