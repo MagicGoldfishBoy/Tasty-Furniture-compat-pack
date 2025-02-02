@@ -1780,6 +1780,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //cabinet
        withExistingParent("small_citron_cabinet_item", modLoc("block/citron_cabinet"));
        withExistingParent("medium_citron_cabinet_item", modLoc("block/medium_citron_cabinet"));
+       //desk
+       withExistingParent("citron_desk_item", modLoc("block/citron_desk_single"));
     //==============================================================================================================================================
     //|                                                              Buddhashand                                                                        |
     //==============================================================================================================================================
