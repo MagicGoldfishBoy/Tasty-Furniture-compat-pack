@@ -12817,6 +12817,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
       .define('B', nuggetcompatregistry.LIME_NUGGET.get())
       .unlockedBy("has_lime_slab", has(foodblockcompatitemregistry.LIME_SLAB_ITEM.get()))
       .save(output);
+  //-----------------------------------------------------------------------------------------Keylime------------------------------------------------------------------------------------------------
+      ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.KEYLIME_DESK_ITEM.get())
+      .pattern("AAA")
+      .pattern("B B")
+      .pattern("B B")
+      .define('A', foodblockcompatitemregistry.KEYLIME_SLAB_ITEM.get())
+      .define('B', nuggetcompatregistry.KEYLIME_NUGGET.get())
+      .unlockedBy("has_keylime_slab", has(foodblockcompatitemregistry.KEYLIME_SLAB_ITEM.get()))
+      .save(output);
       }
   }
 }

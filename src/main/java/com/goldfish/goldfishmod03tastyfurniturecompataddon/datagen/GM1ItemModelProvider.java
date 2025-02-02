@@ -2020,6 +2020,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //cabinet
        withExistingParent("small_keylime_cabinet_item", modLoc("block/keylime_cabinet"));
        withExistingParent("medium_keylime_cabinet_item", modLoc("block/medium_keylime_cabinet"));
+       //desk
+       withExistingParent("keylime_desk_item", modLoc("block/keylime_desk_single"));
     //==============================================================================================================================================
     //|                                                              Fingerlime                                                                        |
     //==============================================================================================================================================

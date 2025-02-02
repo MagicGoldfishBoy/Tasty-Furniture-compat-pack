@@ -8912,7 +8912,7 @@ public class foodblockcompatregistry {
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
- //--------------------------------------------------------------------------------------Keylime---------------------------------------------------------------------------------------------
+ //---------------------------------------------------------------------------------------Keylime-----------------------------------------------------------------------------------------------
      public static final DeferredHolder<Block, compatSmallFoodCabinet> SMALL_KEYLIME_CABINET = FOODBLOCK.register("small_keylime_cabinet", 
      () -> new compatSmallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
@@ -9238,8 +9238,15 @@ public class foodblockcompatregistry {
     .explosionResistance(desk_explosion_resistance)
     .noOcclusion()
     ));
- //-------------------------------------------------------------------------------------Lime---------------------------------------------------------------------------------------------
+ //----------------------------------------------------------------------------------------Lime-------------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, foodDeskCompat> LIME_DESK = FOODBLOCK.register("lime_desk", () -> new foodDeskCompat(BlockBehaviour.Properties.of()
+    .sound(plant_desk_sound)
+    .destroyTime(desk_destroy_time)
+    .explosionResistance(desk_explosion_resistance)
+    .noOcclusion()
+    ));
+ //----------------------------------------------------------------------------------------Keylime-------------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, foodDeskCompat> KEYLIME_DESK = FOODBLOCK.register("keylime_desk", () -> new foodDeskCompat(BlockBehaviour.Properties.of()
     .sound(plant_desk_sound)
     .destroyTime(desk_destroy_time)
     .explosionResistance(desk_explosion_resistance)
