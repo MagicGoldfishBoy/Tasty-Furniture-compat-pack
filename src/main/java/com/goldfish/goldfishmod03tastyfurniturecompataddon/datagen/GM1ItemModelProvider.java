@@ -2023,7 +2023,7 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //desk
        withExistingParent("keylime_desk_item", modLoc("block/keylime_desk_single"));
     //==============================================================================================================================================
-    //|                                                              Fingerlime                                                                        |
+    //|                                                            Fingerlime                                                                      |
     //==============================================================================================================================================
        //mush
         withExistingParent("fingerlime_mush", mcLoc("item/generated")).texture("layer0", "item/fingerlime_mush");
@@ -2183,7 +2183,7 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //desk
        withExistingParent("grapefruit_desk_item", modLoc("block/grapefruit_desk_single"));
     //==============================================================================================================================================
-    //|                                                            Pomelo                                                                      |
+    //|                                                              Pomelo                                                                        |
     //==============================================================================================================================================
        //mush
         withExistingParent("pomelo_mush", mcLoc("item/generated")).texture("layer0", "item/pomelo_mush");
@@ -2263,7 +2263,7 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //desk
        withExistingParent("pomelo_desk_item", modLoc("block/pomelo_desk_single"));
     //==============================================================================================================================================
-    //|                                                              Corn                                                                        |
+    //|                                                               Corn                                                                         |
     //==============================================================================================================================================
        //mush
         withExistingParent("corn_mush", mcLoc("item/generated")).texture("layer0", "item/corn_mush");
@@ -2340,6 +2340,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //cabinet
        withExistingParent("small_corn_cabinet_item", modLoc("block/corn_cabinet"));
        withExistingParent("medium_corn_cabinet_item", modLoc("block/medium_corn_cabinet"));
+       //desk
+       withExistingParent("corn_desk_item", modLoc("block/corn_desk_single"));
     //==============================================================================================================================================
     //|                                                              Onion                                                                        |
     //==============================================================================================================================================
