@@ -3748,4 +3748,7 @@ public class foodblockcompatitemregistry {
  //--------------------------------------------------------------------------------------Pecan---------------------------------------------------------------------------------------------
     public static final DeferredHolder<Item, BlockItem> PECAN_DESK_ITEM = FOODBLOCKITEM.register("pecan_desk_item", () -> new BlockItem(foodblockcompatregistry.PECAN_DESK.get(),
     new BlockItem.Properties()));
+ //--------------------------------------------------------------------------------------Almond---------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Item, BlockItem> ALMOND_DESK_ITEM = FOODBLOCKITEM.register("almond_desk_item", () -> new BlockItem(foodblockcompatregistry.ALMOND_DESK.get(),
+    new BlockItem.Properties()));
 }

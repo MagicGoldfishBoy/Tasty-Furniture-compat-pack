@@ -2660,6 +2660,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //cabinet
        withExistingParent("small_almond_cabinet_item", modLoc("block/almond_cabinet"));
        withExistingParent("medium_almond_cabinet_item", modLoc("block/medium_almond_cabinet"));
+       //desk
+       withExistingParent("almond_desk_item", modLoc("block/almond_desk_single"));
   }
 }
 
