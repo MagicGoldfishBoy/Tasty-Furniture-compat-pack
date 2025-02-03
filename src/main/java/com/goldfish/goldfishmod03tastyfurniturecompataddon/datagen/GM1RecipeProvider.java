@@ -12880,6 +12880,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
       .define('B', nuggetcompatregistry.TOMATO_NUGGET.get())
       .unlockedBy("has_tomato_slab", has(foodblockcompatitemregistry.TOMATO_SLAB_ITEM.get()))
       .save(output);
+  //-----------------------------------------------------------------------------------------Pecan------------------------------------------------------------------------------------------------
+      ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.PECAN_DESK_ITEM.get())
+      .pattern("AAA")
+      .pattern("B B")
+      .pattern("B B")
+      .define('A', foodblockcompatitemregistry.PECAN_SLAB_ITEM.get())
+      .define('B', nuggetcompatregistry.PECAN_NUGGET.get())
+      .unlockedBy("has_pecan_slab", has(foodblockcompatitemregistry.PECAN_SLAB_ITEM.get()))
+      .save(output);
       }
   }
 }

@@ -16949,6 +16949,38 @@ public class GM1BlockStateProvider extends BlockStateProvider
                  .rotationY(rotationY)
                  .build();
          });        
+     //------------------------------------------------------------pecan-----------------------------------------------------------------------
+         foodDeskCompat pecanDesk = foodblockcompatregistry.PECAN_DESK.get();
+         
+         getVariantBuilder(pecanDesk)
+         .forAllStates(state -> {
+             Direction facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+             Boolean isleft = state.getValue(foodDeskCompat.EAST_CONNECTED);
+             Boolean isright = state.getValue(foodDeskCompat.WEST_CONNECTED);
+             int rotationY = switch (facing) {
+                 case NORTH -> 180;
+                 case EAST -> 270;
+                 case SOUTH -> 0;
+                 case WEST -> 90;
+                 default -> 180;
+             };
+
+             ResourceLocation modelLocation;
+             if (!isleft && !isright) {
+                 modelLocation = modLoc("block/pecan_desk_single");
+             } else if (isleft && isright) {
+                 modelLocation = modLoc("block/pecan_desk_triple_center");
+             } else if (isleft && !isright) {
+                 modelLocation = modLoc("block/pecan_desk_double_left");
+             } else {
+                modelLocation = modLoc("block/pecan_desk_double_right");
+             }
+         
+             return ConfiguredModel.builder()
+                 .modelFile(models().getExistingFile(modelLocation))
+                 .rotationY(rotationY)
+                 .build();
+         });        
     }
 
 }

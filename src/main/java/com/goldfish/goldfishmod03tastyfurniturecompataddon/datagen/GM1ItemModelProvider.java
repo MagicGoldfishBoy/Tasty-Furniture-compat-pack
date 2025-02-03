@@ -2580,6 +2580,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //cabinet
        withExistingParent("small_pecan_cabinet_item", modLoc("block/pecan_cabinet"));
        withExistingParent("medium_pecan_cabinet_item", modLoc("block/medium_pecan_cabinet"));
+       //desk
+       withExistingParent("pecan_desk_item", modLoc("block/pecan_desk_single"));
     //==============================================================================================================================================
     //|                                                              Almond                                                                        |
     //==============================================================================================================================================
