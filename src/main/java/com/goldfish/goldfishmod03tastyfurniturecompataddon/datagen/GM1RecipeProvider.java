@@ -12871,6 +12871,15 @@ public abstract class GM1RecipeProvider extends RecipeProvider {
       .define('B', nuggetcompatregistry.ONION_NUGGET.get())
       .unlockedBy("has_onion_slab", has(foodblockcompatitemregistry.ONION_SLAB_ITEM.get()))
       .save(output);
+  //-----------------------------------------------------------------------------------------Tomato------------------------------------------------------------------------------------------------
+      ShapedRecipeBuilder.shaped(RecipeCategory.MISC, foodblockcompatitemregistry.TOMATO_DESK_ITEM.get())
+      .pattern("AAA")
+      .pattern("B B")
+      .pattern("B B")
+      .define('A', foodblockcompatitemregistry.TOMATO_SLAB_ITEM.get())
+      .define('B', nuggetcompatregistry.TOMATO_NUGGET.get())
+      .unlockedBy("has_tomato_slab", has(foodblockcompatitemregistry.TOMATO_SLAB_ITEM.get()))
+      .save(output);
       }
   }
 }
