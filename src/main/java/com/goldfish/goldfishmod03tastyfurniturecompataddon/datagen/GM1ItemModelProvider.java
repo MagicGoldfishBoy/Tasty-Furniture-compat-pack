@@ -2420,6 +2420,8 @@ public class GM1ItemModelProvider extends ItemModelProvider {
        //cabinet
        withExistingParent("small_onion_cabinet_item", modLoc("block/onion_cabinet"));
        withExistingParent("medium_onion_cabinet_item", modLoc("block/medium_onion_cabinet"));
+       //desk
+       withExistingParent("onion_desk_item", modLoc("block/onion_desk_single"));
     //==============================================================================================================================================
     //|                                                              Tomato                                                                        |
     //==============================================================================================================================================

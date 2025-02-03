@@ -8987,7 +8987,7 @@ public class foodblockcompatregistry {
      .explosionResistance(cabinet_explosion_resistance)
      .noOcclusion()
      ));
- //--------------------------------------------------------------------------------------Onion---------------------------------------------------------------------------------------------
+ //----------------------------------------------------------------------------------------Onion------------------------------------------------------------------------------------------------
      public static final DeferredHolder<Block, compatSmallFoodCabinet> SMALL_ONION_CABINET = FOODBLOCK.register("small_onion_cabinet", 
      () -> new compatSmallFoodCabinet(BlockBehaviour.Properties.of()
      .sound(plant_cabinet_sound)
@@ -9273,8 +9273,15 @@ public class foodblockcompatregistry {
     .explosionResistance(desk_explosion_resistance)
     .noOcclusion()
     ));
- //----------------------------------------------------------------------------------------Corn-----------------------------------------------------------------------------------------------
+ //-----------------------------------------------------------------------------------------Corn------------------------------------------------------------------------------------------------
     public static final DeferredHolder<Block, foodDeskCompat> CORN_DESK = FOODBLOCK.register("corn_desk", () -> new foodDeskCompat(BlockBehaviour.Properties.of()
+    .sound(plant_desk_sound)
+    .destroyTime(desk_destroy_time)
+    .explosionResistance(desk_explosion_resistance)
+    .noOcclusion()
+    ));
+ //-----------------------------------------------------------------------------------------Onion------------------------------------------------------------------------------------------------
+    public static final DeferredHolder<Block, foodDeskCompat> ONION_DESK = FOODBLOCK.register("onion_desk", () -> new foodDeskCompat(BlockBehaviour.Properties.of()
     .sound(plant_desk_sound)
     .destroyTime(desk_destroy_time)
     .explosionResistance(desk_explosion_resistance)
